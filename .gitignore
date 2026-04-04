@@ -1,0 +1,48 @@
+# =========================================================
+# LogisticSearch / Repository policy
+# Machine-local or generated surfaces must stay out of Git
+# =========================================================
+
+# Local-only intake / transfer workspaces
+/_imports/
+
+# Local-only build / generated artifacts
+/_build/
+
+# Python runtime / cache / virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+.python-version
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.ipynb_checkpoints/
+.venv/
+venv/
+ENV/
+env/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
