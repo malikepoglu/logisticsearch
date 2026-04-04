@@ -1,0 +1,27 @@
+{
+  "batch_count": 2,
+  "batches": [
+    {
+      "batch_key": "github_batch_v1_20260404T205424Z_4_1",
+      "created_at_utc": "2026-04-04T20:54:24Z",
+      "date_path": "github_batch_v1/2026/04/04",
+      "item_count": 1,
+      "payload_sha256": "0fa3b1931636a8411ba1480cacc9a0d269c97cbf3d799f5e8cb2a5e8760e5755",
+      "pushed_at_utc": "2026-04-04T21:22:37Z",
+      "relpath": "crawler_exports/pi51/github_batch_v1/2026/04/04/github_batch_v1_20260404T205424Z_4_1"
+    },
+    {
+      "batch_key": "github_batch_v1_20260404T212728Z_6_1",
+      "created_at_utc": "2026-04-04T21:27:28Z",
+      "date_path": "github_batch_v1/2026/04/04",
+      "item_count": 1,
+      "payload_sha256": "2a4ae7664cbe537e2a4631a869a789c7d8d73da3caa65a885ae3c681c2edb22b",
+      "pushed_at_utc": "2026-04-04T21:27:33Z",
+      "relpath": "crawler_exports/pi51/github_batch_v1/2026/04/04/github_batch_v1_20260404T212728Z_6_1"
+    }
+  ],
+  "channel": "github_batch_v1",
+  "generated_at_utc": "2026-04-04T21:46:41Z",
+  "latest_batch_key": "github_batch_v1_20260404T212728Z_6_1",
+  "producer": "pi51"
+}
