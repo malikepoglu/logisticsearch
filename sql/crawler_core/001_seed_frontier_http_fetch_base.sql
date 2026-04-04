@@ -171,10 +171,6 @@ CREATE TYPE seed.source_status_enum AS ENUM (
 
 
 --
--- Name: claim_next_url(text, timestamp with time zone, interval, boolean); Type: FUNCTION; Schema: frontier; Owner: -
---
-
-
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
