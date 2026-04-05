@@ -34,6 +34,7 @@ Bu yüzey, crawler-core veritabanı mantığının artık yalnızca canlı Pi51 
 - `900_apply_crawler_core_split_surface.psql.sql`
 - `901_preflight_crawler_core_split_surface.psql.sql`
 - `902_presence_audit_crawler_core_split_surface.psql.sql`
+- `910_validate_crawler_core_split_surface.sh`
 
 ### Planning, policy, and seal surface
 - `CHRONOLOGY_SPLIT_PLAN.md`
@@ -63,6 +64,7 @@ Bu yüzey, crawler-core veritabanı mantığının artık yalnızca canlı Pi51 
 - `900_apply_crawler_core_split_surface.psql.sql`
 - `901_preflight_crawler_core_split_surface.psql.sql`
 - `902_presence_audit_crawler_core_split_surface.psql.sql`
+- `910_validate_crawler_core_split_surface.sh`
 
 ### Planlama, politika ve mühür yüzeyi
 - `CHRONOLOGY_SPLIT_PLAN.md`
@@ -117,6 +119,7 @@ Validated result:
 - preflight: passed
 - apply bundle: passed
 - reusable presence audit: passed
+- reusable validation runner: passed
 - missing check count: 0
 
 The live Pi51 crawler database was not mutated during this validation phase.
@@ -132,6 +135,7 @@ Doğrulanan sonuç:
 - preflight: geçti
 - apply bundle: geçti
 - reusable presence audit: geçti
+- reusable validation runner: geçti
 - missing check count: 0
 
 Bu doğrulama fazı sırasında canlı Pi51 crawler veritabanı değiştirilmemiştir.
@@ -145,7 +149,8 @@ The current working model is:
 3. use `901` before apply when validating a target database
 4. use `900` as the canonical split execution bundle
 5. use `902` as the canonical reusable presence audit
-6. re-run scratch validation after meaningful SQL changes
+6. use `910` as the canonical one-command scratch validation runner
+7. re-run scratch validation after meaningful SQL changes
 
 ## Çalışma Modeli
 
@@ -156,7 +161,8 @@ Mevcut çalışma modeli şöyledir:
 3. bir hedef veritabanını doğrularken apply öncesinde `901` kullan
 4. kanonik split execution bundle olarak `900` kullan
 5. kanonik reusable presence audit olarak `902` kullan
-6. anlamlı SQL değişikliklerinden sonra scratch doğrulamayı tekrar çalıştır
+6. kanonik tek-komut scratch validation runner olarak `910` kullan
+7. anlamlı SQL değişikliklerinden sonra scratch doğrulamayı tekrar çalıştır
 
 ## Policy
 
