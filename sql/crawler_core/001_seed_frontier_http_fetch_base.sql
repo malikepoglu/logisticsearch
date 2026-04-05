@@ -2,7 +2,6 @@
 -- PostgreSQL database dump
 --
 
-\restrict dPwpDYLZXzFXQHl3ZcNRHh2GJU9t6i6006peqzeYIfaaugeNf7pDJwoPOh4n6CU
 
 -- Dumped from database version 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)
 -- Dumped by pg_dump version 16.13 (Ubuntu 16.13-0ubuntu0.24.04.1)
@@ -749,5 +748,4 @@ ALTER TABLE ONLY seed.seed_url
 -- PostgreSQL database dump complete
 --
 
-\unrestrict SnMYbWdXZK3obuHYdei6inDhVltfGsO0kThQRXKhKZyJF0dsEwQn4oxq6NGYfjJ
 
