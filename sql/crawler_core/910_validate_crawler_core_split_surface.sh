@@ -10,6 +10,8 @@ cleanup() {
 }
 trap cleanup EXIT
 
+chmod 0755 "$STAGE_DIR"
+
 copy_sql() {
   local f="$1"
   [ -f "$SCRIPT_DIR/$f" ] || {
@@ -41,6 +43,14 @@ do
   copy_sql "$f"
 done
 echo "OK   staged SQL files prepared"
+echo
+
+echo "== 0.1) STAGING ACCESS CHECK FOR postgres =="
+sudo -u postgres test -x "$STAGE_DIR"
+sudo -u postgres test -r "$STAGE_DIR/901_preflight_crawler_core_split_surface.psql.sql"
+sudo -u postgres test -r "$STAGE_DIR/900_apply_crawler_core_split_surface.psql.sql"
+sudo -u postgres test -r "$STAGE_DIR/902_presence_audit_crawler_core_split_surface.psql.sql"
+echo "OK   postgres can access staged SQL files"
 echo
 
 echo "== 1) DROP SCRATCH DB IF EXISTS =="
