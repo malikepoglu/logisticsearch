@@ -42,7 +42,7 @@ BEGIN
     v_raw_ms,
     v_effective_ms;
 END;
-$function$
+$function$;
 
 
 CREATE OR REPLACE FUNCTION frontier.compute_success_next_fetch_at(p_url_id bigint, p_now timestamp with time zone DEFAULT now())
@@ -98,6 +98,6 @@ BEGIN
     v_jitter_factor,
     v_reason;
 END;
-$function$
+$function$;
 
 

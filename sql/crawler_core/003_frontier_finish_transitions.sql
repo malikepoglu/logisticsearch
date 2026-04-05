@@ -98,7 +98,7 @@ BEGIN
     uu.next_fetch_at
   FROM updated_url uu;
 END;
-$function$
+$function$;
 
 
 CREATE OR REPLACE FUNCTION frontier.finish_fetch_retryable_error(p_url_id bigint, p_lease_token uuid, p_now timestamp with time zone DEFAULT now(), p_http_status integer DEFAULT NULL::integer, p_error_class text DEFAULT 'retryable_error'::text, p_error_message text DEFAULT NULL::text, p_retry_delay interval DEFAULT NULL::interval)
@@ -201,7 +201,7 @@ BEGIN
   JOIN updated_host uh
     ON uh.host_id = uu.host_id;
 END;
-$function$
+$function$;
 
 
 CREATE OR REPLACE FUNCTION frontier.finish_fetch_permanent_error(p_url_id bigint, p_lease_token uuid, p_now timestamp with time zone DEFAULT now(), p_http_status integer DEFAULT NULL::integer, p_error_class text DEFAULT 'permanent_error'::text, p_error_message text DEFAULT NULL::text)
@@ -283,6 +283,6 @@ BEGIN
     uu.consecutive_error_count
   FROM updated_url uu;
 END;
-$function$
+$function$;
 
 

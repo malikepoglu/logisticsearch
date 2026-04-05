@@ -111,7 +111,7 @@ BEGIN
     rtc.error_class,
     rtc.error_message;
 END;
-$function$
+$function$;
 
 
 CREATE OR REPLACE FUNCTION http_fetch.compute_robots_refresh_decision(p_host_id bigint, p_now timestamp with time zone DEFAULT now())
@@ -211,7 +211,7 @@ BEGIN
     v_should_refresh,
     v_refresh_reason;
 END;
-$function$
+$function$;
 
 
 CREATE OR REPLACE FUNCTION http_fetch.compute_robots_allow_decision(p_host_id bigint, p_url_path text)
@@ -328,6 +328,6 @@ BEGIN
     'allow'::http_fetch.robots_verdict_enum,
     'no_disallow_match'::text;
 END;
-$function$
+$function$;
 
 

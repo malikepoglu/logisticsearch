@@ -123,7 +123,7 @@ BEGIN
   JOIN candidate c
     ON c.url_id = uu.url_id;
 END;
-$function$
+$function$;
 
 
 CREATE OR REPLACE FUNCTION frontier.reap_expired_leases(p_now timestamp with time zone DEFAULT now())
@@ -167,6 +167,6 @@ BEGIN
   FROM updated
   ORDER BY updated.url_id;
 END;
-$function$
+$function$;
 
 
