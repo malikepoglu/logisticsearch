@@ -134,6 +134,38 @@ Mevcut dökümantasyon disiplini şöyledir:
 4. bir sonraki devam noktasını belgeye işle
 5. yüzey mühürlenirken yorum katmanını çift dilli tut
 
+## Commit naming discipline
+
+The current commit naming discipline is:
+
+1. use distinct commit messages for distinct semantic actions
+2. do not reuse the same commit title when the changed file role is different
+3. distinguish clearly between:
+   - content creation
+   - README alignment
+   - seal documents
+   - audit documents
+   - runner addition or validation
+   - fixes
+4. make the commit title describe the real change surface, not just the broad topic
+5. prefer commit history that is self-explanatory during later audits
+
+## Commit adlandırma disiplini
+
+Mevcut commit adlandırma disiplini şöyledir:
+
+1. farklı semantik işlemler için farklı commit mesajları kullan
+2. değişen dosya rolü farklıysa aynı commit başlığını tekrar kullanma
+3. şu ayrımları açıkça yap:
+   - yeni içerik ekleme
+   - README hizalama
+   - seal belgeleri
+   - audit belgeleri
+   - runner ekleme veya doğrulama
+   - düzeltmeler
+4. commit başlığı yalnızca geniş konuyu değil, gerçek değişim yüzeyini tarif etsin
+5. sonraki audit'lerde kendi kendini açıklayan bir commit geçmişi tercih et
+
 ## Current practical rule
 
 For this surface, the normal operating rhythm is:
