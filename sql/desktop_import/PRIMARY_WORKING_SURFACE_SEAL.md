@@ -128,18 +128,18 @@ Bu da gelecekteki işin kontrollü SQL evriminin nereye ait olduğu konusunda ar
 
 ## Next continuation point
 
-After this seal, the next normal work should be one of these:
+After this seal, the next normal work should now be one of these:
 
-- add execution entry points around the primary working surface
-- add preflight / presence audit surfaces
-- add scratch validation runner
-- standardize the package toward the same maturity model used in other SQL surfaces
+- rerun scratch validation without transaction-wrapper warnings
+- record a scratch validation seal
+- add working-style / validation-discipline documentation
+- run a final execution-surface audit
 
 ## Sonraki devam noktası
 
-Bu mühürden sonra sıradaki normal iş şu alanlardan biri olmalıdır:
+Bu mühürden sonra sıradaki normal iş artık şu alanlardan biri olmalıdır:
 
-- ana çalışma yüzeyi etrafına execution giriş noktaları eklemek
-- preflight / presence audit yüzeyleri eklemek
-- scratch validation runner eklemek
-- paketi diğer SQL yüzeylerinde kullanılan olgunluk modeline doğru standartlaştırmak
+- transaction-wrapper warning'leri olmadan scratch validation tekrarını koşmak
+- scratch validation seal kaydı oluşturmak
+- working-style / validation-discipline dokümantasyonu eklemek
+- final execution-surface audit çalıştırmak

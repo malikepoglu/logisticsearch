@@ -19,8 +19,14 @@ Amacı, canlı gözlenen şema snapshot'ını korumak, mevcut çalıştırılabi
 - `001_live_desktop_import_inventory.txt`
 - `001_live_desktop_import_schema.sha256`
 
-### Current executable contract surface
+### Primary working surface
 - `001_pi51_batch_intake_contract.sql`
+
+### Execution and validation entry points
+- `900_apply_desktop_import_surface.psql.sql`
+- `901_preflight_desktop_import_surface.psql.sql`
+- `902_presence_audit_desktop_import_surface.psql.sql`
+- `910_validate_desktop_import_surface.sh`
 
 ### Interpretation / decision surface
 - `CHRONOLOGY_SPLIT_PLAN.md`
@@ -35,8 +41,20 @@ Amacı, canlı gözlenen şema snapshot'ını korumak, mevcut çalıştırılabi
 - `001_live_desktop_import_inventory.txt`
 - `001_live_desktop_import_schema.sha256`
 
-### Mevcut çalıştırılabilir contract yüzeyi
+### Ana çalışma yüzeyi
 - `001_pi51_batch_intake_contract.sql`
+
+### Execution ve validation giriş noktaları
+- `900_apply_desktop_import_surface.psql.sql`
+- `901_preflight_desktop_import_surface.psql.sql`
+- `902_presence_audit_desktop_import_surface.psql.sql`
+- `910_validate_desktop_import_surface.sh`
+
+### Yorum / karar yüzeyi
+- `CHRONOLOGY_SPLIT_PLAN.md`
+- `SURFACE_ROLE_MAP.md`
+- `COVERAGE_OR_EQUIVALENCE_NOTE.md`
+- `PRIMARY_WORKING_SURFACE_SEAL.md`
 
 ## Current observed scope
 
@@ -46,7 +64,8 @@ The current live snapshot scope is:
 - enum types: 0
 - tables: 2
 - functions: 0
-- indexes: 3
+- indexes: 3 in the schema dump surface
+- indexes: 6 in the audited live/apply reality, because constraints materialize supporting index objects
 
 Observed schema family:
 
@@ -65,7 +84,8 @@ Mevcut canlı snapshot kapsamı şudur:
 - enum type: 0
 - tablo: 2
 - fonksiyon: 0
-- indeks: 3
+- indeks: dump yüzeyinde 3
+- indeks: canlı/apply denetim gerçekliğinde 6; çünkü constraint'ler destekleyici index nesneleri üretir
 
 Gözlenen şema ailesi:
 
@@ -90,66 +110,86 @@ Pi51 export akışından gelen downstream içeriği Ubuntu Desktop üzerinde alm
 
 ## Current interpretation
 
-At the current point, the repository preserves two different but related truths:
+At the current point, the repository preserves four related layers:
 
 1. the live schema snapshot truth
-2. the executable repository contract truth
+2. the executable contract truth
+3. the execution/validation entry-point truth
+4. the interpretation/decision truth
 
 These should not be confused.
 
 The live snapshot is evidence of current observed reality.  
-The contract file is the executable repository-side surface.
-
-After the structural equivalence audit and primary-working-surface seal, the contract file is now also the confirmed primary working surface.
+The contract file is the primary working SQL surface.  
+The 900/901/902/910 files are execution and validation helpers around that surface.
 
 ## Güncel yorum
 
-Mevcut noktada repository birbiriyle ilişkili fakat farklı iki doğruluk katmanını korur:
+Mevcut noktada repository birbiriyle ilişkili dört katmanı korur:
 
 1. canlı şema snapshot doğruluğu
-2. çalıştırılabilir repository contract doğruluğu
+2. çalıştırılabilir contract doğruluğu
+3. execution/validation giriş noktası doğruluğu
+4. yorum/karar doğruluğu
 
 Bunlar birbirine karıştırılmamalıdır.
 
 Canlı snapshot, gözlenen mevcut gerçekliğin kanıtıdır.  
-Contract dosyası ise çalıştırılabilir repository-side yüzeydir.
+Contract dosyası ana çalışma SQL yüzeyidir.  
+900/901/902/910 dosyaları ise bu yüzey etrafındaki execution ve validation yardımcılarıdır.
 
-Yapısal eşdeğerlik denetimi ve ana çalışma yüzeyi mühründen sonra contract dosyası artık doğrulanmış ana çalışma yüzeyi haline gelmiştir.
+## Numbering convention
 
-## Current sealed interpretation result
+The current numbering convention is:
 
-The current documented result is now:
+- `001...` = primary SQL / contract surface
+- `900...` = canonical apply / execution bundle
+- `901...` = preflight surface
+- `902...` = presence audit surface
+- `910...` = reusable one-command validation runner
 
-- chronology interpretation defined
-- surface role separation defined
-- structural equivalence between live snapshot and executable contract verified
-- primary working surface decision sealed
+## Numaralandırma kuralı
 
-## Güncel mühürlü yorum sonucu
+Mevcut numaralandırma kuralı şudur:
 
-Mevcut belgelenmiş sonuç artık şudur:
-
-- kronoloji yorumu tanımlandı
-- yüzey rol ayrımı tanımlandı
-- canlı snapshot ile çalıştırılabilir contract arasındaki yapısal eşdeğerlik doğrulandı
-- ana çalışma yüzeyi kararı mühürlendi
+- `001...` = ana SQL / contract yüzeyi
+- `900...` = kanonik apply / execution bundle
+- `901...` = preflight yüzeyi
+- `902...` = presence audit yüzeyi
+- `910...` = reusable tek-komut validation runner
 
 ## Current rule
 
 For now:
 
 - preserve the snapshot files as evidence
-- preserve the contract file as executable truth
-- treat `001_pi51_batch_intake_contract.sql` as the primary working surface
-- make future structural evolution there first
-- re-audit when meaningful structural change happens
+- preserve the contract file as the primary working surface
+- preserve the 900/901/902/910 layer as execution-surface truth
+- avoid redundant transaction wrappers around a contract that already manages its own transaction
+- validate through scratch before meaningful structural changes are trusted
 
 ## Güncel kural
 
 Şimdilik:
 
 - snapshot dosyalarını kanıt olarak koru
-- contract dosyasını çalıştırılabilir doğruluk olarak koru
-- `001_pi51_batch_intake_contract.sql` dosyasını ana çalışma yüzeyi olarak ele al
-- gelecekteki yapısal evrimi önce burada yap
-- anlamlı yapısal değişiklik olduğunda yeniden denetle
+- contract dosyasını ana çalışma yüzeyi olarak koru
+- 900/901/902/910 katmanını execution-surface doğruluğu olarak koru
+- transaction'ını zaten kendi yöneten contract etrafına gereksiz transaction sarmalı ekleme
+- anlamlı yapısal değişikliklere güvenmeden önce scratch üzerinden doğrula
+
+## Immediate next documentation work
+
+The next normal repository-side document after warning-free validation should be one of these:
+
+- `SCRATCH_APPLY_VALIDATION_SEAL.md`
+- `WORKING_STYLE_AND_VALIDATION_DISCIPLINE.md`
+- a final execution-surface audit/seal document
+
+## Anlık sonraki dokümantasyon işi
+
+Warning'siz doğrulamadan sonra sıradaki normal repository-side belge şu alanlardan biri olmalıdır:
+
+- `SCRATCH_APPLY_VALIDATION_SEAL.md`
+- `WORKING_STYLE_AND_VALIDATION_DISCIPLINE.md`
+- final execution-surface audit/seal belgesi

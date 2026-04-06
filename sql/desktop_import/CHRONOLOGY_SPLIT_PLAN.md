@@ -13,6 +13,7 @@ Its maturity was reached step by step through:
 - interpretation and role separation
 - structural equivalence audit
 - primary working surface decision
+- execution-surface entry point creation
 
 ## Genel Bakış
 
@@ -27,6 +28,7 @@ Olgunluğu şu adımlar üzerinden adım adım oluşmuştur:
 - yorum ve rol ayrımı
 - yapısal eşdeğerlik denetimi
 - ana çalışma yüzeyi kararı
+- execution-surface giriş noktalarının oluşturulması
 
 ## Current chronology reading
 
@@ -39,7 +41,7 @@ The following files preserve observed current desktop reality:
 - `001_live_desktop_import_inventory.txt`
 - `001_live_desktop_import_schema.sha256`
 
-### Stage 1 — Existing executable contract
+### Stage 1 — Executable contract preservation
 The following file preserves the repository-side executable intake contract:
 
 - `001_pi51_batch_intake_contract.sql`
@@ -66,6 +68,17 @@ This layer records which file should be treated as the primary working surface:
 Recorded result:
 - `001_pi51_batch_intake_contract.sql` is now the primary working surface
 
+### Stage 5 — Execution-surface maturity start
+This layer records the first reusable execution and validation entry points:
+
+- `900_apply_desktop_import_surface.psql.sql`
+- `901_preflight_desktop_import_surface.psql.sql`
+- `902_presence_audit_desktop_import_surface.psql.sql`
+- `910_validate_desktop_import_surface.sh`
+
+Recorded result:
+- execution/validation surface now exists and can be used to validate the primary working surface on scratch databases
+
 ## Güncel kronoloji okuması
 
 Kronoloji artık şu sırayla okunmalıdır:
@@ -77,7 +90,7 @@ Kronoloji artık şu sırayla okunmalıdır:
 - `001_live_desktop_import_inventory.txt`
 - `001_live_desktop_import_schema.sha256`
 
-### Aşama 1 — Mevcut çalıştırılabilir contract
+### Aşama 1 — Çalıştırılabilir contract'ın korunması
 Şu dosya repository-side çalıştırılabilir intake contract'ını korur:
 
 - `001_pi51_batch_intake_contract.sql`
@@ -104,6 +117,17 @@ Bu katman, hangi dosyanın ana çalışma yüzeyi olarak ele alınacağını kay
 Kayda geçen sonuç:
 - `001_pi51_batch_intake_contract.sql` artık ana çalışma yüzeyidir
 
+### Aşama 5 — Execution-surface olgunlaşmasının başlangıcı
+Bu katman ilk reusable execution ve validation giriş noktalarını kayda geçirir:
+
+- `900_apply_desktop_import_surface.psql.sql`
+- `901_preflight_desktop_import_surface.psql.sql`
+- `902_presence_audit_desktop_import_surface.psql.sql`
+- `910_validate_desktop_import_surface.sh`
+
+Kayda geçen sonuç:
+- execution/validation yüzeyi artık vardır ve ana çalışma yüzeyini scratch veritabanlarında doğrulamak için kullanılabilir
+
 ## Important distinction from outbox-core
 
 Outbox-core had already reached a mature split working model when its documentation hardening intensified.
@@ -115,6 +139,7 @@ Desktop_import reached clarity in a different order:
 3. interpretation documents added
 4. equivalence verified
 5. primary working surface sealed
+6. execution entry points added around that surface
 
 So the key point is not to pretend it started mature, but to preserve the true chronology of how maturity was reached.
 
@@ -129,30 +154,27 @@ Desktop_import ise açıklığa farklı bir sırayla ulaştı:
 3. yorum belgelerinin eklenmesi
 4. eşdeğerliğin doğrulanması
 5. ana çalışma yüzeyinin mühürlenmesi
+6. bu yüzey etrafına execution giriş noktalarının eklenmesi
 
 Dolayısıyla kritik nokta, işe olgun başlamış gibi davranmak değil; olgunluğa nasıl ulaşıldığının gerçek kronolojisini korumaktır.
 
 ## Immediate next work after this plan
 
-The next normal repository-side work should no longer be pre-decision interpretation.
+The next normal repository-side work should now move toward warning-free validation sealing and execution-surface closure, such as:
 
-It should now move toward execution-surface maturity such as:
-
-1. preflight/apply entry points
-2. presence audit surface
-3. scratch validation runner
-4. broader package standardization
+1. warning-free scratch validation rerun
+2. scratch validation seal
+3. working-style / validation-discipline document
+4. final execution-surface audit
 
 ## Bu plandan sonraki anlık iş
 
-Bu plandan sonraki normal repository-side iş artık karar öncesi yorum olmamalıdır.
+Bu plandan sonraki normal repository-side iş artık warning'siz validation mühürlemesine ve execution-surface kapanışına gitmelidir; örneğin:
 
-Artık şu tür execution-surface olgunlaştırmasına geçmelidir:
-
-1. preflight/apply giriş noktaları
-2. presence audit yüzeyi
-3. scratch validation runner
-4. daha geniş paket standardizasyonu
+1. warning'siz scratch validation tekrar koşusu
+2. scratch validation seal
+3. working-style / validation-discipline belgesi
+4. final execution-surface audit
 
 ## Current rule
 
@@ -162,7 +184,8 @@ The chronology rule is now:
 - contract truth preserved as executable surface
 - structural equivalence already verified
 - primary working surface already decided
-- future evolution should proceed deliberately from the contract file
+- execution helpers already added
+- future evolution should proceed deliberately from the contract file and be validated through the execution layer
 
 ## Güncel kural
 
@@ -172,4 +195,5 @@ Kronoloji kuralı artık şudur:
 - contract doğruluğu çalıştırılabilir yüzey olarak korunur
 - yapısal eşdeğerlik zaten doğrulanmıştır
 - ana çalışma yüzeyi zaten kararlaştırılmıştır
-- gelecekteki evrim bilinçli şekilde contract dosyasından ilerlemelidir
+- execution yardımcıları zaten eklenmiştir
+- gelecekteki evrim contract dosyasından bilinçli şekilde ilerlemeli ve execution katmanı üzerinden doğrulanmalıdır
