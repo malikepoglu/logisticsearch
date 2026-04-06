@@ -126,6 +126,78 @@ END;
 $function$;
 
 
+
+
+CREATE OR REPLACE FUNCTION frontier.renew_url_lease(p_url_id bigint, p_lease_token uuid, p_worker_id text, p_now timestamp with time zone DEFAULT now(), p_extend_by interval DEFAULT '00:10:00'::interval, p_touch_host boolean DEFAULT false)
+ RETURNS TABLE(url_id bigint, host_id bigint, lease_owner text, previous_lease_expires_at timestamp with time zone, new_lease_expires_at timestamp with time zone, renewed boolean)
+ LANGUAGE plpgsql
+AS $function$
+BEGIN
+  IF p_url_id IS NULL THEN
+    RAISE EXCEPTION 'p_url_id must not be null';
+  END IF;
+
+  IF p_lease_token IS NULL THEN
+    RAISE EXCEPTION 'p_lease_token must not be null';
+  END IF;
+
+  IF p_worker_id IS NULL OR btrim(p_worker_id) = '' THEN
+    RAISE EXCEPTION 'p_worker_id must be non-empty';
+  END IF;
+
+  IF p_extend_by IS NULL OR p_extend_by <= interval '0 seconds' THEN
+    RAISE EXCEPTION 'p_extend_by must be > 0';
+  END IF;
+
+  RETURN QUERY
+  WITH candidate AS (
+    SELECT
+      u.url_id,
+      u.host_id,
+      u.lease_owner,
+      u.lease_expires_at AS previous_lease_expires_at
+    FROM frontier.url u
+    WHERE u.url_id = p_url_id
+      AND u.state = 'leased'
+      AND u.lease_token = p_lease_token
+      AND u.lease_owner = p_worker_id
+      AND u.lease_expires_at IS NOT NULL
+      AND u.lease_expires_at >= p_now
+    FOR UPDATE OF u
+  ),
+  updated_url AS (
+    UPDATE frontier.url u
+       SET lease_expires_at = p_now + p_extend_by,
+           updated_at = p_now
+      FROM candidate c
+     WHERE u.url_id = c.url_id
+     RETURNING
+       u.url_id,
+       u.host_id,
+       u.lease_owner,
+       c.previous_lease_expires_at,
+       u.lease_expires_at
+  ),
+  updated_host AS (
+    UPDATE frontier.host h
+       SET updated_at = p_now
+      FROM updated_url uu
+     WHERE COALESCE(p_touch_host, false)
+       AND h.host_id = uu.host_id
+     RETURNING h.host_id
+  )
+  SELECT
+    uu.url_id,
+    uu.host_id,
+    uu.lease_owner,
+    uu.previous_lease_expires_at,
+    uu.lease_expires_at,
+    true
+  FROM updated_url uu;
+END;
+$function$;
+
+
 CREATE OR REPLACE FUNCTION frontier.reap_expired_leases(p_now timestamp with time zone DEFAULT now())
  RETURNS TABLE(url_id bigint, previous_lease_owner text, previous_lease_expires_at timestamp with time zone, new_state frontier.url_state_enum)
  LANGUAGE plpgsql
