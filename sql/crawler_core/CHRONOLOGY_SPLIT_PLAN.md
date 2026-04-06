@@ -74,11 +74,18 @@ Expected object families:
 ### 002_frontier_claim_and_lease.sql
 Contains:
 - `frontier.claim_next_url`
+- `frontier.renew_url_lease`
 - `frontier.reap_expired_leases`
 
 Purpose:
 - queue claiming
-- lease lifecycle entry/recovery
+- lease lifecycle entry
+- lease lifecycle renewal
+- lease lifecycle recovery
+
+Post-import controlled extension note:
+- `frontier.renew_url_lease` was not part of the imported live Pi51 snapshot
+- it is now a deliberate split-surface extension added after explicit contract design and targeted scratch smoke validation
 
 ### 003_frontier_finish_transitions.sql
 Contains:
@@ -194,11 +201,19 @@ Beklenen nesne aileleri:
 ### 002_frontier_claim_and_lease.sql
 Şunları içerir:
 - `frontier.claim_next_url`
+- `frontier.renew_url_lease`
 - `frontier.reap_expired_leases`
 
 Amaç:
 - kuyruktan claim etme
-- lease yaşam döngüsüne giriş / toparlama
+- lease yaşam döngüsüne giriş
+- lease yaşam döngüsünü yenileme
+- lease yaşam döngüsünü toparlama
+
+
+İthal-sonrası kontrollü genişletme notu:
+- `frontier.renew_url_lease`, ithal edilmiş canlı Pi51 snapshot'ının parçası değildi
+- şimdi açık kontrat tasarımı ve hedefli scratch smoke validation sonrasında eklenmiş bilinçli bir split-surface genişletmesidir
 
 ### 003_frontier_finish_transitions.sql
 Şunları içerir:

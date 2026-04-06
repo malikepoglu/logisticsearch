@@ -111,6 +111,7 @@ ORDER BY e.schema_name, e.table_name;
 WITH expected(schema_name, function_name) AS (
   VALUES
     ('frontier','claim_next_url'),
+    ('frontier','renew_url_lease'),
     ('frontier','reap_expired_leases'),
     ('frontier','finish_fetch_success'),
     ('frontier','finish_fetch_retryable_error'),
@@ -195,6 +196,7 @@ expected_table(schema_name, table_name) AS (
 expected_function(schema_name, function_name) AS (
   VALUES
     ('frontier','claim_next_url'),
+    ('frontier','renew_url_lease'),
     ('frontier','reap_expired_leases'),
     ('frontier','finish_fetch_success'),
     ('frontier','finish_fetch_retryable_error'),

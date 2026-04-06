@@ -80,6 +80,7 @@ Covered in:
 
 Objects:
 - `frontier.claim_next_url` -> `002_frontier_claim_and_lease.sql`
+- `frontier.renew_url_lease` -> `002_frontier_claim_and_lease.sql` (post-import controlled extension)
 - `frontier.reap_expired_leases` -> `002_frontier_claim_and_lease.sql`
 - `frontier.finish_fetch_success` -> `003_frontier_finish_transitions.sql`
 - `frontier.finish_fetch_retryable_error` -> `003_frontier_finish_transitions.sql`
@@ -91,19 +92,47 @@ Objects:
 - `http_fetch.compute_robots_allow_decision` -> `005_http_fetch_robots_cache_and_enforcement.sql`
 
 ## Current result
+## Post-import controlled extension
+
+Current split surface now also contains one deliberate function beyond the imported live snapshot:
+
+- `frontier.renew_url_lease` -> `002_frontier_claim_and_lease.sql`
+
+This does not change the fact that live-snapshot coverage remains complete.  
+It means the split working surface now consists of:
+
+1. full coverage of the imported live crawler-core truth
+2. one explicit post-import lease-renewal extension
+
+---
+
+## İthal sonrası kontrollü genişletme
+
+Mevcut split yüzey, ithal edilmiş canlı snapshot'ın ötesinde artık bilinçli bir ek fonksiyon da içerir:
+
+- `frontier.renew_url_lease` -> `002_frontier_claim_and_lease.sql`
+
+Bu durum canlı snapshot kapsamasının tam olduğu gerçeğini değiştirmez.  
+Anlamı şudur: split çalışma yüzeyi artık şunlardan oluşur:
+
+1. ithal edilmiş canlı crawler-core doğrusunun tam kapsamı
+2. açık bir ithal-sonrası lease-renewal genişletmesi
+
 
 The split working surface currently covers the live snapshot object families at the following counts:
 
 - schemas: 3 / 3
 - types: 10 / 10
 - tables: 6 / 6
-- functions: 10 / 10
+- functions from imported live snapshot: 10 / 10
+- post-import controlled extension functions: 1 / 1
 - indexes: 12 / 12
 
 Current judgement:
 - live snapshot remains preserved as evidence
 - split surface is structurally coverage-complete for the imported crawler-core scope
 - future crawler-core SQL evolution should target the split surface first
+- explicit post-import extensions must be documented as extensions rather than silently merged into live-snapshot coverage language
 
 ---
 
@@ -204,7 +233,8 @@ Split çalışma yüzeyi şu anda canlı snapshot nesne ailelerini şu sayılard
 - şema: 3 / 3
 - type: 10 / 10
 - tablo: 6 / 6
-- fonksiyon: 10 / 10
+- ithal edilmiş canlı snapshot fonksiyonu: 10 / 10
+- ithal-sonrası kontrollü genişletme fonksiyonu: 1 / 1
 - index: 12 / 12
 
 Mevcut hüküm:

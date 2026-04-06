@@ -17,7 +17,7 @@ These files define how the live snapshot is decomposed into chronology-aligned u
 ### Execution-oriented split surface
 These files are the practical chronology-aligned SQL surface for future controlled work:
 - `001_seed_frontier_http_fetch_base.sql`
-- `002_frontier_claim_and_lease.sql`
+- `002_frontier_claim_and_lease.sql` — `frontier.claim_next_url`, `frontier.renew_url_lease`, `frontier.reap_expired_leases`
 - `003_frontier_finish_transitions.sql`
 - `004_frontier_politeness_and_freshness.sql`
 - `005_http_fetch_robots_cache_and_enforcement.sql`
@@ -46,7 +46,7 @@ Bu dosyalar canlı snapshot’ın chronology uyumlu parçalara nasıl ayrıldı�
 ### Execution-oriented split yüzeyi
 Bu dosyalar, gelecekteki kontrollü işler için pratik chronology uyumlu SQL yüzeyidir:
 - `001_seed_frontier_http_fetch_base.sql`
-- `002_frontier_claim_and_lease.sql`
+- `002_frontier_claim_and_lease.sql` — `frontier.claim_next_url`, `frontier.renew_url_lease`, `frontier.reap_expired_leases`
 - `003_frontier_finish_transitions.sql`
 - `004_frontier_politeness_and_freshness.sql`
 - `005_http_fetch_robots_cache_and_enforcement.sql`

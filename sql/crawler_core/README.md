@@ -25,7 +25,7 @@ Bu yüzey, crawler-core veritabanı mantığının artık yalnızca canlı Pi51 
 
 ### Primary working surface
 - `001_seed_frontier_http_fetch_base.sql`
-- `002_frontier_claim_and_lease.sql`
+- `002_frontier_claim_and_lease.sql` — `frontier.claim_next_url`, `frontier.renew_url_lease`, `frontier.reap_expired_leases`
 - `003_frontier_finish_transitions.sql`
 - `004_frontier_politeness_and_freshness.sql`
 - `005_http_fetch_robots_cache_and_enforcement.sql`
@@ -55,7 +55,7 @@ Bu yüzey, crawler-core veritabanı mantığının artık yalnızca canlı Pi51 
 
 ### Ana çalışma yüzeyi
 - `001_seed_frontier_http_fetch_base.sql`
-- `002_frontier_claim_and_lease.sql`
+- `002_frontier_claim_and_lease.sql` — `frontier.claim_next_url`, `frontier.renew_url_lease`, `frontier.reap_expired_leases`
 - `003_frontier_finish_transitions.sql`
 - `004_frontier_politeness_and_freshness.sql`
 - `005_http_fetch_robots_cache_and_enforcement.sql`
@@ -89,8 +89,13 @@ At the current sealed point, the covered object counts are:
 - schemas: 3
 - enum types: 10
 - tables: 6
-- functions: 10
+- functions from imported live scope: 10
+- post-import controlled extension functions: 1
 - indexes: 12
+
+Current post-import controlled extension now present in the split working surface:
+
+- `frontier.renew_url_lease` in `002_frontier_claim_and_lease.sql`
 
 ## Mevcut Kapsam
 
@@ -105,8 +110,13 @@ Mevcut mühürlü noktada kapsanan nesne sayıları şunlardır:
 - şema: 3
 - enum type: 10
 - tablo: 6
-- fonksiyon: 10
+- ithal edilmiş canlı kapsamdan gelen fonksiyon: 10
+- ithal-sonrası kontrollü genişletme fonksiyonu: 1
 - index: 12
+
+Split çalışma yüzeyinde artık mevcut olan ithal-sonrası kontrollü genişletme şudur:
+
+- `frontier.renew_url_lease` `002_frontier_claim_and_lease.sql` içinde
 
 ## Current Validation Status
 
@@ -124,6 +134,9 @@ Validated result:
 
 The live Pi51 crawler database was not mutated during this validation phase.
 
+Additional note:
+- `frontier.renew_url_lease` was added as a deliberate post-import extension and has passed targeted scratch smoke validation on `logisticsearch_crawler_lease_renew_scratch`.
+
 ## Güncel Doğrulama Durumu
 
 Split crawler-core SQL yüzeyi, Ubuntu Desktop üzerinde yerel scratch PostgreSQL veritabanına karşı başarıyla doğrulanmıştır:
@@ -139,6 +152,9 @@ Doğrulanan sonuç:
 - missing check count: 0
 
 Bu doğrulama fazı sırasında canlı Pi51 crawler veritabanı değiştirilmemiştir.
+
+Ek not:
+- `frontier.renew_url_lease`, bilinçli bir ithal-sonrası genişletme olarak eklenmiştir ve `logisticsearch_crawler_lease_renew_scratch` üzerinde hedefli scratch smoke validation'dan geçmiştir.
 
 ## Working Model
 

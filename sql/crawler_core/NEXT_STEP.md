@@ -27,7 +27,7 @@ Bundan sonraki iş artık ana düzenleme yüzeyi olarak ithal edilmiş canlı sn
 Future crawler-core SQL evolution should start from:
 
 - `001_seed_frontier_http_fetch_base.sql`
-- `002_frontier_claim_and_lease.sql`
+- `002_frontier_claim_and_lease.sql` — `frontier.claim_next_url`, `frontier.renew_url_lease`, `frontier.reap_expired_leases`
 - `003_frontier_finish_transitions.sql`
 - `004_frontier_politeness_and_freshness.sql`
 - `005_http_fetch_robots_cache_and_enforcement.sql`
@@ -37,12 +37,18 @@ Execution entry points:
 - `901_preflight_crawler_core_split_surface.psql.sql`
 - `900_apply_crawler_core_split_surface.psql.sql`
 
+Current ownership-lifecycle function family inside `002_frontier_claim_and_lease.sql` is now:
+
+- `frontier.claim_next_url`
+- `frontier.renew_url_lease`
+- `frontier.reap_expired_leases`
+
 ## Bundan sonra ana çalışma dosyaları
 
 Gelecekteki crawler-core SQL evrimi şu dosyalardan başlamalıdır:
 
 - `001_seed_frontier_http_fetch_base.sql`
-- `002_frontier_claim_and_lease.sql`
+- `002_frontier_claim_and_lease.sql` — `frontier.claim_next_url`, `frontier.renew_url_lease`, `frontier.reap_expired_leases`
 - `003_frontier_finish_transitions.sql`
 - `004_frontier_politeness_and_freshness.sql`
 - `005_http_fetch_robots_cache_and_enforcement.sql`
@@ -51,6 +57,12 @@ Execution giriş noktaları:
 
 - `901_preflight_crawler_core_split_surface.psql.sql`
 - `900_apply_crawler_core_split_surface.psql.sql`
+
+`002_frontier_claim_and_lease.sql` içindeki mevcut ownership-lifecycle fonksiyon ailesi artık şudur:
+
+- `frontier.claim_next_url`
+- `frontier.renew_url_lease`
+- `frontier.reap_expired_leases`
 
 ## Preserved comparison surfaces
 
@@ -72,7 +84,7 @@ Bunlar önemini korur; ancak ana düzenleme katmanı değil, karşılaştırma/k
 
 The next practical continuation should be one of these:
 
-1. controlled semantic evolution of one split SQL file
+1. controlled semantic evolution of one split SQL file, including claim / renew / reap ownership consistency inside `002_frontier_claim_and_lease.sql`
 2. a new crawler-core package added in chronology order
 3. a fresh scratch re-validation after any meaningful SQL change
 
@@ -80,7 +92,7 @@ The next practical continuation should be one of these:
 
 Bir sonraki pratik devam adımı şunlardan biri olmalıdır:
 
-1. split SQL dosyalarından birinde kontrollü semantik evrim
+1. `002_frontier_claim_and_lease.sql` içindeki claim / renew / reap ownership tutarlılığı dahil olmak üzere split SQL dosyalarından birinde kontrollü semantik evrim
 2. chronology sırasına uygun yeni bir crawler-core paketinin eklenmesi
 3. anlamlı her SQL değişikliğinden sonra yeni bir scratch tekrar doğrulaması
 
