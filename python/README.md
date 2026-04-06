@@ -21,3 +21,11 @@ The likely long-term role of this directory includes import helpers, export vali
 ## Beklenen Yön
 
 Bu dizinin muhtemel uzun vadeli rolü; LogisticSearch veri akışını destekleyen import yardımcıları, export doğrulayıcıları, yapısal araçlar, komut satırı yardımcıları ve operasyon script’lerini içermektir.
+
+## Current Tracked Surface
+
+At the moment, the tracked Python surface is intentionally very small. The active tracked implementation under this directory is the `python/desktop_import/` area, currently represented by `python/desktop_import/load_pi51_batch_into_postgres.py`. This means the Python surface is not yet a broad framework; it is a controlled support layer centered on desktop-side batch intake preparation for PostgreSQL loading.
+
+## Güncel İzlenen Yüzey
+
+Şu anda izlenen Python yüzeyi bilinçli olarak oldukça küçüktür. Bu dizin altındaki aktif izlenen uygulama `python/desktop_import/` alanıdır ve şu an `python/desktop_import/load_pi51_batch_into_postgres.py` ile temsil edilmektedir. Bu da Python yüzeyinin henüz geniş bir framework olmadığı; PostgreSQL yüklemesi öncesi desktop tarafı batch intake hazırlığına odaklanan kontrollü bir destek katmanı olduğu anlamına gelir.
