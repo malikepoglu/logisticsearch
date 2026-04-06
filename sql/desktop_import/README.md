@@ -33,6 +33,7 @@ Amacı, canlı gözlenen şema snapshot'ını korumak, mevcut çalıştırılabi
 - `SURFACE_ROLE_MAP.md`
 - `COVERAGE_OR_EQUIVALENCE_NOTE.md`
 - `PRIMARY_WORKING_SURFACE_SEAL.md`
+- `NEXT_STEP.md`
 
 ## Güncel dosya haritası
 
@@ -55,6 +56,7 @@ Amacı, canlı gözlenen şema snapshot'ını korumak, mevcut çalıştırılabi
 - `SURFACE_ROLE_MAP.md`
 - `COVERAGE_OR_EQUIVALENCE_NOTE.md`
 - `PRIMARY_WORKING_SURFACE_SEAL.md`
+- `NEXT_STEP.md`
 
 ## Current observed scope
 

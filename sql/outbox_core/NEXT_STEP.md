@@ -8,6 +8,8 @@ The outbox-core split SQL surface has now been:
 - decomposed into chronology-aligned working files
 - checked for upstream dependency assumptions
 - validated successfully on a local scratch PostgreSQL database with required upstream layers
+- equipped with reusable execution and validation entry points
+- aligned with README / seal / audit documentation
 
 The next work should no longer start from the imported live snapshot as the primary editing surface.
 
@@ -18,9 +20,11 @@ Outbox-core split SQL yüzeyi artık:
 - canlı Pi51 doğrusundan ithal edilmiş
 - chronology uyumlu çalışma dosyalarına parçalanmış
 - upstream bağımlılık varsayımları açısından kontrol edilmiş
-- gerekli upstream katmanlarla yerel scratch PostgreSQL veritabanında başarıyla doğrulanmıştır
+- gerekli upstream katmanlarla yerel scratch PostgreSQL veritabanında başarıyla doğrulanmış
+- reusable execution ve validation giriş noktalarıyla donatılmış
+- README / seal / audit dokümantasyonu ile hizalanmış durumdadır
 
-Bundan sonraki iş artık ana düzenleme yüzeyi olarak ithal edilmiş canlı snapshot’tan başlamamalıdır.
+Bundan sonraki iş artık ana düzenleme yüzeyi olarak ithal edilmiş canlı snapshot'tan başlamamalıdır.
 
 ## Primary working files from now on
 
@@ -35,6 +39,7 @@ Execution entry points:
 - `900_apply_outbox_core_split_surface.psql.sql`
 - `901_preflight_outbox_core_split_surface.psql.sql`
 - `902_presence_audit_outbox_core_split_surface.psql.sql`
+- `910_validate_outbox_core_split_surface.sh`
 
 ## Bundan sonra ana çalışma dosyaları
 
@@ -49,6 +54,7 @@ Execution giriş noktaları:
 - `900_apply_outbox_core_split_surface.psql.sql`
 - `901_preflight_outbox_core_split_surface.psql.sql`
 - `902_presence_audit_outbox_core_split_surface.psql.sql`
+- `910_validate_outbox_core_split_surface.sh`
 
 ## Preserved comparison surfaces
 
@@ -71,31 +77,15 @@ Bunlar önemini korur; ancak ana düzenleme katmanı değil, karşılaştırma/k
 The next practical continuation should be one of these:
 
 1. controlled semantic evolution of one split SQL file
-2. addition of reusable validation runner `910_validate_outbox_core_split_surface.sh`
-3. README alignment to the validated execution surface
-4. fresh scratch re-validation after any meaningful SQL change
+2. addition of a new chronology-aligned outbox-core package if the surface grows
+3. fresh scratch re-validation after any meaningful SQL change
+4. dependency-aware verification whenever upstream crawler-core or parse-core contracts change
 
 ## Anlık pratik devam yolu
 
 Bir sonraki pratik devam adımı şunlardan biri olmalıdır:
 
 1. split SQL dosyalarından birinde kontrollü semantik evrim
-2. reusable validation runner `910_validate_outbox_core_split_surface.sh` eklenmesi
-3. README'nin doğrulanmış execution surface ile hizalanması
-4. anlamlı her SQL değişikliğinden sonra yeni bir scratch tekrar doğrulaması
-
-## Current preserved scratch database
-
-Current preserved local scratch database:
-
-- `logisticsearch_outbox_core_split_scratch`
-
-This database may be retained temporarily for inspection, then dropped in a later cleanup step.
-
-## Mevcut korunan scratch veritabanı
-
-Mevcut korunan yerel scratch veritabanı:
-
-- `logisticsearch_outbox_core_split_scratch`
-
-Bu veritabanı inceleme için geçici olarak tutulabilir, daha sonra ayrı bir cleanup adımında silinebilir.
+2. yüzey büyürse chronology uyumlu yeni bir outbox-core paketinin eklenmesi
+3. anlamlı her SQL değişikliğinden sonra yeni bir scratch tekrar doğrulaması
+4. upstream crawler-core veya parse-core contract'ları değiştiğinde bağımlılık farkındalıklı tekrar doğrulama
