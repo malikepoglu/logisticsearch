@@ -2,15 +2,25 @@
 
 ## Overview
 
-This document defines the proposed canonical lease-renewal / heartbeat contract for the LogisticSearch crawler.
+This document defines the current canonical lease-renewal / heartbeat SQL contract for the LogisticSearch crawler.
 
-Its purpose is to close the most visible lifecycle gap identified in the crawler-core surface: long-running fetch work currently has lease acquisition, lease finalization, and expired-lease recovery, but does not yet have an explicit lease-renewal surface.
+Its purpose is to record and standardize the lease-renewal SQL surface that now exists in crawler-core, and to make clear that the remaining gap has shifted from SQL absence to worker-side heartbeat discipline.
+
+Current status note:
+- `frontier.renew_url_lease(...)` has now been added to `sql/crawler_core/002_frontier_claim_and_lease.sql`
+- targeted scratch smoke validation has passed on `logisticsearch_crawler_lease_renew_scratch`
+- the remaining design problem is now operational worker usage, not absence of SQL surface
 
 ## Genel Bakış
 
-Bu belge, LogisticSearch crawler için önerilen kanonik lease-renewal / heartbeat sözleşmesini tanımlar.
+Bu belge, LogisticSearch crawler için mevcut kanonik lease-renewal / heartbeat SQL sözleşmesini tanımlar.
 
-Amacı, crawler-core yüzeyinde tespit edilen en görünür yaşam döngüsü boşluğunu kapatmaktır: uzun süren fetch işlerinde şu anda lease alma, lease finalization ve expired-lease recovery vardır; ancak açık bir lease-renewal yüzeyi henüz yoktur.
+Amacı, crawler-core içinde artık mevcut olan lease-renewal SQL yüzeyini kayda geçirip standardize etmek ve kalan boşluğun artık SQL yokluğundan worker-tarafı heartbeat disiplinine kaydığını açık hale getirmektir.
+
+Mevcut durum notu:
+- `frontier.renew_url_lease(...)` artık `sql/crawler_core/002_frontier_claim_and_lease.sql` içine eklenmiştir
+- hedefli scratch smoke validation `logisticsearch_crawler_lease_renew_scratch` üzerinde geçmiştir
+- artık kalan tasarım problemi SQL yüzeyinin yokluğu değil, worker-tarafı operasyon kullanımıdır
 
 ## Problem statement
 
@@ -44,7 +54,7 @@ Bu da şu durumda duplicate-claim riski oluşturur:
 2. lease süresi dolar
 3. worker B aynı URL'yi reap edip tekrar claim eder
 
-## Proposed canonical function
+## Current canonical function
 
 Proposed function name:
 
@@ -54,7 +64,7 @@ This function should do one thing only:
 
 - extend the lease of a currently valid leased URL that is still owned by the same worker
 
-## Önerilen kanonik fonksiyon
+## Mevcut kanonik fonksiyon
 
 Önerilen fonksiyon adı:
 
@@ -64,7 +74,7 @@ Bu fonksiyon yalnızca tek bir iş yapmalıdır:
 
 - hâlâ aynı worker tarafından sahip olunan geçerli bir leased URL'nin lease süresini uzatmak
 
-## Proposed inputs
+## Current input shape
 
 Recommended input shape:
 
@@ -75,7 +85,7 @@ Recommended input shape:
 - `p_extend_by interval`
 - `p_touch_host boolean default false`
 
-## Önerilen girdiler
+## Mevcut girdi şekli
 
 Önerilen girdi şekli:
 
@@ -86,7 +96,7 @@ Recommended input shape:
 - `p_extend_by interval`
 - `p_touch_host boolean default false`
 
-## Proposed validation rules
+## Current validation rules
 
 The renewal should succeed only if all of these remain true:
 
@@ -100,7 +110,7 @@ The renewal should succeed only if all of these remain true:
 8. target URL still has the same `lease_owner`
 9. renewal is being attempted before the worker has effectively lost ownership
 
-## Önerilen doğrulama kuralları
+## Mevcut doğrulama kuralları
 
 Yenileme yalnızca aşağıdakilerin hepsi doğruysa başarılı olmalıdır:
 
@@ -114,7 +124,7 @@ Yenileme yalnızca aşağıdakilerin hepsi doğruysa başarılı olmalıdır:
 8. hedef URL hâlâ aynı `lease_owner` değerine sahip olmalıdır
 9. yenileme, worker sahipliği fiilen kaybetmeden önce deneniyor olmalıdır
 
-## Proposed effect
+## Current effect
 
 If renewal succeeds, the function should:
 
@@ -125,7 +135,7 @@ If renewal succeeds, the function should:
 - update `updated_at`
 - optionally touch host/activity metadata only if there is a clear need
 
-## Önerilen etki
+## Mevcut etki
 
 Yenileme başarılı olursa fonksiyon şunları yapmalıdır:
 
@@ -136,7 +146,7 @@ Yenileme başarılı olursa fonksiyon şunları yapmalıdır:
 - `updated_at` alanını güncellemelidir
 - host/activity metadata'sına yalnızca açık ihtiyaç varsa dokunmalıdır
 
-## Proposed non-goals
+## Current non-goals
 
 The renewal function should **not**:
 
@@ -149,7 +159,7 @@ The renewal function should **not**:
 - silently recover expired leases
 - act as a finish function
 
-## Önerilen non-goal'ler
+## Mevcut non-goal'ler
 
 Yenileme fonksiyonu şunları **yapmamalıdır**:
 
@@ -162,7 +172,7 @@ Yenileme fonksiyonu şunları **yapmamalıdır**:
 - expired lease'leri sessizce toparlamak
 - finish fonksiyonu gibi davranmak
 
-## Proposed return shape
+## Current return shape
 
 Recommended return fields:
 
@@ -175,7 +185,7 @@ Recommended return fields:
 
 The goal is operational clarity rather than minimalist silence.
 
-## Önerilen dönüş şekli
+## Mevcut dönüş şekli
 
 Önerilen dönüş alanları:
 
@@ -234,10 +244,12 @@ Bu önerilen fonksiyon kavramsal olarak şu dosyanın yanına aittir:
 
 ## Current design position
 
-Current recommended design position:
+Current design position:
 
-1. seal this contract first
-2. add the SQL function second
+1. the contract is documented
+2. the SQL function now exists in `002_frontier_claim_and_lease.sql`
+3. targeted scratch smoke validation has passed
+4. the next remaining work is worker-side heartbeat usage discipline rather than SQL existence
 3. validate the SQL behavior on scratch database third
 4. only then treat Python worker heartbeat logic as a real implementation target
 
@@ -254,10 +266,10 @@ Güncel önerilen tasarım pozisyonu şudur:
 
 The next technical step after this document should be:
 
-**design and add a narrow, explicit, non-magical lease-renewal SQL surface.**
+**seal the worker-side heartbeat operating rule around the existing narrow, explicit, non-magical lease-renewal SQL surface.**
 
 ## Anlık sonraki tasarım sonucu
 
 Bu belgeden sonraki teknik adım şu olmalıdır:
 
-**dar, açık ve sihir yapmayan bir lease-renewal SQL yüzeyi tasarlayıp eklemek.**
+**mevcut dar, açık ve sihir yapmayan lease-renewal SQL yüzeyi etrafında worker-tarafı heartbeat işletim kuralını mühürlemek.**

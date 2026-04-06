@@ -74,6 +74,7 @@ This file is responsible for:
 - enforcing host eligibility gates at claim time
 - enforcing host concurrency limits at claim time
 - assigning `lease_token`, `lease_owner`, `lease_acquired_at`, `lease_expires_at`
+- renewing an already-owned active lease via `frontier.renew_url_lease(...)`
 - reaping expired leases back to `queued`
 
 ### `003_frontier_finish_transitions.sql`
@@ -135,6 +136,7 @@ Bu dosya şunlardan sorumludur:
 - claim anında host eligibility gate'lerini uygulamak
 - claim anında host concurrency limitlerini uygulamak
 - `lease_token`, `lease_owner`, `lease_acquired_at`, `lease_expires_at` atamak
+- hâlâ aynı worker'a ait aktif bir lease'i `frontier.renew_url_lease(...)` ile yenilemek
 - süresi dolmuş lease'leri tekrar `queued` durumuna almak
 
 ### `003_frontier_finish_transitions.sql`
@@ -412,7 +414,7 @@ Mevcut robots desteği şimdiden şu soruları cevaplayabilir:
 
 The following are important known gaps in the current crawler-core lifecycle contract.
 
-### Gap A — explicit lease renewal / heartbeat is not present
+### Gap A — explicit lease-renewal SQL surface now exists, but worker heartbeat discipline is not yet sealed
 
 The current split crawler-core surface shows:
 
@@ -420,7 +422,7 @@ The current split crawler-core surface shows:
 - lease release on finish
 - expired-lease reap
 
-But it does **not** currently show an explicit lease-renewal or heartbeat function.
+It now shows an explicit lease-renewal SQL function: `frontier.renew_url_lease(...)` in `002_frontier_claim_and_lease.sql`.
 
 Practical consequence:
 
@@ -442,7 +444,7 @@ Practical consequence:
 
 The project should not pretend that robots decision support is identical to fully integrated robots-blocked lifecycle finalization.
 
-### Gap D — worker operational contract is not yet sealed
+### Gap D — worker operational contract is documented, but lease-renewal worker usage is not yet sealed
 
 The SQL surface provides strong building blocks, but a full canonical worker contract still needs to define:
 
@@ -457,7 +459,7 @@ The SQL surface provides strong building blocks, but a full canonical worker con
 
 Aşağıdakiler mevcut crawler-core yaşam döngüsü sözleşmesindeki önemli bilinen boşluklardır.
 
-### Boşluk A — açık lease renewal / heartbeat mevcut değil
+### Boşluk A — açık lease-renewal SQL yüzeyi artık mevcut, ancak worker heartbeat disiplini henüz mühürlenmiş değil
 
 Mevcut split crawler-core yüzeyi şunları gösteriyor:
 
@@ -465,7 +467,7 @@ Mevcut split crawler-core yüzeyi şunları gösteriyor:
 - finish sırasında lease bırakma
 - süresi dolmuş lease reap
 
-Ancak açık bir lease-renewal veya heartbeat fonksiyonu şu anda görünmüyor.
+Artık `002_frontier_claim_and_lease.sql` içinde açık bir lease-renewal SQL fonksiyonu görünmektedir: `frontier.renew_url_lease(...)`.
 
 Pratik sonuç:
 
@@ -540,7 +542,7 @@ Proje henüz şu iddialarda **bulunmamalıdır**:
 
 The next high-priority design question is:
 
-**Should crawler-core gain an explicit lease-renewal / heartbeat surface before Python worker implementation is treated as production-grade?**
+**Should worker heartbeat behavior now be sealed around the explicit `frontier.renew_url_lease(...)` surface before Python implementation is treated as production-grade?**
 
 Current answer:
 
@@ -550,7 +552,7 @@ Current answer:
 
 Bir sonraki yüksek öncelikli tasarım sorusu şudur:
 
-**Python worker implementasyonu production-grade kabul edilmeden önce crawler-core açık bir lease-renewal / heartbeat yüzeyi kazanmalı mı?**
+**Python implementasyonu production-grade kabul edilmeden önce worker heartbeat davranışı artık açık `frontier.renew_url_lease(...)` yüzeyi etrafında mühürlenmeli mi?**
 
 Mevcut cevap:
 

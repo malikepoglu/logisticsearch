@@ -57,6 +57,7 @@ Bir crawler worker'ın tekrar tekrar yaptığı pratik iş şudur:
 ### Claim and lease
 
 - `frontier.claim_next_url(...)`
+- `frontier.renew_url_lease(...)`
 - `frontier.reap_expired_leases(...)`
 
 ### Finish transitions
@@ -81,6 +82,7 @@ Bir crawler worker'ın tekrar tekrar yaptığı pratik iş şudur:
 ### Claim ve lease
 
 - `frontier.claim_next_url(...)`
+- `frontier.renew_url_lease(...)`
 - `frontier.reap_expired_leases(...)`
 
 ### Finish transition'lar
@@ -180,6 +182,10 @@ Call `frontier.claim_next_url(...)`.
 
 If no row is returned, the worker has no eligible job at that moment and should sleep according to operational policy rather than spin aggressively.
 
+### Step 1B — renew the lease during genuinely long work
+
+If the worker is still legitimately processing the same URL and lease expiry is approaching, it should renew the lease with `frontier.renew_url_lease(...)` before expiry rather than relying on luck.
+
 ### Step 2 — inspect robots refresh need
 
 Use `http_fetch.compute_robots_refresh_decision(...)`.
@@ -217,6 +223,10 @@ Worker şu pratik üst seviye döngüyü izlemelidir.
 ### Adım 1 — claim
 
 `frontier.claim_next_url(...)` çağır.
+
+### Adım 1B — gerçekten uzun süren işte lease'i yenile
+
+Worker hâlâ aynı URL üzerinde meşru şekilde çalışıyorsa ve lease bitişi yaklaşıyorsa, şansa güvenmek yerine bitişten önce `frontier.renew_url_lease(...)` ile lease yenilemelidir.
 
 Satır dönmezse worker'ın o anda uygun işi yoktur; agresif şekilde spin etmek yerine operasyon politikasına göre uyumalıdır.
 
@@ -256,9 +266,11 @@ The worker must **not** assume the following yet.
 
 ### Unsafe assumption A — long fetches are automatically lease-safe
 
+The SQL surface is now better than before because `frontier.renew_url_lease(...)` exists. But a worker is **not** automatically lease-safe unless it actually renews before expiry under an explicit operational cadence.
+
 This is not yet guaranteed.
 
-An explicit lease-renewal / heartbeat function is not currently visible in crawler-core.
+An explicit lease-renewal SQL function is now visible in crawler-core: `frontier.renew_url_lease(...)`.
 
 ### Unsafe assumption B — graceful global shutdown is already solved
 
@@ -284,9 +296,11 @@ Worker henüz şu varsayımları **yapmamalıdır**.
 
 ### Güvensiz varsayım A — uzun fetch'ler otomatik olarak lease-safe'dir
 
+SQL yüzeyi artık eskisine göre daha iyidir; çünkü `frontier.renew_url_lease(...)` vardır. Ancak worker, açık bir operasyon ritmiyle bitişten önce gerçekten yenileme yapmadıkça **otomatik olarak** lease-safe değildir.
+
 Bu henüz garanti edilmemiştir.
 
-Crawler-core içinde açık bir lease-renewal / heartbeat fonksiyonu şu anda görünmüyor.
+Crawler-core içinde artık açık bir lease-renewal SQL fonksiyonu görünmektedir: `frontier.renew_url_lease(...)`.
 
 ### Güvensiz varsayım B — graceful global shutdown zaten çözülmüştür
 
@@ -358,7 +372,7 @@ Mevcut aşamada en güvenli ve doğru yorum şudur:
 
 Before the crawler worker is treated as production-grade, the project should strongly consider adding and sealing at least these items:
 
-1. explicit lease renewal / heartbeat contract
+1. worker-side lease renewal / heartbeat operational adoption using `frontier.renew_url_lease(...)`
 2. explicit worker drain / graceful-stop contract
 3. explicit robots-blocked finalization path
 4. explicit operational runbook for service stop / restart / reboot / poweroff behavior
@@ -367,7 +381,7 @@ Before the crawler worker is treated as production-grade, the project should str
 
 Crawler worker production-grade kabul edilmeden önce proje en az şu unsurları eklemeyi ve mühürlemeyi güçlü şekilde değerlendirmelidir:
 
-1. açık lease renewal / heartbeat sözleşmesi
+1. `frontier.renew_url_lease(...)` kullanarak worker-tarafı lease renewal / heartbeat operasyonel benimsenmesi
 2. açık worker drain / graceful-stop sözleşmesi
 3. açık robots-blocked finalization yolu
 4. service stop / restart / reboot / poweroff davranışı için açık operasyon rehberi
