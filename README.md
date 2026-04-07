@@ -28,6 +28,32 @@ This repository is the canonical working base of the LogisticSearch project. It 
 ## Repository Amacı
 
 Bu repository, LogisticSearch projesinin kanonik çalışma tabanıdır. Crawler export yüzeyini, desktop intake sözleşmesini, SQL ve Python destek katmanlarını, proje yapısını, veri akışı sınırlarını ve repository temizliği etrafında gelişen operasyon kurallarını tanımlamak ve standardize etmek için kullanılmaktadır. Repository’nin hem çalıştırılabilir bir çalışma ağacı hem de sistemin nasıl şekillendiğini gösteren uzun vadeli bir mühendislik kaydı olarak faydalı kalması beklenmektedir.
+## Reading map for starting from zero
+
+If you are starting from zero, do **not** read the repository randomly.
+
+Use this order:
+
+1. `docs/README.md` — documentation hub and the safest beginner entry point
+2. `python/README.md` — Python surface map
+3. `sql/README.md` — SQL surface map
+4. `crawler_exports/README.md` — export and data-flow surface map
+
+Only after the hub-level meaning is clear should you continue into the lower-level README files inside those surfaces.
+
+## Sıfırdan başlamak için okuma haritası
+
+Sıfırdan başlıyorsan repository'yi rastgele okuma.
+
+Şu sırayı kullan:
+
+1. `docs/README.md` — dokümantasyon merkezi ve başlangıç için en güvenli giriş noktası
+2. `python/README.md` — Python yüzey haritası
+3. `sql/README.md` — SQL yüzey haritası
+4. `crawler_exports/README.md` — export ve veri akışı yüzey haritası
+
+Bu yüzeylerin içindeki alt README dosyalarına ancak hub seviyesindeki anlam netleştikten sonra geç.
+
 ## Taxonomy and Domain Scope
 
 A major backbone of LogisticSearch is its logistics taxonomy. The taxonomy is intended to cover the transportation and logistics domain broadly and in a way that remains operationally useful. Classification is not treated as a decorative metadata layer; it is one of the core mechanisms that determines how collected entities are interpreted, grouped, enriched, filtered, and prepared for later application use. The long-term scope is intentionally broad and includes both conventional logistics categories and more specialized or premium segments when they are relevant to real-world logistics search and discovery.
