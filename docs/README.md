@@ -69,6 +69,7 @@ Current topic surface in this folder:
 - `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
 - `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`
 - `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
+- `TOPIC_RUNBOOK_AUTHORING_AND_EXECUTION_DISCIPLINE.md`
 
 ---
 
@@ -91,6 +92,7 @@ Bu klasördeki mevcut topic yüzeyi:
 - `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
 - `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`
 - `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
+- `TOPIC_RUNBOOK_AUTHORING_AND_EXECUTION_DISCIPLINE.md`
 
 ---
 
@@ -121,6 +123,8 @@ Use this reading order.
 
 1. `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`  
    Read this to understand how repository artifacts and controlled work surfaces are named and kept disciplined.
+2. `TOPIC_RUNBOOK_AUTHORING_AND_EXECUTION_DISCIPLINE.md`
+   Read this next to understand how real runbooks must be authored, audited, and kept aligned with the repository explanation surfaces.
 
 ### Reading path C — specific historical operational seal
 
@@ -156,6 +160,8 @@ Dosyaları rastgele açma.
 
 1. `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`  
    Repository artefact’larının ve kontrollü çalışma yüzeylerinin nasıl adlandırıldığını ve disiplinli tutulduğunu anlamak için bunu oku.
+2. `TOPIC_RUNBOOK_AUTHORING_AND_EXECUTION_DISCIPLINE.md`
+   Gerçek runbook’ların nasıl yazılması, audit edilmesi ve repository açıklama yüzeyleriyle hizalı tutulması gerektiğini anlamak için bunu ardından oku.
 
 ### Okuma yolu C — belirli tarihsel operasyon mührü
 
