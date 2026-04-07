@@ -1,0 +1,483 @@
+# Docs / Documentation Hub
+
+## EN — What this folder is
+
+This `docs/` directory is the main human-readable documentation hub of the LogisticSearch repository.
+
+Its job is to explain the project in plain language, preserve operational truth, and give a disciplined reading path for both:
+
+- a complete beginner starting from zero
+- an advanced maintainer returning later and needing exact project continuity
+
+This folder is not random note storage.
+
+It is intended to function as:
+
+- a recipe
+- an operational handbook
+- a continuity ledger
+- a design-contract surface
+- a decision memory layer
+
+In short:
+
+If code and SQL define **what the system does**, the `docs/` folder must explain **what exists, why it exists, what it guarantees, what it does not yet guarantee, and how it should be operated safely**.
+
+---
+
+## TR — Bu klasör nedir
+
+Bu `docs/` dizini, LogisticSearch deposunun ana insan-okunur dokümantasyon merkezidir.
+
+Görevi; projeyi sade dille açıklamak, operasyon doğrusunu korumak ve şu iki kitle için disiplinli bir okuma yolu vermektir:
+
+- sıfırdan başlayan tam bir acemi
+- daha sonra geri dönüp proje sürekliliğini tam olarak anlaması gereken ileri seviye bakımcı
+
+Bu klasör rastgele not depolama alanı değildir.
+
+Şunlar gibi çalışması amaçlanır:
+
+- bir reçete
+- bir operasyon el kitabı
+- bir süreklilik defteri
+- bir tasarım-sözleşme yüzeyi
+- bir karar hafızası katmanı
+
+Kısacası:
+
+Kod ve SQL sistemin **ne yaptığını** tanımlıyorsa, `docs/` klasörü de **nelerin mevcut olduğunu, neden mevcut olduğunu, neyi garanti ettiğini, henüz neyi garanti etmediğini ve güvenli biçimde nasıl işletilmesi gerektiğini** açıklamalıdır.
+
+---
+
+## EN — Current visible scope in this folder
+
+At the current repository point, this folder contains top-level topic documents rather than subfolders.
+
+That means:
+
+- the immediate documentation gap is the missing root `docs/README.md`
+- there is currently no subdirectory README backlog inside `docs/`
+- if subdirectories are introduced later, each must receive its own bilingual `README.md`
+
+Current topic surface in this folder:
+
+- `TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+- `TOPIC_CRAWLER_LEASE_RENEWAL_CONTRACT.md`
+- `TOPIC_CRAWLER_LIFECYCLE_CONTRACT.md`
+- `TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
+- `TOPIC_CRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
+- `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`
+- `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
+
+---
+
+## TR — Bu klasörde görünen mevcut kapsam
+
+Mevcut repository noktasında bu klasör, alt klasörlerden ziyade kök seviyede topic belgeleri içerir.
+
+Bu şu anlama gelir:
+
+- anlık dokümantasyon boşluğu eksik olan kök `docs/README.md` dosyasıdır
+- şu anda `docs/` içinde alt klasör README borcu yoktur
+- ileride alt klasörler eklenirse, her biri kendi çift dilli `README.md` dosyasını almak zorundadır
+
+Bu klasördeki mevcut topic yüzeyi:
+
+- `TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+- `TOPIC_CRAWLER_LEASE_RENEWAL_CONTRACT.md`
+- `TOPIC_CRAWLER_LIFECYCLE_CONTRACT.md`
+- `TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
+- `TOPIC_CRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
+- `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`
+- `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
+
+---
+
+## EN — How to read this folder if you are starting from zero
+
+Do **not** open files randomly.
+
+Use this reading order.
+
+### Reading path A — beginner path for crawler lifecycle understanding
+
+1. `TOPIC_CRAWLER_LIFECYCLE_CONTRACT.md`  
+   Start here to understand the big picture of URL lifecycle, ownership, retry, revisit, recovery, and current known gaps.
+
+2. `TOPIC_CRAWLER_WORKER_OPERATIONAL_CONTRACT.md`  
+   Read this second to understand what a crawler worker is expected to do in practice.
+
+3. `TOPIC_CRAWLER_LEASE_RENEWAL_CONTRACT.md`  
+   Read this third to understand the lease-renewal SQL surface and why it was added.
+
+4. `TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`  
+   Read this fourth to understand the strict worker-side rule around lease renewal.
+
+5. `TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`  
+   Read this fifth to understand deliberate stop behavior, drain mode, bounded shutdown, and recovery expectations.
+
+### Reading path B — repo governance / documentation discipline
+
+1. `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`  
+   Read this to understand how repository artifacts and controlled work surfaces are named and kept disciplined.
+
+### Reading path C — specific historical operational seal
+
+1. `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`  
+   Read this only when you specifically need the recorded truth of that PostgreSQL major-upgrade seal point.
+
+---
+
+## TR — Sıfırdan başlıyorsan bu klasör nasıl okunmalı
+
+Dosyaları rastgele açma.
+
+Şu okuma sırasını kullan.
+
+### Okuma yolu A — crawler yaşam döngüsünü anlamak için başlangıç yolu
+
+1. `TOPIC_CRAWLER_LIFECYCLE_CONTRACT.md`  
+   Büyük resmi anlamak için buradan başla: URL yaşam döngüsü, sahiplik, retry, revisit, recovery ve mevcut bilinen boşluklar.
+
+2. `TOPIC_CRAWLER_WORKER_OPERATIONAL_CONTRACT.md`  
+   Crawler worker’ın pratikte ne yapmasının beklendiğini anlamak için bunu ikinci sırada oku.
+
+3. `TOPIC_CRAWLER_LEASE_RENEWAL_CONTRACT.md`  
+   Lease-renewal SQL yüzeyini ve neden eklendiğini anlamak için bunu üçüncü sırada oku.
+
+4. `TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`  
+   Lease renewal etrafındaki katı worker-tarafı kuralı anlamak için bunu dördüncü sırada oku.
+
+5. `TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`  
+   Bilinçli durdurma davranışını, drain mode’u, bounded shutdown’ı ve recovery beklentilerini anlamak için bunu beşinci sırada oku.
+
+### Okuma yolu B — repo yönetişimi / dokümantasyon disiplini
+
+1. `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`  
+   Repository artefact’larının ve kontrollü çalışma yüzeylerinin nasıl adlandırıldığını ve disiplinli tutulduğunu anlamak için bunu oku.
+
+### Okuma yolu C — belirli tarihsel operasyon mührü
+
+1. `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`  
+   Bunu yalnızca o PostgreSQL major-upgrade mühür noktasının kaydedilmiş doğrusuna özel olarak ihtiyaç duyduğunda oku.
+
+---
+
+## EN — What these crawler documents mean, in plain language
+
+### 1. Lifecycle contract
+
+This document explains the end-to-end lifecycle truth of crawler ownership and processing.
+
+It answers questions like:
+
+- how a URL becomes eligible for work
+- how it becomes leased
+- how it is finalized
+- how retry and revisit timing work
+- where the system is still intentionally incomplete
+
+### 2. Worker operational contract
+
+This document explains what a worker process is operationally allowed and expected to do.
+
+It is the bridge between SQL truth and real future Python worker behavior.
+
+### 3. Lease-renewal contract
+
+This document explains the lease-renewal SQL surface.
+
+It exists because long-running work can exceed initial lease duration, which creates duplicate-claim risk unless renewal is explicit and strict.
+
+### 4. Worker heartbeat operating rule
+
+This document explains how a worker must behave around the lease-renewal function.
+
+It answers questions like:
+
+- when to renew
+- when not to renew
+- what lease loss means
+- how not to confuse runtime memory with durable truth
+
+### 5. Drain and graceful-shutdown contract
+
+This document explains how intentional stop behavior must work.
+
+It answers questions like:
+
+- when to stop taking new work
+- what to do with in-flight work
+- whether renewal is still allowed during shutdown
+- how bounded shutdown differs from infinite waiting
+- how recovery works after incomplete shutdown
+
+---
+
+## TR — Bu crawler belgeleri sade dille ne anlatır
+
+### 1. Lifecycle contract
+
+Bu belge crawler sahipliği ve işleme sürecinin uçtan uca yaşam döngüsü doğrusunu açıklar.
+
+Şu sorulara cevap verir:
+
+- bir URL nasıl iş için uygun hale gelir
+- nasıl leased olur
+- nasıl finalize edilir
+- retry ve revisit zamanlaması nasıl çalışır
+- sistemin hangi noktalarının bilinçli olarak henüz tamamlanmadığı
+
+### 2. Worker operational contract
+
+Bu belge worker sürecinin operasyonel olarak ne yapmaya izinli ve ne yapmasının beklendiğini açıklar.
+
+SQL doğrusuyla gelecekteki gerçek Python worker davranışı arasındaki köprüdür.
+
+### 3. Lease-renewal contract
+
+Bu belge lease-renewal SQL yüzeyini açıklar.
+
+Uzun süren işlerin ilk lease süresini aşabilmesi nedeniyle vardır; aksi halde açık ve katı renewal olmadan duplicate-claim riski doğar.
+
+### 4. Worker heartbeat operating rule
+
+Bu belge worker’ın lease-renewal fonksiyonu etrafında nasıl davranması gerektiğini açıklar.
+
+Şu sorulara cevap verir:
+
+- ne zaman renew yapılmalı
+- ne zaman yapılmamalı
+- lease kaybı ne anlama gelir
+- çalışma anı belleği ile kalıcı doğruluğun nasıl karıştırılmaması gerektiği
+
+### 5. Drain and graceful-shutdown contract
+
+Bu belge bilinçli durdurma davranışının nasıl işlemesi gerektiğini açıklar.
+
+Şu sorulara cevap verir:
+
+- yeni iş ne zaman bırakılmalı
+- in-flight işle ne yapılmalı
+- shutdown sırasında renewal hâlâ izinli mi
+- bounded shutdown sonsuz beklemeden nasıl ayrılır
+- eksik shutdown sonrası recovery nasıl işler
+
+---
+
+## EN — Current judgement
+
+At the current repository point, `docs/README.md` is the required root explanation surface.
+
+It must remain present, bilingual, and beginner-first.
+
+It may become longer later; however, it must never become less explanatory or less structured.
+
+## TR — Mevcut hüküm
+
+Mevcut repository noktasında `docs/README.md`, zorunlu kök açıklama yüzeyidir.
+
+Mevcut kalmalı, çift dilli olmalı ve başlangıç dostu olmalıdır.
+
+İleride uzayabilir; ancak asla daha az açıklayıcı veya daha az düzenli hale gelmemelidir.
+
+## EN — Documentation rules for this folder
+
+Every document in `docs/` should follow these rules.
+
+### Rule 1 — bilingual by default
+
+Human explanation layers should be bilingual:
+
+- English
+- Turkish
+
+### Rule 2 — file paths, commands, identifiers stay in English
+
+To keep technical consistency, keep these in English:
+
+- file paths
+- filenames
+- SQL function names
+- commands
+- code identifiers
+- schema names
+- database object names
+
+### Rule 3 — contract language must be explicit
+
+Avoid vague text like:
+
+- “it should probably be fine”
+- “this is roughly how it works”
+- “we can assume this exists”
+
+Prefer explicit statements such as:
+
+- current guarantee
+- current non-guarantee
+- current gap
+- future required work
+- prohibited assumption
+- required operator behavior
+
+### Rule 4 — beginner-first clarity
+
+A new person should be able to understand:
+
+- what the document is about
+- why it exists
+- what problem it solves
+- what it assumes
+- what it forbids
+- what to read next
+
+### Rule 5 — no silent reality drift
+
+If implementation reality changes, documentation must be updated quickly.
+
+The docs must not remain frozen in an older truth after SQL, workflow, or operational contracts change.
+
+---
+
+## TR — Bu klasör için dokümantasyon kuralları
+
+`docs/` içindeki her belge şu kurallara uymalıdır.
+
+### Kural 1 — varsayılan olarak çift dilli
+
+İnsan açıklama katmanları çift dilli olmalıdır:
+
+- İngilizce
+- Türkçe
+
+### Kural 2 — dosya yolları, komutlar, kimlikler İngilizce kalır
+
+Teknik tutarlılığı korumak için şunlar İngilizce kalmalıdır:
+
+- dosya yolları
+- dosya adları
+- SQL fonksiyon adları
+- komutlar
+- kod kimlikleri
+- şema adları
+- veritabanı nesne adları
+
+### Kural 3 — sözleşme dili açık olmalıdır
+
+Şu tür muğlak ifadelerden kaçın:
+
+- “muhtemelen sorun olmaz”
+- “aşağı yukarı böyle çalışır”
+- “bunun mevcut olduğunu varsayabiliriz”
+
+Bunun yerine açık ifadeler tercih et:
+
+- mevcut garanti
+- mevcut garanti etmeme durumu
+- mevcut boşluk
+- gerekli gelecek işi
+- yasak varsayım
+- zorunlu operatör davranışı
+
+### Kural 4 — başlangıç seviyesi dostu açıklık
+
+Yeni gelen biri şunları anlayabilmelidir:
+
+- bu belgenin ne hakkında olduğu
+- neden var olduğu
+- hangi problemi çözdüğü
+- neyi varsaydığı
+- neyi yasakladığı
+- sırada neyi okuması gerektiği
+
+### Kural 5 — gerçeklik sessizce kaymamalı
+
+Implementasyon gerçeği değişirse dokümantasyon da hızlıca güncellenmelidir.
+
+SQL, iş akışı veya operasyon sözleşmeleri değiştikten sonra dokümanlar eski doğruda donup kalmamalıdır.
+
+---
+
+## EN — README policy for future docs subdirectories
+
+At the moment, `docs/` has no subdirectories.
+
+If subdirectories are added later, every new docs subdirectory must receive its own `README.md`.
+
+That future README must explain:
+
+- the scope of that subdirectory
+- why it exists
+- how to read it
+- file map of that subdirectory
+- update rules
+- relation to parent `docs/README.md`
+- relation to sibling surfaces when relevant
+
+No documentation subdirectory should remain unexplained.
+
+---
+
+## TR — Gelecekteki docs alt klasörleri için README politikası
+
+Şu anda `docs/` içinde alt klasör yoktur.
+
+İleride alt klasör eklenirse, her yeni docs alt klasörü kendi `README.md` dosyasını almak zorundadır.
+
+Bu gelecekteki README şunları açıklamalıdır:
+
+- o alt klasörün kapsamı
+- neden var olduğu
+- nasıl okunması gerektiği
+- o alt klasörün dosya haritası
+- güncelleme kuralları
+- üst `docs/README.md` ile ilişkisi
+- gerekiyorsa kardeş yüzeylerle ilişkisi
+
+Açıklamasız bırakılmış hiçbir dokümantasyon alt klasörü olmamalıdır.
+
+---
+
+## EN — Practical maintenance rule
+
+Whenever you add one of these:
+
+- a new topic contract
+- a new runbook
+- a new seal record worth keeping in docs
+- a new docs subdirectory
+- a new major operational truth
+
+you should ask:
+
+1. does `docs/README.md` need an update
+2. does the reading order need an update
+3. does a cross-reference need to be added
+4. does a new subdirectory need its own README
+
+If the answer is yes, update the documentation immediately in the same disciplined step.
+
+---
+
+## TR — Pratik bakım kuralı
+
+Şunlardan biri eklendiğinde:
+
+- yeni bir topic sözleşmesi
+- yeni bir runbook
+- docs içinde tutulmaya değer yeni bir seal kaydı
+- yeni bir docs alt klasörü
+- yeni bir büyük operasyon doğrusu
+
+şunu sormalısın:
+
+1. `docs/README.md` güncellenmeli mi
+2. okuma sırası güncellenmeli mi
+3. yeni bir çapraz referans eklenmeli mi
+4. yeni alt klasör kendi README’sini almalı mı
+
+Cevap evetse, dokümantasyonu aynı disiplinli adım içinde hemen güncelle.
+
+---
