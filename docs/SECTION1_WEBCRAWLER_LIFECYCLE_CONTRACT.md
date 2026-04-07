@@ -438,7 +438,7 @@ A very long fetch may remain valid in worker memory but still outlive its lease 
 
 The top-level drain/graceful-shutdown rule is now documented in:
 
-- `docs/TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+- `docs/SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
 
 The remaining gap is no longer contract absence. The remaining gap is consistent worker/service/helper adoption.
 
@@ -489,7 +489,7 @@ Pratik sonuç:
 
 Üst seviye drain/graceful-shutdown kuralı artık burada dokümante edilmiştir:
 
-- `docs/TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+- `docs/SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
 
 Kalan boşluk artık sözleşme yokluğu değildir. Kalan boşluk, worker/service/helper tarafında tutarlı benimsenmedir.
 

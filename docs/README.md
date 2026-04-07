@@ -62,11 +62,11 @@ That means:
 
 Current topic surface in this folder:
 
-- `TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
-- `TOPIC_CRAWLER_LEASE_RENEWAL_CONTRACT.md`
-- `TOPIC_CRAWLER_LIFECYCLE_CONTRACT.md`
-- `TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
-- `TOPIC_CRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
+- `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+- `SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`
+- `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`
+- `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
+- `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
 - `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`
 - `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
 
@@ -84,11 +84,11 @@ Bu şu anlama gelir:
 
 Bu klasördeki mevcut topic yüzeyi:
 
-- `TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
-- `TOPIC_CRAWLER_LEASE_RENEWAL_CONTRACT.md`
-- `TOPIC_CRAWLER_LIFECYCLE_CONTRACT.md`
-- `TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
-- `TOPIC_CRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
+- `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+- `SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`
+- `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`
+- `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
+- `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
 - `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`
 - `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
 
@@ -102,19 +102,19 @@ Use this reading order.
 
 ### Reading path A — beginner path for crawler lifecycle understanding
 
-1. `TOPIC_CRAWLER_LIFECYCLE_CONTRACT.md`  
+1. `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`  
    Start here to understand the big picture of URL lifecycle, ownership, retry, revisit, recovery, and current known gaps.
 
-2. `TOPIC_CRAWLER_WORKER_OPERATIONAL_CONTRACT.md`  
+2. `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`  
    Read this second to understand what a crawler worker is expected to do in practice.
 
-3. `TOPIC_CRAWLER_LEASE_RENEWAL_CONTRACT.md`  
+3. `SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`  
    Read this third to understand the lease-renewal SQL surface and why it was added.
 
-4. `TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`  
+4. `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`  
    Read this fourth to understand the strict worker-side rule around lease renewal.
 
-5. `TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`  
+5. `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`  
    Read this fifth to understand deliberate stop behavior, drain mode, bounded shutdown, and recovery expectations.
 
 ### Reading path B — repo governance / documentation discipline
@@ -137,19 +137,19 @@ Dosyaları rastgele açma.
 
 ### Okuma yolu A — crawler yaşam döngüsünü anlamak için başlangıç yolu
 
-1. `TOPIC_CRAWLER_LIFECYCLE_CONTRACT.md`  
+1. `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`  
    Büyük resmi anlamak için buradan başla: URL yaşam döngüsü, sahiplik, retry, revisit, recovery ve mevcut bilinen boşluklar.
 
-2. `TOPIC_CRAWLER_WORKER_OPERATIONAL_CONTRACT.md`  
+2. `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`  
    Crawler worker’ın pratikte ne yapmasının beklendiğini anlamak için bunu ikinci sırada oku.
 
-3. `TOPIC_CRAWLER_LEASE_RENEWAL_CONTRACT.md`  
+3. `SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`  
    Lease-renewal SQL yüzeyini ve neden eklendiğini anlamak için bunu üçüncü sırada oku.
 
-4. `TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`  
+4. `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`  
    Lease renewal etrafındaki katı worker-tarafı kuralı anlamak için bunu dördüncü sırada oku.
 
-5. `TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`  
+5. `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`  
    Bilinçli durdurma davranışını, drain mode’u, bounded shutdown’ı ve recovery beklentilerini anlamak için bunu beşinci sırada oku.
 
 ### Okuma yolu B — repo yönetişimi / dokümantasyon disiplini

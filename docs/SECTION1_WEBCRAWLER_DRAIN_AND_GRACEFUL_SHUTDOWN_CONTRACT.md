@@ -48,7 +48,7 @@ The current crawler-core and top-level contract surface already provide:
 - `frontier.finish_fetch_retryable_error(...)`
 - `frontier.finish_fetch_permanent_error(...)`
 - `frontier.reap_expired_leases(...)`
-- `docs/TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
+- `docs/SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
 
 Therefore the drain problem is no longer about missing ownership mechanics.
 
@@ -64,7 +64,7 @@ Mevcut crawler-core ve üst seviye sözleşme yüzeyi artık şunları sağlar:
 - `frontier.finish_fetch_retryable_error(...)`
 - `frontier.finish_fetch_permanent_error(...)`
 - `frontier.reap_expired_leases(...)`
-- `docs/TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
+- `docs/SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
 
 Dolayısıyla drain problemi artık sahiplik mekaniklerinin eksikliği değildir.
 

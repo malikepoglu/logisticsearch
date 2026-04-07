@@ -184,8 +184,8 @@ The worker should follow this practical high-level loop.
 
 This operational contract now sits together with the stricter heartbeat discipline and the drain-mode / graceful-shutdown rule defined in:
 
-- `docs/TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
-- `docs/TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+- `docs/SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
+- `docs/SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
 
 ### Step 1 — claim
 
@@ -233,8 +233,8 @@ Worker şu pratik üst seviye döngüyü izlemelidir.
 
 Bu operasyon sözleşmesi artık şu daha katı heartbeat disiplini dokümanıyla birlikte düşünülmelidir:
 
-- `docs/TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
-- `docs/TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+- `docs/SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
+- `docs/SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
 
 ### Adım 1 — claim
 
