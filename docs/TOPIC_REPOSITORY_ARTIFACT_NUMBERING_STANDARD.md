@@ -1,5 +1,11 @@
 # Repository Artifact Numbering Standard
 
+Documentation hub:
+- `docs/README.md` — use this as the root reading map for the documentation set.
+
+Dokümantasyon merkezi:
+- `docs/README.md` — dokümantasyon setinin kök okuma haritası olarak bunu kullan.
+
 ## Overview
 
 This document defines the canonical numbering standard for ordered repository artifacts in LogisticSearch.

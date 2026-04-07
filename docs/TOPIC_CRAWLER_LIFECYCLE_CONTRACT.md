@@ -1,5 +1,11 @@
 # Crawler Lifecycle Contract
 
+Documentation hub:
+- `docs/README.md` — use this as the root reading map for the documentation set.
+
+Dokümantasyon merkezi:
+- `docs/README.md` — dokümantasyon setinin kök okuma haritası olarak bunu kullan.
+
 ## Overview
 
 This document defines the current canonical lifecycle contract for the LogisticSearch crawler core.

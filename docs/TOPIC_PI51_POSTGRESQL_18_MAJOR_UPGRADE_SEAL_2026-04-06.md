@@ -1,5 +1,11 @@
 # Pi51 PostgreSQL 18 Major Upgrade Seal - 2026-04-06
 
+Documentation hub:
+- `docs/README.md` — use this as the root reading map for the documentation set.
+
+Dokümantasyon merkezi:
+- `docs/README.md` — dokümantasyon setinin kök okuma haritası olarak bunu kullan.
+
 ## Overview
 
 This document records the sealed final state of the Pi51 PostgreSQL major-version upgrade from PostgreSQL 16 to PostgreSQL 18.
