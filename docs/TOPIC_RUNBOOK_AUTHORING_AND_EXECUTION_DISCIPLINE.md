@@ -399,3 +399,31 @@ Mevcut repository noktasında disiplinli yön şudur:
 - aynı anda çok sayıda değil, kontrollü biçimde bir runbook ilerlet
 - her runbook’u mühürlemeden önce katı biçimde doğrula
 - bir yüzey gerçekten operasyonel hale geldiğinde README ile RUNBOOK’u eşlenik teslimatlar olarak ele al
+
+<!-- BEGIN SECTION1_WEBCRAWLER_RUNBOOK_BOUNDARY -->
+
+## Web Crawler Runbook Boundary And Execution Order
+
+### EN
+
+Current LogisticSearch web crawler runbook discipline:
+
+- Real technical runbook order is strictly: `crawler_core` -> `parse_core` -> `desktop_import`.
+- `desktop_import` must not be written or treated as the first operational runbook in the crawler line.
+- The reason is structural: fetch / frontier / lease / robots / crawler-core behavior comes first; parse / normalize / candidate / preranking comes second; downstream desktop import comes last.
+- A `RUNBOOK` is action-first and execution-oriented. A `README` is not a substitute for a `RUNBOOK`, and a `RUNBOOK` must not duplicate a `README`.
+- Before any new crawler runbook is created, overlap audit is mandatory against existing `README`, `TOPIC`, `PLAN`, `SEAL`, `NEXT_STEP`, and `PREREQUISITES` surfaces.
+- Where a crawler-specific canonical documentation file is created under `docs/`, the preferred crawler-domain naming should follow the `SECTION1_WEBCRAWLER_...` rule unless the surface is explicitly role-locked by a stable generic filename.
+
+### TR
+
+Mevcut LogisticSearch web crawler runbook disiplini:
+
+- Gerçek teknik runbook sırası kesin olarak şudur: `crawler_core` -> `parse_core` -> `desktop_import`.
+- `desktop_import`, crawler hattındaki ilk operasyonel runbook olarak yazılmayacak ve ele alınmayacaktır.
+- Gerekçe yapısaldır: önce fetch / frontier / lease / robots / crawler-core davranışı gelir; sonra parse / normalize / candidate / preranking gelir; en son downstream desktop import gelir.
+- `RUNBOOK` action-first ve execution-oriented bir yüzeydir. `README`, `RUNBOOK` yerine geçmez; `RUNBOOK` da `README` içeriğini tekrar etmemelidir.
+- Yeni bir crawler runbook oluşturmadan önce mevcut `README`, `TOPIC`, `PLAN`, `SEAL`, `NEXT_STEP` ve `PREREQUISITES` yüzeylerine karşı overlap denetimi zorunludur.
+- `docs/` altında crawler-özel yeni bir kanonik dokümantasyon dosyası oluşturuluyorsa, yüzey açıkça role-locked sabit bir genel dosya adına sahip değilse tercih edilen crawler alanı adlandırması `SECTION1_WEBCRAWLER_...` kuralını izlemelidir.
+
+<!-- END SECTION1_WEBCRAWLER_RUNBOOK_BOUNDARY -->
