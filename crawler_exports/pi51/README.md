@@ -21,6 +21,68 @@ Pi51 is treated as a dedicated crawler and data-origin node in the current Logis
 ## Üretici Kimliği
 
 Pi51, mevcut LogisticSearch mimarisinde özel bir crawler ve veri-kaynağı düğümü olarak ele alınmaktadır. Nihai sıralama veya outreach karar katmanı değildir ve karışık bir uygulama runtime yüzeyi olması amaçlanmamaktadır. Bu nedenle bu alt ağaç, GitHub aracılı taşıma yoluna girmiş crawler tarafı çıktılar için bir üretici-köken export yüzeyi olarak okunmalıdır.
+## Documentation hub
+
+Use these surfaces as the current hub / reading map around the Pi51 export-source area:
+
+- `README.md` — root repository entry surface
+- `docs/README.md` — documentation hub and safest beginner reading map
+- `crawler_exports/README.md` — crawler-exports hub surface
+- `crawler_exports/pi51/github_batch_v1/README.md` — current Pi51 channel contract surface
+
+This file should be read as the Pi51 producer-source hub, not as a standalone isolated note.
+
+## Dokümantasyon merkezi
+
+Pi51 export-kaynak alanı etrafındaki mevcut merkez / okuma haritası olarak şu yüzeyleri kullan:
+
+- `README.md` — repository kök giriş yüzeyi
+- `docs/README.md` — dokümantasyon merkezi ve başlangıç için en güvenli okuma haritası
+- `crawler_exports/README.md` — crawler-exports hub yüzeyi
+- `crawler_exports/pi51/github_batch_v1/README.md` — mevcut Pi51 kanal sözleşmesi yüzeyi
+
+Bu dosya, tek başına izole bir not olarak değil, Pi51 üretici-kaynak hub yüzeyi olarak okunmalıdır.
+
+## Beginner-first reading path
+
+If you are starting from zero, do **not** guess the Pi51 export surface from filenames alone.
+
+Use this order:
+
+1. `README.md` — understand the repository-level direction first
+2. `docs/README.md` — understand the documentation hub and reading model
+3. `crawler_exports/README.md` — understand the broader export surface first
+4. `crawler_exports/pi51/README.md` — understand the Pi51 producer/source boundary
+5. `crawler_exports/pi51/github_batch_v1/README.md` — understand the currently active Pi51 export channel
+
+## Başlangıç seviyesi okuma yolu
+
+Sıfırdan başlıyorsan Pi51 export yüzeyini yalnızca dosya adlarına bakarak tahmin etme.
+
+Şu sırayı kullan:
+
+1. `README.md` — önce repository seviyesindeki yönü anla
+2. `docs/README.md` — dokümantasyon merkezini ve okuma modelini anla
+3. `crawler_exports/README.md` — önce daha geniş export yüzeyini anla
+4. `crawler_exports/pi51/README.md` — Pi51 üretici/kaynak sınırını anla
+5. `crawler_exports/pi51/github_batch_v1/README.md` — şu anda aktif olan Pi51 export kanalını anla
+
+## Current tracked subsurface
+
+At the current repository point, the main tracked channel under this producer subtree is:
+
+- `crawler_exports/pi51/github_batch_v1/`
+
+This is not a decorative path. It is the current repository-visible Pi51 export channel.
+
+## Güncel izlenen alt yüzey
+
+Mevcut repository noktasında bu üretici alt ağacı altındaki ana izlenen kanal şudur:
+
+- `crawler_exports/pi51/github_batch_v1/`
+
+Bu süs amaçlı bir yol değildir. Bu, repository’de görünür olan güncel Pi51 export kanalıdır.
+
 ## Expected Contents
 
 This area is expected to contain channel-scoped subtrees that represent concrete export delivery families from Pi51. A channel may define its own directory contract, catalog files, batch layout, and integrity conventions, but all such material should still remain aligned with the broader `crawler_exports/` discipline.
