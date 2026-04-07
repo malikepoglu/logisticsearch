@@ -176,6 +176,10 @@ Worker revisit timing veya retry timing'i sıfırdan icat etmek zorunda değildi
 
 The worker should follow this practical high-level loop.
 
+This operational contract now sits together with the stricter heartbeat discipline defined in:
+
+- `docs/TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
+
 ### Step 1 — claim
 
 Call `frontier.claim_next_url(...)`.
@@ -219,6 +223,10 @@ Once finalization succeeds, the worker must treat the lease as closed and must n
 ## Mevcut zorunlu worker davranışı
 
 Worker şu pratik üst seviye döngüyü izlemelidir.
+
+Bu operasyon sözleşmesi artık şu daha katı heartbeat disiplini dokümanıyla birlikte düşünülmelidir:
+
+- `docs/TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
 
 ### Adım 1 — claim
 
@@ -267,6 +275,8 @@ The worker must **not** assume the following yet.
 ### Unsafe assumption A — long fetches are automatically lease-safe
 
 The SQL surface is now better than before because `frontier.renew_url_lease(...)` exists. But a worker is **not** automatically lease-safe unless it actually renews before expiry under an explicit operational cadence.
+
+That cadence is now part of the worker-side heartbeat discipline and operating rule, not an optional coding style preference.
 
 This is not yet guaranteed.
 

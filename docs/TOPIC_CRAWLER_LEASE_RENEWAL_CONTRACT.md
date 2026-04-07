@@ -10,6 +10,7 @@ Current status note:
 - `frontier.renew_url_lease(...)` has now been added to `sql/crawler_core/002_frontier_claim_and_lease.sql`
 - targeted scratch smoke validation has passed on `logisticsearch_crawler_lease_renew_scratch`
 - the remaining design problem is now operational worker usage, not absence of SQL surface
+- the canonical worker-side usage rule is documented in `docs/TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
 
 ## Genel Bakış
 
@@ -21,6 +22,7 @@ Mevcut durum notu:
 - `frontier.renew_url_lease(...)` artık `sql/crawler_core/002_frontier_claim_and_lease.sql` içine eklenmiştir
 - hedefli scratch smoke validation `logisticsearch_crawler_lease_renew_scratch` üzerinde geçmiştir
 - artık kalan tasarım problemi SQL yüzeyinin yokluğu değil, worker-tarafı operasyon kullanımıdır
+- kanonik worker-tarafı kullanım kuralı `docs/TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md` içinde dokümante edilmiştir
 
 ## Problem statement
 

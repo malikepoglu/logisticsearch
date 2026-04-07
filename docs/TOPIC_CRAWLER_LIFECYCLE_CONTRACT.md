@@ -475,7 +475,7 @@ Pratik sonuç:
 
 ### Boşluk B — açık global drain / graceful shutdown sözleşmesi mevcut değil
 
-Mevcut crawler-core yüzeyinde host düzeyi pause/backoff/eligibility kontrolleri var, ancak açık bir global crawler drain / shutdown SQL sözleşmesi şu anda görünmüyor.
+Mevcut crawler-core yüzeyinde host düzeyi pause/backoff/eligibility kontrolleri vardır; ancak ayrı ve kanonik bir global crawler drain / shutdown SQL sözleşmesi bu yüzeyde henüz standardize edilmemiştir.
 
 Pratik sonuç:
 
