@@ -21,6 +21,70 @@ The current working flow is: data is collected on the crawler node, assembled in
 ## Mevcut Akış
 
 Mevcut çalışan akış şudur: veri crawler düğümünde toplanır, yapısal bir export batch’i haline getirilir, GitHub köprüsü üzerinden bu repository’ye gönderilir, Ubuntu Desktop’a çekilir ve ardından desktop tarafındaki intake katmanı aracılığıyla PostgreSQL içine yüklenir. Bu nedenle export yüzeyi, crawler kökenli çıktı ile ana işleme ortamı arasındaki denetlenebilir teslim sınırı olarak görev yapar.
+## Documentation hub
+
+Use these surfaces as the current hub / reading map around the export area:
+
+- `README.md` — root repository entry surface
+- `docs/README.md` — documentation hub and safest beginner reading map
+- `crawler_exports/pi51/README.md` — Pi51 export-source surface
+- `crawler_exports/pi51/github_batch_v1/README.md` — current GitHub transport/export channel surface
+
+This file should be read as the crawler-exports hub, not as a standalone isolated note.
+
+## Dokümantasyon merkezi
+
+Export alanı etrafındaki mevcut merkez / okuma haritası olarak şu yüzeyleri kullan:
+
+- `README.md` — repository kök giriş yüzeyi
+- `docs/README.md` — dokümantasyon merkezi ve başlangıç için en güvenli okuma haritası
+- `crawler_exports/pi51/README.md` — Pi51 export-kaynak yüzeyi
+- `crawler_exports/pi51/github_batch_v1/README.md` — mevcut GitHub taşıma/export kanal yüzeyi
+
+Bu dosya, tek başına izole bir not olarak değil, crawler_exports alanının hub yüzeyi olarak okunmalıdır.
+
+## Beginner-first reading path
+
+If you are starting from zero, do **not** guess the export surface from filenames alone.
+
+Use this order:
+
+1. `README.md` — understand the repository-level direction first
+2. `docs/README.md` — understand the documentation hub and reading model
+3. `crawler_exports/README.md` — understand what the export surface is and is not
+4. `crawler_exports/pi51/README.md` — understand the producer/source side
+5. `crawler_exports/pi51/github_batch_v1/README.md` — understand the current channel contract
+
+## Başlangıç seviyesi okuma yolu
+
+Sıfırdan başlıyorsan export yüzeyini yalnızca dosya adlarına bakarak tahmin etme.
+
+Şu sırayı kullan:
+
+1. `README.md` — önce repository seviyesindeki yönü anla
+2. `docs/README.md` — dokümantasyon merkezini ve okuma modelini anla
+3. `crawler_exports/README.md` — export yüzeyinin ne olduğunu ve ne olmadığını anla
+4. `crawler_exports/pi51/README.md` — üretici/kaynak tarafını anla
+5. `crawler_exports/pi51/github_batch_v1/README.md` — mevcut kanal sözleşmesini anla
+
+## Current tracked subsurfaces
+
+At the current repository point, the main tracked export subsurfaces are:
+
+- `crawler_exports/pi51/`
+- `crawler_exports/pi51/github_batch_v1/`
+
+These are not generic decorative paths. They are part of the current export navigation and transport model.
+
+## Güncel izlenen alt yüzeyler
+
+Mevcut repository noktasında ana izlenen export alt yüzeyleri şunlardır:
+
+- `crawler_exports/pi51/`
+- `crawler_exports/pi51/github_batch_v1/`
+
+Bunlar genel amaçlı süs dizinleri değildir. Mevcut export gezinme ve taşıma modelinin parçasıdırlar.
+
 ## Design Principles
 
 The export surface is designed around traceability, predictable layout, integrity checking, and minimal ambiguity. A valid export should be understandable without hidden machine context, should carry enough metadata to be inspected later, and should fit a stable directory contract. This makes the repository more useful as both a transport surface and a long-term operational record.
