@@ -21,6 +21,68 @@ In the current working model, Pi51 assembles a crawler export batch, pushes it i
 ## Akıştaki Mevcut Rol
 
 Mevcut çalışma modelinde Pi51 bir crawler export batch’i oluşturur, bu kanala gönderir, Ubuntu Desktop güncel durumu GitHub’dan çeker ve desktop tarafındaki import katmanı kabul edilen kayıtları PostgreSQL içine yükler. Bu da kanalı, canlı veri yolunda kritik bir taşıma ve teslim sınırı haline getirir.
+## Documentation hub
+
+Use these surfaces as the current hub / reading map around this channel:
+
+- `README.md` — root repository entry surface
+- `docs/README.md` — documentation hub and safest beginner reading map
+- `crawler_exports/README.md` — crawler-exports hub surface
+- `crawler_exports/pi51/README.md` — Pi51 export-source hub surface
+
+This file should be read as the current channel contract surface, not as a standalone isolated note.
+
+## Dokümantasyon merkezi
+
+Bu kanal etrafındaki mevcut merkez / okuma haritası olarak şu yüzeyleri kullan:
+
+- `README.md` — repository kök giriş yüzeyi
+- `docs/README.md` — dokümantasyon merkezi ve başlangıç için en güvenli okuma haritası
+- `crawler_exports/README.md` — crawler-exports hub yüzeyi
+- `crawler_exports/pi51/README.md` — Pi51 export-kaynak hub yüzeyi
+
+Bu dosya, tek başına izole bir not olarak değil, mevcut kanal sözleşmesi yüzeyi olarak okunmalıdır.
+
+## Beginner-first reading path
+
+If you are starting from zero, do **not** guess the channel from filenames alone.
+
+Use this order:
+
+1. `README.md` — understand the repository-level direction first
+2. `docs/README.md` — understand the documentation hub and reading model
+3. `crawler_exports/README.md` — understand the broader export surface first
+4. `crawler_exports/pi51/README.md` — understand the Pi51 producer/source boundary
+5. `crawler_exports/pi51/github_batch_v1/README.md` — then read the current channel contract
+
+## Başlangıç seviyesi okuma yolu
+
+Sıfırdan başlıyorsan kanalı yalnızca dosya adlarına bakarak tahmin etme.
+
+Şu sırayı kullan:
+
+1. `README.md` — önce repository seviyesindeki yönü anla
+2. `docs/README.md` — dokümantasyon merkezini ve okuma modelini anla
+3. `crawler_exports/README.md` — önce daha geniş export yüzeyini anla
+4. `crawler_exports/pi51/README.md` — Pi51 üretici/kaynak sınırını anla
+5. `crawler_exports/pi51/github_batch_v1/README.md` — sonra mevcut kanal sözleşmesini oku
+
+## Current tracked channel path
+
+At the current repository point, this channel path is:
+
+- `crawler_exports/pi51/github_batch_v1/`
+
+This is the current repository-visible Pi51 GitHub transport channel.
+
+## Güncel izlenen kanal yolu
+
+Mevcut repository noktasında bu kanal yolu şudur:
+
+- `crawler_exports/pi51/github_batch_v1/`
+
+Bu, repository’de görünür olan güncel Pi51 GitHub taşıma kanalıdır.
+
 ## Expected Layout
 
 This channel is expected to contain:
