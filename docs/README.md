@@ -56,7 +56,7 @@ At the current repository point, this folder contains top-level topic documents 
 
 That means:
 
-- the immediate documentation gap is the missing root `docs/README.md`
+- the required root explanation surface `docs/README.md` now exists
 - there is currently no subdirectory README backlog inside `docs/`
 - if subdirectories are introduced later, each must receive its own bilingual `README.md`
 
@@ -78,7 +78,7 @@ Mevcut repository noktasında bu klasör, alt klasörlerden ziyade kök seviyede
 
 Bu şu anlama gelir:
 
-- anlık dokümantasyon boşluğu eksik olan kök `docs/README.md` dosyasıdır
+- zorunlu kök açıklama yüzeyi olan `docs/README.md` artık mevcuttur
 - şu anda `docs/` içinde alt klasör README borcu yoktur
 - ileride alt klasörler eklenirse, her biri kendi çift dilli `README.md` dosyasını almak zorundadır
 
@@ -217,7 +217,7 @@ It answers questions like:
 
 ## TR — Bu crawler belgeleri sade dille ne anlatır
 
-### 1. Lifecycle contract
+### 1. Yaşam döngüsü sözleşmesi
 
 Bu belge crawler sahipliği ve işleme sürecinin uçtan uca yaşam döngüsü doğrusunu açıklar.
 
@@ -229,19 +229,19 @@ Bu belge crawler sahipliği ve işleme sürecinin uçtan uca yaşam döngüsü d
 - retry ve revisit zamanlaması nasıl çalışır
 - sistemin hangi noktalarının bilinçli olarak henüz tamamlanmadığı
 
-### 2. Worker operational contract
+### 2. Worker operasyon sözleşmesi
 
 Bu belge worker sürecinin operasyonel olarak ne yapmaya izinli ve ne yapmasının beklendiğini açıklar.
 
 SQL doğrusuyla gelecekteki gerçek Python worker davranışı arasındaki köprüdür.
 
-### 3. Lease-renewal contract
+### 3. Lease-renewal sözleşmesi
 
 Bu belge lease-renewal SQL yüzeyini açıklar.
 
 Uzun süren işlerin ilk lease süresini aşabilmesi nedeniyle vardır; aksi halde açık ve katı renewal olmadan duplicate-claim riski doğar.
 
-### 4. Worker heartbeat operating rule
+### 4. Worker heartbeat işletim kuralı
 
 Bu belge worker’ın lease-renewal fonksiyonu etrafında nasıl davranması gerektiğini açıklar.
 
@@ -252,19 +252,17 @@ Bu belge worker’ın lease-renewal fonksiyonu etrafında nasıl davranması ger
 - lease kaybı ne anlama gelir
 - çalışma anı belleği ile kalıcı doğruluğun nasıl karıştırılmaması gerektiği
 
-### 5. Drain and graceful-shutdown contract
+### 5. Drain ve graceful-shutdown sözleşmesi
 
 Bu belge bilinçli durdurma davranışının nasıl işlemesi gerektiğini açıklar.
 
 Şu sorulara cevap verir:
 
-- yeni iş ne zaman bırakılmalı
-- in-flight işle ne yapılmalı
+- ne zaman yeni iş alımı durmalı
+- in-flight işlerle ne yapılmalı
 - shutdown sırasında renewal hâlâ izinli mi
-- bounded shutdown sonsuz beklemeden nasıl ayrılır
-- eksik shutdown sonrası recovery nasıl işler
-
----
+- bounded shutdown ile sonsuz bekleme arasındaki fark nedir
+- eksik kapanış sonrası recovery nasıl çalışır
 
 ## EN — Current judgement
 
