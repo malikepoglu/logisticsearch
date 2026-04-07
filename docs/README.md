@@ -1,6 +1,6 @@
 # Docs / Documentation Hub
 
-## EN — What this folder is
+## What this folder is
 
 This `docs/` directory is the main human-readable documentation hub of the LogisticSearch repository.
 
@@ -25,7 +25,7 @@ If code and SQL define **what the system does**, the `docs/` folder must explain
 
 ---
 
-## TR — Bu klasör nedir
+## Bu klasör nedir
 
 Bu `docs/` dizini, LogisticSearch deposunun ana insan-okunur dokümantasyon merkezidir.
 
@@ -50,7 +50,7 @@ Kod ve SQL sistemin **ne yaptığını** tanımlıyorsa, `docs/` klasörü de **
 
 ---
 
-## EN — Current visible scope in this folder
+## Current visible scope in this folder
 
 At the current repository point, this folder contains top-level topic documents rather than subfolders.
 
@@ -72,7 +72,7 @@ Current topic surface in this folder:
 
 ---
 
-## TR — Bu klasörde görünen mevcut kapsam
+## Bu klasörde görünen mevcut kapsam
 
 Mevcut repository noktasında bu klasör, alt klasörlerden ziyade kök seviyede topic belgeleri içerir.
 
@@ -94,7 +94,7 @@ Bu klasördeki mevcut topic yüzeyi:
 
 ---
 
-## EN — How to read this folder if you are starting from zero
+## How to read this folder if you are starting from zero
 
 Do **not** open files randomly.
 
@@ -129,7 +129,7 @@ Use this reading order.
 
 ---
 
-## TR — Sıfırdan başlıyorsan bu klasör nasıl okunmalı
+## Sıfırdan başlıyorsan bu klasör nasıl okunmalı
 
 Dosyaları rastgele açma.
 
@@ -164,7 +164,7 @@ Dosyaları rastgele açma.
 
 ---
 
-## EN — What these crawler documents mean, in plain language
+## What these crawler documents mean, in plain language
 
 ### 1. Lifecycle contract
 
@@ -215,7 +215,7 @@ It answers questions like:
 
 ---
 
-## TR — Bu crawler belgeleri sade dille ne anlatır
+## Bu crawler belgeleri sade dille ne anlatır
 
 ### 1. Yaşam döngüsü sözleşmesi
 
@@ -264,7 +264,7 @@ Bu belge bilinçli durdurma davranışının nasıl işlemesi gerektiğini açı
 - bounded shutdown ile sonsuz bekleme arasındaki fark nedir
 - eksik kapanış sonrası recovery nasıl çalışır
 
-## EN — Current judgement
+## Current judgement
 
 At the current repository point, `docs/README.md` is the required root explanation surface.
 
@@ -272,7 +272,7 @@ It must remain present, bilingual, and beginner-first.
 
 It may become longer later; however, it must never become less explanatory or less structured.
 
-## TR — Mevcut hüküm
+## Mevcut hüküm
 
 Mevcut repository noktasında `docs/README.md`, zorunlu kök açıklama yüzeyidir.
 
@@ -280,7 +280,7 @@ Mevcut kalmalı, çift dilli olmalı ve başlangıç dostu olmalıdır.
 
 İleride uzayabilir; ancak asla daha az açıklayıcı veya daha az düzenli hale gelmemelidir.
 
-## EN — Documentation rules for this folder
+## Documentation rules for this folder
 
 Every document in `docs/` should follow these rules.
 
@@ -339,7 +339,7 @@ The docs must not remain frozen in an older truth after SQL, workflow, or operat
 
 ---
 
-## TR — Bu klasör için dokümantasyon kuralları
+## Bu klasör için dokümantasyon kuralları
 
 `docs/` içindeki her belge şu kurallara uymalıdır.
 
@@ -398,7 +398,7 @@ SQL, iş akışı veya operasyon sözleşmeleri değiştikten sonra dokümanlar 
 
 ---
 
-## EN — README policy for future docs subdirectories
+## README policy for future docs subdirectories
 
 At the moment, `docs/` has no subdirectories.
 
@@ -418,7 +418,7 @@ No documentation subdirectory should remain unexplained.
 
 ---
 
-## TR — Gelecekteki docs alt klasörleri için README politikası
+## Gelecekteki docs alt klasörleri için README politikası
 
 Şu anda `docs/` içinde alt klasör yoktur.
 
@@ -438,7 +438,7 @@ Açıklamasız bırakılmış hiçbir dokümantasyon alt klasörü olmamalıdır
 
 ---
 
-## EN — Practical maintenance rule
+## Practical maintenance rule
 
 Whenever you add one of these:
 
@@ -459,7 +459,7 @@ If the answer is yes, update the documentation immediately in the same disciplin
 
 ---
 
-## TR — Pratik bakım kuralı
+## Pratik bakım kuralı
 
 Şunlardan biri eklendiğinde:
 
