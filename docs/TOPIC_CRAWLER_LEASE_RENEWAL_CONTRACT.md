@@ -11,6 +11,7 @@ Current status note:
 - targeted scratch smoke validation has passed on `logisticsearch_crawler_lease_renew_scratch`
 - the remaining design problem is now operational worker usage, not absence of SQL surface
 - the canonical worker-side usage rule is documented in `docs/TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
+- the canonical drain/graceful-shutdown rule is documented in `docs/TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
 
 ## Genel Bakış
 
@@ -23,6 +24,7 @@ Mevcut durum notu:
 - hedefli scratch smoke validation `logisticsearch_crawler_lease_renew_scratch` üzerinde geçmiştir
 - artık kalan tasarım problemi SQL yüzeyinin yokluğu değil, worker-tarafı operasyon kullanımıdır
 - kanonik worker-tarafı kullanım kuralı `docs/TOPIC_CRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md` içinde dokümante edilmiştir
+- kanonik drain/graceful-shutdown kuralı `docs/TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md` içinde dokümante edilmiştir
 
 ## Problem statement
 

@@ -252,6 +252,10 @@ Sistem tasarımı tarafından tolere edilen bir kesintidir.
 
 ## Relationship to shutdown helpers
 
+The formal drain/graceful-shutdown contract is documented in:
+
+- `docs/TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+
 A future sudo-less or controlled shutdown helper may later be added at the OS/service layer.
 
 But even if such a helper exists, the worker rule must remain the same:

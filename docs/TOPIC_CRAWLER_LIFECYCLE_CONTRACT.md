@@ -428,7 +428,13 @@ Practical consequence:
 
 A very long fetch may remain valid in worker memory but still outlive its lease in the database, creating duplicate-claim risk.
 
-### Gap B — explicit global drain / graceful shutdown contract is not present
+### Gap B — explicit drain / graceful-shutdown contract now exists, but full adoption is not yet sealed
+
+The top-level drain/graceful-shutdown rule is now documented in:
+
+- `docs/TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+
+The remaining gap is no longer contract absence. The remaining gap is consistent worker/service/helper adoption.
 
 The current crawler-core surface has host-level pause/backoff/eligibility controls, but it does **not** currently expose a clear global crawler drain / shutdown SQL contract.
 
@@ -473,7 +479,13 @@ Pratik sonuç:
 
 Çok uzun bir fetch worker belleğinde hâlâ geçerli olabilir ama veritabanındaki lease süresini aşabilir; bu da duplicate-claim riski doğurur.
 
-### Boşluk B — açık global drain / graceful shutdown sözleşmesi mevcut değil
+### Boşluk B — açık drain / graceful-shutdown sözleşmesi artık mevcut, ancak tam benimsenme henüz mühürlenmiş değil
+
+Üst seviye drain/graceful-shutdown kuralı artık burada dokümante edilmiştir:
+
+- `docs/TOPIC_CRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+
+Kalan boşluk artık sözleşme yokluğu değildir. Kalan boşluk, worker/service/helper tarafında tutarlı benimsenmedir.
 
 Mevcut crawler-core yüzeyinde host düzeyi pause/backoff/eligibility kontrolleri vardır; ancak ayrı ve kanonik bir global crawler drain / shutdown SQL sözleşmesi bu yüzeyde henüz standardize edilmemiştir.
 
