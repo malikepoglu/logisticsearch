@@ -63,6 +63,7 @@ That means:
 Current topic surface in this folder:
 
 - `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+- `SECTION1_WEBCRAWLER_CONTROLS.md`
 - `SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`
 - `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`
 - `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
@@ -86,6 +87,7 @@ Bu şu anlama gelir:
 Bu klasördeki mevcut topic yüzeyi:
 
 - `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+- `SECTION1_WEBCRAWLER_CONTROLS.md`
 - `SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`
 - `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`
 - `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
@@ -118,6 +120,8 @@ Use this reading order.
 
 5. `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`  
    Read this fifth to understand deliberate stop behavior, drain mode, bounded shutdown, and recovery expectations.
+6. `SECTION1_WEBCRAWLER_CONTROLS.md`  
+   Read this sixth to understand the full top-level control family and its boundary against shutdown-class commands.
 
 ### Reading path B — repo governance / documentation discipline
 
@@ -155,6 +159,8 @@ Dosyaları rastgele açma.
 
 5. `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`  
    Bilinçli durdurma davranışını, drain mode’u, bounded shutdown’ı ve recovery beklentilerini anlamak için bunu beşinci sırada oku.
+6. `SECTION1_WEBCRAWLER_CONTROLS.md`  
+   Tüm üst-seviye kontrol ailesini ve bunun shutdown-sınıfı komutlardan sınırını anlamak için bunu altıncı sırada oku.
 
 ### Okuma yolu B — repo yönetişimi / dokümantasyon disiplini
 
