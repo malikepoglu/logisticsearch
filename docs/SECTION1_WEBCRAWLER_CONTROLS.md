@@ -1,26 +1,24 @@
 # Webcrawler Controls
 
-# Webcrawler Kontrolleri
-
-## Purpose
-
-## Amaç
-
 This document defines the canonical operator-facing top-level control family for the LogisticSearch webcrawler.
+
+# Webcrawler Kontrolleri
 
 Bu belge, LogisticSearch webcrawler için kanonik operatör-yüzlü üst-seviye kontrol ailesini tanımlar.
 
-It exists so the project has one explicit documentation home for all top-level webcrawler control names.
+## Purpose
 
-Projenin tüm üst-seviye webcrawler kontrol adları için tek açık dokümantasyon evi olması için vardır.
+It exists so the project has one explicit documentation home for all top-level webcrawler control names.
 
 It does **not** prove that live helper commands already exist.
 
-Bu belge, canlı yardımcı komutların şimdiden var olduğunu **kanıtlamaz**.
+## Amaç
+
+Bu doküman, projenin tüm üst-seviye webcrawler kontrol adları için tek açık dokümantasyon evi olmasını sağlar.
+
+Canlı yardımcı komutların şimdiden var olduğunu **kanıtlamaz**.
 
 ## Current truth boundary
-
-## Güncel doğruluk sınırı
 
 Current truth:
 
@@ -28,6 +26,8 @@ Current truth:
 - controlled seed+frontier bootstrap proof now exists on Ubuntu Desktop scratch
 - control-command names are standardized
 - but command-name standardization alone does **not** prove a live worker/runtime/service implementation
+
+## Güncel doğruluk sınırı
 
 Güncel doğruluk:
 
@@ -38,8 +38,6 @@ Güncel doğruluk:
 
 ## Canonical control family
 
-## Kanonik kontrol ailesi
-
 The canonical top-level control family is:
 
 - `playwc`
@@ -48,6 +46,8 @@ The canonical top-level control family is:
 - `resetwc`
 - `poweroffwc`
 - `rebootwc`
+
+## Kanonik kontrol ailesi
 
 Kanonik üst-seviye kontrol ailesi şudur:
 
@@ -60,10 +60,6 @@ Kanonik üst-seviye kontrol ailesi şudur:
 
 ## Canonical meaning of each name
 
-## Her adın kanonik anlamı
-
-### EN
-
 - `playwc` should start the future crawler runtime only after a real worker/service surface exists.
 - `resumewc` must resume only through durable database truth and the normal claim path; it must not pretend to restore hidden in-memory crawler position.
 - `stopwc` is the deliberate controlled-stop command.
@@ -71,7 +67,7 @@ Kanonik üst-seviye kontrol ailesi şudur:
 - `poweroffwc` belongs to both the general control family and the shutdown-class subset.
 - `rebootwc` belongs to both the general control family and the shutdown-class subset.
 
-### TR
+## Her adın kanonik anlamı
 
 - `playwc`, ancak gerçek bir worker/service yüzeyi var olduktan sonra gelecekteki crawler runtime’ını başlatmalıdır.
 - `resumewc`, yalnızca kalıcı veritabanı doğrusu ve normal claim yolu üzerinden devam etmelidir; gizli process/RAM durumundan crawler pozisyonu geri geliyormuş gibi davranmamalıdır.
@@ -82,23 +78,11 @@ Kanonik üst-seviye kontrol ailesi şudur:
 
 ## Relationship to shutdown-class controls
 
-## Shutdown-sınıfı kontroller ile ilişki
-
 The shutdown-class subset is documented in:
 
 - `docs/SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
 
-Shutdown-sınıfı alt küme şu dokümanda tanımlanır:
-
-- `docs/SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
-
 Intentional overlap is allowed for these names:
-
-- `stopwc`
-- `poweroffwc`
-- `rebootwc`
-
-Şu adlar için bilinçli çift-görünüm izinlidir:
 
 - `stopwc`
 - `poweroffwc`
@@ -111,6 +95,18 @@ Conditional overlap rule for `resetwc`:
 - if a future sealed design makes `resetwc` perform reboot, poweroff, or another shutdown-class system transition, then it must also appear under the shutdown-class subset
 - in that case, `resetwc` must first execute the same controlled stop/drain semantics as `stopwc`
 
+## Shutdown-sınıfı kontroller ile ilişki
+
+Shutdown-sınıfı alt küme şu dokümanda tanımlanır:
+
+- `docs/SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
+
+Şu adlar için bilinçli çift-görünüm izinlidir:
+
+- `stopwc`
+- `poweroffwc`
+- `rebootwc`
+
 `resetwc` için koşullu çift-görünüm kuralı:
 
 - `resetwc`, şu anda genel kontrol ailesine aittir
@@ -120,13 +116,13 @@ Conditional overlap rule for `resetwc`:
 
 ## Safety boundary
 
-## Güvenlik sınırı
-
 - do **not** shadow native system commands `poweroff` or `reboot`
 - do **not** imply that live helper implementations already exist
 - do **not** imply magical RAM-based resume after crash/power loss
 - do **not** blur scratch/test reset with future live-runtime reset
 - keep pause semantics separate from drain semantics unless later sealed explicitly
+
+## Güvenlik sınırı
 
 - yerleşik sistem komutları `poweroff` veya `reboot` gölgelenmemelidir
 - canlı yardımcı implementasyonlar şimdiden varmış gibi davranılmamalıdır
@@ -136,20 +132,20 @@ Conditional overlap rule for `resetwc`:
 
 ## Canonical ownership rule
 
-## Kanonik sahiplik kuralı
-
 This document is the canonical documentation home for:
 
 - the general webcrawler control family
 - non-shutdown top-level naming semantics
 - control-family classification boundaries
 
+The shutdown/drain document remains the canonical home for shutdown-class stop, poweroff, reboot, and drain semantics.
+
+## Kanonik sahiplik kuralı
+
 Bu belge şu konular için kanonik dokümantasyon evidir:
 
 - genel webcrawler kontrol ailesi
-- shutdown-dışı üst-seviye adlandırma semantikliği
+- shutdown-dışı üst-seviye adlandırma semantiği
 - kontrol-ailesi sınıflandırma sınırları
-
-The shutdown/drain document remains the canonical home for shutdown-class stop, poweroff, reboot, and drain semantics.
 
 Shutdown/drain dokümanı, shutdown-sınıfı stop, poweroff, reboot ve drain semantiklerinin kanonik evi olarak kalır.

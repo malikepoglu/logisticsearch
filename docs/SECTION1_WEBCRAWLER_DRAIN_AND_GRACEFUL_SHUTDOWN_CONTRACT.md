@@ -421,17 +421,16 @@ Bu belgeden sonraki pratik devam adımı şu olmalıdır:
 
 <!-- BEGIN SECTION1_WEBCRAWLER_CONTROL_COMMAND_SPEC -->
 
+
 ## Future Shutdown-Class Webcrawler Controls
+
+This document remains the canonical home for shutdown-class subset semantics and for drain/graceful-shutdown behavior.
 
 ## Gelecekteki Shutdown-Sınıfı Webcrawler Kontrolleri
 
-### EN
+Bu doküman, shutdown-sınıfı alt küme semantiklerinin ve drain/graceful-shutdown davranışının kanonik evi olarak kalır.
 
-The wider webcrawler control family now has a separate canonical home:
-
-- `docs/SECTION1_WEBCRAWLER_CONTROLS.md`
-
-This document remains the canonical home for shutdown-class subset semantics and for drain/graceful-shutdown behavior.
+## Current shutdown-class subset
 
 The current shutdown-class subset is:
 
@@ -439,31 +438,15 @@ The current shutdown-class subset is:
 - `poweroffwc`
 - `rebootwc`
 
-Relationship to the wider control family:
+`playwc` is a control command, but it is **not** a shutdown-class command.
 
-- `playwc` is a control command, but it is **not** a shutdown-class command.
-- `resumewc` is a control command, but it is **not** a shutdown-class command.
-- `poweroffwc` and `rebootwc` belong to both the general control family and the shutdown-class subset.
-- `resetwc` currently belongs to the general control family, but is **not yet** part of the shutdown-class subset.
+`resumewc` is a control command, but it is **not** a shutdown-class command.
 
-Canonical shutdown-class meaning:
+`poweroffwc` and `rebootwc` belong to both the general control family and the shutdown-class subset.
 
-- `stopwc` must first request crawler drain, stop new claims first, allow only bounded graceful-stop behavior for in-flight work, and then stop the service/worker layer.
-- `poweroffwc` must execute `stopwc` semantics first and only then continue to `sudo poweroff`.
-- `rebootwc` must execute `stopwc` semantics first and only then continue to `sudo reboot`.
+`resetwc` currently belongs to the general control family, but is **not yet** part of the shutdown-class subset.
 
-Conditional rule for future reset design:
-
-- if a future sealed reset design makes `resetwc` perform machine reboot, machine poweroff, or another shutdown-class system transition, then `resetwc` must also be classified under the shutdown-class subset
-- in that case, `resetwc` must first execute the same controlled stop/drain semantics as `stopwc` before continuing into reboot/poweroff behavior
-
-### TR
-
-Daha geniş webcrawler kontrol ailesinin artık ayrı bir kanonik evi vardır:
-
-- `docs/SECTION1_WEBCRAWLER_CONTROLS.md`
-
-Bu doküman, shutdown-sınıfı alt küme semantiklerinin ve drain/graceful-shutdown davranışının kanonik evi olarak kalır.
+## Güncel shutdown-sınıfı alt küme
 
 Güncel shutdown-sınıfı alt küme şudur:
 
@@ -471,22 +454,44 @@ Güncel shutdown-sınıfı alt küme şudur:
 - `poweroffwc`
 - `rebootwc`
 
-Daha geniş kontrol ailesiyle ilişkisi:
+`playwc` bir kontrol komutudur; ancak **shutdown-sınıfı** bir komut değildir.
 
-- `playwc` bir kontrol komutudur; ancak **shutdown-sınıfı** bir komut değildir.
-- `resumewc` bir kontrol komutudur; ancak **shutdown-sınıfı** bir komut değildir.
-- `poweroffwc` ve `rebootwc`, hem genel kontrol ailesine hem de shutdown-sınıfı alt kümeye aittir.
-- `resetwc`, şu anda genel kontrol ailesine aittir; ancak henüz shutdown-sınıfı alt kümenin parçası değildir.
+`resumewc` bir kontrol komutudur; ancak **shutdown-sınıfı** bir komut değildir.
 
-Kanonik shutdown-sınıfı anlamı:
+`poweroffwc` ve `rebootwc`, hem genel kontrol ailesine hem de shutdown-sınıfı alt kümeye aittir.
+
+`resetwc`, şu anda genel kontrol ailesine aittir; ancak henüz shutdown-sınıfı alt kümenin parçası değildir.
+
+## Canonical shutdown-class meaning
+
+- `stopwc` must first request crawler drain, stop new claims first, allow only bounded graceful-stop behavior for in-flight work, and then stop the service/worker layer.
+- `poweroffwc` must execute `stopwc` semantics first and only then continue to `sudo poweroff`.
+- `rebootwc` must execute `stopwc` semantics first and only then continue to `sudo reboot`.
+
+## Kanonik shutdown-sınıfı anlamı
 
 - `stopwc`, önce crawler drain istemeli, yeni claim’leri önce kapatmalı, in-flight iş için yalnızca bounded graceful-stop davranışına izin vermeli ve ancak ondan sonra service/worker katmanını durdurmalıdır.
 - `poweroffwc`, önce `stopwc` semantiğini işletmeli, ancak ondan sonra `sudo poweroff` tarafına devam etmelidir.
 - `rebootwc`, önce `stopwc` semantiğini işletmeli, ancak ondan sonra `sudo reboot` tarafına devam etmelidir.
 
-Gelecekteki reset tasarımı için koşullu kural:
+## Conditional reset overlap rule
+
+- if a future sealed reset design makes `resetwc` perform machine reboot, machine poweroff, or another shutdown-class system transition, then `resetwc` must also be classified under the shutdown-class subset
+- in that case, `resetwc` must first execute the same controlled stop/drain semantics as `stopwc` before continuing into reboot/poweroff behavior
+
+## Koşullu reset örtüşme kuralı
 
 - eğer gelecekte mühürlü bir reset tasarımı `resetwc` komutuna makine reboot’u, makine poweroff’u veya başka bir shutdown-sınıfı sistem geçişi yüklerse, `resetwc` shutdown-sınıfı alt kümeye de alınmalıdır
 - böyle bir durumda `resetwc`, reboot/poweroff davranışına geçmeden önce `stopwc` ile aynı kontrollü stop/drain semantiğini işletmelidir
 
-<!-- END SECTION1_WEBCRAWLER_CONTROL_COMMAND_SPEC -->
+## Cross-reference to the general control family
+
+The general top-level control-family naming semantics are documented in:
+
+- `docs/SECTION1_WEBCRAWLER_CONTROLS.md`
+
+## Genel kontrol ailesine çapraz referans
+
+Genel üst-seviye kontrol-ailesi adlandırma semantiği şu dokümanda yer alır:
+
+- `docs/SECTION1_WEBCRAWLER_CONTROLS.md`
