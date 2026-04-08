@@ -45,6 +45,7 @@ Bu yüzey, crawler-core veritabanı mantığının artık yalnızca canlı Pi51 
 - `SCRATCH_APPLY_TEST_PLAN.md`
 - `SCRATCH_APPLY_VALIDATION_SEAL.md`
 - `NEXT_STEP.md`
+- `RUNBOOK_CONTROLLED_APPLY_AND_VALIDATION.md`
 
 ## Güncel Dosya Haritası
 
@@ -75,6 +76,7 @@ Bu yüzey, crawler-core veritabanı mantığının artık yalnızca canlı Pi51 
 - `SCRATCH_APPLY_TEST_PLAN.md`
 - `SCRATCH_APPLY_VALIDATION_SEAL.md`
 - `NEXT_STEP.md`
+- `RUNBOOK_CONTROLLED_APPLY_AND_VALIDATION.md`
 
 ## Current Scope
 
