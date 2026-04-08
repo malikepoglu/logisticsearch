@@ -101,3 +101,34 @@ Bu Python yüzeyindeki her gelecek değişiklik, güncel implementasyon doğrusu
 The code must not pretend that missing runtime layers already exist.
 
 Kod, eksik runtime katmanları şimdiden varmış gibi davranmamalıdır.
+
+
+## Controlled dependency surface
+
+This directory now has one tracked dependency surface: `requirements.txt`.
+
+At the current repository truth, it must stay intentionally narrow.
+
+Its purpose is only to define the minimum importable runtime dependency needed by the first probe-only worker surface.
+
+Current controlled dependency rule:
+
+- use `psycopg[binary]==3.3.3`
+- do not pretend that HTTP fetch, parsing, or service orchestration dependencies already exist
+- keep the future local virtual environment machine-local and untracked
+- widen this dependency file only when the GitHub-tracked docs/contracts and real implementation scope genuinely widen
+
+## Kontrollü bağımlılık yüzeyi
+
+Bu dizinin artık bir izlenen bağımlılık yüzeyi vardır: `requirements.txt`.
+
+Güncel repository doğrusunda bu yüzey bilinçli olarak dar kalmalıdır.
+
+Amacı yalnızca ilk probe-only worker yüzeyinin ihtiyaç duyduğu en küçük import edilebilir runtime bağımlılığını tanımlamaktır.
+
+Güncel kontrollü bağımlılık kuralı:
+
+- `psycopg[binary]==3.3.3` kullan
+- HTTP fetch, parse veya servis orkestrasyonu bağımlılıkları şimdiden varmış gibi davranma
+- gelecekteki yerel sanal ortamı makine-yerel ve izlenmeyen bırak
+- bu bağımlılık dosyasını ancak GitHub’da izlenen dokümanlar/sözleşmeler ve gerçek implementasyon kapsamı gerçekten genişlediğinde genişlet
