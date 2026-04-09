@@ -404,8 +404,6 @@ Mevcut repository noktasında disiplinli yön şudur:
 
 ## Web Crawler Runbook Boundary And Execution Order
 
-### EN
-
 Current LogisticSearch web crawler runbook discipline:
 
 - Real technical runbook order is strictly: `crawler_core` -> `parse_core` -> `desktop_import`.
@@ -415,7 +413,7 @@ Current LogisticSearch web crawler runbook discipline:
 - Before any new crawler runbook is created, overlap audit is mandatory against existing `README`, `TOPIC`, `PLAN`, `SEAL`, `NEXT_STEP`, and `PREREQUISITES` surfaces.
 - Where a crawler-specific canonical documentation file is created under `docs/`, the preferred crawler-domain naming should follow the `SECTION1_WEBCRAWLER_...` rule unless the surface is explicitly role-locked by a stable generic filename.
 
-### TR
+## Web Crawler Runbook Sınırı ve Yürütme Sırası
 
 Mevcut LogisticSearch web crawler runbook disiplini:
 
@@ -427,3 +425,4 @@ Mevcut LogisticSearch web crawler runbook disiplini:
 - `docs/` altında crawler-özel yeni bir kanonik dokümantasyon dosyası oluşturuluyorsa, yüzey açıkça role-locked sabit bir genel dosya adına sahip değilse tercih edilen crawler alanı adlandırması `SECTION1_WEBCRAWLER_...` kuralını izlemelidir.
 
 <!-- END SECTION1_WEBCRAWLER_RUNBOOK_BOUNDARY -->
+
