@@ -115,6 +115,16 @@ def build_parser() -> argparse.ArgumentParser:
         help="Lease duration, in seconds, passed into frontier.claim_next_url(...).",
     )
 
+    # EN: We add a durable-claim flag so the operator can deliberately switch
+    # EN: from non-durable probe mode into durable leased-claim mode.
+    # TR: Operatör non-durable probe modundan durable leased-claim moduna
+    # TR: bilinçli olarak geçebilsin diye durable-claim bayrağı ekliyoruz.
+    parser.add_argument(
+        "--durable-claim",
+        action="store_true",
+        help="Commit a successful claim so the lease remains durable in the database.",
+    )
+
     # EN: We add an output mode mainly so structured JSON stays easy to consume.
     # TR: Yapılı JSON çıktısı kolay tüketilebilsin diye özellikle output mode ekliyoruz.
     parser.add_argument(
@@ -148,7 +158,11 @@ def main() -> int:
         dsn=args.dsn,
         worker_id=args.worker_id,
         lease_seconds=args.lease_seconds,
-        probe_only=True,
+        # EN: When durable-claim mode is requested, probe_only must become False
+        # EN: so a successful claim is committed instead of rolled back.
+        # TR: Durable-claim modu istendiğinde probe_only değeri False olmalıdır;
+        # TR: böylece başarılı claim rollback yerine commit edilir.
+        probe_only=not args.durable_claim,
     )
 
     # EN: We execute one controlled claim probe according to the current worker truth.

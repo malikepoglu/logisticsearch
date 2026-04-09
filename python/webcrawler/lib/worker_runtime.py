@@ -24,7 +24,7 @@ from uuid import uuid4
 # EN: interaction points for the narrow probe worker surface.
 # TR: Bu DB yardımcıları dar probe worker yüzeyi için mevcut kanonik crawler-core
 # TR: etkileşim noktalarını zaten ifade ediyor.
-from .db import claim_next_url, close_db, compute_robots_allow_decision, connect_db, rollback
+from .db import claim_next_url, close_db, commit, compute_robots_allow_decision, connect_db, rollback
 
 # EN: We import the minimal storage routing helper because worker runtime must
 # EN: now become storage-aware before it tries to claim new work.
@@ -51,10 +51,12 @@ class WorkerConfig:
     # TR: süre geçerli kalacağını söyler.
     lease_seconds: int = 600
 
-    # EN: probe_only keeps this worker surface honest: this layer is still a
-    # EN: controlled probe surface, not a full fetch/finalize runtime.
-    # TR: probe_only bu worker yüzeyini dürüst tutar: bu katman hâlâ kontrollü
-    # TR: bir probe yüzeyidir, tam fetch/finalize runtime değildir.
+    # EN: probe_only keeps the worker in non-durable verification mode when
+    # EN: it is True. When it is False, a successful claim is committed and left
+    # EN: leased in the database for the current worker.
+    # TR: probe_only True olduğunda worker'ı kalıcı olmayan doğrulama modunda
+    # TR: tutar. False olduğunda başarılı claim commit edilir ve mevcut worker
+    # TR: için veritabanında leased olarak bırakılır.
     probe_only: bool = True
 
 
@@ -177,11 +179,19 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             url_path=claimed_url.url_path,
         )
 
-        # EN: This worker surface is still probe-only, so even after a successful
-        # EN: claim probe we rollback instead of leaving a durable lease behind.
-        # TR: Bu worker yüzeyi hâlâ probe-only olduğu için başarılı claim probe'dan
-        # TR: sonra bile kalıcı bir lease bırakmak yerine rollback yapıyoruz.
-        rollback(conn)
+        # EN: In probe-only mode we deliberately rollback so claim proof does
+        # EN: not leave durable queue state behind.
+        # TR: Probe-only modda claim kanıtı kalıcı kuyruk durumu bırakmasın diye
+        # TR: bilinçli olarak rollback yapıyoruz.
+        if config.probe_only:
+            rollback(conn)
+
+        # EN: In durable-claim mode we deliberately commit so the claimed URL
+        # EN: remains leased in the database for the current worker.
+        # TR: Durable-claim modda claim edilen URL mevcut worker için veritabanında
+        # TR: leased olarak kalsın diye bilinçli olarak commit yapıyoruz.
+        else:
+            commit(conn)
 
         # EN: We return one structured success-style probe result.
         # TR: Tek bir yapılı başarı-benzeri probe sonucu döndürüyoruz.
