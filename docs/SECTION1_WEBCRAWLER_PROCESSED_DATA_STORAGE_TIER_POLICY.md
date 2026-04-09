@@ -243,3 +243,16 @@ Sonraki implementation sırası disiplinli biçimde şöyle kalmalıdır:
 7. drain sırasında crawler kısa-pause entegrasyonunu uygula
 8. çalışan sistemi doğrula
 9. implementation gerçek ve doğrulanmış olduktan sonra runbook yaz
+
+## Related runbook
+
+The action-layer companion for this policy is:
+
+- `docs/SECTION1_WEBCRAWLER_RUNBOOK_PROCESSED_DATA_STORAGE_TIER_FORMAT_AND_MOUNT.md`
+
+## İlgili runbook
+
+Bu politikanın action-layer eşi şudur:
+
+- `docs/SECTION1_WEBCRAWLER_RUNBOOK_PROCESSED_DATA_STORAGE_TIER_FORMAT_AND_MOUNT.md`
+

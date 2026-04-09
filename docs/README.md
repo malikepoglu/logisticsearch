@@ -491,3 +491,18 @@ If the answer is yes, update the documentation immediately in the same disciplin
 Cevap evetse, dokümantasyonu aynı disiplinli adım içinde hemen güncelle.
 
 ---
+
+## Processed-data storage tier surfaces
+
+Read these together when working on removable processed-data storage tiers for the webcrawler line:
+
+- `docs/SECTION1_WEBCRAWLER_PROCESSED_DATA_STORAGE_TIER_POLICY.md`
+- `docs/SECTION1_WEBCRAWLER_RUNBOOK_PROCESSED_DATA_STORAGE_TIER_FORMAT_AND_MOUNT.md`
+
+## İşlenmiş-veri depolama katmanı yüzeyleri
+
+Webcrawler hattındaki çıkarılabilir işlenmiş-veri depolama katmanları üzerinde çalışırken bunları birlikte oku:
+
+- `docs/SECTION1_WEBCRAWLER_PROCESSED_DATA_STORAGE_TIER_POLICY.md`
+- `docs/SECTION1_WEBCRAWLER_RUNBOOK_PROCESSED_DATA_STORAGE_TIER_FORMAT_AND_MOUNT.md`
+
