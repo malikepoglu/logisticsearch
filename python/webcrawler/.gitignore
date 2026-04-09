@@ -1,0 +1,33 @@
+# English:
+# Ignore the local Python virtual environment created by bootstrap_venv.sh.
+# This environment is machine-local execution state, not tracked repository truth.
+#
+# Türkçe:
+# bootstrap_venv.sh tarafından oluşturulan yerel Python sanal ortamını yok say.
+# Bu ortam makineye özgü çalıştırma durumudur; izlenen repository doğrusu değildir.
+.venv/
+
+# English:
+# Ignore Python bytecode cache directories created during local execution.
+# These are disposable runtime artefacts and must not become tracked surface.
+#
+# Türkçe:
+# Yerel çalıştırma sırasında oluşan Python bytecode önbellek dizinlerini yok say.
+# Bunlar geçici çalışma artıklarıdır ve izlenen yüzeye dönüşmemelidir.
+__pycache__/
+
+# English:
+# Ignore compiled Python bytecode files generated locally.
+#
+# Türkçe:
+# Yerelde üretilen derlenmiş Python bytecode dosyalarını yok say.
+*.pyc
+
+# English:
+# Ignore local environment variable files if an operator creates one during
+# machine-specific testing. Repository truth must stay in tracked docs/code.
+#
+# Türkçe:
+# Operatör makineye özgü test sırasında bir environment dosyası oluşturursa onu
+# yok say. Repository doğrusu izlenen dokümanlar/kod içinde kalmalıdır.
+.env
