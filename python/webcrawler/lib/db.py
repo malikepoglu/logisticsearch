@@ -316,6 +316,174 @@ def compute_robots_refresh_decision_placeholder() -> None:
 
 # EN: This helper rolls back the current transaction.
 # TR: Bu yardımcı, mevcut transaction'ı rollback eder.
+
+# EN: This helper finalizes a successful fetch outcome for one leased frontier URL.
+# TR: Bu yardımcı leased durumdaki tek bir frontier URL için başarılı fetch sonucunu finalize eder.
+def finish_fetch_success(
+    conn: psycopg.Connection,
+    *,
+    url_id: int,
+    lease_token: str,
+    http_status: int,
+    content_type: str | None,
+    body_bytes: int,
+    etag: str | None = None,
+    last_modified: str | None = None,
+) -> dict:
+    # EN: We open a cursor because the finalize SQL function is executed as one
+    # EN: explicit database statement inside the current transaction.
+    # TR: Finalize SQL fonksiyonu mevcut transaction içinde tek bir açık veritabanı
+    # TR: ifadesi olarak çalıştırıldığı için cursor açıyoruz.
+    with conn.cursor() as cur:
+        # EN: We call the canonical crawler-core success finalize function and
+        # EN: pass the leased URL identity plus visible fetch metadata.
+        # TR: Kanonik crawler-core success finalize fonksiyonunu çağırıyor ve
+        # TR: leased URL kimliğini görünür fetch metadata'sı ile birlikte iletiyoruz.
+        cur.execute(
+            """
+            select *
+            from frontier.finish_fetch_success(
+                p_url_id => %s,
+                p_lease_token => %s::uuid,
+                p_http_status => %s,
+                p_content_type => %s,
+                p_body_bytes => %s,
+                p_etag => %s,
+                p_last_modified => %s
+            )
+            """,
+            (
+                url_id,
+                lease_token,
+                http_status,
+                content_type,
+                body_bytes,
+                etag,
+                last_modified,
+            ),
+        )
+
+        # EN: We fetch the single canonical finalize result row.
+        # TR: Tek kanonik finalize sonuç satırını çekiyoruz.
+        row = cur.fetchone()
+
+    # EN: A missing row would mean the finalize path did not behave as expected.
+    # TR: Eksik bir satır finalize yolunun beklendiği gibi davranmadığı anlamına gelir.
+    if row is None:
+        raise RuntimeError("frontier.finish_fetch_success(...) returned no row")
+
+    # EN: We return the structured finalize result.
+    # TR: Yapılı finalize sonucunu döndürüyoruz.
+    return row
+
+
+# EN: This helper finalizes a retryable fetch failure for one leased frontier URL.
+# TR: Bu yardımcı leased durumdaki tek bir frontier URL için retryable fetch hatasını finalize eder.
+def finish_fetch_retryable_error(
+    conn: psycopg.Connection,
+    *,
+    url_id: int,
+    lease_token: str,
+    http_status: int | None,
+    error_class: str,
+    error_message: str | None,
+    retry_delay: str | None = None,
+) -> dict:
+    # EN: We open a cursor because the retryable finalize SQL function must run
+    # EN: inside the current controlled transaction.
+    # TR: Retryable finalize SQL fonksiyonu mevcut kontrollü transaction içinde
+    # TR: çalışmak zorunda olduğu için cursor açıyoruz.
+    with conn.cursor() as cur:
+        # EN: We call the canonical crawler-core retryable-error finalize function.
+        # TR: Kanonik crawler-core retryable-error finalize fonksiyonunu çağırıyoruz.
+        cur.execute(
+            """
+            select *
+            from frontier.finish_fetch_retryable_error(
+                p_url_id => %s,
+                p_lease_token => %s::uuid,
+                p_http_status => %s,
+                p_error_class => %s,
+                p_error_message => %s,
+                p_retry_delay => %s::interval
+            )
+            """,
+            (
+                url_id,
+                lease_token,
+                http_status,
+                error_class,
+                error_message,
+                retry_delay,
+            ),
+        )
+
+        # EN: We fetch the single canonical finalize result row.
+        # TR: Tek kanonik finalize sonuç satırını çekiyoruz.
+        row = cur.fetchone()
+
+    # EN: A missing row would mean the finalize path did not behave as expected.
+    # TR: Eksik bir satır finalize yolunun beklendiği gibi davranmadığı anlamına gelir.
+    if row is None:
+        raise RuntimeError("frontier.finish_fetch_retryable_error(...) returned no row")
+
+    # EN: We return the structured finalize result.
+    # TR: Yapılı finalize sonucunu döndürüyoruz.
+    return row
+
+
+# EN: This helper finalizes a permanent fetch failure for one leased frontier URL.
+# TR: Bu yardımcı leased durumdaki tek bir frontier URL için permanent fetch hatasını finalize eder.
+def finish_fetch_permanent_error(
+    conn: psycopg.Connection,
+    *,
+    url_id: int,
+    lease_token: str,
+    http_status: int | None,
+    error_class: str,
+    error_message: str | None,
+) -> dict:
+    # EN: We open a cursor because the permanent finalize SQL function must run
+    # EN: inside the current controlled transaction.
+    # TR: Permanent finalize SQL fonksiyonu mevcut kontrollü transaction içinde
+    # TR: çalışmak zorunda olduğu için cursor açıyoruz.
+    with conn.cursor() as cur:
+        # EN: We call the canonical crawler-core permanent-error finalize function.
+        # TR: Kanonik crawler-core permanent-error finalize fonksiyonunu çağırıyoruz.
+        cur.execute(
+            """
+            select *
+            from frontier.finish_fetch_permanent_error(
+                p_url_id => %s,
+                p_lease_token => %s::uuid,
+                p_http_status => %s,
+                p_error_class => %s,
+                p_error_message => %s
+            )
+            """,
+            (
+                url_id,
+                lease_token,
+                http_status,
+                error_class,
+                error_message,
+            ),
+        )
+
+        # EN: We fetch the single canonical finalize result row.
+        # TR: Tek kanonik finalize sonuç satırını çekiyoruz.
+        row = cur.fetchone()
+
+    # EN: A missing row would mean the finalize path did not behave as expected.
+    # TR: Eksik bir satır finalize yolunun beklendiği gibi davranmadığı anlamına gelir.
+    if row is None:
+        raise RuntimeError("frontier.finish_fetch_permanent_error(...) returned no row")
+
+    # EN: We return the structured finalize result.
+    # TR: Yapılı finalize sonucunu döndürüyoruz.
+    return row
+
+
 def rollback(conn: psycopg.Connection) -> None:
     # EN: A rollback is especially useful for safe probe-style worker steps that
     # EN: must prove claimability without leaving durable leased residue.
