@@ -466,8 +466,6 @@ Yaklaşan crawler-core işi açısından pratik okuma şudur:
 
 ## SECTION1_WEBCRAWLER Naming Rule
 
-### EN
-
 Current LogisticSearch rule for the web crawler domain:
 
 - Canonical crawler-specific documentation under `docs/` should use the `SECTION1_WEBCRAWLER_...` prefix when the document subject is explicitly the web crawler domain.
@@ -477,7 +475,7 @@ Current LogisticSearch rule for the web crawler domain:
 - In the smallest-safe migration pass, generated batch/data artifacts under `crawler_exports/pi51/github_batch_v1/...` and operational SQL / shell / evidence files under `sql/crawler_core/` are excluded from blind naming migration.
 - Naming changes must remain current-truth-only and must not imply a broader migration than what has actually been audited and applied.
 
-### TR
+## SECTION1_WEBCRAWLER Adlandırma Kuralı
 
 Web crawler alanı için mevcut LogisticSearch kuralı:
 
@@ -489,3 +487,4 @@ Web crawler alanı için mevcut LogisticSearch kuralı:
 - Adlandırma değişiklikleri yalnızca güncel gerçeği yansıtmalı; fiilen denetlenmemiş veya uygulanmamış daha geniş bir geçiş yapılmış gibi davranmamalıdır.
 
 <!-- END SECTION1_WEBCRAWLER_NAMING_RULE -->
+
