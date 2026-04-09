@@ -269,3 +269,36 @@ def build_minimal_parse_payload(
         body_text=body_text,
         payload=payload,
     )
+
+# EN: This helper decides what value is currently safe to place into
+# EN: parse.page_workflow_status.linked_snapshot_id.
+# TR: Bu yardımcı, parse.page_workflow_status.linked_snapshot_id alanına şu anda
+# TR: hangi değerin güvenli biçimde yazılabileceğini belirler.
+def resolve_workflow_linked_snapshot_id(persist_result: dict | None) -> int | None:
+    # EN: We intentionally return None in the current minimal parse-entry stage.
+    # TR: Mevcut minimal parse-entry aşamasında bilinçli olarak None döndürüyoruz.
+
+    # EN: Current live Pi51 proof showed that persist_taxonomy_preranking_payload(...)
+    # EN: returns a field named snapshot_id, but that field is not yet proven to be
+    # EN: parse.page_preranking_snapshot.snapshot_id.
+    # TR: Mevcut canlı Pi51 kanıtı, persist_taxonomy_preranking_payload(...)
+    # TR: fonksiyonunun snapshot_id adlı bir alan döndürdüğünü gösterdi; ancak bu
+    # TR: alanın parse.page_preranking_snapshot.snapshot_id olduğu henüz kanıtlanmadı.
+
+    # EN: The linked_snapshot_id column has a foreign-key constraint that points
+    # EN: specifically to parse.page_preranking_snapshot(snapshot_id).
+    # TR: linked_snapshot_id sütunu özellikle
+    # TR: parse.page_preranking_snapshot(snapshot_id) tablosuna giden bir foreign-key
+    # TR: kısıtına sahiptir.
+
+    # EN: Blindly reusing persist_result["snapshot_id"] here would therefore risk
+    # EN: foreign-key violations and incorrect semantic linking.
+    # TR: Bu yüzden persist_result["snapshot_id"] değerini burada körlemesine
+    # TR: yeniden kullanmak foreign-key ihlali ve yanlış semantik bağlama riski taşır.
+
+    # EN: Until an explicit, tested, and sealed mapping to a real preranking snapshot
+    # EN: exists, the only safe value is None.
+    # TR: Gerçek bir preranking snapshot'ına giden açık, test edilmiş ve mühürlenmiş
+    # TR: bir mapping oluşana kadar tek güvenli değer None'dır.
+    return None
+
