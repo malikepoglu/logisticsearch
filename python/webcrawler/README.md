@@ -185,3 +185,34 @@ Güncel kontrollü bağımlılık kuralı şudur:
 - daha sonraki doküman-güdümlü bir patch gerçekten gerektiğini kanıtlamadıkça orkestrasyon/runtime paketleri ekleme
 
 Çalıştırma için yerel bir virtual environment oluşturulabilir; ancak repository için izlenen bağımlılık doğrusu committed `requirements.txt` dosyası olarak kalmalıdır.
+
+## Minimal processed-output storage routing
+
+This directory now also includes `python/webcrawler/lib/storage_routing.py`.
+
+Current minimal canonical storage rule:
+
+- raw and working crawler accumulation stays under `/srv`
+- processed output goes to `/srv/data` when `/srv/data` is usable
+- if `/srv/data` is not usable, processed output goes to `/srv/buffer`
+- if `/srv/data` becomes usable again while `/srv/buffer` contains buffered backlog, crawler must pause and stay paused until buffered processed output is fully drained into `/srv/data`
+- if neither `/srv/data` nor `/srv/buffer` is usable, crawler must pause and surface an explicit error
+
+This surface is intentionally minimal.
+It defines the current processed-output path choice truth, but it does not yet implement the real drain execution or worker-loop integration.
+
+## Minimal işlenmiş-çıktı storage routing
+
+Bu dizin artık `python/webcrawler/lib/storage_routing.py` dosyasını da içerir.
+
+Güncel minimal kanonik storage kuralı şudur:
+
+- ham ve çalışma crawler birikimi `/srv` altında kalır
+- işlenmiş çıktı, `/srv/data` kullanılabiliyorsa `/srv/data` yoluna gider
+- `/srv/data` kullanılamıyorsa işlenmiş çıktı `/srv/buffer` yoluna gider
+- `/srv/data` yeniden kullanılabilir hale gelirken `/srv/buffer` içinde buffer backlog varsa crawler pause olmalı ve buffer işlenmiş çıktı tamamen `/srv/data` yoluna boşaltılana kadar paused kalmalıdır
+- ne `/srv/data` ne de `/srv/buffer` kullanılabiliyorsa crawler pause olmalı ve açık bir hata üretmelidir
+
+Bu yüzey bilinçli olarak minimal tutulmuştur.
+Mevcut işlenmiş-çıktı path seçimi doğrusunu tanımlar; ancak gerçek drain execution'ını veya worker-loop entegrasyonunu henüz uygulamaz.
+
