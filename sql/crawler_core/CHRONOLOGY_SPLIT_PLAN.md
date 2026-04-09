@@ -1,12 +1,18 @@
 # Crawler Core Chronology Split Plan
 
-## EN
-
 This document maps the live Pi51 crawler-core schema snapshot to the next intended chronology-aligned SQL file layout. The source of truth for structure is currently:
 
 - `001_pi51_live_seed_frontier_http_fetch_schema.sql`
 
 The purpose of this plan is not to replace the live snapshot immediately, but to define a disciplined decomposition path without losing the verified live contract.
+
+# Crawler Core Kronoloji Parçalama Planı
+
+Bu belge, canlı Pi51 crawler-core şema snapshot’ını bir sonraki chronology uyumlu SQL dosya düzenine eşler. Yapısal doğruluk için mevcut kaynak dosya şudur:
+
+- `001_pi51_live_seed_frontier_http_fetch_schema.sql`
+
+Bu planın amacı canlı snapshot’ı hemen değiştirmek değil; doğrulanmış canlı kontratı kaybetmeden disiplinli bir parçalama yolu tanımlamaktır.
 
 ## Current live snapshot contents
 
@@ -43,6 +49,54 @@ The purpose of this plan is not to replace the live snapshot immediately, but to
 - `http_fetch.upsert_robots_txt_cache`
 
 ### Indexes
+- `frontier_host_pause_idx`
+- `frontier_host_sched_idx`
+- `frontier_url_due_idx`
+- `frontier_url_host_due_idx`
+- `frontier_url_lease_expiry_idx`
+- `frontier_url_parent_idx`
+- `frontier_url_parse_pending_idx`
+- `fetch_attempt_host_time_idx`
+- `fetch_attempt_open_idx`
+- `fetch_attempt_url_time_idx`
+- `robots_cache_expiry_idx`
+- `seed_seed_url_due_idx`
+
+## Mevcut canlı snapshot içeriği
+
+### Type'lar
+- `frontier.discovery_type_enum`
+- `frontier.host_status_enum`
+- `frontier.robots_mode_enum`
+- `frontier.url_state_enum`
+- `http_fetch.fetch_kind_enum`
+- `http_fetch.fetch_outcome_enum`
+- `http_fetch.robots_cache_state_enum`
+- `http_fetch.robots_verdict_enum`
+- `seed.seed_type_enum`
+- `seed.source_status_enum`
+
+### Tablolar
+- `frontier.host`
+- `frontier.url`
+- `http_fetch.fetch_attempt`
+- `http_fetch.robots_txt_cache`
+- `seed.seed_url`
+- `seed.source`
+
+### Fonksiyonlar
+- `frontier.claim_next_url`
+- `frontier.compute_retry_backoff`
+- `frontier.compute_success_next_fetch_at`
+- `frontier.finish_fetch_permanent_error`
+- `frontier.finish_fetch_retryable_error`
+- `frontier.finish_fetch_success`
+- `frontier.reap_expired_leases`
+- `http_fetch.compute_robots_allow_decision`
+- `http_fetch.compute_robots_refresh_decision`
+- `http_fetch.upsert_robots_txt_cache`
+
+### Index'ler
 - `frontier_host_pause_idx`
 - `frontier_host_sched_idx`
 - `frontier_url_due_idx`
@@ -117,72 +171,6 @@ Purpose:
 - refresh decision
 - allow/block decision
 
-## Rules for the split phase
-
-1. The live snapshot remains preserved as the canonical imported evidence.
-2. Split files must not silently change semantics.
-3. Object order must preserve dependency correctness.
-4. Any normalization beyond pure decomposition must be explicit and reviewable.
-5. The split phase should be done only on Ubuntu Desktop and then pushed through GitHub.
-
----
-
-## TR
-
-Bu belge, canlı Pi51 crawler-core şema snapshot’ını bir sonraki chronology uyumlu SQL dosya düzenine eşler. Yapısal doğruluk için mevcut kaynak dosya şudur:
-
-- `001_pi51_live_seed_frontier_http_fetch_schema.sql`
-
-Bu planın amacı canlı snapshot’ı hemen değiştirmek değil; doğrulanmış canlı kontratı kaybetmeden disiplinli bir parçalama yolu tanımlamaktır.
-
-## Mevcut canlı snapshot içeriği
-
-### Type'lar
-- `frontier.discovery_type_enum`
-- `frontier.host_status_enum`
-- `frontier.robots_mode_enum`
-- `frontier.url_state_enum`
-- `http_fetch.fetch_kind_enum`
-- `http_fetch.fetch_outcome_enum`
-- `http_fetch.robots_cache_state_enum`
-- `http_fetch.robots_verdict_enum`
-- `seed.seed_type_enum`
-- `seed.source_status_enum`
-
-### Tablolar
-- `frontier.host`
-- `frontier.url`
-- `http_fetch.fetch_attempt`
-- `http_fetch.robots_txt_cache`
-- `seed.seed_url`
-- `seed.source`
-
-### Fonksiyonlar
-- `frontier.claim_next_url`
-- `frontier.compute_retry_backoff`
-- `frontier.compute_success_next_fetch_at`
-- `frontier.finish_fetch_permanent_error`
-- `frontier.finish_fetch_retryable_error`
-- `frontier.finish_fetch_success`
-- `frontier.reap_expired_leases`
-- `http_fetch.compute_robots_allow_decision`
-- `http_fetch.compute_robots_refresh_decision`
-- `http_fetch.upsert_robots_txt_cache`
-
-### Index'ler
-- `frontier_host_pause_idx`
-- `frontier_host_sched_idx`
-- `frontier_url_due_idx`
-- `frontier_url_host_due_idx`
-- `frontier_url_lease_expiry_idx`
-- `frontier_url_parent_idx`
-- `frontier_url_parse_pending_idx`
-- `fetch_attempt_host_time_idx`
-- `fetch_attempt_open_idx`
-- `fetch_attempt_url_time_idx`
-- `robots_cache_expiry_idx`
-- `seed_seed_url_due_idx`
-
 ## Hedef chronology uyumlu dosya düzeni
 
 ### 001_seed_frontier_http_fetch_base.sql
@@ -244,6 +232,16 @@ Amaç:
 - robots cache kalıcılığı
 - refresh kararı
 - allow/block kararı
+
+## Rules for the split phase
+
+1. The live snapshot remains preserved as the canonical imported evidence.
+2. Split files must not silently change semantics.
+3. Object order must preserve dependency correctness.
+4. Any normalization beyond pure decomposition must be explicit and reviewable.
+5. The split phase should be done only on Ubuntu Desktop and then pushed through GitHub.
+
+---
 
 ## Parçalama fazı kuralları
 
