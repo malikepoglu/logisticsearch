@@ -88,6 +88,102 @@ Mevcut tasarım yönü şudur:
 - her iki yüzeyin altında ortak coğrafi doğruluk olarak **PostgreSQL/PostGIS**
 - backend/veritabanı katmanlarından harita-yüzlü ekranlara pratik aktarım yüzeyi olarak **GeoJSON şekilli veri teslimi**
 
+## Firm and branch address presentation surface
+
+The main public-facing backbone of LogisticSearch is expected to be firm, branch, warehouse, depot, office, terminal, and service-point presentation.
+
+For that specific screen family, the canonical default direction is:
+
+- PostgreSQL/PostGIS as the stored geospatial truth
+- API/service layer as the controlled application-facing boundary
+- GeoJSON as the map-facing interchange payload
+- MapLibre GL JS as the default public presentation library
+
+This direction must be read as an explicit chain:
+
+- PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS
+
+The API layer is not decorative in this design.
+
+Its job is to prevent direct screen coupling to raw database structure and to provide a controlled application contract for map-facing firm and branch views.
+
+At minimum, that API-facing layer is expected to own responsibilities such as:
+
+- selecting only the fields that public map screens should receive
+- returning stable feature identifiers and feature properties
+- applying query filters such as firm, branch, category, region, or viewport/bounding-box scope
+- returning GeoJSON-shaped payloads suitable for marker, popup, cluster, or result-list synchronization
+- keeping presentation screens decoupled from direct SQL/PostGIS schema exposure
+
+This firm/branch address surface is not the same thing as:
+
+- live vehicle/device/fleet tracking
+- measurement-heavy technical analysis
+- operator-side spatial editing
+
+Those remain separate map-screen families with their own preferred tooling direction.
+
+## Firma ve şube adres gösterim yüzeyi
+
+LogisticSearch'in ana public-yüzlü omurgasının firma, şube, depo, ofis, terminal ve servis noktası gösterimi olması beklenmektedir.
+
+Bu özel ekran ailesi için kanonik varsayılan yön şudur:
+
+- depolanmış coğrafi doğruluk olarak PostgreSQL/PostGIS
+- kontrollü uygulama-yüzlü sınır olarak API/service katmanı
+- harita-yüzlü aktarım payload'ı olarak GeoJSON
+- varsayılan public gösterim kütüphanesi olarak MapLibre GL JS
+
+Bu yön açık bir zincir olarak okunmalıdır:
+
+- PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS
+
+Bu tasarımda API katmanı süs amaçlı değildir.
+
+Görevi, ekranın ham veritabanı yapısına doğrudan bağlanmasını engellemek ve firma/şube harita görünümleri için kontrollü bir uygulama sözleşmesi sağlamaktır.
+
+En azından bu API-yüzlü katmanın şu sorumluluklara sahip olması beklenir:
+
+- public harita ekranlarının alması gereken alanları seçmek
+- kararlı feature kimlikleri ve feature özellik alanları döndürmek
+- firma, şube, kategori, bölge veya viewport/bounding-box kapsamı gibi sorgu filtreleri uygulamak
+- marker, popup, cluster veya sonuç-listesi senkronizasyonuna uygun GeoJSON şekilli payload'lar döndürmek
+- gösterim ekranlarını doğrudan SQL/PostGIS şema ifşasından ayrıştırmak
+
+Bu firma/şube adres yüzeyi şunlarla aynı şey değildir:
+
+- canlı araç/cihaz/filo takibi
+- yoğun ölçüm gerektiren teknik analiz
+- operatör-tarafı uzamsal düzenleme
+
+Bunlar kendi tercih edilen araç yönleri olan ayrı harita-ekran aileleri olarak kalır.
+
+## Sealed short decision
+
+The shortest current sealed decision sentence is this:
+
+**Public firm/branch maps = PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS**  
+**Live tracking = MapLibre GL JS + Socket.IO**  
+**Advanced measurement/drawing/analysis = OpenLayers + mostly API/GeoJSON**  
+**Shared geospatial truth = PostgreSQL/PostGIS**
+
+This summary is intentionally compact.
+
+It does not replace the longer boundary and role explanations elsewhere in this document.
+
+## Mühürlü kısa karar
+
+Şu anki en kısa mühürlü karar cümlesi şudur:
+
+**Public firma/şube haritaları = PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS**  
+**Canlı takip = MapLibre GL JS + Socket.IO**  
+**Gelişmiş ölçüm/çizim/analiz = OpenLayers + çoğunlukla API/GeoJSON**  
+**Ortak coğrafi doğruluk = PostgreSQL/PostGIS**
+
+Bu özet bilinçli olarak kompakt tutulmuştur.
+
+Bu dokümandaki daha uzun sınır ve rol açıklamalarının yerine geçmez.
+
 ## Live update transport direction
 
 The current direction is also purpose-split here.
@@ -131,6 +227,46 @@ Analitik veya operatör-aracı ekranları için varsayılan yön şudur:
 - OpenLayers tabanlı gösterim ve etkileşim
 
 İleride gerçekten canlı güncelleme gerektiren teknik bir ekran olursa bu ayrıca eklenebilir. Ancak canlı akış her harita ekranı için varsayılan kabul edilmez.
+
+### Live client-side motion rendering rule
+
+For live tracking screens, incoming position updates do not need to arrive at animation-frame frequency.
+
+A backend or transport layer may legitimately deliver vehicle/device/fleet updates every few seconds or even at longer controlled intervals.
+
+The receiving application screen may still render smoother visible motion between confirmed updates.
+
+The current preferred direction is:
+
+- keep durable position truth in backend/database layers
+- deliver live updates through Socket.IO style transport when the screen is a real live-tracking surface
+- interpolate on the client side between confirmed points with `requestAnimationFrame`
+- update the visible map source in place through source-level data refresh such as `map.getSource('vehicles').setData(...)` or an equivalent direct source-update path
+- avoid full map reinitialization or coarse full-screen refresh just to move a live marker
+
+This rule is a rendering and interaction policy.
+
+It must not be misread as permission to invent location truth beyond the most recent confirmed backend updates.
+
+### Canlı istemci-tarafı hareket gösterim kuralı
+
+Canlı takip ekranlarında gelen konum güncellemelerinin animation-frame frekansında gelmesi gerekmez.
+
+Backend veya taşıma katmanı, araç/cihaz/filo güncellemelerini meşru olarak birkaç saniyede bir hatta daha uzun kontrollü aralıklarla teslim edebilir.
+
+Buna rağmen alıcı uygulama ekranı, doğrulanmış güncellemeler arasındaki görünür hareketi daha yumuşak biçimde gösterebilir.
+
+Güncel tercih edilen yön şudur:
+
+- kalıcı konum doğrusunu backend/veritabanı katmanlarında tutmak
+- ekran gerçekten canlı takip yüzeyiyse güncellemeleri Socket.IO benzeri taşıma ile vermek
+- doğrulanmış noktalar arasında istemci tarafında `requestAnimationFrame` ile interpolation yapmak
+- görünür harita kaynağını `map.getSource('vehicles').setData(...)` gibi source-seviyesinde veri güncellemesiyle veya eşdeğer doğrudan kaynak-güncelleme yolu ile yerinde güncellemek
+- canlı marker hareketi için haritanın tamamını yeniden başlatmamak ve kaba tam-ekran yenileme yapmamak
+
+Bu kural bir gösterim ve etkileşim politikasıdır.
+
+En son doğrulanmış backend güncellemelerinin ötesinde konum doğrusu uydurma izni gibi okunmamalıdır.
 
 ## Boundary against SECTION1 webcrawler
 
