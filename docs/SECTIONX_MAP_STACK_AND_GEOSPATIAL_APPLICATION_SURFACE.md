@@ -74,30 +74,44 @@ Güncel doğruluk:
 
 The current design direction is:
 
-  * MapLibre GL JS for live operational map views such as vehicle/device/fleet tracking screens
-  * MapLibre GL JS as the default public presentation library for firm/branch address maps on the main application surface
-  * OpenLayers for technical or analytical map screens where more advanced drawing, measurement, or operator-side spatial tooling may later be needed
-  * PostgreSQL/PostGIS as the shared geospatial truth below all surfaces
-  * API/service delivery as the controlled application-facing boundary above PostgreSQL/PostGIS
-  * GeoJSON-shaped application delivery as the practical interchange surface from backend/API layers into map-facing screens
+- **MapLibre GL JS** for live operational map views such as vehicle/device/fleet tracking screens where continuous motion, rapid visual refresh, and low-friction client updates matter.
+- **MapLibre GL JS** as the default public presentation library for firm/branch address maps on the main application surface because the product’s primary public map need is firm discovery, branch discovery, marker/popup interaction, clustering, and smooth map navigation rather than heavy operator-side GIS tooling.
+- **OpenLayers** for technical or analytical map screens where more advanced drawing, measurement, selection, or operator-side spatial tooling may later be needed.
+- **PostgreSQL/PostGIS** as the shared geospatial truth below all surfaces.
+- **API/service delivery** as the controlled application-facing boundary above **PostgreSQL/PostGIS**.
+- **GeoJSON**-shaped application delivery as the practical interchange surface from backend/API layers into map-facing screens.
 
 Default public firm/branch address chain:
 
-  * PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS
+- **PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS**
+
+This means the main application’s firm/branch map surface is a first-class product surface.
+
+It is not merely a later illustrative example.
+
+Because firms and branches are central to the application’s functional value, their map presentation rule must live inside the canonical current decision itself.
+
 ## Kanonik güncel karar
 
 Mevcut tasarım yönü şudur:
 
-  * araç/cihaz/filo takibi gibi canlı operasyon harita görünümleri için MapLibre GL JS
-  * ana uygulama yüzeyindeki firma/şube adres haritaları için varsayılan kamuya-açık gösterim kütüphanesi olarak MapLibre GL JS
-  * ileride daha gelişmiş çizim, ölçüm veya operatör-tarafı uzamsal araçlar gerekebilecek teknik/analitik harita ekranları için OpenLayers
-  * tüm yüzeylerin altında ortak coğrafi doğruluk olarak PostgreSQL/PostGIS
-  * PostgreSQL/PostGIS üzerinde kontrollü uygulama-yüzlü sınır olarak API/service teslimi
-  * backend/API katmanlarından harita-yüzlü ekranlara pratik aktarım yüzeyi olarak GeoJSON şekilli veri teslimi
+- sürekli hareket, hızlı görsel yenileme ve düşük sürtünmeli istemci güncellemesi gereken araç/cihaz/filo takibi gibi canlı operasyon harita görünümleri için **MapLibre GL JS**
+- ürünün ana kamuya-açık harita ihtiyacı ağır operatör-tarafı GIS araçları değil; firma keşfi, şube keşfi, marker/popup etkileşimi, clustering ve akıcı harita gezinmesi olduğu için ana uygulama yüzeyindeki firma/şube adres haritaları için varsayılan kamuya-açık gösterim kütüphanesi olarak **MapLibre GL JS**
+- ileride daha gelişmiş çizim, ölçüm, seçim veya operatör-tarafı uzamsal araçlar gerekebilecek teknik/analitik harita ekranları için **OpenLayers**
+- tüm yüzeylerin altında ortak coğrafi doğruluk olarak **PostgreSQL/PostGIS**
+- **PostgreSQL/PostGIS** üzerinde kontrollü uygulama-yüzlü sınır olarak **API/service delivery**
+- backend/API katmanlarından harita-yüzlü ekranlara pratik aktarım yüzeyi olarak **GeoJSON** şekilli veri teslimi
 
 Varsayılan kamuya-açık firma/şube adres zinciri:
 
-  * PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS
+- **PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS**
+
+Bu, ana uygulamadaki firma/şube harita yüzeyinin ikinci planda kalan örnek bir ekran olmadığını gösterir.
+
+Bu yüzey ürünün birinci sınıf işlevsel yüzeylerinden biridir.
+
+Firma ve şubeler uygulamanın ana işlevsel omurgasını oluşturduğu için onların harita gösterim kuralı, kanonik güncel karar bölümünün doğrudan içinde yer almalıdır.
+
 ## Live update transport direction
 
 The current direction is also purpose-split here.
@@ -106,19 +120,29 @@ The current direction is also purpose-split here.
 
 For truly live position updates, the preferred direction is:
 
-- backend state from PostgreSQL/PostGIS
-- push/update delivery through Socket.IO style live transport
-- MapLibre GL JS on the receiving screen when continuous motion and rapid refresh visibility matter
+- backend state from **PostgreSQL/PostGIS**
+- push/update delivery through **Socket.IO**-style live transport
+- **MapLibre GL JS** on the receiving screen when continuous motion and rapid refresh visibility matter
+
+Practical shorthand for this screen family:
+
+- **Socket.IO + MapLibre GL JS**
 
 ### Technical analysis screens
 
 For analytical or operator-tool screens, the default direction is:
 
 - backend/API query
-- GeoJSON response
-- OpenLayers-based rendering and interaction
+- **GeoJSON** response
+- **OpenLayers**-based rendering and interaction
 
-If a later technical screen genuinely needs live updates too, that can be added deliberately. But live streaming is not assumed as the default for every map screen.
+Practical shorthand for this screen family:
+
+- **API/GeoJSON + OpenLayers**
+
+If a later technical screen genuinely needs live updates too, that can be added deliberately.
+
+But live streaming is not assumed as the default for every map screen.
 
 ## Canlı güncelleme taşıma yönü
 
@@ -128,19 +152,29 @@ Bu alanda da güncel yön amaca göre ayrılmıştır.
 
 Gerçekten canlı konum güncellemeleri için tercih edilen yön şudur:
 
-- PostgreSQL/PostGIS tabanlı backend durumu
-- Socket.IO benzeri canlı taşıma ile push/update teslimi
-- sürekli hareket ve hızlı yenileme görünürlüğünün önemli olduğu ekranda MapLibre GL JS
+- **PostgreSQL/PostGIS** tabanlı backend durumu
+- **Socket.IO** benzeri canlı taşıma ile push/update teslimi
+- sürekli hareket ve hızlı yenileme görünürlüğünün önemli olduğu ekranda **MapLibre GL JS**
+
+Bu ekran ailesi için pratik kısa ifade:
+
+- **Socket.IO + MapLibre GL JS**
 
 ### Teknik analiz ekranları
 
 Analitik veya operatör-aracı ekranları için varsayılan yön şudur:
 
 - backend/API sorgusu
-- GeoJSON yanıtı
-- OpenLayers tabanlı gösterim ve etkileşim
+- **GeoJSON** yanıtı
+- **OpenLayers** tabanlı gösterim ve etkileşim
 
-İleride gerçekten canlı güncelleme gerektiren teknik bir ekran olursa bu ayrıca eklenebilir. Ancak canlı akış her harita ekranı için varsayılan kabul edilmez.
+Bu ekran ailesi için pratik kısa ifade:
+
+- **API/GeoJSON + OpenLayers**
+
+İleride gerçekten canlı güncelleme gerektiren teknik bir ekran olursa bu ayrıca bilinçli biçimde eklenebilir.
+
+Ancak canlı akış her harita ekranı için varsayılan kabul edilmez.
 
 ### Live client-side motion rendering rule
 
@@ -153,7 +187,7 @@ The receiving application screen may still render smoother visible motion betwee
 The current preferred direction is:
 
 - keep durable position truth in backend/database layers
-- deliver live updates through Socket.IO style transport when the screen is a real live-tracking surface
+- deliver live updates through **Socket.IO**-style transport when the screen is a real live-tracking surface
 - interpolate on the client side between confirmed points with `requestAnimationFrame`
 - update the visible map source in place through source-level data refresh such as `map.getSource('vehicles').setData(...)` or an equivalent direct source-update path
 - avoid full map reinitialization or coarse full-screen refresh just to move a live marker
@@ -173,7 +207,7 @@ Buna rağmen alıcı uygulama ekranı, doğrulanmış güncellemeler arasındaki
 Güncel tercih edilen yön şudur:
 
 - kalıcı konum doğrusunu backend/veritabanı katmanlarında tutmak
-- ekran gerçekten canlı takip yüzeyiyse güncellemeleri Socket.IO benzeri taşıma ile vermek
+- ekran gerçekten canlı takip yüzeyiyse güncellemeleri **Socket.IO** benzeri taşıma ile vermek
 - doğrulanmış noktalar arasında istemci tarafında `requestAnimationFrame` ile interpolation yapmak
 - görünür harita kaynağını `map.getSource('vehicles').setData(...)` gibi source-seviyesinde veri güncellemesiyle veya eşdeğer doğrudan kaynak-güncelleme yolu ile yerinde güncellemek
 - canlı marker hareketi için haritanın tamamını yeniden başlatmamak ve kaba tam-ekran yenileme yapmamak
@@ -184,39 +218,41 @@ En son doğrulanmış backend güncellemelerinin ötesinde konum doğrusu uydurm
 
 ## Boundary against SECTION1 webcrawler
 
-This topic belongs outside SECTION1 because SECTION1 is responsible for crawler/runtime/data-acquisition truth, not UI-library choice.
+This topic belongs outside SECTION1 because SECTION1 is responsible for crawler/runtime/data-acquisition truth, not application-side map-library choice.
 
 SECTION1 may still document geospatial items such as:
 
 - whether the crawler acquires coordinates
 - how address-to-coordinate enrichment is handled
-- what GeoJSON-ready or PostGIS-ready geospatial truth is emitted
+- what **GeoJSON**-ready or **PostGIS**-ready geospatial truth is emitted
 - what OSM-facing acquisition limits, service boundaries, or enrichment constraints exist
 
 But SECTION1 should not become the place that decides:
 
-- MapLibre GL JS vs OpenLayers
+- **MapLibre GL JS** vs **OpenLayers**
 - live dashboard rendering choice
 - operator-facing map interaction choice
 - application-screen transport choice by itself
+- whether a given screen family should use **Socket.IO**-style streaming or ordinary API query flow
 
 ## SECTION1 webcrawler ile sınır
 
-Bu konu SECTION1 dışında yer alır; çünkü SECTION1’in görevi UI-kütüphanesi seçimi değil, crawler/runtime/veri-edinim doğrusudur.
+Bu konu SECTION1 dışında yer alır; çünkü SECTION1’in görevi uygulama tarafı harita-kütüphanesi seçimi değil, crawler/runtime/veri-edinim doğrusudur.
 
 SECTION1 yine de şu coğrafi konuları dokümante edebilir:
 
 - crawler’ın koordinat toplayıp toplamadığı
 - adresten koordinata zenginleştirmenin nasıl ele alındığı
-- hangi GeoJSON-hazır veya PostGIS-hazır coğrafi doğrunun üretildiği
+- hangi **GeoJSON**-hazır veya **PostGIS**-hazır coğrafi doğrunun üretildiği
 - OSM’e bakan veri edinim limitleri, servis sınırları veya enrichment kısıtları
 
 Ama SECTION1 şu kararların yeri olmamalıdır:
 
-- MapLibre GL JS mi OpenLayers mı
+- **MapLibre GL JS** mi **OpenLayers** mı
 - canlı dashboard gösterim tercihi
 - operatör-yüzlü harita etkileşim tercihi
 - uygulama ekranı taşıma tercihi
+- belirli bir ekran ailesinin **Socket.IO** benzeri akış mı yoksa sıradan API sorgu akışı mı kullanacağı
 
 ## Current implementation honesty
 
