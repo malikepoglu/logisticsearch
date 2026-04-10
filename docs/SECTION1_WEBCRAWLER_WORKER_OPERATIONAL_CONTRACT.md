@@ -193,7 +193,7 @@ Call `frontier.claim_next_url(...)`.
 
 If no row is returned, the worker has no eligible job at that moment and should sleep according to operational policy rather than spin aggressively.
 
-### Step 1B — renew the lease during genuinely long work
+### Step 1.1 — renew the lease during genuinely long work
 
 If the worker is still legitimately processing the same URL and lease expiry is approaching, it should renew the lease with `frontier.renew_url_lease(...)` before expiry rather than relying on luck.
 
@@ -249,7 +249,7 @@ Bu operasyon sözleşmesi artık şu daha katı heartbeat disiplini dokümanıyl
 
 `frontier.claim_next_url(...)` çağır.
 
-### Adım 1B — gerçekten uzun süren işte lease'i yenile
+### Adım 1.1 — gerçekten uzun süren işte lease'i yenile
 
 Worker hâlâ aynı URL üzerinde meşru şekilde çalışıyorsa ve lease bitişi yaklaşıyorsa, şansa güvenmek yerine bitişten önce `frontier.renew_url_lease(...)` ile lease yenilemelidir.
 
