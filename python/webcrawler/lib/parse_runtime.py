@@ -29,6 +29,14 @@ import re
 from pathlib import Path
 
 
+# EN: These DB helpers are imported here because the canonical minimal parse-apply
+# EN: path must now live inside repository-tracked code instead of ad hoc snippets.
+# TR: Kanonik minimal parse-apply yolu artık tek kullanımlık parçalar yerine
+# TR: repository içinde izlenen kodda yaşamalı olduğu için bu DB yardımcılarını
+# TR: burada içe aktarıyoruz.
+from .db import persist_taxonomy_preranking_payload, upsert_page_workflow_status
+
+
 # EN: This dataclass stores the structured result of the minimal parse entry step.
 # TR: Bu dataclass minimal parse giriş adımının yapılı sonucunu tutar.
 @dataclass(slots=True)
@@ -302,3 +310,94 @@ def resolve_workflow_linked_snapshot_id(persist_result: dict | None) -> int | No
     # TR: bir mapping oluşana kadar tek güvenli değer None'dır.
     return None
 
+
+# EN: This dataclass stores the two durable DB results produced by the canonical
+# EN: minimal parse-apply helper.
+# TR: Bu dataclass, kanonik minimal parse-apply yardımcısının ürettiği iki kalıcı
+# TR: DB sonucunu tutar.
+@dataclass(slots=True)
+class MinimalParseApplyResult:
+    # EN: persist_result stores the row returned by
+    # EN: parse.persist_taxonomy_preranking_payload(...).
+    # TR: persist_result, parse.persist_taxonomy_preranking_payload(...)
+    # TR: tarafından dönen satırı tutar.
+    persist_result: dict
+
+    # EN: workflow_result stores the row returned by
+    # EN: parse.upsert_page_workflow_status(...).
+    # TR: workflow_result, parse.upsert_page_workflow_status(...)
+    # TR: tarafından dönen satırı tutar.
+    workflow_result: dict
+
+
+# EN: This helper is the current canonical repo-contained minimal parse-entry flow.
+# EN: It keeps the whole apply path inside tracked code instead of relying on
+# EN: ad hoc one-off Python snippets outside the repository surface.
+# TR: Bu yardımcı, mevcut kanonik repo-içi minimal parse-entry akışıdır.
+# TR: Uygulama yolunun tamamını repository dışında kalan tek kullanımlık Python
+# TR: parçaları yerine izlenen kod içinde tutar.
+def apply_minimal_parse_entry(
+    *,
+    conn,
+    url_id: int,
+    raw_storage_path: str,
+    source_run_id: str,
+    source_note: str | None = None,
+    workflow_state: str = "pre_ranked",
+    workflow_state_reason: str = "minimal_parse_entry_flow_committed_via_repo_helper",
+) -> MinimalParseApplyResult:
+    # EN: We first build the structured minimal parse payload from the raw HTML
+    # EN: artefact because payload construction and DB persistence must stay aligned.
+    # TR: Önce ham HTML artefact'ından yapılı minimal parse payload'ını kuruyoruz;
+    # TR: çünkü payload üretimi ile DB persistence aynı hizada kalmalıdır.
+    parse_result = build_minimal_parse_payload(
+        url_id=url_id,
+        raw_storage_path=raw_storage_path,
+        source_run_id=source_run_id,
+        source_note=source_note,
+    )
+
+    # EN: We persist the payload through the canonical DB helper so the current
+    # EN: narrow parse persistence truth stays centralized.
+    # TR: Payload'ı kanonik DB yardımcısı üzerinden persist ediyoruz; böylece
+    # TR: mevcut dar parse persistence doğrusu merkezî kalır.
+    persist_result = persist_taxonomy_preranking_payload(
+        conn=conn,
+        payload=parse_result.payload,
+    )
+
+    # EN: We resolve linked_snapshot_id only through the dedicated safe-policy
+    # EN: helper so blind snapshot reuse cannot silently reappear.
+    # TR: linked_snapshot_id değerini yalnızca dedicated güvenli-politika
+    # TR: yardımcısı üzerinden çözüyoruz; böylece kör snapshot yeniden kullanımı
+    # TR: sessizce geri dönemez.
+    linked_snapshot_id = resolve_workflow_linked_snapshot_id(persist_result)
+
+    # EN: We write workflow state through the canonical DB helper and pass the
+    # EN: safe linked_snapshot_id result exactly as resolved above.
+    # TR: Workflow durumunu kanonik DB yardımcısı üzerinden yazıyoruz ve güvenli
+    # TR: linked_snapshot_id sonucunu yukarıda çözüldüğü haliyle aynen iletiyoruz.
+    workflow_result = upsert_page_workflow_status(
+        conn=conn,
+        url_id=url_id,
+        workflow_state=workflow_state,
+        state_reason=workflow_state_reason,
+        linked_snapshot_id=linked_snapshot_id,
+        source_run_id=source_run_id,
+        source_note=source_note,
+        status_metadata={
+            "parse_mode": "minimal_stdlib_html",
+            "linked_snapshot_policy": "safe_repo_helper",
+            "linked_snapshot_id": linked_snapshot_id,
+            "raw_storage_path": raw_storage_path,
+        },
+    )
+
+    # EN: We return both durable DB results together so callers can audit exactly
+    # EN: what the parse apply step changed.
+    # TR: Çağıran taraf parse apply adımının tam olarak neyi değiştirdiğini audit
+    # TR: edebilsin diye iki kalıcı DB sonucunu birlikte döndürüyoruz.
+    return MinimalParseApplyResult(
+        persist_result=persist_result,
+        workflow_result=workflow_result,
+    )
