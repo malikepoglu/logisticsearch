@@ -34,6 +34,8 @@ It currently provides:
 - probe-only and durable claim modes
 - a minimal real HTTP fetch flow
 - raw response-body persistence under `/srv/crawler/logisticsearch/raw_fetch`
+- canonical robots refresh-decision evaluation through crawler-core
+- controlled robots.txt fetching, raw-body persistence, narrow parsing, and cache upsert flow
 - success finalization back into crawler-core
 - a minimal parse-entry flow that writes evidence
 - workflow-status writing for the current narrow parse path
@@ -41,7 +43,6 @@ It currently provides:
 
 It does not yet provide:
 
-- robots cache refresh fetching
 - a broader parser stack
 - a sealed preranking-snapshot linkage model
 - full production-grade orchestration/service supervision
@@ -59,6 +60,8 @@ Güncel kapsamı hâlâ bilinçli olarak kontrollüdür.
 - probe-only ve durable claim modları
 - minimal gerçek HTTP fetch akışı
 - ham response body'lerini `/srv/crawler/logisticsearch/raw_fetch` altında saklama
+- crawler-core üzerinden kanonik robots refresh-decision değerlendirmesi
+- kontrollü robots.txt fetch, ham body saklama, dar parse ve cache upsert akışı
 - crawler-core tarafına success finalize dönüşü
 - evidence yazan minimal parse-entry akışı
 - mevcut dar parse yolu için workflow-status yazımı
@@ -66,7 +69,6 @@ Güncel kapsamı hâlâ bilinçli olarak kontrollüdür.
 
 Henüz şunları sağlamaz:
 
-- robots cache refresh fetch akışı
 - daha geniş bir parser stack
 - mühürlenmiş bir preranking-snapshot linkage modeli
 - tam production-grade orchestration/service supervision
