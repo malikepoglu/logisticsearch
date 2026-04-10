@@ -16,11 +16,11 @@ This subtree provides a clean source boundary inside `crawler_exports/`. Its rol
 Bu alt ağaç, `crawler_exports/` içinde temiz bir kaynak sınırı sağlar. Rolü; Pi51’den gelen ve repository’ye girmeye değer tüm export kanallarını bir arada tutarak, aşağı akıştaki tüketicilerin üretici bağlamını gizli operasyon varsayımlarına ihtiyaç duymadan anlayabilmesini sağlamaktır.
 ## Producer Identity
 
-Pi51 is treated as a dedicated crawler and data-origin node in the current LogisticSearch architecture. It is not the final decision layer for ranking or outreach and is not intended to be a mixed application runtime surface. Therefore, this subtree should be read as a producer-origin export surface for crawler-side outputs that have crossed into the GitHub-mediated transport path.
+Pi51 is treated as a dedicated crawler and data-origin node in the current LogisticSearch architecture. It is not the final decision layer for ranking or outreach and is not intended to be a mixed application runtime surface. Therefore, this subtree should be read as a producer-origin export surface for crawler-side outputs that are intentionally promoted into a repository-visible GitHub transport/history path. It must not be read as proof that all live Pi51-to-Ubuntu Desktop data movement is GitHub-mediated, because the current primary physical database/export transfer path uses removable media from `/srv/data` under operator control.
 
 ## Üretici Kimliği
 
-Pi51, mevcut LogisticSearch mimarisinde özel bir crawler ve veri-kaynağı düğümü olarak ele alınmaktadır. Nihai sıralama veya outreach karar katmanı değildir ve karışık bir uygulama runtime yüzeyi olması amaçlanmamaktadır. Bu nedenle bu alt ağaç, GitHub aracılı taşıma yoluna girmiş crawler tarafı çıktılar için bir üretici-köken export yüzeyi olarak okunmalıdır.
+Pi51, mevcut LogisticSearch mimarisinde özel bir crawler ve veri-kaynağı düğümü olarak ele alınmaktadır. Nihai sıralama veya outreach karar katmanı değildir ve karışık bir uygulama runtime yüzeyi olması amaçlanmamaktadır. Bu nedenle bu alt ağaç, repository’de görünür bir GitHub taşıma/tarihçe yoluna bilinçli olarak alınmış crawler tarafı çıktılar için bir üretici-köken export yüzeyi olarak okunmalıdır. Bu alt ağaç, Pi51’den Ubuntu Desktop’a giden tüm canlı veri hareketinin GitHub aracılı olduğunu göstermez; çünkü veritabanı/export payload için güncel birincil fiziksel taşıma yolu operatör kontrollü `/srv/data` çıkarılabilir medya yoludur.
 ## Documentation hub
 
 Use these surfaces as the current hub / reading map around the Pi51 export-source area:
@@ -73,7 +73,7 @@ At the current repository point, the main tracked channel under this producer su
 
 - `crawler_exports/pi51/github_batch_v1/`
 
-This is not a decorative path. It is the current repository-visible Pi51 export channel.
+This is not a decorative path. It is the current repository-visible Pi51 export channel family, not proof of the sole live physical transfer path.
 
 ## Güncel izlenen alt yüzey
 
@@ -81,7 +81,7 @@ Mevcut repository noktasında bu üretici alt ağacı altındaki ana izlenen kan
 
 - `crawler_exports/pi51/github_batch_v1/`
 
-Bu süs amaçlı bir yol değildir. Bu, repository’de görünür olan güncel Pi51 export kanalıdır.
+Bu süs amaçlı bir yol değildir. Bu, repository’de görünür olan güncel Pi51 export kanal ailesidir; tek canlı fiziksel transfer yolu olduğunun kanıtı değildir.
 
 ## Expected Contents
 
@@ -92,11 +92,11 @@ This area is expected to contain channel-scoped subtrees that represent concrete
 Bu alanın, Pi51’den gelen somut export teslim ailelerini temsil eden kanal-kapsamlı alt ağaçlar içermesi beklenir. Her kanal kendi dizin sözleşmesini, catalog dosyalarını, batch yerleşimini ve bütünlük kurallarını tanımlayabilir; ancak tüm bu materyal yine de daha geniş `crawler_exports/` disipliniyle uyumlu kalmalıdır.
 ## Operational Meaning
 
-Operationally, this subtree helps answer a simple but important question: “Which producer created the export artifacts that were later imported on Ubuntu Desktop?” Keeping that boundary explicit improves reviewability, troubleshooting, and data lineage clarity.
+Operationally, this subtree helps answer a simple but important question: “Which producer created the export artifacts that were intentionally promoted into the repository-visible transport/history surface?” Keeping that boundary explicit improves reviewability, troubleshooting, and data lineage clarity without implying that GitHub is the only active Pi51-to-Ubuntu Desktop data path.
 
 ## Operasyonel Anlam
 
-Operasyonel olarak bu alt ağaç basit ama önemli bir soruya cevap verir: “Daha sonra Ubuntu Desktop üzerinde import edilen export artefact’larını hangi üretici oluşturdu?” Bu sınırın açık tutulması; gözden geçirilebilirliği, sorun gidermeyi ve veri soy ağacı netliğini iyileştirir.
+Operasyonel olarak bu alt ağaç basit ama önemli bir soruya cevap verir: “Repository’de görünür taşıma/tarihçe yüzeyine bilinçli olarak alınan export artefact’larını hangi üretici oluşturdu?” Bu sınırın açık tutulması; gözden geçirilebilirliği, sorun gidermeyi ve veri soy ağacı netliğini iyileştirir; ancak GitHub’ın tek aktif Pi51->Ubuntu Desktop veri yolu olduğu anlamına gelmez.
 ## What Belongs Here
 
 Only Pi51-origin export material that has been intentionally accepted into the repository transport flow should live here. Durable channel structures, valid batch records, catalog material, and producer-relevant export metadata are suitable for this subtree.

@@ -1,102 +1,132 @@
 # Webcrawler Python Worker Surface
 
-This is the first real Python-side worker surface for LogisticSearch.
+This is the current controlled Python-side crawler runtime surface for LogisticSearch.
 
 # Webcrawler Python Worker Yüzeyi
 
-Bu, LogisticSearch için ilk gerçek Python-tarafı worker yüzeyidir.
+Bu, LogisticSearch için güncel kontrollü Python-tarafı crawler runtime yüzeyidir.
 
 ## Purpose
 
-This directory provides the first controlled Python implementation surface for the LogisticSearch webcrawler.
+This directory provides the first controlled but real Python implementation surface for the LogisticSearch webcrawler.
 
-Its job is intentionally narrow:
-it proves that Python can call the current crawler-core SQL claim path honestly, observe the current robots allow-decision surface, and then roll the transaction back safely.
+Its scope is still intentionally narrow, but it is no longer limited to a probe-only claim demonstration.
 
-It is not a full crawler runtime.
+It is not yet a broad production-grade crawler runtime.
 
 ## Amaç
 
-Bu dizin, LogisticSearch webcrawler için ilk kontrollü Python implementasyon yüzeyini sağlar.
+Bu dizin, LogisticSearch webcrawler için ilk kontrollü ama gerçek Python implementasyon yüzeyini sağlar.
 
-Görevi bilinçli olarak dardır:
-Python tarafının mevcut crawler-core SQL claim yolunu dürüst biçimde çağırabildiğini, mevcut robots allow-decision yüzeyini gözlemleyebildiğini ve ardından transaction'ı güvenli biçimde rollback edebildiğini kanıtlar.
+Kapsamı hâlâ bilinçli olarak dardır; ancak artık probe-only claim gösterimiyle sınırlı değildir.
 
-Bu dizin tam bir crawler runtime değildir.
+Henüz geniş kapsamlı production-grade bir crawler runtime değildir.
 
 ## Current truth boundary
 
 This directory is the first real Python-side worker surface for the LogisticSearch webcrawler.
 
-Its current scope is intentionally narrow and controlled.
+Its current scope is still intentionally controlled.
 
-It does not yet provide a real HTTP fetch runtime.
+It currently provides:
 
-It does not yet provide robots cache refresh fetching.
+- storage-aware claim gating
+- probe-only and durable claim modes
+- a minimal real HTTP fetch flow
+- raw response-body persistence under `/srv/crawler/logisticsearch/raw_fetch`
+- success finalization back into crawler-core
+- a minimal parse-entry flow that writes evidence
+- workflow-status writing for the current narrow parse path
+- a safe parse-link policy that refuses blind `linked_snapshot_id` reuse when snapshot mapping is ambiguous
 
-It does not yet provide success / retryable-error / permanent-error finalize execution.
+It does not yet provide:
 
-It does not yet provide parse/runtime continuation.
-
-It does not yet provide service-layer runtime orchestration.
-
-It does not yet provide shutdown helper or power helper behavior.
-
-The current proved truth is narrower:
-a probe-only worker can claim one URL through the real SQL surface, inspect the current robots allow-decision output, emit structured JSON, and leave the scratch database lease-clean by rollback.
+- robots cache refresh fetching
+- a broader parser stack
+- a sealed preranking-snapshot linkage model
+- full production-grade orchestration/service supervision
+- shutdown helper or power helper behavior
 
 ## Güncel gerçeklik sınırı
 
 Bu dizin, LogisticSearch webcrawler için ilk gerçek Python-tarafı worker yüzeyidir.
 
-Güncel kapsamı bilinçli olarak dar ve kontrollüdür.
+Güncel kapsamı hâlâ bilinçli olarak kontrollüdür.
 
-Henüz gerçek bir HTTP fetch runtime'ı sağlamaz.
+Şu anda şunları sağlar:
 
-Henüz robots cache refresh fetch akışını sağlamaz.
+- storage-aware claim gating
+- probe-only ve durable claim modları
+- minimal gerçek HTTP fetch akışı
+- ham response body'lerini `/srv/crawler/logisticsearch/raw_fetch` altında saklama
+- crawler-core tarafına success finalize dönüşü
+- evidence yazan minimal parse-entry akışı
+- mevcut dar parse yolu için workflow-status yazımı
+- snapshot eşlemesi belirsiz olduğunda kör `linked_snapshot_id` yeniden kullanımını reddeden güvenli parse-link politikası
 
-Henüz success / retryable-error / permanent-error finalize çalıştırmasını sağlamaz.
+Henüz şunları sağlamaz:
 
-Henüz parse/runtime devam akışını sağlamaz.
-
-Henüz service-layer runtime orkestrasyonu sağlamaz.
-
-Henüz shutdown helper veya power helper davranışı sağlamaz.
-
-Kanıtlanmış güncel gerçek daha dardır:
-probe-only bir worker, gerçek SQL yüzeyi üzerinden bir URL claim edebilir, mevcut robots allow-decision çıktısını inceleyebilir, yapılı JSON üretebilir ve scratch veritabanını rollback ile lease-clean bırakabilir.
+- robots cache refresh fetch akışı
+- daha geniş bir parser stack
+- mühürlenmiş bir preranking-snapshot linkage modeli
+- tam production-grade orchestration/service supervision
+- shutdown helper veya power helper davranışı
 
 ## Files
 
 Current controlled files in this directory:
 
 - `worker_claim_loop.py`  
-  CLI entry surface for the first probe-only worker run.
+  CLI entry surface for single-run worker execution in probe-only or durable-claim mode.
 
 - `lib/db.py`  
-  Narrow database access helpers for claim, lease-renewal access, robots allow-decision access, transaction close, and rollback.
+  Database helpers for claim, finalize, parse persistence, workflow updates, and transaction control.
+
+- `lib/storage_routing.py`  
+  Minimal processed-output routing truth for `/srv`, `/srv/data`, and `/srv/buffer`.
+
+- `lib/fetch_runtime.py`  
+  Minimal real HTTP fetch layer that stores raw response bodies under `/srv/crawler/logisticsearch/raw_fetch`.
+
+- `lib/parse_runtime.py`  
+  Minimal parse-entry layer that extracts basic page evidence and enforces safe snapshot-link policy.
 
 - `lib/worker_runtime.py`  
-  Probe-only worker runtime logic that keeps the first implementation honest.
+  Controlled worker runtime that spans storage-aware claim, minimal fetch, finalize, and minimal parse continuation.
 
 - `requirements.txt`  
   The tracked dependency surface for this directory.
+
+- `bootstrap_venv.sh`  
+  Controlled local venv bootstrap helper for this Python surface.
 
 ## Dosyalar
 
 Bu dizindeki güncel kontrollü dosyalar:
 
 - `worker_claim_loop.py`  
-  İlk probe-only worker çalıştırması için CLI giriş yüzeyi.
+  Probe-only veya durable-claim modunda tek çalıştırmalık worker yürütmesi için CLI giriş yüzeyi.
 
 - `lib/db.py`  
-  Claim, lease-renewal erişimi, robots allow-decision erişimi, transaction kapatma ve rollback için dar veritabanı yardımcıları.
+  Claim, finalize, parse persistence, workflow update ve transaction control için veritabanı yardımcıları.
+
+- `lib/storage_routing.py`  
+  `/srv`, `/srv/data` ve `/srv/buffer` için minimal işlenmiş-çıktı yönlendirme doğrusu.
+
+- `lib/fetch_runtime.py`  
+  Ham response body'lerini `/srv/crawler/logisticsearch/raw_fetch` altına yazan minimal gerçek HTTP fetch katmanı.
+
+- `lib/parse_runtime.py`  
+  Temel sayfa evidence'ı çıkaran ve güvenli snapshot-link politikasını uygulayan minimal parse-entry katmanı.
 
 - `lib/worker_runtime.py`  
-  İlk implementasyonu dürüst tutan probe-only worker runtime mantığı.
+  Storage-aware claim, minimal fetch, finalize ve minimal parse continuation kapsayan kontrollü worker runtime katmanı.
 
 - `requirements.txt`  
   Bu dizin için izlenen bağımlılık yüzeyi.
+
+- `bootstrap_venv.sh`  
+  Bu Python yüzeyi için kontrollü local venv bootstrap yardımcısı.
 
 ## Authoritative basis
 
@@ -114,6 +144,7 @@ The most important current authority surfaces for this worker directory are:
 - `sql/crawler_core/906_seed_frontier_entrypoint_bootstrap.psql.sql`
 
 Code here must follow those documents.
+
 Code here must not silently outrun those documents.
 
 ## Otoritatif temel
@@ -132,6 +163,7 @@ Bu worker dizini için en önemli güncel otorite yüzeyleri şunlardır:
 - `sql/crawler_core/906_seed_frontier_entrypoint_bootstrap.psql.sql`
 
 Buradaki kod bu dokümanları izlemelidir.
+
 Buradaki kod bu dokümanların sessizce önüne geçmemelidir.
 
 ## Working rule
@@ -166,8 +198,7 @@ Current controlled dependency rule:
 
 - use `psycopg[binary]==3.3.3`
 - do not add broader crawler dependencies yet
-- do not add HTTP client packages yet
-- do not add parser stacks yet
+- do not add broader parser stacks yet
 - do not add orchestration/runtime packages yet unless a later doc-driven patch proves they are needed
 
 A local virtual environment may be created for execution, but the tracked dependency truth for the repository must remain the committed `requirements.txt` file.
@@ -180,15 +211,14 @@ Güncel kontrollü bağımlılık kuralı şudur:
 
 - `psycopg[binary]==3.3.3` kullan
 - henüz daha geniş crawler bağımlılıkları ekleme
-- henüz HTTP client paketleri ekleme
-- henüz parser stack'leri ekleme
+- henüz daha geniş parser stack'leri ekleme
 - daha sonraki doküman-güdümlü bir patch gerçekten gerektiğini kanıtlamadıkça orkestrasyon/runtime paketleri ekleme
 
 Çalıştırma için yerel bir virtual environment oluşturulabilir; ancak repository için izlenen bağımlılık doğrusu committed `requirements.txt` dosyası olarak kalmalıdır.
 
 ## Minimal processed-output storage routing
 
-This directory now also includes `python/webcrawler/lib/storage_routing.py`.
+This directory also includes `python/webcrawler/lib/storage_routing.py`.
 
 Current minimal canonical storage rule:
 
@@ -198,12 +228,11 @@ Current minimal canonical storage rule:
 - if `/srv/data` becomes usable again while `/srv/buffer` contains buffered backlog, crawler must pause and stay paused until buffered processed output is fully drained into `/srv/data`
 - if neither `/srv/data` nor `/srv/buffer` is usable, crawler must pause and surface an explicit error
 
-This surface is intentionally minimal.
-It defines the current processed-output path choice truth, but it does not yet implement the real drain execution or worker-loop integration.
+This routing truth is intentionally narrow and explicit.
 
 ## Minimal işlenmiş-çıktı storage routing
 
-Bu dizin artık `python/webcrawler/lib/storage_routing.py` dosyasını da içerir.
+Bu dizin ayrıca `python/webcrawler/lib/storage_routing.py` dosyasını da içerir.
 
 Güncel minimal kanonik storage kuralı şudur:
 
@@ -213,6 +242,4 @@ Güncel minimal kanonik storage kuralı şudur:
 - `/srv/data` yeniden kullanılabilir hale gelirken `/srv/buffer` içinde buffer backlog varsa crawler pause olmalı ve buffer işlenmiş çıktı tamamen `/srv/data` yoluna boşaltılana kadar paused kalmalıdır
 - ne `/srv/data` ne de `/srv/buffer` kullanılabiliyorsa crawler pause olmalı ve açık bir hata üretmelidir
 
-Bu yüzey bilinçli olarak minimal tutulmuştur.
-Mevcut işlenmiş-çıktı path seçimi doğrusunu tanımlar; ancak gerçek drain execution'ını veya worker-loop entegrasyonunu henüz uygulamaz.
-
+Bu routing doğrusu bilinçli olarak dar ve açık tutulmuştur.
