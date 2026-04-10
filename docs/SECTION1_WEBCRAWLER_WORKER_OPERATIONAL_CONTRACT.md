@@ -201,7 +201,14 @@ If the worker is still legitimately processing the same URL and lease expiry is 
 
 Use `http_fetch.compute_robots_refresh_decision(...)`.
 
-If refresh is needed, the worker should fetch and update robots cache truth before trusting a stale or missing robots view.
+If refresh is needed, the worker should run the controlled robots refresh cycle before trusting a stale or missing robots view.
+
+That controlled refresh cycle currently means:
+
+- fetch `robots.txt`
+- persist any visible raw body
+- parse the current narrow robots payload
+- write cache truth back with `http_fetch.upsert_robots_txt_cache(...)`
 
 ### Step 3 — inspect allow/block decision
 
@@ -209,11 +216,13 @@ Use `http_fetch.compute_robots_allow_decision(...)`.
 
 The worker must not silently ignore robots when the host is in respect mode.
 
-### Step 4 — perform fetch or skip for robots reasons
+### Step 4 — perform fetch or finalize for robots reasons
 
 If allowed, perform page fetch.
 
-If not allowed, do **not** pretend that success/retry/permanent finalization fully covers the robots-blocked path. This area still requires explicit lifecycle design completion.
+If not allowed, the current minimal worker already resolves the claim through an explicit robots-blocked permanent finalization path in Python.
+
+That must **not** be misread as a dedicated canonical SQL robots-blocked finalize function. In the currently visible split SQL surface, robots-blocked completion is still expressed through the general permanent-error path with an explicit class.
 
 ### Step 5 — finalize exactly once
 
@@ -250,7 +259,14 @@ Satır dönmezse worker'ın o anda uygun işi yoktur; agresif şekilde spin etme
 
 `http_fetch.compute_robots_refresh_decision(...)` kullan.
 
-Refresh gerekiyorsa worker bayat veya eksik robots görünümüne güvenmeden önce robots cache doğrusunu fetch edip güncellemelidir.
+Refresh gerekiyorsa worker bayat veya eksik robots görünümüne güvenmeden önce kontrollü robots refresh döngüsünü çalıştırmalıdır.
+
+Bu kontrollü refresh döngüsü şu anda şunları ifade eder:
+
+- `robots.txt` fetch etmek
+- görünen ham body'yi saklamak
+- mevcut dar robots payload'ını parse etmek
+- cache doğrusunu `http_fetch.upsert_robots_txt_cache(...)` ile geri yazmak
 
 ### Adım 3 — allow/block kararını incele
 
@@ -258,11 +274,13 @@ Refresh gerekiyorsa worker bayat veya eksik robots görünümüne güvenmeden ö
 
 Host respect modundaysa worker robots'ı sessizce görmezden gelmemelidir.
 
-### Adım 4 — fetch yap veya robots nedeniyle atla
+### Adım 4 — fetch yap veya robots nedeniyle finalize et
 
 Allowed ise page fetch yap.
 
-Allowed değilse success/retry/permanent finalization'ın robots-blocked yolu tam kapsadığını varsayma. Bu alan hâlâ açık yaşam döngüsü tasarımı tamamlaması gerektirir.
+Allowed değilse mevcut minimal worker claim'i Python tarafında açık bir robots-blocked permanent finalization yolu üzerinden zaten çözer.
+
+Bu durum **dedicated** kanonik bir SQL robots-blocked finalize fonksiyonu varmış gibi okunmamalıdır. Şu anda görünür split SQL yüzeyinde robots-blocked tamamlama hâlâ açık bir sınıf ile genel permanent-error yolu üzerinden ifade edilmektedir.
 
 ### Adım 5 — tam bir kez finalize et
 
@@ -316,11 +334,13 @@ This is not yet guaranteed.
 
 Host-level pause/backoff fields exist, but a global drain contract is not yet sealed.
 
-### Unsafe assumption C — robots-blocked lifecycle finalization is fully integrated
+### Unsafe assumption C — a dedicated canonical SQL robots-blocked finalize surface already exists
 
 This is not yet guaranteed.
 
-Robots decision support exists, but a dedicated canonical robots-blocked finalize path is not yet visible in the split working SQL surface.
+The current Python worker does include a minimal explicit robots-blocked finalization path.
+
+However, that path is still expressed through the general permanent-error finalize surface with an explicit class rather than through a separately visible canonical SQL robots-blocked finalize function.
 
 ### Unsafe assumption D — process memory is enough for resume
 
@@ -346,11 +366,13 @@ Bu henüz garanti edilmemiştir.
 
 Host düzeyi pause/backoff alanları var, ancak global drain sözleşmesi henüz mühürlü değildir.
 
-### Güvensiz varsayım C — robots-blocked yaşam döngüsü finalization'ı tam entegredir
+### Güvensiz varsayım C — dedicated kanonik bir SQL robots-blocked finalize yüzeyi zaten vardır
 
 Bu henüz garanti edilmemiştir.
 
-Robots karar desteği vardır; ancak split çalışma SQL yüzeyinde dedicated kanonik robots-blocked finalize yolu henüz görünmemektedir.
+Mevcut Python worker minimal ve açık bir robots-blocked finalization yolu içerir.
+
+Ancak bu yol, ayrı ve görünür bir kanonik SQL robots-blocked finalize fonksiyonu üzerinden değil, açık bir sınıf ile genel permanent-error finalize yüzeyi üzerinden ifade edilmektedir.
 
 ### Güvensiz varsayım D — resume için process belleği yeterlidir
 
@@ -412,7 +434,7 @@ Before the crawler worker is treated as production-grade, the project should str
 
 1. worker-side lease renewal / heartbeat operational adoption using `frontier.renew_url_lease(...)`
 2. explicit worker drain / graceful-stop contract
-3. explicit robots-blocked finalization path
+3. dedicated canonical SQL robots-blocked finalization surface, if later justified beyond the current explicit permanent-error path
 4. explicit operational runbook for service stop / restart / reboot / poweroff behavior
 
 ## Gelecekteki worker implementasyonunun production-grade sayılmadan önce alması gerekenler
@@ -421,7 +443,7 @@ Crawler worker production-grade kabul edilmeden önce proje en az şu unsurları
 
 1. `frontier.renew_url_lease(...)` kullanarak worker-tarafı lease renewal / heartbeat operasyonel benimsenmesi
 2. açık worker drain / graceful-stop sözleşmesi
-3. açık robots-blocked finalization yolu
+3. mevcut açık permanent-error yolunun ötesinde gerçekten gerekçelendirilirse dedicated kanonik SQL robots-blocked finalization yüzeyi
 4. service stop / restart / reboot / poweroff davranışı için açık operasyon rehberi
 
 ## Immediate next design priority
