@@ -15,6 +15,12 @@ from dataclasses import dataclass
 # TR: içe aktarıyoruz.
 from datetime import datetime, timezone
 
+# EN: We import Path because the worker must read back persisted robots raw bodies
+# EN: from disk during the first controlled cache-refresh integration step.
+# TR: Worker ilk kontrollü cache-refresh entegrasyon adımında saklanan robots ham
+# TR: body'lerini diskten geri okumak zorunda olduğu için Path içe aktarıyoruz.
+from pathlib import Path
+
 # EN: We import socket because socket-level timeout and transport failures should
 # EN: be classified explicitly in the minimal fetch runtime path.
 # TR: Socket düzeyi timeout ve taşıma hataları minimal fetch runtime yolunda açıkça
@@ -32,19 +38,21 @@ from uuid import uuid4
 from urllib.error import HTTPError, URLError
 
 # EN: These DB helpers express the current canonical crawler-core interaction points.
-# EN: We now import not only claim/robots helpers but also the finalize helpers.
+# EN: We now import claim, robots decision/cache helpers, and finalize helpers together.
 # TR: Bu DB yardımcıları mevcut kanonik crawler-core etkileşim noktalarını ifade eder.
-# TR: Artık yalnızca claim/robots yardımcılarını değil finalize yardımcılarını da içe aktarıyoruz.
+# TR: Artık claim, robots karar/cache yardımcıları ve finalize yardımcılarını birlikte içe aktarıyoruz.
 from .db import (
     claim_next_url,
     close_db,
     commit,
     compute_robots_allow_decision,
+    compute_robots_refresh_decision,
     connect_db,
     finish_fetch_permanent_error,
     finish_fetch_retryable_error,
     finish_fetch_success,
     rollback,
+    upsert_robots_txt_cache,
 )
 
 # EN: We import the minimal processed-output storage planner because the worker
@@ -53,11 +61,20 @@ from .db import (
 # TR: işlenmiş-çıktı storage planlayıcısını içe aktarıyoruz.
 from .storage_routing import ProcessedOutputPlan, choose_processed_output_plan
 
-# EN: We import the minimal real fetch helper and its structured result object
-# EN: because durable worker mode now performs a real HTTP fetch plus raw-body write.
-# TR: Durable worker modu artık gerçek HTTP fetch ve ham body yazımı yaptığı için
-# TR: minimal gerçek fetch yardımcısını ve yapılı sonuç nesnesini içe aktarıyoruz.
-from .fetch_runtime import FetchedPageResult, fetch_page_to_raw_storage
+# EN: We import the minimal real fetch helpers and their structured result objects
+# EN: because durable worker mode now performs both normal page fetches and robots
+# EN: refresh fetches during the first canonical cache-refresh integration step.
+# TR: Durable worker modu artık hem normal sayfa fetch'lerini hem de ilk kanonik
+# TR: cache-refresh entegrasyon adımındaki robots refresh fetch'lerini yaptığı için
+# TR: minimal gerçek fetch yardımcılarını ve yapılı sonuç nesnelerini içe aktarıyoruz.
+from .fetch_runtime import (
+    FetchedPageResult,
+    FetchedRobotsTxtResult,
+    decode_robots_body,
+    fetch_page_to_raw_storage,
+    fetch_robots_txt_to_raw_storage,
+    parse_robots_txt_text,
+)
 
 
 # EN: We import the canonical parse helpers here because worker_runtime must use
@@ -353,6 +370,172 @@ def finalize_unexpected_runtime_error(
     )
 
 
+# EN: This helper reads one persisted robots raw body back from disk and turns it
+# EN: into the narrow parsed payload shape already expected by the DB cache-upsert surface.
+# TR: Bu yardımcı saklanan tek bir robots ham body'sini diskten geri okur ve bunu
+# TR: DB cache-upsert yüzeyinin zaten beklediği dar parse payload şekline dönüştürür.
+# EN: This helper converts a persisted robots fetch result into the narrow parsed payload shape expected by the current DB cache contract.
+# TR: Bu yardımcı, saklanmış robots fetch sonucunu mevcut DB cache sözleşmesinin beklediği dar parse payload şekline dönüştürür.
+def parse_persisted_robots_payload(
+    robots_fetch: FetchedRobotsTxtResult,
+) -> tuple[dict, list[str], float | None]:
+    # EN: The persisted raw path must exist here because this helper is only called
+    # EN: for HTTP-result paths that actually wrote a visible raw body.
+    # TR: Bu yardımcı yalnızca görünür ham body gerçekten yazılmış HTTP-sonuç yollarında
+    # TR: çağrıldığı için burada saklanan ham yolun mevcut olması gerekir.
+    raw_storage_path = robots_fetch.raw_storage_path
+    if raw_storage_path is None:
+        raise RuntimeError("robots fetch returned no raw_storage_path for payload parsing")
+
+    # EN: We read the exact persisted bytes so worker-side parsing is derived from
+    # EN: the same durable artefact later audits can inspect.
+    # TR: Worker tarafı parse işlemi daha sonra audit'lerin inceleyebileceği aynı
+    # TR: kalıcı artefact'tan türesin diye tam saklanan byte'ları okuyoruz.
+    robots_body = Path(raw_storage_path).read_bytes()
+
+    # EN: We decode through the sealed helper so encoding tolerance remains consistent.
+    # TR: Encoding toleransı tutarlı kalsın diye mühürlü yardımcı üzerinden decode ediyoruz.
+    robots_text = decode_robots_body(robots_body)
+
+    # EN: We return the current narrow parsed payload shape expected by DB upsert.
+    # TR: DB upsert'in beklediği güncel dar parse payload şeklini döndürüyoruz.
+    return parse_robots_txt_text(robots_text)
+
+
+# EN: This helper performs the first controlled worker-side robots cache refresh write.
+# EN: It fetches robots.txt when refresh is needed, derives the narrow payload shape,
+# EN: and persists the resulting cache truth through the canonical DB wrapper.
+# TR: Bu yardımcı ilk kontrollü worker-tarafı robots cache refresh yazımını yapar.
+# TR: Refresh gerektiğinde robots.txt dosyasını fetch eder, dar payload şeklini çıkarır
+# TR: ve ortaya çıkan cache doğrusunu kanonik DB wrapper üzerinden yazar.
+# EN: This helper performs one controlled robots refresh cycle and writes the resulting cache truth back through the canonical DB wrapper.
+# TR: Bu yardımcı tek bir kontrollü robots refresh döngüsü çalıştırır ve ortaya çıkan cache doğrusunu kanonik DB wrapper üzerinden geri yazar.
+def refresh_robots_cache_if_needed(
+    conn,
+    *,
+    claimed_url: object,
+    refresh_decision: dict,
+) -> dict:
+    # EN: We extract the host identity because refresh is a host-level operation.
+    # TR: Refresh host-seviyesinde bir işlem olduğu için host kimliğini çıkarıyoruz.
+    host_id = int(claimed_url_value(claimed_url, "host_id"))
+
+    # EN: We read the robots URL from the DB refresh-decision row because the SQL
+    # EN: contract is already the source of truth for that target.
+    # TR: SQL sözleşmesi bu hedef için zaten doğruluk kaynağı olduğu için robots URL'yi
+    # TR: DB refresh-decision satırından okuyoruz.
+    robots_url = refresh_decision.get("robots_url")
+    if robots_url is None or str(robots_url).strip() == "":
+        raise RuntimeError("compute_robots_refresh_decision(...) returned empty robots_url")
+
+    # EN: We reuse the claimed row's user-agent token so robots refresh uses the
+    # EN: same explicit crawler identity as the page-fetch path.
+    # TR: Robots refresh yolu sayfa-fetch yolu ile aynı açık crawler kimliğini
+    # TR: kullansın diye claimed satırın user-agent token'ını yeniden kullanıyoruz.
+    user_agent_token = str(claimed_url_value(claimed_url, "user_agent_token"))
+
+    # EN: We perform the real robots fetch through the canonical fetch helper.
+    # TR: Gerçek robots fetch işlemini kanonik fetch yardımcısı üzerinden yapıyoruz.
+    robots_fetch = fetch_robots_txt_to_raw_storage(
+        host_id=host_id,
+        robots_url=str(robots_url),
+        user_agent_token=user_agent_token,
+    )
+
+    # EN: We convert the returned ISO timestamp back to a datetime so psycopg can
+    # EN: pass an explicit timestamptz-compatible value into the DB wrapper.
+    # TR: psycopg açık timestamptz-uyumlu bir değer geçebilsin diye dönen ISO zamanını
+    # TR: tekrar datetime nesnesine çeviriyoruz.
+    fetched_at_value = datetime.fromisoformat(robots_fetch.fetched_at)
+
+    # EN: We preserve a small visible metadata payload so later inspection can see
+    # EN: where the robots fetch actually landed.
+    # TR: Daha sonraki inceleme gerçek robots fetch'in nereye indiğini görebilsin
+    # TR: diye küçük bir görünür metadata payload'ı koruyoruz.
+    robots_metadata = {
+        "final_url": robots_fetch.final_url,
+        "content_type": robots_fetch.content_type,
+    }
+
+    # EN: Transport-class failure means no reliable HTTP cache truth existed, so
+    # EN: we persist an explicit error-state cache row.
+    # TR: Taşıma-sınıfı hata güvenilir HTTP cache doğrusu oluşmadığı anlamına gelir;
+    # TR: bu yüzden açık bir error-state cache satırı yazıyoruz.
+    if robots_fetch.fetch_error_class is not None:
+        return upsert_robots_txt_cache(
+            conn,
+            host_id=host_id,
+            robots_url=str(robots_url),
+            cache_state="error",
+            http_status=None,
+            fetched_at=fetched_at_value,
+            expires_at=None,
+            etag=None,
+            last_modified=None,
+            raw_storage_path=None,
+            raw_sha256=None,
+            raw_bytes=0,
+            parsed_rules={},
+            sitemap_urls=[],
+            crawl_delay_seconds=None,
+            error_class=robots_fetch.fetch_error_class,
+            error_message=robots_fetch.fetch_error_message,
+            robots_metadata=robots_metadata,
+        )
+
+    # EN: We start from an explicit empty parsed payload and then fill it only for
+    # EN: genuinely cacheable success-class HTTP outcomes.
+    # TR: Açık bir boş parse payload'ı ile başlıyor ve bunu yalnızca gerçekten
+    # TR: cache'lenebilir başarı-sınıfı HTTP sonuçlarında dolduruyoruz.
+    parsed_rules: dict = {}
+    sitemap_urls: list = []
+    crawl_delay_seconds = None
+    cache_state = "fresh"
+    error_class = None
+    error_message = None
+
+    # EN: HTTP 404 is treated as a missing robots file rather than a generic fetch error.
+    # TR: HTTP 404 genel fetch hatası yerine eksik robots dosyası olarak ele alınır.
+    if robots_fetch.http_status == 404:
+        cache_state = "missing"
+
+    # EN: Success-class HTTP outcomes are parsed into the narrow disallow/sitemap/crawl-delay model.
+    # TR: Başarı-sınıfı HTTP sonuçları dar disallow/sitemap/crawl-delay modeline parse edilir.
+    elif robots_fetch.http_status is not None and 200 <= robots_fetch.http_status < 400:
+        parsed_rules, sitemap_urls, crawl_delay_seconds = parse_persisted_robots_payload(robots_fetch)
+        cache_state = "fresh"
+
+    # EN: All other HTTP outcomes are persisted as explicit robots HTTP errors.
+    # TR: Diğer tüm HTTP sonuçları açık robots HTTP hataları olarak yazılır.
+    else:
+        cache_state = "error"
+        error_class = "robots_http_error"
+        error_message = f"robots fetch returned HTTP status {robots_fetch.http_status}"
+
+    # EN: We persist the observed robots cache truth through the canonical DB wrapper.
+    # TR: Gözlenen robots cache doğrusunu kanonik DB wrapper üzerinden yazıyoruz.
+    return upsert_robots_txt_cache(
+        conn,
+        host_id=host_id,
+        robots_url=str(robots_url),
+        cache_state=cache_state,
+        http_status=robots_fetch.http_status,
+        fetched_at=fetched_at_value,
+        expires_at=None,
+        etag=robots_fetch.etag,
+        last_modified=robots_fetch.last_modified,
+        raw_storage_path=robots_fetch.raw_storage_path,
+        raw_sha256=robots_fetch.raw_sha256,
+        raw_bytes=robots_fetch.body_bytes,
+        parsed_rules=parsed_rules,
+        sitemap_urls=sitemap_urls,
+        crawl_delay_seconds=crawl_delay_seconds,
+        error_class=error_class,
+        error_message=error_message,
+        robots_metadata=robots_metadata,
+    )
+
+
 # EN: This function performs one worker execution.
 # EN: In probe mode it still rolls back safely.
 # EN: In durable mode it now executes the minimal real fetch + finalize flow.
@@ -422,16 +605,50 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 observed_at=utc_now_iso(),
             )
 
-        # EN: If a row was claimed, we ask for the current visible robots allow/block decision.
-        # TR: Bir satır claim edildiyse mevcut görünür robots allow/block kararını soruyoruz.
-        robots_allow_decision = compute_robots_allow_decision(
+        # EN: We extract the host/path pair once because refresh-decision and
+        # EN: allow-decision are both anchored to the same claimed target.
+        # TR: Refresh-decision ve allow-decision aynı claimed hedefe bağlı olduğu için
+        # TR: host/path çiftini bir kez çıkarıyoruz.
+        claimed_host_id = int(claimed_url_value(claimed_url, "host_id"))
+        claimed_url_path = str(claimed_url_value(claimed_url, "url_path"))
+
+        # EN: We inspect the canonical DB-side refresh decision first because the
+        # EN: worker contract says robots cache truth must be refreshed when needed.
+        # TR: Worker sözleşmesi gerektiğinde robots cache doğrusunun yenilenmesini
+        # TR: söylediği için önce kanonik DB-tarafı refresh kararını inceliyoruz.
+        refresh_decision = compute_robots_refresh_decision(
             conn=conn,
-            host_id=claimed_url_value(claimed_url, "host_id"),
-            url_path=str(claimed_url_value(claimed_url, "url_path")),
+            host_id=claimed_host_id,
         )
 
-        # EN: Probe mode stays non-durable: claim + robots check are observed and then rolled back.
-        # TR: Probe modu kalıcı olmayan mod olarak kalır: claim + robots kontrolü gözlenir ve sonra rollback edilir.
+        # EN: A missing row would mean the sealed DB decision surface behaved unexpectedly.
+        # TR: Satır dönmemesi mühürlü DB karar yüzeyinin beklenmedik davrandığı anlamına gelir.
+        if refresh_decision is None:
+            raise RuntimeError("compute_robots_refresh_decision(...) returned no row")
+
+        # EN: Probe mode stays non-durable, so it may observe refresh need but must not
+        # EN: write refreshed cache truth back into the database.
+        # TR: Probe modu kalıcı olmayan mod olarak kalır; bu yüzden refresh ihtiyacını
+        # TR: gözleyebilir ama yenilenmiş cache doğrusunu veritabanına yazmamalıdır.
+        if (not config.probe_only) and refresh_decision.get("should_refresh"):
+            refresh_robots_cache_if_needed(
+                conn,
+                claimed_url=claimed_url,
+                refresh_decision=refresh_decision,
+            )
+
+        # EN: After any needed durable refresh write, we ask for the current visible
+        # EN: robots allow/block decision for the claimed path.
+        # TR: Gereken kalıcı refresh yazımı sonrası claimed path için mevcut görünür
+        # TR: robots allow/block kararını soruyoruz.
+        robots_allow_decision = compute_robots_allow_decision(
+            conn=conn,
+            host_id=claimed_host_id,
+            url_path=claimed_url_path,
+        )
+
+        # EN: Probe mode stays non-durable: claim + robots checks are observed and then rolled back.
+        # TR: Probe modu kalıcı olmayan mod olarak kalır: claim + robots kontrolleri gözlenir ve sonra rollback edilir.
         if config.probe_only:
             rollback(conn)
 
@@ -447,8 +664,8 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 observed_at=utc_now_iso(),
             )
 
-        # EN: In durable mode we inspect the robots verdict before any real fetch is attempted.
-        # TR: Durable modda gerçek fetch denenmeden önce robots verdict'ini inceliyoruz.
+        # EN: In durable mode we inspect the robots verdict before any real page fetch is attempted.
+        # TR: Durable modda gerçek sayfa fetch'i denenmeden önce robots verdict'ini inceliyoruz.
         robots_verdict = None if robots_allow_decision is None else robots_allow_decision.get("verdict")
 
         # EN: If robots forbids fetch, we finalize immediately through the minimal
