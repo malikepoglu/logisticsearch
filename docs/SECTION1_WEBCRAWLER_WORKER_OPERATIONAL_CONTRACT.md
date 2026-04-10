@@ -276,6 +276,26 @@ Bir fetch bittiğinde worker doğru kanonik fonksiyonla finalize etmelidir:
 
 Finalization başarılı olduktan sonra worker lease'i kapanmış kabul etmeli ve URL üzerinde hâlâ sahiplik varmış gibi işlem yapmamalıdır.
 
+## Boundary against map presentation-library choice
+
+This worker contract governs crawler-side acquisition, robots handling, fetch behavior, parse continuation, and geospatial-input truth.
+
+It does **not** decide application-side map presentation-library choice.
+
+If the crawler later acquires OSM-derived coordinates or other geospatial fields, that belongs here as data/enrichment truth. But live tracking screens, technical map-analysis screens, and UI-library choice belong to the separate topic document:
+
+- `docs/SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`
+
+## Harita gösterim-kütüphanesi seçimine karşı sınır
+
+Bu worker sözleşmesi crawler tarafındaki veri edinimi, robots işleme, fetch davranışı, parse devamı ve coğrafi girdi doğrusunu yönetir.
+
+Uygulama tarafı harita gösterim-kütüphanesi seçimini **belirlemez**.
+
+Crawler ileride OSM-türevli koordinatlar veya başka coğrafi alanlar toplarsa, bu burada veri/zenginleştirme doğrusu olarak yer alır. Ancak canlı takip ekranları, teknik harita-analiz ekranları ve UI-kütüphanesi seçimi ayrı topic dokümana aittir:
+
+- `docs/SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`
+
 ## Current unsafe assumptions the worker must not make
 
 The worker must **not** assume the following yet.

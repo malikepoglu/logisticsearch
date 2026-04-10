@@ -72,6 +72,46 @@ Henüz şunları sağlamaz:
 - tam production-grade orchestration/service supervision
 - shutdown helper veya power helper davranışı
 
+## Boundary against map-library choice
+
+This directory is responsible for crawler/runtime-side geospatial data truth, not future application-screen library choice.
+
+That means:
+
+- collecting or enriching coordinates may belong here
+- GeoJSON-ready or PostGIS-ready geospatial output truth may belong here
+- OSM-facing acquisition constraints may belong here
+
+But these decisions do **not** belong here:
+
+- application-side map presentation-library choice
+- live-tracking screen choice
+- operator-facing analytical map-screen choice
+
+Those belong to:
+
+- `docs/SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`
+
+## Harita-kütüphanesi seçimine karşı sınır
+
+Bu dizin gelecekteki uygulama ekranı kütüphanesi seçimiyle değil, crawler/runtime tarafındaki coğrafi veri doğrusu ile ilgilidir.
+
+Bunun anlamı şudur:
+
+- koordinat toplama veya zenginleştirme burada yer alabilir
+- GeoJSON-hazır veya PostGIS-hazır coğrafi çıktı doğrusu burada yer alabilir
+- OSM'e bakan veri edinim kısıtları burada yer alabilir
+
+Ama şu kararlar burada yer almaz:
+
+- uygulama tarafı harita gösterim-kütüphanesi seçimi
+- canlı takip ekranı tercihi
+- operatör-yüzlü analitik harita ekranı tercihi
+
+Bunlar şu dokümana aittir:
+
+- `docs/SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`
+
 ## Files
 
 Current controlled files in this directory:

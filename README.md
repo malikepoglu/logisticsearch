@@ -65,9 +65,13 @@ LogisticSearch’in temel omurgalarından biri lojistik taksonomisidir. Bu takso
 
 OpenStreetMap is a mandatory component in the long-term system design. Geographic enrichment is expected to support place normalization, regional interpretation, route and location context, and map-aware logistics intelligence. The geospatial layer is therefore part of the data model itself, not a superficial presentation add-on. This design direction is intended to improve both the quality of classification and the usefulness of future search results.
 
+Map presentation-library choice is intentionally treated as a separate application-surface decision rather than as a direct webcrawler contract. The crawler-side responsibility is geospatial acquisition, normalization, and enrichment truth. The future map-stack decision surface is documented separately in `docs/SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`.
+
 ## Coğrafi Model
 
 OpenStreetMap, uzun vadeli sistem tasarımında zorunlu bir bileşendir. Coğrafi zenginleştirmenin; yer adı normalizasyonu, bölgesel yorumlama, rota ve konum bağlamı ile harita farkındalığına sahip lojistik istihbaratı desteklemesi beklenmektedir. Bu yüzden coğrafi katman, yalnızca görsel bir sunum eklentisi değil, doğrudan veri modelinin parçasıdır. Bu tasarım yönü hem sınıflandırma kalitesini hem de gelecekteki arama sonuçlarının faydasını artırmayı amaçlamaktadır.
+
+Harita gösterim kütüphanesi seçimi, doğrudan webcrawler sözleşmesi olarak değil, ayrı bir uygulama-yüzeyi kararı olarak ele alınır. Crawler tarafının sorumluluğu coğrafi veri edinimi, normalizasyon ve zenginleştirme doğrusudur. Gelecekteki harita-yığını karar yüzeyi ayrı olarak `docs/SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md` dosyasında dokümante edilir.
 ## Current Repository Focus
 
 At the current stage, the project has already established repository synchronization and crawler-side operational surfaces across Ubuntu Desktop, GitHub, and Pi51crawler. A repository-visible GitHub batch export path also exists as a controlled transport/audit surface, but it is no longer the canonical primary path for moving Pi51 database payload into Ubuntu Desktop. The present focus is to keep the working model explicit: Ubuntu Desktop <> GitHub <> Pi51crawler for code/docs/system truth, while removable-media transfer from Pi51 `/srv/data` into Ubuntu Desktop is the current primary path for physical crawler data movement. In concrete terms, the next standardization work is centered on `crawler_exports/`, `sql/`, `python/`, and the policy decisions for machine-local surfaces such as `_imports/` and `_build/`.

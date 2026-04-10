@@ -68,6 +68,7 @@ Current topic surface in this folder:
 - `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`
 - `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
 - `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
+- `SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`
 - `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`
 - `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
 - `TOPIC_RUNBOOK_AUTHORING_AND_EXECUTION_DISCIPLINE.md`
@@ -92,6 +93,7 @@ Bu klasördeki mevcut topic yüzeyi:
 - `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`
 - `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
 - `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
+- `SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`
 - `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`
 - `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
 - `TOPIC_RUNBOOK_AUTHORING_AND_EXECUTION_DISCIPLINE.md`
@@ -135,6 +137,11 @@ Use this reading order.
 1. `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`  
    Read this only when you specifically need the recorded truth of that PostgreSQL major-upgrade seal point.
 
+### Reading path D — geospatial application surface boundary
+
+1. `SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`  
+   Read this when you need the current boundary between crawler-side geospatial acquisition/enrichment and later application-side map rendering, live tracking, and operator-facing geospatial screens.
+
 ---
 
 ## Sıfırdan başlıyorsan bu klasör nasıl okunmalı
@@ -173,6 +180,11 @@ Dosyaları rastgele açma.
 
 1. `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`  
    Bunu yalnızca o PostgreSQL major-upgrade mühür noktasının kaydedilmiş doğrusuna özel olarak ihtiyaç duyduğunda oku.
+
+### Okuma yolu D — coğrafi uygulama yüzeyi sınırı
+
+1. `SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`  
+   Bunu, crawler tarafındaki coğrafi veri edinimi/zenginleştirmesi ile daha sonraki uygulama tarafı harita gösterimi, canlı takip ve operatör-yüzlü coğrafi ekranlar arasındaki güncel sınırı anlaman gerektiğinde oku.
 
 ---
 
