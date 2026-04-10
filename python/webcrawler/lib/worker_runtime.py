@@ -60,6 +60,13 @@ from .storage_routing import ProcessedOutputPlan, choose_processed_output_plan
 from .fetch_runtime import FetchedPageResult, fetch_page_to_raw_storage
 
 
+# EN: We import the canonical parse helpers here because worker_runtime must use
+# EN: the repo-contained parse-apply path instead of ad hoc external snippets.
+# TR: Worker runtime artık repository içindeki kanonik parse-apply yolunu
+# TR: kullanmak zorunda olduğu için parse yardımcılarını burada içe aktarıyoruz.
+from .parse_runtime import MinimalParseApplyResult, apply_minimal_parse_entry
+
+
 # EN: This dataclass stores runtime configuration for the current worker surface.
 # TR: Bu dataclass mevcut worker yüzeyi için runtime konfigürasyonunu tutar.
 @dataclass(slots=True)
@@ -111,8 +118,8 @@ class ClaimProbeResult:
     # TR: storage_plan mevcut minimal işlenmiş-çıktı storage kararını tutar.
     storage_plan: ProcessedOutputPlan
 
-    # EN: fetched_page stores the real fetch result when durable mode actually fetched a page.
-    # TR: fetched_page durable mod gerçekten bir page fetch ettiyse gerçek fetch sonucunu tutar.
+    # EN: fetched_page stores the structured raw fetch result when a real fetch ran.
+    # TR: fetched_page gerçek bir fetch çalıştıysa yapılı ham fetch sonucunu tutar.
     fetched_page: FetchedPageResult | None
 
     # EN: finalize_result stores the canonical finalize SQL result when the worker
@@ -120,6 +127,12 @@ class ClaimProbeResult:
     # TR: finalize_result worker kalıcı bir finalize kararına ulaştıysa kanonik
     # TR: finalize SQL sonucunu tutar.
     finalize_result: dict | None
+
+    # EN: parse_apply_result stores the canonical minimal parse-apply DB results
+    # EN: when the current runtime reaches that stage.
+    # TR: parse_apply_result mevcut runtime bu aşamaya ulaştığında kanonik minimal
+    # TR: parse-apply DB sonuçlarını tutar.
+    parse_apply_result: MinimalParseApplyResult | None
 
     # EN: observed_at records when this result object was produced.
     # TR: observed_at bu sonuç nesnesinin ne zaman üretildiğini kaydeder.
@@ -357,6 +370,13 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
     # TR: DB'ye dokunmadan önce mevcut storage planı hesaplıyoruz.
     storage_plan = choose_processed_output_plan()
 
+
+    # EN: We start with no parse-apply result because parse continuation should
+    # EN: appear only after a successful fetch/finalize path reaches that stage.
+    # TR: Parse continuation yalnızca başarılı fetch/finalize yolu o aşamaya
+    # TR: ulaşınca ortaya çıkması gerektiği için başlangıçta parse-apply sonucu yoktur.
+    parse_apply_result = None
+
     # EN: If storage says pause, we stop here deliberately and return a structured result.
     # TR: Storage pause diyorsa bilinçli olarak burada duruyor ve yapılı bir sonuç döndürüyoruz.
     if storage_plan.pause_crawler:
@@ -368,6 +388,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             storage_plan=storage_plan,
             fetched_page=None,
             finalize_result=None,
+            parse_apply_result=parse_apply_result,
             observed_at=utc_now_iso(),
         )
 
@@ -397,6 +418,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 storage_plan=storage_plan,
                 fetched_page=None,
                 finalize_result=None,
+                parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
             )
 
@@ -421,6 +443,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 storage_plan=storage_plan,
                 fetched_page=None,
                 finalize_result=None,
+                parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
             )
 
@@ -448,6 +471,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 storage_plan=storage_plan,
                 fetched_page=None,
                 finalize_result=finalize_result,
+                parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
             )
 
@@ -469,22 +493,46 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 last_modified=fetched_page.last_modified,
             )
 
-            # EN: We commit so the claim, raw-fetch success finalize, and lease resolution
-            # EN: become durable together.
-            # TR: Claim, raw-fetch success finalize ve lease çözümü birlikte kalıcı olsun
-            # TR: diye commit ediyoruz.
-            commit(conn)
 
-            return ClaimProbeResult(
-                run_id=run_id,
-                claimed=True,
-                claimed_url=claimed_url,
-                robots_allow_decision=robots_allow_decision,
-                storage_plan=storage_plan,
-                fetched_page=fetched_page,
-                finalize_result=finalize_result,
-                observed_at=utc_now_iso(),
+            # EN: We only run the minimal parse-apply helper for HTML-like successful
+            # EN: fetches because the current narrow parse layer is intentionally HTML-first.
+            # TR: Mevcut dar parse katmanı bilinçli olarak HTML-öncelikli olduğu için
+            # TR: minimal parse-apply yardımcısını yalnızca HTML-benzeri başarılı fetch'lerde çalıştırıyoruz.
+            should_run_minimal_parse = (
+                fetched_page.content_type is None
+                or "html" in fetched_page.content_type.lower()
             )
+
+            # EN: When the fetched content is suitable, we continue through the
+            # EN: canonical repo-contained parse helper instead of ad hoc external code.
+            # TR: Fetch edilen içerik uygunsa, geçici dış kod yerine repository içindeki
+            # TR: kanonik parse yardımcısı üzerinden devam ediyoruz.
+            if should_run_minimal_parse:
+                parse_apply_result = apply_minimal_parse_entry(
+                    conn=conn,
+                    url_id=claimed_url.url_id,
+                    raw_storage_path=fetched_page.raw_storage_path,
+                    source_run_id=run_id,
+                    source_note="minimal parse continuation from worker runtime success path",
+                )
+
+                # EN: We commit so the claim, raw-fetch success finalize, and lease resolution
+                # EN: become durable together.
+                # TR: Claim, raw-fetch success finalize ve lease çözümü birlikte kalıcı olsun
+                # TR: diye commit ediyoruz.
+                commit(conn)
+
+                return ClaimProbeResult(
+                    run_id=run_id,
+                    claimed=True,
+                    claimed_url=claimed_url,
+                    robots_allow_decision=robots_allow_decision,
+                    storage_plan=storage_plan,
+                    fetched_page=fetched_page,
+                    finalize_result=finalize_result,
+                    parse_apply_result=parse_apply_result,
+                    observed_at=utc_now_iso(),
+                )
 
         # EN: HTTPError means the server answered with an explicit HTTP failure status.
         # TR: HTTPError sunucunun açık bir HTTP hata durumu ile yanıt verdiği anlamına gelir.
@@ -505,6 +553,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 storage_plan=storage_plan,
                 fetched_page=None,
                 finalize_result=finalize_result,
+                parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
             )
 
@@ -528,6 +577,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 storage_plan=storage_plan,
                 fetched_page=None,
                 finalize_result=finalize_result,
+                parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
             )
 
@@ -551,6 +601,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 storage_plan=storage_plan,
                 fetched_page=None,
                 finalize_result=finalize_result,
+                parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
             )
     finally:
