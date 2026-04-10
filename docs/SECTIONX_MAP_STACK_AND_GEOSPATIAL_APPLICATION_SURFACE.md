@@ -74,116 +74,30 @@ Güncel doğruluk:
 
 The current design direction is:
 
-- **MapLibre GL JS** for live operational map views such as vehicle/device/fleet tracking screens
-- **OpenLayers** for technical or analytical map screens where more advanced drawing, measurement, or operator-side spatial tooling may later be needed
-- **PostgreSQL/PostGIS** as the shared geospatial truth below both surfaces
-- **GeoJSON-shaped application delivery** as the practical interchange surface from backend/database layers into map-facing screens
+  * MapLibre GL JS for live operational map views such as vehicle/device/fleet tracking screens
+  * MapLibre GL JS as the default public presentation library for firm/branch address maps on the main application surface
+  * OpenLayers for technical or analytical map screens where more advanced drawing, measurement, or operator-side spatial tooling may later be needed
+  * PostgreSQL/PostGIS as the shared geospatial truth below all surfaces
+  * API/service delivery as the controlled application-facing boundary above PostgreSQL/PostGIS
+  * GeoJSON-shaped application delivery as the practical interchange surface from backend/API layers into map-facing screens
 
+Default public firm/branch address chain:
+
+  * PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS
 ## Kanonik güncel karar
 
 Mevcut tasarım yönü şudur:
 
-- araç/cihaz/filo takibi gibi canlı operasyon harita görünümleri için **MapLibre GL JS**
-- ileride daha gelişmiş çizim, ölçüm veya operatör-tarafı uzamsal araçlar gerekebilecek teknik/analitik harita ekranları için **OpenLayers**
-- her iki yüzeyin altında ortak coğrafi doğruluk olarak **PostgreSQL/PostGIS**
-- backend/veritabanı katmanlarından harita-yüzlü ekranlara pratik aktarım yüzeyi olarak **GeoJSON şekilli veri teslimi**
+  * araç/cihaz/filo takibi gibi canlı operasyon harita görünümleri için MapLibre GL JS
+  * ana uygulama yüzeyindeki firma/şube adres haritaları için varsayılan kamuya-açık gösterim kütüphanesi olarak MapLibre GL JS
+  * ileride daha gelişmiş çizim, ölçüm veya operatör-tarafı uzamsal araçlar gerekebilecek teknik/analitik harita ekranları için OpenLayers
+  * tüm yüzeylerin altında ortak coğrafi doğruluk olarak PostgreSQL/PostGIS
+  * PostgreSQL/PostGIS üzerinde kontrollü uygulama-yüzlü sınır olarak API/service teslimi
+  * backend/API katmanlarından harita-yüzlü ekranlara pratik aktarım yüzeyi olarak GeoJSON şekilli veri teslimi
 
-## Firm and branch address presentation surface
+Varsayılan kamuya-açık firma/şube adres zinciri:
 
-The main public-facing backbone of LogisticSearch is expected to be firm, branch, warehouse, depot, office, terminal, and service-point presentation.
-
-For that specific screen family, the canonical default direction is:
-
-- PostgreSQL/PostGIS as the stored geospatial truth
-- API/service layer as the controlled application-facing boundary
-- GeoJSON as the map-facing interchange payload
-- MapLibre GL JS as the default public presentation library
-
-This direction must be read as an explicit chain:
-
-- PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS
-
-The API layer is not decorative in this design.
-
-Its job is to prevent direct screen coupling to raw database structure and to provide a controlled application contract for map-facing firm and branch views.
-
-At minimum, that API-facing layer is expected to own responsibilities such as:
-
-- selecting only the fields that public map screens should receive
-- returning stable feature identifiers and feature properties
-- applying query filters such as firm, branch, category, region, or viewport/bounding-box scope
-- returning GeoJSON-shaped payloads suitable for marker, popup, cluster, or result-list synchronization
-- keeping presentation screens decoupled from direct SQL/PostGIS schema exposure
-
-This firm/branch address surface is not the same thing as:
-
-- live vehicle/device/fleet tracking
-- measurement-heavy technical analysis
-- operator-side spatial editing
-
-Those remain separate map-screen families with their own preferred tooling direction.
-
-## Firma ve şube adres gösterim yüzeyi
-
-LogisticSearch'in ana public-yüzlü omurgasının firma, şube, depo, ofis, terminal ve servis noktası gösterimi olması beklenmektedir.
-
-Bu özel ekran ailesi için kanonik varsayılan yön şudur:
-
-- depolanmış coğrafi doğruluk olarak PostgreSQL/PostGIS
-- kontrollü uygulama-yüzlü sınır olarak API/service katmanı
-- harita-yüzlü aktarım payload'ı olarak GeoJSON
-- varsayılan public gösterim kütüphanesi olarak MapLibre GL JS
-
-Bu yön açık bir zincir olarak okunmalıdır:
-
-- PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS
-
-Bu tasarımda API katmanı süs amaçlı değildir.
-
-Görevi, ekranın ham veritabanı yapısına doğrudan bağlanmasını engellemek ve firma/şube harita görünümleri için kontrollü bir uygulama sözleşmesi sağlamaktır.
-
-En azından bu API-yüzlü katmanın şu sorumluluklara sahip olması beklenir:
-
-- public harita ekranlarının alması gereken alanları seçmek
-- kararlı feature kimlikleri ve feature özellik alanları döndürmek
-- firma, şube, kategori, bölge veya viewport/bounding-box kapsamı gibi sorgu filtreleri uygulamak
-- marker, popup, cluster veya sonuç-listesi senkronizasyonuna uygun GeoJSON şekilli payload'lar döndürmek
-- gösterim ekranlarını doğrudan SQL/PostGIS şema ifşasından ayrıştırmak
-
-Bu firma/şube adres yüzeyi şunlarla aynı şey değildir:
-
-- canlı araç/cihaz/filo takibi
-- yoğun ölçüm gerektiren teknik analiz
-- operatör-tarafı uzamsal düzenleme
-
-Bunlar kendi tercih edilen araç yönleri olan ayrı harita-ekran aileleri olarak kalır.
-
-## Sealed short decision
-
-The shortest current sealed decision sentence is this:
-
-**Public firm/branch maps = PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS**  
-**Live tracking = MapLibre GL JS + Socket.IO**  
-**Advanced measurement/drawing/analysis = OpenLayers + mostly API/GeoJSON**  
-**Shared geospatial truth = PostgreSQL/PostGIS**
-
-This summary is intentionally compact.
-
-It does not replace the longer boundary and role explanations elsewhere in this document.
-
-## Mühürlü kısa karar
-
-Şu anki en kısa mühürlü karar cümlesi şudur:
-
-**Public firma/şube haritaları = PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS**  
-**Canlı takip = MapLibre GL JS + Socket.IO**  
-**Gelişmiş ölçüm/çizim/analiz = OpenLayers + çoğunlukla API/GeoJSON**  
-**Ortak coğrafi doğruluk = PostgreSQL/PostGIS**
-
-Bu özet bilinçli olarak kompakt tutulmuştur.
-
-Bu dokümandaki daha uzun sınır ve rol açıklamalarının yerine geçmez.
-
+  * PostgreSQL/PostGIS -> API -> GeoJSON -> MapLibre GL JS
 ## Live update transport direction
 
 The current direction is also purpose-split here.
