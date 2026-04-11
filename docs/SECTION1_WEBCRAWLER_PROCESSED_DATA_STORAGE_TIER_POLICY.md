@@ -68,6 +68,154 @@ Kanonik depolama rolleri şunlardır:
 - `/srv/buffer`
   `/srv/data` o anda kullanılabilir değilse, işlenmiş ve pre-ranked faydalı çıktı için geçici fallback depolama hedefidir.
 
+## Detailed reading of `/srv/crawler/logisticsearch`
+
+`/srv/crawler/logisticsearch` must be read as the host-local **umbrella crawler root**, not as a single flat dump directory.
+
+That means this path is the parent operational root under which narrower crawler-local subpaths may exist for different purposes.
+
+Current narrow operational reading:
+
+- when someone says “the webcrawler stores first unprocessed data under `/srv/crawler/logisticsearch`”, that statement is broadly true at the root level
+- but the current first real raw HTTP response-body artefacts are not meant to be written loosely anywhere under that tree
+- instead, they currently belong under the more specific child path `/srv/crawler/logisticsearch/raw_fetch`
+
+So the correct relationship is:
+
+- `/srv/crawler/logisticsearch`
+  the broader host-local crawler runtime and working root
+
+- `/srv/crawler/logisticsearch/raw_fetch`
+  the currently visible dedicated child location for raw fetched HTTP body artefacts
+
+This distinction matters because the parent path expresses storage **class**, while the child path expresses a more specific **artifact role**.
+
+## `/srv/crawler/logisticsearch` yolunun ayrıntılı okuması
+
+`/srv/crawler/logisticsearch`, tek ve düz bir dump dizini gibi değil, host-local **şemsiye crawler kökü** olarak okunmalıdır.
+
+Yani bu yol, farklı amaçlar için daha dar crawler-local alt yolların bulunabileceği üst operasyon köküdür.
+
+Güncel dar operasyon okuması şudur:
+
+- biri “webcrawler ilk işlenmemiş veriyi `/srv/crawler/logisticsearch` altına kaydeder” dediğinde bu ifade kök-seviye açısından genel olarak doğrudur
+- ancak ilk gerçek ham HTTP response-body artıkları bu ağacın herhangi bir yerine dağınık biçimde yazılmak için düşünülmemektedir
+- bunun yerine şu anda daha özel çocuk yol olan `/srv/crawler/logisticsearch/raw_fetch` altına aittir
+
+Dolayısıyla doğru ilişki şudur:
+
+- `/srv/crawler/logisticsearch`
+  daha geniş host-local crawler runtime ve çalışma kökü
+
+- `/srv/crawler/logisticsearch/raw_fetch`
+  ham fetch edilmiş HTTP body artıkları için şu anda görünür olan dedicated çocuk konum
+
+Bu ayrım önemlidir; çünkü üst yol depolama **sınıfını**, alt yol ise daha özel bir **artefact rolünü** ifade eder.
+
+## Detailed role of `/srv/crawler/logisticsearch/raw_fetch`
+
+`/srv/crawler/logisticsearch/raw_fetch` is the current dedicated on-host location for the first durable raw-fetch body artefacts produced by real page-fetch work.
+
+Its role is intentionally narrow.
+
+It exists so the crawler can preserve the fetched HTTP response body in a host-local raw form before later layers do any of the following:
+
+- parse the content
+- normalize it
+- classify it
+- derive processed evidence from it
+- emit processed or pre-ranked useful output
+
+So `raw_fetch` is **not** the same thing as:
+
+- processed output storage
+- normalized output storage
+- pre-ranked useful output storage
+- removable-disk persistence tier
+- `/srv/data`
+- `/srv/buffer`
+
+It is part of the raw/working crawler-local runtime surface.
+
+## `/srv/crawler/logisticsearch/raw_fetch` yolunun ayrıntılı rolü
+
+`/srv/crawler/logisticsearch/raw_fetch`, gerçek sayfa fetch işi tarafından üretilen ilk kalıcı ham-fetch body artıkları için mevcut dedicated host-üzeri konumdur.
+
+Rolü bilinçli olarak dardır.
+
+Bu yol, crawler’ın fetch edilmiş HTTP response body’sini daha sonraki katmanlar aşağıdakilerden herhangi birini yapmadan önce host-local ham biçimde koruyabilmesi için vardır:
+
+- içeriği parse etmek
+- normalize etmek
+- sınıflandırmak
+- ondan işlenmiş evidence türetmek
+- işlenmiş veya pre-ranked faydalı çıktı üretmek
+
+Dolayısıyla `raw_fetch` şu şeylerle **aynı şey değildir**:
+
+- işlenmiş çıktı depolaması
+- normalize edilmiş çıktı depolaması
+- pre-ranked faydalı çıktı depolaması
+- çıkarılabilir disk kalıcılık katmanı
+- `/srv/data`
+- `/srv/buffer`
+
+Bu yol, ham/çalışma crawler-local runtime yüzeyinin bir parçasıdır.
+
+## Boundary between raw crawler storage and processed-data tiers
+
+The canonical storage reading must remain simple:
+
+- raw crawler-local artefacts stay under the host-local crawler root
+- the currently visible raw fetched HTTP bodies live under `/srv/crawler/logisticsearch/raw_fetch`
+- processed and pre-ranked useful output belongs to `/srv/data` when usable
+- processed and pre-ranked useful output falls back to `/srv/buffer` only when `/srv/data` is not currently usable
+
+Therefore the current narrow policy reading is:
+
+1. real fetched raw body -> host-local raw crawler surface
+2. later processed / normalized / pre-ranked useful output -> removable processed-data tiers
+3. never silently blur those two classes together
+
+## Ham crawler depolaması ile işlenmiş-veri katmanları arasındaki sınır
+
+Kanonik depolama okuması sade kalmalıdır:
+
+- ham crawler-local artıkları host-local crawler kökü altında kalır
+- şu anda görünür ham fetch edilmiş HTTP body’leri `/srv/crawler/logisticsearch/raw_fetch` altında yaşar
+- işlenmiş ve pre-ranked faydalı çıktı kullanılabiliyorsa `/srv/data` yoluna aittir
+- işlenmiş ve pre-ranked faydalı çıktı yalnızca `/srv/data` o anda kullanılamıyorsa `/srv/buffer` yoluna düşer
+
+Bu nedenle güncel dar politika okuması şudur:
+
+1. gerçek fetch edilmiş ham body -> host-local ham crawler yüzeyi
+2. daha sonraki işlenmiş / normalize edilmiş / pre-ranked faydalı çıktı -> çıkarılabilir işlenmiş-veri katmanları
+3. bu iki sınıfı asla sessizce birbirine karıştırma
+
+## What this policy does and does not freeze about the raw root
+
+This policy now makes the following current truth explicit:
+
+- `/srv/crawler/logisticsearch` is the broad crawler-local parent root
+- `/srv/crawler/logisticsearch/raw_fetch` is the currently visible dedicated raw-body child path
+- `/srv/data` and `/srv/buffer` are processed-data decision targets, not raw-fetch targets
+
+But this policy still does **not** freeze every future child directory under `/srv/crawler/logisticsearch`.
+
+Later sealed documents may still define additional sibling subpaths under that same parent root for other crawler-local purposes, as long as they do not violate the raw-versus-processed separation rule.
+
+## Bu politikanın ham kök hakkında neyi sabitlediği ve sabitlemediği
+
+Bu politika artık şu güncel doğruları açık hale getirir:
+
+- `/srv/crawler/logisticsearch` geniş crawler-local üst köktür
+- `/srv/crawler/logisticsearch/raw_fetch` şu anda görünür dedicated ham-body çocuk yoludur
+- `/srv/data` ve `/srv/buffer` ham-fetch hedefi değil, işlenmiş-veri karar hedefleridir
+
+Ancak bu politika hâlâ `/srv/crawler/logisticsearch` altındaki gelecekteki her çocuk dizini sabitlemez.
+
+Daha sonra mühürlenecek belgeler, ham-versus-işlenmiş ayrım kuralını ihlal etmedikleri sürece aynı üst kök altında başka crawler-local amaçlar için ek kardeş alt yollar yine tanımlayabilir.
+
 ## Primary decision rule
 
 The crawler system must prefer `/srv/data` for processed and pre-ranked useful output whenever all of the following are true:

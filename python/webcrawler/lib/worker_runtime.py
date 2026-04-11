@@ -767,8 +767,72 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
 
             fetched_page = fetch_page_to_raw_storage(claimed_url)
 
-            # EN: A successful fetch is finalized through the canonical success wrapper.
-            # TR: Başarılı fetch kanonik success wrapper üzerinden finalize edilir.
+            # EN: We only run the minimal parse-apply helper for HTML-like successful
+            # EN: fetches because the current narrow parse layer is intentionally HTML-first.
+            # TR: Mevcut dar parse katmanı bilinçli olarak HTML-öncelikli olduğu için
+            # TR: minimal parse-apply yardımcısını yalnızca HTML-benzeri başarılı fetch'lerde çalıştırıyoruz.
+            should_run_minimal_parse = (
+                fetched_page.content_type is None
+                or "html" in fetched_page.content_type.lower()
+            )
+
+            # EN: The current runtime must not finalize success before optional parse-apply
+            # EN: work finishes, because success finalization closes lease ownership.
+            # EN: If we finalized first, later parse-phase renewal would correctly fail
+            # EN: because the worker would no longer own an active lease.
+            # TR: Mevcut runtime opsiyonel parse-apply işi bitmeden önce success finalize
+            # TR: etmemelidir; çünkü success finalization lease sahipliğini kapatır.
+            # TR: Önce finalize etseydik daha sonraki parse-phase renewal çağrısı,
+            # TR: worker artık aktif lease sahibi olmadığı için doğru biçimde patlardı.
+
+            # EN: Before attempting optional parse persistence, we ask PostgreSQL
+            # EN: whether the connected database currently exposes the parse schema.
+            # EN: This keeps crawler_core-only scratch databases usable for guarded
+            # EN: durable fetch/finalize smoke runs.
+            # TR: Opsiyonel parse persistence denenmeden önce bağlı veritabanının
+            # TR: parse şemasını şu anda gerçekten sağlayıp sağlamadığını PostgreSQL'e soruyoruz.
+            # TR: Bu sayede crawler_core-only scratch veritabanları guarded
+            # TR: durable fetch/finalize smoke çalışmaları için kullanılabilir kalır.
+            with conn.cursor() as cur:
+                cur.execute("select to_regnamespace('parse') is not null as parse_schema_exists")
+                parse_schema_exists = bool(cur.fetchone()["parse_schema_exists"])
+
+            # EN: We attempt optional parse-apply only when the fetched content is
+            # EN: parse-suitable and the connected DB really contains the parse schema.
+            # TR: Opsiyonel parse-apply'ı yalnızca fetch edilen içerik parse için
+            # TR: uygunsa ve bağlı DB gerçekten parse şemasını içeriyorsa deneriz.
+            if should_run_minimal_parse and parse_schema_exists:
+                # EN: When content is parse-suitable, we renew once more immediately
+                # EN: before that durable parse-entry phase starts.
+                # TR: İçerik parse için uygunsa, durable parse-entry aşaması başlamadan
+                # TR: hemen önce bir kez daha renewal yapıyoruz.
+                renew_claimed_lease_before_durable_phase(
+                    conn,
+                    claimed_url=claimed_url,
+                    config=config,
+                    phase_label="parse_apply",
+                )
+
+                # EN: We then run the canonical repo-contained minimal parse helper
+                # EN: while the worker still honestly owns the lease.
+                # TR: Ardından worker lease'e dürüst biçimde hâlâ sahipken repository
+                # TR: içindeki kanonik minimal parse yardımcısını çalıştırıyoruz.
+                parse_apply_result = apply_minimal_parse_entry(
+                    conn=conn,
+                    url_id=claimed_url.url_id,
+                    raw_storage_path=fetched_page.raw_storage_path,
+                    source_run_id=run_id,
+                    source_note="minimal parse continuation from worker runtime success path",
+                )
+
+            # EN: Only after all same-lease durable success-side work is complete do we
+            # EN: finalize the fetch exactly once through the canonical success wrapper.
+            # EN: This keeps the order explicit:
+            # EN: claim -> durable work -> success finalize -> commit -> forget local lease.
+            # TR: Aynı lease altında yapılacak tüm durable success-tarafı iş tamamlandıktan
+            # TR: sonra fetch'i tam bir kez kanonik success wrapper üzerinden finalize ediyoruz.
+            # TR: Böylece sıra açık kalır:
+            # TR: claim -> durable iş -> success finalize -> commit -> yerel lease'i unut.
             finalize_result = finish_fetch_success(
                 conn,
                 url_id=fetched_page.url_id,
@@ -780,53 +844,23 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 last_modified=fetched_page.last_modified,
             )
 
+            # EN: We commit once so the claim, raw-fetch evidence, optional parse evidence,
+            # EN: and final success transition become durable together.
+            # TR: Claim, raw-fetch evidence'ı, opsiyonel parse evidence'ı ve nihai
+            # TR: success geçişi birlikte kalıcı olsun diye bir kez commit ediyoruz.
+            commit(conn)
 
-            # EN: We only run the minimal parse-apply helper for HTML-like successful
-            # EN: fetches because the current narrow parse layer is intentionally HTML-first.
-            # TR: Mevcut dar parse katmanı bilinçli olarak HTML-öncelikli olduğu için
-            # TR: minimal parse-apply yardımcısını yalnızca HTML-benzeri başarılı fetch'lerde çalıştırıyoruz.
-            should_run_minimal_parse = (
-                fetched_page.content_type is None
-                or "html" in fetched_page.content_type.lower()
+            return ClaimProbeResult(
+                run_id=run_id,
+                claimed=True,
+                claimed_url=claimed_url,
+                robots_allow_decision=robots_allow_decision,
+                storage_plan=storage_plan,
+                fetched_page=fetched_page,
+                finalize_result=finalize_result,
+                parse_apply_result=parse_apply_result,
+                observed_at=utc_now_iso(),
             )
-
-            # EN: When the fetched content is suitable, we continue through the
-            # EN: canonical repo-contained parse helper instead of ad hoc external code.
-            # TR: Fetch edilen içerik uygunsa, geçici dış kod yerine repository içindeki
-            # TR: kanonik parse yardımcısı üzerinden devam ediyoruz.
-            if should_run_minimal_parse:
-                renew_claimed_lease_before_durable_phase(
-                    conn,
-                    claimed_url=claimed_url,
-                    config=config,
-                    phase_label="parse_apply",
-                )
-
-                parse_apply_result = apply_minimal_parse_entry(
-                    conn=conn,
-                    url_id=claimed_url.url_id,
-                    raw_storage_path=fetched_page.raw_storage_path,
-                    source_run_id=run_id,
-                    source_note="minimal parse continuation from worker runtime success path",
-                )
-
-                # EN: We commit so the claim, raw-fetch success finalize, and lease resolution
-                # EN: become durable together.
-                # TR: Claim, raw-fetch success finalize ve lease çözümü birlikte kalıcı olsun
-                # TR: diye commit ediyoruz.
-                commit(conn)
-
-                return ClaimProbeResult(
-                    run_id=run_id,
-                    claimed=True,
-                    claimed_url=claimed_url,
-                    robots_allow_decision=robots_allow_decision,
-                    storage_plan=storage_plan,
-                    fetched_page=fetched_page,
-                    finalize_result=finalize_result,
-                    parse_apply_result=parse_apply_result,
-                    observed_at=utc_now_iso(),
-                )
 
         # EN: HTTPError means the server answered with an explicit HTTP failure status.
         # TR: HTTPError sunucunun açık bir HTTP hata durumu ile yanıt verdiği anlamına gelir.
