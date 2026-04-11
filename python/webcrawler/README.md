@@ -48,6 +48,36 @@ It does not yet provide:
 - full production-grade orchestration/service supervision
 - shutdown helper or power helper behavior
 
+## Current runtime clarification for guarded parse continuation
+
+The current worker surface now contains one explicit guarded-runtime rule that matters for scratch smoke interpretation.
+
+A successful real page fetch does **not** automatically imply that narrow parse persistence will run.
+
+The worker attempts that optional parse-side continuation only when:
+
+- the fetched content is parse-suitable for the current narrow path
+- the connected PostgreSQL database really exposes the `parse` schema
+
+So crawler_core-only scratch databases can still be valid durable fetch/finalize smoke targets even when they do not expose the `parse` schema.
+
+In that case, the worker skips optional parse persistence deliberately and still performs valid success finalization in the correct order.
+
+## Guarded parse continuation için güncel runtime açıklaması
+
+Güncel worker yüzeyi, scratch smoke yorumlaması için önemli olan açık bir guarded-runtime kuralı içerir.
+
+Başarılı bir gerçek page fetch, dar parse persistence adımının otomatik olarak da çalışacağı anlamına **gelmez**.
+
+Worker bu opsiyonel parse-tarafı continuation adımını yalnızca şu koşullarda dener:
+
+- fetch edilen içerik mevcut dar yol için parse edilmeye uygundur
+- bağlı PostgreSQL veritabanı gerçekten `parse` şemasını sağlar
+
+Bu nedenle yalnızca crawler_core içeren scratch veritabanları, `parse` şemasını sağlamasalar bile hâlâ geçerli durable fetch/finalize smoke hedefleri olabilir.
+
+Böyle bir durumda worker opsiyonel parse persistence adımını bilinçli olarak atlar ve yine doğru sırada geçerli success finalization yapar.
+
 ## Güncel gerçeklik sınırı
 
 Bu dizin, LogisticSearch webcrawler için ilk gerçek Python-tarafı worker yüzeyidir.

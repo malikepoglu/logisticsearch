@@ -251,6 +251,58 @@ When a fetch concludes, the worker must finalize with the correct canonical func
 
 Once finalization succeeds, the worker must treat the lease as closed and must not continue operating on the URL as if it still owns it.
 
+## Current runtime clarification for parse-schema guard and success ordering
+
+The currently sealed Python runtime adds one important explicit guard around the narrow parse continuation path.
+
+After a successful real page fetch, the worker now checks whether the connected PostgreSQL database actually exposes the `parse` schema.
+
+That means the current narrow parse continuation is attempted only when both conditions are true:
+
+- the fetched content is parse-suitable for the current narrow path
+- the connected database really contains the `parse` schema
+
+If the connected database is only a crawler_core-oriented scratch database and the `parse` schema is absent, the worker must deliberately skip optional parse persistence instead of failing the guarded durable fetch/finalize path.
+
+The currently sealed success-side ordering is also now explicit.
+
+The worker must not finalize success before optional same-lease durable success-side work has either completed or been deliberately skipped.
+
+For the current narrow runtime, the intended order is:
+
+- claim
+- durable fetch-side work
+- optional parse-side work only if parse-suitable and `parse` schema exists
+- success finalize -> commit -> forget local lease
+
+This clarification exists so the documentation does not silently imply that parse persistence is always available in every crawler_core scratch database, and so the documentation does not silently imply that success finalization can happen before optional parse-side work.
+
+## Parse-şema guard ve success sıralaması için güncel runtime açıklaması
+
+Şu anda mühürlenmiş Python runtime, dar parse continuation yolu etrafına önemli ve açık bir guard eklemektedir.
+
+Başarılı bir gerçek page fetch sonrasında worker artık bağlı PostgreSQL veritabanının gerçekten `parse` şemasını sağlayıp sağlamadığını kontrol eder.
+
+Bunun anlamı şudur: güncel dar parse continuation yalnızca şu iki koşul birlikte doğruysa denenir:
+
+- fetch edilen içerik mevcut dar yol için parse edilmeye uygundur
+- bağlı veritabanı gerçekten `parse` şemasını içerir
+
+Bağlı veritabanı yalnızca crawler_core odaklı bir scratch veritabanıysa ve `parse` şeması yoksa worker guarded durable fetch/finalize yolunu düşürmek yerine opsiyonel parse persistence adımını bilinçli olarak atlamalıdır.
+
+Şu anda mühürlenmiş success-tarafı sıra da artık açık hale getirilmiştir.
+
+Worker, opsiyonel aynı-lease durable success-tarafı iş ya tamamlanmadan ya da bilinçli şekilde atlanmadan önce success finalization yapmamalıdır.
+
+Mevcut dar runtime için amaçlanan sıra şudur:
+
+- claim
+- durable fetch-tarafı iş
+- yalnızca parse edilebilirlik ve `parse` şeması varsa opsiyonel parse-tarafı iş
+- success finalize -> commit -> yerel lease'i unut
+
+Bu açıklama iki yanlış ima oluşmasın diye vardır: dokümantasyon her crawler_core scratch veritabanında parse persistence varmış gibi davranmamalı ve opsiyonel parse-tarafı iş bitmeden success finalization yapılabilirmiş gibi de davranmamalıdır.
+
 ## Mevcut zorunlu worker davranışı
 
 Worker şu pratik üst seviye döngüyü izlemelidir.

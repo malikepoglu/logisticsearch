@@ -265,6 +265,18 @@ Current guaranteed effects include:
 - `consecutive_error_count` resets to zero
 - `next_fetch_at` is written from explicit input or computed policy
 
+Current runtime-side clarification:
+
+- success finalization may happen only after optional same-lease durable success-side work has either completed or been deliberately skipped
+- the current optional parse-side continuation is attempted only when fetched content is parse-suitable and the connected database exposes the `parse` schema
+- crawler_core-only scratch databases may therefore reach a valid success finalization without parse persistence, because missing `parse` schema is treated as an explicit skip condition rather than as a fatal contradiction
+
+Güncel runtime-tarafı açıklama:
+
+- success finalization, ancak opsiyonel aynı-lease durable success-tarafı iş ya tamamlandıktan ya da bilinçli olarak atlandıktan sonra gerçekleşebilir
+- güncel opsiyonel parse-tarafı continuation yalnızca fetch edilen içerik parse için uygunsa ve bağlı veritabanı `parse` şemasını sağlıyorsa denenir
+- bu nedenle yalnızca crawler_core içeren scratch veritabanları, `parse` şeması yoksa bile geçerli bir success finalization sonucuna ulaşabilir; çünkü eksik `parse` şeması fatal bir çelişki değil, açık bir skip koşulu olarak ele alınır
+
 ### 5. Retryable-error finalization
 
 A valid leased URL may be finalized as retryable error.
