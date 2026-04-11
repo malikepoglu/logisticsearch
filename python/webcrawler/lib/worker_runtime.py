@@ -51,6 +51,7 @@ from .db import (
     finish_fetch_permanent_error,
     finish_fetch_retryable_error,
     finish_fetch_success,
+    renew_url_lease,
     rollback,
     upsert_robots_txt_cache,
 )
@@ -536,6 +537,61 @@ def refresh_robots_cache_if_needed(
     )
 
 
+# EN: This helper performs one explicit lease renewal right before the worker
+# EN: enters a new durable phase that may consume non-trivial time.
+# EN: It keeps the design simple: no hidden timer, no background heartbeat loop,
+# EN: only an explicit renewal call at clear phase boundaries.
+# TR: Bu yardımcı worker yeni ve kayda değer süre tüketebilecek bir durable aşamaya
+# TR: girmeden hemen önce açık bir lease yenilemesi yapar.
+# TR: Tasarımı sade tutar: gizli timer yoktur, arka plan heartbeat döngüsü yoktur,
+# TR: yalnızca net aşama sınırlarında açık renewal çağrısı vardır.
+def renew_claimed_lease_before_durable_phase(
+    conn,
+    *,
+    claimed_url: object,
+    config: WorkerConfig,
+    phase_label: str,
+) -> dict[str, object]:
+    # EN: We call the canonical DB wrapper using the currently owned lease identity.
+    # TR: Mevcut sahip olunan lease kimliğini kullanarak kanonik DB wrapper'ını çağırıyoruz.
+    renew_result = renew_url_lease(
+        conn=conn,
+        url_id=int(claimed_url_value(claimed_url, "url_id")),
+        lease_token=str(claimed_url_value(claimed_url, "lease_token")),
+        worker_id=config.worker_id,
+        extend_seconds=config.lease_seconds,
+    )
+
+    # EN: Missing renewal output would mean the worker no longer holds the lease
+    # EN: in the way the current runtime expects.
+    # TR: Renewal çıktısının olmaması, worker'ın lease'i mevcut runtime'ın beklediği
+    # TR: biçimde artık tutmadığı anlamına gelir.
+    if renew_result is None:
+        raise RuntimeError(
+            f"renew_url_lease(...) returned no row before durable phase: {phase_label}"
+        )
+
+    # EN: The canonical SQL surface returns renewed=true on success, so we verify
+    # EN: that explicit signal instead of assuming success silently.
+    # TR: Kanonik SQL yüzeyi başarıda renewed=true döndürdüğü için başarıyı sessizce
+    # TR: varsaymak yerine bu açık sinyali doğruluyoruz.
+    if renew_result.get("renewed") is not True:
+        raise RuntimeError(
+            f"renew_url_lease(...) did not confirm renewal before durable phase: {phase_label}"
+        )
+
+    # EN: We refresh the in-memory lease expiry view so later phases see the latest
+    # EN: durable DB-backed lease horizon.
+    # TR: Sonraki aşamalar en güncel kalıcı DB-backed lease ufkunu görsün diye
+    # TR: bellek içi lease expiry görünümünü yeniliyoruz.
+    if hasattr(claimed_url, "lease_expires_at"):
+        claimed_url.lease_expires_at = renew_result["new_lease_expires_at"]
+
+    # EN: We return the explicit renewal payload for possible later inspection.
+    # TR: Gerekirse daha sonra incelenebilsin diye açık renewal payload'ını döndürüyoruz.
+    return renew_result
+
+
 # EN: This function performs one worker execution.
 # EN: In probe mode it still rolls back safely.
 # EN: In durable mode it now executes the minimal real fetch + finalize flow.
@@ -631,6 +687,13 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
         # TR: Probe modu kalıcı olmayan mod olarak kalır; bu yüzden refresh ihtiyacını
         # TR: gözleyebilir ama yenilenmiş cache doğrusunu veritabanına yazmamalıdır.
         if (not config.probe_only) and refresh_decision.get("should_refresh"):
+            renew_claimed_lease_before_durable_phase(
+                conn,
+                claimed_url=claimed_url,
+                config=config,
+                phase_label="robots_refresh",
+            )
+
             refresh_robots_cache_if_needed(
                 conn,
                 claimed_url=claimed_url,
@@ -695,6 +758,13 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
         # EN: If robots allows fetch, we execute the minimal real HTTP fetch plus raw-body write.
         # TR: Robots fetch'e izin veriyorsa minimal gerçek HTTP fetch ve ham body yazımını çalıştırıyoruz.
         try:
+            renew_claimed_lease_before_durable_phase(
+                conn,
+                claimed_url=claimed_url,
+                config=config,
+                phase_label="page_fetch",
+            )
+
             fetched_page = fetch_page_to_raw_storage(claimed_url)
 
             # EN: A successful fetch is finalized through the canonical success wrapper.
@@ -725,6 +795,13 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             # TR: Fetch edilen içerik uygunsa, geçici dış kod yerine repository içindeki
             # TR: kanonik parse yardımcısı üzerinden devam ediyoruz.
             if should_run_minimal_parse:
+                renew_claimed_lease_before_durable_phase(
+                    conn,
+                    claimed_url=claimed_url,
+                    config=config,
+                    phase_label="parse_apply",
+                )
+
                 parse_apply_result = apply_minimal_parse_entry(
                     conn=conn,
                     url_id=claimed_url.url_id,
