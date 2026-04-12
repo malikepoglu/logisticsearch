@@ -233,4 +233,3 @@ It keeps the project inside crawler_core by defining the acquisition expansion r
 Bu belge projeyi parse_core aşamasına taşımaz.
 
 Tam tersine, crawler_core’un dürüst biçimde yeterince tamamlanmış sayılabilmesi için gereken acquisition genişlemesini tanımlayarak projeyi crawler_core içinde tutar.
-
