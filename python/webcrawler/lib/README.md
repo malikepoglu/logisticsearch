@@ -23,32 +23,38 @@ Bu klasör, LogisticSearch webcrawler'ın canlı numaralı Python runtime ailesi
 Amaç, aktif runtime ağacını tek bakışta görünür hale getirmektir.
 
 ## Current visible files
-
-At the current repository point, this folder visibly contains:
+At the current repository point, this folder visibly contains the active numbered runtime family itself:
 
 - `__init__.py`
-- `logisticsearch1_2_browser_acquisition_runtime.py`
-- `logisticsearch1_4_db.py`
-- `logisticsearch1_1_fetch_runtime.py`
-- `logisticsearch1_3_parse_runtime.py`
-- `logisticsearch1_5_storage_routing.py`
 - `logisticsearch1_main_worker_runtime.py`
+- `logisticsearch1_1_fetch_runtime.py`
+- `logisticsearch1_2_browser_acquisition_runtime.py`
+- `logisticsearch1_2_1_browser_acquisition_smoke.py`
+- `logisticsearch1_3_parse_runtime.py`
+- `logisticsearch1_4_db.py`
+- `logisticsearch1_5_storage_routing.py`
+- `logisticsearch2_worker_claim_loop.py`
 
-This means the browser seam and the main runtime helpers are already here, but the thin worker CLI and the browser smoke tool still sit one level above and should later be folded into this folder during the controlled rename/layout patch.
+This means the live numbered runtime family is already visible here together in one place.
+
+So this folder is no longer a partial pre-move surface.
 
 ## Güncel görünen dosyalar
-
-Mevcut repository noktasında bu klasör görünür olarak şunları içerir:
+Mevcut repository noktasında bu klasör, aktif numaralı runtime ailesinin kendisini görünür olarak içerir:
 
 - `__init__.py`
-- `logisticsearch1_2_browser_acquisition_runtime.py`
-- `logisticsearch1_4_db.py`
-- `logisticsearch1_1_fetch_runtime.py`
-- `logisticsearch1_3_parse_runtime.py`
-- `logisticsearch1_5_storage_routing.py`
 - `logisticsearch1_main_worker_runtime.py`
+- `logisticsearch1_1_fetch_runtime.py`
+- `logisticsearch1_2_browser_acquisition_runtime.py`
+- `logisticsearch1_2_1_browser_acquisition_smoke.py`
+- `logisticsearch1_3_parse_runtime.py`
+- `logisticsearch1_4_db.py`
+- `logisticsearch1_5_storage_routing.py`
+- `logisticsearch2_worker_claim_loop.py`
 
-Bu da browser seam'i ile ana runtime yardımcılarının zaten burada olduğu, ancak ince worker CLI ile browser smoke aracının hâlâ bir seviye yukarıda durduğu ve kontrollü rename/layout patch'i sırasında daha sonra bu klasöre katlanması gerektiği anlamına gelir.
+Bu da canlı numaralı runtime ailesinin artık burada tek yerde birlikte görünür olduğu anlamına gelir.
+
+Dolayısıyla bu klasör artık kısmi pre-move yüzey değildir.
 
 ## Target canonical family for this folder
 

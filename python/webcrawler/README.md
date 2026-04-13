@@ -606,40 +606,42 @@ Bu routing doğrusu bilinçli olarak dar ve açık tutulmuştur.
 
 
 ## Current canonical layout direction
+At the current repository point, the live Python runtime family is already grouped under `python/webcrawler/lib/`.
 
-At the current repository point, the live Python runtime family is not yet grouped fully under `python/webcrawler/lib/`.
+That is the current repository truth.
 
-That is still a temporary truth.
+The canonical direction is now narrower and simpler:
 
-The canonical target direction is:
-
-- all live runtime Python files should sit under `python/webcrawler/lib/`
-- the numbered hierarchy should be visible there in one place
-- `lib/logisticsearch2_worker_claim_loop.py` now already lives in `lib/` as the thin operator/CLI surface
-- `lib/logisticsearch1_2_1_browser_acquisition_smoke.py` now already lives in `lib/` as the repo-local browser smoke entry
+- all active runtime Python files stay under `python/webcrawler/lib/`
+- the numbered hierarchy stays visible there in one place
+- `lib/logisticsearch2_worker_claim_loop.py` already lives in `lib/` as the thin operator/CLI surface
+- `lib/logisticsearch1_2_1_browser_acquisition_smoke.py` already lives in `lib/` as the repo-local browser smoke entry
+- future runtime growth should now focus on method selection and acquisition unification, not on another layout move
 
 Use these supporting surfaces:
 
 - `python/webcrawler/lib/README.md`
 - `docs/TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`
+- `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
 
 ## Güncel kanonik yerleşim yönü
+Mevcut repository noktasında canlı Python runtime ailesi artık zaten `python/webcrawler/lib/` altında gruplanmıştır.
 
-Mevcut repository noktasında canlı Python runtime ailesi henüz tamamen `python/webcrawler/lib/` altında gruplanmış değildir.
+Bu, güncel repository doğrusudur.
 
-Bu hâlâ geçici bir doğrudur.
+Kanonik yön artık daha dar ve daha sadedir:
 
-Kanonik hedef yön şudur:
-
-- tüm canlı runtime Python dosyaları `python/webcrawler/lib/` altında durmalıdır
-- numaralı hiyerarşi orada tek yerde görünmelidir
-- `lib/logisticsearch2_worker_claim_loop.py` artık ince operatör/CLI yüzeyi olarak zaten `lib/` içinde yaşamaktadır
-- `lib/logisticsearch1_2_1_browser_acquisition_smoke.py` artık repo-local browser smoke girişi olarak zaten `lib/` içinde yaşamaktadır
+- tüm aktif runtime Python dosyaları `python/webcrawler/lib/` altında kalır
+- numaralı hiyerarşi orada tek yerde görünür kalır
+- `lib/logisticsearch2_worker_claim_loop.py` ince operatör/CLI yüzeyi olarak zaten `lib/` içinde yaşar
+- `lib/logisticsearch1_2_1_browser_acquisition_smoke.py` repo-local browser smoke girişi olarak zaten `lib/` içinde yaşar
+- bundan sonraki runtime büyümesi yeni bir yerleşim taşımasına değil, method selection ve acquisition unification işine odaklanmalıdır
 
 Şu destek yüzeylerini kullan:
 
 - `python/webcrawler/lib/README.md`
 - `docs/TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`
+- `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
 
 ## Current truth correction
 ## Güncel doğruluk düzeltmesi
