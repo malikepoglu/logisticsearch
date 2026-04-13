@@ -34,7 +34,7 @@ from pathlib import Path
 # TR: Kanonik minimal parse-apply yolu artık tek kullanımlık parçalar yerine
 # TR: repository içinde izlenen kodda yaşamalı olduğu için bu DB yardımcılarını
 # TR: burada içe aktarıyoruz.
-from .db import persist_taxonomy_preranking_payload, upsert_page_workflow_status
+from .logisticsearch1_4_db import persist_taxonomy_preranking_payload, upsert_page_workflow_status
 
 
 # EN: This dataclass stores the structured result of the minimal parse entry step.

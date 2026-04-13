@@ -73,7 +73,8 @@ from .logisticsearch1_1_fetch_runtime import (
     FetchedRobotsTxtResult,
     decode_robots_body,
     fetch_page_to_raw_storage,
-    fetch_robots_txt_to_raw_storage,
+        fetch_page_with_browser_to_raw_storage,
+fetch_robots_txt_to_raw_storage,
     parse_robots_txt_text,
 )
 
@@ -598,6 +599,59 @@ def renew_claimed_lease_before_durable_phase(
 # TR: Bu fonksiyon tek bir worker çalıştırması yapar.
 # TR: Probe modunda hâlâ güvenli rollback yapar.
 # TR: Durable modda artık minimal gerçek fetch + finalize akışını çalıştırır.
+
+# EN: This helper decides which acquisition method should be used for the
+# EN: currently claimed URL.
+# EN: We keep it intentionally narrow and conservative:
+# EN: - default stays "http"
+# EN: - only an explicit claimed-url signal can switch the path to "browser"
+# EN: - unknown values fall back to "http" so current behavior stays stable
+# EN: This gives us a clean seam without changing the fetched-page contract.
+# TR: Bu yardımcı, şu anda claim edilmiş URL için hangi acquisition yönteminin
+# TR: kullanılacağını belirler.
+# TR: Bunu bilinçli olarak dar ve muhafazakâr tutuyoruz:
+# TR: - varsayılan yol "http" olarak kalır
+# TR: - yalnızca claim edilmiş URL üzerindeki açık sinyal yolu "browser" yapabilir
+# TR: - bilinmeyen değerler davranışı stabil tutsun diye tekrar "http"ya düşer
+# TR: Böylece fetched-page sözleşmesini değiştirmeden temiz bir seam elde ederiz.
+def select_acquisition_method_for_claimed_url(claimed_url: object) -> str:
+    # EN: We first try attribute-style access because current claimed-url rows in
+    # EN: the worker path are typically exposed as attribute-bearing objects.
+    # TR: Önce attribute tarzı erişimi deniyoruz; çünkü worker yolundaki mevcut
+    # TR: claimed-url satırları genellikle attribute taşıyan nesneler olarak görünür.
+    method_value = getattr(claimed_url, "acquisition_method", None)
+
+    # EN: If attribute-style access produced no value, we also support dict-like
+    # EN: rows so this seam remains robust across narrow row-shape differences.
+    # TR: Attribute erişimi değer üretmediyse dict-benzeri satırları da destekliyoruz;
+    # TR: böylece bu seam dar satır-şekli farklarına karşı dayanıklı kalır.
+    if method_value is None and isinstance(claimed_url, dict):
+        method_value = claimed_url.get("acquisition_method")
+
+    # EN: Missing value means the current canonical behavior should stay on the
+    # EN: direct HTTP path.
+    # TR: Değer yoksa mevcut kanonik davranış direct HTTP yolunda kalmalıdır.
+    if method_value is None:
+        return "http"
+
+    # EN: We normalize the external value to a simple lowercase token so one
+    # EN: explicit branch can decide the runtime path deterministically.
+    # TR: Dış değeri basit bir küçük-harf tokene normalize ediyoruz; böylece tek
+    # TR: bir açık branch runtime yolunu deterministik biçimde seçebilir.
+    normalized_method = str(method_value).strip().lower()
+
+    # EN: Only the explicit browser token switches the runtime into the browser-
+    # EN: backed acquisition path.
+    # TR: Yalnızca açık browser token'ı runtime'ı browser-backed acquisition
+    # TR: yoluna geçirir.
+    if normalized_method == "browser":
+        return "browser"
+
+    # EN: Any other value falls back to the stable direct HTTP path.
+    # TR: Diğer her değer stabil direct HTTP yoluna geri düşer.
+    return "http"
+
+
 def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
     # EN: We create a unique run id first so the full execution can be traced.
     # TR: Tüm çalıştırma izlenebilir olsun diye önce benzersiz bir run id üretiyoruz.
@@ -765,7 +819,22 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 phase_label="page_fetch",
             )
 
-            fetched_page = fetch_page_to_raw_storage(claimed_url)
+            # EN: We now open one explicit method-selection seam here.
+            # EN: The worker still expects the same fetched-page contract, so both
+            # EN: acquisition paths must return the same structured result shape.
+            # TR: Artık burada tek bir açık method-selection seam açıyoruz.
+            # TR: Worker hâlâ aynı fetched-page sözleşmesini beklediği için iki
+            # TR: acquisition yolu da aynı yapılı sonuç şekline dönmelidir.
+            acquisition_method = select_acquisition_method_for_claimed_url(claimed_url)
+
+            # EN: The browser path is used only when the claimed URL explicitly asks
+            # EN: for it. Otherwise we preserve the current direct HTTP behavior.
+            # TR: Browser yolu yalnızca claim edilmiş URL bunu açıkça isterse
+            # TR: kullanılır. Aksi halde mevcut direct HTTP davranışını koruruz.
+            if acquisition_method == "browser":
+                fetched_page = fetch_page_with_browser_to_raw_storage(claimed_url)
+            else:
+                fetched_page = fetch_page_to_raw_storage(claimed_url)
 
             # EN: We only run the minimal parse-apply helper for HTML-like successful
             # EN: fetches because the current narrow parse layer is intentionally HTML-first.
