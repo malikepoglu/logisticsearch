@@ -599,3 +599,40 @@ Güncel minimal kanonik storage kuralı şudur:
 - ne `/srv/data` ne de `/srv/buffer` kullanılabiliyorsa crawler pause olmalı ve açık bir hata üretmelidir
 
 Bu routing doğrusu bilinçli olarak dar ve açık tutulmuştur.
+
+
+## Current canonical layout direction
+
+At the current repository point, the live Python runtime family is not yet grouped fully under `python/webcrawler/lib/`.
+
+That is still a temporary truth.
+
+The canonical target direction is:
+
+- all live runtime Python files should sit under `python/webcrawler/lib/`
+- the numbered hierarchy should be visible there in one place
+- `worker_claim_loop.py` should later move into `lib/` as `logisticsearch2_worker_claim_loop.py`
+- `browser_acquisition_smoke.py` should later move into `lib/` as `logisticsearch1_2_1_browser_acquisition_smoke.py`
+
+Use these supporting surfaces:
+
+- `python/webcrawler/lib/README.md`
+- `docs/TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`
+
+## Güncel kanonik yerleşim yönü
+
+Mevcut repository noktasında canlı Python runtime ailesi henüz tamamen `python/webcrawler/lib/` altında gruplanmış değildir.
+
+Bu hâlâ geçici bir doğrudur.
+
+Kanonik hedef yön şudur:
+
+- tüm canlı runtime Python dosyaları `python/webcrawler/lib/` altında durmalıdır
+- numaralı hiyerarşi orada tek yerde görünmelidir
+- `worker_claim_loop.py` daha sonra `lib/` içine `logisticsearch2_worker_claim_loop.py` olarak taşınmalıdır
+- `browser_acquisition_smoke.py` daha sonra `lib/` içine `logisticsearch1_2_1_browser_acquisition_smoke.py` olarak taşınmalıdır
+
+Şu destek yüzeylerini kullan:
+
+- `python/webcrawler/lib/README.md`
+- `docs/TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`

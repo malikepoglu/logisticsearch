@@ -61,6 +61,8 @@ That means:
 - if subdirectories are introduced later, each must receive its own bilingual `README.md`
 
 Current topic surface in this folder:
+  * `TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`
+  * `TOPIC_WEBCRAWLER_RUNTIME_FILENAME_ROLE_AND_VERSION_STANDARD.md`
 
 - `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
 - `SECTION1_WEBCRAWLER_CONTROLS.md`
@@ -86,6 +88,8 @@ Bu şu anlama gelir:
 - ileride alt klasörler eklenirse, her biri kendi çift dilli `README.md` dosyasını almak zorundadır
 
 Bu klasördeki mevcut topic yüzeyi:
+  * `TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`
+  * `TOPIC_WEBCRAWLER_RUNTIME_FILENAME_ROLE_AND_VERSION_STANDARD.md`
 
 - `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
 - `SECTION1_WEBCRAWLER_CONTROLS.md`
