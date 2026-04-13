@@ -62,7 +62,7 @@ That means:
 
 Current topic surface in this folder:
   * `TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`
-  * `TOPIC_WEBCRAWLER_RUNTIME_FILENAME_ROLE_AND_VERSION_STANDARD.md`
+  * `TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
 
 - `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
 - `SECTION1_WEBCRAWLER_CONTROLS.md`
@@ -89,7 +89,7 @@ Bu şu anlama gelir:
 
 Bu klasördeki mevcut topic yüzeyi:
   * `TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`
-  * `TOPIC_WEBCRAWLER_RUNTIME_FILENAME_ROLE_AND_VERSION_STANDARD.md`
+  * `TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
 
 - `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
 - `SECTION1_WEBCRAWLER_CONTROLS.md`
@@ -522,3 +522,12 @@ Webcrawler hattındaki çıkarılabilir işlenmiş-veri depolama katmanları üz
 - `docs/SECTION1_WEBCRAWLER_PROCESSED_DATA_STORAGE_TIER_POLICY.md`
 - `docs/SECTION1_WEBCRAWLER_RUNBOOK_PROCESSED_DATA_STORAGE_TIER_FORMAT_AND_MOUNT.md`
 
+## EN — Reading path D — raw fetch / parse / taxonomy boundary
+
+1. `TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
+Read this when you need the strict beginner-first boundary between raw fetch, parse, taxonomy, later selection order, and non-logistics handling.
+
+## TR — Okuma yolu D — raw fetch / parse / taxonomy sınırı
+
+1. `TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
+Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfaların ele alınışı arasındaki katı beginner-first sınırı anlaman gerektiğinde bunu oku.

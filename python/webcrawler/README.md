@@ -640,3 +640,22 @@ Kanonik hedef yön şudur:
 
 - `python/webcrawler/lib/README.md`
 - `docs/TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`
+
+## Current truth correction
+## Güncel doğruluk düzeltmesi
+
+At the current repository point, the active Python runtime family already lives under `python/webcrawler/lib/`.
+
+That is now the current repository truth.
+
+Use the following boundary topic when you need the strict beginner-first explanation for raw fetch, parse, taxonomy, selection order, and non-logistics handling:
+
+* `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
+
+Mevcut repository noktasında aktif Python runtime ailesi artık `python/webcrawler/lib/` altında yaşamaktadır.
+
+Bu artık güncel repository doğrusudur.
+
+Raw fetch, parse, taxonomy, seçim sırası ve lojistik dışı sayfaların ele alınışı için katı beginner-first açıklamaya ihtiyaç duyduğunda şu boundary topic'i kullan:
+
+* `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`

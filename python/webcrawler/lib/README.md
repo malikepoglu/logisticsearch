@@ -75,3 +75,22 @@ Bu klasör için hedef stabil aile şudur:
 - `logisticsearch1_4_db.py`
 - `logisticsearch1_5_storage_routing.py`
 - `logisticsearch2_worker_claim_loop.py`
+
+## Current live-family truth
+## Güncel canlı-aile doğrusu
+
+This means the active numbered runtime family is now visible here together, including the thin worker CLI and the browser smoke entry.
+
+So this folder can now be read as the live runtime family home rather than as a partial pre-move surface.
+
+Use the following boundary topic as the canonical boundary truth for raw fetch, parse, taxonomy, selection order, and non-logistics handling:
+
+* `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
+
+Bu da aktif numaralı runtime ailesinin artık ince worker CLI ve browser smoke girişi dahil olmak üzere burada birlikte görünür olduğu anlamına gelir.
+
+Dolayısıyla bu klasör artık kısmi pre-move yüzey olarak değil, canlı runtime ailesinin evi olarak okunmalıdır.
+
+Raw fetch, parse, taxonomy, seçim sırası ve lojistik dışı sayfaların ele alınışı için aşağıdaki boundary topic'i kanonik sınır doğrusu olarak kullan:
+
+* `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
