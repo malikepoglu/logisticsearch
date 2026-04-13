@@ -434,4 +434,3 @@ Alan sözlüğü ve classification omurgası.
 A narrow transition point between two layers while integration is still being completed.
 
 Entegrasyon henüz tamamlanmamışken iki katman arasındaki dar geçiş noktası.
-
