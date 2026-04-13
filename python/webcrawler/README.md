@@ -152,7 +152,7 @@ Bunlar şu dokümana aittir:
 
 Current controlled files in this directory:
 
-  * `logisticsearch2_worker_claim_loop.py`
+  * `lib/logisticsearch2_worker_claim_loop.py`
 CLI entry surface for single-run worker execution in probe-only or durable-claim mode.
 
   * `lib/db.py`
@@ -161,19 +161,19 @@ Database helpers for claim, finalize, parse persistence, workflow updates, and t
   * `lib/storage_routing.py`
 Minimal processed-output routing truth for `/srv`, `/srv/data`, and `/srv/buffer`.
 
-  * `lib/fetch_runtime.py`
+  * `lib/logisticsearch1_1_fetch_runtime.py`
 Minimal acquisition layer. It currently carries the direct HTTP fetch path and should become the single narrow acquisition home for both direct HTTP and browser-backed page capture over time.
 
-  * `lib/browser_acquisition_runtime.py`
+  * `lib/logisticsearch1_2_browser_acquisition_runtime.py`
 Current narrow browser-render acquisition seam that captures rendered HTML, screenshot evidence, and browser-network observations.
 
   * `lib/parse_runtime.py`
 Minimal parse-entry layer that extracts basic page evidence and enforces safe snapshot-link policy.
 
-  * `lib/worker_runtime.py`
+  * `lib/logisticsearch1_main_worker_runtime.py`
 Controlled worker runtime that should remain the main continuous crawler runtime/service core rather than being split across multiple competing runtime centers.
 
-  * `logisticsearch1_2_1_browser_acquisition_smoke.py`
+  * `lib/logisticsearch1_2_1_browser_acquisition_smoke.py`
 Repo-local browser smoke entry used to prove that the committed browser-acquisition seam can launch, navigate, and emit evidence on the real crawler machine.
 
   * `requirements.txt`
@@ -182,19 +182,23 @@ The tracked dependency surface for this directory.
   * `bootstrap_venv.sh`
 Controlled local venv bootstrap helper for this Python surface.
 
+The active Python runtime family now lives under `python/webcrawler/lib/`.
+
+Aktif Python runtime ailesi artık `python/webcrawler/lib/` altında yaşamaktadır.
+
 ## Canonical lean runtime direction
 
 The long-term runtime reading for this directory must remain lean and explicit.
 
 That means:
 
-  * `lib/worker_runtime.py` should remain the main continuous crawler runtime/service core
-  * `lib/fetch_runtime.py` should remain the acquisition layer and absorb both direct HTTP and browser-backed fetch paths over time
-  * `lib/browser_acquisition_runtime.py` is currently a narrow transitional seam and may later be folded into `lib/fetch_runtime.py` if that keeps the system simpler
+  * `lib/logisticsearch1_main_worker_runtime.py` should remain the main continuous crawler runtime/service core
+  * `lib/logisticsearch1_1_fetch_runtime.py` should remain the acquisition layer and absorb both direct HTTP and browser-backed fetch paths over time
+  * `lib/logisticsearch1_2_browser_acquisition_runtime.py` is currently a narrow transitional seam and may later be folded into `lib/logisticsearch1_1_fetch_runtime.py` if that keeps the system simpler
   * `lib/parse_runtime.py` remains the post-fetch evidence and parsing layer
   * `lib/db.py` remains the database/state-transition helper layer
   * `lib/storage_routing.py` remains the storage-decision layer for `/srv/crawler/logisticsearch`, `/srv/data`, and `/srv/buffer`
-  * `logisticsearch2_worker_claim_loop.py` must remain a thin operator/CLI surface and must not grow into a second hidden runtime center
+  * `lib/logisticsearch2_worker_claim_loop.py` must remain a thin operator/CLI surface and must not grow into a second hidden runtime center
 
 The crawler should therefore grow by strengthening a small number of clear files, not by scattering logic across many overlapping entrypoints.
 
@@ -202,7 +206,7 @@ The crawler should therefore grow by strengthening a small number of clear files
 
 Bu dizindeki güncel kontrollü dosyalar:
 
-  * `logisticsearch2_worker_claim_loop.py`
+  * `lib/logisticsearch2_worker_claim_loop.py`
 Probe-only veya durable-claim modunda tek çalıştırmalık worker yürütmesi için CLI giriş yüzeyi.
 
   * `lib/db.py`
@@ -211,19 +215,19 @@ Claim, finalize, parse persistence, workflow update ve transaction control için
   * `lib/storage_routing.py`
 `/srv`, `/srv/data` ve `/srv/buffer` için minimal işlenmiş-çıktı yönlendirme doğrusu.
 
-  * `lib/fetch_runtime.py`
+  * `lib/logisticsearch1_1_fetch_runtime.py`
 Minimal acquisition katmanıdır. Şu anda direct HTTP fetch yolunu taşır; zamanla hem direct HTTP hem browser destekli sayfa yakalama için tek dar acquisition evi haline gelmelidir.
 
-  * `lib/browser_acquisition_runtime.py`
+  * `lib/logisticsearch1_2_browser_acquisition_runtime.py`
 Rendered HTML, screenshot kanıtı ve browser-network gözlemleri yakalayan güncel dar browser-render acquisition seam'idir.
 
   * `lib/parse_runtime.py`
 Temel sayfa evidence'ı çıkaran ve güvenli snapshot-link politikasını uygulayan minimal parse-entry katmanıdır.
 
-  * `lib/worker_runtime.py`
+  * `lib/logisticsearch1_main_worker_runtime.py`
 Birden fazla yarışan runtime merkezi arasında bölünmek yerine ana sürekli çalışan crawler runtime/service çekirdeği olarak kalması gereken kontrollü worker runtime katmanıdır.
 
-  * `logisticsearch1_2_1_browser_acquisition_smoke.py`
+  * `lib/logisticsearch1_2_1_browser_acquisition_smoke.py`
 Commit edilmiş browser-acquisition seam'inin gerçek crawler makinesinde launch, navigation ve kanıt üretimi yapabildiğini kanıtlamak için kullanılan repo-local browser smoke giriş yüzeyidir.
 
   * `requirements.txt`
@@ -238,13 +242,13 @@ Bu dizin için uzun vadeli runtime okuması yalın ve açık kalmalıdır.
 
 Bunun anlamı şudur:
 
-  * `lib/worker_runtime.py` ana sürekli çalışan crawler runtime/service çekirdeği olarak kalmalıdır
-  * `lib/fetch_runtime.py` acquisition katmanı olarak kalmalı ve zamanla direct HTTP ile browser destekli fetch yollarını kendi içinde toplamalıdır
-  * `lib/browser_acquisition_runtime.py` şu anda dar bir geçiş seam'idir; sistemi daha sade tutacaksa ileride `lib/fetch_runtime.py` içine katlanabilir
+  * `lib/logisticsearch1_main_worker_runtime.py` ana sürekli çalışan crawler runtime/service çekirdeği olarak kalmalıdır
+  * `lib/logisticsearch1_1_fetch_runtime.py` acquisition katmanı olarak kalmalı ve zamanla direct HTTP ile browser destekli fetch yollarını kendi içinde toplamalıdır
+  * `lib/logisticsearch1_2_browser_acquisition_runtime.py` şu anda dar bir geçiş seam'idir; sistemi daha sade tutacaksa ileride `lib/logisticsearch1_1_fetch_runtime.py` içine katlanabilir
   * `lib/parse_runtime.py` fetch sonrası evidence ve parse katmanı olarak kalır
   * `lib/db.py` veritabanı/state-transition yardımcı katmanı olarak kalır
   * `lib/storage_routing.py` `/srv/crawler/logisticsearch`, `/srv/data` ve `/srv/buffer` için storage-karar katmanı olarak kalır
-  * `logisticsearch2_worker_claim_loop.py` ince bir operatör/CLI yüzeyi olarak kalmalı, ikinci gizli runtime merkezine dönüşmemelidir
+  * `lib/logisticsearch2_worker_claim_loop.py` ince bir operatör/CLI yüzeyi olarak kalmalı, ikinci gizli runtime merkezine dönüşmemelidir
 
 Dolayısıyla crawler, birçok çakışan giriş noktasına saçılarak değil, az sayıdaki açık dosyanın güçlendirilmesiyle büyümelidir.
 
@@ -257,11 +261,11 @@ The corrected target file family is:
   * `logisticsearch1_main_worker_runtime.py`
   * `logisticsearch1_1_fetch_runtime.py`
   * `logisticsearch1_2_browser_acquisition_runtime.py`
-  * `logisticsearch1_2_1_browser_acquisition_smoke.py`
+  * `lib/logisticsearch1_2_1_browser_acquisition_smoke.py`
   * `logisticsearch1_3_parse_runtime.py`
   * `logisticsearch1_4_db.py`
   * `logisticsearch1_5_storage_routing.py`
-  * `logisticsearch2_worker_claim_loop.py`
+  * `lib/logisticsearch2_worker_claim_loop.py`
 
 Detailed reading of each file:
 
@@ -281,7 +285,7 @@ Detailed reading of each file:
     It exists to keep the first browser-based acquisition capability explicit, provable, and isolated
     before the browser-backed path is folded more tightly into the canonical fetch runtime.
 
-  * `logisticsearch1_2_1_browser_acquisition_smoke.py`
+  * `lib/logisticsearch1_2_1_browser_acquisition_smoke.py`
     Repo-local browser smoke tool.
     This is not the main runtime.
     It exists only to prove browser launch, public-page navigation, rendered HTML capture,
@@ -301,7 +305,7 @@ Detailed reading of each file:
     This file should remain responsible for `/srv/crawler/logisticsearch/`, `/srv/data/`, and `/srv/buffer`
     routing truth and should not become a fetch or parse file.
 
-  * `logisticsearch2_worker_claim_loop.py`
+  * `lib/logisticsearch2_worker_claim_loop.py`
     Thin CLI/operator surface.
     This is related to the worker runtime but it is not a child implementation layer inside the same
     top-level runtime family. That is why it belongs under `2`, not under `1`.
@@ -324,11 +328,11 @@ Düzeltilmiş hedef dosya ailesi şudur:
   * `logisticsearch1_main_worker_runtime.py`
   * `logisticsearch1_1_fetch_runtime.py`
   * `logisticsearch1_2_browser_acquisition_runtime.py`
-  * `logisticsearch1_2_1_browser_acquisition_smoke.py`
+  * `lib/logisticsearch1_2_1_browser_acquisition_smoke.py`
   * `logisticsearch1_3_parse_runtime.py`
   * `logisticsearch1_4_db.py`
   * `logisticsearch1_5_storage_routing.py`
-  * `logisticsearch2_worker_claim_loop.py`
+  * `lib/logisticsearch2_worker_claim_loop.py`
 
 Her dosyanın ayrıntılı okuması:
 
@@ -348,7 +352,7 @@ Her dosyanın ayrıntılı okuması:
     Var olma sebebi, browser tabanlı ilk acquisition kabiliyetini kanonik fetch runtime içine daha sıkı katlanmadan önce
     açık, kanıtlanabilir ve izole halde tutmaktır.
 
-  * `logisticsearch1_2_1_browser_acquisition_smoke.py`
+  * `lib/logisticsearch1_2_1_browser_acquisition_smoke.py`
     Repo-local browser smoke aracıdır.
     Ana runtime değildir.
     Yalnızca browser launch, public page navigation, rendered HTML capture, screenshot kanıtı
@@ -368,7 +372,7 @@ Her dosyanın ayrıntılı okuması:
     Bu dosya `/srv/crawler/logisticsearch/`, `/srv/data/` ve `/srv/buffer` yönlendirme doğrusundan sorumlu kalmalı,
     fetch veya parse dosyasına dönüşmemelidir.
 
-  * `logisticsearch2_worker_claim_loop.py`
+  * `lib/logisticsearch2_worker_claim_loop.py`
     İnce CLI/operatör yüzeyidir.
     Worker runtime ile ilişkilidir; ancak aynı üst runtime ailesi içinde hiyerarşik alt implementasyon katmanı değildir.
     Bu yüzden `1` altında değil, `2` altında yer almalıdır.
@@ -611,8 +615,8 @@ The canonical target direction is:
 
 - all live runtime Python files should sit under `python/webcrawler/lib/`
 - the numbered hierarchy should be visible there in one place
-- `logisticsearch2_worker_claim_loop.py` should later move into `lib/` as `logisticsearch2_worker_claim_loop.py`
-- `logisticsearch1_2_1_browser_acquisition_smoke.py` should later move into `lib/` as `logisticsearch1_2_1_browser_acquisition_smoke.py`
+- `lib/logisticsearch2_worker_claim_loop.py` now already lives in `lib/` as the thin operator/CLI surface
+- `lib/logisticsearch1_2_1_browser_acquisition_smoke.py` now already lives in `lib/` as the repo-local browser smoke entry
 
 Use these supporting surfaces:
 
@@ -629,8 +633,8 @@ Kanonik hedef yön şudur:
 
 - tüm canlı runtime Python dosyaları `python/webcrawler/lib/` altında durmalıdır
 - numaralı hiyerarşi orada tek yerde görünmelidir
-- `logisticsearch2_worker_claim_loop.py` daha sonra `lib/` içine `logisticsearch2_worker_claim_loop.py` olarak taşınmalıdır
-- `logisticsearch1_2_1_browser_acquisition_smoke.py` daha sonra `lib/` içine `logisticsearch1_2_1_browser_acquisition_smoke.py` olarak taşınmalıdır
+- `lib/logisticsearch2_worker_claim_loop.py` artık ince operatör/CLI yüzeyi olarak zaten `lib/` içinde yaşamaktadır
+- `lib/logisticsearch1_2_1_browser_acquisition_smoke.py` artık repo-local browser smoke girişi olarak zaten `lib/` içinde yaşamaktadır
 
 Şu destek yüzeylerini kullan:
 
