@@ -44,8 +44,7 @@ It currently provides:
 
 It does not yet provide:
 
-  * worker-integrated browser-path selection inside the canonical fetch path
-  * a broader parser stack
+    * a broader parser stack
   * a sealed preranking-snapshot linkage model
   * full production-grade orchestration/service supervision
   * shutdown helper or power helper behavior
@@ -102,8 +101,7 @@ Güncel kapsamı hâlâ bilinçli olarak kontrollüdür.
 
 Henüz şunları sağlamaz:
 
-  * kanonik fetch yolu içinde worker-entegre browser-path seçimi
-  * daha geniş bir parser stack
+    * daha geniş bir parser stack
   * mühürlenmiş bir preranking-snapshot linkage modeli
   * tam production-grade orchestration/service supervision
   * shutdown helper veya power helper davranışı
@@ -155,10 +153,10 @@ Current controlled files in this directory:
   * `lib/logisticsearch2_worker_claim_loop.py`
 CLI entry surface for single-run worker execution in probe-only or durable-claim mode.
 
-  * `lib/db.py`
+  * `lib/logisticsearch1_4_db.py`
 Database helpers for claim, finalize, parse persistence, workflow updates, and transaction control.
 
-  * `lib/storage_routing.py`
+  * `lib/logisticsearch1_5_storage_routing.py`
 Minimal processed-output routing truth for `/srv`, `/srv/data`, and `/srv/buffer`.
 
   * `lib/logisticsearch1_1_fetch_runtime.py`
@@ -167,7 +165,7 @@ Minimal acquisition layer. It currently carries the direct HTTP fetch path and s
   * `lib/logisticsearch1_2_browser_acquisition_runtime.py`
 Current narrow browser-render acquisition seam that captures rendered HTML, screenshot evidence, and browser-network observations.
 
-  * `lib/parse_runtime.py`
+  * `lib/logisticsearch1_3_parse_runtime.py`
 Minimal parse-entry layer that extracts basic page evidence and enforces safe snapshot-link policy.
 
   * `lib/logisticsearch1_main_worker_runtime.py`
@@ -195,9 +193,9 @@ That means:
   * `lib/logisticsearch1_main_worker_runtime.py` should remain the main continuous crawler runtime/service core
   * `lib/logisticsearch1_1_fetch_runtime.py` should remain the acquisition layer and absorb both direct HTTP and browser-backed fetch paths over time
   * `lib/logisticsearch1_2_browser_acquisition_runtime.py` is currently a narrow transitional seam and may later be folded into `lib/logisticsearch1_1_fetch_runtime.py` if that keeps the system simpler
-  * `lib/parse_runtime.py` remains the post-fetch evidence and parsing layer
-  * `lib/db.py` remains the database/state-transition helper layer
-  * `lib/storage_routing.py` remains the storage-decision layer for `/srv/crawler/logisticsearch`, `/srv/data`, and `/srv/buffer`
+  * `lib/logisticsearch1_3_parse_runtime.py` remains the post-fetch evidence and parsing layer
+  * `lib/logisticsearch1_4_db.py` remains the database/state-transition helper layer
+  * `lib/logisticsearch1_5_storage_routing.py` remains the storage-decision layer for `/srv/crawler/logisticsearch`, `/srv/data`, and `/srv/buffer`
   * `lib/logisticsearch2_worker_claim_loop.py` must remain a thin operator/CLI surface and must not grow into a second hidden runtime center
 
 The crawler should therefore grow by strengthening a small number of clear files, not by scattering logic across many overlapping entrypoints.
@@ -209,10 +207,10 @@ Bu dizindeki güncel kontrollü dosyalar:
   * `lib/logisticsearch2_worker_claim_loop.py`
 Probe-only veya durable-claim modunda tek çalıştırmalık worker yürütmesi için CLI giriş yüzeyi.
 
-  * `lib/db.py`
+  * `lib/logisticsearch1_4_db.py`
 Claim, finalize, parse persistence, workflow update ve transaction control için veritabanı yardımcıları.
 
-  * `lib/storage_routing.py`
+  * `lib/logisticsearch1_5_storage_routing.py`
 `/srv`, `/srv/data` ve `/srv/buffer` için minimal işlenmiş-çıktı yönlendirme doğrusu.
 
   * `lib/logisticsearch1_1_fetch_runtime.py`
@@ -221,7 +219,7 @@ Minimal acquisition katmanıdır. Şu anda direct HTTP fetch yolunu taşır; zam
   * `lib/logisticsearch1_2_browser_acquisition_runtime.py`
 Rendered HTML, screenshot kanıtı ve browser-network gözlemleri yakalayan güncel dar browser-render acquisition seam'idir.
 
-  * `lib/parse_runtime.py`
+  * `lib/logisticsearch1_3_parse_runtime.py`
 Temel sayfa evidence'ı çıkaran ve güvenli snapshot-link politikasını uygulayan minimal parse-entry katmanıdır.
 
   * `lib/logisticsearch1_main_worker_runtime.py`
@@ -245,9 +243,9 @@ Bunun anlamı şudur:
   * `lib/logisticsearch1_main_worker_runtime.py` ana sürekli çalışan crawler runtime/service çekirdeği olarak kalmalıdır
   * `lib/logisticsearch1_1_fetch_runtime.py` acquisition katmanı olarak kalmalı ve zamanla direct HTTP ile browser destekli fetch yollarını kendi içinde toplamalıdır
   * `lib/logisticsearch1_2_browser_acquisition_runtime.py` şu anda dar bir geçiş seam'idir; sistemi daha sade tutacaksa ileride `lib/logisticsearch1_1_fetch_runtime.py` içine katlanabilir
-  * `lib/parse_runtime.py` fetch sonrası evidence ve parse katmanı olarak kalır
-  * `lib/db.py` veritabanı/state-transition yardımcı katmanı olarak kalır
-  * `lib/storage_routing.py` `/srv/crawler/logisticsearch`, `/srv/data` ve `/srv/buffer` için storage-karar katmanı olarak kalır
+  * `lib/logisticsearch1_3_parse_runtime.py` fetch sonrası evidence ve parse katmanı olarak kalır
+  * `lib/logisticsearch1_4_db.py` veritabanı/state-transition yardımcı katmanı olarak kalır
+  * `lib/logisticsearch1_5_storage_routing.py` `/srv/crawler/logisticsearch`, `/srv/data` ve `/srv/buffer` için storage-karar katmanı olarak kalır
   * `lib/logisticsearch2_worker_claim_loop.py` ince bir operatör/CLI yüzeyi olarak kalmalı, ikinci gizli runtime merkezine dönüşmemelidir
 
 Dolayısıyla crawler, birçok çakışan giriş noktasına saçılarak değil, az sayıdaki açık dosyanın güçlendirilmesiyle büyümelidir.
@@ -471,7 +469,7 @@ The next coding order must remain narrow:
   3. then repair imports and smoke references
   4. then re-prove syntax and browser smoke
   5. only then evolve the acquisition home
-  6. only after that add one narrow selector seam into the main worker runtime
+  6. the narrow method-selection seam is now present inside the main worker runtime
 
 Do not spread acquisition logic across multiple competing runtime centers.
 
@@ -661,3 +659,23 @@ Bu artık güncel repository doğrusudur.
 Raw fetch, parse, taxonomy, seçim sırası ve lojistik dışı sayfaların ele alınışı için katı beginner-first açıklamaya ihtiyaç duyduğunda şu boundary topic'i kullan:
 
 * `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
+
+## Current truth correction after real main-runtime selection proof
+The current repository truth is now this:
+
+* the active Python runtime family already lives under `python/webcrawler/lib/`
+* `lib/logisticsearch1_main_worker_runtime.py` now contains a narrow method-selection seam inside the real main runtime path
+* when `acquisition_method` resolves to `browser`, the runtime can route to `fetch_page_with_browser_to_raw_storage(...)`
+* when no browser method is selected, the runtime still preserves the direct HTTP fallback through `fetch_page_to_raw_storage(...)`
+* `lib/logisticsearch1_3_parse_runtime.py` now imports `lib/logisticsearch1_4_db.py` through the renamed internal import path
+* crawler_core therefore remains open, but this specific worker-integrated browser/default selection seam is no longer a missing capability
+
+## Gerçek ana-runtime seçim kanıtı sonrası güncel doğruluk düzeltmesi
+Mevcut repository doğrusu artık şudur:
+
+* aktif Python runtime ailesi zaten `python/webcrawler/lib/` altında yaşamaktadır
+* `lib/logisticsearch1_main_worker_runtime.py` artık gerçek ana runtime yolu içinde dar bir method-selection seam'i içermektedir
+* `acquisition_method` değeri `browser` olarak çözüldüğünde runtime, `fetch_page_with_browser_to_raw_storage(...)` yoluna gidebilmektedir
+* browser yöntemi seçilmediğinde runtime, `fetch_page_to_raw_storage(...)` üzerinden direct HTTP fallback yolunu korumaktadır
+* `lib/logisticsearch1_3_parse_runtime.py` artık yeniden adlandırılmış iç import yolu üzerinden `lib/logisticsearch1_4_db.py` dosyasını kullanmaktadır
+* bu nedenle crawler_core hâlâ açıktır, ancak worker-entegre browser/default seçim seam'i artık eksik bir kabiliyet değildir
