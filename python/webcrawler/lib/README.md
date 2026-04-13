@@ -27,12 +27,12 @@ Amaç, aktif runtime ağacını tek bakışta görünür hale getirmektir.
 At the current repository point, this folder visibly contains:
 
 - `__init__.py`
-- `browser_acquisition_runtime.py`
-- `db.py`
-- `fetch_runtime.py`
-- `parse_runtime.py`
-- `storage_routing.py`
-- `worker_runtime.py`
+- `logisticsearch1_2_browser_acquisition_runtime.py`
+- `logisticsearch1_4_db.py`
+- `logisticsearch1_1_fetch_runtime.py`
+- `logisticsearch1_3_parse_runtime.py`
+- `logisticsearch1_5_storage_routing.py`
+- `logisticsearch1_main_worker_runtime.py`
 
 This means the browser seam and the main runtime helpers are already here, but the thin worker CLI and the browser smoke tool still sit one level above and should later be folded into this folder during the controlled rename/layout patch.
 
@@ -41,12 +41,12 @@ This means the browser seam and the main runtime helpers are already here, but t
 Mevcut repository noktasında bu klasör görünür olarak şunları içerir:
 
 - `__init__.py`
-- `browser_acquisition_runtime.py`
-- `db.py`
-- `fetch_runtime.py`
-- `parse_runtime.py`
-- `storage_routing.py`
-- `worker_runtime.py`
+- `logisticsearch1_2_browser_acquisition_runtime.py`
+- `logisticsearch1_4_db.py`
+- `logisticsearch1_1_fetch_runtime.py`
+- `logisticsearch1_3_parse_runtime.py`
+- `logisticsearch1_5_storage_routing.py`
+- `logisticsearch1_main_worker_runtime.py`
 
 Bu da browser seam'i ile ana runtime yardımcılarının zaten burada olduğu, ancak ince worker CLI ile browser smoke aracının hâlâ bir seviye yukarıda durduğu ve kontrollü rename/layout patch'i sırasında daha sonra bu klasöre katlanması gerektiği anlamına gelir.
 

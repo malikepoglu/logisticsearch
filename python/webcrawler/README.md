@@ -152,7 +152,7 @@ Bunlar şu dokümana aittir:
 
 Current controlled files in this directory:
 
-  * `worker_claim_loop.py`
+  * `logisticsearch2_worker_claim_loop.py`
 CLI entry surface for single-run worker execution in probe-only or durable-claim mode.
 
   * `lib/db.py`
@@ -173,7 +173,7 @@ Minimal parse-entry layer that extracts basic page evidence and enforces safe sn
   * `lib/worker_runtime.py`
 Controlled worker runtime that should remain the main continuous crawler runtime/service core rather than being split across multiple competing runtime centers.
 
-  * `browser_acquisition_smoke.py`
+  * `logisticsearch1_2_1_browser_acquisition_smoke.py`
 Repo-local browser smoke entry used to prove that the committed browser-acquisition seam can launch, navigate, and emit evidence on the real crawler machine.
 
   * `requirements.txt`
@@ -194,7 +194,7 @@ That means:
   * `lib/parse_runtime.py` remains the post-fetch evidence and parsing layer
   * `lib/db.py` remains the database/state-transition helper layer
   * `lib/storage_routing.py` remains the storage-decision layer for `/srv/crawler/logisticsearch`, `/srv/data`, and `/srv/buffer`
-  * `worker_claim_loop.py` must remain a thin operator/CLI surface and must not grow into a second hidden runtime center
+  * `logisticsearch2_worker_claim_loop.py` must remain a thin operator/CLI surface and must not grow into a second hidden runtime center
 
 The crawler should therefore grow by strengthening a small number of clear files, not by scattering logic across many overlapping entrypoints.
 
@@ -202,7 +202,7 @@ The crawler should therefore grow by strengthening a small number of clear files
 
 Bu dizindeki güncel kontrollü dosyalar:
 
-  * `worker_claim_loop.py`
+  * `logisticsearch2_worker_claim_loop.py`
 Probe-only veya durable-claim modunda tek çalıştırmalık worker yürütmesi için CLI giriş yüzeyi.
 
   * `lib/db.py`
@@ -223,7 +223,7 @@ Temel sayfa evidence'ı çıkaran ve güvenli snapshot-link politikasını uygul
   * `lib/worker_runtime.py`
 Birden fazla yarışan runtime merkezi arasında bölünmek yerine ana sürekli çalışan crawler runtime/service çekirdeği olarak kalması gereken kontrollü worker runtime katmanıdır.
 
-  * `browser_acquisition_smoke.py`
+  * `logisticsearch1_2_1_browser_acquisition_smoke.py`
 Commit edilmiş browser-acquisition seam'inin gerçek crawler makinesinde launch, navigation ve kanıt üretimi yapabildiğini kanıtlamak için kullanılan repo-local browser smoke giriş yüzeyidir.
 
   * `requirements.txt`
@@ -244,7 +244,7 @@ Bunun anlamı şudur:
   * `lib/parse_runtime.py` fetch sonrası evidence ve parse katmanı olarak kalır
   * `lib/db.py` veritabanı/state-transition yardımcı katmanı olarak kalır
   * `lib/storage_routing.py` `/srv/crawler/logisticsearch`, `/srv/data` ve `/srv/buffer` için storage-karar katmanı olarak kalır
-  * `worker_claim_loop.py` ince bir operatör/CLI yüzeyi olarak kalmalı, ikinci gizli runtime merkezine dönüşmemelidir
+  * `logisticsearch2_worker_claim_loop.py` ince bir operatör/CLI yüzeyi olarak kalmalı, ikinci gizli runtime merkezine dönüşmemelidir
 
 Dolayısıyla crawler, birçok çakışan giriş noktasına saçılarak değil, az sayıdaki açık dosyanın güçlendirilmesiyle büyümelidir.
 
@@ -574,7 +574,7 @@ Güncel kontrollü bağımlılık kuralı şudur:
 
 ## Minimal processed-output storage routing
 
-This directory also includes `python/webcrawler/lib/storage_routing.py`.
+This directory also includes `python/webcrawler/lib/logisticsearch1_5_storage_routing.py`.
 
 Current minimal canonical storage rule:
 
@@ -588,7 +588,7 @@ This routing truth is intentionally narrow and explicit.
 
 ## Minimal işlenmiş-çıktı storage routing
 
-Bu dizin ayrıca `python/webcrawler/lib/storage_routing.py` dosyasını da içerir.
+Bu dizin ayrıca `python/webcrawler/lib/logisticsearch1_5_storage_routing.py` dosyasını da içerir.
 
 Güncel minimal kanonik storage kuralı şudur:
 
@@ -611,8 +611,8 @@ The canonical target direction is:
 
 - all live runtime Python files should sit under `python/webcrawler/lib/`
 - the numbered hierarchy should be visible there in one place
-- `worker_claim_loop.py` should later move into `lib/` as `logisticsearch2_worker_claim_loop.py`
-- `browser_acquisition_smoke.py` should later move into `lib/` as `logisticsearch1_2_1_browser_acquisition_smoke.py`
+- `logisticsearch2_worker_claim_loop.py` should later move into `lib/` as `logisticsearch2_worker_claim_loop.py`
+- `logisticsearch1_2_1_browser_acquisition_smoke.py` should later move into `lib/` as `logisticsearch1_2_1_browser_acquisition_smoke.py`
 
 Use these supporting surfaces:
 
@@ -629,8 +629,8 @@ Kanonik hedef yön şudur:
 
 - tüm canlı runtime Python dosyaları `python/webcrawler/lib/` altında durmalıdır
 - numaralı hiyerarşi orada tek yerde görünmelidir
-- `worker_claim_loop.py` daha sonra `lib/` içine `logisticsearch2_worker_claim_loop.py` olarak taşınmalıdır
-- `browser_acquisition_smoke.py` daha sonra `lib/` içine `logisticsearch1_2_1_browser_acquisition_smoke.py` olarak taşınmalıdır
+- `logisticsearch2_worker_claim_loop.py` daha sonra `lib/` içine `logisticsearch2_worker_claim_loop.py` olarak taşınmalıdır
+- `logisticsearch1_2_1_browser_acquisition_smoke.py` daha sonra `lib/` içine `logisticsearch1_2_1_browser_acquisition_smoke.py` olarak taşınmalıdır
 
 Şu destek yüzeylerini kullan:
 
