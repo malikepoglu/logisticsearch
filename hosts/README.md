@@ -35,7 +35,8 @@ Bu aile, her repository yüzeyinin her host için kör biçimde `hosts/` altına
 ## Current canonical rule
 ## Güncel kanonik kural
 
-At the current repository point, the active crawler-host tracked work surfaces live under:
+At the current repository point, the active crawler-host tracked work surfaces now live under `hosts/makpi51crawler/`.
+
 
 - `hosts/makpi51crawler/python/`
 - `hosts/makpi51crawler/sql/`
@@ -44,7 +45,8 @@ At the current repository point, the active crawler-host tracked work surfaces l
 
 The `hosts/` family therefore carries both host-operational truth and the explicitly validated host-scoped work surfaces of `makpi51crawler`.
 
-Mevcut repository noktasında aktif crawler-host tracked çalışma yüzeyleri şu yollar altında yaşar:
+Mevcut repository noktasında aktif crawler-host tracked çalışma yüzeyleri artık `hosts/makpi51crawler/` altında yaşar.
+
 
 - `hosts/makpi51crawler/python/`
 - `hosts/makpi51crawler/sql/`
