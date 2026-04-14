@@ -2,12 +2,12 @@
 
 Parent surface:
 
-- `python/webcrawler/README.md` — use this as the broader crawler Python surface map.
+- `hosts/makpi51crawler/python/webcrawler/README.md` — use this as the broader crawler Python surface map.
 - `docs/TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md` — use this as the canonical runtime naming and role standard.
 
 Üst yüzey:
 
-- `python/webcrawler/README.md` — geniş crawler Python yüzey haritası olarak bunu kullan.
+- `hosts/makpi51crawler/python/webcrawler/README.md` — geniş crawler Python yüzey haritası olarak bunu kullan.
 - `docs/TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md` — kanonik runtime adlandırma ve rol standardı olarak bunu kullan.
 
 ## Purpose
@@ -54,7 +54,7 @@ Mevcut repository noktasında bu klasör, aktif numaralı runtime ailesinin kend
 
 Bu da canlı numaralı runtime ailesinin artık burada tek yerde birlikte görünür olduğu anlamına gelir.
 
-Dolayısıyla bu klasör artık kısmi pre-move yüzey değildir.
+Dolayısıyla bu klasör artık kısmi geçiş runtime yüzeyi değildir.
 
 ## Target canonical family for this folder
 
@@ -95,7 +95,7 @@ Use the following boundary topic as the canonical boundary truth for raw fetch, 
 
 Bu da aktif numaralı runtime ailesinin artık ince worker CLI ve browser smoke girişi dahil olmak üzere burada birlikte görünür olduğu anlamına gelir.
 
-Dolayısıyla bu klasör artık kısmi pre-move yüzey olarak değil, canlı runtime ailesinin evi olarak okunmalıdır.
+Dolayısıyla bu klasör artık kısmi geçiş runtime yüzeyi olarak değil, canlı runtime ailesinin evi olarak okunmalıdır.
 
 Raw fetch, parse, taxonomy, seçim sırası ve lojistik dışı sayfaların ele alınışı için aşağıdaki boundary topic'i kanonik sınır doğrusu olarak kullan:
 
@@ -103,22 +103,22 @@ Raw fetch, parse, taxonomy, seçim sırası ve lojistik dışı sayfaların ele 
 ## Current root-surface and host-boundary truth
 ## Güncel kök-yüzey ve host-sınırı doğrusu
 
-At the current repository point, `python/webcrawler/lib/` remains part of the shared root `python/` project surface.
+At the current repository point, this runtime-family surface now lives at `hosts/makpi51crawler/python/webcrawler/lib/`.
 
-It is not being physically relocated under `hosts/makpi51crawler/`.
+It is intentionally located under the active crawler-host Python surface.
 
-The `hosts/` family documents host-specific operational truth, while this `lib/` folder remains the shared live runtime-family surface inside the root Python tree.
+The `hosts/` family documents host-specific operational truth, and this `lib/` folder is now the live runtime-family surface for `makpi51crawler` inside the repository.
 
 For host-side boundary reading, also see:
 
 - `hosts/README.md`
 - `hosts/makpi51crawler/README.md`
 
-Mevcut repository noktasında `python/webcrawler/lib/`, ortak kök `python/` proje yüzeyinin parçası olarak kalır.
+Mevcut repository noktasında bu runtime-aile yüzeyi artık `hosts/makpi51crawler/python/webcrawler/lib/` yolunda yaşamaktadır.
 
-Bu yüzey fiziksel olarak `hosts/makpi51crawler/` altına taşınmamaktadır.
+Bu yüzey aktif crawler-host Python yüzeyi altında bilinçli olarak konumlandırılmıştır.
 
-`hosts/` ailesi host-özel operasyon doğrusunu belgelerken, bu `lib/` klasörü kök Python ağacı içindeki ortak canlı runtime-aile yüzeyi olarak kalır.
+`hosts/` ailesi host-özel operasyon doğrusunu belgeler; bu `lib/` klasörü ise artık repository içinde `makpi51crawler` için canlı runtime-aile yüzeyidir.
 
 Host-tarafı sınır okuması için ayrıca şunlara bak:
 

@@ -92,42 +92,42 @@ Varsayılan scratch veritabanı adı:
 
 This runbook assumes these files exist and are current:
 
-- `sql/crawler_core/001_seed_frontier_http_fetch_base.sql`
-- `sql/crawler_core/002_frontier_claim_and_lease.sql`
-- `sql/crawler_core/003_frontier_finish_transitions.sql`
-- `sql/crawler_core/004_frontier_politeness_and_freshness.sql`
-- `sql/crawler_core/005_http_fetch_robots_cache_and_enforcement.sql`
-- `sql/crawler_core/900_apply_crawler_core_split_surface.psql.sql`
-- `sql/crawler_core/901_preflight_crawler_core_split_surface.psql.sql`
-- `sql/crawler_core/902_presence_audit_crawler_core_split_surface.psql.sql`
-- `sql/crawler_core/910_validate_crawler_core_split_surface.sh`
+- `hosts/makpi51crawler/sql/crawler_core/001_seed_frontier_http_fetch_base.sql`
+- `hosts/makpi51crawler/sql/crawler_core/002_frontier_claim_and_lease.sql`
+- `hosts/makpi51crawler/sql/crawler_core/003_frontier_finish_transitions.sql`
+- `hosts/makpi51crawler/sql/crawler_core/004_frontier_politeness_and_freshness.sql`
+- `hosts/makpi51crawler/sql/crawler_core/005_http_fetch_robots_cache_and_enforcement.sql`
+- `hosts/makpi51crawler/sql/crawler_core/900_apply_crawler_core_split_surface.psql.sql`
+- `hosts/makpi51crawler/sql/crawler_core/901_preflight_crawler_core_split_surface.psql.sql`
+- `hosts/makpi51crawler/sql/crawler_core/902_presence_audit_crawler_core_split_surface.psql.sql`
+- `hosts/makpi51crawler/sql/crawler_core/910_validate_crawler_core_split_surface.sh`
 
 ## Gerekli repository dosyaları
 
 Bu runbook şu dosyaların mevcut ve güncel olduğunu varsayar:
 
-- `sql/crawler_core/001_seed_frontier_http_fetch_base.sql`
-- `sql/crawler_core/002_frontier_claim_and_lease.sql`
-- `sql/crawler_core/003_frontier_finish_transitions.sql`
-- `sql/crawler_core/004_frontier_politeness_and_freshness.sql`
-- `sql/crawler_core/005_http_fetch_robots_cache_and_enforcement.sql`
-- `sql/crawler_core/900_apply_crawler_core_split_surface.psql.sql`
-- `sql/crawler_core/901_preflight_crawler_core_split_surface.psql.sql`
-- `sql/crawler_core/902_presence_audit_crawler_core_split_surface.psql.sql`
-- `sql/crawler_core/910_validate_crawler_core_split_surface.sh`
+- `hosts/makpi51crawler/sql/crawler_core/001_seed_frontier_http_fetch_base.sql`
+- `hosts/makpi51crawler/sql/crawler_core/002_frontier_claim_and_lease.sql`
+- `hosts/makpi51crawler/sql/crawler_core/003_frontier_finish_transitions.sql`
+- `hosts/makpi51crawler/sql/crawler_core/004_frontier_politeness_and_freshness.sql`
+- `hosts/makpi51crawler/sql/crawler_core/005_http_fetch_robots_cache_and_enforcement.sql`
+- `hosts/makpi51crawler/sql/crawler_core/900_apply_crawler_core_split_surface.psql.sql`
+- `hosts/makpi51crawler/sql/crawler_core/901_preflight_crawler_core_split_surface.psql.sql`
+- `hosts/makpi51crawler/sql/crawler_core/902_presence_audit_crawler_core_split_surface.psql.sql`
+- `hosts/makpi51crawler/sql/crawler_core/910_validate_crawler_core_split_surface.sh`
 
 ## Primary operator path
 
 Run this from repository root on Ubuntu Desktop:
 
 ```bash
-bash sql/crawler_core/910_validate_crawler_core_split_surface.sh
+bash hosts/makpi51crawler/sql/crawler_core/910_validate_crawler_core_split_surface.sh
 ```
 
 If you intentionally want a different scratch database name, pass it explicitly:
 
 ```bash
-bash sql/crawler_core/910_validate_crawler_core_split_surface.sh my_custom_crawler_core_scratch
+bash hosts/makpi51crawler/sql/crawler_core/910_validate_crawler_core_split_surface.sh my_custom_crawler_core_scratch
 ```
 
 ## Birincil operatör yolu
@@ -135,13 +135,13 @@ bash sql/crawler_core/910_validate_crawler_core_split_surface.sh my_custom_crawl
 Ubuntu Desktop üzerinde repository kökünden şunu çalıştır:
 
 ```bash
-bash sql/crawler_core/910_validate_crawler_core_split_surface.sh
+bash hosts/makpi51crawler/sql/crawler_core/910_validate_crawler_core_split_surface.sh
 ```
 
 Bilerek farklı bir scratch veritabanı adı kullanmak istiyorsan açıkça parametre ver:
 
 ```bash
-bash sql/crawler_core/910_validate_crawler_core_split_surface.sh my_custom_crawler_core_scratch
+bash hosts/makpi51crawler/sql/crawler_core/910_validate_crawler_core_split_surface.sh my_custom_crawler_core_scratch
 ```
 
 ## What the validation runner does

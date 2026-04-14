@@ -166,7 +166,7 @@ Bu nedenle Python yüzeyi kendi başına nihai DB-ingestion doğrusu değil, bir
 
 This directory should be read together with:
 
-- `sql/desktop_import/README.md`
+- `hosts/makpi51crawler/sql/desktop_import/README.md`
 - the `sql/desktop_import` execution and validation surface
 
 Current relationship model:
@@ -180,7 +180,7 @@ So the Python helper is upstream preparation logic, while the SQL surface remain
 
 Bu dizin şu yüzeylerle birlikte okunmalıdır:
 
-- `sql/desktop_import/README.md`
+- `hosts/makpi51crawler/sql/desktop_import/README.md`
 - `sql/desktop_import` execution ve validation yüzeyi
 
 Mevcut ilişki modeli şöyledir:
@@ -194,19 +194,19 @@ Dolayısıyla Python helper yukarı-akış hazırlık mantığıdır; SQL yüzey
 
 If you are starting from zero, use this order:
 
-1. `docs/README.md`  
+1. `docs/README.md`
    Start from the docs hub to understand the repository reading map.
 
-2. `docs/TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`  
+2. `docs/TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
    Read the numbering discipline so the repository surface makes structural sense.
 
-3. `sql/desktop_import/README.md`  
+3. `hosts/makpi51crawler/sql/desktop_import/README.md`
    Understand the SQL-side intake surface first.
 
-4. `python/desktop_import/README.md`  
+4. `hosts/makpi51crawler/python/desktop_import/README.md`
    Then read this file to understand the Python preparation layer.
 
-5. `python/desktop_import/load_pi51_batch_into_postgres.py`  
+5. `hosts/makpi51crawler/python/desktop_import/load_pi51_batch_into_postgres.py`
    Only after the surrounding context is clear, read the actual script.
 
 Do **not** start by guessing from the Python filename alone.
@@ -215,19 +215,19 @@ Do **not** start by guessing from the Python filename alone.
 
 Sıfırdan başlıyorsan şu sırayı kullan:
 
-1. `docs/README.md`  
+1. `docs/README.md`
    Repository okuma haritasını anlamak için docs hub’dan başla.
 
-2. `docs/TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`  
+2. `docs/TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
    Repository yüzeyinin yapısal olarak anlamlı olması için numaralandırma disiplinini oku.
 
-3. `sql/desktop_import/README.md`  
+3. `hosts/makpi51crawler/sql/desktop_import/README.md`
    Önce SQL-tarafı intake yüzeyini anla.
 
-4. `python/desktop_import/README.md`  
+4. `hosts/makpi51crawler/python/desktop_import/README.md`
    Sonra Python hazırlık katmanını anlamak için bu dosyayı oku.
 
-5. `python/desktop_import/load_pi51_batch_into_postgres.py`  
+5. `hosts/makpi51crawler/python/desktop_import/load_pi51_batch_into_postgres.py`
    Yalnızca çevresel bağlam netleştikten sonra gerçek script’i oku.
 
 Yalnızca Python dosya adından tahmin yürütüp başlamamalısın.

@@ -28,7 +28,7 @@ Use these surfaces as the current hub / reading map around the Python area:
 
 - `README.md` — root repository entry surface
 - `docs/README.md` — documentation hub and safest beginner reading map
-- `python/desktop_import/README.md` — current real Python sub-surface with explicit current behavior
+- `hosts/makpi51crawler/python/desktop_import/README.md` — current real Python sub-surface with explicit current behavior
 
 This file should be read as the Python-area hub, not as a standalone isolated note.
 
@@ -38,7 +38,7 @@ Python alanı etrafındaki mevcut merkez / okuma haritası olarak şu yüzeyleri
 
 - `README.md` — repository kök giriş yüzeyi
 - `docs/README.md` — dokümantasyon merkezi ve başlangıç için en güvenli okuma haritası
-- `python/desktop_import/README.md` — açık mevcut davranışı anlatan güncel gerçek Python alt yüzeyi
+- `hosts/makpi51crawler/python/desktop_import/README.md` — açık mevcut davranışı anlatan güncel gerçek Python alt yüzeyi
 
 Bu dosya, tek başına izole bir not olarak değil, Python alanının hub yüzeyi olarak okunmalıdır.
 
@@ -50,9 +50,9 @@ Use this order:
 
 1. `README.md` — understand the repository-level direction first
 2. `docs/README.md` — understand the documentation hub and reading model
-3. `python/README.md` — understand what the Python surface is and is not
-4. `python/desktop_import/README.md` — understand the current real tracked Python sub-surface
-5. `python/desktop_import/load_pi51_batch_into_postgres.py` — only then read the actual script
+3. `hosts/makpi51crawler/python/README.md` — understand what the Python surface is and is not
+4. `hosts/makpi51crawler/python/desktop_import/README.md` — understand the current real tracked Python sub-surface
+5. `hosts/makpi51crawler/python/desktop_import/load_pi51_batch_into_postgres.py` — only then read the actual script
 
 ## Başlangıç seviyesi okuma yolu
 
@@ -62,36 +62,36 @@ Sıfırdan başlıyorsan Python yüzeyini yalnızca dosya adlarına bakarak tahm
 
 1. `README.md` — önce repository seviyesindeki yönü anla
 2. `docs/README.md` — dokümantasyon merkezini ve okuma modelini anla
-3. `python/README.md` — Python yüzeyinin ne olduğunu ve ne olmadığını anla
-4. `python/desktop_import/README.md` — mevcut gerçek izlenen Python alt yüzeyini anla
-5. `python/desktop_import/load_pi51_batch_into_postgres.py` — ancak bundan sonra gerçek script'i oku
+3. `hosts/makpi51crawler/python/README.md` — Python yüzeyinin ne olduğunu ve ne olmadığını anla
+4. `hosts/makpi51crawler/python/desktop_import/README.md` — mevcut gerçek izlenen Python alt yüzeyini anla
+5. `hosts/makpi51crawler/python/desktop_import/load_pi51_batch_into_postgres.py` — ancak bundan sonra gerçek script'i oku
 
 ## Current Tracked Surface
 
-At the moment, the tracked Python surface is intentionally very small. The active tracked implementation under this directory is the `python/desktop_import/` area, currently represented by `python/desktop_import/load_pi51_batch_into_postgres.py`. This means the Python surface is not yet a broad framework; it is a controlled support layer centered on desktop-side batch intake preparation for PostgreSQL loading.
+At the moment, the tracked Python surface is intentionally very small. The active tracked implementation under this directory is the `hosts/makpi51crawler/python/desktop_import/` area, currently represented by `hosts/makpi51crawler/python/desktop_import/load_pi51_batch_into_postgres.py`. This means the Python surface is not yet a broad framework; it is a controlled support layer centered on desktop-side batch intake preparation for PostgreSQL loading.
 
 ## Güncel İzlenen Yüzey
 
-Şu anda izlenen Python yüzeyi bilinçli olarak oldukça küçüktür. Bu dizin altındaki aktif izlenen uygulama `python/desktop_import/` alanıdır ve şu an `python/desktop_import/load_pi51_batch_into_postgres.py` ile temsil edilmektedir. Bu da Python yüzeyinin henüz geniş bir framework olmadığı; PostgreSQL yüklemesi öncesi desktop tarafı batch intake hazırlığına odaklanan kontrollü bir destek katmanı olduğu anlamına gelir.
+Şu anda izlenen Python yüzeyi bilinçli olarak oldukça küçüktür. Bu dizin altındaki aktif izlenen uygulama `hosts/makpi51crawler/python/desktop_import/` alanıdır ve şu an `hosts/makpi51crawler/python/desktop_import/load_pi51_batch_into_postgres.py` ile temsil edilmektedir. Bu da Python yüzeyinin henüz geniş bir framework olmadığı; PostgreSQL yüklemesi öncesi desktop tarafı batch intake hazırlığına odaklanan kontrollü bir destek katmanı olduğu anlamına gelir.
 ## Current root-surface truth
 ## Güncel kök-yüzey doğrusu
 
-At the current repository point, `python/` remains a shared root project surface.
+At the current repository point, this Python surface now lives at `hosts/makpi51crawler/python/`.
 
-It is not being physically relocated under `hosts/makpi51crawler/`.
+It is intentionally located under the active crawler-host surface.
 
-The `hosts/` family documents host-specific operational truth, while this `python/` surface remains the shared Python work surface of the repository.
+The `hosts/` family documents host-specific operational truth, and this subtree is now the tracked Python work surface for `makpi51crawler` inside the repository.
 
 For host-side boundary reading, also see:
 
 - `hosts/README.md`
 - `hosts/makpi51crawler/README.md`
 
-Mevcut repository noktasında `python/`, ortak bir kök proje yüzeyi olarak kalır.
+Mevcut repository noktasında bu Python yüzeyi artık `hosts/makpi51crawler/python/` yolunda yaşamaktadır.
 
-Bu yüzey fiziksel olarak `hosts/makpi51crawler/` altına taşınmamaktadır.
+Bu yüzey aktif crawler-host yüzeyi altında bilinçli olarak konumlandırılmıştır.
 
-`hosts/` ailesi host-özel operasyon doğrusunu belgelerken, bu `python/` yüzeyi repository'nin ortak Python çalışma yüzeyi olarak kalır.
+`hosts/` ailesi host-özel operasyon doğrusunu belgeler; bu alt ağaç ise artık repository içinde `makpi51crawler` için tracked Python çalışma yüzeyidir.
 
 Host-tarafı sınır okuması için ayrıca şunlara bak:
 

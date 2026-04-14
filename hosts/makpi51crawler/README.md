@@ -20,7 +20,7 @@ It is meant to explain the host clearly.
 
 It is **not** a full filesystem dump.
 
-It is **not** the place where shared repository work surfaces such as root `python/`, root `sql/`, or root `crawler_exports/` must be physically relocated.
+At the current repository point, it also intentionally contains the active tracked `python/`, `sql/`, and `crawler_exports/` work surfaces for this host.
 
 Bu dizin, gerçek crawler host'u `makpi51crawler` için kanonik repository-tracked operasyon doğrusu yüzeyidir.
 
@@ -28,7 +28,7 @@ Amacı host'u açık biçimde anlatmaktır.
 
 Bu dizin **tam filesystem dump'ı** değildir.
 
-Bu dizin, kök `python/`, kök `sql/` veya kök `crawler_exports/` gibi ortak repository çalışma yüzeylerinin fiziksel olarak taşınması gereken yer **değildir**.
+Mevcut repository noktasında bu dizin, bu host için aktif tracked `python/`, `sql/` ve `crawler_exports/` çalışma yüzeylerini de bilinçli olarak içerir.
 
 ## Current host reading model
 ## Güncel host okuma modeli
@@ -39,7 +39,7 @@ Read this host surface like this:
 2. understand which real machine paths matter
 3. understand access and identity boundaries
 4. understand storage and runtime boundaries
-5. only then map those truths back to the shared repository root surfaces
+5. then map those truths across the host-scoped tracked work surfaces that now live here
 
 Bu host yüzeyini şu sırayla oku:
 
@@ -47,7 +47,7 @@ Bu host yüzeyini şu sırayla oku:
 2. hangi gerçek makine yollarının önemli olduğunu anla
 3. erişim ve kimlik sınırlarını anla
 4. storage ve runtime sınırlarını anla
-5. ancak ondan sonra bu doğruları ortak repository kök yüzeylerine geri bağla
+5. sonra bu doğruları artık burada yaşayan host-kapsamlı tracked çalışma yüzeyleri boyunca eşleştir
 
 ## What should be documented here
 ## Burada ne belgelenmelidir
@@ -73,13 +73,13 @@ Bu yüzey daha sonra şunları belgelemelidir:
 ## What should not be done here
 ## Burada ne yapılmamalıdır
 
-Do not interpret this host surface as an instruction to relocate shared root project trees under `hosts/makpi51crawler/`.
+Do not interpret this host surface as an instruction to relocate every repository tree under `hosts/makpi51crawler/`.
 
 Do not assume that GitHub-only path moves are harmless for other checkouts of the same branch.
 
 Do not mix host-documentation intent with physical repository-tree relocation without an explicit, separately validated design decision.
 
-Bu host yüzeyini, ortak kök proje ağaçlarının `hosts/makpi51crawler/` altına taşınması talimatı olarak yorumlama.
+Bu host yüzeyini, repository içindeki her ağacın `hosts/makpi51crawler/` altına taşınması talimatı olarak yorumlama.
 
 Aynı branch'in diğer checkout'ları için GitHub-only path taşımalarının zararsız olduğunu varsayma.
 
@@ -88,10 +88,14 @@ Host-dokümantasyon niyetini, açık ve ayrıca doğrulanmış bir tasarım kara
 ## Current state
 ## Güncel durum
 
-This host surface is open and active, but still intentionally thin.
+This host surface is open and active.
 
-The next correct growth direction is stronger host-operational documentation, not blind repository-tree relocation.
+It now intentionally contains the tracked `python/`, `sql/`, and `crawler_exports/` work surfaces for the crawler host.
 
-Bu host yüzeyi açık ve aktiftir, ancak hâlâ bilinçli olarak incedir.
+The next correct growth direction is careful internal reference cleanup, runbook alignment, and host-operational documentation growth — not another blind path move.
 
-Bir sonraki doğru büyüme yönü kör repository-ağacı taşıması değil, daha güçlü host-operasyon dokümantasyonudur.
+Bu host yüzeyi açık ve aktiftir.
+
+Artık crawler host'u için tracked `python/`, `sql/` ve `crawler_exports/` çalışma yüzeylerini bilinçli olarak içerir.
+
+Bir sonraki doğru büyüme yönü başka bir kör path taşıması değil; dikkatli iç referans temizliği, runbook hizalama ve host-operasyon dokümantasyonunun büyütülmesidir.

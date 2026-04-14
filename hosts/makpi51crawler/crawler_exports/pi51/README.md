@@ -9,11 +9,11 @@
 **Pi51 Export Source**, Pi51 crawler düğümünden üretilen ve kanonik LogisticSearch repository akışına bilinçli olarak alınan export materyalleri için üretici-kapsamlı alt ağaçtır. Bu alt ağaç, kaynak kimliğini açıkça ayırmak için vardır: altındaki export artefact’larının genel veya karışık bir üretici havuzuna değil, Pi51 kökenli crawler yoluna ait olduğunu gösterir.
 ## Purpose
 
-This subtree provides a clean source boundary inside `crawler_exports/`. Its role is to group together all repository-worthy export channels that originate from Pi51, so that downstream consumers can understand the producer context without depending on hidden operational assumptions.
+This subtree provides a clean source boundary inside `hosts/makpi51crawler/crawler_exports/`. Its role is to group together all repository-worthy export channels that originate from Pi51, so that downstream consumers can understand the producer context without depending on hidden operational assumptions.
 
 ## Amaç
 
-Bu alt ağaç, `crawler_exports/` içinde temiz bir kaynak sınırı sağlar. Rolü; Pi51’den gelen ve repository’ye girmeye değer tüm export kanallarını bir arada tutarak, aşağı akıştaki tüketicilerin üretici bağlamını gizli operasyon varsayımlarına ihtiyaç duymadan anlayabilmesini sağlamaktır.
+Bu alt ağaç, `hosts/makpi51crawler/crawler_exports/` içinde temiz bir kaynak sınırı sağlar. Rolü; Pi51’den gelen ve repository’ye girmeye değer tüm export kanallarını bir arada tutarak, aşağı akıştaki tüketicilerin üretici bağlamını gizli operasyon varsayımlarına ihtiyaç duymadan anlayabilmesini sağlamaktır.
 ## Producer Identity
 
 Pi51 is treated as a dedicated crawler and data-origin node in the current LogisticSearch architecture. It is not the final decision layer for ranking or outreach and is not intended to be a mixed application runtime surface. Therefore, this subtree should be read as a producer-origin export surface for crawler-side outputs that are intentionally promoted into a repository-visible GitHub transport/history path. It must not be read as proof that all live Pi51-to-Ubuntu Desktop data movement is GitHub-mediated, because the current primary physical database/export transfer path uses removable media from `/srv/data` under operator control.
@@ -27,8 +27,8 @@ Use these surfaces as the current hub / reading map around the Pi51 export-sourc
 
 - `README.md` — root repository entry surface
 - `docs/README.md` — documentation hub and safest beginner reading map
-- `crawler_exports/README.md` — crawler-exports hub surface
-- `crawler_exports/pi51/github_batch_v1/README.md` — current Pi51 channel contract surface
+- `hosts/makpi51crawler/crawler_exports/README.md` — crawler-exports hub surface
+- `hosts/makpi51crawler/crawler_exports/pi51/github_batch_v1/README.md` — current Pi51 channel contract surface
 
 This file should be read as the Pi51 producer-source hub, not as a standalone isolated note.
 
@@ -38,8 +38,8 @@ Pi51 export-kaynak alanı etrafındaki mevcut merkez / okuma haritası olarak ş
 
 - `README.md` — repository kök giriş yüzeyi
 - `docs/README.md` — dokümantasyon merkezi ve başlangıç için en güvenli okuma haritası
-- `crawler_exports/README.md` — crawler-exports hub yüzeyi
-- `crawler_exports/pi51/github_batch_v1/README.md` — mevcut Pi51 kanal sözleşmesi yüzeyi
+- `hosts/makpi51crawler/crawler_exports/README.md` — crawler-exports hub yüzeyi
+- `hosts/makpi51crawler/crawler_exports/pi51/github_batch_v1/README.md` — mevcut Pi51 kanal sözleşmesi yüzeyi
 
 Bu dosya, tek başına izole bir not olarak değil, Pi51 üretici-kaynak hub yüzeyi olarak okunmalıdır.
 
@@ -51,9 +51,9 @@ Use this order:
 
 1. `README.md` — understand the repository-level direction first
 2. `docs/README.md` — understand the documentation hub and reading model
-3. `crawler_exports/README.md` — understand the broader export surface first
-4. `crawler_exports/pi51/README.md` — understand the Pi51 producer/source boundary
-5. `crawler_exports/pi51/github_batch_v1/README.md` — understand the currently active Pi51 export channel
+3. `hosts/makpi51crawler/crawler_exports/README.md` — understand the broader export surface first
+4. `hosts/makpi51crawler/crawler_exports/pi51/README.md` — understand the Pi51 producer/source boundary
+5. `hosts/makpi51crawler/crawler_exports/pi51/github_batch_v1/README.md` — understand the currently active Pi51 export channel
 
 ## Başlangıç seviyesi okuma yolu
 
@@ -63,15 +63,15 @@ Sıfırdan başlıyorsan Pi51 export yüzeyini yalnızca dosya adlarına bakarak
 
 1. `README.md` — önce repository seviyesindeki yönü anla
 2. `docs/README.md` — dokümantasyon merkezini ve okuma modelini anla
-3. `crawler_exports/README.md` — önce daha geniş export yüzeyini anla
-4. `crawler_exports/pi51/README.md` — Pi51 üretici/kaynak sınırını anla
-5. `crawler_exports/pi51/github_batch_v1/README.md` — şu anda aktif olan Pi51 export kanalını anla
+3. `hosts/makpi51crawler/crawler_exports/README.md` — önce daha geniş export yüzeyini anla
+4. `hosts/makpi51crawler/crawler_exports/pi51/README.md` — Pi51 üretici/kaynak sınırını anla
+5. `hosts/makpi51crawler/crawler_exports/pi51/github_batch_v1/README.md` — şu anda aktif olan Pi51 export kanalını anla
 
 ## Current tracked subsurface
 
 At the current repository point, the main tracked channel under this producer subtree is:
 
-- `crawler_exports/pi51/github_batch_v1/`
+- `hosts/makpi51crawler/crawler_exports/pi51/github_batch_v1/`
 
 This is not a decorative path. It is the current repository-visible Pi51 export channel family, not proof of the sole live physical transfer path.
 
@@ -79,17 +79,17 @@ This is not a decorative path. It is the current repository-visible Pi51 export 
 
 Mevcut repository noktasında bu üretici alt ağacı altındaki ana izlenen kanal şudur:
 
-- `crawler_exports/pi51/github_batch_v1/`
+- `hosts/makpi51crawler/crawler_exports/pi51/github_batch_v1/`
 
 Bu süs amaçlı bir yol değildir. Bu, repository’de görünür olan güncel Pi51 export kanal ailesidir; tek canlı fiziksel transfer yolu olduğunun kanıtı değildir.
 
 ## Expected Contents
 
-This area is expected to contain channel-scoped subtrees that represent concrete export delivery families from Pi51. A channel may define its own directory contract, catalog files, batch layout, and integrity conventions, but all such material should still remain aligned with the broader `crawler_exports/` discipline.
+This area is expected to contain channel-scoped subtrees that represent concrete export delivery families from Pi51. A channel may define its own directory contract, catalog files, batch layout, and integrity conventions, but all such material should still remain aligned with the broader `hosts/makpi51crawler/crawler_exports/` discipline.
 
 ## Beklenen İçerik
 
-Bu alanın, Pi51’den gelen somut export teslim ailelerini temsil eden kanal-kapsamlı alt ağaçlar içermesi beklenir. Her kanal kendi dizin sözleşmesini, catalog dosyalarını, batch yerleşimini ve bütünlük kurallarını tanımlayabilir; ancak tüm bu materyal yine de daha geniş `crawler_exports/` disipliniyle uyumlu kalmalıdır.
+Bu alanın, Pi51’den gelen somut export teslim ailelerini temsil eden kanal-kapsamlı alt ağaçlar içermesi beklenir. Her kanal kendi dizin sözleşmesini, catalog dosyalarını, batch yerleşimini ve bütünlük kurallarını tanımlayabilir; ancak tüm bu materyal yine de daha geniş `hosts/makpi51crawler/crawler_exports/` disipliniyle uyumlu kalmalıdır.
 ## Operational Meaning
 
 Operationally, this subtree helps answer a simple but important question: “Which producer created the export artifacts that were intentionally promoted into the repository-visible transport/history surface?” Keeping that boundary explicit improves reviewability, troubleshooting, and data lineage clarity without implying that GitHub is the only active Pi51-to-Ubuntu Desktop data path.

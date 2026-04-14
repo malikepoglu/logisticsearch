@@ -180,9 +180,9 @@ The tracked dependency surface for this directory.
   * `bootstrap_venv.sh`
 Controlled local venv bootstrap helper for this Python surface.
 
-The active Python runtime family now lives under `python/webcrawler/lib/`.
+The active Python runtime family now lives under `hosts/makpi51crawler/python/webcrawler/lib/`.
 
-Aktif Python runtime ailesi artık `python/webcrawler/lib/` altında yaşamaktadır.
+Aktif Python runtime ailesi artık `hosts/makpi51crawler/python/webcrawler/lib/` altında yaşamaktadır.
 
 ## Canonical lean runtime direction
 
@@ -437,7 +437,7 @@ Current proven status:
   * committed browser-render acquisition seam exists
   * committed repo-local browser smoke exists and has been proven on the real crawler machine
 
-Current missing integration truth:
+Current integration truth:
 
   * the main worker runtime now selects browser/default acquisition inside the canonical fetch path
   * the narrow browser seam still remains explicit as a separate implementation surface for now
@@ -454,7 +454,7 @@ Güncel kanıtlanmış durum:
   * commit edilmiş browser-render acquisition seam'i mevcut
   * commit edilmiş repo-local browser smoke mevcut ve gerçek crawler makinesinde kanıtlandı
 
-Güncel eksik entegrasyon doğrusu:
+Güncel entegrasyon doğrusu:
 
   * ana worker runtime artık kanonik fetch yolu içinde browser/default acquisition seçimi yapıyor
   * dar browser seam'i ise şimdilik ayrı ve açık bir implementasyon yüzeyi olarak kalmaya devam ediyor
@@ -464,12 +464,11 @@ Güncel eksik entegrasyon doğrusu:
 
 The next coding order must remain narrow:
 
-  1. first finish README truth and commit it
-  2. then rename the Python surfaces in one controlled patch
-  3. then repair imports and smoke references
-  4. then re-prove syntax and browser smoke
-  5. only then evolve the acquisition home
-  6. the narrow method-selection seam is now present inside the main worker runtime
+  1. first finish README and path-consistency truth
+  2. then repair remaining docs, runbooks, and internal references
+  3. then re-prove syntax and browser smoke
+  4. then re-prove the renamed host-scoped worker surface end to end
+  5. only then evolve the acquisition home further
 
 Do not spread acquisition logic across multiple competing runtime centers.
 
@@ -477,12 +476,11 @@ Do not spread acquisition logic across multiple competing runtime centers.
 
 Sonraki kodlama sırası dar kalmalıdır:
 
-  1. önce README doğrusunu tamamlayıp commit etmek
-  2. sonra Python yüzeylerini tek bir kontrollü patch ile yeniden adlandırmak
-  3. ardından import ve smoke referanslarını onarmak
-  4. sonra sözdizimi ve browser smoke'u yeniden kanıtlamak
-  5. ancak ondan sonra acquisition evini büyütmek
-  6. ve ancak bunun ardından ana worker runtime içine tek bir dar selector seam'i eklemek
+  1. önce README ve path-consistency doğrusunu tamamlamak
+  2. sonra kalan doküman, runbook ve iç referansları onarmak
+  3. ardından sözdizimi ve browser smoke'u yeniden kanıtlamak
+  4. sonra yeniden adlandırılmış host-scoped worker yüzeyini uçtan uca yeniden kanıtlamak
+  5. ancak ondan sonra acquisition evini daha da büyütmek
 
 Acquisition mantığı birden fazla yarışan runtime merkezine saçılmamalıdır.
 
@@ -498,8 +496,8 @@ The most important current authority surfaces for this worker directory are:
 - `docs/SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
 - `docs/SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
 - `docs/SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`
-- `sql/crawler_core/README.md`
-- `sql/crawler_core/906_seed_frontier_entrypoint_bootstrap.psql.sql`
+- `hosts/makpi51crawler/sql/crawler_core/README.md`
+- `hosts/makpi51crawler/sql/crawler_core/906_seed_frontier_entrypoint_bootstrap.psql.sql`
 
 Code here must follow those documents.
 
@@ -517,8 +515,8 @@ Bu worker dizini için en önemli güncel otorite yüzeyleri şunlardır:
 - `docs/SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
 - `docs/SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
 - `docs/SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`
-- `sql/crawler_core/README.md`
-- `sql/crawler_core/906_seed_frontier_entrypoint_bootstrap.psql.sql`
+- `hosts/makpi51crawler/sql/crawler_core/README.md`
+- `hosts/makpi51crawler/sql/crawler_core/906_seed_frontier_entrypoint_bootstrap.psql.sql`
 
 Buradaki kod bu dokümanları izlemelidir.
 
@@ -576,7 +574,7 @@ Güncel kontrollü bağımlılık kuralı şudur:
 
 ## Minimal processed-output storage routing
 
-This directory also includes `python/webcrawler/lib/logisticsearch1_5_storage_routing.py`.
+This directory also includes `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_5_storage_routing.py`.
 
 Current minimal canonical storage rule:
 
@@ -590,7 +588,7 @@ This routing truth is intentionally narrow and explicit.
 
 ## Minimal işlenmiş-çıktı storage routing
 
-Bu dizin ayrıca `python/webcrawler/lib/logisticsearch1_5_storage_routing.py` dosyasını da içerir.
+Bu dizin ayrıca `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_5_storage_routing.py` dosyasını da içerir.
 
 Güncel minimal kanonik storage kuralı şudur:
 
@@ -604,13 +602,13 @@ Bu routing doğrusu bilinçli olarak dar ve açık tutulmuştur.
 
 
 ## Current canonical layout direction
-At the current repository point, the live Python runtime family is already grouped under `python/webcrawler/lib/`.
+At the current repository point, the live Python runtime family is already grouped under `hosts/makpi51crawler/python/webcrawler/lib/`.
 
 That is the current repository truth.
 
 The canonical direction is now narrower and simpler:
 
-- all active runtime Python files stay under `python/webcrawler/lib/`
+- all active runtime Python files stay under `hosts/makpi51crawler/python/webcrawler/lib/`
 - the numbered hierarchy stays visible there in one place
 - `lib/logisticsearch2_worker_claim_loop.py` already lives in `lib/` as the thin operator/CLI surface
 - `lib/logisticsearch1_2_1_browser_acquisition_smoke.py` already lives in `lib/` as the repo-local browser smoke entry
@@ -618,18 +616,18 @@ The canonical direction is now narrower and simpler:
 
 Use these supporting surfaces:
 
-- `python/webcrawler/lib/README.md`
+- `hosts/makpi51crawler/python/webcrawler/lib/README.md`
 - `docs/TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`
 - `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
 
 ## Güncel kanonik yerleşim yönü
-Mevcut repository noktasında canlı Python runtime ailesi artık zaten `python/webcrawler/lib/` altında gruplanmıştır.
+Mevcut repository noktasında canlı Python runtime ailesi artık zaten `hosts/makpi51crawler/python/webcrawler/lib/` altında gruplanmıştır.
 
 Bu, güncel repository doğrusudur.
 
 Kanonik yön artık daha dar ve daha sadedir:
 
-- tüm aktif runtime Python dosyaları `python/webcrawler/lib/` altında kalır
+- tüm aktif runtime Python dosyaları `hosts/makpi51crawler/python/webcrawler/lib/` altında kalır
 - numaralı hiyerarşi orada tek yerde görünür kalır
 - `lib/logisticsearch2_worker_claim_loop.py` ince operatör/CLI yüzeyi olarak zaten `lib/` içinde yaşar
 - `lib/logisticsearch1_2_1_browser_acquisition_smoke.py` repo-local browser smoke girişi olarak zaten `lib/` içinde yaşar
@@ -637,14 +635,14 @@ Kanonik yön artık daha dar ve daha sadedir:
 
 Şu destek yüzeylerini kullan:
 
-- `python/webcrawler/lib/README.md`
+- `hosts/makpi51crawler/python/webcrawler/lib/README.md`
 - `docs/TOPIC_WEBCRAWLER_RUNTIME_LAYOUT_AND_NAMING_STANDARD.md`
 - `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
 
 ## Current truth correction
 ## Güncel doğruluk düzeltmesi
 
-At the current repository point, the active Python runtime family already lives under `python/webcrawler/lib/`.
+At the current repository point, the active Python runtime family already lives under `hosts/makpi51crawler/python/webcrawler/lib/`.
 
 That is now the current repository truth.
 
@@ -652,7 +650,7 @@ Use the following boundary topic when you need the strict beginner-first explana
 
 * `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
 
-Mevcut repository noktasında aktif Python runtime ailesi artık `python/webcrawler/lib/` altında yaşamaktadır.
+Mevcut repository noktasında aktif Python runtime ailesi artık `hosts/makpi51crawler/python/webcrawler/lib/` altında yaşamaktadır.
 
 Bu artık güncel repository doğrusudur.
 
@@ -663,7 +661,7 @@ Raw fetch, parse, taxonomy, seçim sırası ve lojistik dışı sayfaların ele 
 ## Current truth correction after real main-runtime selection proof
 The current repository truth is now this:
 
-* the active Python runtime family already lives under `python/webcrawler/lib/`
+* the active Python runtime family already lives under `hosts/makpi51crawler/python/webcrawler/lib/`
 * `lib/logisticsearch1_main_worker_runtime.py` now contains a narrow method-selection seam inside the real main runtime path
 * when `acquisition_method` resolves to `browser`, the runtime can route to `fetch_page_with_browser_to_raw_storage(...)`
 * when no browser method is selected, the runtime still preserves the direct HTTP fallback through `fetch_page_to_raw_storage(...)`
@@ -673,7 +671,7 @@ The current repository truth is now this:
 ## Gerçek ana-runtime seçim kanıtı sonrası güncel doğruluk düzeltmesi
 Mevcut repository doğrusu artık şudur:
 
-* aktif Python runtime ailesi zaten `python/webcrawler/lib/` altında yaşamaktadır
+* aktif Python runtime ailesi zaten `hosts/makpi51crawler/python/webcrawler/lib/` altında yaşamaktadır
 * `lib/logisticsearch1_main_worker_runtime.py` artık gerçek ana runtime yolu içinde dar bir method-selection seam'i içermektedir
 * `acquisition_method` değeri `browser` olarak çözüldüğünde runtime, `fetch_page_with_browser_to_raw_storage(...)` yoluna gidebilmektedir
 * browser yöntemi seçilmediğinde runtime, `fetch_page_to_raw_storage(...)` üzerinden direct HTTP fallback yolunu korumaktadır
@@ -682,22 +680,22 @@ Mevcut repository doğrusu artık şudur:
 ## Current root-surface and host-boundary truth
 ## Güncel kök-yüzey ve host-sınırı doğrusu
 
-At the current repository point, `python/webcrawler/` remains part of the shared root `python/` project surface.
+At the current repository point, this webcrawler surface now lives at `hosts/makpi51crawler/python/webcrawler/`.
 
-It is not being physically relocated under `hosts/makpi51crawler/`.
+It is intentionally located under the active crawler-host Python surface.
 
-The `hosts/` family documents host-specific operational truth, while this surface remains the shared webcrawler Python work surface.
+The `hosts/` family documents host-specific operational truth, and this subtree is now the tracked webcrawler Python work surface for `makpi51crawler` inside the repository.
 
 For host-side boundary reading, also see:
 
 - `hosts/README.md`
 - `hosts/makpi51crawler/README.md`
 
-Mevcut repository noktasında `python/webcrawler/`, ortak kök `python/` proje yüzeyinin parçası olarak kalır.
+Mevcut repository noktasında bu webcrawler yüzeyi artık `hosts/makpi51crawler/python/webcrawler/` yolunda yaşamaktadır.
 
-Bu yüzey fiziksel olarak `hosts/makpi51crawler/` altına taşınmamaktadır.
+Bu yüzey aktif crawler-host Python yüzeyi altında bilinçli olarak konumlandırılmıştır.
 
-`hosts/` ailesi host-özel operasyon doğrusunu belgelerken, bu yüzey ortak webcrawler Python çalışma yüzeyi olarak kalır.
+`hosts/` ailesi host-özel operasyon doğrusunu belgeler; bu alt ağaç ise artık repository içinde `makpi51crawler` için tracked webcrawler Python çalışma yüzeyidir.
 
 Host-tarafı sınır okuması için ayrıca şunlara bak:
 

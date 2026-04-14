@@ -13,7 +13,7 @@ This document defines the current canonical lease-renewal / heartbeat SQL contra
 Its purpose is to record and standardize the lease-renewal SQL surface that now exists in crawler-core, and to make clear that the remaining gap has shifted from SQL absence to worker-side heartbeat discipline.
 
 Current status note:
-- `frontier.renew_url_lease(...)` has now been added to `sql/crawler_core/002_frontier_claim_and_lease.sql`
+- `frontier.renew_url_lease(...)` has now been added to `hosts/makpi51crawler/sql/crawler_core/002_frontier_claim_and_lease.sql`
 - targeted scratch smoke validation has passed on `logisticsearch_crawler_lease_renew_scratch`
 - the remaining design problem is now operational worker usage, not absence of SQL surface
 - the canonical worker-side usage rule is documented in `docs/SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
@@ -26,7 +26,7 @@ Bu belge, LogisticSearch crawler için mevcut kanonik lease-renewal / heartbeat 
 Amacı, crawler-core içinde artık mevcut olan lease-renewal SQL yüzeyini kayda geçirip standardize etmek ve kalan boşluğun artık SQL yokluğundan worker-tarafı heartbeat disiplinine kaydığını açık hale getirmektir.
 
 Mevcut durum notu:
-- `frontier.renew_url_lease(...)` artık `sql/crawler_core/002_frontier_claim_and_lease.sql` içine eklenmiştir
+- `frontier.renew_url_lease(...)` artık `hosts/makpi51crawler/sql/crawler_core/002_frontier_claim_and_lease.sql` içine eklenmiştir
 - hedefli scratch smoke validation `logisticsearch_crawler_lease_renew_scratch` üzerinde geçmiştir
 - artık kalan tasarım problemi SQL yüzeyinin yokluğu değil, worker-tarafı operasyon kullanımıdır
 - kanonik worker-tarafı kullanım kuralı `docs/SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md` içinde dokümante edilmiştir

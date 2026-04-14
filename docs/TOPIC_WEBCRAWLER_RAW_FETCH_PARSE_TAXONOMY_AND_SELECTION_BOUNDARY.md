@@ -122,8 +122,8 @@ Henüz alan-anlamı üretilmiş veri değildir.
 - taxonomy kararı çoktan verildi
 - parse/extraction aşaması çoktan tamamlandı
 
-## What `python/webcrawler/lib/logisticsearch1_1_fetch_runtime.py` is responsible for
-## `python/webcrawler/lib/logisticsearch1_1_fetch_runtime.py` tam olarak neden sorumludur
+## What `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_fetch_runtime.py` is responsible for
+## `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_fetch_runtime.py` tam olarak neden sorumludur
 
 This file is the acquisition home.
 
@@ -364,7 +364,7 @@ At the current controlled stage, the system already proves:
 - robots fetch exists
 - narrow browser acquisition exists
 - browser smoke evidence exists
-- active runtime family lives under `python/webcrawler/lib/`
+- active runtime family lives under `hosts/makpi51crawler/python/webcrawler/lib/`
 
 This is still not the same thing as full crawler-core closure.
 
@@ -374,7 +374,7 @@ Güncel kontrollü aşamada sistem şunları zaten kanıtlamaktadır:
 - robots fetch vardır
 - dar browser acquisition vardır
 - browser smoke kanıtı vardır
-- aktif runtime ailesi `python/webcrawler/lib/` altında yaşamaktadır
+- aktif runtime ailesi `hosts/makpi51crawler/python/webcrawler/lib/` altında yaşamaktadır
 
 Bu hâlâ tam crawler-core closure ile aynı şey değildir.
 

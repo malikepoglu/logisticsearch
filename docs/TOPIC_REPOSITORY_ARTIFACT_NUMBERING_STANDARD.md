@@ -472,7 +472,7 @@ Current LogisticSearch rule for the web crawler domain:
 - This rule is for crawler-domain documentation naming, not for every surface that merely mentions crawler-related content.
 - Before creating or renaming a crawler document, an overlap audit must be performed against existing `README`, `TOPIC`, `PLAN`, `SEAL`, `NEXT_STEP`, `PREREQUISITES`, and `RUNBOOK` surfaces so that no duplicate or parallel document is created.
 - Role-locked generic filenames should remain unchanged when their filename already carries a stable operational role. Current examples include `README.md`, `NEXT_STEP.md`, `PREREQUISITES.md`, `COVERAGE_MATRIX.md`, `CHRONOLOGY_SPLIT_PLAN.md`, `PRIMARY_WORKING_SURFACE_SEAL.md`, `SCRATCH_APPLY_TEST_PLAN.md`, `SCRATCH_APPLY_VALIDATION_SEAL.md`, and `SURFACE_ROLE_MAP.md`.
-- In the smallest-safe migration pass, generated batch/data artifacts under `crawler_exports/pi51/github_batch_v1/...` and operational SQL / shell / evidence files under `sql/crawler_core/` are excluded from blind naming migration.
+- In the smallest-safe migration pass, generated batch/data artifacts under `hosts/makpi51crawler/crawler_exports/pi51/github_batch_v1/...` and operational SQL / shell / evidence files under `hosts/makpi51crawler/sql/crawler_core/` are excluded from blind naming migration.
 - Naming changes must remain current-truth-only and must not imply a broader migration than what has actually been audited and applied.
 
 ## SECTION1_WEBCRAWLER Adlandırma Kuralı
@@ -483,7 +483,7 @@ Web crawler alanı için mevcut LogisticSearch kuralı:
 - Bu kural, crawler ile ilgili içerikten bahseden her yüzeye otomatik uygulanmaz; yalnızca crawler alanına ait dokümantasyon adlandırması içindir.
 - Yeni bir crawler belgesi oluşturmadan veya mevcut belgeyi yeniden adlandırmadan önce mevcut `README`, `TOPIC`, `PLAN`, `SEAL`, `NEXT_STEP`, `PREREQUISITES` ve `RUNBOOK` yüzeylerine karşı overlap denetimi yapılmalıdır; yinelenen veya paralel belge oluşmamalıdır.
 - Dosya adı zaten kararlı bir operasyonel rol taşıyorsa role-locked genel dosya adları korunmalıdır. Güncel örnekler: `README.md`, `NEXT_STEP.md`, `PREREQUISITES.md`, `COVERAGE_MATRIX.md`, `CHRONOLOGY_SPLIT_PLAN.md`, `PRIMARY_WORKING_SURFACE_SEAL.md`, `SCRATCH_APPLY_TEST_PLAN.md`, `SCRATCH_APPLY_VALIDATION_SEAL.md`, `SURFACE_ROLE_MAP.md`.
-- En küçük güvenli geçiş adımında `crawler_exports/pi51/github_batch_v1/...` altındaki üretilmiş batch/veri artifaktları ile `sql/crawler_core/` altındaki operasyonel SQL / shell / evidence dosyaları körlemesine adlandırma geçişinin dışındadır.
+- En küçük güvenli geçiş adımında `hosts/makpi51crawler/crawler_exports/pi51/github_batch_v1/...` altındaki üretilmiş batch/veri artifaktları ile `hosts/makpi51crawler/sql/crawler_core/` altındaki operasyonel SQL / shell / evidence dosyaları körlemesine adlandırma geçişinin dışındadır.
 - Adlandırma değişiklikleri yalnızca güncel gerçeği yansıtmalı; fiilen denetlenmemiş veya uygulanmamış daha geniş bir geçiş yapılmış gibi davranmamalıdır.
 
 <!-- END SECTION1_WEBCRAWLER_NAMING_RULE -->

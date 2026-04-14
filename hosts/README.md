@@ -16,42 +16,42 @@ This directory is the canonical repository-tracked host-operations family.
 
 It exists to describe the operational truth of concrete machines used by the project in a controlled, beginner-readable, and audit-friendly form.
 
-This family does **not** replace the repository root working surfaces.
-
-This family does **not** mean that tracked Python, SQL, or crawler export trees must physically move under `hosts/`.
+At the current repository point, it also contains explicitly validated host-scoped tracked work surfaces where the repository has intentionally been organized that way.
 
 This family does **not** mean whole-machine byte-for-byte filesystem mirroring.
+
+This family does **not** mean every repository surface for every host must blindly move under `hosts/`.
 
 Bu dizin, kanonik repository-tracked host-operations ailesidir.
 
 Bu aile, projede kullanılan somut makinelerin operasyonel doğrusunu kontrollü, beginner-okunur ve denetim-dostu biçimde açıklamak için vardır.
 
-Bu aile repository kökündeki çalışma yüzeylerinin yerini **almaz**.
-
-Bu aile, tracked Python, SQL veya crawler export ağaçlarının fiziksel olarak `hosts/` altına taşınması gerektiği anlamına **gelmez**.
+Mevcut repository noktasında bu aile, repository bilinçli olarak bu şekilde düzenlendiğinde açıkça doğrulanmış host-kapsamlı tracked çalışma yüzeylerini de içerir.
 
 Bu aile, makinelerin tamamının byte-for-byte filesystem aynası anlamına **gelmez**.
+
+Bu aile, her repository yüzeyinin her host için kör biçimde `hosts/` altına taşınması gerektiği anlamına **gelmez**.
 
 ## Current canonical rule
 ## Güncel kanonik kural
 
-Repository root remains the canonical location of the shared project work surfaces such as:
+At the current repository point, the active crawler-host tracked work surfaces live under:
 
-- `python/`
-- `sql/`
-- `crawler_exports/`
-- `docs/`
+- `hosts/makpi51crawler/python/`
+- `hosts/makpi51crawler/sql/`
+- `hosts/makpi51crawler/crawler_exports/`
+- `docs/` remains the repository-wide documentation root at repository top level
 
-The `hosts/` family is a host-specific operational truth layer that sits beside those root surfaces.
+The `hosts/` family therefore carries both host-operational truth and the explicitly validated host-scoped work surfaces of `makpi51crawler`.
 
-Repository kökü, aşağıdaki ortak proje çalışma yüzeylerinin kanonik yeri olarak kalır:
+Mevcut repository noktasında aktif crawler-host tracked çalışma yüzeyleri şu yollar altında yaşar:
 
-- `python/`
-- `sql/`
-- `crawler_exports/`
-- `docs/`
+- `hosts/makpi51crawler/python/`
+- `hosts/makpi51crawler/sql/`
+- `hosts/makpi51crawler/crawler_exports/`
+- `docs/`, repository-geneli dokümantasyon kökü olarak repository üst seviyesinde kalır
 
-`hosts/` ailesi ise bu kök yüzeylerin yanında duran host-özel operasyon doğrusu katmanıdır.
+Bu nedenle `hosts/` ailesi, hem host-operasyon doğrusunu hem de `makpi51crawler` için açıkça doğrulanmış host-kapsamlı çalışma yüzeylerini taşır.
 
 ## What belongs here
 ## Buraya ne aittir
@@ -81,27 +81,27 @@ Bu aileye tipik olarak şunlar aittir:
 ## What does not belong here
 ## Buraya ne ait değildir
 
-The following should not be moved here merely because a host uses them:
+The following should not be moved here blindly:
 
-- the shared root `python/` project surface
-- the shared root `sql/` project surface
-- the shared root `crawler_exports/` project surface
-- repository-global files like `.gitignore` and root `README.md`
+- whole-machine dumps or byte-for-byte mirrors
+- disposable host-local clutter, caches, virtual environments, and scratch artifacts
+- repository-global files like `.gitignore`, root `README.md`, and `docs/README.md`
+- unrelated surfaces moved here only because a host happens to use them, without an explicit validated design decision
 
-Aşağıdakiler yalnızca bir host kullandığı için buraya taşınmamalıdır:
+Aşağıdakiler buraya kör biçimde taşınmamalıdır:
 
-- ortak kök `python/` proje yüzeyi
-- ortak kök `sql/` proje yüzeyi
-- ortak kök `crawler_exports/` proje yüzeyi
-- `.gitignore` ve kök `README.md` gibi repository-geneli dosyalar
+- tam makine dump'ları veya byte-for-byte aynalar
+- tek kullanımlık host-yerel dağınık içerikler, cache'ler, sanal ortamlar ve scratch artefact'ları
+- `.gitignore`, kök `README.md` ve `docs/README.md` gibi repository-geneli dosyalar
+- yalnızca bir host kullanıyor diye, açıkça doğrulanmış bir tasarım kararı olmadan buraya taşınan ilgisiz yüzeyler
 
 ## Current scope
 ## Güncel kapsam
 
 1. `hosts/makpi51crawler/` is the first active host surface because the project is currently focused on the crawler node.
 2. `hosts/mak-UbuntuDesktop/` remains only a placeholder until its own turn arrives.
-3. The presence of a host entry does not automatically imply path relocation of project-wide tracked surfaces.
+3. `hosts/makpi51crawler/` now intentionally contains the active tracked `python/`, `sql/`, and `crawler_exports/` work surfaces for the crawler host.
 
 1. `hosts/makpi51crawler/` proje şu anda crawler düğümüne odaklandığı için ilk aktif host yüzeyidir.
 2. `hosts/mak-UbuntuDesktop/` kendi sırası gelene kadar yalnızca placeholder olarak kalır.
-3. Bir host girdisinin bulunması, proje-geneli tracked yüzeylerin otomatik olarak path taşıması yapılacağı anlamına gelmez.
+3. `hosts/makpi51crawler/` artık crawler host'u için aktif tracked `python/`, `sql/` ve `crawler_exports/` çalışma yüzeylerini bilinçli olarak içerir.
