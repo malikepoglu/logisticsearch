@@ -37,7 +37,7 @@ At the current repository point, this folder visibly contains the active numbere
 
 This means the live numbered runtime family is already visible here together in one place.
 
-So this folder is no longer a partial pre-move surface.
+So this folder is no longer a partial transitional runtime surface.
 
 ## Güncel görünen dosyalar
 Mevcut repository noktasında bu klasör, aktif numaralı runtime ailesinin kendisini görünür olarak içerir:
