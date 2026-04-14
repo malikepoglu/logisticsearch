@@ -134,3 +134,27 @@ This directory should be read as a controlled project surface, not merely as sto
 ## Notlar
 
 Bu dizin, yalnızca depolanmış çıktı olarak değil, kontrollü bir proje yüzeyi olarak okunmalıdır. Değeri; tutarlılık, bütünlük ve operasyonel açıklıktan gelir.
+## Current root-surface truth
+## Güncel kök-yüzey doğrusu
+
+At the current repository point, `crawler_exports/` remains a shared root project surface.
+
+It is not being physically relocated under `hosts/makpi51crawler/`.
+
+The `hosts/` family documents host-specific operational truth, while this `crawler_exports/` surface remains the shared repository-visible export and handoff surface.
+
+For host-side boundary reading, also see:
+
+- `hosts/README.md`
+- `hosts/makpi51crawler/README.md`
+
+Mevcut repository noktasında `crawler_exports/`, ortak bir kök proje yüzeyi olarak kalır.
+
+Bu yüzey fiziksel olarak `hosts/makpi51crawler/` altına taşınmamaktadır.
+
+`hosts/` ailesi host-özel operasyon doğrusunu belgelerken, bu `crawler_exports/` yüzeyi repository'de görünür ortak export ve teslim yüzeyi olarak kalır.
+
+Host-tarafı sınır okuması için ayrıca şunlara bak:
+
+- `hosts/README.md`
+- `hosts/makpi51crawler/README.md`

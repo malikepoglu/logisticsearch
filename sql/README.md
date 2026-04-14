@@ -97,3 +97,27 @@ The likely long-term role of this directory includes schema definitions, import 
 ## Beklenen Yön
 
 Bu dizinin muhtemel uzun vadeli rolü; LogisticSearch veri hattını destekleyen şema tanımları, import sorguları, audit kontrolleri, kontrollü dönüşümler ve diğer veritabanı tarafı yapı taşlarını içermektir.
+## Current root-surface truth
+## Güncel kök-yüzey doğrusu
+
+At the current repository point, `sql/` remains a shared root project surface.
+
+It is not being physically relocated under `hosts/makpi51crawler/`.
+
+The `hosts/` family documents host-specific operational truth, while this `sql/` surface remains the shared SQL work surface of the repository.
+
+For host-side boundary reading, also see:
+
+- `hosts/README.md`
+- `hosts/makpi51crawler/README.md`
+
+Mevcut repository noktasında `sql/`, ortak bir kök proje yüzeyi olarak kalır.
+
+Bu yüzey fiziksel olarak `hosts/makpi51crawler/` altına taşınmamaktadır.
+
+`hosts/` ailesi host-özel operasyon doğrusunu belgelerken, bu `sql/` yüzeyi repository'nin ortak SQL çalışma yüzeyi olarak kalır.
+
+Host-tarafı sınır okuması için ayrıca şunlara bak:
+
+- `hosts/README.md`
+- `hosts/makpi51crawler/README.md`
