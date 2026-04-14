@@ -87,7 +87,7 @@ Bu klasör için hedef stabil aile şudur:
 
 This means the active numbered runtime family is now visible here together, including the thin worker CLI and the browser smoke entry.
 
-So this folder can now be read as the live runtime family home rather than as a partial pre-move surface.
+So this folder can now be read as the live runtime family home rather than as a partial transitional runtime surface.
 
 Use the following boundary topic as the canonical boundary truth for raw fetch, parse, taxonomy, selection order, and non-logistics handling:
 
@@ -100,3 +100,27 @@ Dolayısıyla bu klasör artık kısmi pre-move yüzey olarak değil, canlı run
 Raw fetch, parse, taxonomy, seçim sırası ve lojistik dışı sayfaların ele alınışı için aşağıdaki boundary topic'i kanonik sınır doğrusu olarak kullan:
 
 * `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
+## Current root-surface and host-boundary truth
+## Güncel kök-yüzey ve host-sınırı doğrusu
+
+At the current repository point, `python/webcrawler/lib/` remains part of the shared root `python/` project surface.
+
+It is not being physically relocated under `hosts/makpi51crawler/`.
+
+The `hosts/` family documents host-specific operational truth, while this `lib/` folder remains the shared live runtime-family surface inside the root Python tree.
+
+For host-side boundary reading, also see:
+
+- `hosts/README.md`
+- `hosts/makpi51crawler/README.md`
+
+Mevcut repository noktasında `python/webcrawler/lib/`, ortak kök `python/` proje yüzeyinin parçası olarak kalır.
+
+Bu yüzey fiziksel olarak `hosts/makpi51crawler/` altına taşınmamaktadır.
+
+`hosts/` ailesi host-özel operasyon doğrusunu belgelerken, bu `lib/` klasörü kök Python ağacı içindeki ortak canlı runtime-aile yüzeyi olarak kalır.
+
+Host-tarafı sınır okuması için ayrıca şunlara bak:
+
+- `hosts/README.md`
+- `hosts/makpi51crawler/README.md`

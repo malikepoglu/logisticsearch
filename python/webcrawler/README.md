@@ -439,8 +439,8 @@ Current proven status:
 
 Current missing integration truth:
 
-  * the main worker runtime still does not select browser-backed acquisition inside the canonical fetch path
-  * the browser seam is still separate from the main acquisition home
+  * the main worker runtime now selects browser/default acquisition inside the canonical fetch path
+  * the narrow browser seam still remains explicit as a separate implementation surface for now
   * crawler_core must therefore remain open
 
 ## Güncel operasyonel durum özeti
@@ -456,8 +456,8 @@ Güncel kanıtlanmış durum:
 
 Güncel eksik entegrasyon doğrusu:
 
-  * ana worker runtime henüz kanonik fetch yolu içinde browser destekli acquisition seçimi yapmıyor
-  * browser seam'i hâlâ ana acquisition evinden ayrı duruyor
+  * ana worker runtime artık kanonik fetch yolu içinde browser/default acquisition seçimi yapıyor
+  * dar browser seam'i ise şimdilik ayrı ve açık bir implementasyon yüzeyi olarak kalmaya devam ediyor
   * bu nedenle crawler_core açık kalmalıdır
 
 ## Immediate next implementation order
@@ -679,3 +679,27 @@ Mevcut repository doğrusu artık şudur:
 * browser yöntemi seçilmediğinde runtime, `fetch_page_to_raw_storage(...)` üzerinden direct HTTP fallback yolunu korumaktadır
 * `lib/logisticsearch1_3_parse_runtime.py` artık yeniden adlandırılmış iç import yolu üzerinden `lib/logisticsearch1_4_db.py` dosyasını kullanmaktadır
 * bu nedenle crawler_core hâlâ açıktır, ancak worker-entegre browser/default seçim seam'i artık eksik bir kabiliyet değildir
+## Current root-surface and host-boundary truth
+## Güncel kök-yüzey ve host-sınırı doğrusu
+
+At the current repository point, `python/webcrawler/` remains part of the shared root `python/` project surface.
+
+It is not being physically relocated under `hosts/makpi51crawler/`.
+
+The `hosts/` family documents host-specific operational truth, while this surface remains the shared webcrawler Python work surface.
+
+For host-side boundary reading, also see:
+
+- `hosts/README.md`
+- `hosts/makpi51crawler/README.md`
+
+Mevcut repository noktasında `python/webcrawler/`, ortak kök `python/` proje yüzeyinin parçası olarak kalır.
+
+Bu yüzey fiziksel olarak `hosts/makpi51crawler/` altına taşınmamaktadır.
+
+`hosts/` ailesi host-özel operasyon doğrusunu belgelerken, bu yüzey ortak webcrawler Python çalışma yüzeyi olarak kalır.
+
+Host-tarafı sınır okuması için ayrıca şunlara bak:
+
+- `hosts/README.md`
+- `hosts/makpi51crawler/README.md`
