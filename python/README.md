@@ -73,3 +73,27 @@ At the moment, the tracked Python surface is intentionally very small. The activ
 ## Güncel İzlenen Yüzey
 
 Şu anda izlenen Python yüzeyi bilinçli olarak oldukça küçüktür. Bu dizin altındaki aktif izlenen uygulama `python/desktop_import/` alanıdır ve şu an `python/desktop_import/load_pi51_batch_into_postgres.py` ile temsil edilmektedir. Bu da Python yüzeyinin henüz geniş bir framework olmadığı; PostgreSQL yüklemesi öncesi desktop tarafı batch intake hazırlığına odaklanan kontrollü bir destek katmanı olduğu anlamına gelir.
+## Current root-surface truth
+## Güncel kök-yüzey doğrusu
+
+At the current repository point, `python/` remains a shared root project surface.
+
+It is not being physically relocated under `hosts/makpi51crawler/`.
+
+The `hosts/` family documents host-specific operational truth, while this `python/` surface remains the shared Python work surface of the repository.
+
+For host-side boundary reading, also see:
+
+- `hosts/README.md`
+- `hosts/makpi51crawler/README.md`
+
+Mevcut repository noktasında `python/`, ortak bir kök proje yüzeyi olarak kalır.
+
+Bu yüzey fiziksel olarak `hosts/makpi51crawler/` altına taşınmamaktadır.
+
+`hosts/` ailesi host-özel operasyon doğrusunu belgelerken, bu `python/` yüzeyi repository'nin ortak Python çalışma yüzeyi olarak kalır.
+
+Host-tarafı sınır okuması için ayrıca şunlara bak:
+
+- `hosts/README.md`
+- `hosts/makpi51crawler/README.md`

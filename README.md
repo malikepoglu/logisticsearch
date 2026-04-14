@@ -100,3 +100,31 @@ This repository is under active architectural and operational refinement. Paths,
 ## Durum Notu
 
 Bu repository aktif mimari ve operasyon iyileştirmesi altındadır. Yollar, modül sınırları ve destek yüzeyleri sistem temizlenip olgunlaştıkça evrilebilir. Buna rağmen yön stabildir: önce disiplinli bir lojistik veri altyapısı kurmak, sonra bunun üzerine cilalı uygulama katmanları inşa etmek.
+## Current repository structure rule
+## Güncel repository yapı kuralı
+
+The current canonical repository rule is simple:
+
+- shared project work surfaces stay at repository root
+- `hosts/` is a host-operations and host-truth family
+- `hosts/` does not physically replace root `python/`, root `sql/`, or root `crawler_exports/`
+
+In the current repository point, the main shared work surfaces remain visible at root through:
+
+- `python/README.md`
+- `sql/README.md`
+- `crawler_exports/README.md`
+- `hosts/README.md`
+
+Güncel kanonik repository kuralı basittir:
+
+- ortak proje çalışma yüzeyleri repository kökünde kalır
+- `hosts/` bir host-operasyon ve host-doğruluk ailesidir
+- `hosts/`, kök `python/`, kök `sql/` veya kök `crawler_exports/` yüzeylerinin fiziksel yerini almaz
+
+Mevcut repository noktasında ana ortak çalışma yüzeyleri kökte şu okumalar üzerinden görünür kalır:
+
+- `python/README.md`
+- `sql/README.md`
+- `crawler_exports/README.md`
+- `hosts/README.md`
