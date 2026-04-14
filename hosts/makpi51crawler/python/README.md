@@ -1,99 +1,70 @@
-# Python Surface
+# Python Surface: makpi51crawler
+# Python Yüzeyi: makpi51crawler
 
-## Overview
+Documentation hub:
 
-This directory is intended for tracked Python code that belongs in the canonical LogisticSearch repository. Its purpose is to hold durable support code such as import/export helpers, crawler-side or desktop-side utilities, validation tools, and other project-level Python assets that should be versioned, reviewed, and kept reproducible.
+* `hosts/makpi51crawler/README.md` — host root for makpi51crawler
+* `hosts/README.md` — host family root
+* `README.md` — repository root surface
+* `docs/README.md` — documentation hub
 
-## Genel Bakış
+Dokümantasyon merkezi:
 
-Bu dizin, kanonik LogisticSearch repository’sinde izlenmesi gereken Python kodları için ayrılmıştır. Amacı; import/export yardımcıları, crawler veya desktop tarafı araçları, doğrulama araçları ve versiyonlanması, gözden geçirilmesi ve tekrar üretilebilir kalması gereken diğer proje düzeyi Python varlıklarını barındırmaktır.
-## Policy
+* `hosts/makpi51crawler/README.md` — makpi51crawler host kökü
+* `hosts/README.md` — host aile kökü
+* `README.md` — repository kök yüzeyi
+* `docs/README.md` — dokümantasyon merkezi
 
-Only durable and repository-worthy Python content should live here. Machine-local virtual environments, cache folders, quick one-off scraps, and other disposable artifacts must stay outside Git or remain ignored. The directory should gradually evolve into a clean and intentional Python support surface rather than an uncontrolled dump area.
+## Purpose
+## Amaç
 
-## Politika
+This directory is the host-scoped Python surface for `makpi51crawler`.
 
-Burada yalnızca kalıcı ve repository’ye girmeye değer Python içerikleri yer almalıdır. Makineye özel sanal ortamlar, cache klasörleri, tek kullanımlık geçici denemeler ve diğer atıl çıktılar Git dışında kalmalı veya ignore edilmelidir. Bu dizin zamanla kontrolsüz bir döküm alanına değil, temiz ve bilinçli bir Python destek yüzeyine dönüşmelidir.
-## Expected Direction
+Bu dizin, `makpi51crawler` için host-kapsamlı Python yüzeyidir.
 
-The likely long-term role of this directory includes import helpers, export validators, structured tools, command-line utilities, and operational scripts that support the LogisticSearch data flow.
+It exists to hold repository-worthy Python material that belongs to the crawler host line and must remain reviewable, versioned, and reproducible.
 
-## Beklenen Yön
+Amacı, crawler host hattına ait olan ve gözden geçirilebilir, versiyonlanabilir ve tekrar üretilebilir kalması gereken repository-değerindeki Python materyalini barındırmaktır.
 
-Bu dizinin muhtemel uzun vadeli rolü; LogisticSearch veri akışını destekleyen import yardımcıları, export doğrulayıcıları, yapısal araçlar, komut satırı yardımcıları ve operasyon script’lerini içermektir.
+## Current tracked sub-surfaces
+## Güncel izlenen alt yüzeyler
 
-## Documentation hub
+* `hosts/makpi51crawler/python/desktop_import/README.md` — narrow Desktop-import helper line kept under the host-scoped Python family
+* `hosts/makpi51crawler/python/webcrawler/README.md` — current controlled Python-side crawler runtime surface
+* `hosts/makpi51crawler/python/webcrawler/lib/README.md` — crawler runtime library family and internal module layout
 
-Use these surfaces as the current hub / reading map around the Python area:
+* `hosts/makpi51crawler/python/desktop_import/README.md` — host-kapsamlı Python ailesi altında tutulan dar Desktop-import yardımcı hattı
+* `hosts/makpi51crawler/python/webcrawler/README.md` — mevcut kontrollü Python-tarafı crawler runtime yüzeyi
+* `hosts/makpi51crawler/python/webcrawler/lib/README.md` — crawler runtime kütüphane ailesi ve iç modül yerleşimi
 
-- `README.md` — root repository entry surface
-- `docs/README.md` — documentation hub and safest beginner reading map
-- `hosts/makpi51crawler/python/desktop_import/README.md` — current real Python sub-surface with explicit current behavior
+## Current judgement
+## Güncel değerlendirme
 
-This file should be read as the Python-area hub, not as a standalone isolated note.
+At the current repository point, this directory must no longer be read as a `desktop_import`-only area.
 
-## Dokümantasyon merkezi
+Mevcut repository noktasında bu dizin artık yalnızca `desktop_import` alanı gibi okunmamalıdır.
 
-Python alanı etrafındaki mevcut merkez / okuma haritası olarak şu yüzeyleri kullan:
+The current truth is that this Python surface contains two distinct lines:
 
-- `README.md` — repository kök giriş yüzeyi
-- `docs/README.md` — dokümantasyon merkezi ve başlangıç için en güvenli okuma haritası
-- `hosts/makpi51crawler/python/desktop_import/README.md` — açık mevcut davranışı anlatan güncel gerçek Python alt yüzeyi
+* a narrow helper/import line
+* an active webcrawler runtime line
 
-Bu dosya, tek başına izole bir not olarak değil, Python alanının hub yüzeyi olarak okunmalıdır.
+Güncel gerçek, bu Python yüzeyinin iki ayrı hattı içerdiğidir:
 
-## Beginner-first reading path
+* dar kapsamlı bir yardımcı/import hattı
+* aktif bir webcrawler runtime hattı
 
-If you are starting from zero, do **not** guess the Python surface from filenames alone.
+The webcrawler line is the more active engineering direction and should be treated as the primary live runtime family under this host-scoped Python surface.
 
-Use this order:
+Webcrawler hattı daha aktif mühendislik yönüdür ve bu host-kapsamlı Python yüzeyi altındaki birincil canlı runtime ailesi olarak ele alınmalıdır.
 
-1. `README.md` — understand the repository-level direction first
-2. `docs/README.md` — understand the documentation hub and reading model
-3. `hosts/makpi51crawler/python/README.md` — understand what the Python surface is and is not
-4. `hosts/makpi51crawler/python/desktop_import/README.md` — understand the current real tracked Python sub-surface
-5. `hosts/makpi51crawler/python/desktop_import/load_pi51_batch_into_postgres.py` — only then read the actual script
+## Boundary
+## Sınır
 
-## Başlangıç seviyesi okuma yolu
+Only durable and repository-worthy Python content should live here.
 
-Sıfırdan başlıyorsan Python yüzeyini yalnızca dosya adlarına bakarak tahmin etme.
+Burada yalnızca kalıcı ve repository’ye girmeye değer Python içerikleri yer almalıdır.
 
-Şu sırayı kullan:
+Machine-local virtual environments, cache directories, throwaway experiments, temporary outputs, and other disposable artifacts must stay outside Git or remain ignored.
 
-1. `README.md` — önce repository seviyesindeki yönü anla
-2. `docs/README.md` — dokümantasyon merkezini ve okuma modelini anla
-3. `hosts/makpi51crawler/python/README.md` — Python yüzeyinin ne olduğunu ve ne olmadığını anla
-4. `hosts/makpi51crawler/python/desktop_import/README.md` — mevcut gerçek izlenen Python alt yüzeyini anla
-5. `hosts/makpi51crawler/python/desktop_import/load_pi51_batch_into_postgres.py` — ancak bundan sonra gerçek script'i oku
-
-## Current Tracked Surface
-
-At the moment, the tracked Python surface is intentionally very small. The active tracked implementation under this directory is the `hosts/makpi51crawler/python/desktop_import/` area, currently represented by `hosts/makpi51crawler/python/desktop_import/load_pi51_batch_into_postgres.py`. This means the Python surface is not yet a broad framework; it is a controlled support layer centered on desktop-side batch intake preparation for PostgreSQL loading.
-
-## Güncel İzlenen Yüzey
-
-Şu anda izlenen Python yüzeyi bilinçli olarak oldukça küçüktür. Bu dizin altındaki aktif izlenen uygulama `hosts/makpi51crawler/python/desktop_import/` alanıdır ve şu an `hosts/makpi51crawler/python/desktop_import/load_pi51_batch_into_postgres.py` ile temsil edilmektedir. Bu da Python yüzeyinin henüz geniş bir framework olmadığı; PostgreSQL yüklemesi öncesi desktop tarafı batch intake hazırlığına odaklanan kontrollü bir destek katmanı olduğu anlamına gelir.
-## Current root-surface truth
-## Güncel kök-yüzey doğrusu
-
-At the current repository point, this Python surface now lives at `hosts/makpi51crawler/python/`.
-
-It is intentionally located under the active crawler-host surface.
-
-The `hosts/` family documents host-specific operational truth, and this subtree is now the tracked Python work surface for `makpi51crawler` inside the repository.
-
-For host-side boundary reading, also see:
-
-- `hosts/README.md`
-- `hosts/makpi51crawler/README.md`
-
-Mevcut repository noktasında bu Python yüzeyi artık `hosts/makpi51crawler/python/` yolunda yaşamaktadır.
-
-Bu yüzey aktif crawler-host yüzeyi altında bilinçli olarak konumlandırılmıştır.
-
-`hosts/` ailesi host-özel operasyon doğrusunu belgeler; bu alt ağaç ise artık repository içinde `makpi51crawler` için tracked Python çalışma yüzeyidir.
-
-Host-tarafı sınır okuması için ayrıca şunlara bak:
-
-- `hosts/README.md`
-- `hosts/makpi51crawler/README.md`
+Makineye özel sanal ortamlar, cache dizinleri, tek kullanımlık denemeler, geçici çıktılar ve diğer atıl artefact’lar Git dışında kalmalı veya ignore edilmelidir.

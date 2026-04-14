@@ -1,5 +1,37 @@
 # Crawler Core Chronology Split Plan
 
+Documentation hub:
+
+* `hosts/makpi51crawler/sql/README.md` — host-scoped SQL hub
+* `hosts/makpi51crawler/sql/crawler_core/README.md` — crawler_core surface hub
+* `hosts/makpi51crawler/README.md` — host root for makpi51crawler
+* `hosts/README.md` — host family root
+* `README.md` — repository root surface
+* `docs/README.md` — documentation hub
+
+Dokümantasyon merkezi:
+
+* `hosts/makpi51crawler/sql/README.md` — host-kapsamlı SQL merkezi
+* `hosts/makpi51crawler/sql/crawler_core/README.md` — crawler_core yüzey merkezi
+* `hosts/makpi51crawler/README.md` — makpi51crawler host kökü
+* `hosts/README.md` — host aile kökü
+* `README.md` — repository kök yüzeyi
+* `docs/README.md` — dokümantasyon merkezi
+
+## Purpose
+## Amaç
+
+This document supports the current `crawler_core` working surface under `hosts/makpi51crawler/sql/crawler_core/` and should be read as part of the controlled SECTION1 crawler_core line.
+
+Bu belge, `hosts/makpi51crawler/sql/crawler_core/` altındaki mevcut `crawler_core` çalışma yüzeyini destekler ve kontrollü SECTION1 crawler_core hattının bir parçası olarak okunmalıdır.
+
+## Current host-scoped path
+## Güncel host-kapsamlı yol
+
+At the current repository point, this surface lives under `hosts/makpi51crawler/sql/crawler_core/`.
+
+Mevcut repository noktasında bu yüzey `hosts/makpi51crawler/sql/crawler_core/` altında yaşar.
+
 This document maps the live Pi51 crawler-core schema snapshot to the next intended chronology-aligned SQL file layout. The source of truth for structure is currently:
 
 - `001_pi51_live_seed_frontier_http_fetch_schema.sql`

@@ -1,5 +1,15 @@
 # SECTION1_WEBCRAWLER_RUNBOOK_PROCESSED_DATA_STORAGE_TIER_FORMAT_AND_MOUNT
 
+Documentation hub:
+
+* `docs/README.md` — documentation hub
+* `README.md` — repository root surface
+
+Dokümantasyon merkezi:
+
+* `docs/README.md` — dokümantasyon merkezi
+* `README.md` — repository kök yüzeyi
+
 ## Purpose
 
 This runbook records the real controlled Pi51 work used to lock removable disk identity, format the processed-data storage tiers, mount them, verify them, and repair `/etc/fstab` after the accidental second destructive rerun changed filesystem UUIDs.

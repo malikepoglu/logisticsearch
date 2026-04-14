@@ -1,5 +1,30 @@
 # Crawler Core SQL Surface
 
+Documentation hub:
+
+* `hosts/makpi51crawler/sql/README.md` — host-scoped SQL hub
+* `hosts/makpi51crawler/sql/crawler_core/README.md` — crawler_core surface hub
+* `hosts/makpi51crawler/README.md` — host root for makpi51crawler
+* `hosts/README.md` — host family root
+* `README.md` — repository root surface
+* `docs/README.md` — documentation hub
+
+Dokümantasyon merkezi:
+
+* `hosts/makpi51crawler/sql/README.md` — host-kapsamlı SQL merkezi
+* `hosts/makpi51crawler/sql/crawler_core/README.md` — crawler_core yüzey merkezi
+* `hosts/makpi51crawler/README.md` — makpi51crawler host kökü
+* `hosts/README.md` — host aile kökü
+* `README.md` — repository kök yüzeyi
+* `docs/README.md` — dokümantasyon merkezi
+
+## Current host-scoped path
+## Güncel host-kapsamlı yol
+
+At the current repository point, this surface lives under `hosts/makpi51crawler/sql/crawler_core/`.
+
+Mevcut repository noktasında bu yüzey `hosts/makpi51crawler/sql/crawler_core/` altında yaşar.
+
 ## Overview
 
 This directory is the canonical repository surface for the real crawler-core SQL layer of LogisticSearch. It preserves the imported live Pi51 crawler-core PostgreSQL truth as evidence, while also providing the split, executable, and validated working SQL surface that is now used for controlled evolution.

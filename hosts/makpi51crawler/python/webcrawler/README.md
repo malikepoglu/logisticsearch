@@ -1,5 +1,21 @@
 # Webcrawler Python Worker Surface
 
+Documentation hub:
+
+* `hosts/makpi51crawler/python/README.md` — host-scoped Python hub
+* `hosts/makpi51crawler/README.md` — host root for makpi51crawler
+* `hosts/README.md` — host family root
+* `README.md` — repository root surface
+* `docs/README.md` — documentation hub
+
+Dokümantasyon merkezi:
+
+* `hosts/makpi51crawler/python/README.md` — host-kapsamlı Python merkezi
+* `hosts/makpi51crawler/README.md` — makpi51crawler host kökü
+* `hosts/README.md` — host aile kökü
+* `README.md` — repository kök yüzeyi
+* `docs/README.md` — dokümantasyon merkezi
+
 This is the current controlled Python-side crawler runtime surface for LogisticSearch.
 
 # Webcrawler Python Worker Yüzeyi

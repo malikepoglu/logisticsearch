@@ -1,5 +1,15 @@
 # SECTION1_WEBCRAWLER_PROCESSED_DATA_STORAGE_ROUTING_AND_DRAIN_CONTRACT
 
+Documentation hub:
+
+* `docs/README.md` — documentation hub
+* `README.md` — repository root surface
+
+Dokümantasyon merkezi:
+
+* `docs/README.md` — dokümantasyon merkezi
+* `README.md` — repository kök yüzeyi
+
 ## Purpose
 
 This document defines the canonical behavior contract for processed-data storage routing, buffer-drain behavior, and storage-class crawler pause behavior in the LogisticSearch webcrawler line.

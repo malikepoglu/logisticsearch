@@ -1,5 +1,12 @@
 # Crawler Lease Renewal Contract
 
+## Purpose
+## Amaç
+
+This document makes one controlled SECTION1 webcrawler rule, contract, runbook, or boundary explicit in a beginner-readable way.
+
+Bu belge, kontrollü bir SECTION1 webcrawler kuralını, sözleşmesini, runbook'unu veya sınırını başlangıç seviyesinde okunabilir biçimde açık hale getirir.
+
 Documentation hub:
 - `docs/README.md` — use this as the root reading map for the documentation set.
 

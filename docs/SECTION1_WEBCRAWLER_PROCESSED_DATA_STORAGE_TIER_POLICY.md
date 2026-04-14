@@ -1,5 +1,15 @@
 # SECTION1_WEBCRAWLER_PROCESSED_DATA_STORAGE_TIER_POLICY
 
+Documentation hub:
+
+* `docs/README.md` — documentation hub
+* `README.md` — repository root surface
+
+Dokümantasyon merkezi:
+
+* `docs/README.md` — dokümantasyon merkezi
+* `README.md` — repository kök yüzeyi
+
 ## Purpose
 
 This document defines the canonical processed-data storage tier policy for the LogisticSearch webcrawler line.
@@ -403,4 +413,3 @@ The action-layer companion for this policy is:
 Bu politikanın action-layer eşi şudur:
 
 - `docs/SECTION1_WEBCRAWLER_RUNBOOK_PROCESSED_DATA_STORAGE_TIER_FORMAT_AND_MOUNT.md`
-

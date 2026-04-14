@@ -1,5 +1,15 @@
 # Webcrawler Controls
 
+Documentation hub:
+
+* `docs/README.md` — documentation hub
+* `README.md` — repository root surface
+
+Dokümantasyon merkezi:
+
+* `docs/README.md` — dokümantasyon merkezi
+* `README.md` — repository kök yüzeyi
+
 This document defines the canonical operator-facing top-level control family for the LogisticSearch webcrawler.
 
 # Webcrawler Kontrolleri
