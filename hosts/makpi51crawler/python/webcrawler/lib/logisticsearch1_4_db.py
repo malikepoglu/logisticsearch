@@ -193,6 +193,54 @@ def webcrawler_runtime_may_claim(
     return row
 
 
+# EN: This helper asks the database to change the durable crawler runtime-control
+# EN: state through the canonical SQL truth surface.
+# TR: Bu yardımcı, kalıcı crawler runtime-control durumunu kanonik SQL doğruluk
+# TR: yüzeyi üzerinden değiştirmesi için veritabanına çağrı yapar.
+def set_webcrawler_runtime_control(
+    conn: psycopg.Connection,
+    *,
+    desired_state: str,
+    state_reason: str,
+    requested_by: str,
+) -> dict[str, Any] | None:
+    # EN: We open one isolated cursor because this helper performs one explicit
+    # EN: state-change call inside the caller-owned transaction.
+    # TR: Bu yardımcı çağıranın sahip olduğu transaction içinde tek bir açık
+    # TR: durum-değiştirme çağrısı yaptığı için izole bir cursor açıyoruz.
+    with conn.cursor() as cur:
+        # EN: We call the canonical SQL function instead of writing directly into
+        # EN: the table so Python stays aligned with the sealed DB contract.
+        # TR: Python tarafı mühürlü DB sözleşmesiyle hizalı kalsın diye tabloya
+        # TR: doğrudan yazmak yerine kanonik SQL fonksiyonunu çağırıyoruz.
+        cur.execute(
+            """
+            SELECT *
+            FROM ops.set_webcrawler_runtime_control(
+                p_desired_state => %(desired_state)s,
+                p_state_reason => %(state_reason)s,
+                p_requested_by => %(requested_by)s
+            )
+            """,
+            {
+                "desired_state": desired_state,
+                "state_reason": state_reason,
+                "requested_by": requested_by,
+            },
+        )
+
+        # EN: We fetch one row because the control model is intentionally single-row.
+        # TR: Kontrol modeli bilinçli olarak tek satırlı olduğu için tek satır çekiyoruz.
+        row = cur.fetchone()
+
+    # EN: We return the raw mapping so the caller can inspect the exact durable
+    # EN: state transition result.
+    # TR: Çağıran taraf tam kalıcı durum geçişi sonucunu inceleyebilsin diye ham
+    # TR: mapping döndürüyoruz.
+    return row
+
+
+
 # EN: This helper converts a dict-like database row into a strongly-shaped
 # EN: ClaimedUrl dataclass instance.
 # TR: Bu yardımcı, sözlük-benzeri bir veritabanı satırını şekli net bir

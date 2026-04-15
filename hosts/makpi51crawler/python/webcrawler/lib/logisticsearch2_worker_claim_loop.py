@@ -3,31 +3,43 @@
 # TR: Daha temiz ve ileriye uyumlu annotation'lar için type hint çözümlemesini erteliyoruz.
 from __future__ import annotations
 
-# EN: We import argparse because this first worker surface should be runnable
+# EN: We import argparse because this worker/operator surface should be runnable
 # EN: from the command line in a controlled and explicit way.
-# TR: Bu ilk worker yüzeyi kontrollü ve açık biçimde komut satırından
+# TR: Bu worker/operatör yüzeyi kontrollü ve açık biçimde komut satırından
 # TR: çalıştırılabilsin diye argparse içe aktarıyoruz.
 import argparse
 
-# EN: We import json so the result can be printed in a structured machine- and
+# EN: We import json so results can be printed in a structured machine- and
 # EN: human-readable format.
-# TR: Sonuç hem makine hem insan tarafından okunabilir yapılı bir formatta
+# TR: Sonuçlar hem makine hem insan tarafından okunabilir yapılı biçimde
 # TR: yazdırılabilsin diye json içe aktarıyoruz.
 import json
 
-# EN: We import os so environment variables can be used for DSN and worker id defaults.
-# TR: DSN ve worker id varsayılanları environment variable üzerinden alınabilsin
-# TR: diye os içe aktarıyoruz.
+# EN: We import os so environment variables can be used for DSN and operator
+# EN: identity defaults.
+# TR: DSN ve operatör kimliği varsayılanları environment variable üzerinden
+# TR: alınabilsin diye os içe aktarıyoruz.
 import os
 
-# EN: We import asdict because dataclass results should be converted to plain
-# EN: dictionaries before JSON serialization.
-# TR: Dataclass sonuçları JSON serileştirmesinden önce düz sözlüklere dönüştürülsün
-# TR: diye asdict içe aktarıyoruz.
+# EN: We import asdict because dataclass worker results should be converted into
+# EN: plain dictionaries before JSON serialization.
+# TR: Dataclass worker sonuçları JSON serileştirmesinden önce düz sözlüklere
+# TR: dönüştürülsün diye asdict içe aktarıyoruz.
 from dataclasses import asdict
 
-# EN: We import the runtime helpers that implement the current narrow worker truth.
-# TR: Mevcut dar worker doğrusunu uygulayan runtime yardımcılarını içe aktarıyoruz.
+# EN: We import the canonical DB helpers needed by this existing CLI surface.
+# TR: Bu mevcut CLI yüzeyinin ihtiyaç duyduğu kanonik DB yardımcılarını içe aktarıyoruz.
+from .logisticsearch1_4_db import (
+    connect_db,
+    get_webcrawler_runtime_control,
+    set_webcrawler_runtime_control,
+    webcrawler_runtime_may_claim,
+)
+
+# EN: We import the worker runtime helpers that implement the current narrow
+# EN: crawler-core execution truth.
+# TR: Mevcut dar crawler-core çalışma doğrusunu uygulayan worker runtime
+# TR: yardımcılarını içe aktarıyoruz.
 from .logisticsearch1_main_worker_runtime import WorkerConfig, run_claim_probe
 
 
@@ -76,14 +88,36 @@ def default_worker_id() -> str:
     return "ubuntu_desktop_probe_worker"
 
 
-# EN: This function builds the command-line parser for the first worker surface.
-# TR: Bu fonksiyon, ilk worker yüzeyi için komut satırı parser'ını kurar.
+# EN: This function reads a control-request identity from the environment and
+# EN: falls back to a stable CLI-origin default.
+# TR: Bu fonksiyon environment'dan bir control-request kimliği okur ve stabil bir
+# TR: CLI-kaynaklı varsayılana geri düşer.
+def default_requested_by() -> str:
+    # EN: We first check the explicit operator override variable.
+    # TR: Önce açık operatör override değişkenine bakıyoruz.
+    env_value = os.getenv("LOGISTICSEARCH_CONTROL_REQUESTED_BY")
+
+    # EN: If the operator provided a value, we keep it.
+    # TR: Operatör bir değer verdiyse onu koruyoruz.
+    if env_value:
+        # EN: We return the operator-provided identity.
+        # TR: Operatör tarafından verilen kimliği döndürüyoruz.
+        return env_value
+
+    # EN: Otherwise we return the stable existing-CLI identity.
+    # TR: Aksi durumda stabil mevcut-CLI kimliğini döndürüyoruz.
+    return "logisticsearch2_worker_claim_loop"
+
+
+# EN: This function builds the command-line parser for the existing operator
+# EN: surface without creating any new file surface.
+# TR: Bu fonksiyon yeni dosya yüzeyi oluşturmadan mevcut operatör yüzeyi için
+# TR: komut satırı parser'ını kurar.
 def build_parser() -> argparse.ArgumentParser:
-    # EN: We create the parser with a narrow description so the current scope
-    # EN: remains honest.
+    # EN: We create the parser with a narrow description so current scope stays honest.
     # TR: Güncel kapsam dürüst kalsın diye parser'ı dar bir açıklamayla oluşturuyoruz.
     parser = argparse.ArgumentParser(
-        description="Controlled probe-only claim worker for LogisticSearch crawler_core."
+        description="Controlled worker probe and runtime-control operator surface for LogisticSearch crawler_core."
     )
 
     # EN: We add a DSN argument so the operator can override the connection target.
@@ -125,6 +159,46 @@ def build_parser() -> argparse.ArgumentParser:
         help="Commit a successful claim so the lease remains durable in the database.",
     )
 
+    # EN: We add a show-runtime-control flag so the operator can inspect the
+    # EN: current durable DB truth without making a claim attempt.
+    # TR: Operatör mevcut kalıcı DB doğrusunu claim denemesi yapmadan
+    # TR: inceleyebilsin diye show-runtime-control bayrağı ekliyoruz.
+    parser.add_argument(
+        "--show-runtime-control",
+        action="store_true",
+        help="Read and print the current runtime-control DB truth.",
+    )
+
+    # EN: We add a set-runtime-control choice so the existing CLI can change the
+    # EN: crawler state through the sealed DB function surface.
+    # TR: Mevcut CLI mühürlü DB fonksiyon yüzeyi üzerinden crawler durumunu
+    # TR: değiştirebilsin diye set-runtime-control seçeneğini ekliyoruz.
+    parser.add_argument(
+        "--set-runtime-control",
+        choices=("run", "pause", "stop"),
+        help="Set the durable runtime-control state through DB truth.",
+    )
+
+    # EN: We add state-reason so every durable control change carries an explicit
+    # EN: human-auditable reason.
+    # TR: Her kalıcı kontrol değişimi açık ve insan tarafından denetlenebilir bir
+    # TR: gerekçe taşısın diye state-reason ekliyoruz.
+    parser.add_argument(
+        "--state-reason",
+        default="operator requested runtime control change via canonical CLI",
+        help="Reason text written into ops.webcrawler_runtime_control.",
+    )
+
+    # EN: We add requested-by so each durable control change carries an explicit
+    # EN: requester identity.
+    # TR: Her kalıcı kontrol değişimi açık bir requester kimliği taşısın diye
+    # TR: requested-by ekliyoruz.
+    parser.add_argument(
+        "--requested-by",
+        default=default_requested_by(),
+        help="Requester identity written into ops.webcrawler_runtime_control.",
+    )
+
     # EN: We add an output mode mainly so structured JSON stays easy to consume.
     # TR: Yapılı JSON çıktısı kolay tüketilebilsin diye özellikle output mode ekliyoruz.
     parser.add_argument(
@@ -139,7 +213,7 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-# EN: This is the main program entry point.
+# EN: This function is the main program entry point.
 # TR: Bu ana program giriş noktasıdır.
 def main() -> int:
     # EN: We construct the parser first.
@@ -150,18 +224,94 @@ def main() -> int:
     # TR: Komut satırı argümanlarını bir namespace içine parse ediyoruz.
     args = parser.parse_args()
 
-    # EN: We build an explicit runtime configuration object so argument meaning
-    # EN: stays visible and structured.
-    # TR: Argümanların anlamı görünür ve yapılı kalsın diye açık bir runtime
-    # TR: konfigürasyon nesnesi kuruyoruz.
+    # EN: If runtime-control inspection or mutation was requested, we keep the
+    # EN: whole path inside this existing CLI surface instead of creating a new file.
+    # TR: Runtime-control inceleme veya değiştirme istendiyse tüm yolu yeni dosya
+    # TR: oluşturmadan bu mevcut CLI yüzeyi içinde tutuyoruz.
+    if args.show_runtime_control or args.set_runtime_control is not None:
+        # EN: We open the crawler DB connection through the canonical helper.
+        # TR: Crawler DB bağlantısını kanonik yardımcı üzerinden açıyoruz.
+        conn = connect_db(args.dsn)
+
+        try:
+            # EN: We start with no set-result because show-only mode may not change anything.
+            # TR: Show-only mod hiçbir şeyi değiştirmeyebileceği için başlangıçta set-result yoktur.
+            set_result = None
+
+            # EN: If the operator requested a durable state change, we execute it first.
+            # TR: Operatör kalıcı durum değişimi istediyse önce onu çalıştırıyoruz.
+            if args.set_runtime_control is not None:
+                set_result = set_webcrawler_runtime_control(
+                    conn,
+                    desired_state=args.set_runtime_control,
+                    state_reason=args.state_reason,
+                    requested_by=args.requested_by,
+                )
+
+                # EN: Missing set-result would mean the canonical DB function behaved unexpectedly.
+                # TR: Set-result çıkmaması kanonik DB fonksiyonunun beklenmedik davrandığı anlamına gelir.
+                if set_result is None:
+                    raise RuntimeError("set_webcrawler_runtime_control(...) returned no row")
+
+                # EN: We commit the durable state change before reading the final visible truth.
+                # TR: Son görünür doğruluğu okumadan önce kalıcı durum değişimini commit ediyoruz.
+                conn.commit()
+
+            # EN: We then read the visible control row.
+            # TR: Ardından görünür kontrol satırını okuyoruz.
+            runtime_control = get_webcrawler_runtime_control(conn)
+
+            # EN: Missing control output would mean the DB truth surface behaved unexpectedly.
+            # TR: Kontrol çıktısının olmaması, DB doğruluk yüzeyinin beklenmedik davrandığı anlamına gelir.
+            if runtime_control is None:
+                raise RuntimeError("get_webcrawler_runtime_control(...) returned no row")
+
+            # EN: We also ask whether claiming is currently allowed.
+            # TR: Claim etmenin şu anda izinli olup olmadığını da soruyoruz.
+            may_claim_result = webcrawler_runtime_may_claim(conn)
+
+            # EN: Missing may-claim output would mean the decision surface behaved unexpectedly.
+            # TR: May-claim çıktısının olmaması karar yüzeyinin beklenmedik davrandığı anlamına gelir.
+            if may_claim_result is None:
+                raise RuntimeError("webcrawler_runtime_may_claim(...) returned no row")
+
+            # EN: We build one small explicit payload for operator-facing JSON output.
+            # TR: Operatör odaklı JSON çıktısı için küçük ve açık bir payload kuruyoruz.
+            payload = {
+                "mode": "runtime_control",
+                "action": "set" if args.set_runtime_control is not None else "show",
+                "set_result": set_result,
+                "runtime_control": {
+                    **dict(runtime_control),
+                    "may_claim": may_claim_result.get("may_claim"),
+                },
+            }
+
+            # EN: We print the structured JSON payload.
+            # TR: Yapılı JSON payload'ını yazdırıyoruz.
+            print(json.dumps(payload, indent=2, default=str))
+
+            # EN: We return success because the requested control action completed.
+            # TR: İstenen kontrol eylemi tamamlandığı için başarı dönüyoruz.
+            return 0
+
+        except Exception:
+            # EN: On failure we roll back any uncommitted transaction work.
+            # TR: Hata durumunda commit edilmemiş transaction işini rollback yapıyoruz.
+            conn.rollback()
+            raise
+
+        finally:
+            # EN: We always close the connection explicitly.
+            # TR: Bağlantıyı her durumda açıkça kapatıyoruz.
+            conn.close()
+
+    # EN: Otherwise we stay on the existing worker-claim path.
+    # TR: Aksi durumda mevcut worker-claim yolunda kalıyoruz.
     config = WorkerConfig(
         dsn=args.dsn,
         worker_id=args.worker_id,
         lease_seconds=args.lease_seconds,
-        # EN: When durable-claim mode is requested, probe_only must become False
-        # EN: so a successful claim is committed instead of rolled back.
-        # TR: Durable-claim modu istendiğinde probe_only değeri False olmalıdır;
-        # TR: böylece başarılı claim rollback yerine commit edilir.
         probe_only=not args.durable_claim,
     )
 
