@@ -685,6 +685,81 @@ def persist_taxonomy_preranking_payload(
     return row
 
 
+# EN: This helper calls parse.persist_page_preranking_snapshot(...) so Python can
+# EN: materialize the durable preranking snapshot row after evidence/candidate persistence.
+# TR: Bu yardımcı parse.persist_page_preranking_snapshot(...) çağrısını yapar;
+# TR: böylece evidence/candidate persistence sonrasında kalıcı preranking snapshot
+# TR: satırı Python tarafından üretilebilir.
+def persist_page_preranking_snapshot(
+    conn: psycopg.Connection,
+    *,
+    url_id: int,
+    input_lang_code: str,
+    taxonomy_package_version: str,
+    top_candidate_count: int = 0,
+    top_score: Any = None,
+    candidate_summary: list[dict[str, Any]] | None = None,
+    snapshot_metadata: dict[str, Any] | None = None,
+    source_run_id: str | None = None,
+    source_note: str | None = None,
+    review_status: str = "pre_ranked",
+) -> dict[str, Any]:
+    # EN: We import json locally because only this helper needs jsonb-safe serialization.
+    # TR: Yalnızca bu yardımcı jsonb-uyumlu serileştirme kullandığı için json'u yerel içe aktarıyoruz.
+    import json
+
+    # EN: We serialize optional JSON-shaped inputs only when needed.
+    # TR: Opsiyonel JSON-biçimli girdileri yalnızca gerektiğinde serileştiriyoruz.
+    candidate_summary_json = json.dumps(candidate_summary or [])
+    snapshot_metadata_json = json.dumps(snapshot_metadata or {})
+
+    # EN: We execute the canonical SQL function inside the caller-owned transaction.
+    # TR: Kanonik SQL fonksiyonunu çağıranın sahip olduğu transaction içinde çalıştırıyoruz.
+    with conn.cursor() as cur:
+        cur.execute(
+            """
+            SELECT *
+            FROM parse.persist_page_preranking_snapshot(
+                p_url_id => %(url_id)s,
+                p_input_lang_code => %(input_lang_code)s,
+                p_taxonomy_package_version => %(taxonomy_package_version)s,
+                p_top_candidate_count => %(top_candidate_count)s,
+                p_top_score => %(top_score)s,
+                p_candidate_summary => %(candidate_summary)s::jsonb,
+                p_snapshot_metadata => %(snapshot_metadata)s::jsonb,
+                p_source_run_id => %(source_run_id)s,
+                p_source_note => %(source_note)s,
+                p_review_status => %(review_status)s
+            )
+            """,
+            {
+                "url_id": url_id,
+                "input_lang_code": input_lang_code,
+                "taxonomy_package_version": taxonomy_package_version,
+                "top_candidate_count": top_candidate_count,
+                "top_score": top_score,
+                "candidate_summary": candidate_summary_json,
+                "snapshot_metadata": snapshot_metadata_json,
+                "source_run_id": source_run_id,
+                "source_note": source_note,
+                "review_status": review_status,
+            },
+        )
+
+        # EN: We fetch exactly one row because one call produces one durable snapshot row.
+        # TR: Tek çağrı tek bir kalıcı snapshot satırı ürettiği için tam bir satır çekiyoruz.
+        row = cur.fetchone()
+
+    # EN: Missing output means the canonical SQL function behaved unexpectedly.
+    # TR: Çıktı yoksa kanonik SQL fonksiyonu beklenmedik davranmıştır.
+    if row is None:
+        raise RuntimeError("parse.persist_page_preranking_snapshot(...) returned no row")
+
+    # EN: We return the raw mapping because it is already beginner-readable.
+    # TR: Ham mapping'i döndürüyoruz; çünkü zaten beginner-okunur yapıdadır.
+    return row
+
+
 # EN: This helper calls parse.upsert_page_workflow_status(...) so Python can mark
 # EN: the current parse workflow state of one URL explicitly.
 # TR: Bu yardımcı parse.upsert_page_workflow_status(...) çağrısını yapar; böylece

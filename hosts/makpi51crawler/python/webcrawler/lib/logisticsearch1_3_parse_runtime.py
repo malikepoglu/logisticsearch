@@ -34,7 +34,18 @@ from pathlib import Path
 # TR: Kanonik minimal parse-apply yolu artık tek kullanımlık parçalar yerine
 # TR: repository içinde izlenen kodda yaşamalı olduğu için bu DB yardımcılarını
 # TR: burada içe aktarıyoruz.
-from .logisticsearch1_4_db import persist_taxonomy_preranking_payload, upsert_page_workflow_status
+from .logisticsearch1_4_db import (
+    persist_page_preranking_snapshot,
+    persist_taxonomy_preranking_payload,
+    upsert_page_workflow_status,
+)
+
+from .logisticsearch1_6_taxonomy_runtime import (
+    connect_taxonomy_db,
+    search_runtime_taxonomy,
+    taxonomy_default_dsn,
+)
+
 
 
 # EN: This dataclass stores the structured result of the minimal parse entry step.
@@ -323,11 +334,310 @@ class MinimalParseApplyResult:
     # TR: tarafından dönen satırı tutar.
     persist_result: dict
 
+    # EN: preranking_snapshot_result stores the row returned by
+    # EN: parse.persist_page_preranking_snapshot(...).
+    # TR: preranking_snapshot_result, parse.persist_page_preranking_snapshot(...)
+    # TR: tarafından dönen satırı tutar.
+    preranking_snapshot_result: dict
+
     # EN: workflow_result stores the row returned by
     # EN: parse.upsert_page_workflow_status(...).
     # TR: workflow_result, parse.upsert_page_workflow_status(...)
     # TR: tarafından dönen satırı tutar.
     workflow_result: dict
+
+
+# EN: This helper returns the current taxonomy package-version text used by the
+# EN: minimal repo-contained taxonomy bridge.
+# TR: Bu yardımcı, minimal repo-içi taxonomy köprüsünün kullandığı güncel
+# TR: taxonomy package-version metnini döndürür.
+def minimal_taxonomy_package_version() -> str:
+    # EN: We keep the package version explicit and stable so persisted parse rows
+    # EN: can later be audited without guessing.
+    # TR: Persist edilen parse satırları daha sonra tahmin yürütmeden audit
+    # TR: edilebilsin diye package version değerini açık ve stabil tutuyoruz.
+    return "pi51_taxonomy_runtime_v1"
+
+
+# EN: This helper maps parse evidence field names onto the score-column names
+# EN: expected by the parse candidate contract.
+# TR: Bu yardımcı parse evidence alan adlarını, parse candidate sözleşmesinin
+# TR: beklediği skor sütunu adlarına eşler.
+def candidate_score_field_name(field_name: str) -> str:
+    # EN: Title evidence contributes to title_score.
+    # TR: Title evidence, title_score alanına katkı verir.
+    if field_name == "title":
+        return "title_score"
+
+    # EN: All remaining minimal evidence currently contributes through body_score.
+    # TR: Kalan tüm minimal evidence şu anda body_score üzerinden katkı verir.
+    return "body_score"
+
+
+# EN: This helper converts a numeric score into a small explicit confidence band.
+# TR: Bu yardımcı sayısal bir skoru küçük ve açık bir confidence band değerine çevirir.
+def confidence_band_for_score(score: float) -> str:
+    # EN: Very high scores become high-confidence candidates.
+    # TR: Çok yüksek skorlar high-confidence candidate olur.
+    if score >= 90.0:
+        return "high"
+
+    # EN: Mid-high scores become medium-confidence candidates.
+    # TR: Orta-yüksek skorlar medium-confidence candidate olur.
+    if score >= 60.0:
+        return "medium"
+
+    # EN: Positive but weaker scores remain low-confidence.
+    # TR: Pozitif ama daha zayıf skorlar low-confidence olarak kalır.
+    if score > 0.0:
+        return "low"
+
+    # EN: Zero-score rows stay unreviewed.
+    # TR: Sıfır-skor satırlar unreviewed olarak kalır.
+    return "unreviewed"
+
+
+# EN: This helper builds the minimal search-input list sent into the runtime
+# EN: taxonomy helper.
+# TR: Bu yardımcı runtime taxonomy helper'ına gönderilecek minimal arama girdisi
+# TR: listesini kurar.
+def build_taxonomy_search_inputs(parse_result: MinimalParseResult) -> list[dict]:
+    # EN: We start from an empty list so each added search input stays explicit.
+    # TR: Her eklenen arama girdisi açık kalsın diye boş listeyle başlıyoruz.
+    search_inputs: list[dict] = []
+
+    # EN: A non-empty page title is the strongest first query source.
+    # TR: Boş olmayan page title ilk ve en güçlü sorgu kaynağıdır.
+    if parse_result.page_title:
+        search_inputs.append(
+            {
+                "field_name": "title",
+                "query_text": parse_result.page_title,
+            }
+        )
+
+    # EN: A non-empty body excerpt is used as the second weaker query source.
+    # TR: Boş olmayan body excerpt ikinci ve daha zayıf sorgu kaynağı olarak kullanılır.
+    if parse_result.body_text:
+        search_inputs.append(
+            {
+                "field_name": "body_text_excerpt",
+                "query_text": parse_result.body_text[:1000],
+            }
+        )
+
+    # EN: We return the fully prepared search-input list.
+    # TR: Tam hazırlanmış arama girdisi listesini döndürüyoruz.
+    return search_inputs
+
+
+# EN: This helper builds minimal parse candidate rows from the live runtime
+# EN: taxonomy database by using the already-proven second-connection helper.
+# TR: Bu yardımcı, zaten kanıtlanmış ikinci-bağlantı helper'ını kullanarak canlı
+# TR: runtime taxonomy veritabanından minimal parse candidate satırları üretir.
+def build_minimal_taxonomy_candidates(
+    *,
+    parse_result: MinimalParseResult,
+    source_run_id: str,
+    source_note: str | None = None,
+    limit_per_query: int = 5,
+    max_candidates: int = 10,
+) -> list[dict]:
+    # EN: We first derive the concrete search inputs from the parse result.
+    # TR: Önce parse sonucundan somut arama girdilerini türetiyoruz.
+    search_inputs = build_taxonomy_search_inputs(parse_result)
+
+    # EN: If there is no usable search input, there can be no taxonomy candidates.
+    # TR: Kullanılabilir arama girdisi yoksa taxonomy candidate de olamaz.
+    if not search_inputs:
+        return []
+
+    # EN: We open the dedicated taxonomy connection through the canonical runtime helper.
+    # TR: Ayrılmış taxonomy bağlantısını kanonik runtime helper üzerinden açıyoruz.
+    taxonomy_conn = connect_taxonomy_db(taxonomy_default_dsn())
+
+    try:
+        # EN: We aggregate hits by taxonomy_node_code so multiple field hits enrich
+        # EN: one candidate instead of creating noisy duplicates.
+        # TR: Birden çok alan vuruşu gürültülü kopyalar üretmesin, tek candidate'i
+        # TR: zenginleştirsin diye hit'leri taxonomy_node_code bazında topluyoruz.
+        candidate_map: dict[str, dict] = {}
+
+        # EN: We process each search input one by one.
+        # TR: Her arama girdisini tek tek işliyoruz.
+        for search_input in search_inputs:
+            # EN: We extract the explicit field name.
+            # TR: Açık alan adını çıkarıyoruz.
+            field_name = search_input["field_name"]
+
+            # EN: We extract the concrete query text.
+            # TR: Somut sorgu metnini çıkarıyoruz.
+            query_text = search_input["query_text"]
+
+            # EN: We search the live runtime taxonomy with the same language code
+            # EN: inferred from the HTML surface.
+            # TR: Canlı runtime taxonomy içinde, HTML yüzeyinden çıkarılan aynı dil
+            # TR: koduyla arama yapıyoruz.
+            hits = search_runtime_taxonomy(
+                taxonomy_conn,
+                query_text=query_text,
+                input_lang_code=parse_result.input_lang_code,
+                limit=limit_per_query,
+            )
+
+            # EN: We fold each returned hit into the candidate map.
+            # TR: Dönen her hit'i candidate map içine katlıyoruz.
+            for hit in hits:
+                # EN: One node_code corresponds to one aggregated candidate row.
+                # TR: Bir node_code tek bir toplanmış candidate satırına karşılık gelir.
+                candidate_key = hit.node_code
+
+                # EN: If this node has not been seen yet, we create its base row.
+                # TR: Bu node daha önce görülmediyse temel satırını oluşturuyoruz.
+                if candidate_key not in candidate_map:
+                    candidate_map[candidate_key] = {
+                        "taxonomy_source_db": "logisticsearch_taxonomy",
+                        "taxonomy_package_version": minimal_taxonomy_package_version(),
+                        "taxonomy_package_id": None,
+                        "taxonomy_concept_id": None,
+                        "taxonomy_node_code": hit.node_code,
+                        "taxonomy_concept_key": f"{hit.node_code}:{hit.lang_code}",
+                        "input_lang_code": parse_result.input_lang_code,
+                        "matched_lang_codes": [],
+                        "matched_fields": [],
+                        "matched_queries": [],
+                        "domain_type": hit.domain_type,
+                        "node_kind": hit.node_kind,
+                        "url_score": 0.0,
+                        "title_score": 0.0,
+                        "h1_score": 0.0,
+                        "breadcrumb_score": 0.0,
+                        "structured_data_score": 0.0,
+                        "anchor_score": 0.0,
+                        "body_score": 0.0,
+                        "total_score": 0.0,
+                        "evidence_count": 0,
+                        "confidence_band": "unreviewed",
+                        "source_run_id": source_run_id,
+                        "source_note": source_note or "taxonomy runtime bridge from minimal parse entry",
+                        "candidate_metadata": {
+                            "taxonomy_node_id": hit.node_id,
+                            "lang_priority": hit.lang_priority,
+                            "matched_surfaces": [],
+                            "matched_texts": [],
+                        },
+                    }
+
+                # EN: We work on the aggregated candidate row.
+                # TR: Toplanmış candidate satırı üzerinde çalışıyoruz.
+                candidate = candidate_map[candidate_key]
+
+                # EN: We map the current evidence field to its score column.
+                # TR: Mevcut evidence alanını kendi skor sütununa eşliyoruz.
+                score_field_name = candidate_score_field_name(field_name)
+
+                # EN: We convert the returned score into float once.
+                # TR: Dönen skoru bir kez float'a çeviriyoruz.
+                match_score = float(hit.match_score)
+
+                # EN: We keep the best score seen for that field.
+                # TR: O alan için görülen en iyi skoru koruyoruz.
+                candidate[score_field_name] = max(float(candidate[score_field_name]), match_score)
+
+                # EN: We keep a unique sorted language list.
+                # TR: Tekilleştirilmiş ve sıralı dil listesini koruyoruz.
+                candidate["matched_lang_codes"] = sorted(
+                    set(candidate["matched_lang_codes"]) | {hit.lang_code}
+                )
+
+                # EN: We keep a unique field list.
+                # TR: Tekilleştirilmiş alan listesini koruyoruz.
+                if field_name not in candidate["matched_fields"]:
+                    candidate["matched_fields"].append(field_name)
+
+                # EN: We append the concrete query-evidence item.
+                # TR: Somut sorgu-evidence öğesini ekliyoruz.
+                candidate["matched_queries"].append(
+                    {
+                        "field_name": field_name,
+                        "query_text": query_text,
+                        "matched_surface": hit.matched_surface,
+                        "matched_text": hit.matched_text,
+                        "match_score": match_score,
+                        "lang_code": hit.lang_code,
+                    }
+                )
+
+                # EN: We increase the explicit evidence counter.
+                # TR: Açık evidence sayacını artırıyoruz.
+                candidate["evidence_count"] = int(candidate["evidence_count"]) + 1
+
+                # EN: We keep track of matched surfaces in metadata.
+                # TR: Eşleşen yüzeyleri metadata içinde takip ediyoruz.
+                candidate["candidate_metadata"]["matched_surfaces"] = sorted(
+                    set(candidate["candidate_metadata"]["matched_surfaces"]) | {hit.matched_surface}
+                )
+
+                # EN: We keep track of matched texts in metadata without duplication.
+                # TR: Eşleşen metinleri metadata içinde tekrar olmadan takip ediyoruz.
+                if hit.matched_text not in candidate["candidate_metadata"]["matched_texts"]:
+                    candidate["candidate_metadata"]["matched_texts"].append(hit.matched_text)
+
+                # EN: We recompute total_score from the explicit score columns only.
+                # TR: total_score değerini yalnızca açık skor sütunlarından yeniden hesaplıyoruz.
+                candidate["total_score"] = round(
+                    float(candidate["url_score"])
+                    + float(candidate["title_score"])
+                    + float(candidate["h1_score"])
+                    + float(candidate["breadcrumb_score"])
+                    + float(candidate["structured_data_score"])
+                    + float(candidate["anchor_score"])
+                    + float(candidate["body_score"]),
+                    4,
+                )
+
+        # EN: We rank aggregated candidates by descending total_score and then by node code.
+        # TR: Toplanmış candidate'leri azalan total_score ve sonra node code ile sıralıyoruz.
+        ranked_candidates = sorted(
+            candidate_map.values(),
+            key=lambda item: (-float(item["total_score"]), item["taxonomy_node_code"]),
+        )[:max_candidates]
+
+        # EN: We assign the final confidence band after sorting.
+        # TR: Son confidence band değerini sıralama sonrası atıyoruz.
+        for candidate in ranked_candidates:
+            candidate["confidence_band"] = confidence_band_for_score(float(candidate["total_score"]))
+
+        # EN: We return the ranked candidate list.
+        # TR: Sıralanmış candidate listesini döndürüyoruz.
+        return ranked_candidates
+
+    finally:
+        # EN: We always close the second taxonomy connection explicitly.
+        # TR: İkinci taxonomy bağlantısını her durumda açık biçimde kapatıyoruz.
+        taxonomy_conn.close()
+
+
+# EN: This helper builds the compact candidate summary stored in the preranking
+# EN: snapshot row.
+# TR: Bu yardımcı, preranking snapshot satırında saklanan kompakt candidate
+# TR: özetini kurar.
+def build_preranking_candidate_summary(candidates: list[dict]) -> list[dict]:
+    # EN: We keep the summary intentionally small and top-ranked only.
+    # TR: Özeti bilinçli olarak küçük ve yalnızca en üst sıralı adaylarla tutuyoruz.
+    return [
+        {
+            "taxonomy_node_code": candidate["taxonomy_node_code"],
+            "taxonomy_concept_key": candidate["taxonomy_concept_key"],
+            "domain_type": candidate["domain_type"],
+            "node_kind": candidate["node_kind"],
+            "matched_lang_codes": candidate["matched_lang_codes"],
+            "matched_fields": candidate["matched_fields"],
+            "total_score": candidate["total_score"],
+            "confidence_band": candidate["confidence_band"],
+        }
+        for candidate in candidates[:5]
+    ]
 
 
 # EN: This helper is the current canonical repo-contained minimal parse-entry flow.
@@ -357,47 +667,115 @@ def apply_minimal_parse_entry(
         source_note=source_note,
     )
 
-    # EN: We persist the payload through the canonical DB helper so the current
-    # EN: narrow parse persistence truth stays centralized.
-    # TR: Payload'ı kanonik DB yardımcısı üzerinden persist ediyoruz; böylece
-    # TR: mevcut dar parse persistence doğrusu merkezî kalır.
-    persist_result = persist_taxonomy_preranking_payload(
-        conn=conn,
-        payload=parse_result.payload,
+    # EN: We build minimal taxonomy candidates through the already-proven runtime
+    # EN: taxonomy helper and its second database connection.
+    # TR: Minimal taxonomy candidate'lerini, zaten kanıtlanmış runtime taxonomy
+    # TR: helper'ı ve onun ikinci veritabanı bağlantısı üzerinden kuruyoruz.
+    taxonomy_candidates = build_minimal_taxonomy_candidates(
+        parse_result=parse_result,
+        source_run_id=source_run_id,
+        source_note=source_note,
     )
 
-    # EN: We resolve linked_snapshot_id only through the dedicated safe-policy
-    # EN: helper so blind snapshot reuse cannot silently reappear.
-    # TR: linked_snapshot_id değerini yalnızca dedicated güvenli-politika
-    # TR: yardımcısı üzerinden çözüyoruz; böylece kör snapshot yeniden kullanımı
-    # TR: sessizce geri dönemez.
-    linked_snapshot_id = resolve_workflow_linked_snapshot_id(persist_result)
+    # EN: We enrich the persisted payload in-memory before the DB call so the
+    # EN: parse SQL layer receives real candidates instead of an always-empty list.
+    # TR: Veritabanı çağrısından önce persist edilecek payload'ı bellekte
+    # TR: zenginleştiriyoruz; böylece parse SQL katmanı sürekli boş liste yerine
+    # TR: gerçek candidate'ler alır.
+    payload = dict(parse_result.payload)
+    payload["candidates"] = taxonomy_candidates
+    payload["metadata"] = {
+        "taxonomy_package_version": minimal_taxonomy_package_version(),
+        "taxonomy_candidate_count": len(taxonomy_candidates),
+        "taxonomy_bridge": "repo_helper_v1",
+    }
 
-    # EN: We write workflow state through the canonical DB helper and pass the
-    # EN: safe linked_snapshot_id result exactly as resolved above.
-    # TR: Workflow durumunu kanonik DB yardımcısı üzerinden yazıyoruz ve güvenli
-    # TR: linked_snapshot_id sonucunu yukarıda çözüldüğü haliyle aynen iletiyoruz.
+    # EN: We persist evidence and candidate rows through the existing canonical
+    # EN: payload helper.
+    # TR: Evidence ve candidate satırlarını mevcut kanonik payload helper'ı
+    # TR: üzerinden persist ediyoruz.
+    persist_result = persist_taxonomy_preranking_payload(
+        conn=conn,
+        payload=payload,
+    )
+
+    # EN: We now create the real preranking snapshot row through the dedicated DB
+    # EN: wrapper that was already present in SQL but not yet bridged in Python.
+    # TR: Artık gerçek preranking snapshot satırını, SQL tarafında zaten var olup
+    # TR: Python'da henüz köprülenmemiş dedicated DB wrapper üzerinden oluşturuyoruz.
+    top_score = None
+    if taxonomy_candidates:
+        top_score = float(taxonomy_candidates[0]["total_score"])
+
+    # EN: pre_ranked is now allowed only when at least one taxonomy candidate exists.
+    # EN: Otherwise we intentionally fall back to review_hold.
+    # TR: pre_ranked artık yalnızca en az bir taxonomy candidate varsa mümkündür.
+    # TR: Aksi durumda bilinçli olarak review_hold durumuna düşüyoruz.
+    effective_workflow_state = workflow_state
+    effective_workflow_state_reason = workflow_state_reason
+
+    if workflow_state == "pre_ranked":
+        if taxonomy_candidates:
+            effective_workflow_state = "pre_ranked"
+            effective_workflow_state_reason = "taxonomy_candidates_persisted_via_repo_helper"
+        else:
+            effective_workflow_state = "review_hold"
+            effective_workflow_state_reason = "taxonomy_candidates_empty_manual_review_required"
+
+    preranking_snapshot_result = persist_page_preranking_snapshot(
+        conn=conn,
+        url_id=url_id,
+        input_lang_code=parse_result.input_lang_code,
+        taxonomy_package_version=minimal_taxonomy_package_version(),
+        top_candidate_count=len(taxonomy_candidates),
+        top_score=top_score,
+        candidate_summary=build_preranking_candidate_summary(taxonomy_candidates),
+        snapshot_metadata={
+            "taxonomy_package_version": minimal_taxonomy_package_version(),
+            "taxonomy_candidate_count": len(taxonomy_candidates),
+            "persisted_candidate_count": persist_result["persisted_candidate_count"],
+            "taxonomy_bridge": "repo_helper_v1",
+        },
+        source_run_id=source_run_id,
+        source_note=source_note,
+        review_status=effective_workflow_state,
+    )
+
+    # EN: The workflow row must now link to the real preranking snapshot row,
+    # EN: not to the evidence snapshot placeholder.
+    # TR: Workflow satırı artık evidence snapshot placeholder'ına değil,
+    # TR: gerçek preranking snapshot satırına bağlanmalıdır.
+    linked_snapshot_id = preranking_snapshot_result["snapshot_id"]
+
+    # EN: We write workflow state through the canonical DB helper and use the real
+    # EN: preranking snapshot id.
+    # TR: Workflow durumunu kanonik DB helper üzerinden yazıyor ve gerçek
+    # TR: preranking snapshot id değerini kullanıyoruz.
     workflow_result = upsert_page_workflow_status(
         conn=conn,
         url_id=url_id,
-        workflow_state=workflow_state,
-        state_reason=workflow_state_reason,
+        workflow_state=effective_workflow_state,
+        state_reason=effective_workflow_state_reason,
         linked_snapshot_id=linked_snapshot_id,
         source_run_id=source_run_id,
         source_note=source_note,
         status_metadata={
             "parse_mode": "minimal_stdlib_html",
-            "linked_snapshot_policy": "safe_repo_helper",
+            "linked_snapshot_policy": "preranking_snapshot_only",
             "linked_snapshot_id": linked_snapshot_id,
             "raw_storage_path": raw_storage_path,
+            "taxonomy_package_version": minimal_taxonomy_package_version(),
+            "taxonomy_candidate_count": len(taxonomy_candidates),
+            "persisted_candidate_count": persist_result["persisted_candidate_count"],
         },
     )
 
-    # EN: We return both durable DB results together so callers can audit exactly
+    # EN: We return all durable DB results together so callers can audit exactly
     # EN: what the parse apply step changed.
     # TR: Çağıran taraf parse apply adımının tam olarak neyi değiştirdiğini audit
-    # TR: edebilsin diye iki kalıcı DB sonucunu birlikte döndürüyoruz.
+    # TR: edebilsin diye tüm kalıcı DB sonuçlarını birlikte döndürüyoruz.
     return MinimalParseApplyResult(
         persist_result=persist_result,
+        preranking_snapshot_result=preranking_snapshot_result,
         workflow_result=workflow_result,
     )
