@@ -48,6 +48,8 @@ from .logisticsearch1_4_db import (
     compute_robots_allow_decision,
     compute_robots_refresh_decision,
     connect_db,
+    get_webcrawler_runtime_control,
+    webcrawler_runtime_may_claim,
     finish_fetch_permanent_error,
     finish_fetch_retryable_error,
     finish_fetch_success,
@@ -156,6 +158,12 @@ class ClaimProbeResult:
     # EN: observed_at records when this result object was produced.
     # TR: observed_at bu sonuç nesnesinin ne zaman üretildiğini kaydeder.
     observed_at: str
+
+    # EN: runtime_control stores the visible crawler runtime-control snapshot when
+    # EN: the worker consulted the DB truth surface during this execution.
+    # TR: runtime_control, worker bu çalıştırma sırasında DB doğruluk yüzeyine
+    # TR: baktığında gördüğü crawler runtime-control anlık görüntüsünü tutar.
+    runtime_control: dict | None = None
 
 
 # EN: This helper creates a unique runtime execution id.
@@ -657,6 +665,12 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
     # TR: Tüm çalıştırma izlenebilir olsun diye önce benzersiz bir run id üretiyoruz.
     run_id = new_run_id()
 
+    # EN: We start with no runtime-control snapshot because the worker has not yet
+    # EN: consulted the DB truth surface.
+    # TR: Worker henüz DB doğruluk yüzeyine bakmadığı için başlangıçta runtime-control
+    # TR: anlık görüntümüz yoktur.
+    runtime_control = None
+
     # EN: We compute the current storage plan before touching the DB because the
     # EN: crawler must not claim new work when storage policy says it should pause.
     # TR: Crawler storage politikası pause diyorsa yeni iş claim etmemeli; bu yüzden
@@ -690,6 +704,59 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
     conn = connect_db(config.dsn)
 
     try:
+        # EN: Before asking crawler-core for a claimable row, we first read the
+        # EN: visible runtime-control truth from the database.
+        # TR: crawler-core'dan claim edilebilir satır istemeden önce veritabanındaki
+        # TR: görünür runtime-control doğrusunu okuyoruz.
+        runtime_control = get_webcrawler_runtime_control(conn)
+
+        # EN: Missing control output would mean the new DB truth surface behaved
+        # EN: unexpectedly.
+        # TR: Kontrol çıktısının olmaması, yeni DB doğruluk yüzeyinin beklenmedik
+        # TR: davrandığı anlamına gelir.
+        if runtime_control is None:
+            raise RuntimeError("get_webcrawler_runtime_control(...) returned no row")
+
+        # EN: We then ask the canonical DB control function whether claiming is
+        # EN: currently allowed.
+        # TR: Ardından claim etmenin şu anda izinli olup olmadığını kanonik DB
+        # TR: kontrol fonksiyonuna soruyoruz.
+        may_claim_result = webcrawler_runtime_may_claim(conn)
+
+        # EN: Missing may-claim output would mean the control-decision surface
+        # EN: behaved unexpectedly.
+        # TR: may-claim çıktısının olmaması, kontrol-karar yüzeyinin beklenmedik
+        # TR: davrandığı anlamına gelir.
+        if may_claim_result is None:
+            raise RuntimeError("webcrawler_runtime_may_claim(...) returned no row")
+
+        # EN: We merge the explicit may-claim decision into the runtime-control
+        # EN: snapshot so the returned JSON stays self-explanatory.
+        # TR: Dönen JSON kendi kendini açıklayabilsin diye açık may-claim kararını
+        # TR: runtime-control anlık görüntüsüne birleştiriyoruz.
+        runtime_control = {
+            **dict(runtime_control),
+            "may_claim": may_claim_result.get("may_claim"),
+        }
+
+        # EN: If DB truth says stop or pause, we must not claim any new work.
+        # TR: DB doğrusu stop veya pause diyorsa yeni iş claim etmemeliyiz.
+        if may_claim_result.get("may_claim") is not True:
+            rollback(conn)
+
+            return ClaimProbeResult(
+                run_id=run_id,
+                claimed=False,
+                claimed_url=None,
+                robots_allow_decision=None,
+                storage_plan=storage_plan,
+                fetched_page=None,
+                finalize_result=None,
+                parse_apply_result=parse_apply_result,
+                observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
+            )
+
         # EN: We ask crawler-core for exactly one claimable row.
         # TR: crawler-core'dan tam olarak bir claim edilebilir satır istiyoruz.
         claimed_url = claim_next_url(

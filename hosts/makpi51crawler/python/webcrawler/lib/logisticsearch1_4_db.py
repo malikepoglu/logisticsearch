@@ -129,6 +129,69 @@ def connect_db(dsn: str) -> psycopg.Connection:
     # TR: bağlantı nesnesini geri döndürüyoruz.
     return conn
 
+# EN: This helper reads the single durable webcrawler runtime-control row from
+# EN: the database truth surface.
+# TR: Bu yardımcı, veritabanındaki tekil ve kalıcı webcrawler runtime-control
+# TR: satırını doğruluk yüzeyinden okur.
+def get_webcrawler_runtime_control(
+    conn: psycopg.Connection,
+) -> dict[str, Any] | None:
+    # EN: We open one isolated cursor because this is a single read operation.
+    # TR: Bu tek bir okuma işlemi olduğu için izole bir cursor açıyoruz.
+    with conn.cursor() as cur:
+        # EN: We call the canonical DB function instead of reading the table
+        # EN: directly so Python stays aligned with the sealed SQL contract.
+        # TR: Python tarafı mühürlü SQL sözleşmesiyle hizalı kalsın diye tabloyu
+        # TR: doğrudan okumak yerine kanonik DB fonksiyonunu çağırıyoruz.
+        cur.execute(
+            """
+            SELECT *
+            FROM ops.get_webcrawler_runtime_control()
+            """
+        )
+
+        # EN: We fetch one row because the control model is intentionally single-row.
+        # TR: Kontrol modeli bilinçli olarak tek satırlı olduğu için tek satır çekiyoruz.
+        row = cur.fetchone()
+
+    # EN: We return the raw mapping for now because the current control surface is
+    # EN: still small and explicit.
+    # TR: Güncel kontrol yüzeyi hâlâ küçük ve açık olduğu için şimdilik ham
+    # TR: mapping döndürüyoruz.
+    return row
+
+
+# EN: This helper asks the database whether the crawler is currently allowed to
+# EN: claim new work.
+# TR: Bu yardımcı, crawler'ın şu anda yeni iş claim etmeye izinli olup olmadığını
+# TR: veritabanına sorar.
+def webcrawler_runtime_may_claim(
+    conn: psycopg.Connection,
+) -> dict[str, Any] | None:
+    # EN: We open one isolated cursor because this is a single decision query.
+    # TR: Bu tek bir karar sorgusu olduğu için izole bir cursor açıyoruz.
+    with conn.cursor() as cur:
+        # EN: We call the canonical DB truth function instead of duplicating state
+        # EN: interpretation rules inside Python.
+        # TR: Durum yorumlama kurallarını Python içinde kopyalamak yerine kanonik
+        # TR: DB doğruluk fonksiyonunu çağırıyoruz.
+        cur.execute(
+            """
+            SELECT *
+            FROM ops.webcrawler_runtime_may_claim()
+            """
+        )
+
+        # EN: We fetch one row because the current runtime-control model is single-row.
+        # TR: Güncel runtime-control modeli tek satırlı olduğu için tek satır çekiyoruz.
+        row = cur.fetchone()
+
+    # EN: We return the raw mapping so the caller can inspect both may_claim and
+    # EN: the surrounding state details.
+    # TR: Çağıran taraf hem may_claim sonucunu hem de etrafındaki durum ayrıntılarını
+    # TR: inceleyebilsin diye ham mapping döndürüyoruz.
+    return row
+
 
 # EN: This helper converts a dict-like database row into a strongly-shaped
 # EN: ClaimedUrl dataclass instance.
