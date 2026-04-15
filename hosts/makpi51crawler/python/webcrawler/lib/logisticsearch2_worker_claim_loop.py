@@ -28,7 +28,7 @@ from dataclasses import asdict
 
 # EN: We import the runtime helpers that implement the current narrow worker truth.
 # TR: Mevcut dar worker doğrusunu uygulayan runtime yardımcılarını içe aktarıyoruz.
-from logisticsearch1_main_worker_runtime import WorkerConfig, run_claim_probe
+from .logisticsearch1_main_worker_runtime import WorkerConfig, run_claim_probe
 
 
 # EN: This function reads a DSN from the environment and falls back to a
