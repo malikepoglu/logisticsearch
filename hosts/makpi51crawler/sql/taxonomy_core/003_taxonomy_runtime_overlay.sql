@@ -1,0 +1,2 @@
+-- EN: Placeholder file for taxonomy overlay runtime surface.
+-- TR: Taxonomy overlay runtime yüzeyi için yer tutucu dosya.
