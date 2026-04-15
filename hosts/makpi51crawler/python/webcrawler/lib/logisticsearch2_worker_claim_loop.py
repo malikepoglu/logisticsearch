@@ -21,6 +21,12 @@ import json
 # TR: alınabilsin diye os içe aktarıyoruz.
 import os
 
+# EN: We import time because loop mode needs explicit sleep boundaries between
+# EN: controlled worker iterations.
+# TR: Loop modu kontrollü worker iterasyonları arasında açık sleep sınırlarına
+# TR: ihtiyaç duyduğu için time modülünü içe aktarıyoruz.
+import time
+
 # EN: We import asdict because dataclass worker results should be converted into
 # EN: plain dictionaries before JSON serialization.
 # TR: Dataclass worker sonuçları JSON serileştirmesinden önce düz sözlüklere
@@ -117,7 +123,7 @@ def build_parser() -> argparse.ArgumentParser:
     # EN: We create the parser with a narrow description so current scope stays honest.
     # TR: Güncel kapsam dürüst kalsın diye parser'ı dar bir açıklamayla oluşturuyoruz.
     parser = argparse.ArgumentParser(
-        description="Controlled worker probe and runtime-control operator surface for LogisticSearch crawler_core."
+        description="Controlled worker probe, runtime-control, and loop operator surface for LogisticSearch crawler_core."
     )
 
     # EN: We add a DSN argument so the operator can override the connection target.
@@ -140,7 +146,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     # EN: We add lease-seconds so the operator can explicitly control how long
     # EN: the temporary claimed lease would last before renewal is required.
-    # TR: Operatör geçici claim edilmiş lease'in renewal gerektirmeden önce ne kadar
+    # TR: Operatör geçici claim edilmiş lease'in renewal gerekmeden önce ne kadar
     # TR: süreceğini açıkça kontrol edebilsin diye lease-seconds ekliyoruz.
     parser.add_argument(
         "--lease-seconds",
@@ -157,6 +163,47 @@ def build_parser() -> argparse.ArgumentParser:
         "--durable-claim",
         action="store_true",
         help="Commit a successful claim so the lease remains durable in the database.",
+    )
+
+    # EN: We add a loop flag so the existing canonical CLI can run repeated
+    # EN: worker iterations without creating a new operator file surface.
+    # TR: Mevcut kanonik CLI tekrar eden worker iterasyonları çalıştırabilsin ve
+    # TR: yeni bir operatör dosya yüzeyi oluşmasın diye loop bayrağı ekliyoruz.
+    parser.add_argument(
+        "--loop",
+        action="store_true",
+        help="Run repeated worker iterations inside the existing canonical CLI surface.",
+    )
+
+    # EN: We add sleep-seconds so the operator can control the normal delay
+    # EN: between loop iterations.
+    # TR: Operatör loop iterasyonları arasındaki normal gecikmeyi kontrol
+    # TR: edebilsin diye sleep-seconds ekliyoruz.
+    parser.add_argument(
+        "--sleep-seconds",
+        type=float,
+        default=5.0,
+        help="Normal delay between loop iterations.",
+    )
+
+    # EN: We add pause-sleep-seconds so pause state can stay alive with a distinct
+    # EN: slower polling cadence.
+    # TR: Pause durumu canlı kalsın ve ayrı bir daha yavaş polling temposu
+    # TR: kullanılsın diye pause-sleep-seconds ekliyoruz.
+    parser.add_argument(
+        "--pause-sleep-seconds",
+        type=float,
+        default=15.0,
+        help="Delay between loop iterations while runtime-control is pause.",
+    )
+
+    # EN: We add max-iterations so loop mode can be smoke-tested safely.
+    # TR: Loop modu güvenli biçimde smoke-test edilebilsin diye max-iterations ekliyoruz.
+    parser.add_argument(
+        "--max-iterations",
+        type=int,
+        default=0,
+        help="Maximum loop iterations. Zero means no explicit iteration limit.",
     )
 
     # EN: We add a show-runtime-control flag so the operator can inspect the
@@ -213,8 +260,29 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-# EN: This function is the main program entry point.
-# TR: Bu ana program giriş noktasıdır.
+# EN: This helper decides how long loop mode should sleep before the next
+# EN: iteration, based on the visible runtime-control snapshot.
+# TR: Bu yardımcı loop modunun sonraki iterasyondan önce ne kadar uyuyacağını
+# TR: görünür runtime-control anlık görüntüsüne göre belirler.
+def sleep_between_loop_iterations(*, payload: dict, sleep_seconds: float, pause_sleep_seconds: float) -> float:
+    # EN: We read the optional runtime-control snapshot from the returned payload.
+    # TR: Dönen payload içinden opsiyonel runtime-control anlık görüntüsünü okuyoruz.
+    runtime_control = payload.get("runtime_control") or {}
+
+    # EN: We extract the desired state as a normalized text token.
+    # TR: desired_state değerini normalize edilmiş metin tokenı olarak çıkarıyoruz.
+    desired_state = str(runtime_control.get("desired_state") or "").strip().lower()
+
+    # EN: Pause should keep the process alive but slower.
+    # TR: Pause süreci canlı tutmalı ama daha yavaş çalıştırmalıdır.
+    if desired_state == "pause":
+        return pause_sleep_seconds
+
+    # EN: All remaining states use the normal loop cadence.
+    # TR: Kalan tüm durumlar normal loop temposunu kullanır.
+    return sleep_seconds
+
+
 def main() -> int:
     # EN: We construct the parser first.
     # TR: Önce parser'ı kuruyoruz.
@@ -260,23 +328,15 @@ def main() -> int:
             # EN: We then read the visible control row.
             # TR: Ardından görünür kontrol satırını okuyoruz.
             runtime_control = get_webcrawler_runtime_control(conn)
-
-            # EN: Missing control output would mean the DB truth surface behaved unexpectedly.
-            # TR: Kontrol çıktısının olmaması, DB doğruluk yüzeyinin beklenmedik davrandığı anlamına gelir.
             if runtime_control is None:
                 raise RuntimeError("get_webcrawler_runtime_control(...) returned no row")
 
-            # EN: We also ask whether claiming is currently allowed.
-            # TR: Claim etmenin şu anda izinli olup olmadığını da soruyoruz.
+            # EN: We also read the may-claim decision and merge it into the payload.
+            # TR: may-claim kararını da okuyup payload içine birleştiriyoruz.
             may_claim_result = webcrawler_runtime_may_claim(conn)
-
-            # EN: Missing may-claim output would mean the decision surface behaved unexpectedly.
-            # TR: May-claim çıktısının olmaması karar yüzeyinin beklenmedik davrandığı anlamına gelir.
             if may_claim_result is None:
                 raise RuntimeError("webcrawler_runtime_may_claim(...) returned no row")
 
-            # EN: We build one small explicit payload for operator-facing JSON output.
-            # TR: Operatör odaklı JSON çıktısı için küçük ve açık bir payload kuruyoruz.
             payload = {
                 "mode": "runtime_control",
                 "action": "set" if args.set_runtime_control is not None else "show",
@@ -287,58 +347,103 @@ def main() -> int:
                 },
             }
 
-            # EN: We print the structured JSON payload.
-            # TR: Yapılı JSON payload'ını yazdırıyoruz.
             print(json.dumps(payload, indent=2, default=str))
-
-            # EN: We return success because the requested control action completed.
-            # TR: İstenen kontrol eylemi tamamlandığı için başarı dönüyoruz.
             return 0
-
-        except Exception:
-            # EN: On failure we roll back any uncommitted transaction work.
-            # TR: Hata durumunda commit edilmemiş transaction işini rollback yapıyoruz.
-            conn.rollback()
-            raise
-
         finally:
-            # EN: We always close the connection explicitly.
-            # TR: Bağlantıyı her durumda açıkça kapatıyoruz.
             conn.close()
 
-    # EN: Otherwise we stay on the existing worker-claim path.
-    # TR: Aksi durumda mevcut worker-claim yolunda kalıyoruz.
+    # EN: We build an explicit runtime configuration object so argument meaning
+    # EN: stays visible and structured.
+    # TR: Argümanların anlamı görünür ve yapılı kalsın diye açık bir runtime
+    # TR: konfigürasyon nesnesi kuruyoruz.
     config = WorkerConfig(
         dsn=args.dsn,
         worker_id=args.worker_id,
         lease_seconds=args.lease_seconds,
+        # EN: When durable-claim mode is requested, probe_only must become False
+        # EN: so a successful claim is committed instead of rolled back.
+        # TR: Durable-claim modu istendiğinde probe_only değeri False olmalıdır;
+        # TR: böylece başarılı claim rollback yerine commit edilir.
         probe_only=not args.durable_claim,
     )
 
-    # EN: We execute one controlled claim probe according to the current worker truth.
-    # TR: Mevcut worker doğrusuna göre tek bir kontrollü claim probe çalıştırıyoruz.
-    result = run_claim_probe(config)
+    # EN: When loop mode is not requested, we keep the original single-iteration
+    # EN: behavior of the existing CLI surface.
+    # TR: Loop modu istenmediyse mevcut CLI yüzeyinin orijinal tek-iterasyon
+    # TR: davranışını koruyoruz.
+    if not args.loop:
+        # EN: We execute one controlled claim probe according to the current worker truth.
+        # TR: Mevcut worker doğrusuna göre tek bir kontrollü claim probe çalıştırıyoruz.
+        result = run_claim_probe(config)
 
-    # EN: We convert the dataclass result into plain Python data for JSON output.
-    # TR: JSON çıktısı için dataclass sonucunu düz Python verisine dönüştürüyoruz.
-    payload = asdict(result)
+        # EN: We convert the dataclass result into plain Python data for JSON output.
+        # TR: JSON çıktısı için dataclass sonucunu düz Python verisine dönüştürüyoruz.
+        payload = asdict(result)
 
-    # EN: We print JSON with indentation so both humans and tools can inspect it.
-    # TR: Hem insanlar hem araçlar inceleyebilsin diye JSON'u girintili yazdırıyoruz.
-    print(json.dumps(payload, indent=2, default=str))
+        # EN: We print JSON with indentation so both humans and tools can inspect it.
+        # TR: Hem insanlar hem araçlar inceleyebilsin diye JSON'u girintili yazdırıyoruz.
+        print(json.dumps(payload, indent=2, default=str))
 
-    # EN: We return zero because successful structured output means the controlled
-    # EN: probe itself completed successfully, even if no claimable row existed.
-    # TR: Başarılı yapılı çıktı, claim edilebilir satır olmasa bile kontrollü probe'un
-    # TR: başarıyla tamamlandığı anlamına geldiği için sıfır döndürüyoruz.
-    return 0
+        # EN: We return zero because successful structured output means the controlled
+        # EN: probe itself completed successfully, even if no claimable row existed.
+        # TR: Başarılı yapılı çıktı, claim edilebilir satır olmasa bile kontrollü probe'un
+        # TR: başarıyla tamamlandığı anlamına geldiği için sıfır döndürüyoruz.
+        return 0
+
+    # EN: In loop mode we keep iterating until runtime-control says stop or the
+    # EN: optional iteration cap is reached.
+    # TR: Loop modunda runtime-control stop diyene veya opsiyonel iterasyon sınırına
+    # TR: ulaşılana kadar iterasyon yapıyoruz.
+    iteration = 0
+
+    while True:
+        # EN: We increment the visible iteration counter first.
+        # TR: Görünür iterasyon sayacını önce artırıyoruz.
+        iteration += 1
+
+        # EN: We execute one controlled worker iteration.
+        # TR: Tek bir kontrollü worker iterasyonu çalıştırıyoruz.
+        result = run_claim_probe(config)
+
+        # EN: We convert the result into plain data for line-oriented JSON output.
+        # TR: Sonucu satır-odaklı JSON çıktısı için düz veriye dönüştürüyoruz.
+        payload = asdict(result)
+
+        # EN: We annotate the payload so loop output is self-describing.
+        # TR: Loop çıktısı kendi kendini açıklasın diye payload'ı etiketliyoruz.
+        payload["mode"] = "worker_loop"
+        payload["iteration"] = iteration
+
+        # EN: We print one compact JSON line per iteration so smoke tests and logs stay easy to parse.
+        # TR: Smoke testler ve loglar kolay parse edilsin diye her iterasyonda tek satırlık kompakt JSON yazdırıyoruz.
+        print(json.dumps(payload, default=str), flush=True)
+
+        # EN: We extract the visible runtime-control desired state from the payload.
+        # TR: Payload içinden görünür runtime-control desired state değerini çıkarıyoruz.
+        runtime_control = payload.get("runtime_control") or {}
+        desired_state = str(runtime_control.get("desired_state") or "").strip().lower()
+
+        # EN: Stop means the loop should exit cleanly and immediately.
+        # TR: Stop, loop'un temiz ve hemen çıkması gerektiği anlamına gelir.
+        if desired_state == "stop":
+            return 0
+
+        # EN: If an explicit iteration cap exists and has been reached, we exit cleanly.
+        # TR: Açık bir iterasyon sınırı varsa ve ulaşıldıysa temiz biçimde çıkıyoruz.
+        if args.max_iterations > 0 and iteration >= args.max_iterations:
+            return 0
+
+        # EN: We sleep according to the visible runtime-control state before the next iteration.
+        # TR: Sonraki iterasyondan önce görünür runtime-control durumuna göre uyuyoruz.
+        time.sleep(
+            sleep_between_loop_iterations(
+                payload=payload,
+                sleep_seconds=args.sleep_seconds,
+                pause_sleep_seconds=args.pause_sleep_seconds,
+            )
+        )
 
 
-# EN: This standard guard ensures main() runs only when the file is executed
-# EN: directly, not when it is imported by another Python file.
-# TR: Bu standart koruma, main() fonksiyonunun yalnızca dosya doğrudan
-# TR: çalıştırıldığında çalışmasını; başka Python dosyası tarafından import edildiğinde
-# TR: otomatik çalışmamasını sağlar.
 if __name__ == "__main__":
     # EN: We raise SystemExit with main() so the program exits with the returned
     # EN: process status code in the normal Python CLI style.
