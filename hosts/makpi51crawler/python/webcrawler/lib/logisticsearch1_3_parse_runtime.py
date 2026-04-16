@@ -16,6 +16,10 @@ from dataclasses import dataclass
 # TR: yapılmalı diye html modülünü içe aktarıyoruz.
 import html
 
+# EN: We import hashlib because discovered canonical URLs should be hashed in the same explicit way before DB enqueue.
+# TR: Keşfedilmiş kanonik URL'ler DB enqueue öncesinde aynı açık biçimde hash'lensin diye hashlib içe aktarıyoruz.
+import hashlib
+
 # EN: We import re because this minimal first parse layer intentionally uses
 # EN: narrow standard-library regex extraction instead of a larger parser stack.
 # TR: Bu minimal ilk parse katmanı daha büyük bir parser stack yerine bilinçli
@@ -28,6 +32,10 @@ import re
 # TR: kullanımına göre daha kolay ve daha güvenli olduğu için Path içe aktarıyoruz.
 from pathlib import Path
 
+# EN: We import URL helpers because minimal discovery must normalize relative and absolute HTML links.
+# TR: Minimal discovery göreli ve mutlak HTML linklerini normalize etmelidir; bu yüzden URL yardımcılarını içe aktarıyoruz.
+from urllib.parse import urljoin, urlsplit, urlunsplit
+
 
 # EN: These DB helpers are imported here because the canonical minimal parse-apply
 # EN: path must now live inside repository-tracked code instead of ad hoc snippets.
@@ -35,6 +43,8 @@ from pathlib import Path
 # TR: repository içinde izlenen kodda yaşamalı olduğu için bu DB yardımcılarını
 # TR: burada içe aktarıyoruz.
 from .logisticsearch1_4_db import (
+    enqueue_discovered_url,
+    fetch_url_discovery_context,
     persist_page_preranking_snapshot,
     persist_taxonomy_preranking_payload,
     upsert_page_workflow_status,
@@ -340,6 +350,12 @@ class MinimalParseApplyResult:
     # TR: tarafından dönen satırı tutar.
     preranking_snapshot_result: dict
 
+    # EN: discovery_result stores the structured result of the minimal HTML-link
+    # EN: discovery enqueue bridge.
+    # TR: discovery_result, minimal HTML-link discovery enqueue köprüsünün
+    # TR: yapılı sonucunu tutar.
+    discovery_result: dict
+
     # EN: workflow_result stores the row returned by
     # EN: parse.upsert_page_workflow_status(...).
     # TR: workflow_result, parse.upsert_page_workflow_status(...)
@@ -640,6 +656,194 @@ def build_preranking_candidate_summary(candidates: list[dict]) -> list[dict]:
     ]
 
 
+
+
+# EN: This helper extracts raw href attribute values from HTML in a deliberately
+# EN: narrow stdlib-only way.
+# TR: Bu yardımcı HTML içindeki ham href değerlerini bilinçli olarak dar ve
+# TR: yalnızca stdlib kullanan bir yöntemle çıkarır.
+def extract_candidate_hrefs_from_html(html_text: str) -> list[str]:
+    # EN: We collect href values in encounter order first.
+    # TR: Önce href değerlerini karşılaşılma sırasıyla topluyoruz.
+    hrefs: list[str] = []
+
+    # EN: We scan for simple quoted href attributes because the first discovery
+    # EN: bridge should stay easy to audit.
+    # TR: İlk discovery köprüsü kolay denetlenebilir kalsın diye basit tırnaklı
+    # TR: href niteliklerini tarıyoruz.
+    for match in re.finditer(r'href\s*=\s*["\']([^"\']+)["\']', html_text, flags=re.IGNORECASE):
+        href_value = match.group(1).strip()
+        if href_value:
+            hrefs.append(href_value)
+
+    # EN: We return the raw href list.
+    # TR: Ham href listesini döndürüyoruz.
+    return hrefs
+
+
+# EN: This helper normalizes one discovered href against a base URL and keeps the
+# EN: first bridge conservative by allowing only same-authority http/https links.
+# TR: Bu yardımcı keşfedilmiş tek bir href değerini base URL'ye göre normalize eder
+# TR: ve ilk köprüyü muhafazakâr tutmak için yalnızca aynı authority'deki
+# TR: http/https linklere izin verir.
+def normalize_discovered_href(base_url: str, href_value: str) -> str | None:
+    # EN: Empty href values are ignored explicitly.
+    # TR: Boş href değerleri açık biçimde yok sayılır.
+    if not href_value:
+        return None
+
+    # EN: These schemes are intentionally out of scope for the first minimal bridge.
+    # TR: Bu şemalar ilk minimal köprü için bilinçli olarak kapsam dışıdır.
+    lowered = href_value.strip().lower()
+    if lowered.startswith(("javascript:", "mailto:", "tel:", "data:", "#")):
+        return None
+
+    # EN: We resolve relative links against the parent canonical URL.
+    # TR: Göreli linkleri parent kanonik URL'ye göre çözüyoruz.
+    joined = urljoin(base_url, href_value.strip())
+
+    # EN: We remove fragments because frontier truth should not duplicate the same
+    # EN: resource only due to a fragment.
+    # TR: Frontier doğrusu yalnızca fragment yüzünden aynı kaynağı çoğaltmamalıdır;
+    # TR: bu yüzden fragment'i kaldırıyoruz.
+    parts = urlsplit(joined)
+    if parts.scheme.lower() not in {"http", "https"}:
+        return None
+
+    base_parts = urlsplit(base_url)
+
+    # EN: The first bridge stays deliberately narrow: only same-authority links.
+    # TR: İlk köprü bilinçli olarak dar kalır: yalnızca aynı authority linkleri.
+    if parts.netloc.lower() != base_parts.netloc.lower():
+        return None
+
+    normalized_path = parts.path or "/"
+    normalized = urlunsplit(
+        (
+            parts.scheme.lower(),
+            parts.netloc.lower(),
+            normalized_path,
+            parts.query,
+            "",
+        )
+    )
+
+    # EN: We return the normalized discovered URL.
+    # TR: Normalize edilmiş keşif URL'sini döndürüyoruz.
+    return normalized
+
+
+# EN: This helper builds a small unique list of normalized discovery targets.
+# TR: Bu yardımcı normalize edilmiş discovery hedeflerinden küçük ve tekilleşmiş
+# TR: bir liste kurar.
+def build_minimal_discovery_targets(*, base_url: str, html_text: str, limit: int = 25) -> list[str]:
+    # EN: We extract raw href values first.
+    # TR: Önce ham href değerlerini çıkarıyoruz.
+    raw_hrefs = extract_candidate_hrefs_from_html(html_text)
+
+    # EN: We keep unique normalized URLs in encounter order.
+    # TR: Tekilleştirilmiş normalize URL'leri karşılaşılma sırasıyla koruyoruz.
+    normalized_urls: list[str] = []
+    seen: set[str] = set()
+
+    for href_value in raw_hrefs:
+        normalized = normalize_discovered_href(base_url, href_value)
+        if normalized is None:
+            continue
+        if normalized in seen:
+            continue
+        seen.add(normalized)
+        normalized_urls.append(normalized)
+        if len(normalized_urls) >= limit:
+            break
+
+    # EN: We return the final limited target list.
+    # TR: Son sınırlı hedef listesini döndürüyoruz.
+    return normalized_urls
+
+
+# EN: This helper performs the minimal HTML-link discovery enqueue bridge inside
+# EN: the current parse transaction.
+# TR: Bu yardımcı, mevcut parse transaction'ı içinde minimal HTML-link discovery
+# TR: enqueue köprüsünü çalıştırır.
+def enqueue_minimal_discovered_links(
+    *,
+    conn,
+    url_id: int,
+    raw_storage_path: str,
+    source_run_id: str,
+    source_note: str | None = None,
+    limit: int = 25,
+) -> dict:
+    # EN: We first read the durable parent URL context from the DB.
+    # TR: Önce kalıcı parent URL bağlamını DB'den okuyoruz.
+    parent_context = fetch_url_discovery_context(
+        conn,
+        url_id=url_id,
+    )
+    if parent_context is None:
+        raise RuntimeError("fetch_url_discovery_context(...) returned no row")
+
+    # EN: We read the raw HTML body from disk because discovery should use the same
+    # EN: fetched artefact that parse already trusts.
+    # TR: Discovery, parse'ın zaten güvendiği aynı fetch artefact'ını kullansın diye
+    # TR: ham HTML body'yi diskten okuyoruz.
+    html_text = read_raw_body_text(raw_storage_path)
+
+    # EN: We build a conservative list of discovery targets.
+    # TR: Muhafazakâr discovery hedefleri listesi kuruyoruz.
+    discovery_targets = build_minimal_discovery_targets(
+        base_url=str(parent_context["canonical_url"]),
+        html_text=html_text,
+        limit=limit,
+    )
+
+    # EN: We prepare the result accumulator.
+    # TR: Sonuç biriktiricisini hazırlıyoruz.
+    enqueued_rows: list[dict] = []
+
+    for discovered_url in discovery_targets:
+        parts = urlsplit(discovered_url)
+        scheme = parts.scheme.lower()
+        host = (parts.hostname or "").lower()
+        port = parts.port or (443 if scheme == "https" else 80)
+        authority_key = f"{host}:{port}"
+        url_path = parts.path or "/"
+        url_query = parts.query or None
+
+        enqueue_row = enqueue_discovered_url(
+            conn,
+            parent_url_id=int(url_id),
+            canonical_url=discovered_url,
+            canonical_url_sha256=hashlib.sha256(discovered_url.encode("utf-8")).hexdigest(),
+            port=port,
+            scheme=scheme,
+            host=host,
+            authority_key=authority_key,
+            registrable_domain=host,
+            url_path=url_path,
+            url_query=url_query,
+            discovery_type="html_link",
+            depth=int(parent_context["depth"]) + 1,
+            priority=max(int(parent_context["priority"]) - 5, 1),
+            enqueue_reason="minimal_html_link_discovery_from_parse_runtime",
+        )
+
+        if enqueue_row is not None:
+            enqueued_rows.append(dict(enqueue_row))
+
+    # EN: We return one explicit structured discovery result.
+    # TR: Açık ve yapılı tek bir discovery sonucu döndürüyoruz.
+    return {
+        "parent_url_id": int(url_id),
+        "discovered_href_count": len(extract_candidate_hrefs_from_html(html_text)),
+        "normalized_url_count": len(discovery_targets),
+        "enqueued_url_count": len(enqueued_rows),
+        "skipped_url_count": len(extract_candidate_hrefs_from_html(html_text)) - len(discovery_targets),
+        "enqueued_rows": enqueued_rows,
+    }
+
+
 # EN: This helper is the current canonical repo-contained minimal parse-entry flow.
 # EN: It keeps the whole apply path inside tracked code instead of relying on
 # EN: ad hoc one-off Python snippets outside the repository surface.
@@ -661,6 +865,20 @@ def apply_minimal_parse_entry(
     # TR: Önce ham HTML artefact'ından yapılı minimal parse payload'ını kuruyoruz;
     # TR: çünkü payload üretimi ile DB persistence aynı hizada kalmalıdır.
     parse_result = build_minimal_parse_payload(
+        url_id=url_id,
+        raw_storage_path=raw_storage_path,
+        source_run_id=source_run_id,
+        source_note=source_note,
+    )
+
+    # EN: We run the minimal HTML-link discovery enqueue bridge before final
+    # EN: workflow state is written, so the same transaction can carry both parse
+    # EN: and discovery side effects.
+    # TR: Son workflow durumu yazılmadan önce minimal HTML-link discovery enqueue
+    # TR: köprüsünü çalıştırıyoruz; böylece aynı transaction hem parse hem discovery
+    # TR: yan etkilerini taşıyabilir.
+    discovery_result = enqueue_minimal_discovered_links(
+        conn=conn,
         url_id=url_id,
         raw_storage_path=raw_storage_path,
         source_run_id=source_run_id,
@@ -777,5 +995,6 @@ def apply_minimal_parse_entry(
     return MinimalParseApplyResult(
         persist_result=persist_result,
         preranking_snapshot_result=preranking_snapshot_result,
+        discovery_result=discovery_result,
         workflow_result=workflow_result,
     )
