@@ -219,3 +219,17 @@ Kanonik örnek:
 
 - `logisticsearch1_1_2_worker_runtime.py` is not the root and not the outer loop; it is the main per-iteration worker orchestration layer called by the main loop.
 - `logisticsearch1_1_2_worker_runtime.py` kök değildir ve dış loop da değildir; ana loop tarafından çağrılan iterasyon başına ana worker orkestrasyon katmanıdır.
+
+## Runtime tree map cross-reference
+## Runtime ağaç haritası çapraz başvurusu
+
+The naming standard is only one part of the truth. Use `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` together with this document when you need the full tree-topology explanation, per-file responsibility map, and real data-flow boundary.
+
+Adlandırma standardı doğrunun yalnızca bir parçasıdır. Tam ağaç-topoloji açıklaması, dosya bazında sorumluluk haritası ve gerçek veri akışı sınırı için bu dokümanla birlikte `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` dokümanını kullan.
+
+## Mandatory bilingual code comment discipline
+## Zorunlu çift dilli kod yorum disiplini
+
+For crawler/webcrawler Python and SQL surfaces, every relevant line, variable, parameter, function, library usage, and important block must be explained immediately above the code with very detailed English and Turkish comments written for a first-time learner.
+
+Crawler/webcrawler Python ve SQL yüzeylerinde ilgili her satır, değişken, parametre, fonksiyon, kütüphane kullanımı ve önemli blok; kodun hemen üstünde, ilk kez öğrenen birine göre yazılmış çok detaylı İngilizce ve Türkçe yorumlarla açıklanmalıdır.

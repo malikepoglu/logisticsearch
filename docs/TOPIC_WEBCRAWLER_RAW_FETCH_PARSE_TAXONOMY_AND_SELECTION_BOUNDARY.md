@@ -434,3 +434,10 @@ Alan sözlüğü ve classification omurgası.
 A narrow transition point between two layers while integration is still being completed.
 
 Entegrasyon henüz tamamlanmamışken iki katman arasındaki dar geçiş noktası.
+
+## Runtime tree cross-reference
+## Runtime ağacı çapraz başvurusu
+
+Use `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` when you need the exact active file tree that sits above acquisition, parse, and taxonomy boundaries.
+
+Acquisition, parse ve taxonomy sınırlarının üzerinde duran tam aktif dosya ağacına ihtiyaç duyduğunda `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` dokümanını kullan.

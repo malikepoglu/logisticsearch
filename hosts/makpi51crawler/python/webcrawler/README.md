@@ -48,7 +48,7 @@ It currently provides:
   * storage-aware claim gating
   * probe-only and durable claim modes
   * a minimal real HTTP fetch flow
-  * raw response-body persistence under `/srv/crawler/logisticsearch/raw_fetch`
+  * raw response-body persistence under `/srv/webcrawler/raw_fetch`
   * canonical robots refresh-decision evaluation through crawler-core
   * controlled robots.txt fetching, raw-body persistence, narrow parsing, and cache upsert flow
   * success finalization back into crawler-core
@@ -105,7 +105,7 @@ Güncel kapsamı hâlâ bilinçli olarak kontrollüdür.
   * storage-aware claim gating
   * probe-only ve durable claim modları
   * minimal gerçek HTTP fetch akışı
-  * ham response body'lerini `/srv/crawler/logisticsearch/raw_fetch` altında saklama
+  * ham response body'lerini `/srv/webcrawler/raw_fetch` altında saklama
   * crawler-core üzerinden kanonik robots refresh-decision değerlendirmesi
   * kontrollü robots.txt fetch, ham body saklama, dar parse ve cache upsert akışı
   * crawler-core tarafına success finalize dönüşü
@@ -211,7 +211,7 @@ That means:
   * `lib/logisticsearch1_1_2_2_1_browser_dynamic_acquisition_runtime.py` is currently a narrow transitional seam and may later be folded into `lib/logisticsearch1_1_2_2_acquisition_runtime.py` if that keeps the system simpler
   * `lib/logisticsearch1_1_2_3_parse_runtime.py` remains the post-fetch evidence and parsing layer
   * `lib/logisticsearch1_1_1_state_db_gateway.py` remains the database/state-transition helper layer
-  * `lib/logisticsearch1_1_2_1_storage_routing.py` remains the storage-decision layer for `/srv/crawler/logisticsearch`, `/srv/data`, and `/srv/buffer`
+  * `lib/logisticsearch1_1_2_1_storage_routing.py` remains the processed-output routing layer for `/srv/data` and `/srv/buffer`, while raw evidence stays under `/srv/webcrawler/raw_fetch`
   * `lib/logisticsearch1_1_main_loop.py` must remain a thin operator/CLI surface and must not grow into a second hidden runtime center
 
 The crawler should therefore grow by strengthening a small number of clear files, not by scattering logic across many overlapping entrypoints.
@@ -261,7 +261,7 @@ Bunun anlamı şudur:
   * `lib/logisticsearch1_1_2_2_1_browser_dynamic_acquisition_runtime.py` şu anda dar bir geçiş seam'idir; sistemi daha sade tutacaksa ileride `lib/logisticsearch1_1_2_2_acquisition_runtime.py` içine katlanabilir
   * `lib/logisticsearch1_1_2_3_parse_runtime.py` fetch sonrası evidence ve parse katmanı olarak kalır
   * `lib/logisticsearch1_1_1_state_db_gateway.py` veritabanı/state-transition yardımcı katmanı olarak kalır
-  * `lib/logisticsearch1_1_2_1_storage_routing.py` `/srv/crawler/logisticsearch`, `/srv/data` ve `/srv/buffer` için storage-karar katmanı olarak kalır
+  * `lib/logisticsearch1_1_2_1_storage_routing.py` `/srv/data` ve `/srv/buffer` için işlenmiş-çıktı yönlendirme katmanı olarak kalır; ham kanıt ise `/srv/webcrawler/raw_fetch` altında kalır
   * `lib/logisticsearch1_1_main_loop.py` ince bir operatör/CLI yüzeyi olarak kalmalı, ikinci gizli runtime merkezine dönüşmemelidir
 
 Dolayısıyla crawler, birçok çakışan giriş noktasına saçılarak değil, az sayıdaki açık dosyanın güçlendirilmesiyle büyümelidir.
@@ -316,7 +316,7 @@ Detailed reading of each file:
 
   * `logisticsearch1_1_2_1_storage_routing.py`
     Storage decision layer.
-    This file should remain responsible for `/srv/crawler/logisticsearch/`, `/srv/data/`, and `/srv/buffer`
+    This file should remain responsible for processed-output routing between `/srv/data/` and `/srv/buffer/`, while raw evidence remains under `/srv/webcrawler/raw_fetch/`
     routing truth and should not become a fetch or parse file.
 
   * `lib/logisticsearch1_1_main_loop.py`
@@ -383,7 +383,7 @@ Her dosyanın ayrıntılı okuması:
 
   * `logisticsearch1_1_2_1_storage_routing.py`
     Storage karar katmanıdır.
-    Bu dosya `/srv/crawler/logisticsearch/`, `/srv/data/` ve `/srv/buffer` yönlendirme doğrusundan sorumlu kalmalı,
+    Bu dosya `/srv/data/` ile `/srv/buffer/` arasındaki işlenmiş-çıktı yönlendirme doğrusundan sorumlu kalmalı; ham kanıt ise `/srv/webcrawler/raw_fetch/` altında kalmalıdır,
     fetch veya parse dosyasına dönüşmemelidir.
 
   * `lib/logisticsearch1_1_main_loop.py`
@@ -729,3 +729,10 @@ Host-tarafı sınır okuması için ayrıca şunlara bak:
 
 - `logisticsearch1_1_2_worker_runtime.py` is not the root and not the outer loop; it is the main per-iteration worker orchestration layer called by the main loop.
 - `logisticsearch1_1_2_worker_runtime.py` kök değildir ve dış loop da değildir; ana loop tarafından çağrılan iterasyon başına ana worker orkestrasyon katmanıdır.
+
+## Runtime tree and data-flow reading path
+## Runtime ağacı ve veri akışı okuma yolu
+
+For the exact active runtime tree, the role of each Python file, and the real relationship between `/srv/webcrawler/raw_fetch`, `/srv/data`, `/srv/buffer`, and `/srv/webcrawler/exports`, read `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md`.
+
+Aktif runtime ağacının tam şekli, her Python dosyasının rolü ve `/srv/webcrawler/raw_fetch`, `/srv/data`, `/srv/buffer` ile `/srv/webcrawler/exports` arasındaki gerçek ilişki için `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` dokümanını oku.

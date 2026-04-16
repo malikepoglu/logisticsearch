@@ -154,3 +154,10 @@ Host-tarafı sınır okuması için ayrıca şunlara bak:
 
 - `logisticsearch1_1_2_worker_runtime.py` is not the root and not the outer loop; it is the main per-iteration worker orchestration layer called by the main loop.
 - `logisticsearch1_1_2_worker_runtime.py` kök değildir ve dış loop da değildir; ana loop tarafından çağrılan iterasyon başına ana worker orkestrasyon katmanıdır.
+
+## Runtime tree and data-flow reading path
+## Runtime ağacı ve veri akışı okuma yolu
+
+For the exact active runtime tree, the role of each Python file, and the real relationship between `/srv/webcrawler/raw_fetch`, `/srv/data`, `/srv/buffer`, and `/srv/webcrawler/exports`, read `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md`.
+
+Aktif runtime ağacının tam şekli, her Python dosyasının rolü ve `/srv/webcrawler/raw_fetch`, `/srv/data`, `/srv/buffer` ile `/srv/webcrawler/exports` arasındaki gerçek ilişki için `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` dokümanını oku.

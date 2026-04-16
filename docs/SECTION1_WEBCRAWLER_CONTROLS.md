@@ -239,3 +239,10 @@ Kanonik açık operatör yüzeyi şu beş komuta odaklı kalmalıdır:
 - `rebootwc`
 
 Bu daha küçük yüzey tercih edilir; çünkü operatör açıklığını ve uzun vadeli yönetilebilirliği artırır.
+
+## Runtime-tree control reading path
+## Runtime-ağacı kontrol okuma yolu
+
+When you need to understand which file owns root entry, main loop, worker orchestration, DB truth, acquisition, dynamic browser acquisition, parse, and taxonomy roles, read `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` before making control-surface changes.
+
+Hangi dosyanın root entry, main loop, worker orchestration, DB doğrusu, acquisition, dinamik browser acquisition, parse ve taxonomy rollerine sahip olduğunu anlaman gerektiğinde, control-surface değişikliği yapmadan önce `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` dokümanını oku.

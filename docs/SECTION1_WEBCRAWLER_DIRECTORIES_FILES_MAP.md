@@ -110,7 +110,7 @@ The repository is the tracked source-of-truth surface. The live runtime surface 
 
 The following old long-path family is a legacy transition surface and must not be treated as the long-term canonical layout:
 
-- `/srv/crawler/logisticsearch/...`
+- `/srv/webcrawler/...`
 
 If old surfaces still exist during migration, they must be treated as controlled transition surfaces only.
 
@@ -236,7 +236,7 @@ Repository, izlenen source-of-truth yüzeyidir. `/logisticsearch/webcrawler/` al
 
 Aşağıdaki eski uzun-yol ailesi bir geçiş yüzeyidir ve uzun vadeli kanonik yerleşim olarak görülmemelidir:
 
-- `/srv/crawler/logisticsearch/...`
+- `/srv/webcrawler/...`
 
 Geçiş sırasında eski yüzeyler hâlâ bulunuyorsa, bunlar yalnızca kontrollü geçiş yüzeyleri olarak ele alınmalıdır.
 
@@ -249,3 +249,10 @@ Güncel yön şudur:
 3. crawler verisi `/srv/...` altında kalsın
 4. açık operatör yüzeyi küçük ve açık kalsın
 5. eski karışık uzun-yol yerleşiminden kontrollü biçimde çıkılsın
+
+## Runtime tree and data-flow map
+## Runtime ağacı ve veri akış haritası
+
+Use `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` as the canonical beginner-first map for the active runtime tree, the role of each Python file, and the real boundary between raw evidence, processed output, and export handoff.
+
+Aktif runtime ağacı, her Python dosyasının rolü ve ham kanıt, işlenmiş çıktı ile export handoff arasındaki gerçek sınır için kanonik beginner-first harita olarak `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` dokümanını kullan.
