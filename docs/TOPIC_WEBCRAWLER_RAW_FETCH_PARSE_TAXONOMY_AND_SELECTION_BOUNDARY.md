@@ -122,8 +122,8 @@ Henüz alan-anlamı üretilmiş veri değildir.
 - taxonomy kararı çoktan verildi
 - parse/extraction aşaması çoktan tamamlandı
 
-## What `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_fetch_runtime.py` is responsible for
-## `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_fetch_runtime.py` tam olarak neden sorumludur
+## What `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_2_2_acquisition_runtime.py` is responsible for
+## `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_2_2_acquisition_runtime.py` tam olarak neden sorumludur
 
 This file is the acquisition home.
 

@@ -44,14 +44,14 @@ Amaç, aktif runtime ağacını tek bakışta görünür hale getirmektir.
 At the current repository point, this folder visibly contains the active numbered runtime family itself:
 
 - `__init__.py`
-- `logisticsearch1_main_worker_runtime.py`
-- `logisticsearch1_1_fetch_runtime.py`
-- `logisticsearch1_2_browser_acquisition_runtime.py`
-- `logisticsearch1_2_1_browser_acquisition_smoke.py`
-- `logisticsearch1_3_parse_runtime.py`
-- `logisticsearch1_4_db.py`
-- `logisticsearch1_5_storage_routing.py`
-- `logisticsearch2_worker_claim_loop.py`
+- `logisticsearch1_1_2_worker_runtime.py`
+- `logisticsearch1_1_2_2_acquisition_runtime.py`
+- `logisticsearch1_1_2_2_1_browser_dynamic_acquisition_runtime.py`
+- `logisticsearch2_diag_browser_acquisition_smoke.py`
+- `logisticsearch1_1_2_3_parse_runtime.py`
+- `logisticsearch1_1_1_state_db_gateway.py`
+- `logisticsearch1_1_2_1_storage_routing.py`
+- `logisticsearch1_1_main_loop.py`
 
 This means the live numbered runtime family is already visible here together in one place.
 
@@ -61,14 +61,14 @@ So this folder is no longer a partial transitional runtime surface.
 Mevcut repository noktasında bu klasör, aktif numaralı runtime ailesinin kendisini görünür olarak içerir:
 
 - `__init__.py`
-- `logisticsearch1_main_worker_runtime.py`
-- `logisticsearch1_1_fetch_runtime.py`
-- `logisticsearch1_2_browser_acquisition_runtime.py`
-- `logisticsearch1_2_1_browser_acquisition_smoke.py`
-- `logisticsearch1_3_parse_runtime.py`
-- `logisticsearch1_4_db.py`
-- `logisticsearch1_5_storage_routing.py`
-- `logisticsearch2_worker_claim_loop.py`
+- `logisticsearch1_1_2_worker_runtime.py`
+- `logisticsearch1_1_2_2_acquisition_runtime.py`
+- `logisticsearch1_1_2_2_1_browser_dynamic_acquisition_runtime.py`
+- `logisticsearch2_diag_browser_acquisition_smoke.py`
+- `logisticsearch1_1_2_3_parse_runtime.py`
+- `logisticsearch1_1_1_state_db_gateway.py`
+- `logisticsearch1_1_2_1_storage_routing.py`
+- `logisticsearch1_1_main_loop.py`
 
 Bu da canlı numaralı runtime ailesinin artık burada tek yerde birlikte görünür olduğu anlamına gelir.
 
@@ -78,27 +78,27 @@ Dolayısıyla bu klasör artık kısmi geçiş runtime yüzeyi değildir.
 
 The intended stable family for this folder is:
 
-- `logisticsearch1_main_worker_runtime.py`
-- `logisticsearch1_1_fetch_runtime.py`
-- `logisticsearch1_2_browser_acquisition_runtime.py`
-- `logisticsearch1_2_1_browser_acquisition_smoke.py`
-- `logisticsearch1_3_parse_runtime.py`
-- `logisticsearch1_4_db.py`
-- `logisticsearch1_5_storage_routing.py`
-- `logisticsearch2_worker_claim_loop.py`
+- `logisticsearch1_1_2_worker_runtime.py`
+- `logisticsearch1_1_2_2_acquisition_runtime.py`
+- `logisticsearch1_1_2_2_1_browser_dynamic_acquisition_runtime.py`
+- `logisticsearch2_diag_browser_acquisition_smoke.py`
+- `logisticsearch1_1_2_3_parse_runtime.py`
+- `logisticsearch1_1_1_state_db_gateway.py`
+- `logisticsearch1_1_2_1_storage_routing.py`
+- `logisticsearch1_1_main_loop.py`
 
 ## Bu klasör için hedef kanonik aile
 
 Bu klasör için hedef stabil aile şudur:
 
-- `logisticsearch1_main_worker_runtime.py`
-- `logisticsearch1_1_fetch_runtime.py`
-- `logisticsearch1_2_browser_acquisition_runtime.py`
-- `logisticsearch1_2_1_browser_acquisition_smoke.py`
-- `logisticsearch1_3_parse_runtime.py`
-- `logisticsearch1_4_db.py`
-- `logisticsearch1_5_storage_routing.py`
-- `logisticsearch2_worker_claim_loop.py`
+- `logisticsearch1_1_2_worker_runtime.py`
+- `logisticsearch1_1_2_2_acquisition_runtime.py`
+- `logisticsearch1_1_2_2_1_browser_dynamic_acquisition_runtime.py`
+- `logisticsearch2_diag_browser_acquisition_smoke.py`
+- `logisticsearch1_1_2_3_parse_runtime.py`
+- `logisticsearch1_1_1_state_db_gateway.py`
+- `logisticsearch1_1_2_1_storage_routing.py`
+- `logisticsearch1_1_main_loop.py`
 
 ## Current live-family truth
 ## Güncel canlı-aile doğrusu
@@ -142,3 +142,15 @@ Host-tarafı sınır okuması için ayrıca şunlara bak:
 
 - `hosts/README.md`
 - `hosts/makpi51crawler/README.md`
+
+## Root entry and main loop topology note
+## Kök giriş ve ana loop topoloji notu
+
+- `logisticsearch1_main_entry.py` is the single thin root-entry surface at the top of the runtime tree.
+- `logisticsearch1_main_entry.py`, runtime ağacının tepesindeki tek ince kök-giriş yüzeyidir.
+
+- `logisticsearch1_1_main_loop.py` is the main continuous loop directly under that root entry.
+- `logisticsearch1_1_main_loop.py`, bu kök girişin hemen altındaki ana sürekli loop yüzeyidir.
+
+- `logisticsearch1_1_2_worker_runtime.py` is not the root and not the outer loop; it is the main per-iteration worker orchestration layer called by the main loop.
+- `logisticsearch1_1_2_worker_runtime.py` kök değildir ve dış loop da değildir; ana loop tarafından çağrılan iterasyon başına ana worker orkestrasyon katmanıdır.

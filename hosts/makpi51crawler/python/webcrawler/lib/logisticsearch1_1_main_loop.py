@@ -112,7 +112,7 @@ def default_requested_by() -> str:
 
     # EN: Otherwise we return the stable existing-CLI identity.
     # TR: Aksi durumda stabil mevcut-CLI kimliğini döndürüyoruz.
-    return "logisticsearch2_worker_claim_loop"
+    return "logisticsearch1_1_main_loop"
 
 
 # EN: This function builds the command-line parser for the existing operator
