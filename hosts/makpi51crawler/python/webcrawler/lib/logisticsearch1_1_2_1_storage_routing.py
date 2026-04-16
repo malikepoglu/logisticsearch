@@ -25,7 +25,7 @@ import os
 
 # EN: This constant expresses the user's canonical raw/working collection root.
 # TR: Bu sabit, kullanıcının kanonik ham/çalışma veri toplama kökünü ifade eder.
-RAW_COLLECTION_ROOT = Path("/srv")
+RAW_COLLECTION_ROOT = Path("/srv/webcrawler/raw_fetch")
 
 # EN: This constant is the first preferred destination for processed output.
 # TR: Bu sabit işlenmiş çıktı için ilk tercih edilen hedeftir.
@@ -71,9 +71,9 @@ class StoragePathStatus:
 # TR: Bu dataclass işlenmiş çıktı için asgari nihai storage kararını tutar.
 @dataclass(slots=True)
 class ProcessedOutputPlan:
-    # EN: raw_collection_root is the canonical place where raw and working crawl
+    # EN: raw_collection_root is the canonical place where raw evidence
     # EN: accumulation lives.
-    # TR: raw_collection_root ham ve çalışma crawl birikiminin yaşadığı kanonik yerdir.
+    # TR: raw_collection_root ham kanıtın bulunduğu kanonik yerdir.
     raw_collection_root: str
 
     # EN: processed_output_root is the selected destination for normal processed
