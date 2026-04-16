@@ -1,221 +1,251 @@
 # Section1: Webcrawler Directories Files Map
-# Bölüm1: Webcrawler Dizin Dosya Haritası
 
-## Purpose
-## Amaç
+## EN
 
-This document defines the strict canonical directory and file placement model for the LogisticSearch webcrawler system across Pi51c, GitHub, and Ubuntu Desktop.
+### Purpose
 
-Bu belge, LogisticSearch webcrawler sistemi için Pi51c, GitHub ve Ubuntu Desktop boyunca geçerli olacak sıkı kanonik dizin ve dosya yerleşim modelini tanımlar.
+This document defines the canonical directories-and-files map for the Pi51crawler webcrawler surface.
 
-## Hard Rules
-## Sert Kurallar
+This document is a layout and boundary contract. It defines where data lives, where runtime code lives, where controls live, where configuration lives, and where the tracked repository lives.
 
-1. `/srv/` is a data area only.
-2. Runtime code must not live under `/srv/`.
-3. `/logisticsearch/` is the canonical root for runtime, controls, config, and repository placement.
-4. No `/opt/` surface is introduced for this model.
-5. The command set is `playwc`, `stopwc`, `resumewc`, `resetwc`, `poweroffwc`, and `rebootwc`.
-6. No separate `pausewc` command exists in the canonical model.
-7. `stopwc` is the durable stop command and behaves like a resumable pause.
-8. `resetwc` must stop first and then intentionally reset crawler state.
-9. The long repository path `/srv/crawler/logisticsearch/repo/` is not the target steady-state repository location.
-10. The target canonical repository path is `/logisticsearch/repo/`.
-11. The stray `/srv/crawler/logisticsearch/repo/python/` surface is not part of the canonical target model and must be removed during controlled migration.
-12. Runtime and data surfaces must not be mixed.
+This document is not a runbook. It does not authorize blind moves, deletes, or symlink shortcuts. Any migration from old paths to these canonical paths must be performed in controlled steps with explicit verification.
 
-1. `/srv/` yalnızca veri alanıdır.
-2. Runtime kodu `/srv/` altında yaşamamalıdır.
-3. `/logisticsearch/`, runtime, kontroller, config ve repository yerleşimi için kanonik köktür.
-4. Bu model için `/opt/` yüzeyi kullanılmaz.
-5. Komut seti `playwc`, `stopwc`, `resumewc`, `resetwc`, `poweroffwc` ve `rebootwc` komutlarından oluşur.
-6. Kanonik modelde ayrı bir `pausewc` komutu yoktur.
-7. `stopwc`, kalıcı stop komutudur ve resume edilebilir pause gibi davranır.
-8. `resetwc`, önce stop etmeli, sonra crawler durumunu bilinçli olarak sıfırlamalıdır.
-9. Uzun repository yolu `/srv/crawler/logisticsearch/repo/`, hedef kalıcı repository konumu değildir.
-10. Hedef kanonik repository yolu `/logisticsearch/repo/` yoludur.
-11. Dağınık `/srv/crawler/logisticsearch/repo/python/` yüzeyi kanonik hedef modelin parçası değildir ve kontrollü migrasyon sırasında kaldırılmalıdır.
-12. Runtime ve veri yüzeyleri birbirine karıştırılmamalıdır.
+### Hard Rules
 
-## Canonical Data Surface
-## Kanonik Veri Yüzeyi
+1. Public crawler data must live under `/srv/`.
+2. Canonical runtime code must live under `/logisticsearch/webcrawler/`.
+3. Canonical tracked repository must live under `/logisticsearch/repo/`.
+4. Public operator control wrappers must be limited to the small fixed surface defined in this document.
+5. `stopwc` must not exist as a public operator wrapper.
+6. `resumewc` must not exist as a public operator wrapper.
+7. `playwc` is the public command for both first start and resume-after-pause behavior.
+8. `pausewc` must preserve durable crawler position and progress truth rather than forgetting where the crawler was.
+9. Internal runtime-control truth may still use `run`, `pause`, and `stop` inside the database and service logic, but the public operator surface must remain smaller and clearer.
+10. Old long paths and mixed surfaces must be retired only through controlled migration steps. They must not be treated as the long-term canonical layout.
 
-The canonical data surface is:
+### Canonical Data Surface
 
-    /srv/
-    /srv/webcrawler/raw_fetch/
-    /srv/data/
-    /srv/buffer/
-    /srv/webcrawler/exports/
+All crawler data paths must live under `/srv/`.
 
-Kanonik veri yüzeyi şudur:
+The canonical data paths are:
 
-    /srv/
-    /srv/webcrawler/raw_fetch/
-    /srv/data/
-    /srv/buffer/
-    /srv/webcrawler/exports/
+- `/srv/webcrawler/raw_fetch/`
+- `/srv/data/`
+- `/srv/buffer/`
+- `/srv/webcrawler/exports/`
 
-### Data Placement Rules
-### Veri Yerleşim Kuralları
+The meaning of these paths is fixed:
 
-`/srv/webcrawler/raw_fetch/` stores raw fetched page bodies and raw fetch artefacts.
-`/srv/data/` stores durable processed output.
-`/srv/buffer/` stores temporary or overflow processed output only when explicitly needed by policy.
-`/srv/webcrawler/exports/` stores crawler export surfaces.
+- `/srv/webcrawler/raw_fetch/` stores raw fetched body artefacts.
+- `/srv/data/` stores processed output chosen for the durable processed-data surface.
+- `/srv/buffer/` stores temporary processed-output buffering when routing policy requires it.
+- `/srv/webcrawler/exports/` stores crawler export artefacts.
 
-`/srv/webcrawler/raw_fetch/`, ham çekilmiş sayfa gövdelerini ve ham fetch artefact'larını tutar.
-`/srv/data/`, kalıcı işlenmiş çıktıyı tutar.
-`/srv/buffer/`, yalnızca politika gereği açıkça gerektiğinde geçici veya taşma işlenmiş çıktıyı tutar.
-`/srv/webcrawler/exports/`, crawler export yüzeylerini tutar.
+No runtime code should be treated as canonical under `/srv/`. `/srv/` is the canonical data surface, not the canonical runtime-code surface.
 
-## Canonical Runtime Code Surface
-## Kanonik Runtime Kod Yüzeyi
+### Canonical Runtime Code Surface
 
-The canonical runtime and code surface is:
+Canonical runtime code must live under:
 
-    /logisticsearch/webcrawler/
-    /logisticsearch/webcrawler/lib/
-    /logisticsearch/webcrawler/.venv/
+- `/logisticsearch/webcrawler/`
+- `/logisticsearch/webcrawler/lib/`
+- `/logisticsearch/webcrawler/.venv/`
 
-Kanonik runtime ve kod yüzeyi şudur:
+The meaning of these paths is fixed:
 
-    /logisticsearch/webcrawler/
-    /logisticsearch/webcrawler/lib/
-    /logisticsearch/webcrawler/.venv/
+- `/logisticsearch/webcrawler/` is the canonical runtime root.
+- `/logisticsearch/webcrawler/lib/` stores the runtime Python module surface used by the live crawler runtime.
+- `/logisticsearch/webcrawler/.venv/` stores the canonical Python virtual environment for this runtime surface.
 
-### Runtime Placement Rules
-### Runtime Yerleşim Kuralları
+The `.venv` directory is the isolated Python package environment for the canonical webcrawler runtime. It is part of the runtime execution surface, not the tracked repository source surface.
 
-`/logisticsearch/webcrawler/` is the runtime root.
-`/logisticsearch/webcrawler/lib/` contains the runtime Python implementation.
-`/logisticsearch/webcrawler/.venv/` contains the runtime virtual environment.
+### Canonical Config Surface
 
-`/logisticsearch/webcrawler/`, runtime köküdür.
-`/logisticsearch/webcrawler/lib/`, runtime Python implementasyonunu içerir.
-`/logisticsearch/webcrawler/.venv/`, runtime sanal ortamını içerir.
+Canonical runtime configuration must live under:
 
-## Canonical Controls Surface
-## Kanonik Kontrol Yüzeyi
+- `/logisticsearch/webcrawler/config/webcrawler.env`
 
-The canonical controls surface is:
+This file is the canonical runtime environment file for the live webcrawler surface.
 
-    /logisticsearch/webcrawler/controls/playwc
-    /logisticsearch/webcrawler/controls/stopwc
-    /logisticsearch/webcrawler/controls/resumewc
-    /logisticsearch/webcrawler/controls/resetwc
-    /logisticsearch/webcrawler/controls/poweroffwc
-    /logisticsearch/webcrawler/controls/rebootwc
+Secret-bearing values must still be handled carefully and intentionally. This document only defines the canonical location.
 
-Kanonik kontrol yüzeyi şudur:
+### Canonical Controls Surface
 
-    /logisticsearch/webcrawler/controls/playwc
-    /logisticsearch/webcrawler/controls/stopwc
-    /logisticsearch/webcrawler/controls/resumewc
-    /logisticsearch/webcrawler/controls/resetwc
-    /logisticsearch/webcrawler/controls/poweroffwc
-    /logisticsearch/webcrawler/controls/rebootwc
+Public operator control wrappers must live under:
 
-### Control Semantics
-### Kontrol Semantiği
+- `/logisticsearch/webcrawler/controls/playwc`
+- `/logisticsearch/webcrawler/controls/pausewc`
+- `/logisticsearch/webcrawler/controls/resetwc`
+- `/logisticsearch/webcrawler/controls/poweroffwc`
+- `/logisticsearch/webcrawler/controls/rebootwc`
 
-`playwc` starts normal crawler loop execution from an allowed runnable state.
-`stopwc` is the canonical durable stop command and behaves like a resumable pause instead of a destructive reset.
-`resumewc` resumes from the preserved durable state left by `stopwc`.
-`resetwc` performs an intentional stop-first then reset flow.
-`poweroffwc` and `rebootwc` are explicit host-level wrappers and must not silently destroy crawler state.
-No separate `pausewc` command exists in the canonical model.
+The public meanings are:
 
-`playwc`, izin verilen çalışabilir durumdan normal crawler loop çalıştırmasını başlatır.
-`stopwc`, kanonik kalıcı stop komutudur ve yıkıcı reset yerine resume edilebilir pause gibi davranır.
-`resumewc`, `stopwc` tarafından bırakılan korunmuş kalıcı durumdan devam eder.
-`resetwc`, bilinçli bir önce-stop-sonra-reset akışı uygular.
-`poweroffwc` ve `rebootwc`, açık host-seviyesi sarmalayıcılardır ve crawler durumunu sessizce yok etmemelidir.
-Kanonik modelde ayrı bir `pausewc` komutu yoktur.
+- `playwc` sets the crawler into active running mode and is also the public resume command after pause.
+- `pausewc` pauses active crawling while preserving durable crawler position and progress truth.
+- `resetwc` is the explicit controlled reset surface. It is not the same thing as pause.
+- `poweroffwc` is the controlled crawler-aware poweroff surface.
+- `rebootwc` is the controlled crawler-aware reboot surface.
 
-## Canonical Config Surface
-## Kanonik Config Yüzeyi
+The public control surface must not expose `stopwc` as a public wrapper name because that name suggests a stronger and more destructive semantics than the intended pause-and-preserve behavior.
 
-The canonical config file is:
+The public control surface must not expose `resumewc` as a separate wrapper because `playwc` already covers both first start and resume-after-pause behavior.
 
-    /logisticsearch/webcrawler/config/webcrawler.env
+### Canonical Repository Surface
 
-Kanonik config dosyası şudur:
+The canonical tracked repository path on Pi51crawler must be:
 
-    /logisticsearch/webcrawler/config/webcrawler.env
+- `/logisticsearch/repo/`
 
-### Config Rule
-### Config Kuralı
+This is the canonical short-path tracked repository surface.
 
-The crawler runtime must read its environment configuration from this canonical config surface.
+Tracked host-scoped crawler code remains under the repository tree, for example:
 
-Crawler runtime, environment konfigürasyonunu bu kanonik config yüzeyinden okumalıdır.
+- `/logisticsearch/repo/hosts/makpi51crawler/python/webcrawler/`
+- `/logisticsearch/repo/hosts/makpi51crawler/sql/crawler_core/`
 
-## Canonical Repository Surface
-## Kanonik Repository Yüzeyi
+The repository is the tracked source-of-truth surface. The live runtime surface under `/logisticsearch/webcrawler/` is the canonical execution surface populated from controlled tracked code.
 
-The canonical repository root is:
+### Legacy Path Rule
 
-    /logisticsearch/repo/
+The following old long-path family is a legacy transition surface and must not be treated as the long-term canonical layout:
 
-Kanonik repository kökü şudur:
+- `/srv/crawler/logisticsearch/...`
 
-    /logisticsearch/repo/
+If old surfaces still exist during migration, they must be treated as controlled transition surfaces only.
 
-### Repository Rule
-### Repository Kuralı
+### Current Direction Rule
 
-The content currently living under `/srv/crawler/logisticsearch/repo/` is intended to move into `/logisticsearch/repo/` in a controlled migration.
-Git synchronization should then operate against `/logisticsearch/repo/`.
-The old long path is not the target steady-state repository location.
+The current direction is:
 
-Şu anda `/srv/crawler/logisticsearch/repo/` altında yaşayan içerik, kontrollü migrasyonla `/logisticsearch/repo/` altına taşınmak üzere hedeflenmiştir.
-Git senkronizasyonu daha sonra `/logisticsearch/repo/` üzerinden çalışmalıdır.
-Eski uzun yol, hedef kalıcı repository konumu değildir.
+1. keep tracked repository truth under `/logisticsearch/repo/`
+2. keep live runtime code under `/logisticsearch/webcrawler/`
+3. keep crawler data under `/srv/...`
+4. keep the public operator surface small and explicit
+5. continue controlled migration away from old mixed long-path layout
 
-## Explicit Non Canonical Surfaces
-## Açık Kanonik Dışı Yüzeyler
+---
 
-The following are not canonical target surfaces for the agreed model:
+## TR
 
-* runtime code under `/srv/`
-* a separate `pausewc` wrapper
-* an `/opt/` placement for this crawler model
-* keeping the repository root as `/srv/crawler/logisticsearch/repo/`
-* keeping a stray repository-side Python surface at `/srv/crawler/logisticsearch/repo/python/`
+### Amaç
 
-Aşağıdakiler, üzerinde anlaşılan model için kanonik hedef yüzeyler değildir:
+Bu doküman, Pi51crawler webcrawler yüzeyi için kanonik dizin-ve-dosya haritasını tanımlar.
 
-* `/srv/` altında runtime kodu
-* ayrı bir `pausewc` sarmalayıcısı
-* bu crawler modeli için `/opt/` yerleşimi
-* repository kökünü `/srv/crawler/logisticsearch/repo/` olarak tutmak
-* `/srv/crawler/logisticsearch/repo/python/` yolundaki dağınık repository-yanı Python yüzeyini korumak
+Bu doküman bir yerleşim ve sınır sözleşmesidir. Verinin nerede duracağını, runtime kodunun nerede duracağını, kontrol sarmalayıcılarının nerede duracağını, konfigürasyonun nerede duracağını ve izlenen repository'nin nerede duracağını tanımlar.
 
-## Migration Direction Rule
-## Migrasyon Yönü Kuralı
+Bu doküman bir runbook değildir. Kör taşıma, silme veya symlink kısayolu yetkisi vermez. Eski yollardan bu kanonik yollara geçiş yalnızca kontrollü adımlarla ve açık doğrulamalarla yapılmalıdır.
 
-The migration direction is strict:
+### Kesin Kurallar
 
-1. document the target layout
-2. align repository location
-3. align runtime code location
-4. align controls and config location
-5. align data paths under `/srv/`
-6. remove retired or stray legacy surfaces only after the new canonical surface is ready
+1. Açık crawler veri yüzeyi `/srv/` altında yaşamalıdır.
+2. Kanonik runtime kodu `/logisticsearch/webcrawler/` altında yaşamalıdır.
+3. Kanonik izlenen repository `/logisticsearch/repo/` altında yaşamalıdır.
+4. Açık operatör kontrol sarmalayıcıları bu dokümanda tanımlanan küçük ve sabit yüzeyle sınırlı kalmalıdır.
+5. `stopwc` açık operatör sarmalayıcısı olarak bulunmamalıdır.
+6. `resumewc` açık operatör sarmalayıcısı olarak bulunmamalıdır.
+7. `playwc`, hem ilk başlatma hem de pause sonrasında devam etme davranışı için açık komuttur.
+8. `pausewc`, crawler'ın bulunduğu yeri unutmadan kalıcı crawler konumu ve ilerleme doğrusunu korumalıdır.
+9. İç runtime-control doğrusu veritabanı ve servis mantığında yine `run`, `pause` ve `stop` kullanabilir; ancak açık operatör yüzeyi daha küçük ve daha anlaşılır kalmalıdır.
+10. Eski uzun yollar ve birbirine karışmış yüzeyler yalnızca kontrollü geçiş adımlarıyla emekliye ayrılmalıdır. Uzun vadeli kanonik yerleşim olarak kabul edilmemelidir.
 
-Migrasyon yönü sıkıdır:
+### Kanonik Veri Yüzeyi
 
-1. hedef yerleşimi dokümante et
-2. repository konumunu hizala
-3. runtime kod konumunu hizala
-4. controls ve config konumunu hizala
-5. `/srv/` altındaki veri yollarını hizala
-6. yeni kanonik yüzey hazır olduktan sonra emekli veya dağınık legacy yüzeyleri kaldır
+Tüm crawler veri yolları `/srv/` altında yaşamalıdır.
 
-## Current Decision Status
-## Güncel Karar Durumu
+Kanonik veri yolları şunlardır:
 
-This document records the agreed target layout as the canonical direction for Pi51c, GitHub, and Ubuntu Desktop coordination.
+- `/srv/webcrawler/raw_fetch/`
+- `/srv/data/`
+- `/srv/buffer/`
+- `/srv/webcrawler/exports/`
 
-Bu belge, Pi51c, GitHub ve Ubuntu Desktop koordinasyonu için üzerinde anlaşılmış hedef yerleşimi kanonik yön olarak kaydeder.
+Bu yolların anlamı sabittir:
+
+- `/srv/webcrawler/raw_fetch/` ham fetch body artefact'larını tutar.
+- `/srv/data/` kalıcı processed-data yüzeyi için seçilen işlenmiş çıktıyı tutar.
+- `/srv/buffer/` yönlendirme politikası gerektirdiğinde geçici işlenmiş çıktı tamponlamasını tutar.
+- `/srv/webcrawler/exports/` crawler export artefact'larını tutar.
+
+`/srv/` altında hiçbir runtime kod yüzeyi kanonik kabul edilmemelidir. `/srv/` kanonik veri yüzeyidir; kanonik runtime-kod yüzeyi değildir.
+
+### Kanonik Runtime Kod Yüzeyi
+
+Kanonik runtime kodu şu yollar altında yaşamalıdır:
+
+- `/logisticsearch/webcrawler/`
+- `/logisticsearch/webcrawler/lib/`
+- `/logisticsearch/webcrawler/.venv/`
+
+Bu yolların anlamı sabittir:
+
+- `/logisticsearch/webcrawler/` kanonik runtime köküdür.
+- `/logisticsearch/webcrawler/lib/` canlı crawler runtime'ının kullandığı Python modül yüzeyini tutar.
+- `/logisticsearch/webcrawler/.venv/` bu runtime yüzeyi için kanonik Python virtual environment'ı tutar.
+
+`.venv` dizini, kanonik webcrawler runtime'ının izole Python paket ortamıdır. İzlenen repository kaynak yüzeyinin değil, runtime çalışma yüzeyinin parçasıdır.
+
+### Kanonik Konfigürasyon Yüzeyi
+
+Kanonik runtime konfigürasyonu şu dosyada yaşamalıdır:
+
+- `/logisticsearch/webcrawler/config/webcrawler.env`
+
+Bu dosya, canlı webcrawler yüzeyi için kanonik runtime environment dosyasıdır.
+
+Secret taşıyan değerler yine dikkatli ve bilinçli biçimde ele alınmalıdır. Bu doküman yalnızca kanonik konumu tanımlar.
+
+### Kanonik Kontrol Yüzeyi
+
+Açık operatör kontrol sarmalayıcıları şu yollar altında yaşamalıdır:
+
+- `/logisticsearch/webcrawler/controls/playwc`
+- `/logisticsearch/webcrawler/controls/pausewc`
+- `/logisticsearch/webcrawler/controls/resetwc`
+- `/logisticsearch/webcrawler/controls/poweroffwc`
+- `/logisticsearch/webcrawler/controls/rebootwc`
+
+Açık anlamlar şunlardır:
+
+- `playwc`, crawler'ı aktif çalışma moduna alır ve pause sonrasında devam etmek için de kullanılan açık komuttur.
+- `pausewc`, aktif crawl işlemini duraksatır ama kalıcı crawler konumu ve ilerleme doğrusunu korur.
+- `resetwc`, açık ve kontrollü reset yüzeyidir. Pause ile aynı şey değildir.
+- `poweroffwc`, crawler-farkındalıklı kontrollü poweroff yüzeyidir.
+- `rebootwc`, crawler-farkındalıklı kontrollü reboot yüzeyidir.
+
+Açık kontrol yüzeyi `stopwc` adını bir açık sarmalayıcı olarak sunmamalıdır; çünkü bu ad, hedeflenen pause-et-ve-koru davranışından daha güçlü ve daha yıkıcı bir anlam çağrıştırır.
+
+Açık kontrol yüzeyi `resumewc` adını ayrı bir sarmalayıcı olarak da sunmamalıdır; çünkü `playwc` hem ilk başlatma hem de pause sonrası devam davranışını zaten kapsar.
+
+### Kanonik Repository Yüzeyi
+
+Pi51crawler üzerindeki kanonik izlenen repository yolu şu olmalıdır:
+
+- `/logisticsearch/repo/`
+
+Bu yol, kanonik kısa-yol izlenen repository yüzeyidir.
+
+İzlenen host-scoped crawler kodu repository ağacı altında kalmaya devam eder; örneğin:
+
+- `/logisticsearch/repo/hosts/makpi51crawler/python/webcrawler/`
+- `/logisticsearch/repo/hosts/makpi51crawler/sql/crawler_core/`
+
+Repository, izlenen source-of-truth yüzeyidir. `/logisticsearch/webcrawler/` altındaki canlı runtime yüzeyi ise kontrollü izlenen koddan doldurulan kanonik execution yüzeyidir.
+
+### Eski Yol Kuralı
+
+Aşağıdaki eski uzun-yol ailesi bir geçiş yüzeyidir ve uzun vadeli kanonik yerleşim olarak görülmemelidir:
+
+- `/srv/crawler/logisticsearch/...`
+
+Geçiş sırasında eski yüzeyler hâlâ bulunuyorsa, bunlar yalnızca kontrollü geçiş yüzeyleri olarak ele alınmalıdır.
+
+### Güncel Yön Kuralı
+
+Güncel yön şudur:
+
+1. izlenen repository doğrusu `/logisticsearch/repo/` altında kalsın
+2. canlı runtime kodu `/logisticsearch/webcrawler/` altında kalsın
+3. crawler verisi `/srv/...` altında kalsın
+4. açık operatör yüzeyi küçük ve açık kalsın
+5. eski karışık uzun-yol yerleşiminden kontrollü biçimde çıkılsın
