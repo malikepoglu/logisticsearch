@@ -44,7 +44,7 @@ from urllib.request import Request, urlopen
 # TR: Bu sabit /srv altındaki asgari kontrollü raw-fetch kökünü tanımlar.
 # TR: Kullanıcının istediği güncel sade depolama doğrusuna göre ham ve çalışma
 # TR: crawler birikimi /srv altında kalmalıdır.
-RAW_FETCH_ROOT = Path("/srv/crawler/logisticsearch/raw_fetch")
+RAW_FETCH_ROOT = Path("/srv/webcrawler/raw_fetch")
 
 
 # EN: This dataclass stores the minimal result of one real page fetch plus raw-body storage write.
