@@ -35,7 +35,7 @@ from dataclasses import asdict
 
 # EN: We import the canonical DB helpers needed by this existing CLI surface.
 # TR: Bu mevcut CLI yüzeyinin ihtiyaç duyduğu kanonik DB yardımcılarını içe aktarıyoruz.
-from .logisticsearch1_4_db import (
+from .logisticsearch1_1_1_state_db_gateway import (
     connect_db,
     get_webcrawler_runtime_control,
     set_webcrawler_runtime_control,
@@ -46,7 +46,7 @@ from .logisticsearch1_4_db import (
 # EN: crawler-core execution truth.
 # TR: Mevcut dar crawler-core çalışma doğrusunu uygulayan worker runtime
 # TR: yardımcılarını içe aktarıyoruz.
-from .logisticsearch1_main_worker_runtime import WorkerConfig, run_claim_probe
+from .logisticsearch1_1_2_worker_runtime import WorkerConfig, run_claim_probe
 
 
 # EN: This function reads a DSN from the environment and falls back to a

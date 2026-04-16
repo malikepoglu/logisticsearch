@@ -21,7 +21,7 @@ from pathlib import Path
 
 # EN: We import the canonical browser-acquisition runtime we just created.
 # TR: Az önce oluşturduğumuz kanonik browser-acquisition runtime yüzeyini içe aktarıyoruz.
-from logisticsearch1_2_browser_acquisition_runtime import acquire_public_page_with_browser
+from logisticsearch1_1_2_2_1_browser_dynamic_acquisition_runtime import acquire_public_page_with_browser
 
 
 # EN: This helper builds timestamped default evidence paths under /tmp.

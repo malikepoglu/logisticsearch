@@ -704,7 +704,7 @@ def fetch_page_with_browser_to_raw_storage(
     # EN: does not force a broader import rewrite at the top of the file.
     # TR: Bu dar adapter, dosyanın üst tarafında daha geniş bir import yeniden düzenlemesi
     # TR: zorlamasın diye kanonik browser acquisition fonksiyonunu burada lokal içe aktarıyoruz.
-    from .logisticsearch1_2_browser_acquisition_runtime import acquire_public_page_with_browser
+    from .logisticsearch1_1_2_2_1_browser_dynamic_acquisition_runtime import acquire_public_page_with_browser
 
     # EN: We read the claimed frontier url id because the rendered artefacts must stay
     # EN: directly traceable to one frontier work item.

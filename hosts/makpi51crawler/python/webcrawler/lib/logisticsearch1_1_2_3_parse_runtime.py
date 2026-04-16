@@ -42,7 +42,7 @@ from urllib.parse import urljoin, urlsplit, urlunsplit
 # TR: Kanonik minimal parse-apply yolu artık tek kullanımlık parçalar yerine
 # TR: repository içinde izlenen kodda yaşamalı olduğu için bu DB yardımcılarını
 # TR: burada içe aktarıyoruz.
-from .logisticsearch1_4_db import (
+from .logisticsearch1_1_1_state_db_gateway import (
     enqueue_discovered_url,
     fetch_url_discovery_context,
     persist_page_preranking_snapshot,
@@ -50,7 +50,7 @@ from .logisticsearch1_4_db import (
     upsert_page_workflow_status,
 )
 
-from .logisticsearch1_6_taxonomy_runtime import (
+from .logisticsearch1_1_2_3_1_taxonomy_runtime import (
     connect_taxonomy_db,
     search_runtime_taxonomy,
     taxonomy_default_dsn,

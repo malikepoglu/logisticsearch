@@ -41,7 +41,7 @@ from urllib.error import HTTPError, URLError
 # EN: We now import claim, robots decision/cache helpers, and finalize helpers together.
 # TR: Bu DB yardımcıları mevcut kanonik crawler-core etkileşim noktalarını ifade eder.
 # TR: Artık claim, robots karar/cache yardımcıları ve finalize yardımcılarını birlikte içe aktarıyoruz.
-from .logisticsearch1_4_db import (
+from .logisticsearch1_1_1_state_db_gateway import (
     claim_next_url,
     close_db,
     commit,
@@ -62,7 +62,7 @@ from .logisticsearch1_4_db import (
 # EN: must refuse new work when storage policy says normal flow should pause.
 # TR: Worker normal akış pause olmalıysa yeni iş almamalı; bu yüzden minimal
 # TR: işlenmiş-çıktı storage planlayıcısını içe aktarıyoruz.
-from .logisticsearch1_5_storage_routing import ProcessedOutputPlan, choose_processed_output_plan
+from .logisticsearch1_1_2_1_storage_routing import ProcessedOutputPlan, choose_processed_output_plan
 
 # EN: We import the minimal real fetch helpers and their structured result objects
 # EN: because durable worker mode now performs both normal page fetches and robots
@@ -70,7 +70,7 @@ from .logisticsearch1_5_storage_routing import ProcessedOutputPlan, choose_proce
 # TR: Durable worker modu artık hem normal sayfa fetch'lerini hem de ilk kanonik
 # TR: cache-refresh entegrasyon adımındaki robots refresh fetch'lerini yaptığı için
 # TR: minimal gerçek fetch yardımcılarını ve yapılı sonuç nesnelerini içe aktarıyoruz.
-from .logisticsearch1_1_fetch_runtime import (
+from .logisticsearch1_1_2_2_acquisition_runtime import (
     FetchedPageResult,
     FetchedRobotsTxtResult,
     decode_robots_body,
@@ -85,7 +85,7 @@ fetch_robots_txt_to_raw_storage,
 # EN: the repo-contained parse-apply path instead of ad hoc external snippets.
 # TR: Worker runtime artık repository içindeki kanonik parse-apply yolunu
 # TR: kullanmak zorunda olduğu için parse yardımcılarını burada içe aktarıyoruz.
-from .logisticsearch1_3_parse_runtime import MinimalParseApplyResult, apply_minimal_parse_entry
+from .logisticsearch1_1_2_3_parse_runtime import MinimalParseApplyResult, apply_minimal_parse_entry
 
 
 # EN: This dataclass stores runtime configuration for the current worker surface.
