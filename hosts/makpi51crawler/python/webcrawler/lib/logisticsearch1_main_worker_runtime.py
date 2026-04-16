@@ -697,6 +697,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             finalize_result=None,
             parse_apply_result=parse_apply_result,
             observed_at=utc_now_iso(),
+            runtime_control=runtime_control,
         )
 
     # EN: Only after storage allows normal flow do we open a DB connection.
@@ -780,6 +781,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 finalize_result=None,
                 parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
             )
 
         # EN: We extract the host/path pair once because refresh-decision and
@@ -846,6 +848,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 finalize_result=None,
                 parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
             )
 
         # EN: In durable mode we inspect the robots verdict before any real page fetch is attempted.
@@ -874,6 +877,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 finalize_result=finalize_result,
                 parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
             )
 
         # EN: If robots allows fetch, we execute the minimal real HTTP fetch plus raw-body write.
@@ -996,6 +1000,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 finalize_result=finalize_result,
                 parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
             )
 
         # EN: HTTPError means the server answered with an explicit HTTP failure status.
@@ -1019,6 +1024,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 finalize_result=finalize_result,
                 parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
             )
 
         # EN: URLError, socket timeout, and timeout-like transport failures are treated
@@ -1043,6 +1049,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 finalize_result=finalize_result,
                 parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
             )
 
         # EN: Any other unexpected fetch/runtime failure is finalized as permanent
@@ -1067,6 +1074,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 finalize_result=finalize_result,
                 parse_apply_result=parse_apply_result,
                 observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
             )
     finally:
         # EN: We always close the connection even if an error occurs.
