@@ -120,7 +120,8 @@ WITH expected(schema_name, function_name) AS (
     ('frontier','compute_success_next_fetch_at'),
     ('http_fetch','upsert_robots_txt_cache'),
     ('http_fetch','compute_robots_refresh_decision'),
-    ('http_fetch','compute_robots_allow_decision')
+    ('http_fetch','compute_robots_allow_decision'),
+    ('http_fetch','log_fetch_attempt_terminal')
 )
 SELECT
   e.schema_name,
@@ -205,7 +206,8 @@ expected_function(schema_name, function_name) AS (
     ('frontier','compute_success_next_fetch_at'),
     ('http_fetch','upsert_robots_txt_cache'),
     ('http_fetch','compute_robots_refresh_decision'),
-    ('http_fetch','compute_robots_allow_decision')
+    ('http_fetch','compute_robots_allow_decision'),
+    ('http_fetch','log_fetch_attempt_terminal')
 ),
 expected_index(schema_name, index_name) AS (
   VALUES

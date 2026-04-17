@@ -6,3 +6,4 @@
 \ir 003_frontier_finish_transitions.sql
 \ir 004_frontier_politeness_and_freshness.sql
 \ir 005_http_fetch_robots_cache_and_enforcement.sql
+\ir 008_http_fetch_attempt_terminal_logging.sql

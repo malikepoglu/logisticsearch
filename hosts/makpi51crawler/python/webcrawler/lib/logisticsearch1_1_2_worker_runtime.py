@@ -50,6 +50,7 @@ from .logisticsearch1_1_1_state_db_gateway import (
     connect_db,
     get_webcrawler_runtime_control,
     webcrawler_runtime_may_claim,
+    log_fetch_attempt_terminal,
     finish_fetch_permanent_error,
     finish_fetch_retryable_error,
     finish_fetch_success,
@@ -207,6 +208,112 @@ def claimed_url_value(claimed_url: object, field_name: str) -> object:
     return getattr(claimed_url, field_name)
 
 
+
+# EN: This helper builds a small explicit metadata payload for terminal fetch-attempt
+# EN: logging so later audits can understand which runtime path produced the row.
+# TR: Bu yardımcı terminal fetch-attempt loglaması için küçük ve açık bir metadata
+# TR: payload'ı kurar; böylece daha sonraki audit'ler satırı hangi runtime yolunun
+# TR: ürettiğini anlayabilir.
+def build_terminal_fetch_attempt_metadata(
+    *,
+    claimed_url: object,
+    acquisition_method: str | None,
+    note: str,
+) -> dict:
+    # EN: We record a minimal but explicit operator-facing metadata shape.
+    # TR: Asgari ama açık bir operatör-görünür metadata şekli kaydediyoruz.
+    return {
+        "runtime_surface": "worker_runtime",
+        "note": note,
+        "acquisition_method": acquisition_method,
+        "canonical_url": str(claimed_url_value(claimed_url, "canonical_url")),
+        "authority_key": str(claimed_url_value(claimed_url, "authority_key")),
+        "scheme": str(claimed_url_value(claimed_url, "scheme")),
+        "host": str(claimed_url_value(claimed_url, "host")),
+    }
+
+
+# EN: This helper writes one terminal fetch-attempt row using only the fields the
+# EN: current worker surface honestly has at the point of logging.
+# TR: Bu yardımcı log anında mevcut worker yüzeyinin dürüstçe sahip olduğu alanları
+# TR: kullanarak tek bir terminal fetch-attempt satırı yazar.
+def log_fetch_attempt_terminal_from_worker(
+    conn,
+    *,
+    claimed_url: object,
+    worker_id: str,
+    outcome: str,
+    note: str,
+    acquisition_method: str | None,
+    fetched_page: FetchedPageResult | None = None,
+    error_class: str | None = None,
+    error_message: str | None = None,
+) -> dict:
+    # EN: We read the exact claimed frontier identities so the terminal log row
+    # EN: stays anchored to the same leased work item.
+    # TR: Terminal log satırı aynı leased iş öğesine bağlı kalsın diye tam claim
+    # TR: edilmiş frontier kimliklerini okuyoruz.
+    url_id = int(claimed_url_value(claimed_url, "url_id"))
+    host_id = int(claimed_url_value(claimed_url, "host_id"))
+    lease_token = str(claimed_url_value(claimed_url, "lease_token"))
+    request_url = str(claimed_url_value(claimed_url, "canonical_url"))
+
+    # EN: We start with the fields that are always visible in the worker surface.
+    # TR: Worker yüzeyinde her zaman görünen alanlarla başlıyoruz.
+    payload = {
+        "url_id": url_id,
+        "host_id": host_id,
+        "worker_id": worker_id,
+        "request_url": request_url,
+        "outcome": outcome,
+        "fetch_kind": "page",
+        "lease_token": lease_token,
+        "request_method": "GET",
+        "final_url": request_url,
+        "http_status": None,
+        "content_type": None,
+        "content_length": None,
+        "body_storage_path": None,
+        "body_sha256": None,
+        "body_bytes": None,
+        "etag": None,
+        "last_modified": None,
+        "error_class": error_class,
+        "error_message": error_message,
+        "fetch_metadata": build_terminal_fetch_attempt_metadata(
+            claimed_url=claimed_url,
+            acquisition_method=acquisition_method,
+            note=note,
+        ),
+    }
+
+    # EN: When a real fetch result exists, we enrich the terminal payload with the
+    # EN: honest fetch artefact fields currently available in Python.
+    # TR: Gerçek bir fetch sonucu varsa terminal payload'ını Python tarafında şu anda
+    # TR: dürüstçe mevcut olan fetch artefact alanlarıyla zenginleştiriyoruz.
+    if fetched_page is not None:
+        payload.update(
+            {
+                "final_url": fetched_page.final_url,
+                "http_status": fetched_page.http_status,
+                "content_type": fetched_page.content_type,
+                "content_length": fetched_page.body_bytes,
+                "body_storage_path": fetched_page.raw_storage_path,
+                "body_sha256": fetched_page.raw_sha256,
+                "body_bytes": fetched_page.body_bytes,
+                "etag": fetched_page.etag,
+                "last_modified": fetched_page.last_modified,
+            }
+        )
+
+    # EN: We delegate the actual durable insert to the gateway helper.
+    # TR: Gerçek kalıcı insert işlemini gateway yardımcısına devrediyoruz.
+    return log_fetch_attempt_terminal(
+        conn,
+        **payload,
+    )
+
+
 # EN: This helper decides whether the current robots verdict still allows the
 # EN: minimal worker to perform a real page fetch.
 # TR: Bu yardımcı mevcut robots verdict'inin minimal worker'ın gerçek page fetch
@@ -249,6 +356,7 @@ def finalize_robots_block(
     *,
     claimed_url: object,
     robots_allow_decision: dict | None,
+    worker_id: str,
 ) -> dict:
     # EN: We extract the URL id because finalize must target the exact leased row.
     # TR: Finalize tam leased satırı hedeflemek zorunda olduğu için URL id'yi çıkarıyoruz.
@@ -262,9 +370,25 @@ def finalize_robots_block(
     # TR: Saklanan hata mesajı açık kalsın diye görünür verdict'i okuyoruz.
     verdict = None if robots_allow_decision is None else robots_allow_decision.get("verdict")
 
-    # EN: We call the permanent finalize wrapper with an explicit robots_blocked class.
-    # TR: Açık bir robots_blocked sınıfıyla permanent finalize wrapper'ını çağırıyoruz.
-    return finish_fetch_permanent_error(
+    # EN: We first persist one terminal fetch-attempt row so durable per-attempt
+    # EN: visibility exists even for robots-blocked outcomes.
+    # TR: Robots-blocked sonuçlarda bile kalıcı deneme-bazlı görünürlük olsun diye
+    # TR: önce tek bir terminal fetch-attempt satırı yazıyoruz.
+    fetch_attempt_log = log_fetch_attempt_terminal_from_worker(
+        conn,
+        claimed_url=claimed_url,
+        worker_id=worker_id,
+        outcome="blocked_robots",
+        note="worker runtime robots-blocked finalize path",
+        acquisition_method=None,
+        fetched_page=None,
+        error_class="robots_blocked",
+        error_message=f"robots verdict forbids fetch: {verdict}",
+    )
+
+    # EN: We then call the frontier permanent finalize wrapper with the same visible class.
+    # TR: Ardından aynı görünür sınıfla frontier permanent finalize wrapper'ını çağırıyoruz.
+    finalize_result = finish_fetch_permanent_error(
         conn,
         url_id=url_id,
         lease_token=lease_token,
@@ -272,6 +396,13 @@ def finalize_robots_block(
         error_class="robots_blocked",
         error_message=f"robots verdict forbids fetch: {verdict}",
     )
+
+    # EN: We merge the terminal fetch-attempt row into the returned finalize payload.
+    # TR: Dönen finalize payload'ına terminal fetch-attempt satırını birleştiriyoruz.
+    return {
+        **dict(finalize_result),
+        "fetch_attempt_log": dict(fetch_attempt_log),
+    }
 
 
 # EN: This helper finalizes an HTTP error according to the minimal retryable/permanent rule.
@@ -282,6 +413,7 @@ def finalize_http_error(
     claimed_url: object,
     http_status: int,
     error_message: str,
+    worker_id: str,
 ) -> dict:
     # EN: We classify the status code first so the finalize branch stays explicit.
     # TR: Finalize dalı açık kalsın diye önce durum kodunu sınıflandırıyoruz.
@@ -295,10 +427,26 @@ def finalize_http_error(
     # TR: Finalize lease sahipliğini kanıtlamak zorunda olduğu için lease token'ı çıkarıyoruz.
     lease_token = str(claimed_url_value(claimed_url, "lease_token"))
 
+    # EN: We persist one terminal fetch-attempt row before frontier finalization so
+    # EN: durable per-attempt visibility exists for explicit HTTP failure responses.
+    # TR: Açık HTTP hata yanıtları için kalıcı deneme-bazlı görünürlük oluşsun diye
+    # TR: frontier finalization'dan önce tek bir terminal fetch-attempt satırı yazıyoruz.
+    fetch_attempt_log = log_fetch_attempt_terminal_from_worker(
+        conn,
+        claimed_url=claimed_url,
+        worker_id=worker_id,
+        outcome="retryable_error" if is_retryable else "permanent_error",
+        note="worker runtime HTTPError finalize path",
+        acquisition_method=None,
+        fetched_page=None,
+        error_class=error_class,
+        error_message=error_message,
+    )
+
     # EN: Retryable statuses go through the retryable finalize wrapper.
     # TR: Retryable durumlar retryable finalize wrapper üzerinden gider.
     if is_retryable:
-        return finish_fetch_retryable_error(
+        finalize_result = finish_fetch_retryable_error(
             conn,
             url_id=url_id,
             lease_token=lease_token,
@@ -307,17 +455,24 @@ def finalize_http_error(
             error_message=error_message,
             retry_delay=None,
         )
+    else:
+        # EN: All other HTTP failure statuses go through the permanent finalize wrapper.
+        # TR: Diğer tüm HTTP hata durumları permanent finalize wrapper üzerinden gider.
+        finalize_result = finish_fetch_permanent_error(
+            conn,
+            url_id=url_id,
+            lease_token=lease_token,
+            http_status=http_status,
+            error_class=error_class,
+            error_message=error_message,
+        )
 
-    # EN: All other HTTP failure statuses go through the permanent finalize wrapper.
-    # TR: Diğer tüm HTTP hata durumları permanent finalize wrapper üzerinden gider.
-    return finish_fetch_permanent_error(
-        conn,
-        url_id=url_id,
-        lease_token=lease_token,
-        http_status=http_status,
-        error_class=error_class,
-        error_message=error_message,
-    )
+    # EN: We merge the terminal fetch-attempt row into the returned finalize payload.
+    # TR: Dönen finalize payload'ına terminal fetch-attempt satırını birleştiriyoruz.
+    return {
+        **dict(finalize_result),
+        "fetch_attempt_log": dict(fetch_attempt_log),
+    }
 
 
 # EN: This helper finalizes a lower-level transport failure as retryable.
@@ -327,6 +482,7 @@ def finalize_transport_error(
     *,
     claimed_url: object,
     error_message: str,
+    worker_id: str,
 ) -> dict:
     # EN: We extract the URL id because finalize must target the exact leased row.
     # TR: Finalize tam leased satırı hedeflemek zorunda olduğu için URL id'yi çıkarıyoruz.
@@ -336,11 +492,32 @@ def finalize_transport_error(
     # TR: Finalize lease sahipliğini kanıtlamak zorunda olduğu için lease token'ı çıkarıyoruz.
     lease_token = str(claimed_url_value(claimed_url, "lease_token"))
 
+    # EN: We classify timeout-like text separately so terminal fetch-attempt rows
+    # EN: can expose timeout vs broader network failure outcomes.
+    # TR: Terminal fetch-attempt satırları timeout ile daha genel ağ hatasını ayrı
+    # TR: gösterebilsin diye timeout-benzeri metni ayrıca sınıflandırıyoruz.
+    normalized_error_message = error_message.lower()
+    transport_outcome = "timeout" if "timeout" in normalized_error_message else "network_error"
+
+    # EN: We persist one terminal fetch-attempt row before frontier finalization.
+    # TR: Frontier finalization'dan önce tek bir terminal fetch-attempt satırı yazıyoruz.
+    fetch_attempt_log = log_fetch_attempt_terminal_from_worker(
+        conn,
+        claimed_url=claimed_url,
+        worker_id=worker_id,
+        outcome=transport_outcome,
+        note="worker runtime transport-error finalize path",
+        acquisition_method=None,
+        fetched_page=None,
+        error_class="transport_retryable_error",
+        error_message=error_message,
+    )
+
     # EN: We use the retryable finalize wrapper because transport failures are
     # EN: typically transient in this minimal first implementation.
     # TR: Bu minimal ilk implementasyonda taşıma hataları tipik olarak geçici kabul
     # TR: edildiği için retryable finalize wrapper'ını kullanıyoruz.
-    return finish_fetch_retryable_error(
+    finalize_result = finish_fetch_retryable_error(
         conn,
         url_id=url_id,
         lease_token=lease_token,
@@ -350,6 +527,13 @@ def finalize_transport_error(
         retry_delay=None,
     )
 
+    # EN: We merge the terminal fetch-attempt row into the returned finalize payload.
+    # TR: Dönen finalize payload'ına terminal fetch-attempt satırını birleştiriyoruz.
+    return {
+        **dict(finalize_result),
+        "fetch_attempt_log": dict(fetch_attempt_log),
+    }
+
 
 # EN: This helper finalizes an unexpected runtime failure as permanent.
 # TR: Bu yardımcı beklenmeyen bir runtime hatasını permanent olarak finalize eder.
@@ -358,6 +542,7 @@ def finalize_unexpected_runtime_error(
     *,
     claimed_url: object,
     error_message: str,
+    worker_id: str,
 ) -> dict:
     # EN: We extract the URL id because finalize must target the exact leased row.
     # TR: Finalize tam leased satırı hedeflemek zorunda olduğu için URL id'yi çıkarıyoruz.
@@ -367,11 +552,25 @@ def finalize_unexpected_runtime_error(
     # TR: Finalize lease sahipliğini kanıtlamak zorunda olduğu için lease token'ı çıkarıyoruz.
     lease_token = str(claimed_url_value(claimed_url, "lease_token"))
 
+    # EN: We persist one terminal fetch-attempt row before frontier finalization.
+    # TR: Frontier finalization'dan önce tek bir terminal fetch-attempt satırı yazıyoruz.
+    fetch_attempt_log = log_fetch_attempt_terminal_from_worker(
+        conn,
+        claimed_url=claimed_url,
+        worker_id=worker_id,
+        outcome="permanent_error",
+        note="worker runtime unexpected-error finalize path",
+        acquisition_method=None,
+        fetched_page=None,
+        error_class="unexpected_fetch_runtime_error",
+        error_message=error_message,
+    )
+
     # EN: We use the permanent finalize wrapper because an unknown runtime error
     # EN: should not be silently retried by this minimal layer.
     # TR: Bilinmeyen bir runtime hatası bu minimal katman tarafından sessizce
     # TR: retry edilmemeli diye permanent finalize wrapper'ını kullanıyoruz.
-    return finish_fetch_permanent_error(
+    finalize_result = finish_fetch_permanent_error(
         conn,
         url_id=url_id,
         lease_token=lease_token,
@@ -379,6 +578,13 @@ def finalize_unexpected_runtime_error(
         error_class="unexpected_fetch_runtime_error",
         error_message=error_message,
     )
+
+    # EN: We merge the terminal fetch-attempt row into the returned finalize payload.
+    # TR: Dönen finalize payload'ına terminal fetch-attempt satırını birleştiriyoruz.
+    return {
+        **dict(finalize_result),
+        "fetch_attempt_log": dict(fetch_attempt_log),
+    }
 
 
 # EN: This helper reads one persisted robots raw body back from disk and turns it
@@ -865,6 +1071,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 conn,
                 claimed_url=claimed_url,
                 robots_allow_decision=robots_allow_decision,
+                worker_id=config.worker_id,
             )
             commit(conn)
 
@@ -974,6 +1181,18 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             # TR: sonra fetch'i tam bir kez kanonik success wrapper üzerinden finalize ediyoruz.
             # TR: Böylece sıra açık kalır:
             # TR: claim -> durable iş -> success finalize -> commit -> yerel lease'i unut.
+            fetch_attempt_log = log_fetch_attempt_terminal_from_worker(
+                conn,
+                claimed_url=claimed_url,
+                worker_id=config.worker_id,
+                outcome="success",
+                note="worker runtime success finalize path",
+                acquisition_method=acquisition_method,
+                fetched_page=fetched_page,
+                error_class=None,
+                error_message=None,
+            )
+
             finalize_result = finish_fetch_success(
                 conn,
                 url_id=fetched_page.url_id,
@@ -1013,6 +1232,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             # TR: mevcut finalize payload'ına birleştiriyoruz.
             finalize_result = {
                 **dict(finalize_result),
+                "fetch_attempt_log": dict(fetch_attempt_log),
                 "frontier_release": dict(release_result),
             }
             commit(conn)
@@ -1038,6 +1258,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 claimed_url=claimed_url,
                 http_status=int(exc.code),
                 error_message=f"HTTPError {exc.code}: {exc.reason}",
+                worker_id=config.worker_id,
             )
             commit(conn)
 
@@ -1063,6 +1284,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 conn,
                 claimed_url=claimed_url,
                 error_message=f"{type(exc).__name__}: {exc}",
+                worker_id=config.worker_id,
             )
             commit(conn)
 
@@ -1088,6 +1310,7 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 conn,
                 claimed_url=claimed_url,
                 error_message=f"{type(exc).__name__}: {exc}",
+                worker_id=config.worker_id,
             )
             commit(conn)
 
