@@ -623,6 +623,58 @@ def finish_fetch_success(
 
 # EN: This helper finalizes a retryable fetch failure for one leased frontier URL.
 # TR: Bu yardımcı leased durumdaki tek bir frontier URL için retryable fetch hatasını finalize eder.
+
+# EN: This helper calls frontier.release_parse_pending_to_queued(...) so Python can
+# EN: move a success-finalized frontier row out of transient parse_pending and back
+# EN: into the normal revisit queue without changing its already-computed next_fetch_at.
+# TR: Bu yardımcı frontier.release_parse_pending_to_queued(...) çağrısını yapar;
+# TR: böylece Python success-finalize edilmiş frontier satırını geçici parse_pending
+# TR: durumundan, önceden hesaplanmış next_fetch_at değerini bozmadan normal revisit
+# TR: kuyruğuna geri taşıyabilir.
+def release_parse_pending_to_queued(
+    conn: psycopg.Connection,
+    *,
+    url_id: int,
+) -> dict[str, Any]:
+    # EN: We open one isolated cursor because this helper performs one explicit
+    # EN: crawler-core state transition call.
+    # TR: Bu yardımcı tek bir açık crawler-core durum geçiş çağrısı yaptığı için
+    # TR: izole bir cursor açıyoruz.
+    with conn.cursor() as cur:
+        # EN: We call the canonical crawler-core function instead of issuing an ad hoc
+        # EN: update so Python stays aligned with the sealed SQL contract.
+        # TR: Python tarafı mühürlü SQL sözleşmesiyle hizalı kalsın diye özel bir
+        # TR: update yazmak yerine kanonik crawler-core fonksiyonunu çağırıyoruz.
+        cur.execute(
+            """
+            select *
+            from frontier.release_parse_pending_to_queued(
+                p_url_id => %(url_id)s
+            )
+            """,
+            {
+                "url_id": url_id,
+            },
+        )
+
+        # EN: We fetch exactly one row because one call should release at most one
+        # EN: frontier row.
+        # TR: Tek çağrı en fazla bir frontier satırını serbest bırakması gerektiği
+        # TR: için tam bir satır çekiyoruz.
+        row = cur.fetchone()
+
+    # EN: Missing output is a structural failure because the canonical crawler-core
+    # EN: release function should always report the current persisted state.
+    # TR: Çıktı yoksa bu yapısal hatadır; çünkü kanonik crawler-core release
+    # TR: fonksiyonu mevcut persist edilmiş durumu her zaman raporlamalıdır.
+    if row is None:
+        raise RuntimeError("frontier.release_parse_pending_to_queued(...) returned no row")
+
+    # EN: We return the raw mapping because it is already beginner-readable.
+    # TR: Ham mapping'i döndürüyoruz; çünkü zaten beginner-okunur yapıdadır.
+    return row
+
+
 def finish_fetch_retryable_error(
     conn: psycopg.Connection,
     *,

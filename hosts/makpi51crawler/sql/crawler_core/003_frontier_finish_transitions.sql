@@ -101,6 +101,51 @@ END;
 $function$;
 
 
+
+CREATE OR REPLACE FUNCTION frontier.release_parse_pending_to_queued(p_url_id bigint, p_now timestamp with time zone DEFAULT now())
+ RETURNS TABLE(url_id bigint, previous_state frontier.url_state_enum, new_state frontier.url_state_enum, next_fetch_at timestamp with time zone, updated_at timestamp with time zone)
+ LANGUAGE plpgsql
+AS $function$
+BEGIN
+  IF p_url_id IS NULL THEN
+    RAISE EXCEPTION 'p_url_id must not be null';
+  END IF;
+
+  RETURN QUERY
+  WITH candidate AS (
+    SELECT
+      u.url_id,
+      u.state AS previous_state,
+      u.next_fetch_at
+    FROM frontier.url u
+    WHERE u.url_id = p_url_id
+      AND u.state = 'parse_pending'
+    FOR UPDATE OF u
+  ),
+  updated_url AS (
+    UPDATE frontier.url u
+       SET state = 'queued',
+           updated_at = p_now
+      FROM candidate c
+     WHERE u.url_id = c.url_id
+     RETURNING
+       u.url_id,
+       c.previous_state,
+       u.state,
+       u.next_fetch_at,
+       u.updated_at
+  )
+  SELECT
+    uu.url_id,
+    uu.previous_state,
+    uu.state,
+    uu.next_fetch_at,
+    uu.updated_at
+  FROM updated_url uu;
+END;
+$function$;
+
+
 CREATE OR REPLACE FUNCTION frontier.finish_fetch_retryable_error(p_url_id bigint, p_lease_token uuid, p_now timestamp with time zone DEFAULT now(), p_http_status integer DEFAULT NULL::integer, p_error_class text DEFAULT 'retryable_error'::text, p_error_message text DEFAULT NULL::text, p_retry_delay interval DEFAULT NULL::interval)
  RETURNS TABLE(url_id bigint, host_id bigint, previous_state frontier.url_state_enum, new_state frontier.url_state_enum, last_http_status integer, last_error_class text, last_error_message text, next_fetch_at timestamp with time zone, host_backoff_until timestamp with time zone)
  LANGUAGE plpgsql

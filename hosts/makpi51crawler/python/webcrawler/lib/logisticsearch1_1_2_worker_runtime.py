@@ -54,6 +54,7 @@ from .logisticsearch1_1_1_state_db_gateway import (
     finish_fetch_retryable_error,
     finish_fetch_success,
     renew_url_lease,
+    release_parse_pending_to_queued,
     rollback,
     upsert_robots_txt_cache,
 )
@@ -988,6 +989,32 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             # EN: and final success transition become durable together.
             # TR: Claim, raw-fetch evidence'ı, opsiyonel parse evidence'ı ve nihai
             # TR: success geçişi birlikte kalıcı olsun diye bir kez commit ediyoruz.
+            # EN: Success finalization intentionally lands on transient parse_pending
+            # EN: first, because that is the sealed crawler-core success boundary.
+            # EN: After optional parse-side durable work has completed or been
+            # EN: deliberately skipped, we must release that transient frontier row
+            # EN: back to queued so revisit scheduling can continue normally.
+            # TR: Success finalization bilinçli olarak önce geçici parse_pending
+            # TR: durumuna iner; çünkü mühürlü crawler-core başarı sınırı budur.
+            # TR: Opsiyonel parse-tarafı kalıcı iş tamamlandıktan ya da bilinçli
+            # TR: olarak atlandıktan sonra, revisit planlaması normal biçimde
+            # TR: sürebilsin diye bu geçici frontier satırını tekrar queued
+            # TR: durumuna bırakmamız gerekir.
+            release_result = release_parse_pending_to_queued(
+                conn=conn,
+                url_id=int(claimed_url_value(claimed_url, "url_id")),
+            )
+
+            # EN: We merge the frontier release result into the existing finalize
+            # EN: payload so the returned operator JSON shows both the success
+            # EN: boundary and the release back into the revisit queue.
+            # TR: Dönen operatör JSON'u hem başarı sınırını hem de revisit kuyruğuna
+            # TR: geri bırakma sonucunu gösterebilsin diye frontier release sonucunu
+            # TR: mevcut finalize payload'ına birleştiriyoruz.
+            finalize_result = {
+                **dict(finalize_result),
+                "frontier_release": dict(release_result),
+            }
             commit(conn)
 
             return ClaimProbeResult(

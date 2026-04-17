@@ -277,12 +277,18 @@ Current runtime-side clarification:
 - success finalization may happen only after optional same-lease durable success-side work has either completed or been deliberately skipped
 - the current optional parse-side continuation is attempted only when fetched content is parse-suitable and the connected database exposes the `parse` schema
 - crawler_core-only scratch databases may therefore reach a valid success finalization without parse persistence, because missing `parse` schema is treated as an explicit skip condition rather than as a fatal contradiction
+- in the current runtime contract, `parse_pending` is a transient crawler-core handoff state rather than a long-lived scheduling home
+- after optional parse-side durable work has completed or been deliberately skipped, the runtime must release the frontier row from `parse_pending` back to `queued` while preserving the already-computed revisit schedule in `next_fetch_at`
+- parse-layer review/export decisions live in `parse` / `outbox` truth surfaces and must not leave `frontier.url` stranded permanently in `parse_pending`
 
 Güncel runtime-tarafı açıklama:
 
 - success finalization, ancak opsiyonel aynı-lease durable success-tarafı iş ya tamamlandıktan ya da bilinçli olarak atlandıktan sonra gerçekleşebilir
 - güncel opsiyonel parse-tarafı continuation yalnızca fetch edilen içerik parse için uygunsa ve bağlı veritabanı `parse` şemasını sağlıyorsa denenir
 - bu nedenle yalnızca crawler_core içeren scratch veritabanları, `parse` şeması yoksa bile geçerli bir success finalization sonucuna ulaşabilir; çünkü eksik `parse` şeması fatal bir çelişki değil, açık bir skip koşulu olarak ele alınır
+- güncel runtime sözleşmesinde `parse_pending`, uzun ömürlü bir planlama yuvası değil, geçici bir crawler-core aktarım durumudur
+- opsiyonel parse-tarafı kalıcı iş tamamlandıktan ya da bilinçli olarak atlandıktan sonra runtime, `frontier.url` satırını `parse_pending` durumundan tekrar `queued` durumuna bırakmalı ve önceden hesaplanmış `next_fetch_at` revisit planını korumalıdır
+- parse-tarafı review/export kararları `parse` / `outbox` doğruluk yüzeylerinde yaşar; bu kararlar `frontier.url` satırını kalıcı biçimde `parse_pending` içinde mahsur bırakmamalıdır
 
 ### 5. Retryable-error finalization
 
