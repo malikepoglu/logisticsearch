@@ -1,42 +1,40 @@
-# EN: This module is the runtime-control child of the state DB gateway family.
-# EN: It owns only the narrow DB wrappers that read or mutate durable crawler
-# EN: runtime-control truth.
-# TR: Bu modül state DB gateway ailesinin runtime-control alt yüzeyidir.
-# TR: Yalnızca kalıcı crawler runtime-control doğrusunu okuyan veya değiştiren
-# TR: dar DB wrapper'larını taşır.
-
+# EN: We enable postponed evaluation of annotations so type hints stay cleaner
+# EN: and forward-friendly across this small gateway surface.
+# TR: Type hint'ler daha temiz ve ileriye uyumlu kalsın diye annotation
+# TR: çözümlemesini erteliyoruz.
 from __future__ import annotations
 
-# EN: We import typing helpers conservatively because some DB wrapper signatures
-# EN: use structured Python types in annotations.
-# TR: Bazı DB wrapper imzaları annotation içinde yapılı Python tipleri kullandığı
-# TR: için typing yardımcılarını muhafazakâr biçimde içe aktarıyoruz.
+# EN: We import Any because each gateway function returns a small dict-shaped row
+# EN: payload whose exact SQL-return shape can vary by gateway function.
+# TR: Her gateway fonksiyonu küçük sözlük-biçimli bir satır payload'ı döndürür ve
+# TR: tam SQL dönüş şekli fonksiyona göre değişebilir; bu yüzden Any kullanıyoruz.
 from typing import Any
 
-# EN: We import psycopg because these functions are thin wrappers around SQL calls.
-# TR: Bu fonksiyonlar SQL çağrılarının ince wrapper'ları olduğu için psycopg içe aktarıyoruz.
+# EN: We import psycopg because this file is a real PostgreSQL gateway surface.
+# TR: Bu dosya gerçek bir PostgreSQL gateway yüzeyi olduğu için psycopg içe aktarıyoruz.
 import psycopg
 
-# EN: We import dict_row because the gateway returns dict-like row payloads.
-# TR: Gateway dict-benzeri satır payload'ları döndürdüğü için dict_row içe aktarıyoruz.
+# EN: We import dict_row so each fetched SQL row is exposed as a dict-like object
+# EN: with explicit column names instead of tuple-position guessing.
+# TR: Her SQL satırı tuple sıra tahmini yerine açık sütun adlarıyla dict-benzeri
+# TR: nesne olarak gelsin diye dict_row içe aktarıyoruz.
 from psycopg.rows import dict_row
 
 
-
-# EN: This helper reads the single durable webcrawler runtime-control row from
-# EN: the database truth surface.
-# TR: Bu yardımcı, veritabanındaki tekil ve kalıcı webcrawler runtime-control
-# TR: satırını doğruluk yüzeyinden okur.
-def get_webcrawler_runtime_control(
-    conn: psycopg.Connection,
-) -> dict[str, Any] | None:
-    # EN: We open one isolated cursor because this is a single read operation.
-    # TR: Bu tek bir okuma işlemi olduğu için izole bir cursor açıyoruz.
-    with conn.cursor() as cur:
-        # EN: We call the canonical DB function instead of reading the table
-        # EN: directly so Python stays aligned with the sealed SQL contract.
-        # TR: Python tarafı mühürlü SQL sözleşmesiyle hizalı kalsın diye tabloyu
-        # TR: doğrudan okumak yerine kanonik DB fonksiyonunu çağırıyoruz.
+# EN: This function reads the current durable runtime-control row from the DB.
+# EN: It must stay a thin SQL wrapper and must hard-fail if the sealed SQL surface
+# EN: unexpectedly returns no row.
+# TR: Bu fonksiyon DB'den mevcut kalıcı runtime-control satırını okur.
+# TR: İnce bir SQL wrapper olarak kalmalı ve mühürlü SQL yüzeyi beklenmedik biçimde
+# TR: satır döndürmezse sert hata vermelidir.
+def get_webcrawler_runtime_control(conn: psycopg.Connection) -> dict[str, Any]:
+    # EN: We open a dict-row cursor so downstream Python code can read stable keys.
+    # TR: Aşağı katman Python kodu kararlı anahtarları okuyabilsin diye dict-row
+    # TR: cursor açıyoruz.
+    with conn.cursor(row_factory=dict_row) as cur:
+        # EN: We call the sealed SQL function exactly as the runtime-control contract defines it.
+        # TR: Mühürlü SQL fonksiyonunu runtime-control sözleşmesinin tanımladığı
+        # TR: tam şekliyle çağırıyoruz.
         cur.execute(
             """
             SELECT *
@@ -44,32 +42,31 @@ def get_webcrawler_runtime_control(
             """
         )
 
-        # EN: We fetch one row because the control model is intentionally single-row.
-        # TR: Kontrol modeli bilinçli olarak tek satırlı olduğu için tek satır çekiyoruz.
+        # EN: We fetch the single expected row.
+        # TR: Beklenen tek satırı alıyoruz.
         row = cur.fetchone()
 
-    # EN: We return the raw mapping for now because the current control surface is
-    # EN: still small and explicit.
-    # TR: Güncel kontrol yüzeyi hâlâ küçük ve açık olduğu için şimdilik ham
-    # TR: mapping döndürüyoruz.
-    return row
+    # EN: No row here would mean the lower SQL contract broke its explicit shape.
+    # TR: Burada satır çıkmaması alt SQL sözleşmesinin açık şekli bozduğu anlamına gelir.
+    if row is None:
+        raise RuntimeError("ops.get_webcrawler_runtime_control() returned no row")
+
+    # EN: We normalize the dict-row into a plain dict so upper layers stay simple.
+    # TR: Üst katmanlar sade kalsın diye dict-row sonucunu düz dict'e normalize ediyoruz.
+    return dict(row)
 
 
-
-# EN: This helper asks the database whether the crawler is currently allowed to
-# EN: claim new work.
-# TR: Bu yardımcı, crawler'ın şu anda yeni iş claim etmeye izinli olup olmadığını
-# TR: veritabanına sorar.
-def webcrawler_runtime_may_claim(
-    conn: psycopg.Connection,
-) -> dict[str, Any] | None:
-    # EN: We open one isolated cursor because this is a single decision query.
-    # TR: Bu tek bir karar sorgusu olduğu için izole bir cursor açıyoruz.
-    with conn.cursor() as cur:
-        # EN: We call the canonical DB truth function instead of duplicating state
-        # EN: interpretation rules inside Python.
-        # TR: Durum yorumlama kurallarını Python içinde kopyalamak yerine kanonik
-        # TR: DB doğruluk fonksiyonunu çağırıyoruz.
+# EN: This function asks the DB whether crawler runtime currently may claim work.
+# EN: It must remain a thin gateway and must hard-fail if no row comes back.
+# TR: Bu fonksiyon crawler runtime'ın şu anda iş claim edip edemeyeceğini DB'ye sorar.
+# TR: İnce gateway olarak kalmalı ve geri hiç satır gelmezse sert hata vermelidir.
+def webcrawler_runtime_may_claim(conn: psycopg.Connection) -> dict[str, Any]:
+    # EN: We open a dict-row cursor so the returned policy row stays key-addressable.
+    # TR: Dönen politika satırı anahtarlarla erişilebilir kalsın diye dict-row
+    # TR: cursor açıyoruz.
+    with conn.cursor(row_factory=dict_row) as cur:
+        # EN: We call the sealed SQL policy function exactly once.
+        # TR: Mühürlü SQL politika fonksiyonunu tam bir kez çağırıyoruz.
         cur.execute(
             """
             SELECT *
@@ -77,38 +74,41 @@ def webcrawler_runtime_may_claim(
             """
         )
 
-        # EN: We fetch one row because the current runtime-control model is single-row.
-        # TR: Güncel runtime-control modeli tek satırlı olduğu için tek satır çekiyoruz.
+        # EN: We fetch the single expected row.
+        # TR: Beklenen tek satırı alıyoruz.
         row = cur.fetchone()
 
-    # EN: We return the raw mapping so the caller can inspect both may_claim and
-    # EN: the surrounding state details.
-    # TR: Çağıran taraf hem may_claim sonucunu hem de etrafındaki durum ayrıntılarını
-    # TR: inceleyebilsin diye ham mapping döndürüyoruz.
-    return row
+    # EN: Missing row means the lower SQL contract violated the gateway expectation.
+    # TR: Satırın eksik gelmesi alt SQL sözleşmesinin gateway beklentisini ihlal
+    # TR: ettiği anlamına gelir.
+    if row is None:
+        raise RuntimeError("ops.webcrawler_runtime_may_claim() returned no row")
+
+    # EN: We normalize the dict-row into a plain dict.
+    # TR: Dict-row sonucunu düz dict'e normalize ediyoruz.
+    return dict(row)
 
 
-
-# EN: This helper asks the database to change the durable crawler runtime-control
-# EN: state through the canonical SQL truth surface.
-# TR: Bu yardımcı, kalıcı crawler runtime-control durumunu kanonik SQL doğruluk
-# TR: yüzeyi üzerinden değiştirmesi için veritabanına çağrı yapar.
+# EN: This function writes a durable runtime-control change request into the DB
+# EN: through the sealed SQL surface and returns the resulting visible row.
+# EN: It must hard-fail if the SQL layer returns no row.
+# TR: Bu fonksiyon mühürlü SQL yüzeyi üzerinden DB'ye kalıcı runtime-control
+# TR: değişiklik isteği yazar ve ortaya çıkan görünür satırı döndürür.
+# TR: SQL katmanı satır döndürmezse sert hata vermelidir.
 def set_webcrawler_runtime_control(
     conn: psycopg.Connection,
     *,
     desired_state: str,
     state_reason: str,
     requested_by: str,
-) -> dict[str, Any] | None:
-    # EN: We open one isolated cursor because this helper performs one explicit
-    # EN: state-change call inside the caller-owned transaction.
-    # TR: Bu yardımcı çağıranın sahip olduğu transaction içinde tek bir açık
-    # TR: durum-değiştirme çağrısı yaptığı için izole bir cursor açıyoruz.
-    with conn.cursor() as cur:
-        # EN: We call the canonical SQL function instead of writing directly into
-        # EN: the table so Python stays aligned with the sealed DB contract.
-        # TR: Python tarafı mühürlü DB sözleşmesiyle hizalı kalsın diye tabloya
-        # TR: doğrudan yazmak yerine kanonik SQL fonksiyonunu çağırıyoruz.
+) -> dict[str, Any]:
+    # EN: We open a dict-row cursor so the returned control row stays explicit.
+    # TR: Dönen kontrol satırı açık ve okunur kalsın diye dict-row cursor açıyoruz.
+    with conn.cursor(row_factory=dict_row) as cur:
+        # EN: We call the sealed SQL mutation function with named parameters so
+        # EN: argument meaning stays explicit and audit-friendly.
+        # TR: Argüman anlamı açık ve audit-dostu kalsın diye mühürlü SQL mutation
+        # TR: fonksiyonunu isimli parametrelerle çağırıyoruz.
         cur.execute(
             """
             SELECT *
@@ -125,12 +125,16 @@ def set_webcrawler_runtime_control(
             },
         )
 
-        # EN: We fetch one row because the control model is intentionally single-row.
-        # TR: Kontrol modeli bilinçli olarak tek satırlı olduğu için tek satır çekiyoruz.
+        # EN: We fetch the single expected row.
+        # TR: Beklenen tek satırı alıyoruz.
         row = cur.fetchone()
 
-    # EN: We return the raw mapping so the caller can inspect the exact durable
-    # EN: state transition result.
-    # TR: Çağıran taraf tam kalıcı durum geçişi sonucunu inceleyebilsin diye ham
-    # TR: mapping döndürüyoruz.
-    return row
+    # EN: No row would mean the lower mutation contract behaved unexpectedly.
+    # TR: Satır dönmemesi alt mutation sözleşmesinin beklenmedik davrandığı
+    # TR: anlamına gelir.
+    if row is None:
+        raise RuntimeError("ops.set_webcrawler_runtime_control() returned no row")
+
+    # EN: We normalize the dict-row into a plain dict.
+    # TR: Dict-row sonucunu düz dict'e normalize ediyoruz.
+    return dict(row)
