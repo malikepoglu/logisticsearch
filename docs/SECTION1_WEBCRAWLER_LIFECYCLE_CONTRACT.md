@@ -99,6 +99,7 @@ This file is responsible for finalizing a leased URL into one of the currently i
 - success -> `parse_pending`
 - retryable error -> `retry_wait`
 - permanent error -> `dead`
+- robots-blocked decision -> `dead`
 
 It also clears lease fields and records outcome metadata.
 
@@ -161,6 +162,7 @@ Bu dosya leased bir URL'yi şu anda uygulanmış sonuçlardan birine finalize et
 - başarı -> `parse_pending`
 - retryable error -> `retry_wait`
 - permanent error -> `dead`
+- robots tarafından engellenen karar -> `dead`
 
 Aynı zamanda lease alanlarını temizler ve sonuç metadata'sını kaydeder.
 
@@ -310,6 +312,7 @@ A valid leased URL may be finalized as permanent error.
 Current guaranteed effects include:
 
 - state becomes `dead`
+- robots-blocked decisions currently use the same permanent-error exit boundary and are persisted with `last_error_class = 'robots_blocked'`
 - lease fields are cleared
 - permanent-error counters are incremented
 - host error metadata is updated
@@ -411,6 +414,7 @@ Geçerli leased bir URL permanent error olarak finalize edilebilir.
 Mevcut garanti edilen etkiler şunları içerir:
 
 - state `dead` olur
+- robots tarafından engellenen kararlar şu anda aynı permanent-error çıkış sınırını kullanır ve `last_error_class = 'robots_blocked'` olarak kalıcılaştırılır
 - lease alanları temizlenir
 - permanent-error sayaçları artırılır
 - host hata metadata'sı güncellenir

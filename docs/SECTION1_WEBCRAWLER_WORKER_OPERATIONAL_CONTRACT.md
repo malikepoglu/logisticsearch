@@ -558,3 +558,20 @@ The immediate next design priority is:
 Anlık sonraki tasarım önceliği şudur:
 
 **daha büyük service/control orkestrasyonu başlamadan önce worker drain / graceful-stop operasyonel benimseme boşluğunu mühürlemek.**
+
+
+### Current crawler-core exit-path clarification
+
+- after the worker finalizes success with `frontier.finish_fetch_success(...)`, it currently calls `frontier.release_parse_pending_to_queued(...)` so the transient crawler-core handoff state does not leave `frontier.url` stranded in `parse_pending`
+- this release step preserves the already-computed revisit schedule in `next_fetch_at` while returning the frontier row to `queued`
+- retryable worker exit paths use `frontier.finish_fetch_retryable_error(...)`
+- permanent worker exit paths use `frontier.finish_fetch_permanent_error(...)`
+- robots-blocked decisions currently use the same permanent exit boundary and are persisted with `last_error_class = 'robots_blocked'`
+
+### Güncel crawler-core çıkış yolu açıklaması
+
+- worker başarıyı `frontier.finish_fetch_success(...)` ile finalize ettikten sonra şu anda `frontier.release_parse_pending_to_queued(...)` çağrısını yapar; böylece geçici crawler-core aktarım durumu `frontier.url` satırını `parse_pending` içinde mahsur bırakmaz
+- bu release adımı, frontier satırını tekrar `queued` durumuna döndürürken önceden hesaplanmış `next_fetch_at` revisit planını korur
+- retryable worker çıkış yolları `frontier.finish_fetch_retryable_error(...)` kullanır
+- permanent worker çıkış yolları `frontier.finish_fetch_permanent_error(...)` kullanır
+- robots tarafından engellenen kararlar şu anda aynı permanent çıkış sınırını kullanır ve `last_error_class = 'robots_blocked'` olarak kalıcılaştırılır
