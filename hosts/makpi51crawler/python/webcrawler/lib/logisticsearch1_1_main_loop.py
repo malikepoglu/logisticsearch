@@ -91,7 +91,7 @@ def default_worker_id() -> str:
 
     # EN: Otherwise we use a narrow and explicit default worker identity.
     # TR: Aksi durumda dar ve açık bir varsayılan worker kimliği kullanıyoruz.
-    return "ubuntu_desktop_probe_worker"
+    return "makpi51crawler_probe_worker"
 
 
 # EN: This function reads a control-request identity from the environment and
