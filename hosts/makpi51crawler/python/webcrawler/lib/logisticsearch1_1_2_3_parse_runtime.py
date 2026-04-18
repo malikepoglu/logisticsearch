@@ -50,7 +50,7 @@ from .logisticsearch1_1_1_state_db_gateway import (
     upsert_page_workflow_status,
 )
 
-from .logisticsearch1_1_2_3_1_taxonomy_runtime import (
+from .logisticsearch1_1_2_6_1_taxonomy_runtime import (
     connect_taxonomy_db,
     search_runtime_taxonomy,
     taxonomy_default_dsn,
