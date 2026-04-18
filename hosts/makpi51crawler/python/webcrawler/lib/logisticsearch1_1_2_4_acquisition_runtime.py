@@ -36,7 +36,7 @@ from .logisticsearch1_1_2_4_2_http_page_acquisition_runtime import (
 
 # EN: We re-export the robots acquisition child.
 # TR: Robots acquisition alt yüzeyini yeniden dışa aktarıyoruz.
-from .logisticsearch1_1_2_2_4_robots_txt_acquisition_runtime import (
+from .logisticsearch1_1_2_4_5_robots_txt_acquisition_runtime import (
     decode_robots_body,
     fetch_robots_txt_to_raw_storage,
     parse_robots_txt_text,
