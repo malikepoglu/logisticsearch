@@ -99,7 +99,7 @@ from .logisticsearch1_1_2_5_fetch_finalize_runtime import (
 # EN: inline inside the parent orchestration module.
 # TR: Robots karar yardımcıları artık parent orchestration modülü içinde inline
 # TR: durmaması gerektiği için robots alt yüzeyini içe aktarıyoruz.
-from .logisticsearch1_1_2_6_worker_robots_runtime import (
+from .logisticsearch1_1_2_3_worker_robots_runtime import (
     refresh_robots_cache_if_needed,
     robots_verdict_allows_fetch,
 )
