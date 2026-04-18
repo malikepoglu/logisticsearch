@@ -18,7 +18,7 @@ from pathlib import Path
 # TR: Bu alt yüzey acquisition ailesinin geri kalanıyla aynı kararlı artefact/sonuç
 # TR: sözleşmesini yeniden kullansın diye paylaşılan acquisition destek yüzeyini
 # TR: içe aktarıyoruz.
-from .logisticsearch1_1_2_2_2_acquisition_support import (
+from .logisticsearch1_1_2_4_1_acquisition_support import (
     RAW_FETCH_ROOT,
     FetchedPageResult,
     build_browser_rendered_storage_path,

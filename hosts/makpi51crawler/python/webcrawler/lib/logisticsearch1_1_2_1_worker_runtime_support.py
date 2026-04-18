@@ -24,7 +24,7 @@ from uuid import uuid4
 # TR: Kanonik claimed-url alan okuyucusunu acquisition hub yerine doğrudan
 # TR: acquisition-support alt yüzeyinden içe aktarıyoruz. Bu yaklaşım circular
 # TR: import riskini önlerken alan erişimini yine tek kanonik yerde birleştirir.
-from .logisticsearch1_1_2_2_2_acquisition_support import get_claimed_url_value
+from .logisticsearch1_1_2_4_1_acquisition_support import get_claimed_url_value
 
 
 # EN: This helper creates a unique runtime execution id.

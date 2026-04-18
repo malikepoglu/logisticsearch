@@ -12,7 +12,7 @@ from __future__ import annotations
 # TR: Yukarı akış çağıranlar yeni split yerleşimini bilmeden acquisition-aile
 # TR: sözleşmesini kullanmaya devam edebilsin diye paylaşılan destek yüzeyini
 # TR: yeniden dışa aktarıyoruz.
-from .logisticsearch1_1_2_2_2_acquisition_support import (
+from .logisticsearch1_1_2_4_1_acquisition_support import (
     RAW_FETCH_ROOT,
     FetchedPageResult,
     FetchedRobotsTxtResult,
