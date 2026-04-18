@@ -19,7 +19,7 @@ from .logisticsearch1_1_2_2_acquisition_runtime import (
 # EN: durable per-attempt logging.
 # TR: Kalıcı deneme-bazlı loglama için açık metadata üreten worker destek
 # TR: yardımcısını içe aktarıyoruz.
-from .logisticsearch1_1_2_4_worker_runtime_support import (
+from .logisticsearch1_1_2_1_worker_runtime_support import (
     build_terminal_fetch_attempt_metadata,
 )
 
