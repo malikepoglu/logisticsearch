@@ -109,7 +109,7 @@ from .logisticsearch1_1_2_6_worker_robots_runtime import (
 # TR: Açık lease yenilemesi ayrı bir durable-boundary yardımcısıdır; artık parent
 # TR: içinde inline mantık olarak durmaması gerektiği için lease alt yüzeyini
 # TR: içe aktarıyoruz.
-from .logisticsearch1_1_2_7_worker_lease_runtime import (
+from .logisticsearch1_1_2_2_worker_lease_runtime import (
     renew_claimed_lease_before_durable_phase,
 )
 
