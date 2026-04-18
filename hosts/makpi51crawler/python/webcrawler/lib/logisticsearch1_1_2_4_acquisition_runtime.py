@@ -30,7 +30,7 @@ from .logisticsearch1_1_2_4_1_acquisition_support import (
 
 # EN: We re-export the direct HTTP page-acquisition child.
 # TR: Doğrudan HTTP page-acquisition alt yüzeyini yeniden dışa aktarıyoruz.
-from .logisticsearch1_1_2_2_3_http_page_acquisition_runtime import (
+from .logisticsearch1_1_2_4_2_http_page_acquisition_runtime import (
     fetch_page_to_raw_storage,
 )
 
