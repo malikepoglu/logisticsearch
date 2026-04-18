@@ -128,3 +128,21 @@ Mevcut repository noktasında ana aktif crawler-host çalışma yüzeyleri şunl
 - `hosts/makpi51crawler/sql/README.md`
 - `hosts/makpi51crawler/crawler_exports/README.md`
 - `hosts/README.md`
+
+## Future deferred note: Pi51 semi-automatic sync model
+## Geleceğe ertelenmiş not: Pi51 yarı otomatik senkron modeli
+
+This is only a short reminder note for later. It is not active now.
+
+Bu bölüm şimdilik yalnızca kısa bir hatırlatma notudur. Şu anda aktif değildir.
+
+Planned later direction:
+Gelecekte düşünülmesi planlanan yön:
+
+- Ubuntu Desktop tarafında ilgili klasörden kontrollü push komutu.
+- pi51c repo tarafında GitHub'dan kontrollü veya yarı otomatik fast-forward pull.
+- pi51c runtime tarafında repo ağacından canlı runtime ağacına kontrollü senkron.
+- Bu model daha sonra ayrıca ayrıntılı rehber ve runbook olarak yazılacaktır.
+
+Current priority remains bringing up webcrawler and crawler_core first.
+Mevcut öncelik önce webcrawler ve crawler_core'u ayağa kaldırmaktır.
