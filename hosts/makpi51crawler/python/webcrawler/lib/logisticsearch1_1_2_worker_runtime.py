@@ -70,7 +70,7 @@ from .logisticsearch1_1_2_4_acquisition_runtime import (
 # EN: flows may still continue into minimal parse persistence.
 # TR: Başarılı fetch akışları minimal parse persistence aşamasına devam
 # TR: edebileceği için kanonik parse continuation yüzeyini içe aktarıyoruz.
-from .logisticsearch1_1_2_3_parse_runtime import (
+from .logisticsearch1_1_2_6_parse_runtime import (
     MinimalParseApplyResult,
     apply_minimal_parse_entry,
 )
