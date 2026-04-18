@@ -41,6 +41,7 @@ from pathlib import Path
 # TR: crawler birikimi /srv altında kalmalıdır.
 RAW_FETCH_ROOT = Path("/srv/webcrawler/raw_fetch")
 
+@dataclass
 class FetchedPageResult:
     # EN: url_id is the claimed frontier url id that produced this fetch result.
     # TR: url_id bu fetch sonucunu üreten claim edilmiş frontier url kimliğidir.
@@ -86,6 +87,7 @@ class FetchedPageResult:
     # TR: fetched_at fetch sonucunun ne zaman üretildiğini kaydeder.
     fetched_at: str
 
+@dataclass
 class FetchedRobotsTxtResult:
     # EN: host_id is the frontier.host identity whose robots URL we fetched.
     # TR: host_id robots URL'sini fetch ettiğimiz frontier.host kimliğidir.
