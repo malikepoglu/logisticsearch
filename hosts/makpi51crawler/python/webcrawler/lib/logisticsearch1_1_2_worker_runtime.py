@@ -48,7 +48,7 @@ from .logisticsearch1_1_1_state_db_gateway import (
 # EN: storage policy whether normal crawler flow may continue.
 # TR: Parent normal crawler akışının devam edip edemeyeceğini storage politikasına
 # TR: sormak zorunda olduğu için storage-routing alt yüzeyini içe aktarıyoruz.
-from .logisticsearch1_1_2_1_storage_routing import (
+from .logisticsearch1_1_2_7_storage_routing import (
     ProcessedOutputPlan,
     choose_processed_output_plan,
 )
