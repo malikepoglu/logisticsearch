@@ -44,7 +44,7 @@ from .logisticsearch1_1_2_2_4_robots_txt_acquisition_runtime import (
 
 # EN: We re-export the browser-backed page-acquisition child.
 # TR: Browser-backed page-acquisition alt yüzeyini yeniden dışa aktarıyoruz.
-from .logisticsearch1_1_2_2_5_browser_page_acquisition_runtime import (
+from .logisticsearch1_1_2_4_4_browser_page_acquisition_runtime import (
     fetch_page_with_browser_to_raw_storage,
     infer_browser_document_status,
 )
