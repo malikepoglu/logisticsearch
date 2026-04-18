@@ -9,7 +9,7 @@ from __future__ import annotations
 # EN: family surface.
 # TR: Kanonik claimed-url alan erişimini kararlı acquisition ailesi yüzeyinden
 # TR: içe aktarıyoruz.
-from .logisticsearch1_1_2_2_acquisition_runtime import (
+from .logisticsearch1_1_2_4_acquisition_runtime import (
     get_claimed_url_value,
 )
 

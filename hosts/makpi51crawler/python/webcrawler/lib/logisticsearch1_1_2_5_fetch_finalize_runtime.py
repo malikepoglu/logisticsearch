@@ -10,7 +10,7 @@ from __future__ import annotations
 # TR: Finalize yardımcıları claimed-url alan erişimine ve fetched-page sözleşme
 # TR: şekline ihtiyaç duyduğu için kararlı acquisition-aile public yüzeyini içe
 # TR: aktarıyoruz.
-from .logisticsearch1_1_2_2_acquisition_runtime import (
+from .logisticsearch1_1_2_4_acquisition_runtime import (
     FetchedPageResult,
     get_claimed_url_value,
 )

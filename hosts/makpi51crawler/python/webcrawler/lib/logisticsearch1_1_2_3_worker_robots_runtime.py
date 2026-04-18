@@ -22,7 +22,7 @@ from pathlib import Path
 # TR: Bu alt yüzey robots fetch/parse yardımcılarına ve kanonik claimed-url alan
 # TR: erişimine ihtiyaç duyduğu için kararlı acquisition-aile public yüzeyini içe
 # TR: aktarıyoruz.
-from .logisticsearch1_1_2_2_acquisition_runtime import (
+from .logisticsearch1_1_2_4_acquisition_runtime import (
     FetchedRobotsTxtResult,
     decode_robots_body,
     fetch_robots_txt_to_raw_storage,

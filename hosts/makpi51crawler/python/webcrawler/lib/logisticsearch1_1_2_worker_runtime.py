@@ -59,7 +59,7 @@ from .logisticsearch1_1_2_1_storage_routing import (
 # TR: Kararlı acquisition-aile public yüzeyini içe aktarıyoruz. Parent hâlâ HTTP
 # TR: ve browser acquisition arasında seçim yapar ve aynı fetched-page sözleşme
 # TR: şeklini tüketir.
-from .logisticsearch1_1_2_2_acquisition_runtime import (
+from .logisticsearch1_1_2_4_acquisition_runtime import (
     FetchedPageResult,
     fetch_page_to_raw_storage,
     fetch_page_with_browser_to_raw_storage,
