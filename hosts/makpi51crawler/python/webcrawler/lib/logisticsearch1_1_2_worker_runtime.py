@@ -53,16 +53,17 @@ from .logisticsearch1_1_2_7_storage_routing import (
     choose_processed_output_plan,
 )
 
-# EN: We import the stable acquisition-family public surface. The parent still
-# EN: chooses between HTTP and browser acquisition and still consumes the same
-# EN: fetched-page contract shape.
-# TR: Kararlı acquisition-aile public yüzeyini içe aktarıyoruz. Parent hâlâ HTTP
-# TR: ve browser acquisition arasında seçim yapar ve aynı fetched-page sözleşme
-# TR: şeklini tüketir.
+# EN: We import the stable acquisition-family public surface. The parent no longer
+# EN: chooses HTTP/browser child fetch paths inline. Instead it asks the canonical
+# EN: acquisition hub to choose and execute the correct fetch path while still
+# EN: consuming the same fetched-page contract shape.
+# TR: Kararlı acquisition-aile public yüzeyini içe aktarıyoruz. Parent artık HTTP
+# TR: veya browser çocuk fetch yollarını inline seçmez. Bunun yerine doğru fetch
+# TR: yolunu seçip çalıştırması için kanonik acquisition hub'a sorar ve yine aynı
+# TR: fetched-page sözleşme şeklini tüketir.
 from .logisticsearch1_1_2_4_acquisition_runtime import (
     FetchedPageResult,
-    fetch_page_to_raw_storage,
-    fetch_page_with_browser_to_raw_storage,
+    fetch_page_via_selection_to_raw_storage,
     get_claimed_url_value,
 )
 
@@ -191,44 +192,6 @@ class ClaimProbeResult:
     # TR: runtime_control worker bu çalıştırma sırasında DB doğruluk yüzeyine
     # TR: baktığında gördüğü crawler runtime-control anlık görüntüsünü tutar.
     runtime_control: dict | None = None
-
-
-# EN: This helper decides which acquisition method should be used for the current
-# EN: claimed URL. The rule remains intentionally narrow and conservative.
-# TR: Bu yardımcı mevcut claimed URL için hangi acquisition yönteminin
-# TR: kullanılacağını belirler. Kural bilinçli olarak dar ve muhafazakâr kalır.
-def select_acquisition_method_for_claimed_url(claimed_url: object) -> str:
-    # EN: We first try attribute-style access because current claimed-url rows are
-    # EN: usually exposed as attribute-bearing objects.
-    # TR: Önce attribute tarzı erişimi deniyoruz; çünkü mevcut claimed-url satırları
-    # TR: genellikle attribute taşıyan nesneler olarak görünür.
-    method_value = getattr(claimed_url, "acquisition_method", None)
-
-    # EN: If attribute-style access produced no value, we also support dict-like
-    # EN: rows so this seam stays robust across narrow row-shape differences.
-    # TR: Attribute erişimi değer üretmediyse dict-benzeri satırları da destekliyoruz;
-    # TR: böylece bu seam dar satır-şekli farklarına karşı dayanıklı kalır.
-    if method_value is None and isinstance(claimed_url, dict):
-        method_value = claimed_url.get("acquisition_method")
-
-    # EN: Missing value means current canonical behavior stays on the direct HTTP path.
-    # TR: Değer yoksa güncel kanonik davranış direct HTTP yolunda kalır.
-    if method_value is None:
-        return "http"
-
-    # EN: We normalize to a lowercase token so one explicit branch can decide the path.
-    # TR: Tek bir açık branch yolu belirleyebilsin diye değeri küçük-harf token’a
-    # TR: normalize ediyoruz.
-    normalized_method = str(method_value).strip().lower()
-
-    # EN: Only the explicit browser token switches the runtime into the browser path.
-    # TR: Yalnızca açık browser token’ı runtime’ı browser yoluna geçirir.
-    if normalized_method == "browser":
-        return "browser"
-
-    # EN: Every other value falls back to the stable direct HTTP path.
-    # TR: Diğer her değer stabil direct HTTP yoluna geri düşer.
-    return "http"
 
 
 # EN: This function performs one controlled worker execution. The parent still
@@ -461,18 +424,27 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 phase_label="page_fetch",
             )
 
-            # EN: We select one explicit acquisition method seam.
-            # TR: Tek bir açık acquisition method seam seçiyoruz.
-            acquisition_method = select_acquisition_method_for_claimed_url(claimed_url)
+            # EN: We now delegate acquisition-path selection plus real fetch execution
+            # EN: to the canonical acquisition hub. The worker consumes one normalized
+            # EN: execution result instead of choosing direct child fetch surfaces inline.
+            # TR: Artık acquisition-path seçimini ve gerçek fetch yürütmesini kanonik
+            # TR: acquisition hub'a devrediyoruz. Worker doğrudan çocuk fetch yüzeyi
+            # TR: seçmek yerine tek bir normalize execution sonucu tüketiyor.
+            acquisition_execution = fetch_page_via_selection_to_raw_storage(claimed_url)
 
-            # EN: Browser is used only when the claimed row explicitly requests it.
-            # EN: Otherwise direct HTTP stays the default path.
-            # TR: Browser yalnızca claimed satır bunu açıkça isterse kullanılır.
-            # TR: Aksi halde varsayılan yol direct HTTP olarak kalır.
-            if acquisition_method == "browser":
-                fetched_page = fetch_page_with_browser_to_raw_storage(claimed_url)
-            else:
-                fetched_page = fetch_page_to_raw_storage(claimed_url)
+            # EN: acquisition_method records the concrete method that actually produced
+            # EN: the durable fetch result. Downstream logging/finalize surfaces should
+            # EN: persist this actual method value.
+            # TR: acquisition_method kalıcı fetch sonucunu gerçekten hangi somut yöntemin
+            # TR: ürettiğini kaydeder. Aşağı akış logging/finalize yüzeyleri bu gerçek
+            # TR: yöntem değerini kalıcılaştırmalıdır.
+            acquisition_method = acquisition_execution.method_used
+
+            # EN: fetched_page keeps the stable fetched-page contract expected by the
+            # EN: rest of the worker success path.
+            # TR: fetched_page worker başarı yolunun geri kalanının beklediği kararlı
+            # TR: fetched-page sözleşmesini taşır.
+            fetched_page = acquisition_execution.fetch_result
 
             # EN: The current narrow parse layer is HTML-first, so we only consider
             # EN: parse continuation for HTML-like successful fetches.
@@ -670,6 +642,5 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
 __all__ = [
     "WorkerConfig",
     "ClaimProbeResult",
-    "select_acquisition_method_for_claimed_url",
     "run_claim_probe",
 ]
