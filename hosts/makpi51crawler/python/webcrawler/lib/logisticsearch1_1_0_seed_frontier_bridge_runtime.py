@@ -547,8 +547,6 @@ def ensure_frontier_host_for_parsed_url(
 
     # EN: We also provide stable host identity helpers when the live table exposes them.
     # TR: Canlı tablo bunları gösteriyorsa stabil host kimliği yardımcılarını da sağlıyoruz.
-    if "authority_key" in frontier_host_columns:
-        insert_values["authority_key"] = parsed_url.authority_key
     if "registrable_domain" in frontier_host_columns:
         insert_values["registrable_domain"] = parsed_url.registrable_domain
 
@@ -618,18 +616,12 @@ def ensure_frontier_url_for_seed_row(
     # EN: exposes them, so the inserted rows stay rich without assuming too much.
     # TR: Kalan alanlar canlı tablo bunları gösterdiğinde fırsatçı biçimde sağlanır;
     # TR: böylece eklenen satırlar gereğinden fazla varsayım yapmadan zengin kalır.
-    if "canonical_url_sha256" in frontier_url_columns:
-        insert_values["canonical_url_sha256"] = (
-            seed_row.get("canonical_url_sha256") or parsed_url.canonical_url_sha256
-        )
     if "scheme" in frontier_url_columns:
         insert_values["scheme"] = parsed_url.scheme
     if "host" in frontier_url_columns:
         insert_values["host"] = parsed_url.host
     if "port" in frontier_url_columns:
         insert_values["port"] = parsed_url.port
-    if "authority_key" in frontier_url_columns:
-        insert_values["authority_key"] = parsed_url.authority_key
     if "registrable_domain" in frontier_url_columns:
         insert_values["registrable_domain"] = parsed_url.registrable_domain
     if "url_query" in frontier_url_columns:
