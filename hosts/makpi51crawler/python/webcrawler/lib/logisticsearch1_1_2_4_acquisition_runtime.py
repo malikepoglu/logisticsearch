@@ -357,9 +357,17 @@ def fetch_page_via_selection_to_raw_storage(
     http_timeout_seconds: int = 30,
     browser_timeout_ms: int = 30000,
     browser_wait_until: str = "networkidle",
-    raw_root: Path = RAW_FETCH_ROOT,
+    raw_root: Path | str = RAW_FETCH_ROOT,
     headless: bool = True,
 ) -> AcquisitionExecutionResult:
+    # EN: normalized_raw_root converts caller input into a real Path object before
+    # EN: we pass it to lower acquisition children, because some controlled callers
+    # EN: may still provide raw_root through environment-derived strings.
+    # TR: normalized_raw_root, alt acquisition çocuklarına vermeden önce çağıran
+    # TR: girdisini gerçek bir Path nesnesine dönüştürür; çünkü bazı kontrollü
+    # TR: çağıranlar raw_root değerini hâlâ environment-kaynaklı string olarak verebilir.
+    normalized_raw_root = Path(raw_root)
+
     # EN: selection_plan stores the explicit pre-fetch strategy decision.
     # TR: selection_plan açık pre-fetch strateji kararını tutar.
     selection_plan = select_page_acquisition_plan(claimed_url)
@@ -373,7 +381,7 @@ def fetch_page_via_selection_to_raw_storage(
             claimed_url,
             timeout_ms=browser_timeout_ms,
             wait_until=browser_wait_until,
-            raw_root=raw_root,
+            raw_root=normalized_raw_root,
             headless=headless,
         )
         return AcquisitionExecutionResult(
@@ -395,7 +403,7 @@ def fetch_page_via_selection_to_raw_storage(
         http_fetch_result = fetch_page_to_raw_storage(
             claimed_url,
             timeout_seconds=http_timeout_seconds,
-            raw_root=raw_root,
+            raw_root=normalized_raw_root,
         )
         return AcquisitionExecutionResult(
             selection_plan=selection_plan,
@@ -419,7 +427,7 @@ def fetch_page_via_selection_to_raw_storage(
             claimed_url,
             timeout_ms=browser_timeout_ms,
             wait_until=browser_wait_until,
-            raw_root=raw_root,
+            raw_root=normalized_raw_root,
             headless=headless,
         )
         return AcquisitionExecutionResult(
