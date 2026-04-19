@@ -14,11 +14,11 @@ This document is not a migration runbook. It does not authorize blind deletion, 
 
 The canonical public operator control surface must be limited to exactly these wrappers:
 
-- `/logisticsearch/webcrawler/controls/playwc`
-- `/logisticsearch/webcrawler/controls/pausewc`
-- `/logisticsearch/webcrawler/controls/resetwc`
-- `/logisticsearch/webcrawler/controls/poweroffwc`
-- `/logisticsearch/webcrawler/controls/rebootwc`
+- `/logisticsearch/webcrawler/lib/controls/playwc.py`
+- `/logisticsearch/webcrawler/lib/controls/pausewc.py`
+- `/logisticsearch/webcrawler/lib/controls/resetwc.py`
+- `/logisticsearch/webcrawler/lib/controls/poweroffwc.py`
+- `/logisticsearch/webcrawler/lib/controls/rebootwc.py`
 
 No additional public wrapper should be treated as canonical unless a later controlled documentation decision explicitly changes this contract.
 
@@ -135,11 +135,11 @@ Bu doküman bir geçiş runbook'u değildir. Canlı runtime yüzeylerinde kör s
 
 Kanonik açık operatör kontrol yüzeyi tam olarak şu sarmalayıcılarla sınırlı kalmalıdır:
 
-- `/logisticsearch/webcrawler/controls/playwc`
-- `/logisticsearch/webcrawler/controls/pausewc`
-- `/logisticsearch/webcrawler/controls/resetwc`
-- `/logisticsearch/webcrawler/controls/poweroffwc`
-- `/logisticsearch/webcrawler/controls/rebootwc`
+- `/logisticsearch/webcrawler/lib/controls/playwc.py`
+- `/logisticsearch/webcrawler/lib/controls/pausewc.py`
+- `/logisticsearch/webcrawler/lib/controls/resetwc.py`
+- `/logisticsearch/webcrawler/lib/controls/poweroffwc.py`
+- `/logisticsearch/webcrawler/lib/controls/rebootwc.py`
 
 Daha sonra kontrollü bir dokümantasyon kararı bu sözleşmeyi açıkça değiştirmedikçe, başka hiçbir açık sarmalayıcı kanonik kabul edilmemelidir.
 

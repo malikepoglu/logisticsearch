@@ -73,11 +73,11 @@ Secret-bearing values must still be handled carefully and intentionally. This do
 
 Public operator control wrappers must live under:
 
-- `/logisticsearch/webcrawler/controls/playwc`
-- `/logisticsearch/webcrawler/controls/pausewc`
-- `/logisticsearch/webcrawler/controls/resetwc`
-- `/logisticsearch/webcrawler/controls/poweroffwc`
-- `/logisticsearch/webcrawler/controls/rebootwc`
+- `/logisticsearch/webcrawler/lib/controls/playwc.py`
+- `/logisticsearch/webcrawler/lib/controls/pausewc.py`
+- `/logisticsearch/webcrawler/lib/controls/resetwc.py`
+- `/logisticsearch/webcrawler/lib/controls/poweroffwc.py`
+- `/logisticsearch/webcrawler/lib/controls/rebootwc.py`
 
 The public meanings are:
 
@@ -199,11 +199,11 @@ Secret taşıyan değerler yine dikkatli ve bilinçli biçimde ele alınmalıdı
 
 Açık operatör kontrol sarmalayıcıları şu yollar altında yaşamalıdır:
 
-- `/logisticsearch/webcrawler/controls/playwc`
-- `/logisticsearch/webcrawler/controls/pausewc`
-- `/logisticsearch/webcrawler/controls/resetwc`
-- `/logisticsearch/webcrawler/controls/poweroffwc`
-- `/logisticsearch/webcrawler/controls/rebootwc`
+- `/logisticsearch/webcrawler/lib/controls/playwc.py`
+- `/logisticsearch/webcrawler/lib/controls/pausewc.py`
+- `/logisticsearch/webcrawler/lib/controls/resetwc.py`
+- `/logisticsearch/webcrawler/lib/controls/poweroffwc.py`
+- `/logisticsearch/webcrawler/lib/controls/rebootwc.py`
 
 Açık anlamlar şunlardır:
 
