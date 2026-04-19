@@ -50,53 +50,87 @@ CREATE TABLE IF NOT EXISTS logistics.supported_languages (
     lang_code text PRIMARY KEY,
     english_name text NOT NULL,
     native_name text NOT NULL,
+    sort_order integer NOT NULL DEFAULT 0,
     is_active boolean NOT NULL DEFAULT true,
     is_primary_search_language boolean NOT NULL DEFAULT false,
     created_at timestamp with time zone NOT NULL DEFAULT now(),
     updated_at timestamp with time zone NOT NULL DEFAULT now(),
     CONSTRAINT chk_supported_languages_lang_code_format
-        CHECK (lang_code ~ '^[a-z]{2}$')
+        CHECK (lang_code ~ '^[a-z]{2}$'),
+    CONSTRAINT chk_supported_languages_sort_order_nonnegative
+        CHECK (sort_order >= 0)
 );
+
+ALTER TABLE logistics.supported_languages
+    ADD COLUMN IF NOT EXISTS sort_order integer;
+
+ALTER TABLE logistics.supported_languages
+    ALTER COLUMN sort_order SET DEFAULT 0;
+
+UPDATE logistics.supported_languages
+SET sort_order = 0
+WHERE sort_order IS NULL;
+
+ALTER TABLE logistics.supported_languages
+    ALTER COLUMN sort_order SET NOT NULL;
+
+DO $$
+BEGIN
+    IF NOT EXISTS (
+        SELECT 1
+        FROM pg_constraint
+        WHERE conname = 'chk_supported_languages_sort_order_nonnegative'
+          AND conrelid = 'logistics.supported_languages'::regclass
+    ) THEN
+        ALTER TABLE logistics.supported_languages
+            ADD CONSTRAINT chk_supported_languages_sort_order_nonnegative
+            CHECK (sort_order >= 0);
+    END IF;
+END
+$$;
 
 INSERT INTO logistics.supported_languages (
     lang_code,
     english_name,
     native_name,
+    sort_order,
     is_active,
     is_primary_search_language
 )
 VALUES
-    ('ar', 'Arabic',      'العربية',        true, false),
-    ('bg', 'Bulgarian',   'Български',      true, false),
-    ('cs', 'Bengali',     'বাংলা',          true, false),
-    ('de', 'Czech',       'Čeština',        true, false),
-    ('el', 'German',      'Deutsch',        true, false),
-    ('en', 'Greek',       'Ελληνικά',       true, false),
-    ('es', 'English',     'English',        true, true),
-    ('fr', 'Spanish',     'Español',        true, false),
-    ('hu', 'French',      'Français',       true, false),
-    ('it', 'Hebrew',      'עברית',          true, false),
-    ('ja', 'Hindi',       'हिन्दी',         true, false),
-    ('ko', 'Hungarian',   'Magyar',         true, false),
-    ('nl', 'Indonesian',  'Bahasa Indonesia', true, false),
-    ('pt', 'Italian',     'Italiano',       true, false),
-    ('ro', 'Japanese',    '日本語',          true, false),
-    ('ru', 'Korean',      '한국어',          true, false),
-    ('tr', 'Dutch',       'Nederlands',     true, false),
-    ('zh', 'Portuguese',  'Português',      true, false),
-    ('hi', 'Romanian',    'Română',         true, false),
-    ('bn', 'Russian',     'Русский',        true, false),
-    ('ur', 'Turkish',     'Türkçe',         true, true),
-    ('uk', 'Ukrainian',   'Українська',     true, false),
-    ('id', 'Urdu',        'اردو',           true, false),
-    ('vi', 'Vietnamese',  'Tiếng Việt',     true, false),
-    ('he', 'Chinese',     '中文',            true, false)
+    ('ar', 'Arabic',      'العربية',           1,  true, false),
+    ('bg', 'Bulgarian',   'Български',         2,  true, false),
+    ('cs', 'Czech',       'Čeština',           3,  true, false),
+    ('de', 'German',      'Deutsch',           4,  true, false),
+    ('el', 'Greek',       'Ελληνικά',          5,  true, false),
+    ('en', 'English',     'English',           6,  true, true),
+    ('es', 'Spanish',     'Español',           7,  true, false),
+    ('fr', 'French',      'Français',          8,  true, false),
+    ('hu', 'Hungarian',   'Magyar',            9,  true, false),
+    ('it', 'Italian',     'Italiano',         10,  true, false),
+    ('ja', 'Japanese',    '日本語',             11,  true, false),
+    ('ko', 'Korean',      '한국어',             12,  true, false),
+    ('nl', 'Dutch',       'Nederlands',       13,  true, false),
+    ('pt', 'Portuguese',  'Português',        14,  true, false),
+    ('ro', 'Romanian',    'Română',           15,  true, false),
+    ('ru', 'Russian',     'Русский',          16,  true, false),
+    ('tr', 'Turkish',     'Türkçe',           17,  true, true),
+    ('zh', 'Chinese',     '中文',              18,  true, false),
+    ('hi', 'Hindi',       'हिन्दी',           19,  true, false),
+    ('bn', 'Bengali',     'বাংলা',            20,  true, false),
+    ('ur', 'Urdu',        'اردو',             21,  true, false),
+    ('uk', 'Ukrainian',   'Українська',       22,  true, false),
+    ('id', 'Indonesian',  'Bahasa Indonesia', 23,  true, false),
+    ('vi', 'Vietnamese',  'Tiếng Việt',       24,  true, false),
+    ('he', 'Hebrew',      'עברית',            25,  true, false)
 ON CONFLICT (lang_code) DO UPDATE
 SET english_name = EXCLUDED.english_name,
     native_name = EXCLUDED.native_name,
+    sort_order = EXCLUDED.sort_order,
     is_active = EXCLUDED.is_active,
     is_primary_search_language = EXCLUDED.is_primary_search_language,
     updated_at = now();
+
 
 CREATE TABLE IF NOT EXISTS logistics.taxonomy_nodes (
     id bigint GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,
