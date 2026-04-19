@@ -1,0 +1,205 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://logisticsearch.local/schema/startpoint_catalog_v2.schema.json",
+  "title": "LogisticSearch Startpoint Catalog V2",
+  "type": "object",
+  "required": [
+    "catalog_version",
+    "catalog_status",
+    "catalog_scope",
+    "seed_contract_basis",
+    "source_families"
+  ],
+  "properties": {
+    "catalog_version": {
+      "type": "string"
+    },
+    "catalog_status": {
+      "type": "string"
+    },
+    "catalog_scope": {
+      "type": "object",
+      "required": [
+        "lang_code",
+        "lang_name",
+        "variable_capacity_model",
+        "cross_seed_traversal_enabled",
+        "cross_language_traversal_enabled"
+      ],
+      "properties": {
+        "lang_code": { "type": "string" },
+        "lang_name": { "type": "string" },
+        "variable_capacity_model": { "type": "boolean" },
+        "fixed_target_count": {
+          "type": ["integer", "null"]
+        },
+        "review_rule": { "type": "string" },
+        "cross_seed_traversal_enabled": { "type": "boolean" },
+        "cross_language_traversal_enabled": { "type": "boolean" }
+      },
+      "additionalProperties": true
+    },
+    "seed_contract_basis": {
+      "type": "object",
+      "required": [
+        "source_table",
+        "seed_url_table",
+        "source_unique_key",
+        "seed_unique_key"
+      ],
+      "properties": {
+        "source_table": { "type": "string" },
+        "seed_url_table": { "type": "string" },
+        "source_unique_key": { "type": "string" },
+        "seed_unique_key": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "crawl_review_policy": {
+      "type": "object",
+      "properties": {
+        "policy_version": { "type": "string" },
+        "goal": { "type": "string" },
+        "review_mode_before_insert": { "type": "string" },
+        "host_level_budgeting_required": { "type": "boolean" },
+        "cross_host_round_robin_required": { "type": "boolean" },
+        "same_host_back_to_back_checks_avoided": { "type": "boolean" },
+        "browser_use_policy": { "type": "string" },
+        "robots_first": { "type": "boolean" },
+        "etag_last_modified_preferred_when_available": { "type": "boolean" },
+        "suggested_review_order": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "minimum_spacing_guidance": {
+          "type": "object"
+        }
+      },
+      "additionalProperties": true
+    },
+    "source_families": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_family_code",
+          "source_family_name",
+          "source_status",
+          "source_root_url",
+          "source_host",
+          "source_category",
+          "allowed_schemes",
+          "default_priority",
+          "default_recrawl_interval",
+          "default_max_depth",
+          "family_metadata",
+          "seed_surfaces"
+        ],
+        "properties": {
+          "source_family_code": { "type": "string" },
+          "source_family_name": { "type": "string" },
+          "source_status": { "type": "string" },
+          "source_root_url": { "type": "string" },
+          "source_host": { "type": "string" },
+          "source_category": { "type": "string" },
+          "allowed_schemes": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "default_priority": { "type": "integer" },
+          "default_recrawl_interval": { "type": "string" },
+          "default_max_depth": { "type": "integer" },
+          "notes": {
+            "type": ["string", "null"]
+          },
+          "family_metadata": {
+            "type": "object",
+            "required": [
+              "lang_code",
+              "trust_tier",
+              "discovery_value",
+              "noise_risk",
+              "manual_review_priority",
+              "live_check_required",
+              "family_review_state",
+              "host_budget_group",
+              "cross_seed_traversal_allowed",
+              "cross_language_traversal_allowed"
+            ],
+            "properties": {
+              "lang_code": { "type": "string" },
+              "trust_tier": { "type": "string" },
+              "discovery_value": { "type": "string" },
+              "noise_risk": { "type": "string" },
+              "manual_review_priority": { "type": "integer" },
+              "live_check_required": { "type": "boolean" },
+              "family_review_state": { "type": "string" },
+              "host_budget_group": { "type": "string" },
+              "cross_seed_traversal_allowed": { "type": "boolean" },
+              "cross_language_traversal_allowed": { "type": "boolean" }
+            },
+            "additionalProperties": true
+          },
+          "seed_surfaces": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "surface_code",
+                "surface_type",
+                "surface_name",
+                "seed_urls"
+              ],
+              "properties": {
+                "surface_code": { "type": "string" },
+                "surface_type": { "type": "string" },
+                "surface_name": { "type": "string" },
+                "surface_metadata": {
+                  "type": "object"
+                },
+                "seed_urls": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "seed_type",
+                      "submitted_url",
+                      "canonical_url",
+                      "is_enabled",
+                      "priority",
+                      "max_depth",
+                      "recrawl_interval",
+                      "seed_metadata"
+                    ],
+                    "properties": {
+                      "seed_type": { "type": "string" },
+                      "submitted_url": { "type": "string" },
+                      "canonical_url": { "type": "string" },
+                      "is_enabled": { "type": "boolean" },
+                      "priority": { "type": "integer" },
+                      "max_depth": { "type": "integer" },
+                      "recrawl_interval": { "type": "string" },
+                      "seed_metadata": {
+                        "type": "object"
+                      },
+                      "notes": {
+                        "type": ["string", "null"]
+                      }
+                    },
+                    "additionalProperties": true
+                  }
+                }
+              },
+              "additionalProperties": true
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}
