@@ -1,3 +1,12 @@
+-- EN: Canonical 25-language order for taxonomy authority and all crawler/parse
+-- EN: consumers is exactly: 'ar', 'bg', 'cs', 'de', 'el', 'en', 'es', 'fr', 'hu', 'it', 'ja', 'ko', 'nl', 'pt', 'ro', 'ru', 'tr', 'zh', 'hi', 'bn', 'ur', 'uk', 'id', 'vi', 'he'.
+-- EN: This surface must not define, assume, or drift into any narrower subset or
+-- EN: alternative order. Canonical authority lives in 001_taxonomy_runtime_base.sql.
+-- TR: Taxonomy otoritesi ve tüm crawler/parse tüketicileri için kanonik 25 dil
+-- TR: sırası tam olarak şöyledir: 'ar', 'bg', 'cs', 'de', 'el', 'en', 'es', 'fr', 'hu', 'it', 'ja', 'ko', 'nl', 'pt', 'ro', 'ru', 'tr', 'zh', 'hi', 'bn', 'ur', 'uk', 'id', 'vi', 'he'.
+-- TR: Bu yüzey daha dar bir alt kümeye veya alternatif bir sıraya kaymamalı ve
+-- TR: böyle bir varsayım kurmamalıdır. Kanonik otorite 001_taxonomy_runtime_base.sql içindedir.
+
 \set ON_ERROR_STOP on
 
 -- EN

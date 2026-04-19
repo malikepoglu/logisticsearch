@@ -1,3 +1,10 @@
+## Canonical 25-Language Order
+## Kanonik 25 Dil Sırası
+
+English: Canonical 25-language order for taxonomy authority and all crawler/parse consumers is exactly: 'ar', 'bg', 'cs', 'de', 'el', 'en', 'es', 'fr', 'hu', 'it', 'ja', 'ko', 'nl', 'pt', 'ro', 'ru', 'tr', 'zh', 'hi', 'bn', 'ur', 'uk', 'id', 'vi', 'he'. This README must not define or imply a narrower subset or alternative order.
+
+Türkçe: Taxonomy otoritesi ve tüm crawler/parse tüketicileri için kanonik 25 dil sırası tam olarak şöyledir: 'ar', 'bg', 'cs', 'de', 'el', 'en', 'es', 'fr', 'hu', 'it', 'ja', 'ko', 'nl', 'pt', 'ro', 'ru', 'tr', 'zh', 'hi', 'bn', 'ur', 'uk', 'id', 'vi', 'he'. Bu README daha dar bir alt küme veya alternatif sıra tanımlamamalı ya da ima etmemelidir.
+
 # Taxonomy Core SQL Surface
 # Taksonomi Çekirdek SQL Yüzeyi
 

@@ -1,4 +1,14 @@
 # Topic: Taxonomy Authority, Runtime, and 25-Language Crawler/Parse Usage Contract
+
+## Canonical 25-language exact order
+
+## Kanonik 25 dil için exact sıra
+
+EN: The canonical exact order is:
+TR: Kanonik exact sıra şudur:
+
+"ar" "bg" "cs" "de" "el" "en" "es" "fr" "hu" "it" "ja" "ko" "nl" "pt" "ro" "ru" "tr" "zh" "hi" "bn" "ur" "uk" "id" "vi" "he"
+
 # Konu: Taksonomi Otoritesi, Runtime ve 25 Dilli Crawler/Parse Kullanım Sözleşmesi
 
 ## Purpose

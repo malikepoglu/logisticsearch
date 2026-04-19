@@ -34,6 +34,18 @@ import psycopg
 # TR: mapping olarak gelsin diye dict_row içe aktarıyoruz.
 from psycopg.rows import dict_row
 
+# EN: This tuple is the explicit canonical 25-language order consumed by the
+# EN: crawler/taxonomy runtime contract. It must stay byte-for-byte aligned with
+# EN: the SQL taxonomy authority surface.
+# TR: Bu tuple crawler/taxonomy runtime sözleşmesinin kullandığı açık kanonik
+# TR: 25 dil sırasıdır. SQL taxonomy otorite yüzeyi ile byte-for-byte hizalı
+# TR: kalmalıdır.
+CANONICAL_LANGUAGE_ORDER: tuple[str, ...] = (
+    "ar", "bg", "cs", "de", "el", "en", "es", "fr", "hu", "it",
+    "ja", "ko", "nl", "pt", "ro", "ru", "tr", "zh", "hi", "bn",
+    "ur", "uk", "id", "vi", "he",
+)
+
 
 # EN: This dataclass represents one runtime taxonomy match returned by the narrow
 # EN: read-only lookup seam.

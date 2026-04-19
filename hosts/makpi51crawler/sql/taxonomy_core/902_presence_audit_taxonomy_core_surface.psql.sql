@@ -1,3 +1,12 @@
+-- EN: Canonical 25-language order for taxonomy authority and all crawler/parse
+-- EN: consumers is exactly: 'ar', 'bg', 'cs', 'de', 'el', 'en', 'es', 'fr', 'hu', 'it', 'ja', 'ko', 'nl', 'pt', 'ro', 'ru', 'tr', 'zh', 'hi', 'bn', 'ur', 'uk', 'id', 'vi', 'he'.
+-- EN: This surface must not define, assume, or drift into any narrower subset or
+-- EN: alternative order. Canonical authority lives in 001_taxonomy_runtime_base.sql.
+-- TR: Taxonomy otoritesi ve tüm crawler/parse tüketicileri için kanonik 25 dil
+-- TR: sırası tam olarak şöyledir: 'ar', 'bg', 'cs', 'de', 'el', 'en', 'es', 'fr', 'hu', 'it', 'ja', 'ko', 'nl', 'pt', 'ro', 'ru', 'tr', 'zh', 'hi', 'bn', 'ur', 'uk', 'id', 'vi', 'he'.
+-- TR: Bu yüzey daha dar bir alt kümeye veya alternatif bir sıraya kaymamalı ve
+-- TR: böyle bir varsayım kurmamalıdır. Kanonik otorite 001_taxonomy_runtime_base.sql içindedir.
+
 \set ON_ERROR_STOP on
 
 -- EN
@@ -128,3 +137,21 @@ SELECT
 
 \echo
 \echo TAXONOMY_CORE_PRESENCE_AUDIT_RESULT=PASS
+
+\echo == 5) EXACT CANONICAL 25-LANGUAGE ORDER ==
+WITH ordered_supported_languages AS (
+  SELECT
+    count(*)::bigint AS supported_language_count,
+    string_agg(lang_code, ' ' ORDER BY sort_order) AS canonical_language_order
+  FROM logistics.supported_languages
+)
+SELECT
+  supported_language_count,
+  canonical_language_order,
+  (supported_language_count = 25)::boolean AS supported_language_count_is_25,
+  (canonical_language_order = 'ar bg cs de el en es fr hu it ja ko nl pt ro ru tr zh hi bn ur uk id vi he')::boolean AS canonical_language_order_matches_expected,
+  (
+    supported_language_count = 25
+    AND canonical_language_order = 'ar bg cs de el en es fr hu it ja ko nl pt ro ru tr zh hi bn ur uk id vi he'
+  )::boolean AS canonical_25_language_contract_ok
+FROM ordered_supported_languages;

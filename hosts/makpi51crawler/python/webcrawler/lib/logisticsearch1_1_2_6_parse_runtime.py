@@ -51,10 +51,18 @@ from .logisticsearch1_1_1_state_db_gateway import (
 )
 
 from .logisticsearch1_1_2_6_1_taxonomy_runtime import (
+    CANONICAL_LANGUAGE_ORDER,
     connect_taxonomy_db,
     search_runtime_taxonomy,
     taxonomy_default_dsn,
 )
+
+# EN: This set gives parse_runtime the same canonical 25-language acceptance
+# EN: boundary used by taxonomy authority and runtime lookup surfaces.
+# TR: Bu küme parse_runtime katmanına taxonomy otoritesi ve runtime lookup
+# TR: yüzeyleriyle aynı kanonik 25 dil kabul sınırını verir.
+CANONICAL_LANGUAGE_SET = frozenset(CANONICAL_LANGUAGE_ORDER)
+
 
 
 
@@ -155,25 +163,34 @@ def extract_title_from_html(html_text: str) -> str | None:
 # EN: attribute when it exists.
 # TR: Bu yardımcı kök <html lang=...> niteliğinden, varsa, minimal bir dil kodu çıkarır.
 def infer_input_lang_code(html_text: str) -> str:
-    # EN: We look for the HTML lang attribute because it is the cheapest and
-    # EN: simplest first language signal.
-    # TR: HTML lang niteliğine bakıyoruz; çünkü bu en ucuz ve en basit ilk dil sinyalidir.
-    match = re.search(r"<html[^>]*\blang=[\"']?([a-zA-Z0-9_-]+)", html_text, flags=re.IGNORECASE)
+    # EN: We first inspect the root <html lang=...> marker because it is the
+    # EN: simplest first language signal available in minimal parse.
+    # TR: Önce kök <html lang=...> işaretine bakıyoruz; çünkü minimal parse içinde
+    # TR: eldeki en basit ilk dil sinyali budur.
+    match = re.search(
+        r'<html[^>]*\blang\s*=\s*["\']?([a-zA-Z-]+)',
+        html_text,
+        flags=re.IGNORECASE,
+    )
 
-    # EN: If no language marker exists, we use "und" for undetermined.
-    # TR: Dil işareti yoksa undetermined anlamında "und" kullanıyoruz.
-    if match is None:
-        return "und"
+    # EN: If a language marker exists, we normalize it to the primary two-letter
+    # EN: stem before checking canonical membership.
+    # TR: Bir dil işareti varsa onu önce birincil iki harfli köke normalize edip
+    # TR: sonra kanonik üyeliğini kontrol ediyoruz.
+    if match:
+        candidate = match.group(1).strip().lower().split("-", 1)[0]
 
-    # EN: We normalize to lowercase because later matching becomes simpler.
-    # TR: Sonraki eşleşmeler daha kolay olsun diye küçük harfe normalize ediyoruz.
-    return match.group(1).strip().lower()
+        # EN: Only canonical 25-language codes are allowed to flow forward as
+        # EN: concrete language truth from this first parse layer.
+        # TR: Bu ilk parse katmanından ileriye yalnızca kanonik 25 dil kodları
+        # TR: somut dil doğrusu olarak akabilir.
+        if candidate in CANONICAL_LANGUAGE_SET:
+            return candidate
 
+    # EN: If no canonical language marker exists, we use "und" for undetermined.
+    # TR: Kanonik bir dil işareti yoksa belirsiz anlamında "und" kullanıyoruz.
+    return "und"
 
-# EN: This helper removes script/style blocks and strips remaining tags to build
-# EN: a simple visible-text approximation.
-# TR: Bu yardımcı script/style bloklarını kaldırır ve kalan etiketleri sıyırarak
-# TR: basit bir görünür-metin yaklaşımı üretir.
 def extract_visible_text_from_html(html_text: str) -> str:
     # EN: We remove script blocks first because JavaScript is not page meaning.
     # TR: JavaScript sayfa anlamı olmadığı için önce script bloklarını kaldırıyoruz.
