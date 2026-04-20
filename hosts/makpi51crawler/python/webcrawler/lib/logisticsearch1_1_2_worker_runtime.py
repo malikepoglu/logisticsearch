@@ -332,8 +332,38 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             conn=conn,
             host_id=claimed_host_id,
         )
+
+        # EN: A missing refresh-decision row must degrade visibly and roll back the
+        # EN: transient claim instead of crashing the worker or pretending refresh
+        # EN: truth exists.
+        # TR: Eksik refresh-decision satırı worker'ı çökertmek ya da refresh
+        # TR: doğrusu varmış gibi davranmak yerine görünür biçimde degrade olmalı
+        # TR: ve geçici claim rollback edilmelidir.
         if refresh_decision is None:
-            raise RuntimeError("compute_robots_refresh_decision(...) returned no row")
+            refresh_decision = {
+                "host_id": claimed_host_id,
+                "robots_action": "compute_robots_refresh_decision",
+                "robots_degraded": True,
+                "robots_degraded_reason": "compute_robots_refresh_decision_returned_no_row",
+                "robots_completed": False,
+                "error_class": "robots_refresh_decision_no_row",
+                "error_message": "compute_robots_refresh_decision(...) returned no row",
+            }
+
+        if bool(refresh_decision.get("robots_degraded")):
+            rollback(conn)
+            return ClaimProbeResult(
+                run_id=run_id,
+                claimed=False,
+                claimed_url=None,
+                robots_allow_decision=None,
+                storage_plan=storage_plan,
+                fetched_page=None,
+                finalize_result=dict(refresh_decision),
+                parse_apply_result=parse_apply_result,
+                observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
+            )
 
         # EN: Probe mode stays non-durable: it may observe refresh need but must not
         # EN: write refreshed cache truth back into the database.
@@ -347,11 +377,32 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 phase_label="robots_refresh",
             )
 
-            refresh_robots_cache_if_needed(
+            refresh_result = refresh_robots_cache_if_needed(
                 conn,
                 claimed_url=claimed_url,
                 refresh_decision=refresh_decision,
             )
+
+            # EN: A degraded robots cache write must not fall through into later
+            # EN: allow/block logic. We roll back the transient claim and return the
+            # EN: visible degraded payload honestly.
+            # TR: Degrade olmuş robots cache yazımı daha sonraki allow/block
+            # TR: mantığına sızmamalıdır. Geçici claim'i rollback ediyor ve görünür
+            # TR: degrade payload'ı dürüst biçimde döndürüyoruz.
+            if bool(refresh_result.get("robots_degraded")):
+                rollback(conn)
+                return ClaimProbeResult(
+                    run_id=run_id,
+                    claimed=False,
+                    claimed_url=None,
+                    robots_allow_decision=None,
+                    storage_plan=storage_plan,
+                    fetched_page=None,
+                    finalize_result=dict(refresh_result),
+                    parse_apply_result=parse_apply_result,
+                    observed_at=utc_now_iso(),
+                    runtime_control=runtime_control,
+                )
 
         # EN: After any needed durable refresh write, we ask for the current visible
         # EN: robots allow/block decision for the claimed path.
@@ -362,6 +413,39 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             host_id=claimed_host_id,
             url_path=claimed_url_path,
         )
+
+        # EN: A missing allow-decision row must not silently become a robots block.
+        # EN: We degrade visibly, roll back the transient claim, and return the
+        # EN: unresolved robots state honestly.
+        # TR: Eksik allow-decision satırı sessizce robots block'a dönüşmemelidir.
+        # TR: Görünür biçimde degrade ediyor, geçici claim'i rollback ediyor ve
+        # TR: çözülmemiş robots durumunu dürüst biçimde döndürüyoruz.
+        if robots_allow_decision is None:
+            robots_allow_decision = {
+                "host_id": claimed_host_id,
+                "url_path": claimed_url_path,
+                "robots_action": "compute_robots_allow_decision",
+                "robots_degraded": True,
+                "robots_degraded_reason": "compute_robots_allow_decision_returned_no_row",
+                "robots_completed": False,
+                "error_class": "robots_allow_decision_no_row",
+                "error_message": "compute_robots_allow_decision(...) returned no row",
+            }
+
+        if bool(robots_allow_decision.get("robots_degraded")):
+            rollback(conn)
+            return ClaimProbeResult(
+                run_id=run_id,
+                claimed=False,
+                claimed_url=None,
+                robots_allow_decision=dict(robots_allow_decision),
+                storage_plan=storage_plan,
+                fetched_page=None,
+                finalize_result=dict(robots_allow_decision),
+                parse_apply_result=parse_apply_result,
+                observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
+            )
 
         # EN: Probe mode stays non-durable: claim + robots checks are observed and
         # EN: then rolled back.

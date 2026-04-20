@@ -22,6 +22,42 @@ from psycopg.rows import dict_row
 
 
 
+# EN: This helper converts a robots SQL wrapper no-row condition into an
+# EN: operator-visible degraded payload so upper runtime layers can keep moving
+# EN: with honest unresolved robots state instead of crashing or silently drifting.
+# TR: Bu yardımcı robots SQL wrapper no-row durumunu operatörün görebileceği
+# TR: degrade payload'a çevirir; böylece üst runtime katmanları çökmeden ya da
+# TR: sessiz mantık kaymasına düşmeden dürüst çözülmemiş robots durumu ile ilerler.
+def build_robots_no_row_payload(
+    *,
+    action: str,
+    host_id: int,
+    url_path: str | None = None,
+    robots_url: str | None = None,
+    cache_state: str | None = None,
+    http_status: int | None = None,
+    error_class: str,
+    error_message: str,
+) -> dict[str, Any]:
+    # EN: We keep one normalized degraded payload shape across robots wrappers so
+    # EN: caller-visible results stay explicit and consistent.
+    # TR: Robots wrapper'ları arasında tek ve normalize bir degrade payload şekli
+    # TR: tutuyoruz; böylece çağıranın gördüğü sonuç açık ve tutarlı kalır.
+    return {
+        "host_id": host_id,
+        "url_path": url_path,
+        "robots_url": robots_url,
+        "cache_state": cache_state,
+        "http_status": http_status,
+        "robots_action": action,
+        "robots_degraded": True,
+        "robots_degraded_reason": f"{action}_returned_no_row",
+        "robots_completed": False,
+        "error_class": error_class,
+        "error_message": error_message,
+    }
+
+
 # EN: This helper asks the DB whether the current path appears allowed/blocked
 # EN: according to the visible robots decision surface.
 # TR: Bu yardımcı, görünür robots karar yüzeyine göre mevcut path'in allowed/blocked
@@ -57,6 +93,19 @@ def compute_robots_allow_decision(
         # TR: Tek karar satırı çekiyoruz; çünkü bu fonksiyon bir host/path çifti
         # TR: için mevcut kararı tanımlar.
         row = cur.fetchone()
+
+    # EN: A no-row response must degrade into an operator-visible payload instead
+    # EN: of silently becoming an implicit block/allow drift.
+    # TR: No-row yanıtı sessizce örtük block/allow drift'ine dönüşmek yerine
+    # TR: operatörün görebileceği degrade payload'a dönmelidir.
+    if row is None:
+        return build_robots_no_row_payload(
+            action="compute_robots_allow_decision",
+            host_id=host_id,
+            url_path=url_path,
+            error_class="robots_allow_decision_no_row",
+            error_message="http_fetch.compute_robots_allow_decision(...) returned no row",
+        )
 
     # EN: We return the raw mapping for now to avoid pretending the final
     # EN: dedicated Python-side robots model is already sealed.
@@ -98,6 +147,18 @@ def compute_robots_refresh_decision(
         # TR: Tek satır çekiyoruz; çünkü bu fonksiyon tam olarak tek bir host için
         # TR: mevcut refresh kararını döndürür.
         row = cur.fetchone()
+
+    # EN: A no-row response must degrade into an operator-visible payload instead
+    # EN: of crashing the parent worker path.
+    # TR: No-row yanıtı parent worker yolunu çökertmek yerine operatörün
+    # TR: görebileceği degrade payload'a dönmelidir.
+    if row is None:
+        return build_robots_no_row_payload(
+            action="compute_robots_refresh_decision",
+            host_id=host_id,
+            error_class="robots_refresh_decision_no_row",
+            error_message="http_fetch.compute_robots_refresh_decision(...) returned no row",
+        )
 
     # EN: We return the raw mapping for now so Python does not pretend that a
     # EN: stricter dedicated model is already sealed.
@@ -205,10 +266,20 @@ def upsert_robots_txt_cache(
         # TR: tek yapılı cache sonuç satırı döndürür.
         row = cur.fetchone()
 
-    # EN: Returning no row would mean the canonical wrapper contract was broken.
-    # TR: Hiç satır dönmemesi, kanonik wrapper sözleşmesinin bozulduğu anlamına gelir.
+    # EN: A no-row response must degrade into an operator-visible payload instead
+    # EN: of crashing the worker-side robots refresh path again.
+    # TR: No-row yanıtı worker-tarafı robots refresh yolunu yeniden çökertmek
+    # TR: yerine operatörün görebileceği degrade payload'a dönmelidir.
     if row is None:
-        raise RuntimeError("http_fetch.upsert_robots_txt_cache(...) returned no row")
+        return build_robots_no_row_payload(
+            action="upsert_robots_txt_cache",
+            host_id=host_id,
+            robots_url=robots_url,
+            cache_state=cache_state,
+            http_status=http_status,
+            error_class="robots_cache_upsert_no_row",
+            error_message="http_fetch.upsert_robots_txt_cache(...) returned no row",
+        )
 
     # EN: We return the structured DB row to the caller.
     # TR: Yapılı DB satırını çağırana döndürüyoruz.
