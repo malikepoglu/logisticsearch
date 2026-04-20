@@ -134,6 +134,37 @@ def classify_http_status_failure(http_status: int) -> tuple[str, bool]:
     return ("http_permanent_status", False)
 
 
+# EN: This helper converts a frontier finalize no-row failure into an operator-visible
+# EN: degraded payload so the worker can keep already-written fetch-attempt evidence
+# EN: and return an honest unresolved state instead of crashing again.
+# TR: Bu yardımcı frontier finalize no-row hatasını operatörün görebileceği
+# TR: degrade payload'a çevirir; böylece worker zaten yazılmış fetch-attempt
+# TR: kanıtını korur ve yeniden çökmeden dürüst bir çözülmemiş durum döndürür.
+def build_finalize_no_row_payload(
+    *,
+    url_id: int,
+    lease_token: str,
+    http_status: int | None,
+    error_class: str,
+    error_message: str,
+    degraded_reason: str,
+) -> dict[str, object]:
+    # EN: We return one normalized degraded payload shape shared by sibling finalize
+    # EN: paths so operator-facing results stay consistent.
+    # TR: Kardeş finalize yolları arasında ortak, normalize bir degrade payload
+    # TR: şekli döndürüyoruz; böylece operatörün gördüğü sonuçlar tutarlı kalır.
+    return {
+        "url_id": url_id,
+        "lease_token": lease_token,
+        "http_status": http_status,
+        "error_class": error_class,
+        "error_message": error_message,
+        "finalize_degraded": True,
+        "finalize_degraded_reason": degraded_reason,
+        "finalize_completed": False,
+    }
+
+
 # EN: This helper finalizes a robots-blocked claim as a permanent outcome.
 # TR: Bu yardımcı robots tarafından engellenen bir claim’i permanent sonuç olarak
 # TR: finalize eder.
@@ -169,21 +200,38 @@ def finalize_robots_block(
         error_message=error_message,
     )
 
-    # EN: We then finalize the frontier row through the permanent wrapper.
-    # TR: Ardından frontier satırını permanent wrapper üzerinden finalize ediyoruz.
-    finalize_result = finish_fetch_permanent_error(
-        conn,
-        url_id=url_id,
-        lease_token=lease_token,
-        http_status=None,
-        error_class="robots_blocked",
-        error_message=error_message,
-    )
+    # EN: The frontier permanent finalize call may still return no row on some drift
+    # EN: paths. That must degrade cleanly instead of crashing the worker again.
+    # TR: Frontier permanent finalize çağrısı bazı drift yollarında hâlâ satır
+    # TR: döndürmeyebilir. Bu durum worker’ı yeniden çökertmek yerine temizce
+    # TR: degrade edilmelidir.
+    try:
+        finalize_result = finish_fetch_permanent_error(
+            conn,
+            url_id=url_id,
+            lease_token=lease_token,
+            http_status=None,
+            error_class="robots_blocked",
+            error_message=error_message,
+        )
+        finalize_result_payload = dict(finalize_result)
+    except RuntimeError as exc:
+        if "frontier.finish_fetch_permanent_error(...) returned no row" not in str(exc):
+            raise
+
+        finalize_result_payload = build_finalize_no_row_payload(
+            url_id=url_id,
+            lease_token=lease_token,
+            http_status=None,
+            error_class="robots_blocked_finalize_no_row",
+            error_message=f"{error_message} | finalize_no_row: {exc}",
+            degraded_reason="frontier_finish_fetch_permanent_error_returned_no_row",
+        )
 
     # EN: We merge durable fetch-attempt evidence into the returned payload.
     # TR: Kalıcı fetch-attempt kanıtını dönen payload’a birleştiriyoruz.
     return {
-        **dict(finalize_result),
+        **finalize_result_payload,
         "fetch_attempt_log": dict(fetch_attempt_log),
     }
 
@@ -224,34 +272,57 @@ def finalize_http_error(
         error_message=error_message,
     )
 
-    # EN: Retryable statuses go through the retryable finalize wrapper.
-    # TR: Retryable durumlar retryable finalize wrapper üzerinden gider.
-    if is_retryable:
-        finalize_result = finish_fetch_retryable_error(
-            conn,
+    # EN: The retryable/permanent frontier finalize call may still return no row on
+    # EN: some drift paths. That must degrade cleanly instead of crashing the worker.
+    # TR: Retryable/permanent frontier finalize çağrısı bazı drift yollarında hâlâ
+    # TR: satır döndürmeyebilir. Bu durum worker’ı çökertmek yerine temizce
+    # TR: degrade edilmelidir.
+    try:
+        if is_retryable:
+            finalize_result = finish_fetch_retryable_error(
+                conn,
+                url_id=url_id,
+                lease_token=lease_token,
+                http_status=http_status,
+                error_class=error_class,
+                error_message=error_message,
+                retry_delay=None,
+            )
+        else:
+            finalize_result = finish_fetch_permanent_error(
+                conn,
+                url_id=url_id,
+                lease_token=lease_token,
+                http_status=http_status,
+                error_class=error_class,
+                error_message=error_message,
+            )
+
+        finalize_result_payload = dict(finalize_result)
+    except RuntimeError as exc:
+        if is_retryable:
+            expected_message = "frontier.finish_fetch_retryable_error(...) returned no row"
+            degraded_reason = "frontier_finish_fetch_retryable_error_returned_no_row"
+        else:
+            expected_message = "frontier.finish_fetch_permanent_error(...) returned no row"
+            degraded_reason = "frontier_finish_fetch_permanent_error_returned_no_row"
+
+        if expected_message not in str(exc):
+            raise
+
+        finalize_result_payload = build_finalize_no_row_payload(
             url_id=url_id,
             lease_token=lease_token,
             http_status=http_status,
-            error_class=error_class,
-            error_message=error_message,
-            retry_delay=None,
-        )
-    else:
-        # EN: All remaining HTTP failure statuses go through the permanent wrapper.
-        # TR: Kalan tüm HTTP hata durumları permanent wrapper üzerinden gider.
-        finalize_result = finish_fetch_permanent_error(
-            conn,
-            url_id=url_id,
-            lease_token=lease_token,
-            http_status=http_status,
-            error_class=error_class,
-            error_message=error_message,
+            error_class=f"{error_class}_finalize_no_row",
+            error_message=f"{error_message} | finalize_no_row: {exc}",
+            degraded_reason=degraded_reason,
         )
 
     # EN: We merge terminal per-attempt evidence into the returned payload.
     # TR: Terminal deneme-bazlı kanıtı dönen payload’a birleştiriyoruz.
     return {
-        **dict(finalize_result),
+        **finalize_result_payload,
         "fetch_attempt_log": dict(fetch_attempt_log),
     }
 
@@ -291,22 +362,39 @@ def finalize_transport_error(
         error_message=error_message,
     )
 
-    # EN: Transport failures are treated as retryable in this minimal layer.
-    # TR: Taşıma hataları bu minimal katmanda retryable kabul edilir.
-    finalize_result = finish_fetch_retryable_error(
-        conn,
-        url_id=url_id,
-        lease_token=lease_token,
-        http_status=None,
-        error_class="transport_retryable_error",
-        error_message=error_message,
-        retry_delay=None,
-    )
+    # EN: The retryable frontier finalize call may still return no row on some drift
+    # EN: paths. That must degrade cleanly instead of crashing the worker again.
+    # TR: Retryable frontier finalize çağrısı bazı drift yollarında hâlâ satır
+    # TR: döndürmeyebilir. Bu durum worker’ı yeniden çökertmek yerine temizce
+    # TR: degrade edilmelidir.
+    try:
+        finalize_result = finish_fetch_retryable_error(
+            conn,
+            url_id=url_id,
+            lease_token=lease_token,
+            http_status=None,
+            error_class="transport_retryable_error",
+            error_message=error_message,
+            retry_delay=None,
+        )
+        finalize_result_payload = dict(finalize_result)
+    except RuntimeError as exc:
+        if "frontier.finish_fetch_retryable_error(...) returned no row" not in str(exc):
+            raise
+
+        finalize_result_payload = build_finalize_no_row_payload(
+            url_id=url_id,
+            lease_token=lease_token,
+            http_status=None,
+            error_class="transport_retryable_error_finalize_no_row",
+            error_message=f"{error_message} | finalize_no_row: {exc}",
+            degraded_reason="frontier_finish_fetch_retryable_error_returned_no_row",
+        )
 
     # EN: We merge terminal per-attempt evidence into the returned payload.
     # TR: Terminal deneme-bazlı kanıtı dönen payload’a birleştiriyoruz.
     return {
-        **dict(finalize_result),
+        **finalize_result_payload,
         "fetch_attempt_log": dict(fetch_attempt_log),
     }
 
