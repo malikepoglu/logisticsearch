@@ -61,23 +61,50 @@ from pathlib import Path
 # TR: zorunda olduğu için urlsplit içe aktarılıyor.
 from urllib.parse import urlsplit
 
-# EN: We import psycopg because this bridge writes live PostgreSQL rows into the
-# EN: crawler_core frontier surfaces.
-# TR: Bu bridge live PostgreSQL satırlarını crawler_core frontier yüzeylerine
-# TR: yazdığı için psycopg içe aktarılıyor.
-import psycopg
+# EN: We try to import psycopg because live DB work needs it, but inspection-only
+# EN: contexts should not crash at module import time if psycopg is absent.
+# TR: Canlı DB işleri psycopg ister; fakat yalnızca denetim yapılan bağlamlar
+# TR: psycopg yok diye modül import anında çökmemelidir.
+try:
+    # EN: Live runtime path: psycopg is present and DB helpers stay fully active.
+    # TR: Canlı runtime yolu: psycopg mevcuttur ve DB yardımcıları tam aktif kalır.
+    import psycopg
 
-# EN: We import SQL helpers because frontier inserts are built dynamically from
-# EN: the exact live column set instead of assuming one frozen table shape.
-# TR: Frontier insert’leri tek bir donmuş tablo şekli varsaymak yerine exact canlı
-# TR: sütun kümesinden dinamik kurulsun diye SQL yardımcıları içe aktarılıyor.
-from psycopg import sql
+    # EN: SQL helper import stays available on the normal runtime path.
+    # TR: SQL yardımcı import’u normal runtime yolunda kullanılabilir kalır.
+    from psycopg import sql
 
-# EN: We import dict_row so every query result can be addressed by column name
-# EN: and remain easy to audit.
-# TR: Her sorgu sonucu sütun adıyla adreslenebilsin ve denetlemesi kolay kalsın
-# TR: diye dict_row içe aktarılıyor.
-from psycopg.rows import dict_row
+    # EN: dict_row keeps row access explicit by column name.
+    # TR: dict_row satır erişimini sütun adıyla açık tutar.
+    from psycopg.rows import dict_row
+
+    # EN: None means the runtime dependency is available.
+    # TR: None değeri runtime bağımlılığının mevcut olduğunu gösterir.
+    PSYCOPG_IMPORT_ERROR: ModuleNotFoundError | None = None
+
+except ModuleNotFoundError as exc:
+    # EN: Inspection-only path: we keep the module importable and delay the hard
+    # EN: failure until actual DB work is requested.
+    # TR: Yalnızca denetim yolu: modülü import edilebilir tutuyoruz ve sert hatayı
+    # TR: gerçek DB işi istenene kadar erteliyoruz.
+    psycopg = None
+    sql = None
+    dict_row = None
+    PSYCOPG_IMPORT_ERROR = exc
+
+
+# EN: This helper turns a missing psycopg dependency into one clean runtime error
+# EN: instead of a module-import crash.
+# TR: Bu yardımcı eksik psycopg bağımlılığını modül-import çökmesi yerine temiz
+# TR: tek bir runtime hatasına dönüştürür.
+def require_psycopg_runtime() -> None:
+    # EN: When psycopg is absent we raise one explicit operator-readable error.
+    # TR: psycopg yoksa tek ve açık operatör-okunur hata yükseltiyoruz.
+    if PSYCOPG_IMPORT_ERROR is not None:
+        raise RuntimeError(
+            "psycopg runtime dependency missing; use the webcrawler venv/python "
+            "for DB-backed execution paths"
+        ) from PSYCOPG_IMPORT_ERROR
 
 
 # EN: This default path matches the current live runtime env surface on pi51c.
@@ -288,18 +315,19 @@ def crawler_dsn_from_env_file(env_file: Path) -> str:
 
 # EN: This helper derives a stable authority_key from scheme/host/port.
 # TR: Bu yardımcı scheme/host/port üçlüsünden stabil authority_key türetir.
+# EN: This helper derives a stable authority_key from scheme/host/port.
+# TR: Bu yardımcı scheme/host/port üçlüsünden stabil authority_key türetir.
 def build_authority_key(scheme: str, host: str, port: int) -> str:
-    # EN: default_port stores the protocol-default port if one exists.
-    # TR: default_port varsa protokolün varsayılan portunu tutar.
-    default_port = 443 if scheme == "https" else 80 if scheme == "http" else None
+    # EN: The live pi51c frontier.host audit showed that the generated authority_key
+    # EN: unique surface currently behaves as host:port, including default ports.
+    # TR: Canlı pi51c frontier.host denetimi generated authority_key benzersiz
+    # TR: yüzeyinin şu anda varsayılan portlar dahil host:port gibi davrandığını gösterdi.
+    _ = scheme
 
-    # EN: Default ports are omitted from authority_key so host identity stays stable.
-    # TR: Varsayılan portlar authority_key’den çıkarılır; böylece host kimliği stabil kalır.
-    if default_port is not None and port == default_port:
-        return host
-
-    # EN: Non-default ports stay visible in the key because they define a distinct host surface.
-    # TR: Varsayılan olmayan portlar görünür kalır; çünkü ayrı bir host yüzeyi tanımlarlar.
+    # EN: We therefore keep the operator-facing authority_key derivation aligned
+    # EN: with the current live database contract instead of collapsing default ports.
+    # TR: Bu yüzden operatör-görünür authority_key türetimini varsayılan portları
+    # TR: daraltmak yerine mevcut canlı veritabanı sözleşmesiyle hizalı tutuyoruz.
     return f"{host}:{port}"
 
 
@@ -499,10 +527,29 @@ def ensure_frontier_host_for_parsed_url(
     frontier_host_columns: set[str],
     parsed_url: ParsedCanonicalUrl,
 ) -> tuple[int, bool]:
-    # EN: Existing host lookup prefers authority_key because stage17c showed that
-    # EN: frontier.host is currently keyed that way in live audit usage.
-    # TR: Mevcut host lookup authority_key’yi tercih eder; çünkü stage17c canlı
-    # TR: audit kullanımında frontier.host’un şu anda bu şekilde anahtarlandığını gösterdi.
+    # EN: We first look up by the exact insert-driving natural key: scheme + host + port.
+    # EN: This avoids depending on generated-column semantics during the primary lookup.
+    # TR: Önce tam insert-sürücü doğal anahtar olan scheme + host + port ile lookup
+    # TR: yapıyoruz. Böylece birincil lookup aşamasında generated kolon semantiğine
+    # TR: bağımlı kalmıyoruz.
+    cur.execute(
+        """
+        select host_id
+        from frontier.host
+        where scheme = %s
+          and host = %s
+          and port = %s
+        """,
+        (parsed_url.scheme, parsed_url.host, parsed_url.port),
+    )
+    existing_row = cur.fetchone()
+    if existing_row is not None:
+        return int(existing_row["host_id"]), False
+
+    # EN: As a secondary compatibility lookup, we also try authority_key if the
+    # EN: live table exposes that column.
+    # TR: İkincil uyumluluk lookup’ı olarak canlı tablo authority_key kolonunu
+    # TR: gösteriyorsa authority_key ile de deniyoruz.
     if "authority_key" in frontier_host_columns:
         cur.execute(
             """
@@ -512,63 +559,87 @@ def ensure_frontier_host_for_parsed_url(
             """,
             (parsed_url.authority_key,),
         )
-    else:
-        cur.execute(
-            """
-            select host_id
-            from frontier.host
-            where scheme = %s
-              and host = %s
-              and port = %s
-            """,
-            (parsed_url.scheme, parsed_url.host, parsed_url.port),
-        )
+        existing_row = cur.fetchone()
+        if existing_row is not None:
+            return int(existing_row["host_id"]), False
 
-    # EN: If a host row already exists, we reuse it.
-    # TR: Host satırı zaten varsa onu yeniden kullanırız.
-    existing_row = cur.fetchone()
-    if existing_row is not None:
-        return int(existing_row["host_id"]), False
-
-    # EN: insert_values is built dynamically so the bridge stays aligned with the
-    # EN: exact live frontier.host contract.
-    # TR: insert_values dinamik kurulur; böylece bridge exact canlı frontier.host
-    # TR: sözleşmesiyle hizalı kalır.
+    # EN: insert_values only contains truly insertable fields. Generated authority_key
+    # EN: must never be written explicitly.
+    # TR: insert_values yalnızca gerçekten insert edilebilir alanları içerir.
+    # TR: Generated authority_key asla açıkça yazılmamalıdır.
     insert_values: dict[str, object] = {}
 
-    # EN: These three fields were confirmed by stage17c as required-without-default.
-    # TR: Bu üç alan stage17c tarafından required-without-default olarak doğrulandı.
     if "scheme" in frontier_host_columns:
         insert_values["scheme"] = parsed_url.scheme
     if "host" in frontier_host_columns:
         insert_values["host"] = parsed_url.host
     if "port" in frontier_host_columns:
         insert_values["port"] = parsed_url.port
-
-    # EN: We also provide stable host identity helpers when the live table exposes them.
-    # TR: Canlı tablo bunları gösteriyorsa stabil host kimliği yardımcılarını da sağlıyoruz.
     if "registrable_domain" in frontier_host_columns:
         insert_values["registrable_domain"] = parsed_url.registrable_domain
 
-    # EN: cols and vals become the final dynamic INSERT column/value lists.
-    # TR: cols ve vals nihai dinamik INSERT sütun/değer listelerine dönüşür.
     cols = list(insert_values.keys())
     vals = [insert_values[col] for col in cols]
 
-    # EN: Dynamic INSERT is generated only from columns we intentionally supply.
-    # TR: Dinamik INSERT yalnızca bilinçli olarak sağladığımız sütunlardan üretilir.
+    # EN: We insert conflict-safely against the live unique authority_key surface.
+    # EN: If another row already exists, RETURNING may yield no row and we fall back
+    # EN: to a deterministic re-select.
+    # TR: Canlı benzersiz authority_key yüzeyine karşı conflict-güvenli insert
+    # TR: yapıyoruz. Başka bir satır zaten varsa RETURNING satır döndürmeyebilir;
+    # TR: bu durumda deterministik yeniden-select fallback kullanıyoruz.
     cur.execute(
-        sql.SQL("insert into frontier.host ({cols}) values ({vals}) returning host_id").format(
+        sql.SQL(
+            "insert into frontier.host ({cols}) values ({vals}) "
+            "on conflict on constraint host_authority_key_key do nothing "
+            "returning host_id"
+        ).format(
             cols=sql.SQL(", ").join(sql.Identifier(col) for col in cols),
             vals=sql.SQL(", ").join(sql.Placeholder() for _ in cols),
         ),
         vals,
     )
 
-    # EN: Newly inserted host_id is returned to the caller.
-    # TR: Yeni eklenen host_id çağırana döndürülür.
     inserted_row = cur.fetchone()
-    return int(inserted_row["host_id"]), True
+    if inserted_row is not None:
+        return int(inserted_row["host_id"]), True
+
+    # EN: Conflict or race path: re-select by exact natural key first.
+    # TR: Conflict veya yarış durumu yolunda önce exact doğal anahtar ile yeniden seçiyoruz.
+    cur.execute(
+        """
+        select host_id
+        from frontier.host
+        where scheme = %s
+          and host = %s
+          and port = %s
+        """,
+        (parsed_url.scheme, parsed_url.host, parsed_url.port),
+    )
+    existing_row = cur.fetchone()
+    if existing_row is not None:
+        return int(existing_row["host_id"]), False
+
+    # EN: Final compatibility fallback by authority_key if exposed.
+    # TR: authority_key görünüyorsa son uyumluluk fallback’i budur.
+    if "authority_key" in frontier_host_columns:
+        cur.execute(
+            """
+            select host_id
+            from frontier.host
+            where authority_key = %s
+            """,
+            (parsed_url.authority_key,),
+        )
+        existing_row = cur.fetchone()
+        if existing_row is not None:
+            return int(existing_row["host_id"]), False
+
+    # EN: Reaching this point means the live uniqueness path behaved unexpectedly.
+    # TR: Buraya gelmek canlı benzersizlik yolunun beklenmedik davrandığı anlamına gelir.
+    raise RuntimeError(
+        "frontier.host insert/select reconciliation failed for "
+        f"{parsed_url.scheme}://{parsed_url.host}:{parsed_url.port}"
+    )
 
 
 # EN: This helper looks up or creates one frontier.url row for a seed row.
@@ -580,10 +651,10 @@ def ensure_frontier_url_for_seed_row(
     parsed_url: ParsedCanonicalUrl,
     host_id: int,
 ) -> tuple[int, bool]:
-    # EN: Existing URL lookup uses canonical_url because stage17 showed that exact
-    # EN: field is present and was the live audit needle.
-    # TR: Mevcut URL lookup canonical_url kullanır; çünkü stage17 exact bu alanın
-    # TR: mevcut olduğunu ve canlı audit needle’ı olduğunu gösterdi.
+    # EN: Existing URL lookup uses canonical_url because that is the clearest
+    # EN: operator-visible identity for the bridge layer.
+    # TR: Mevcut URL lookup canonical_url kullanır; çünkü bridge katmanı için
+    # TR: operatör-görünür en açık kimlik budur.
     cur.execute(
         """
         select url_id
@@ -593,8 +664,6 @@ def ensure_frontier_url_for_seed_row(
         (parsed_url.canonical_url,),
     )
 
-    # EN: Already-present frontier.url rows are reused instead of duplicated.
-    # TR: Zaten mevcut frontier.url satırları çoğaltılmak yerine yeniden kullanılır.
     existing_row = cur.fetchone()
     if existing_row is not None:
         return int(existing_row["url_id"]), False
@@ -603,8 +672,8 @@ def ensure_frontier_url_for_seed_row(
     # TR: insert_values exact canlı frontier.url sütunlarına karşı dinamik biçimde kurulur.
     insert_values: dict[str, object] = {}
 
-    # EN: These three fields were confirmed by stage17c as required-without-default.
-    # TR: Bu üç alan stage17c tarafından required-without-default olarak doğrulandı.
+    # EN: These three fields were confirmed as required-without-default for live insertability.
+    # TR: Bu üç alan canlı insert edilebilirlik için required-without-default olarak doğrulandı.
     if "host_id" in frontier_url_columns:
         insert_values["host_id"] = host_id
     if "canonical_url" in frontier_url_columns:
@@ -613,7 +682,7 @@ def ensure_frontier_url_for_seed_row(
         insert_values["url_path"] = parsed_url.url_path
 
     # EN: The remaining fields are supplied opportunistically when the live table
-    # EN: exposes them, so the inserted rows stay rich without assuming too much.
+    # EN: exposes them, so inserted rows stay rich without assuming too much.
     # TR: Kalan alanlar canlı tablo bunları gösterdiğinde fırsatçı biçimde sağlanır;
     # TR: böylece eklenen satırlar gereğinden fazla varsayım yapmadan zengin kalır.
     if "scheme" in frontier_url_columns:
@@ -643,25 +712,47 @@ def ensure_frontier_url_for_seed_row(
     if "source_id" in frontier_url_columns:
         insert_values["source_id"] = seed_row["source_id"]
 
-    # EN: cols and vals become the final dynamic INSERT column/value lists.
-    # TR: cols ve vals nihai dinamik INSERT sütun/değer listelerine dönüşür.
     cols = list(insert_values.keys())
     vals = [insert_values[col] for col in cols]
 
-    # EN: Dynamic INSERT is generated only from columns we intentionally provide.
-    # TR: Dinamik INSERT yalnızca bilinçli olarak sağladığımız sütunlardan üretilir.
+    # EN: URL insert is also conflict-safe, because another worker/process may insert
+    # EN: the same canonical URL between our pre-lookup and INSERT.
+    # TR: URL insert de conflict-güvenlidir; çünkü başka bir worker/process bizim
+    # TR: pre-lookup ile INSERT aramızda aynı canonical URL’yi ekleyebilir.
     cur.execute(
-        sql.SQL("insert into frontier.url ({cols}) values ({vals}) returning url_id").format(
+        sql.SQL(
+            "insert into frontier.url ({cols}) values ({vals}) "
+            "on conflict on constraint url_canonical_url_sha256_key do nothing "
+            "returning url_id"
+        ).format(
             cols=sql.SQL(", ").join(sql.Identifier(col) for col in cols),
             vals=sql.SQL(", ").join(sql.Placeholder() for _ in cols),
         ),
         vals,
     )
 
-    # EN: Newly inserted url_id is returned to the caller.
-    # TR: Yeni eklenen url_id çağırana döndürülür.
     inserted_row = cur.fetchone()
-    return int(inserted_row["url_id"]), True
+    if inserted_row is not None:
+        return int(inserted_row["url_id"]), True
+
+    # EN: Conflict or race path falls back to a deterministic re-select.
+    # TR: Conflict veya yarış durumu yolu deterministik yeniden-select fallback’ine düşer.
+    cur.execute(
+        """
+        select url_id
+        from frontier.url
+        where canonical_url = %s
+        """,
+        (parsed_url.canonical_url,),
+    )
+    existing_row = cur.fetchone()
+    if existing_row is not None:
+        return int(existing_row["url_id"]), False
+
+    raise RuntimeError(
+        "frontier.url insert/select reconciliation failed for "
+        f"{parsed_url.canonical_url}"
+    )
 
 
 # EN: This helper marks one seed.seed_url row as enqueued.
@@ -710,6 +801,10 @@ def bridge_ready_seed_rows_to_frontier(
     frontier_url_existing_count = 0
     seed_rows_marked_enqueued_count = 0
 
+    # EN: DB-backed bridge execution requires a real psycopg runtime.
+    # TR: DB-destekli bridge çalışması gerçek bir psycopg runtime ister.
+    require_psycopg_runtime()
+
     with conn.cursor(row_factory=dict_row) as cur:
         # EN: We read the exact live frontier column sets before doing any bridge work.
         # TR: Herhangi bir bridge işi yapmadan önce exact canlı frontier sütun
@@ -721,75 +816,107 @@ def bridge_ready_seed_rows_to_frontier(
         # TR: ready_seed_rows hâlâ unenqueued durumda olan seed satırlarının sıralı kuyruğudur.
         ready_seed_rows = select_ready_seed_rows(cur, limit=limit)
 
-        # EN: Each seed row is bridged one by one so failures remain narrow and obvious.
-        # TR: Hatalar dar ve açık kalsın diye her seed satırı tek tek bridge edilir.
+        # EN: Each seed row gets its own SAVEPOINT. This means one bad seed row does
+        # EN: not abort the entire bridge run.
+        # TR: Her seed satırı kendi SAVEPOINT’ini alır. Böylece tek bir problemli
+        # TR: seed satırı tüm bridge çalışmasını iptal etmez.
         for seed_row in ready_seed_rows:
-            # EN: parsed_url is the frontier-ready URL decomposition for this seed.
-            # TR: parsed_url bu seed için frontier-ready URL ayrıştırmasıdır.
-            parsed_url = parse_canonical_url_text(str(seed_row["canonical_url"]))
+            cur.execute("savepoint seed_bridge_row_sp")
+            try:
+                # EN: parsed_url is the frontier-ready URL decomposition for this seed.
+                # TR: parsed_url bu seed için frontier-ready URL ayrıştırmasıdır.
+                parsed_url = parse_canonical_url_text(str(seed_row["canonical_url"]))
 
-            # EN: host row is ensured first because frontier.url depends on host_id.
-            # TR: frontier.url host_id’ye bağlı olduğu için önce host satırı garanti edilir.
-            host_id, host_created = ensure_frontier_host_for_parsed_url(
-                cur,
-                frontier_host_columns,
-                parsed_url,
-            )
+                # EN: host row is ensured first because frontier.url depends on host_id.
+                # TR: frontier.url host_id’ye bağlı olduğu için önce host satırı garanti edilir.
+                host_id, host_created = ensure_frontier_host_for_parsed_url(
+                    cur,
+                    frontier_host_columns,
+                    parsed_url,
+                )
 
-            # EN: url row is then ensured against the exact frontier.url contract.
-            # TR: Ardından exact frontier.url sözleşmesine karşı url satırı garanti edilir.
-            url_id, url_created = ensure_frontier_url_for_seed_row(
-                cur,
-                frontier_url_columns,
-                seed_row,
-                parsed_url,
-                host_id,
-            )
+                # EN: url row is then ensured against the exact frontier.url contract.
+                # TR: Ardından exact frontier.url sözleşmesine karşı url satırı garanti edilir.
+                url_id, url_created = ensure_frontier_url_for_seed_row(
+                    cur,
+                    frontier_url_columns,
+                    seed_row,
+                    parsed_url,
+                    host_id,
+                )
 
-            # EN: We build one explicit result note before marking the seed row.
-            # TR: Seed satırını işaretlemeden önce tek bir açık sonuç notu kuruyoruz.
-            if url_created:
-                note = "seed_bridged_to_frontier_url_created_v1"
-            else:
-                note = "seed_bridged_to_frontier_url_already_present_v1"
+                # EN: We build one explicit result note before marking the seed row.
+                # TR: Seed satırını işaretlemeden önce tek bir açık sonuç notu kuruyoruz.
+                if url_created:
+                    note = "seed_bridged_to_frontier_url_created_v1"
+                else:
+                    note = "seed_bridged_to_frontier_url_already_present_v1"
 
-            # EN: Seed row is marked as enqueued so it will not be bridged again blindly.
-            # TR: Seed satırı körlemesine tekrar bridge edilmesin diye enqueued olarak işaretlenir.
-            seed_marked_enqueued = mark_seed_row_enqueued(
-                cur,
-                seed_id=seed_row["seed_id"],
-                note=note,
-            )
+                # EN: Seed row is marked as enqueued so it will not be bridged again blindly.
+                # TR: Seed satırı körlemesine tekrar bridge edilmesin diye enqueued olarak işaretlenir.
+                seed_marked_enqueued = mark_seed_row_enqueued(
+                    cur,
+                    seed_id=seed_row["seed_id"],
+                    note=note,
+                )
 
-            # EN: We update the compact counters from the row outcome.
-            # TR: Kompakt sayaçları satır sonucundan güncelliyoruz.
-            if host_created:
-                frontier_host_created_count += 1
-            if url_created:
-                frontier_url_created_count += 1
-            else:
-                frontier_url_existing_count += 1
-            if seed_marked_enqueued:
-                seed_rows_marked_enqueued_count += 1
+                # EN: We update the compact counters from the row outcome.
+                # TR: Kompakt sayaçları satır sonucundan güncelliyoruz.
+                if host_created:
+                    frontier_host_created_count += 1
+                if url_created:
+                    frontier_url_created_count += 1
+                else:
+                    frontier_url_existing_count += 1
+                if seed_marked_enqueued:
+                    seed_rows_marked_enqueued_count += 1
 
-            # EN: Row-level result is appended in text-safe form for JSON printing later.
-            # TR: Satır-düzeyi sonuç daha sonra JSON basımı için metin-güvenli biçimde eklenir.
-            row_result = SeedFrontierBridgeRowResult(
-                source_code=str(seed_row["source_code"]),
-                seed_id=str(seed_row["seed_id"]),
-                canonical_url=str(seed_row["canonical_url"]),
-                host_id=host_id,
-                url_id=url_id,
-                host_created=host_created,
-                url_created=url_created,
-                seed_marked_enqueued=seed_marked_enqueued,
-                note=note,
-            )
-            result_rows.append(asdict(row_result))
+                row_result = SeedFrontierBridgeRowResult(
+                    source_code=str(seed_row["source_code"]),
+                    seed_id=str(seed_row["seed_id"]),
+                    canonical_url=str(seed_row["canonical_url"]),
+                    host_id=host_id,
+                    url_id=url_id,
+                    host_created=host_created,
+                    url_created=url_created,
+                    seed_marked_enqueued=seed_marked_enqueued,
+                    note=note,
+                )
+                result_rows.append(asdict(row_result))
+
+                # EN: Success path releases the row-local savepoint cleanly.
+                # TR: Başarı yolu satır-yerel savepoint’i temiz biçimde serbest bırakır.
+                cur.execute("release savepoint seed_bridge_row_sp")
+
+            except Exception as exc:
+                # EN: Failure path rolls back only the current row’s work, not the full run.
+                # TR: Hata yolu yalnızca mevcut satırın işini geri alır; tüm çalışmayı değil.
+                cur.execute("rollback to savepoint seed_bridge_row_sp")
+                cur.execute("release savepoint seed_bridge_row_sp")
+
+                error_note = (
+                    "seed_bridge_error_v1:"
+                    f"{exc.__class__.__name__}:"
+                    f"{str(exc)}"
+                )
+
+                row_result = SeedFrontierBridgeRowResult(
+                    source_code=str(seed_row.get("source_code", "")),
+                    seed_id=str(seed_row.get("seed_id", "")),
+                    canonical_url=str(seed_row.get("canonical_url", "")),
+                    host_id=0,
+                    url_id=0,
+                    host_created=False,
+                    url_created=False,
+                    seed_marked_enqueued=False,
+                    note=error_note,
+                )
+                result_rows.append(asdict(row_result))
+                continue
 
     return SeedFrontierBridgeResult(
         env_file="db_connection_supplied_by_caller",
-        scanned_seed_count=len(result_rows),
+        scanned_seed_count=len(ready_seed_rows),
         frontier_host_created_count=frontier_host_created_count,
         frontier_url_created_count=frontier_url_created_count,
         frontier_url_existing_count=frontier_url_existing_count,
@@ -837,40 +964,61 @@ def main() -> int:
     # TR: env_file operatör tarafından seçilen açık runtime env yüzeyidir.
     env_file = Path(args.env_file)
 
-    # EN: dsn is resolved from the env file so the CLI stays aligned with live runtime config.
-    # TR: CLI canlı runtime konfigürasyonu ile hizalı kalsın diye dsn env dosyasından çözülür.
-    dsn = crawler_dsn_from_env_file(env_file)
+    try:
+        # EN: We require psycopg before any DB-backed execution path begins, so even
+        # EN: dependency failures become structured JSON receipts.
+        # TR: Herhangi bir DB-destekli çalışma yolu başlamadan önce psycopg isteriz;
+        # TR: böylece bağımlılık hataları bile yapılı JSON makbuzuna dönüşür.
+        require_psycopg_runtime()
 
-    # EN: We open one explicit psycopg connection with dict_row results for readability.
-    # TR: Okunabilirlik için dict_row sonuçlarıyla tek bir açık psycopg bağlantısı açıyoruz.
-    with psycopg.connect(dsn, row_factory=dict_row) as conn:
-        # EN: We run the core bridge function inside the transaction owned by this connection.
-        # TR: Çekirdek bridge fonksiyonunu bu bağlantının sahip olduğu transaction içinde çalıştırıyoruz.
-        result = bridge_ready_seed_rows_to_frontier(
-            conn,
-            limit=args.limit,
-        )
+        # EN: dsn is resolved from the env file so the CLI stays aligned with live runtime config.
+        # TR: CLI canlı runtime konfigürasyonu ile hizalı kalsın diye dsn env dosyasından çözülür.
+        dsn = crawler_dsn_from_env_file(env_file)
 
-        # EN: Receipt dict is materialized before final transaction decision.
-        # TR: Makbuz dict’i nihai transaction kararından önce somutlaştırılır.
-        payload = bridge_result_to_dict(result)
-        payload["env_file"] = str(env_file)
-        payload["observed_at"] = utc_now_iso()
+        # EN: We open one explicit psycopg connection with dict_row results for readability.
+        # TR: Okunabilirlik için dict_row sonuçlarıyla tek bir açık psycopg bağlantısı açıyoruz.
+        with psycopg.connect(dsn, row_factory=dict_row) as conn:
+            result = bridge_ready_seed_rows_to_frontier(
+                conn,
+                limit=args.limit,
+            )
 
-        # EN: Dry-run intentionally rolls back so operators can inspect the outcome safely.
-        # TR: Dry-run, operatörler sonucu güvenli biçimde inceleyebilsin diye bilinçli
-        # TR: olarak rollback yapar.
-        if args.dry_run:
-            conn.rollback()
-            payload["committed"] = False
-        else:
-            conn.commit()
-            payload["committed"] = True
+            payload = bridge_result_to_dict(result)
+            payload["env_file"] = str(env_file)
+            payload["observed_at"] = utc_now_iso()
 
-    # EN: Final JSON receipt is printed to stdout for outer audit wrappers.
-    # TR: Nihai JSON makbuzu dış audit wrapper’ları için stdout’a basılır.
-    print(json.dumps(payload, ensure_ascii=False, indent=2))
-    return 0
+            if args.dry_run:
+                conn.rollback()
+                payload["committed"] = False
+            else:
+                conn.commit()
+                payload["committed"] = True
+
+        # EN: Final JSON receipt is printed to stdout for outer audit wrappers.
+        # TR: Nihai JSON makbuzu dış audit wrapper’ları için stdout’a basılır.
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        return 0
+
+    except Exception as exc:
+        # EN: Even unexpected failures are rendered as JSON receipts instead of raw traceback-only crashes.
+        # TR: Beklenmedik hatalar bile ham traceback yerine JSON makbuzu olarak basılır.
+        error_payload = {
+            "env_file": str(env_file),
+            "observed_at": utc_now_iso(),
+            "committed": False,
+            "scanned_seed_count": 0,
+            "frontier_host_created_count": 0,
+            "frontier_url_created_count": 0,
+            "frontier_url_existing_count": 0,
+            "seed_rows_marked_enqueued_count": 0,
+            "row_results": [],
+            "error_class": exc.__class__.__name__,
+            "error_message": str(exc),
+            "dry_run": bool(args.dry_run),
+            "limit": args.limit,
+        }
+        print(json.dumps(error_payload, ensure_ascii=False, indent=2))
+        return 1
 
 
 # EN: This export list keeps the public module surface explicit.
@@ -883,6 +1031,7 @@ __all__ = [
     "utc_now_iso",
     "parse_simple_env_file",
     "crawler_dsn_from_env_file",
+    "require_psycopg_runtime",
     "build_authority_key",
     "build_registrable_domain",
     "parse_canonical_url_text",
