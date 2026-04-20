@@ -130,6 +130,47 @@ def renew_url_lease(
 
 
 
+# EN: This helper converts a frontier SQL wrapper no-row condition into an
+# EN: operator-visible degraded payload so upper runtime layers can keep moving
+# EN: with honest unresolved state instead of crashing again.
+# TR: Bu yardımcı frontier SQL wrapper no-row durumunu operatörün görebileceği
+# TR: degrade payload’a çevirir; böylece üst runtime katmanları yeniden çökmeden
+# TR: dürüst çözülmemiş durumla ilerleyebilir.
+def build_frontier_no_row_payload(
+    *,
+    action: str,
+    url_id: int,
+    lease_token: str | None = None,
+    http_status: int | None = None,
+    content_type: str | None = None,
+    body_bytes: int | None = None,
+    etag: str | None = None,
+    last_modified: str | None = None,
+    error_class: str | None = None,
+    error_message: str | None = None,
+    retry_delay: str | None = None,
+) -> dict[str, object]:
+    # EN: We keep one normalized degraded payload shape across frontier wrappers.
+    # TR: Frontier wrapper'ları arasında tek ve normalize bir degrade payload
+    # TR: şekli tutuyoruz.
+    return {
+        "url_id": url_id,
+        "lease_token": lease_token,
+        "http_status": http_status,
+        "content_type": content_type,
+        "body_bytes": body_bytes,
+        "etag": etag,
+        "last_modified": last_modified,
+        "error_class": error_class,
+        "error_message": error_message,
+        "retry_delay": retry_delay,
+        "frontier_action": action,
+        "frontier_degraded": True,
+        "frontier_degraded_reason": f"{action}_returned_no_row",
+        "frontier_completed": False,
+    }
+
+
 def finish_fetch_success(
     conn: psycopg.Connection,
     *,
@@ -181,7 +222,18 @@ def finish_fetch_success(
     # EN: A missing row would mean the finalize path did not behave as expected.
     # TR: Eksik bir satır finalize yolunun beklendiği gibi davranmadığı anlamına gelir.
     if row is None:
-        raise RuntimeError("frontier.finish_fetch_success(...) returned no row")
+        return build_frontier_no_row_payload(
+            action="frontier_finish_fetch_success",
+            url_id=url_id,
+            lease_token=lease_token,
+            http_status=http_status,
+            content_type=content_type,
+            body_bytes=body_bytes,
+            etag=etag,
+            last_modified=last_modified,
+            error_class="success_finalize_no_row",
+            error_message="frontier.finish_fetch_success(...) returned no row",
+        )
 
     # EN: We return the structured finalize result.
     # TR: Yapılı finalize sonucunu döndürüyoruz.
@@ -236,7 +288,12 @@ def release_parse_pending_to_queued(
     # TR: Çıktı yoksa bu yapısal hatadır; çünkü kanonik crawler-core release
     # TR: fonksiyonu mevcut persist edilmiş durumu her zaman raporlamalıdır.
     if row is None:
-        raise RuntimeError("frontier.release_parse_pending_to_queued(...) returned no row")
+        return build_frontier_no_row_payload(
+            action="frontier_release_parse_pending_to_queued",
+            url_id=url_id,
+            error_class="release_parse_pending_no_row",
+            error_message="frontier.release_parse_pending_to_queued(...) returned no row",
+        )
 
     # EN: We return the raw mapping because it is already beginner-readable.
     # TR: Ham mapping'i döndürüyoruz; çünkü zaten beginner-okunur yapıdadır.
@@ -290,7 +347,15 @@ def finish_fetch_retryable_error(
     # EN: A missing row would mean the finalize path did not behave as expected.
     # TR: Eksik bir satır finalize yolunun beklendiği gibi davranmadığı anlamına gelir.
     if row is None:
-        raise RuntimeError("frontier.finish_fetch_retryable_error(...) returned no row")
+        return build_frontier_no_row_payload(
+            action="frontier_finish_fetch_retryable_error",
+            url_id=url_id,
+            lease_token=lease_token,
+            http_status=http_status,
+            error_class=f"{error_class}_finalize_no_row",
+            error_message="frontier.finish_fetch_retryable_error(...) returned no row",
+            retry_delay=retry_delay,
+        )
 
     # EN: We return the structured finalize result.
     # TR: Yapılı finalize sonucunu döndürüyoruz.
@@ -343,7 +408,14 @@ def finish_fetch_permanent_error(
     # EN: A missing row would mean the finalize path did not behave as expected.
     # TR: Eksik bir satır finalize yolunun beklendiği gibi davranmadığı anlamına gelir.
     if row is None:
-        raise RuntimeError("frontier.finish_fetch_permanent_error(...) returned no row")
+        return build_frontier_no_row_payload(
+            action="frontier_finish_fetch_permanent_error",
+            url_id=url_id,
+            lease_token=lease_token,
+            http_status=http_status,
+            error_class=f"{error_class}_finalize_no_row",
+            error_message="frontier.finish_fetch_permanent_error(...) returned no row",
+        )
 
     # EN: We return the structured finalize result.
     # TR: Yapılı finalize sonucunu döndürüyoruz.
