@@ -21,6 +21,53 @@ from psycopg.rows import dict_row
 
 
 
+# EN: This helper converts a preranking/workflow SQL wrapper no-row condition into
+# EN: an operator-visible degraded payload so upper parse runtime layers can keep
+# EN: moving with honest unresolved state instead of crashing again.
+# TR: Bu yardımcı preranking/workflow SQL wrapper no-row durumunu operatörün
+# TR: görebileceği degrade payload'a çevirir; böylece üst parse runtime katmanları
+# TR: yeniden çökmeden dürüst çözülmemiş durumla ilerleyebilir.
+def build_preranking_no_row_payload(
+    *,
+    action: str,
+    url_id: int | None = None,
+    input_lang_code: str | None = None,
+    taxonomy_package_version: str | None = None,
+    top_candidate_count: int | None = None,
+    top_score: Any = None,
+    linked_snapshot_id: int | None = None,
+    workflow_state: str | None = None,
+    state_reason: str | None = None,
+    persisted_candidate_count: int | None = None,
+    error_class: str,
+    error_message: str,
+) -> dict[str, Any]:
+    # EN: We keep one normalized degraded payload shape across preranking/workflow
+    # EN: wrappers so caller-visible results stay explicit and consistent.
+    # TR: Preranking/workflow wrapper'ları arasında tek ve normalize bir degrade
+    # TR: payload şekli tutuyoruz; böylece çağıranın gördüğü sonuç açık ve tutarlı kalır.
+    return {
+        "snapshot_id": None,
+        "workflow_status_id": None,
+        "url_id": url_id,
+        "input_lang_code": input_lang_code,
+        "taxonomy_package_version": taxonomy_package_version,
+        "top_candidate_count": top_candidate_count,
+        "top_score": top_score,
+        "linked_snapshot_id": linked_snapshot_id,
+        "workflow_state": workflow_state,
+        "state_reason": state_reason,
+        "persisted_candidate_count": persisted_candidate_count,
+        "preranking_action": action,
+        "preranking_degraded": True,
+        "preranking_degraded_reason": f"{action}_returned_no_row",
+        "preranking_completed": False,
+        "error_class": error_class,
+        "error_message": error_message,
+    }
+
+
+
 # EN: This helper calls parse.persist_taxonomy_preranking_payload(...) so Python
 # EN: can persist one minimal parse payload into the parse schema.
 # TR: Bu yardımcı parse.persist_taxonomy_preranking_payload(...) çağrısını yapar;
@@ -81,12 +128,20 @@ def persist_taxonomy_preranking_payload(
         # TR: Wrapper fonksiyondan dönen tam bir satırı çekiyoruz.
         row = cur.fetchone()
 
-    # EN: Returning no row is a structural failure because persistence should
-    # EN: always report what it wrote.
-    # TR: Hiç satır dönmemesi yapısal hatadır; çünkü persistence ne yazdığını
-    # TR: her zaman raporlamalıdır.
+    # EN: A no-row response must degrade into an operator-visible payload instead
+    # EN: of aborting the parent parse runtime again.
+    # TR: No-row yanıtı parent parse runtime'ı yeniden abort etmek yerine
+    # TR: operatörün görebileceği degrade payload'a dönmelidir.
     if row is None:
-        raise RuntimeError("parse.persist_taxonomy_preranking_payload(...) returned no row")
+        return build_preranking_no_row_payload(
+            action="parse_persist_taxonomy_preranking_payload",
+            url_id=payload.get("url_id"),
+            input_lang_code=payload.get("input_lang_code"),
+            taxonomy_package_version=(payload.get("metadata") or {}).get("taxonomy_package_version"),
+            persisted_candidate_count=0,
+            error_class="persist_taxonomy_preranking_no_row",
+            error_message="parse.persist_taxonomy_preranking_payload(...) returned no row",
+        )
 
     # EN: We return the structured row to the caller.
     # TR: Yapılı satırı çağırana döndürüyoruz.
@@ -159,10 +214,21 @@ def persist_page_preranking_snapshot(
         # TR: Tek çağrı tek bir kalıcı snapshot satırı ürettiği için tam bir satır çekiyoruz.
         row = cur.fetchone()
 
-    # EN: Missing output means the canonical SQL function behaved unexpectedly.
-    # TR: Çıktı yoksa kanonik SQL fonksiyonu beklenmedik davranmıştır.
+    # EN: A no-row response must degrade into an operator-visible payload instead
+    # EN: of aborting the parent parse runtime again.
+    # TR: No-row yanıtı parent parse runtime'ı yeniden abort etmek yerine
+    # TR: operatörün görebileceği degrade payload'a dönmelidir.
     if row is None:
-        raise RuntimeError("parse.persist_page_preranking_snapshot(...) returned no row")
+        return build_preranking_no_row_payload(
+            action="parse_persist_page_preranking_snapshot",
+            url_id=url_id,
+            input_lang_code=input_lang_code,
+            taxonomy_package_version=taxonomy_package_version,
+            top_candidate_count=top_candidate_count,
+            top_score=top_score,
+            error_class="preranking_snapshot_no_row",
+            error_message="parse.persist_page_preranking_snapshot(...) returned no row",
+        )
 
     # EN: We return the raw mapping because it is already beginner-readable.
     # TR: Ham mapping'i döndürüyoruz; çünkü zaten beginner-okunur yapıdadır.
@@ -230,12 +296,20 @@ def upsert_page_workflow_status(
         # TR: Dönen tam bir satırı çekiyoruz.
         row = cur.fetchone()
 
-    # EN: Returning no row is a structural failure because workflow upsert should
-    # EN: always report the current persisted state.
-    # TR: Hiç satır dönmemesi yapısal hatadır; çünkü workflow upsert mevcut
-    # TR: persist edilmiş durumu her zaman raporlamalıdır.
+    # EN: A no-row response must degrade into an operator-visible payload instead
+    # EN: of aborting the parent parse runtime again.
+    # TR: No-row yanıtı parent parse runtime'ı yeniden abort etmek yerine
+    # TR: operatörün görebileceği degrade payload'a dönmelidir.
     if row is None:
-        raise RuntimeError("parse.upsert_page_workflow_status(...) returned no row")
+        return build_preranking_no_row_payload(
+            action="parse_upsert_page_workflow_status",
+            url_id=url_id,
+            linked_snapshot_id=linked_snapshot_id,
+            workflow_state=workflow_state,
+            state_reason=state_reason,
+            error_class="workflow_status_no_row",
+            error_message="parse.upsert_page_workflow_status(...) returned no row",
+        )
 
     # EN: We return the structured row to the caller.
     # TR: Yapılı satırı çağırana döndürüyoruz.

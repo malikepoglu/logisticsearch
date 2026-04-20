@@ -960,6 +960,13 @@ def apply_minimal_parse_entry(
         payload=payload,
     )
 
+    # EN: We normalize persisted-candidate count early so later metadata building
+    # EN: stays safe even when the DB wrapper degraded into a no-row payload.
+    # TR: Persist edilmiş candidate sayısını erken normalize ediyoruz; böylece DB
+    # TR: wrapper no-row degrade payload'ına düşse bile sonraki metadata kurulumları güvenli kalır.
+    persisted_candidate_count = int(persist_result.get("persisted_candidate_count", 0) or 0)
+    persist_result_degraded = bool(persist_result.get("preranking_degraded"))
+
     # EN: We now create the real preranking snapshot row through the dedicated DB
     # EN: wrapper that was already present in SQL but not yet bridged in Python.
     # TR: Artık gerçek preranking snapshot satırını, SQL tarafında zaten var olup
@@ -1000,7 +1007,8 @@ def apply_minimal_parse_entry(
             "taxonomy_candidate_input_count": len(raw_taxonomy_candidates),
             "taxonomy_candidate_rejected_count": len(rejected_taxonomy_candidates),
             "taxonomy_candidate_rejected_sample": rejected_taxonomy_candidates[:10],
-            "persisted_candidate_count": persist_result["persisted_candidate_count"],
+            "persisted_candidate_count": persisted_candidate_count,
+            "persist_result_degraded": persist_result_degraded,
             "taxonomy_bridge": "repo_helper_v1",
         },
         source_run_id=source_run_id,
@@ -1008,11 +1016,21 @@ def apply_minimal_parse_entry(
         review_status=effective_workflow_state,
     )
 
-    # EN: The workflow row must now link to the real preranking snapshot row,
-    # EN: not to the evidence snapshot placeholder.
-    # TR: Workflow satırı artık evidence snapshot placeholder'ına değil,
-    # TR: gerçek preranking snapshot satırına bağlanmalıdır.
-    linked_snapshot_id = preranking_snapshot_result["snapshot_id"]
+    # EN: The workflow row should link to the real preranking snapshot row when
+    # EN: that row exists. If snapshot persistence degraded, we must fall back to a
+    # EN: manual-review state instead of crashing on a missing snapshot_id.
+    # TR: Workflow satırı gerçek preranking snapshot satırına yalnızca o satır
+    # TR: gerçekten varsa bağlanmalıdır. Snapshot persistence degrade olduysa eksik
+    # TR: snapshot_id yüzünden çökmek yerine manual-review durumuna düşmeliyiz.
+    preranking_snapshot_degraded = bool(preranking_snapshot_result.get("preranking_degraded"))
+    linked_snapshot_id = preranking_snapshot_result.get("snapshot_id")
+
+    if linked_snapshot_id is None:
+        effective_workflow_state = "review_hold"
+        if preranking_snapshot_degraded:
+            effective_workflow_state_reason = "preranking_snapshot_no_row_manual_review_required"
+        else:
+            effective_workflow_state_reason = "preranking_snapshot_missing_manual_review_required"
 
     # EN: We write workflow state through the canonical DB helper and use the real
     # EN: preranking snapshot id.
@@ -1036,7 +1054,9 @@ def apply_minimal_parse_entry(
             "taxonomy_candidate_input_count": len(raw_taxonomy_candidates),
             "taxonomy_candidate_rejected_count": len(rejected_taxonomy_candidates),
             "taxonomy_candidate_rejected_sample": rejected_taxonomy_candidates[:10],
-            "persisted_candidate_count": persist_result["persisted_candidate_count"],
+            "persisted_candidate_count": persisted_candidate_count,
+            "persist_result_degraded": persist_result_degraded,
+            "preranking_snapshot_degraded": preranking_snapshot_degraded,
         },
     )
 
