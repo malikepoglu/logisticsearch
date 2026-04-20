@@ -500,44 +500,90 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 error_message=None,
             )
 
-            finalize_result = finish_fetch_success(
-                conn,
-                url_id=fetched_page.url_id,
-                lease_token=str(get_claimed_url_value(claimed_url, "lease_token")),
-                http_status=fetched_page.http_status,
-                content_type=fetched_page.content_type,
-                body_bytes=fetched_page.body_bytes,
-                etag=fetched_page.etag,
-                last_modified=fetched_page.last_modified,
-            )
+            # EN: Success-side frontier functions may still return no row on some
+            # EN: drift paths. We degrade those paths explicitly so already-written
+            # EN: durable evidence can still commit honestly instead of crashing.
+            # TR: Başarı-tarafı frontier fonksiyonları bazı drift yollarında hâlâ
+            # TR: satır döndürmeyebilir. Bu yolları açıkça degrade ediyoruz; böylece
+            # TR: zaten yazılmış kalıcı kanıt dürüst biçimde commit olabilir.
+            try:
+                success_finalize_result = finish_fetch_success(
+                    conn,
+                    url_id=fetched_page.url_id,
+                    lease_token=str(get_claimed_url_value(claimed_url, "lease_token")),
+                    http_status=fetched_page.http_status,
+                    content_type=fetched_page.content_type,
+                    body_bytes=fetched_page.body_bytes,
+                    etag=fetched_page.etag,
+                    last_modified=fetched_page.last_modified,
+                )
 
-            # EN: Success finalization intentionally lands on transient parse_pending
-            # EN: first. After optional parse-side durable work has completed or been
-            # EN: deliberately skipped, we release that transient row back to queued.
-            # TR: Success finalization bilinçli olarak önce geçici parse_pending
-            # TR: durumuna iner. Opsiyonel parse-tarafı kalıcı iş tamamlandıktan ya
-            # TR: da bilinçli olarak atlandıktan sonra bu geçici satırı queued
-            # TR: durumuna bırakıyoruz.
-            release_result = release_parse_pending_to_queued(
-                conn=conn,
-                url_id=int(get_claimed_url_value(claimed_url, "url_id")),
-            )
+                # EN: Success finalization intentionally lands on transient parse_pending
+                # EN: first. After optional parse-side durable work has completed or been
+                # EN: deliberately skipped, we release that transient row back to queued.
+                # TR: Success finalization bilinçli olarak önce geçici parse_pending
+                # TR: durumuna iner. Opsiyonel parse-tarafı kalıcı iş tamamlandıktan ya
+                # TR: da bilinçli olarak atlandıktan sonra bu geçici satırı queued
+                # TR: durumuna bırakıyoruz.
+                release_result = release_parse_pending_to_queued(
+                    conn=conn,
+                    url_id=int(get_claimed_url_value(claimed_url, "url_id")),
+                )
 
-            # EN: We merge release evidence into the final success payload so the
-            # EN: returned JSON shows both success finalize and queue release truth.
-            # TR: Dönen JSON hem başarı finalization’ını hem de queue release
-            # TR: doğrusunu göstersin diye release kanıtını nihai payload’a
-            # TR: birleştiriyoruz.
+                success_finalize_payload = {
+                    **dict(success_finalize_result),
+                    "frontier_release": dict(release_result),
+                }
+
+            except RuntimeError as exc:
+                exc_text = str(exc)
+
+                if "frontier.finish_fetch_success(...) returned no row" in exc_text:
+                    success_finalize_payload = {
+                        "url_id": fetched_page.url_id,
+                        "lease_token": str(get_claimed_url_value(claimed_url, "lease_token")),
+                        "http_status": fetched_page.http_status,
+                        "content_type": fetched_page.content_type,
+                        "body_bytes": fetched_page.body_bytes,
+                        "etag": fetched_page.etag,
+                        "last_modified": fetched_page.last_modified,
+                        "error_class": "success_finalize_no_row",
+                        "error_message": f"success finalize no-row after durable fetch: {exc}",
+                        "finalize_degraded": True,
+                        "finalize_degraded_reason": "frontier_finish_fetch_success_returned_no_row",
+                        "finalize_completed": False,
+                    }
+
+                elif "frontier.release_parse_pending_to_queued(...) returned no row" in exc_text:
+                    success_finalize_payload = {
+                        **dict(success_finalize_result),
+                        "frontier_release": {
+                            "url_id": int(get_claimed_url_value(claimed_url, "url_id")),
+                            "release_degraded": True,
+                            "release_degraded_reason": "frontier_release_parse_pending_to_queued_returned_no_row",
+                            "release_completed": False,
+                            "error_message": f"success release no-row after durable fetch: {exc}",
+                        },
+                    }
+
+                else:
+                    raise
+
+            # EN: We merge fetch-attempt evidence into the final success payload no
+            # EN: matter whether the frontier success-side path completed or degraded.
+            # TR: Frontier başarı-tarafı yol tamamlanmış ya da degrade olmuş olsun,
+            # TR: fetch-attempt kanıtını her durumda nihai başarı payload’ına birleştiriyoruz.
             finalize_result = {
-                **dict(finalize_result),
+                **success_finalize_payload,
                 "fetch_attempt_log": dict(fetch_attempt_log),
-                "frontier_release": dict(release_result),
             }
 
             # EN: We commit once so claim, raw evidence, optional parse evidence,
-            # EN: success finalize, and queue release become durable together.
-            # TR: Claim, ham kanıt, opsiyonel parse kanıtı, success finalize ve
-            # TR: queue release birlikte kalıcı olsun diye bir kez commit ediyoruz.
+            # EN: success-side state, and operator-visible degradation truth become
+            # EN: durable together.
+            # TR: Claim, ham kanıt, opsiyonel parse kanıtı, başarı-tarafı durum ve
+            # TR: operatör-görünür degrade doğrusu birlikte kalıcı olsun diye bir kez
+            # TR: commit ediyoruz.
             commit(conn)
 
             return ClaimProbeResult(

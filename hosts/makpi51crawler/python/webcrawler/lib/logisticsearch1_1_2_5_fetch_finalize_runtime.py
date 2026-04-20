@@ -107,12 +107,34 @@ def log_fetch_attempt_terminal_from_worker(
             }
         )
 
-    # EN: We delegate the durable insert to the canonical DB gateway helper.
-    # TR: Kalıcı insert işlemini kanonik DB gateway yardımcısına devrediyoruz.
-    return log_fetch_attempt_terminal(
-        conn,
-        **payload,
-    )
+    # EN: The canonical fetch-attempt logging surface may still return no row on
+    # EN: some drift paths. That must degrade cleanly instead of crashing the worker.
+    # TR: Kanonik fetch-attempt logging yüzeyi bazı drift yollarında hâlâ satır
+    # TR: döndürmeyebilir. Bu durum worker’ı çökertmek yerine temizce degrade edilmelidir.
+    try:
+        return log_fetch_attempt_terminal(
+            conn,
+            **payload,
+        )
+    except RuntimeError as exc:
+        if "http_fetch.log_fetch_attempt_terminal(...) returned no row" not in str(exc):
+            raise
+
+        degraded_error_message = payload.get("error_message")
+        if degraded_error_message is None:
+            degraded_error_message = f"fetch_attempt_no_row: {exc}"
+        else:
+            degraded_error_message = f"{degraded_error_message} | fetch_attempt_no_row: {exc}"
+
+        return build_fetch_attempt_no_row_payload(
+            url_id=payload["url_id"],
+            host_id=payload["host_id"],
+            worker_id=payload["worker_id"],
+            request_url=payload["request_url"],
+            outcome=payload["outcome"],
+            error_class=payload.get("error_class"),
+            error_message=degraded_error_message,
+        )
 
 
 # EN: This helper classifies HTTP status failures into the minimal retryable vs
@@ -162,6 +184,41 @@ def build_finalize_no_row_payload(
         "finalize_degraded": True,
         "finalize_degraded_reason": degraded_reason,
         "finalize_completed": False,
+    }
+
+
+# EN: This helper converts a fetch-attempt no-row failure into an operator-visible
+# EN: degraded payload so runtime call sites can keep moving with honest unresolved
+# EN: state instead of crashing again.
+# TR: Bu yardımcı fetch-attempt no-row hatasını operatörün görebileceği degrade
+# TR: payload’a çevirir; böylece runtime çağrı noktaları yeniden çökmeden dürüst
+# TR: çözülmemiş durumla ilerleyebilir.
+def build_fetch_attempt_no_row_payload(
+    *,
+    url_id: int | None,
+    host_id: int,
+    worker_id: str,
+    request_url: str,
+    outcome: str,
+    error_class: str | None,
+    error_message: str | None,
+) -> dict[str, object]:
+    # EN: We return one normalized degraded payload shape for fetch-attempt logging
+    # EN: drift so caller-visible results stay explicit and consistent.
+    # TR: Fetch-attempt logging drift’i için normalize tek bir degrade payload
+    # TR: şekli döndürüyoruz; böylece çağıranın gördüğü sonuç açık ve tutarlı kalır.
+    return {
+        "attempt_id": None,
+        "url_id": url_id,
+        "host_id": host_id,
+        "worker_id": worker_id,
+        "request_url": request_url,
+        "outcome": outcome,
+        "error_class": error_class,
+        "error_message": error_message,
+        "fetch_attempt_degraded": True,
+        "fetch_attempt_degraded_reason": "http_fetch_log_fetch_attempt_terminal_returned_no_row",
+        "fetch_attempt_persisted": False,
     }
 
 
