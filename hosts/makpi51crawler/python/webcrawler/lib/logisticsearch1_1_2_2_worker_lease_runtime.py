@@ -22,6 +22,45 @@ from .logisticsearch1_1_1_state_db_gateway import (
 )
 
 
+# EN: This helper converts lease-phase renewal drift into an operator-visible
+# EN: degraded payload so the parent worker can stop cleanly instead of crashing.
+# TR: Bu yardımcı lease-phase renewal drift'ini operatörün görebileceği degrade
+# TR: payload'a çevirir; böylece parent worker çökmeden temiz biçimde durabilir.
+def build_lease_phase_degraded_payload(
+    *,
+    phase_label: str,
+    claimed_url: object,
+    config: object,
+    renew_result: dict[str, object] | None,
+    error_class: str,
+    error_message: str,
+    degraded_reason: str,
+) -> dict[str, object]:
+    # EN: We keep one normalized degraded payload shape across durable phase
+    # EN: boundaries so operator-visible lease truth stays explicit and consistent.
+    # TR: Operatörün gördüğü lease doğrusu açık ve tutarlı kalsın diye durable
+    # TR: phase sınırlarında tek ve normalize bir degrade payload şekli tutuyoruz.
+    return {
+        "url_id": int(get_claimed_url_value(claimed_url, "url_id")),
+        "lease_token": str(get_claimed_url_value(claimed_url, "lease_token")),
+        "worker_id": str(getattr(config, "worker_id")),
+        "extend_seconds": int(getattr(config, "lease_seconds")),
+        "phase_label": phase_label,
+        "renewed": None if renew_result is None else renew_result.get("renewed"),
+        "new_lease_expires_at": (
+            None if renew_result is None else renew_result.get("new_lease_expires_at")
+        ),
+        "gateway_lease_degraded_reason": (
+            None if renew_result is None else renew_result.get("lease_degraded_reason")
+        ),
+        "lease_degraded": True,
+        "lease_degraded_reason": degraded_reason,
+        "lease_completed": False,
+        "error_class": error_class,
+        "error_message": error_message,
+    }
+
+
 # EN: This helper renews the currently owned lease right before the worker enters
 # EN: a durable phase that may take non-trivial time.
 # TR: Bu yardımcı worker kayda değer süre alabilecek bir durable aşamaya girmeden
@@ -45,13 +84,19 @@ def renew_claimed_lease_before_durable_phase(
         extend_seconds=int(getattr(config, "lease_seconds")),
     )
 
-    # EN: Missing output means the worker no longer holds the lease the way the
-    # EN: current runtime expects.
-    # TR: Çıktı yoksa worker lease’i mevcut runtime’ın beklediği biçimde artık
-    # TR: tutmuyor demektir.
-    if renew_result is None:
-        raise RuntimeError(
-            f"renew_url_lease(...) returned no row before durable phase: {phase_label}"
+    # EN: Missing output or a gateway-level degraded payload means renewal truth
+    # EN: could not be confirmed for this durable phase boundary.
+    # TR: Çıktı eksikse veya gateway-seviyesi degrade payload geldiyse bu durable
+    # TR: phase sınırında renewal doğrusu teyit edilememiş demektir.
+    if renew_result is None or bool(renew_result.get("lease_degraded")):
+        return build_lease_phase_degraded_payload(
+            phase_label=phase_label,
+            claimed_url=claimed_url,
+            config=config,
+            renew_result=renew_result,
+            error_class="lease_renewal_no_row_before_durable_phase",
+            error_message=f"renew_url_lease(...) returned no row before durable phase: {phase_label}",
+            degraded_reason="renew_url_lease_returned_no_row_before_durable_phase",
         )
 
     # EN: The canonical SQL surface returns renewed=true on success, so we verify
@@ -59,8 +104,14 @@ def renew_claimed_lease_before_durable_phase(
     # TR: Kanonik SQL yüzeyi başarıda renewed=true döndürdüğü için başarıyı sessizce
     # TR: varsaymak yerine bu açık sinyali doğruluyoruz.
     if renew_result.get("renewed") is not True:
-        raise RuntimeError(
-            f"renew_url_lease(...) did not confirm renewal before durable phase: {phase_label}"
+        return build_lease_phase_degraded_payload(
+            phase_label=phase_label,
+            claimed_url=claimed_url,
+            config=config,
+            renew_result=renew_result,
+            error_class="lease_renewal_not_confirmed_before_durable_phase",
+            error_message=f"renew_url_lease(...) did not confirm renewal before durable phase: {phase_label}",
+            degraded_reason="renew_url_lease_not_confirmed_before_durable_phase",
         )
 
     # EN: We refresh the in-memory lease expiry view so later phases see the

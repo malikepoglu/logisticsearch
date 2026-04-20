@@ -82,6 +82,44 @@ def claim_next_url(
 
 
 
+# EN: This helper converts a lease-renewal SQL wrapper no-row condition into an
+# EN: operator-visible degraded payload so upper runtime layers can keep moving
+# EN: with honest unresolved lease state instead of crashing again.
+# TR: Bu yardımcı lease-renewal SQL wrapper no-row durumunu operatörün
+# TR: görebileceği degrade payload'a çevirir; böylece üst runtime katmanları
+# TR: yeniden çökmeden dürüst çözülmemiş lease durumu ile ilerleyebilir.
+def build_lease_no_row_payload(
+    *,
+    action: str,
+    url_id: int,
+    lease_token: str,
+    worker_id: str,
+    extend_seconds: int,
+    renewed: bool | None = None,
+    new_lease_expires_at: object | None = None,
+    error_class: str,
+    error_message: str,
+) -> dict[str, Any]:
+    # EN: We keep one normalized degraded payload shape across lease-renewal
+    # EN: wrappers so caller-visible results stay explicit and consistent.
+    # TR: Lease-renewal wrapper'ları arasında tek ve normalize bir degrade payload
+    # TR: şekli tutuyoruz; böylece çağıranın gördüğü sonuç açık ve tutarlı kalır.
+    return {
+        "url_id": url_id,
+        "lease_token": lease_token,
+        "worker_id": worker_id,
+        "extend_seconds": extend_seconds,
+        "renewed": renewed,
+        "new_lease_expires_at": new_lease_expires_at,
+        "lease_action": action,
+        "lease_degraded": True,
+        "lease_degraded_reason": f"{action}_returned_no_row",
+        "lease_completed": False,
+        "error_class": error_class,
+        "error_message": error_message,
+    }
+
+
 # EN: This function tries to renew an already-owned lease.
 # TR: Bu fonksiyon, halihazırda sahip olunan bir lease'i yenilemeyi dener.
 def renew_url_lease(
@@ -121,6 +159,21 @@ def renew_url_lease(
         # TR: Tek satır çekiyoruz; çünkü başarılı bir renewal, birden fazla değil,
         # TR: mevcut sahip olunan tek bir lease'i doğrulamalıdır.
         row = cur.fetchone()
+
+    # EN: A no-row response must degrade into an operator-visible payload instead
+    # EN: of crashing the worker-side lease path again.
+    # TR: No-row yanıtı worker-tarafı lease yolunu yeniden çökertmek yerine
+    # TR: operatörün görebileceği degrade payload'a dönmelidir.
+    if row is None:
+        return build_lease_no_row_payload(
+            action="frontier_renew_url_lease",
+            url_id=url_id,
+            lease_token=lease_token,
+            worker_id=worker_id,
+            extend_seconds=extend_seconds,
+            error_class="lease_renewal_no_row",
+            error_message="frontier.renew_url_lease(...) returned no row",
+        )
 
     # EN: We return the row directly for now because the renewal surface may grow
     # EN: before we lock its final Python representation.

@@ -420,12 +420,32 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
         # TR: Probe modu kalıcı olmayan mod olarak kalır; refresh ihtiyacını
         # TR: gözleyebilir ama yenilenmiş cache doğrusunu veritabanına yazmamalıdır.
         if (not config.probe_only) and refresh_decision.get("should_refresh"):
-            renew_claimed_lease_before_durable_phase(
+            lease_renewal_result = renew_claimed_lease_before_durable_phase(
                 conn,
                 claimed_url=claimed_url,
                 config=config,
                 phase_label="robots_refresh",
             )
+
+            # EN: A degraded lease renewal before robots refresh means we must not
+            # EN: continue into a durable robots write with unconfirmed lease truth.
+            # TR: Robots refresh öncesi degrade olmuş lease renewal, teyit edilmemiş
+            # TR: lease doğrusu ile kalıcı robots yazımına devam etmememiz gerektiği
+            # TR: anlamına gelir.
+            if bool(lease_renewal_result.get("lease_degraded")):
+                rollback(conn)
+                return ClaimProbeResult(
+                    run_id=run_id,
+                    claimed=False,
+                    claimed_url=None,
+                    robots_allow_decision=None,
+                    storage_plan=storage_plan,
+                    fetched_page=None,
+                    finalize_result=dict(lease_renewal_result),
+                    parse_apply_result=parse_apply_result,
+                    observed_at=utc_now_iso(),
+                    runtime_control=runtime_control,
+                )
 
             refresh_result = refresh_robots_cache_if_needed(
                 conn,
@@ -551,12 +571,34 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
         # EN: If robots allows fetch, we enter the real durable acquisition path.
         # TR: Robots fetch’e izin veriyorsa gerçek kalıcı acquisition yoluna giriyoruz.
         try:
-            renew_claimed_lease_before_durable_phase(
+            lease_renewal_result = renew_claimed_lease_before_durable_phase(
                 conn,
                 claimed_url=claimed_url,
                 config=config,
                 phase_label="page_fetch",
             )
+
+            # EN: A degraded lease renewal before page fetch means we must not enter
+            # EN: the real acquisition path with unresolved lease ownership.
+            # TR: Page fetch öncesi degrade olmuş lease renewal, çözülmemiş lease
+            # TR: sahipliği ile gerçek acquisition yoluna girmememiz gerektiği
+            # TR: anlamına gelir.
+            if bool(lease_renewal_result.get("lease_degraded")):
+                rollback(conn)
+                return ClaimProbeResult(
+                    run_id=run_id,
+                    claimed=False,
+                    claimed_url=None,
+                    robots_allow_decision=(
+                        None if robots_allow_decision is None else dict(robots_allow_decision)
+                    ),
+                    storage_plan=storage_plan,
+                    fetched_page=None,
+                    finalize_result=dict(lease_renewal_result),
+                    parse_apply_result=parse_apply_result,
+                    observed_at=utc_now_iso(),
+                    runtime_control=runtime_control,
+                )
 
             # EN: We now delegate acquisition-path selection plus real fetch execution
             # EN: to the canonical acquisition hub. The worker consumes one normalized
@@ -602,12 +644,34 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             # TR: Opsiyonel parse-apply’ı yalnızca içerik parse için uygunsa ve
             # TR: bağlı DB gerçekten parse şemasını içeriyorsa deneriz.
             if should_run_minimal_parse and parse_schema_exists:
-                renew_claimed_lease_before_durable_phase(
+                lease_renewal_result = renew_claimed_lease_before_durable_phase(
                     conn,
                     claimed_url=claimed_url,
                     config=config,
                     phase_label="parse_apply",
                 )
+
+                # EN: A degraded lease renewal before parse-apply means we must not
+                # EN: continue durable parse writes under uncertain lease ownership.
+                # EN: We surface the already-fetched artefact honestly and stop here.
+                # TR: Parse-apply öncesi degrade olmuş lease renewal, belirsiz lease
+                # TR: sahipliği altında kalıcı parse yazılarına devam etmememiz
+                # TR: gerektiği anlamına gelir. Zaten fetch edilmiş artefact'ı
+                # TR: dürüstçe görünür kılıyor ve burada duruyoruz.
+                if bool(lease_renewal_result.get("lease_degraded")):
+                    rollback(conn)
+                    return ClaimProbeResult(
+                        run_id=run_id,
+                        claimed=True,
+                        claimed_url=claimed_url,
+                        robots_allow_decision=robots_allow_decision,
+                        storage_plan=storage_plan,
+                        fetched_page=fetched_page,
+                        finalize_result=dict(lease_renewal_result),
+                        parse_apply_result=parse_apply_result,
+                        observed_at=utc_now_iso(),
+                        runtime_control=runtime_control,
+                    )
 
                 parse_apply_result = apply_minimal_parse_entry(
                     conn=conn,
