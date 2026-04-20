@@ -201,10 +201,20 @@ def apply_runtime_control(
             requested_by=requested_by,
         )
 
-        # EN: Missing row means unexpected gateway drift.
-        # TR: Satır dönmemesi beklenmeyen gateway drift'i anlamına gelir.
-        if set_result is None:
-            raise RuntimeError("set_webcrawler_runtime_control(...) returned no row")
+        # EN: A degraded set-result means the lower mutation wrapper returned no
+        # EN: row. We must surface that payload honestly instead of crashing.
+        # TR: Degrade olmuş set-result alt mutation wrapper'ın satır döndürmediği
+        # TR: anlamına gelir. Bunu çökmeden dürüstçe görünür kılmalıyız.
+        if bool(set_result.get("runtime_control_degraded")):
+            payload = {
+                "mode": "runtime_control",
+                "action": "set",
+                "set_result": dict(set_result),
+                "runtime_control": dict(set_result),
+            }
+            conn.rollback()
+            print(json.dumps(payload, ensure_ascii=False, indent=2))
+            return 2
 
         # EN: The durable state change must be committed before the visible truth is
         # EN: re-read.
@@ -215,14 +225,44 @@ def apply_runtime_control(
         # EN: We read back the visible runtime-control row.
         # TR: Görünür runtime-control satırını geri okuyoruz.
         runtime_control = get_webcrawler_runtime_control(conn)
-        if runtime_control is None:
-            raise RuntimeError("get_webcrawler_runtime_control(...) returned no row")
+
+        # EN: A degraded runtime-control read after commit must stay operator-visible
+        # EN: instead of turning into an exception.
+        # TR: Commit sonrası degrade runtime-control okuması istisnaya dönüşmek
+        # TR: yerine operatöre görünür kalmalıdır.
+        if bool(runtime_control.get("runtime_control_degraded")):
+            payload = {
+                "mode": "runtime_control",
+                "action": "set",
+                "set_result": dict(set_result),
+                "runtime_control": dict(runtime_control),
+            }
+            print(json.dumps(payload, ensure_ascii=False, indent=2))
+            return 2
 
         # EN: We also read back the visible may-claim decision.
         # TR: Görünür may-claim kararını da geri okuyoruz.
         may_claim_result = webcrawler_runtime_may_claim(conn)
-        if may_claim_result is None:
-            raise RuntimeError("webcrawler_runtime_may_claim(...) returned no row")
+
+        # EN: A degraded may-claim read must be surfaced explicitly instead of
+        # EN: pretending the final control snapshot is complete.
+        # TR: Degrade olmuş may-claim okuması nihai kontrol görüntüsü tamamlanmış
+        # TR: gibi davranmak yerine açıkça görünür kılınmalıdır.
+        if bool(may_claim_result.get("runtime_control_degraded")):
+            payload = {
+                "mode": "runtime_control",
+                "action": "set",
+                "set_result": dict(set_result),
+                "may_claim_result": dict(may_claim_result),
+                "runtime_control": {
+                    **dict(runtime_control),
+                    "may_claim": may_claim_result.get("may_claim"),
+                    "may_claim_degraded": True,
+                    "may_claim_degraded_reason": may_claim_result.get("runtime_control_degraded_reason"),
+                },
+            }
+            print(json.dumps(payload, ensure_ascii=False, indent=2))
+            return 2
 
         # EN: We build one final structured payload.
         # TR: Tek bir nihai yapılı payload kuruyoruz.

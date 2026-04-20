@@ -316,10 +316,20 @@ def main() -> int:
                     requested_by=args.requested_by,
                 )
 
-                # EN: Missing set-result would mean the canonical DB function behaved unexpectedly.
-                # TR: Set-result çıkmaması kanonik DB fonksiyonunun beklenmedik davrandığı anlamına gelir.
-                if set_result is None:
-                    raise RuntimeError("set_webcrawler_runtime_control(...) returned no row")
+                # EN: A degraded set-result must stay operator-visible instead of
+                # EN: crashing this CLI surface.
+                # TR: Degrade olmuş set-result bu CLI yüzeyinde çökme üretmek
+                # TR: yerine operatöre görünür kalmalıdır.
+                if bool(set_result.get("runtime_control_degraded")):
+                    payload = {
+                        "mode": "runtime_control",
+                        "action": "set",
+                        "set_result": dict(set_result),
+                        "runtime_control": dict(set_result),
+                    }
+                    conn.rollback()
+                    print(json.dumps(payload, ensure_ascii=False, indent=2))
+                    return 2
 
                 # EN: We commit the durable state change before reading the final visible truth.
                 # TR: Son görünür doğruluğu okumadan önce kalıcı durum değişimini commit ediyoruz.
@@ -328,14 +338,44 @@ def main() -> int:
             # EN: We then read the visible control row.
             # TR: Ardından görünür kontrol satırını okuyoruz.
             runtime_control = get_webcrawler_runtime_control(conn)
-            if runtime_control is None:
-                raise RuntimeError("get_webcrawler_runtime_control(...) returned no row")
+
+            # EN: A degraded runtime-control read must be surfaced explicitly instead
+            # EN: of turning into a hard failure.
+            # TR: Degrade olmuş runtime-control okuması sert hataya dönüşmek yerine
+            # TR: açıkça görünür kılınmalıdır.
+            if bool(runtime_control.get("runtime_control_degraded")):
+                payload = {
+                    "mode": "runtime_control",
+                    "action": "set" if args.set_runtime_control is not None else "show",
+                    "set_result": set_result,
+                    "runtime_control": dict(runtime_control),
+                }
+                print(json.dumps(payload, ensure_ascii=False, indent=2))
+                return 2
 
             # EN: We also read the may-claim decision and merge it into the payload.
             # TR: may-claim kararını da okuyup payload içine birleştiriyoruz.
             may_claim_result = webcrawler_runtime_may_claim(conn)
-            if may_claim_result is None:
-                raise RuntimeError("webcrawler_runtime_may_claim(...) returned no row")
+
+            # EN: A degraded may-claim read must stay visible instead of pretending
+            # EN: the final snapshot is complete.
+            # TR: Degrade olmuş may-claim okuması nihai görüntü tamamlanmış gibi
+            # TR: davranmak yerine görünür kalmalıdır.
+            if bool(may_claim_result.get("runtime_control_degraded")):
+                payload = {
+                    "mode": "runtime_control",
+                    "action": "set" if args.set_runtime_control is not None else "show",
+                    "set_result": set_result,
+                    "may_claim_result": dict(may_claim_result),
+                    "runtime_control": {
+                        **dict(runtime_control),
+                        "may_claim": may_claim_result.get("may_claim"),
+                        "may_claim_degraded": True,
+                        "may_claim_degraded_reason": may_claim_result.get("runtime_control_degraded_reason"),
+                    },
+                }
+                print(json.dumps(payload, ensure_ascii=False, indent=2))
+                return 2
 
             payload = {
                 "mode": "runtime_control",
