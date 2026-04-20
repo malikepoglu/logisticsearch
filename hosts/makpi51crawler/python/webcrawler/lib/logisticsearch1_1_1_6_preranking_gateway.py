@@ -35,6 +35,35 @@ def persist_taxonomy_preranking_payload(
     # TR: metnine çevirdiği için json modülünü yerel olarak içe aktarıyoruz.
     import json
 
+    # EN: We defensively validate the candidate list before the SQL call so an
+    # EN: invalid Python payload cannot poison the current transaction.
+    # TR: SQL çağrısından önce candidate listesini savunmacı biçimde doğruluyoruz;
+    # TR: böylece geçersiz Python payload'ı mevcut transaction'ı zehirleyemez.
+    candidates = payload.get("candidates", [])
+    if not isinstance(candidates, list):
+        raise RuntimeError("payload['candidates'] must be a list")
+
+    invalid_candidate_indexes: list[int] = []
+
+    # EN: The currently proven hard requirement is taxonomy_package_id.
+    # TR: Şu anda kanıtlanmış sert gereklilik taxonomy_package_id alanıdır.
+    for idx, candidate in enumerate(candidates):
+        if not isinstance(candidate, dict):
+            invalid_candidate_indexes.append(idx)
+            continue
+        if candidate.get("taxonomy_package_id") in (None, ""):
+            invalid_candidate_indexes.append(idx)
+
+    # EN: We fail fast here with one explicit message instead of letting SQL abort
+    # EN: the whole transaction at a deeper layer.
+    # TR: Burada tek ve açık bir mesajla erken hata veriyoruz; böylece SQL daha
+    # TR: derinde tüm transaction'ı abort etmez.
+    if invalid_candidate_indexes:
+        raise RuntimeError(
+            "parse taxonomy payload contains invalid candidate(s) without "
+            f"taxonomy_package_id at indexes {invalid_candidate_indexes}"
+        )
+
     # EN: We open a cursor from the already-open connection.
     # TR: Zaten açık bağlantı üzerinden bir cursor açıyoruz.
     with conn.cursor() as cur:

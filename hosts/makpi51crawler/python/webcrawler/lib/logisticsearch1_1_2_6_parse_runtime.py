@@ -906,22 +906,48 @@ def apply_minimal_parse_entry(
     # EN: taxonomy helper and its second database connection.
     # TR: Minimal taxonomy candidate'lerini, zaten kanıtlanmış runtime taxonomy
     # TR: helper'ı ve onun ikinci veritabanı bağlantısı üzerinden kuruyoruz.
-    taxonomy_candidates = build_minimal_taxonomy_candidates(
+    raw_taxonomy_candidates = build_minimal_taxonomy_candidates(
         parse_result=parse_result,
         source_run_id=source_run_id,
         source_note=source_note,
     )
 
+    # EN: We reject candidates that are known-invalid for the current SQL contract
+    # EN: before they can abort the surrounding transaction.
+    # TR: Mevcut SQL sözleşmesi için geçersiz olduğu bilinen candidate'leri,
+    # TR: çevre transaction'ı abort etmeden önce reddediyoruz.
+    persistable_taxonomy_candidates = []
+    rejected_taxonomy_candidates = []
+
+    for candidate in raw_taxonomy_candidates:
+        taxonomy_package_id = candidate.get("taxonomy_package_id")
+
+        if taxonomy_package_id in (None, ""):
+            rejected_taxonomy_candidates.append(
+                {
+                    "reason": "missing_taxonomy_package_id",
+                    "taxonomy_node_code": candidate.get("taxonomy_node_code"),
+                    "taxonomy_concept_key": candidate.get("taxonomy_concept_key"),
+                    "input_lang_code": candidate.get("input_lang_code"),
+                }
+            )
+            continue
+
+        persistable_taxonomy_candidates.append(candidate)
+
     # EN: We enrich the persisted payload in-memory before the DB call so the
-    # EN: parse SQL layer receives real candidates instead of an always-empty list.
+    # EN: parse SQL layer receives only persistable candidates.
     # TR: Veritabanı çağrısından önce persist edilecek payload'ı bellekte
-    # TR: zenginleştiriyoruz; böylece parse SQL katmanı sürekli boş liste yerine
-    # TR: gerçek candidate'ler alır.
+    # TR: zenginleştiriyoruz; böylece parse SQL katmanı yalnızca persist edilebilir
+    # TR: candidate'ler alır.
     payload = dict(parse_result.payload)
-    payload["candidates"] = taxonomy_candidates
+    payload["candidates"] = persistable_taxonomy_candidates
     payload["metadata"] = {
         "taxonomy_package_version": minimal_taxonomy_package_version(),
-        "taxonomy_candidate_count": len(taxonomy_candidates),
+        "taxonomy_candidate_count": len(persistable_taxonomy_candidates),
+        "taxonomy_candidate_input_count": len(raw_taxonomy_candidates),
+        "taxonomy_candidate_rejected_count": len(rejected_taxonomy_candidates),
+        "taxonomy_candidate_rejected_sample": rejected_taxonomy_candidates[:10],
         "taxonomy_bridge": "repo_helper_v1",
     }
 
@@ -939,20 +965,23 @@ def apply_minimal_parse_entry(
     # TR: Artık gerçek preranking snapshot satırını, SQL tarafında zaten var olup
     # TR: Python'da henüz köprülenmemiş dedicated DB wrapper üzerinden oluşturuyoruz.
     top_score = None
-    if taxonomy_candidates:
-        top_score = float(taxonomy_candidates[0]["total_score"])
+    if persistable_taxonomy_candidates:
+        top_score = float(persistable_taxonomy_candidates[0]["total_score"])
 
-    # EN: pre_ranked is now allowed only when at least one taxonomy candidate exists.
-    # EN: Otherwise we intentionally fall back to review_hold.
-    # TR: pre_ranked artık yalnızca en az bir taxonomy candidate varsa mümkündür.
-    # TR: Aksi durumda bilinçli olarak review_hold durumuna düşüyoruz.
+    # EN: pre_ranked is now allowed only when at least one persistable taxonomy
+    # EN: candidate exists. Otherwise we intentionally fall back to review_hold.
+    # TR: pre_ranked artık yalnızca en az bir persist edilebilir taxonomy
+    # TR: candidate varsa mümkündür. Aksi durumda bilinçli olarak review_hold'a düşeriz.
     effective_workflow_state = workflow_state
     effective_workflow_state_reason = workflow_state_reason
 
     if workflow_state == "pre_ranked":
-        if taxonomy_candidates:
+        if persistable_taxonomy_candidates:
             effective_workflow_state = "pre_ranked"
             effective_workflow_state_reason = "taxonomy_candidates_persisted_via_repo_helper"
+        elif rejected_taxonomy_candidates:
+            effective_workflow_state = "review_hold"
+            effective_workflow_state_reason = "taxonomy_candidates_rejected_missing_package_id"
         else:
             effective_workflow_state = "review_hold"
             effective_workflow_state_reason = "taxonomy_candidates_empty_manual_review_required"
@@ -962,12 +991,15 @@ def apply_minimal_parse_entry(
         url_id=url_id,
         input_lang_code=parse_result.input_lang_code,
         taxonomy_package_version=minimal_taxonomy_package_version(),
-        top_candidate_count=len(taxonomy_candidates),
+        top_candidate_count=len(persistable_taxonomy_candidates),
         top_score=top_score,
-        candidate_summary=build_preranking_candidate_summary(taxonomy_candidates),
+        candidate_summary=build_preranking_candidate_summary(persistable_taxonomy_candidates),
         snapshot_metadata={
             "taxonomy_package_version": minimal_taxonomy_package_version(),
-            "taxonomy_candidate_count": len(taxonomy_candidates),
+            "taxonomy_candidate_count": len(persistable_taxonomy_candidates),
+            "taxonomy_candidate_input_count": len(raw_taxonomy_candidates),
+            "taxonomy_candidate_rejected_count": len(rejected_taxonomy_candidates),
+            "taxonomy_candidate_rejected_sample": rejected_taxonomy_candidates[:10],
             "persisted_candidate_count": persist_result["persisted_candidate_count"],
             "taxonomy_bridge": "repo_helper_v1",
         },

@@ -609,10 +609,27 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
         # TR: Diğer tüm beklenmeyen hatalar minimal worker bilinmeyen drift’i
         # TR: gizlemesin diye permanent olarak finalize edilir.
         except Exception as exc:
+            # EN: Any prior SQL failure may have left the transaction aborted.
+            # EN: We must rollback before entering finalize/logging paths.
+            # TR: Önceki SQL hatası transaction'ı aborted bırakmış olabilir.
+            # TR: finalize/logging yoluna girmeden önce rollback zorunludur.
+            rollback_error_message = None
+            try:
+                rollback(conn)
+            except Exception as rollback_exc:
+                rollback_error_message = f"{type(rollback_exc).__name__}: {rollback_exc}"
+
+            final_error_message = f"{type(exc).__name__}: {exc}"
+            if rollback_error_message is not None:
+                final_error_message = (
+                    f"{final_error_message} | "
+                    f"rollback_before_finalize_failed: {rollback_error_message}"
+                )
+
             finalize_result = finalize_unexpected_runtime_error(
                 conn,
                 claimed_url=claimed_url,
-                error_message=f"{type(exc).__name__}: {exc}",
+                error_message=final_error_message,
                 worker_id=config.worker_id,
             )
             commit(conn)
