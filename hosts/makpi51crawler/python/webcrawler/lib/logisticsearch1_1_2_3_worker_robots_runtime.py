@@ -38,6 +38,14 @@ from .logisticsearch1_1_1_state_db_gateway import (
     upsert_robots_txt_cache,
 )
 
+# EN: We import the strict fetched-robots contract validator so worker-side cache
+# EN: refresh cannot trust corrupted artefact metadata blindly.
+# TR: Worker-tarafı cache refresh bozuk artefact metadata'sına körü körüne
+# TR: güvenmesin diye sıkı fetched-robots contract validator'ını içe aktarıyoruz.
+from .logisticsearch1_1_2_4_1_acquisition_support import (
+    validate_fetched_robots_result_contract,
+)
+
 
 # EN: This helper decides whether the current robots verdict still allows a real
 # EN: page fetch in the minimal worker.
@@ -127,6 +135,23 @@ def refresh_robots_cache_if_needed(
         robots_url=str(robots_url),
         user_agent_token=user_agent_token,
     )
+
+    # EN: We validate the fetched-robots contract immediately so corrupted raw
+    # EN: artefacts cannot silently flow into parse/cache persistence.
+    # TR: Bozuk ham artefact'lar sessizce parse/cache persistence yoluna akmasın
+    # TR: diye fetched-robots contract'ını hemen doğruluyoruz.
+    robots_fetch_contract = validate_fetched_robots_result_contract(robots_fetch)
+    if robots_fetch_contract is not None:
+        return {
+            "host_id": host_id,
+            "robots_url": str(robots_url),
+            "robots_degraded": True,
+            "robots_degraded_reason": "validate_fetched_robots_result_contract_failed",
+            "robots_completed": False,
+            "error_class": str(robots_fetch_contract["error_class"]),
+            "error_message": str(robots_fetch_contract["error_message"]),
+            "acquisition_contract": dict(robots_fetch_contract),
+        }
 
     # EN: We convert fetched_at ISO text back into datetime so psycopg receives an
     # EN: explicit timestamptz-compatible value.

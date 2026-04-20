@@ -114,6 +114,14 @@ from .logisticsearch1_1_2_2_worker_lease_runtime import (
     renew_claimed_lease_before_durable_phase,
 )
 
+# EN: We import the strict fetched-page contract validator so the parent worker
+# EN: can stop before parse/finalize when raw artefact metadata drift is detected.
+# TR: Parent worker ham artefact metadata drift'i yakaladığında parse/finalize
+# TR: öncesinde durabilsin diye sıkı fetched-page contract validator'ını içe aktarıyoruz.
+from .logisticsearch1_1_2_4_1_acquisition_support import (
+    validate_fetched_page_result_contract,
+)
+
 
 # EN: This dataclass stores runtime configuration for the public worker surface.
 # TR: Bu dataclass public worker yüzeyi için runtime konfigürasyonunu tutar.
@@ -621,6 +629,28 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             # TR: fetched_page worker başarı yolunun geri kalanının beklediği kararlı
             # TR: fetched-page sözleşmesini taşır.
             fetched_page = acquisition_execution.fetch_result
+
+            # EN: We validate the fetched-page contract immediately so corrupted raw
+            # EN: artefacts cannot silently enter parse/finalize logic.
+            # TR: Bozuk ham artefact'lar sessizce parse/finalize mantığına girmesin
+            # TR: diye fetched-page contract'ını hemen doğruluyoruz.
+            page_contract_validation = validate_fetched_page_result_contract(fetched_page)
+            if page_contract_validation is not None:
+                rollback(conn)
+                return ClaimProbeResult(
+                    run_id=run_id,
+                    claimed=True,
+                    claimed_url=claimed_url,
+                    robots_allow_decision=(
+                        None if robots_allow_decision is None else dict(robots_allow_decision)
+                    ),
+                    storage_plan=storage_plan,
+                    fetched_page=fetched_page,
+                    finalize_result=dict(page_contract_validation),
+                    parse_apply_result=parse_apply_result,
+                    observed_at=utc_now_iso(),
+                    runtime_control=runtime_control,
+                )
 
             # EN: The current narrow parse layer is HTML-first, so we only consider
             # EN: parse continuation for HTML-like successful fetches.

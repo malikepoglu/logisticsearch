@@ -141,6 +141,530 @@ class FetchedRobotsTxtResult:
     # TR: fetch_error_message varsa görünen taşıma hata mesajını tutar.
     fetch_error_message: str | None
 
+# EN: This helper builds one normalized degraded payload for acquisition
+# EN: contract drift so upper layers can stop cleanly with explicit evidence.
+# TR: Bu yardımcı acquisition contract drift'i için tek ve normalize bir degrade
+# TR: payload üretir; böylece üst katmanlar açık kanıtla temiz biçimde durabilir.
+def build_acquisition_contract_degraded_payload(
+    *,
+    action: str,
+    target_kind: str,
+    target_id: int,
+    requested_url: str | None = None,
+    final_url: str | None = None,
+    content_type: str | None = None,
+    body_bytes: int | None = None,
+    raw_storage_path: str | None = None,
+    raw_sha256: str | None = None,
+    fetched_at: str | None = None,
+    error_class: str,
+    error_message: str,
+) -> dict[str, object]:
+    # EN: We keep one normalized degraded payload shape across fetched-page and
+    # EN: fetched-robots validation paths so caller-visible truth stays explicit.
+    # TR: Çağıranın gördüğü doğruluk açık kalsın diye fetched-page ve fetched-robots
+    # TR: doğrulama yolları arasında tek normalize degrade payload şekli tutuyoruz.
+    return {
+        "target_kind": target_kind,
+        "target_id": target_id,
+        "requested_url": requested_url,
+        "final_url": final_url,
+        "content_type": content_type,
+        "body_bytes": body_bytes,
+        "raw_storage_path": raw_storage_path,
+        "raw_sha256": raw_sha256,
+        "fetched_at": fetched_at,
+        "acquisition_action": action,
+        "acquisition_degraded": True,
+        "acquisition_degraded_reason": f"{action}_contract_invalid",
+        "acquisition_completed": False,
+        "error_class": error_class,
+        "error_message": error_message,
+    }
+
+
+# EN: This helper reads one persisted raw artefact only after confirming that
+# EN: the path stays under the controlled raw root and is actually readable.
+# TR: Bu yardımcı tek bir saklanmış ham artefact'ı ancak yol kontrollü raw root
+# TR: altında kalıyorsa ve gerçekten okunabiliyorsa okur.
+def read_controlled_raw_artefact_bytes(
+    *,
+    action: str,
+    target_kind: str,
+    target_id: int,
+    requested_url: str | None,
+    final_url: str | None,
+    content_type: str | None,
+    body_bytes: int | None,
+    raw_storage_path: str,
+    raw_sha256: str | None,
+    fetched_at: str | None,
+) -> tuple[Path, bytes] | dict[str, object]:
+    # EN: We resolve the controlled raw root once so containment checks stay
+    # EN: explicit and path-normalized.
+    # TR: Kapsama kontrolleri açık ve path-normalize kalsın diye kontrollü raw
+    # TR: root'u bir kez resolve ediyoruz.
+    controlled_root = RAW_FETCH_ROOT.resolve()
+
+    # EN: We resolve the target artefact path without requiring existence first,
+    # EN: because we want to distinguish path-shape problems from missing-file problems.
+    # TR: Hedef artefact yolunu önce varlık zorunluluğu olmadan resolve ediyoruz;
+    # TR: çünkü yol-şekli sorunlarını eksik-dosya sorunlarından ayırmak istiyoruz.
+    try:
+        resolved_path = Path(raw_storage_path).expanduser().resolve(strict=False)
+    except Exception as exc:
+        return build_acquisition_contract_degraded_payload(
+            action=action,
+            target_kind=target_kind,
+            target_id=target_id,
+            requested_url=requested_url,
+            final_url=final_url,
+            content_type=content_type,
+            body_bytes=body_bytes,
+            raw_storage_path=raw_storage_path,
+            raw_sha256=raw_sha256,
+            fetched_at=fetched_at,
+            error_class=f"{target_kind}_raw_storage_path_unresolvable",
+            error_message=f"Raw artefact path could not be resolved: {exc}",
+        )
+
+    # EN: The artefact must stay under the controlled raw root. Anything outside
+    # EN: that boundary is operationally unsafe and must be rejected.
+    # TR: Artefact kontrollü raw root altında kalmalıdır. Bu sınırın dışındaki
+    # TR: her şey operasyonel olarak güvensizdir ve reddedilmelidir.
+    try:
+        resolved_path.relative_to(controlled_root)
+    except ValueError:
+        return build_acquisition_contract_degraded_payload(
+            action=action,
+            target_kind=target_kind,
+            target_id=target_id,
+            requested_url=requested_url,
+            final_url=final_url,
+            content_type=content_type,
+            body_bytes=body_bytes,
+            raw_storage_path=str(resolved_path),
+            raw_sha256=raw_sha256,
+            fetched_at=fetched_at,
+            error_class=f"{target_kind}_raw_artefact_outside_controlled_root",
+            error_message=(
+                "Raw artefact path is outside controlled raw root: "
+                f"path={resolved_path} root={controlled_root}"
+            ),
+        )
+
+    # EN: After containment is confirmed, the artefact must exist as a real file.
+    # TR: Kapsama doğrulandıktan sonra artefact gerçek bir dosya olarak var olmalıdır.
+    if not resolved_path.is_file():
+        return build_acquisition_contract_degraded_payload(
+            action=action,
+            target_kind=target_kind,
+            target_id=target_id,
+            requested_url=requested_url,
+            final_url=final_url,
+            content_type=content_type,
+            body_bytes=body_bytes,
+            raw_storage_path=str(resolved_path),
+            raw_sha256=raw_sha256,
+            fetched_at=fetched_at,
+            error_class=f"{target_kind}_raw_artefact_missing",
+            error_message=f"Raw artefact is missing on disk: {resolved_path}",
+        )
+
+    # EN: We read the bytes inside an explicit OSError guard so permission or I/O
+    # EN: failures degrade cleanly instead of crashing the validator.
+    # TR: Permission veya I/O hataları validator'ı çökertmek yerine temiz biçimde
+    # TR: degrade olsun diye byte'ları açık OSError koruması içinde okuyoruz.
+    try:
+        raw_bytes = resolved_path.read_bytes()
+    except OSError as exc:
+        return build_acquisition_contract_degraded_payload(
+            action=action,
+            target_kind=target_kind,
+            target_id=target_id,
+            requested_url=requested_url,
+            final_url=final_url,
+            content_type=content_type,
+            body_bytes=body_bytes,
+            raw_storage_path=str(resolved_path),
+            raw_sha256=raw_sha256,
+            fetched_at=fetched_at,
+            error_class=f"{target_kind}_raw_artefact_unreadable",
+            error_message=f"Raw artefact could not be read: {exc}",
+        )
+
+    # EN: Successful validation of the raw-file boundary returns the normalized
+    # EN: resolved path plus exact bytes.
+    # TR: Ham dosya sınırının başarılı doğrulaması normalize edilmiş resolve path
+    # TR: ile tam byte içeriğini döndürür.
+    return (resolved_path, raw_bytes)
+
+
+# EN: This helper validates one fetched-page result against the persisted raw
+# EN: artefact so later worker stages do not trust corrupted metadata blindly.
+# TR: Bu yardımcı tek bir fetched-page sonucunu saklanan ham artefact ile
+# TR: doğrular; böylece sonraki worker aşamaları bozuk metadata'ya körü körüne güvenmez.
+def validate_fetched_page_result_contract(
+    fetched_page: FetchedPageResult,
+) -> dict[str, object] | None:
+    # EN: requested_url must stay non-empty because it anchors later evidence.
+    # TR: requested_url daha sonraki kanıtı sabitlediği için boş kalmamalıdır.
+    if not str(fetched_page.requested_url).strip():
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_page_result_contract",
+            target_kind="page",
+            target_id=int(fetched_page.url_id),
+            requested_url=str(fetched_page.requested_url),
+            final_url=str(fetched_page.final_url),
+            content_type=fetched_page.content_type,
+            body_bytes=int(fetched_page.body_bytes),
+            raw_storage_path=str(fetched_page.raw_storage_path),
+            raw_sha256=str(fetched_page.raw_sha256),
+            fetched_at=str(fetched_page.fetched_at),
+            error_class="fetched_page_requested_url_empty",
+            error_message="FetchedPageResult.requested_url is empty",
+        )
+
+    # EN: final_url must stay visible and non-empty after acquisition.
+    # TR: final_url acquisition sonrasında görünür ve boş olmayan bir değer olmalıdır.
+    if not str(fetched_page.final_url).strip():
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_page_result_contract",
+            target_kind="page",
+            target_id=int(fetched_page.url_id),
+            requested_url=str(fetched_page.requested_url),
+            final_url=str(fetched_page.final_url),
+            content_type=fetched_page.content_type,
+            body_bytes=int(fetched_page.body_bytes),
+            raw_storage_path=str(fetched_page.raw_storage_path),
+            raw_sha256=str(fetched_page.raw_sha256),
+            fetched_at=str(fetched_page.fetched_at),
+            error_class="fetched_page_final_url_empty",
+            error_message="FetchedPageResult.final_url is empty",
+        )
+
+    # EN: fetched_at must stay ISO-parseable because later DB layers and audits
+    # EN: depend on this timestamp.
+    # TR: fetched_at ISO olarak parse edilebilir kalmalıdır; çünkü sonraki DB
+    # TR: katmanları ve audit'ler bu zaman damgasına dayanır.
+    try:
+        datetime.fromisoformat(str(fetched_page.fetched_at))
+    except Exception as exc:
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_page_result_contract",
+            target_kind="page",
+            target_id=int(fetched_page.url_id),
+            requested_url=str(fetched_page.requested_url),
+            final_url=str(fetched_page.final_url),
+            content_type=fetched_page.content_type,
+            body_bytes=int(fetched_page.body_bytes),
+            raw_storage_path=str(fetched_page.raw_storage_path),
+            raw_sha256=str(fetched_page.raw_sha256),
+            fetched_at=str(fetched_page.fetched_at),
+            error_class="fetched_page_fetched_at_invalid",
+            error_message=f"FetchedPageResult.fetched_at is not ISO-parseable: {exc}",
+        )
+
+    # EN: raw_storage_path must point to a real persisted file.
+    # TR: raw_storage_path gerçek bir saklanmış dosyayı göstermelidir.
+    raw_storage_path = str(fetched_page.raw_storage_path).strip()
+    if not raw_storage_path:
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_page_result_contract",
+            target_kind="page",
+            target_id=int(fetched_page.url_id),
+            requested_url=str(fetched_page.requested_url),
+            final_url=str(fetched_page.final_url),
+            content_type=fetched_page.content_type,
+            body_bytes=int(fetched_page.body_bytes),
+            raw_storage_path=str(fetched_page.raw_storage_path),
+            raw_sha256=str(fetched_page.raw_sha256),
+            fetched_at=str(fetched_page.fetched_at),
+            error_class="fetched_page_raw_storage_path_empty",
+            error_message="FetchedPageResult.raw_storage_path is empty",
+        )
+
+    controlled_read_result = read_controlled_raw_artefact_bytes(
+        action="validate_fetched_page_result_contract",
+        target_kind="page",
+        target_id=int(fetched_page.url_id),
+        requested_url=str(fetched_page.requested_url),
+        final_url=str(fetched_page.final_url),
+        content_type=fetched_page.content_type,
+        body_bytes=int(fetched_page.body_bytes),
+        raw_storage_path=raw_storage_path,
+        raw_sha256=str(fetched_page.raw_sha256),
+        fetched_at=str(fetched_page.fetched_at),
+    )
+    if isinstance(controlled_read_result, dict):
+        return controlled_read_result
+
+    path, raw_bytes = controlled_read_result
+    raw_storage_path = str(path)
+
+    # EN: raw_sha256 must look like a full SHA256 hex digest.
+    # TR: raw_sha256 tam bir SHA256 hex özeti gibi görünmelidir.
+    raw_sha256 = str(fetched_page.raw_sha256).strip().lower()
+    if len(raw_sha256) != 64 or any(ch not in "0123456789abcdef" for ch in raw_sha256):
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_page_result_contract",
+            target_kind="page",
+            target_id=int(fetched_page.url_id),
+            requested_url=str(fetched_page.requested_url),
+            final_url=str(fetched_page.final_url),
+            content_type=fetched_page.content_type,
+            body_bytes=int(fetched_page.body_bytes),
+            raw_storage_path=raw_storage_path,
+            raw_sha256=str(fetched_page.raw_sha256),
+            fetched_at=str(fetched_page.fetched_at),
+            error_class="fetched_page_raw_sha256_invalid",
+            error_message="FetchedPageResult.raw_sha256 is empty or malformed",
+        )
+
+    # EN: We verify the persisted bytes directly so metadata cannot drift away from
+    # EN: the real file on disk.
+    # TR: Metadata diskteki gerçek dosyadan kopamasın diye saklanan byte'ları
+    # TR: doğrudan doğruluyoruz.
+    actual_body_bytes = len(raw_bytes)
+    expected_body_bytes = int(fetched_page.body_bytes)
+
+    if actual_body_bytes != expected_body_bytes:
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_page_result_contract",
+            target_kind="page",
+            target_id=int(fetched_page.url_id),
+            requested_url=str(fetched_page.requested_url),
+            final_url=str(fetched_page.final_url),
+            content_type=fetched_page.content_type,
+            body_bytes=expected_body_bytes,
+            raw_storage_path=raw_storage_path,
+            raw_sha256=raw_sha256,
+            fetched_at=str(fetched_page.fetched_at),
+            error_class="fetched_page_body_bytes_mismatch",
+            error_message=(
+                "FetchedPageResult.body_bytes does not match persisted file size: "
+                f"expected={expected_body_bytes} actual={actual_body_bytes}"
+            ),
+        )
+
+    actual_sha256 = sha256_hex(raw_bytes)
+    if actual_sha256 != raw_sha256:
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_page_result_contract",
+            target_kind="page",
+            target_id=int(fetched_page.url_id),
+            requested_url=str(fetched_page.requested_url),
+            final_url=str(fetched_page.final_url),
+            content_type=fetched_page.content_type,
+            body_bytes=expected_body_bytes,
+            raw_storage_path=raw_storage_path,
+            raw_sha256=raw_sha256,
+            fetched_at=str(fetched_page.fetched_at),
+            error_class="fetched_page_raw_sha256_mismatch",
+            error_message=(
+                "FetchedPageResult.raw_sha256 does not match persisted file digest: "
+                f"expected={raw_sha256} actual={actual_sha256}"
+            ),
+        )
+
+    # EN: No payload means the page contract is currently valid.
+    # TR: Payload dönmemesi page contract'ının şu anda geçerli olduğu anlamına gelir.
+    return None
+
+
+# EN: This helper validates one fetched-robots result against the persisted raw
+# EN: artefact or against the transport-failure contract when no body exists.
+# TR: Bu yardımcı tek bir fetched-robots sonucunu saklanan ham artefact ile ya da
+# TR: body yoksa transport-failure sözleşmesi ile doğrular.
+def validate_fetched_robots_result_contract(
+    robots_fetch: FetchedRobotsTxtResult,
+) -> dict[str, object] | None:
+    # EN: robots_url must stay non-empty because it is the durable cache target.
+    # TR: robots_url kalıcı cache hedefi olduğu için boş kalmamalıdır.
+    if not str(robots_fetch.robots_url).strip():
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_robots_result_contract",
+            target_kind="robots",
+            target_id=int(robots_fetch.host_id),
+            requested_url=str(robots_fetch.robots_url),
+            final_url=str(robots_fetch.final_url),
+            content_type=robots_fetch.content_type,
+            body_bytes=int(robots_fetch.body_bytes),
+            raw_storage_path=None if robots_fetch.raw_storage_path is None else str(robots_fetch.raw_storage_path),
+            raw_sha256=None if robots_fetch.raw_sha256 is None else str(robots_fetch.raw_sha256),
+            fetched_at=str(robots_fetch.fetched_at),
+            error_class="fetched_robots_url_empty",
+            error_message="FetchedRobotsTxtResult.robots_url is empty",
+        )
+
+    # EN: final_url must stay visible even on HTTP error responses.
+    # TR: final_url HTTP hata yanıtlarında bile görünür kalmalıdır.
+    if not str(robots_fetch.final_url).strip():
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_robots_result_contract",
+            target_kind="robots",
+            target_id=int(robots_fetch.host_id),
+            requested_url=str(robots_fetch.robots_url),
+            final_url=str(robots_fetch.final_url),
+            content_type=robots_fetch.content_type,
+            body_bytes=int(robots_fetch.body_bytes),
+            raw_storage_path=None if robots_fetch.raw_storage_path is None else str(robots_fetch.raw_storage_path),
+            raw_sha256=None if robots_fetch.raw_sha256 is None else str(robots_fetch.raw_sha256),
+            fetched_at=str(robots_fetch.fetched_at),
+            error_class="fetched_robots_final_url_empty",
+            error_message="FetchedRobotsTxtResult.final_url is empty",
+        )
+
+    # EN: fetched_at must stay ISO-parseable.
+    # TR: fetched_at ISO olarak parse edilebilir kalmalıdır.
+    try:
+        datetime.fromisoformat(str(robots_fetch.fetched_at))
+    except Exception as exc:
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_robots_result_contract",
+            target_kind="robots",
+            target_id=int(robots_fetch.host_id),
+            requested_url=str(robots_fetch.robots_url),
+            final_url=str(robots_fetch.final_url),
+            content_type=robots_fetch.content_type,
+            body_bytes=int(robots_fetch.body_bytes),
+            raw_storage_path=None if robots_fetch.raw_storage_path is None else str(robots_fetch.raw_storage_path),
+            raw_sha256=None if robots_fetch.raw_sha256 is None else str(robots_fetch.raw_sha256),
+            fetched_at=str(robots_fetch.fetched_at),
+            error_class="fetched_robots_fetched_at_invalid",
+            error_message=f"FetchedRobotsTxtResult.fetched_at is not ISO-parseable: {exc}",
+        )
+
+    # EN: Transport failures are valid only when no body artefact exists and byte
+    # EN: count stays zero.
+    # TR: Transport hataları yalnızca body artefact'ı yoksa ve byte sayısı sıfırsa
+    # TR: geçerli kabul edilir.
+    if robots_fetch.fetch_error_class is not None:
+        if (
+            robots_fetch.raw_storage_path is not None
+            or robots_fetch.raw_sha256 is not None
+            or int(robots_fetch.body_bytes) != 0
+        ):
+            return build_acquisition_contract_degraded_payload(
+                action="validate_fetched_robots_result_contract",
+                target_kind="robots",
+                target_id=int(robots_fetch.host_id),
+                requested_url=str(robots_fetch.robots_url),
+                final_url=str(robots_fetch.final_url),
+                content_type=robots_fetch.content_type,
+                body_bytes=int(robots_fetch.body_bytes),
+                raw_storage_path=None if robots_fetch.raw_storage_path is None else str(robots_fetch.raw_storage_path),
+                raw_sha256=None if robots_fetch.raw_sha256 is None else str(robots_fetch.raw_sha256),
+                fetched_at=str(robots_fetch.fetched_at),
+                error_class="fetched_robots_transport_contract_invalid",
+                error_message=(
+                    "FetchedRobotsTxtResult transport-failure contract is inconsistent "
+                    "(body/path/hash should be empty)"
+                ),
+            )
+        return None
+
+    # EN: Body-present robots results must have a persisted raw file and a valid digest.
+    # TR: Body içeren robots sonuçlarında saklanan ham dosya ve geçerli digest olmalıdır.
+    raw_storage_path = None if robots_fetch.raw_storage_path is None else str(robots_fetch.raw_storage_path).strip()
+    if not raw_storage_path:
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_robots_result_contract",
+            target_kind="robots",
+            target_id=int(robots_fetch.host_id),
+            requested_url=str(robots_fetch.robots_url),
+            final_url=str(robots_fetch.final_url),
+            content_type=robots_fetch.content_type,
+            body_bytes=int(robots_fetch.body_bytes),
+            raw_storage_path=None if robots_fetch.raw_storage_path is None else str(robots_fetch.raw_storage_path),
+            raw_sha256=None if robots_fetch.raw_sha256 is None else str(robots_fetch.raw_sha256),
+            fetched_at=str(robots_fetch.fetched_at),
+            error_class="fetched_robots_raw_storage_path_empty",
+            error_message="FetchedRobotsTxtResult.raw_storage_path is empty for body-present result",
+        )
+
+    controlled_read_result = read_controlled_raw_artefact_bytes(
+        action="validate_fetched_robots_result_contract",
+        target_kind="robots",
+        target_id=int(robots_fetch.host_id),
+        requested_url=str(robots_fetch.robots_url),
+        final_url=str(robots_fetch.final_url),
+        content_type=robots_fetch.content_type,
+        body_bytes=int(robots_fetch.body_bytes),
+        raw_storage_path=raw_storage_path,
+        raw_sha256=None if robots_fetch.raw_sha256 is None else str(robots_fetch.raw_sha256),
+        fetched_at=str(robots_fetch.fetched_at),
+    )
+    if isinstance(controlled_read_result, dict):
+        return controlled_read_result
+
+    path, raw_bytes = controlled_read_result
+    raw_storage_path = str(path)
+
+    raw_sha256 = None if robots_fetch.raw_sha256 is None else str(robots_fetch.raw_sha256).strip().lower()
+    if raw_sha256 is None or len(raw_sha256) != 64 or any(ch not in "0123456789abcdef" for ch in raw_sha256):
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_robots_result_contract",
+            target_kind="robots",
+            target_id=int(robots_fetch.host_id),
+            requested_url=str(robots_fetch.robots_url),
+            final_url=str(robots_fetch.final_url),
+            content_type=robots_fetch.content_type,
+            body_bytes=int(robots_fetch.body_bytes),
+            raw_storage_path=raw_storage_path,
+            raw_sha256=None if robots_fetch.raw_sha256 is None else str(robots_fetch.raw_sha256),
+            fetched_at=str(robots_fetch.fetched_at),
+            error_class="fetched_robots_raw_sha256_invalid",
+            error_message="FetchedRobotsTxtResult.raw_sha256 is empty or malformed",
+        )
+
+    actual_body_bytes = len(raw_bytes)
+    expected_body_bytes = int(robots_fetch.body_bytes)
+
+    if actual_body_bytes != expected_body_bytes:
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_robots_result_contract",
+            target_kind="robots",
+            target_id=int(robots_fetch.host_id),
+            requested_url=str(robots_fetch.robots_url),
+            final_url=str(robots_fetch.final_url),
+            content_type=robots_fetch.content_type,
+            body_bytes=expected_body_bytes,
+            raw_storage_path=raw_storage_path,
+            raw_sha256=raw_sha256,
+            fetched_at=str(robots_fetch.fetched_at),
+            error_class="fetched_robots_body_bytes_mismatch",
+            error_message=(
+                "FetchedRobotsTxtResult.body_bytes does not match persisted file size: "
+                f"expected={expected_body_bytes} actual={actual_body_bytes}"
+            ),
+        )
+
+    actual_sha256 = sha256_hex(raw_bytes)
+    if actual_sha256 != raw_sha256:
+        return build_acquisition_contract_degraded_payload(
+            action="validate_fetched_robots_result_contract",
+            target_kind="robots",
+            target_id=int(robots_fetch.host_id),
+            requested_url=str(robots_fetch.robots_url),
+            final_url=str(robots_fetch.final_url),
+            content_type=robots_fetch.content_type,
+            body_bytes=expected_body_bytes,
+            raw_storage_path=raw_storage_path,
+            raw_sha256=raw_sha256,
+            fetched_at=str(robots_fetch.fetched_at),
+            error_class="fetched_robots_raw_sha256_mismatch",
+            error_message=(
+                "FetchedRobotsTxtResult.raw_sha256 does not match persisted file digest: "
+                f"expected={raw_sha256} actual={actual_sha256}"
+            ),
+        )
+
+    # EN: No payload means the robots fetch contract is currently valid.
+    # TR: Payload dönmemesi robots fetch contract'ının şu anda geçerli olduğu anlamına gelir.
+    return None
+
+
 # EN: This helper returns the current UTC time as a real datetime object.
 # TR: Bu yardımcı mevcut UTC zamanını gerçek bir datetime nesnesi olarak döndürür.
 def utc_now() -> datetime:
