@@ -21,6 +21,40 @@ import psycopg
 from psycopg.rows import dict_row
 
 
+# EN: This helper converts a runtime-control SQL wrapper no-row condition into an
+# EN: operator-visible degraded payload so upper runtime layers can keep moving
+# EN: with honest unresolved control state instead of crashing again.
+# TR: Bu yardımcı runtime-control SQL wrapper no-row durumunu operatörün
+# TR: görebileceği degrade payload'a çevirir; böylece üst runtime katmanları
+# TR: yeniden çökmeden dürüst çözülmemiş kontrol durumu ile ilerleyebilir.
+def build_runtime_control_no_row_payload(
+    *,
+    action: str,
+    desired_state: str | None = None,
+    state_reason: str | None = None,
+    requested_by: str | None = None,
+    error_class: str,
+    error_message: str,
+) -> dict[str, Any]:
+    # EN: We keep one normalized degraded payload shape across runtime-control
+    # EN: wrappers so caller-visible results stay explicit and consistent.
+    # TR: Runtime-control wrapper'ları arasında tek ve normalize bir degrade
+    # TR: payload şekli tutuyoruz; böylece çağıranın gördüğü sonuç açık ve tutarlı kalır.
+    return {
+        "desired_state": desired_state,
+        "state_reason": state_reason,
+        "requested_by": requested_by,
+        "may_claim": None,
+        "runtime_control_action": action,
+        "runtime_control_degraded": True,
+        "runtime_control_degraded_reason": f"{action}_returned_no_row",
+        "runtime_control_completed": False,
+        "error_class": error_class,
+        "error_message": error_message,
+    }
+
+
+
 # EN: This function reads the current durable runtime-control row from the DB.
 # EN: It must stay a thin SQL wrapper and must hard-fail if the sealed SQL surface
 # EN: unexpectedly returns no row.
@@ -49,7 +83,11 @@ def get_webcrawler_runtime_control(conn: psycopg.Connection) -> dict[str, Any]:
     # EN: No row here would mean the lower SQL contract broke its explicit shape.
     # TR: Burada satır çıkmaması alt SQL sözleşmesinin açık şekli bozduğu anlamına gelir.
     if row is None:
-        raise RuntimeError("ops.get_webcrawler_runtime_control() returned no row")
+        return build_runtime_control_no_row_payload(
+            action="ops_get_webcrawler_runtime_control",
+            error_class="runtime_control_get_no_row",
+            error_message="ops.get_webcrawler_runtime_control() returned no row",
+        )
 
     # EN: We normalize the dict-row into a plain dict so upper layers stay simple.
     # TR: Üst katmanlar sade kalsın diye dict-row sonucunu düz dict'e normalize ediyoruz.
@@ -82,7 +120,11 @@ def webcrawler_runtime_may_claim(conn: psycopg.Connection) -> dict[str, Any]:
     # TR: Satırın eksik gelmesi alt SQL sözleşmesinin gateway beklentisini ihlal
     # TR: ettiği anlamına gelir.
     if row is None:
-        raise RuntimeError("ops.webcrawler_runtime_may_claim() returned no row")
+        return build_runtime_control_no_row_payload(
+            action="ops_webcrawler_runtime_may_claim",
+            error_class="runtime_control_may_claim_no_row",
+            error_message="ops.webcrawler_runtime_may_claim() returned no row",
+        )
 
     # EN: We normalize the dict-row into a plain dict.
     # TR: Dict-row sonucunu düz dict'e normalize ediyoruz.
@@ -133,7 +175,14 @@ def set_webcrawler_runtime_control(
     # TR: Satır dönmemesi alt mutation sözleşmesinin beklenmedik davrandığı
     # TR: anlamına gelir.
     if row is None:
-        raise RuntimeError("ops.set_webcrawler_runtime_control() returned no row")
+        return build_runtime_control_no_row_payload(
+            action="ops_set_webcrawler_runtime_control",
+            desired_state=desired_state,
+            state_reason=state_reason,
+            requested_by=requested_by,
+            error_class="runtime_control_set_no_row",
+            error_message="ops.set_webcrawler_runtime_control() returned no row",
+        )
 
     # EN: We normalize the dict-row into a plain dict.
     # TR: Dict-row sonucunu düz dict'e normalize ediyoruz.

@@ -253,6 +253,28 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
         # TR: crawler-core’dan claim edilebilir iş istemeden önce veritabanındaki
         # TR: görünür runtime-control doğrusunu okuyoruz.
         runtime_control = get_webcrawler_runtime_control(conn)
+
+        # EN: A degraded runtime-control read must not fall through into claim logic.
+        # EN: We roll back the transient connection state and return the visible
+        # EN: degraded payload honestly.
+        # TR: Degrade olmuş runtime-control okuması claim mantığına sızmamalıdır.
+        # TR: Geçici bağlantı durumunu rollback ediyor ve görünür degrade payload'ı
+        # TR: dürüst biçimde döndürüyoruz.
+        if bool(runtime_control.get("runtime_control_degraded")):
+            rollback(conn)
+            return ClaimProbeResult(
+                run_id=run_id,
+                claimed=False,
+                claimed_url=None,
+                robots_allow_decision=None,
+                storage_plan=storage_plan,
+                fetched_page=None,
+                finalize_result=dict(runtime_control),
+                parse_apply_result=parse_apply_result,
+                observed_at=utc_now_iso(),
+                runtime_control=dict(runtime_control),
+            )
+
         if runtime_control is None:
             raise RuntimeError("get_webcrawler_runtime_control(...) returned no row")
 
@@ -261,6 +283,34 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
         # TR: Ardından claim etmenin şu anda izinli olup olmadığını kanonik DB
         # TR: kontrol fonksiyonuna soruyoruz.
         may_claim_result = webcrawler_runtime_may_claim(conn)
+
+        # EN: A degraded may-claim read must not silently become a normal no-work
+        # EN: result. We roll back the transient claim path and return the visible
+        # EN: degraded control payload honestly.
+        # TR: Degrade olmuş may-claim okuması sessizce normal bir iş-yok sonucuna
+        # TR: dönüşmemelidir. Geçici claim yolunu rollback ediyor ve görünür
+        # TR: degrade kontrol payload'ını dürüst biçimde döndürüyoruz.
+        if bool(may_claim_result.get("runtime_control_degraded")):
+            degraded_runtime_control = {
+                **dict(runtime_control),
+                "may_claim": may_claim_result.get("may_claim"),
+                "may_claim_degraded": True,
+                "may_claim_degraded_reason": may_claim_result.get("runtime_control_degraded_reason"),
+            }
+            rollback(conn)
+            return ClaimProbeResult(
+                run_id=run_id,
+                claimed=False,
+                claimed_url=None,
+                robots_allow_decision=None,
+                storage_plan=storage_plan,
+                fetched_page=None,
+                finalize_result=dict(may_claim_result),
+                parse_apply_result=parse_apply_result,
+                observed_at=utc_now_iso(),
+                runtime_control=degraded_runtime_control,
+            )
+
         if may_claim_result is None:
             raise RuntimeError("webcrawler_runtime_may_claim(...) returned no row")
 
