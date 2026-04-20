@@ -1032,7 +1032,10 @@ def apply_minimal_parse_entry(
             "linked_snapshot_id": linked_snapshot_id,
             "raw_storage_path": raw_storage_path,
             "taxonomy_package_version": minimal_taxonomy_package_version(),
-            "taxonomy_candidate_count": len(taxonomy_candidates),
+            "taxonomy_candidate_count": len(persistable_taxonomy_candidates),
+            "taxonomy_candidate_input_count": len(raw_taxonomy_candidates),
+            "taxonomy_candidate_rejected_count": len(rejected_taxonomy_candidates),
+            "taxonomy_candidate_rejected_sample": rejected_taxonomy_candidates[:10],
             "persisted_candidate_count": persist_result["persisted_candidate_count"],
         },
     )

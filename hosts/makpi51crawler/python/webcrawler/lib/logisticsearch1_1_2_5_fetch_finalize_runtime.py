@@ -343,19 +343,42 @@ def finalize_unexpected_runtime_error(
     # EN: fails loudly instead of hiding drift.
     # TR: Minimal katman drift’i gizlemek yerine yüksek sesle hata versin diye
     # TR: bilinmeyen runtime hataları permanent kabul edilir.
-    finalize_result = finish_fetch_permanent_error(
-        conn,
-        url_id=url_id,
-        lease_token=lease_token,
-        http_status=None,
-        error_class="unexpected_fetch_runtime_error",
-        error_message=error_message,
-    )
+    try:
+        finalize_result = finish_fetch_permanent_error(
+            conn,
+            url_id=url_id,
+            lease_token=lease_token,
+            http_status=None,
+            error_class="unexpected_fetch_runtime_error",
+            error_message=error_message,
+        )
+        finalize_result_payload = dict(finalize_result)
+
+    # EN: A no-row finalize result must not crash the worker again. We degrade the
+    # EN: payload into an operator-visible unresolved state and keep the fetch-attempt
+    # EN: evidence that was already written in this transaction.
+    # TR: Finalize fonksiyonunun satır döndürmemesi worker’ı yeniden çökertmemelidir.
+    # TR: Payload’ı operatör-görünür çözülmemiş duruma düşürüyor ve bu transaction içinde
+    # TR: zaten yazılmış fetch-attempt kanıtını koruyoruz.
+    except RuntimeError as exc:
+        if "frontier.finish_fetch_permanent_error(...) returned no row" not in str(exc):
+            raise
+
+        finalize_result_payload = {
+            "url_id": url_id,
+            "lease_token": lease_token,
+            "http_status": None,
+            "error_class": "unexpected_fetch_runtime_error_finalize_no_row",
+            "error_message": f"{error_message} | finalize_no_row: {exc}",
+            "finalize_degraded": True,
+            "finalize_degraded_reason": "frontier_finish_fetch_permanent_error_returned_no_row",
+            "finalize_completed": False,
+        }
 
     # EN: We merge terminal per-attempt evidence into the returned payload.
     # TR: Terminal deneme-bazlı kanıtı dönen payload’a birleştiriyoruz.
     return {
-        **dict(finalize_result),
+        **finalize_result_payload,
         "fetch_attempt_log": dict(fetch_attempt_log),
     }
 
