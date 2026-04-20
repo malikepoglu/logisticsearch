@@ -798,8 +798,26 @@ def enqueue_minimal_discovered_links(
         conn,
         url_id=url_id,
     )
-    if parent_context is None:
-        raise RuntimeError("fetch_url_discovery_context(...) returned no row")
+
+    # EN: Discovery context no-row must degrade into a visible discovery result
+    # EN: instead of crashing the whole parse path.
+    # TR: Discovery context no-row durumu tüm parse yolunu çökertmek yerine
+    # TR: görünür bir discovery sonucuna degrade olmalıdır.
+    if bool(parent_context.get("discovery_degraded")):
+        return {
+            "parent_url_id": int(url_id),
+            "discovery_degraded": True,
+            "discovery_degraded_reason": str(parent_context.get("discovery_degraded_reason")),
+            "discovery_context_degraded": True,
+            "discovery_context": dict(parent_context),
+            "discovered_href_count": 0,
+            "normalized_url_count": 0,
+            "enqueued_url_count": 0,
+            "skipped_url_count": 0,
+            "degraded_enqueue_count": 0,
+            "enqueued_rows": [],
+            "degraded_rows": [],
+        }
 
     # EN: We read the raw HTML body from disk because discovery should use the same
     # EN: fetched artefact that parse already trusts.
@@ -815,9 +833,12 @@ def enqueue_minimal_discovered_links(
         limit=limit,
     )
 
-    # EN: We prepare the result accumulator.
-    # TR: Sonuç biriktiricisini hazırlıyoruz.
+    # EN: We prepare explicit success and degraded accumulators separately so
+    # EN: operator-visible discovery truth stays honest.
+    # TR: Operatörün göreceği discovery doğrusu dürüst kalsın diye başarılı ve
+    # TR: degrade biriktiricilerini ayrı hazırlıyoruz.
     enqueued_rows: list[dict] = []
+    degraded_rows: list[dict] = []
 
     for discovered_url in discovery_targets:
         parts = urlsplit(discovered_url)
@@ -846,18 +867,38 @@ def enqueue_minimal_discovered_links(
             enqueue_reason="minimal_html_link_discovery_from_parse_runtime",
         )
 
-        if enqueue_row is not None:
-            enqueued_rows.append(dict(enqueue_row))
+        # EN: We keep degraded enqueue outcomes visible instead of counting them
+        # EN: as successful enqueue rows.
+        # TR: Degrade enqueue sonuçlarını başarılı enqueue satırı gibi saymak
+        # TR: yerine görünür biçimde ayrı tutuyoruz.
+        if enqueue_row is None:
+            continue
 
-    # EN: We return one explicit structured discovery result.
-    # TR: Açık ve yapılı tek bir discovery sonucu döndürüyoruz.
+        enqueue_row = dict(enqueue_row)
+
+        if bool(enqueue_row.get("discovery_degraded")):
+            degraded_rows.append(enqueue_row)
+        else:
+            enqueued_rows.append(enqueue_row)
+
+    # EN: We return one explicit structured discovery result that keeps both
+    # EN: successful and degraded enqueue truth visible.
+    # TR: Başarılı ve degrade enqueue doğrularını birlikte görünür tutan açık ve
+    # TR: yapılı tek bir discovery sonucu döndürüyoruz.
     return {
         "parent_url_id": int(url_id),
+        "discovery_degraded": len(degraded_rows) > 0,
+        "discovery_degraded_reason": (
+            "enqueue_discovered_url_returned_no_row" if degraded_rows else None
+        ),
+        "discovery_context_degraded": False,
         "discovered_href_count": len(extract_candidate_hrefs_from_html(html_text)),
         "normalized_url_count": len(discovery_targets),
         "enqueued_url_count": len(enqueued_rows),
         "skipped_url_count": len(extract_candidate_hrefs_from_html(html_text)) - len(discovery_targets),
+        "degraded_enqueue_count": len(degraded_rows),
         "enqueued_rows": enqueued_rows,
+        "degraded_rows": degraded_rows,
     }
 
 

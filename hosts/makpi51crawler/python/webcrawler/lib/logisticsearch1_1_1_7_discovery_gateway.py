@@ -22,6 +22,51 @@ from psycopg.rows import dict_row
 
 
 
+# EN: This helper converts a discovery SQL wrapper no-row condition into an
+# EN: operator-visible degraded payload so parse runtime can continue with honest
+# EN: unresolved discovery state instead of crashing again.
+# TR: Bu yardımcı discovery SQL wrapper no-row durumunu operatörün görebileceği
+# TR: degrade payload'a çevirir; böylece parse runtime yeniden çökmeden dürüst
+# TR: çözülmemiş discovery durumu ile devam edebilir.
+def build_discovery_no_row_payload(
+    *,
+    action: str,
+    parent_url_id: int | None = None,
+    canonical_url: str | None = None,
+    depth: int | None = None,
+    priority: int | None = None,
+    scheme: str | None = None,
+    host: str | None = None,
+    port: int | None = None,
+    authority_key: str | None = None,
+    registrable_domain: str | None = None,
+    error_class: str,
+    error_message: str,
+) -> dict[str, Any]:
+    # EN: We keep one normalized degraded payload shape across discovery wrappers
+    # EN: so caller-visible results stay explicit and consistent.
+    # TR: Discovery wrapper'ları arasında tek ve normalize bir degrade payload
+    # TR: şekli tutuyoruz; böylece çağıranın gördüğü sonuç açık ve tutarlı kalır.
+    return {
+        "parent_url_id": parent_url_id,
+        "canonical_url": canonical_url,
+        "depth": depth,
+        "priority": priority,
+        "scheme": scheme,
+        "host": host,
+        "port": port,
+        "authority_key": authority_key,
+        "registrable_domain": registrable_domain,
+        "discovery_action": action,
+        "discovery_degraded": True,
+        "discovery_degraded_reason": f"{action}_returned_no_row",
+        "discovery_completed": False,
+        "error_class": error_class,
+        "error_message": error_message,
+    }
+
+
+
 # EN: This helper fetches the minimal parent-URL discovery context needed by the
 # EN: HTML discovery bridge.
 # TR: Bu yardımcı, HTML discovery köprüsünün ihtiyaç duyduğu minimal parent-URL
@@ -60,6 +105,18 @@ def fetch_url_discovery_context(
             },
         )
         row = cur.fetchone()
+
+    # EN: A no-row response must degrade into an operator-visible payload instead
+    # EN: of crashing the parent parse runtime.
+    # TR: No-row yanıtı parent parse runtime'ı çökertmek yerine operatörün
+    # TR: görebileceği degrade payload'a dönmelidir.
+    if row is None:
+        return build_discovery_no_row_payload(
+            action="fetch_url_discovery_context",
+            parent_url_id=url_id,
+            error_class="discovery_context_no_row",
+            error_message="fetch_url_discovery_context(...) returned no row",
+        )
 
     # EN: We return the raw mapping so the caller can inspect the exact context.
     # TR: Çağıran taraf tam bağlamı inceleyebilsin diye ham mapping döndürüyoruz.
@@ -136,6 +193,26 @@ def enqueue_discovered_url(
             },
         )
         row = cur.fetchone()
+
+    # EN: A no-row response must degrade into an operator-visible payload instead
+    # EN: of becoming a silent enqueue loss.
+    # TR: No-row yanıtı sessiz bir enqueue kaybına dönüşmek yerine operatörün
+    # TR: görebileceği degrade payload'a dönmelidir.
+    if row is None:
+        return build_discovery_no_row_payload(
+            action="enqueue_discovered_url",
+            parent_url_id=parent_url_id,
+            canonical_url=canonical_url,
+            depth=depth,
+            priority=priority,
+            scheme=scheme,
+            host=host,
+            port=port,
+            authority_key=authority_key,
+            registrable_domain=registrable_domain,
+            error_class="discovery_enqueue_no_row",
+            error_message="frontier.enqueue_discovered_url(...) returned no row",
+        )
 
     # EN: We return the raw mapping so the caller can inspect the exact enqueue result.
     # TR: Çağıran taraf tam enqueue sonucunu inceleyebilsin diye ham mapping döndürüyoruz.
