@@ -1,3 +1,43 @@
+"""\
+EN:
+This file is the repo-tracked bridge between reviewed seed rows and the live
+frontier surfaces that workers can actually claim from.
+
+Topological role:
+- Input truth begins in seed.seed_url.
+- Output truth is materialized into frontier.host and frontier.url.
+- This file does not perform crawling; it prepares crawlable frontier rows.
+- The bridge is intentionally DB-contract-aware and column-aware so it can adapt
+  to the exact live frontier schema exposed by the database.
+
+Important runtime values in this file:
+- DEFAULT_ENV_FILE: explicit env file path used by the CLI corridor.
+- ParsedCanonicalUrl: normalized URL payload used by frontier upsert helpers.
+- ready_seed_rows: list[dict] of seed rows still eligible for bridging.
+- result_rows: per-row operator-readable receipts.
+- host_id/url_id: integer identifiers of the live frontier rows.
+- committed: bool set only by the outer CLI transaction branch.
+
+TR:
+Bu dosya gözden geçirilmiş seed satırları ile worker'ların gerçekten claim
+edebildiği canlı frontier yüzeyleri arasındaki repo-tracked köprüdür.
+
+Topolojik rol:
+- Girdi doğrusu seed.seed_url içinde başlar.
+- Çıktı doğrusu frontier.host ve frontier.url içine somutlaştırılır.
+- Bu dosya crawl yapmaz; crawl edilebilir frontier satırlarını hazırlar.
+- Köprü bilinçli olarak DB-sözleşmesi ve sütun sözleşmesi farkında yazılmıştır;
+  böylece veritabanının açığa çıkardığı exact canlı frontier şemasına uyum sağlar.
+
+Bu dosyadaki önemli runtime değerleri:
+- DEFAULT_ENV_FILE: CLI koridorunda kullanılan açık env dosya yolu.
+- ParsedCanonicalUrl: frontier upsert yardımcılarının kullandığı normalize URL payload'ı.
+- ready_seed_rows: hâlâ köprülenmeye uygun seed satırlarından oluşan list[dict].
+- result_rows: satır başına operatör-okunur makbuzlar.
+- host_id/url_id: canlı frontier satırlarının tamsayı kimlikleri.
+- committed: yalnızca dış CLI transaction dalında ayarlanan bool.
+"""
+
 # EN: This module is the repo-tracked bridge between the reviewed seed surfaces
 # EN: stored in seed.seed_url and the real frontier.host / frontier.url runtime
 # EN: surfaces that the worker can actually claim from.
@@ -109,6 +149,12 @@ def require_psycopg_runtime() -> None:
 
 # EN: This default path matches the current live runtime env surface on pi51c.
 # TR: Bu varsayılan yol, pi51c üzerindeki mevcut live runtime env yüzeyi ile eşleşir.
+# EN: DEFAULT_ENV_FILE is the canonical live-runtime env file path used by the
+# EN: CLI when the operator does not override --env-file. It is always a Path
+# EN: object at import time, not a string.
+# TR: DEFAULT_ENV_FILE operatör --env-file ile override etmediğinde CLI'nin
+# TR: kullandığı kanonik canlı-runtime env dosya yoludur. Import anında her zaman
+# TR: string değil Path nesnesidir.
 DEFAULT_ENV_FILE = Path("/logisticsearch/webcrawler/config/webcrawler.env")
 
 
@@ -117,6 +163,35 @@ DEFAULT_ENV_FILE = Path("/logisticsearch/webcrawler/config/webcrawler.env")
 # TR: Bu dataclass tek bir canonical URL’nin exact frontier-ready ayrıştırmasını tutar.
 @dataclass(slots=True)
 class ParsedCanonicalUrl:
+    """\
+    EN:
+    Normalized frontier-ready decomposition of a single canonical URL.
+
+    Field contract summary:
+    - canonical_url: original normalized URL text.
+    - canonical_url_sha256: deterministic hash text of canonical_url.
+    - scheme: currently expected to be "http" or "https".
+    - host: lowercase hostname text, never empty.
+    - port: effective integer port.
+    - authority_key: stable host identity used by frontier.host logic.
+    - registrable_domain: coarse registrable-domain approximation.
+    - url_path: normalized path text; never empty because "/" is used as fallback.
+    - url_query: raw query text without leading "?"; may be empty string.
+
+    TR:
+    Tek bir canonical URL'nin normalize edilmiş frontier-ready ayrıştırmasıdır.
+
+    Alan sözleşmesi özeti:
+    - canonical_url: özgün normalize URL metni.
+    - canonical_url_sha256: canonical_url'nin deterministik hash metni.
+    - scheme: şu an için beklenen değerler "http" veya "https".
+    - host: küçük harfli hostname metni; asla boş değildir.
+    - port: etkin tamsayı port.
+    - authority_key: frontier.host mantığında kullanılan stabil host kimliği.
+    - registrable_domain: kaba registrable-domain yaklaşımı.
+    - url_path: normalize path metni; fallback olarak "/" kullanıldığı için boş kalmaz.
+    - url_query: baştaki "?" olmadan ham query metni; boş metin olabilir.
+    """
     # EN: canonical_url is the original normalized target URL.
     # TR: canonical_url özgün normalize hedef URL’dir.
     canonical_url: str
@@ -160,6 +235,25 @@ class ParsedCanonicalUrl:
 # TR: Bu dataclass tek bir satır düzeyi bridge sonucunu tutar.
 @dataclass(slots=True)
 class SeedFrontierBridgeRowResult:
+    """\
+    EN:
+    Row-level bridge receipt for one seed row.
+
+    Branch-sensitive fields:
+    - host_id/url_id are positive integers on success-style branches.
+    - host_id/url_id fall back to 0 on exception/error receipt branches.
+    - note is a short text token explaining whether the URL was created,
+      already present, or failed with an explicit error note.
+
+    TR:
+    Tek bir seed satırı için satır düzeyi bridge makbuzudur.
+
+    Dala duyarlı alanlar:
+    - host_id/url_id başarı tarzı dallarda pozitif tamsayılardır.
+    - host_id/url_id istisna/hata makbuzu dallarında 0'a düşer.
+    - note alanı URL'nin oluşturulduğunu, zaten mevcut olduğunu veya açık bir
+      hata notuyla başarısız olduğunu anlatan kısa metin tokenıdır.
+    """
     # EN: source_code identifies the seed.source family row.
     # TR: source_code seed.source aile satırını tanımlar.
     source_code: str
@@ -202,6 +296,23 @@ class SeedFrontierBridgeRowResult:
 # TR: Bu dataclass tam bridge çalıştırmasının sonucunu tutar.
 @dataclass(slots=True)
 class SeedFrontierBridgeResult:
+    """\
+    EN:
+    Full run receipt returned by the bridge corridor.
+
+    Important branches:
+    - committed is not decided by the core bridge function; it is finalized by
+      the outer CLI branch after commit/rollback selection.
+    - row_results is always a list payload, even when it is empty.
+
+    TR:
+    Bridge koridoru tarafından dönen tam çalıştırma makbuzudur.
+
+    Önemli dallar:
+    - committed değeri çekirdek bridge fonksiyonu tarafından belirlenmez; commit/
+      rollback seçiminin ardından dış CLI dalı tarafından sonlandırılır.
+    - row_results boş olsa bile her zaman list payload olarak kalır.
+    """
     # EN: env_file records which env file provided the live DSN.
     # TR: env_file canlı DSN’i hangi env dosyasının sağladığını kaydeder.
     env_file: str
@@ -249,8 +360,31 @@ def utc_now_iso() -> str:
 # EN: This helper reads a small KEY=VALUE env file without executing shell code.
 # TR: Bu yardımcı küçük KEY=VALUE env dosyasını shell kodu çalıştırmadan okur.
 def parse_simple_env_file(path: Path) -> dict[str, str]:
+    """\
+    EN:
+    Parse a narrow KEY=VALUE env file into a plain dict[str, str].
+
+    Return branches:
+    - dict[str, str] containing parsed keys.
+    - Empty dict when the file exists but contributes no usable KEY=VALUE rows.
+    - Raises FileNotFoundError or decoding/runtime errors when the file cannot be
+      read normally.
+
+    TR:
+    Dar bir KEY=VALUE env dosyasını düz dict[str, str] yapısına parse eder.
+
+    Dönüş dalları:
+    - Parse edilen anahtarları taşıyan dict[str, str].
+    - Dosya mevcut olsa bile kullanılabilir KEY=VALUE satırı üretmiyorsa boş dict.
+    - Dosya normal biçimde okunamazsa FileNotFoundError veya çözümleme/runtime
+      hataları yükseltir.
+    """
     # EN: data collects the parsed key/value pairs.
     # TR: data ayrıştırılmış anahtar/değer çiftlerini toplar.
+    # EN: data is the accumulating plain string dictionary produced by this narrow
+    # EN: env parser. Every accepted key and value is normalized to stripped text.
+    # TR: data bu dar env parser'ının ürettiği biriken düz metin sözlüğüdür.
+    # TR: Kabul edilen her anahtar ve değer kırpılmış metne normalize edilir.
     data: dict[str, str] = {}
 
     # EN: We iterate over every raw line because comments and blank lines should
@@ -301,6 +435,23 @@ def parse_simple_env_file(path: Path) -> dict[str, str]:
 # EN: This helper extracts the crawler DSN from the runtime env file.
 # TR: Bu yardımcı crawler DSN’ini runtime env dosyasından çıkarır.
 def crawler_dsn_from_env_file(env_file: Path) -> str:
+    """\
+    EN:
+    Resolve LOGISTICSEARCH_CRAWLER_DSN from an explicit env file.
+
+    Return contract:
+    - Returns non-empty DSN text.
+    - Raises RuntimeError when the expected key is absent or empty.
+    - Never returns None.
+
+    TR:
+    LOGISTICSEARCH_CRAWLER_DSN değerini açık bir env dosyasından çözer.
+
+    Dönüş sözleşmesi:
+    - Boş olmayan DSN metni döndürür.
+    - Beklenen anahtar yoksa veya boşsa RuntimeError yükseltir.
+    - Asla None döndürmez.
+    """
     # EN: env_map stores the parsed env file contents.
     # TR: env_map ayrıştırılmış env dosyası içeriğini tutar.
     env_map = parse_simple_env_file(env_file)
@@ -392,18 +543,53 @@ def build_registrable_domain(host: str) -> str:
 # EN: This helper parses one canonical URL into frontier-ready fields.
 # TR: Bu yardımcı tek bir canonical URL’yi frontier-ready alanlara ayrıştırır.
 def parse_canonical_url_text(canonical_url: str) -> ParsedCanonicalUrl:
+    """\
+    EN:
+    Parse one canonical URL string into the exact payload required by the bridge.
+
+    Input contract:
+    - canonical_url must be a public URL string.
+    - Supported schemes in the current bridge corridor are http and https only.
+
+    Return branches:
+    - ParsedCanonicalUrl on success.
+    - Raises ValueError when scheme/host requirements are not met.
+
+    TR:
+    Tek bir canonical URL metnini köprünün ihtiyaç duyduğu exact payload'a çevirir.
+
+    Girdi sözleşmesi:
+    - canonical_url public URL metni olmalıdır.
+    - Mevcut bridge koridorunda desteklenen şemalar yalnızca http ve https'tir.
+
+    Dönüş dalları:
+    - Başarıda ParsedCanonicalUrl.
+    - Scheme/host gereksinimleri sağlanmazsa ValueError yükseltir.
+    """
     # EN: parts stores the structured URL decomposition.
     # TR: parts yapılandırılmış URL ayrıştırmasını tutar.
+    # EN: parts is the standard-library URL decomposition object. It is not yet the
+    # EN: final bridge payload; it is only the raw parsed source used to derive it.
+    # TR: parts standart kütüphane URL ayrıştırma nesnesidir. Henüz nihai bridge
+    # TR: payload'ı değildir; onu türetmek için kullanılan ham ayrıştırma kaynağıdır.
     parts = urlsplit(canonical_url)
 
     # EN: scheme must be explicit and supported by the first crawler bridge.
     # TR: scheme ilk crawler bridge tarafından açık ve desteklenir olmalıdır.
+    # EN: scheme is normalized lowercase text. Allowed values in this corridor are
+    # EN: only "http" and "https"; any other value raises ValueError.
+    # TR: scheme normalize edilmiş küçük harfli metindir. Bu koridorda izin verilen
+    # TR: değerler yalnızca "http" ve "https"tir; diğer değerler ValueError üretir.
     scheme = (parts.scheme or "").lower()
     if scheme not in {"http", "https"}:
         raise ValueError(f"unsupported scheme for frontier bridge: {canonical_url}")
 
     # EN: host is the lowercase hostname seen by frontier.host.
     # TR: host frontier.host tarafından görülen küçük harfli hostname değeridir.
+    # EN: host is the lowercase hostname text used by frontier.host/frontier.url.
+    # EN: Empty host is invalid and becomes a ValueError branch.
+    # TR: host frontier.host/frontier.url tarafından kullanılan küçük harfli
+    # TR: hostname metnidir. Boş host geçersizdir ve ValueError dalına gider.
     host = (parts.hostname or "").lower()
     if host == "":
         raise ValueError(f"canonical_url has no hostname: {canonical_url}")
@@ -412,6 +598,10 @@ def parse_canonical_url_text(canonical_url: str) -> ParsedCanonicalUrl:
     # EN: authority_key decides whether they should collapse.
     # TR: port etkin ağ portudur. Varsayılan portlar burada açık kalır; bunların
     # TR: authority_key içinde daralıp daralmayacağına authority_key karar verir.
+    # EN: port is always normalized to an integer effective port. It never remains
+    # EN: None after this line.
+    # TR: port her zaman etkin tamsayı porta normalize edilir. Bu satırdan sonra
+    # TR: None olarak kalmaz.
     port = parts.port if parts.port is not None else (443 if scheme == "https" else 80)
 
     # EN: authority_key is the stable host identity for frontier.host lookup/upsert.
@@ -790,6 +980,43 @@ def bridge_ready_seed_rows_to_frontier(
     *,
     limit: int | None = None,
 ) -> SeedFrontierBridgeResult:
+    """\
+    EN:
+    Materialize ready seed rows into frontier.host/frontier.url rows.
+
+    Input contract:
+    - conn: live psycopg connection already chosen by the caller.
+    - limit: optional positive int-like cap or None for all currently ready rows.
+
+    Return contract:
+    - SeedFrontierBridgeResult with row_results list payload.
+    - committed stays False here because transaction finalization belongs to the
+      outer caller/CLI corridor.
+
+    Important variable branches:
+    - ready_seed_rows: list[dict[str, object]], possibly empty.
+    - parsed_url: ParsedCanonicalUrl on success branch per row.
+    - host_id/url_id: int ids on successful row reconciliation.
+    - note: success token or explicit error token.
+
+    TR:
+    Hazır seed satırlarını frontier.host/frontier.url satırlarına somutlaştırır.
+
+    Girdi sözleşmesi:
+    - conn: çağıran tarafından seçilmiş canlı psycopg bağlantısı.
+    - limit: opsiyonel pozitif int-benzeri sınır veya tüm hazır satırlar için None.
+
+    Dönüş sözleşmesi:
+    - row_results list payload'ı taşıyan SeedFrontierBridgeResult.
+    - committed burada False kalır; transaction sonlandırması dış çağıran/CLI
+      koridorunun işidir.
+
+    Önemli değişken dalları:
+    - ready_seed_rows: list[dict[str, object]], boş olabilir.
+    - parsed_url: satır başına başarı dalında ParsedCanonicalUrl.
+    - host_id/url_id: başarılı satır uzlaştırmasında int kimlikler.
+    - note: başarı tokenı veya açık hata tokenı.
+    """
     # EN: result_rows accumulates per-seed outcomes in operator-readable form.
     # TR: result_rows seed-başı sonuçları operatör-okunur biçimde biriktirir.
     result_rows: list[dict[str, object]] = []
@@ -809,11 +1036,26 @@ def bridge_ready_seed_rows_to_frontier(
         # EN: We read the exact live frontier column sets before doing any bridge work.
         # TR: Herhangi bir bridge işi yapmadan önce exact canlı frontier sütun
         # TR: kümelerini okuyoruz.
+        # EN: frontier_host_columns is the exact live set[str] of insertable/visible
+        # EN: frontier.host columns. This keeps the bridge contract aligned to the
+        # EN: actual database instead of assumptions.
+        # TR: frontier_host_columns canlı frontier.host sütunlarının exact set[str]
+        # TR: kümesidir. Böylece köprü varsayımlara değil gerçek veritabanına hizalanır.
         frontier_host_columns = load_frontier_column_names(cur, "host")
+        # EN: frontier_url_columns is the exact live set[str] of frontier.url column
+        # EN: names used to build a safe dynamic insert payload.
+        # TR: frontier_url_columns güvenli dinamik insert payload'ı kurmak için
+        # TR: kullanılan frontier.url sütun adlarının exact canlı set[str] kümesidir.
         frontier_url_columns = load_frontier_column_names(cur, "url")
 
         # EN: ready_seed_rows is the ordered queue of still-unenqueued seed rows.
         # TR: ready_seed_rows hâlâ unenqueued durumda olan seed satırlarının sıralı kuyruğudur.
+        # EN: ready_seed_rows is a list of dict rows representing seed entries that
+        # EN: are still eligible for bridging. It may be empty; an empty list is a
+        # EN: normal no-work branch, not an error.
+        # TR: ready_seed_rows köprülenmeye hâlâ uygun seed girdilerini temsil eden
+        # TR: dict satırlarından oluşan listedir. Boş olabilir; boş liste hata değil,
+        # TR: normal bir no-work dalıdır.
         ready_seed_rows = select_ready_seed_rows(cur, limit=limit)
 
         # EN: Each seed row gets its own SAVEPOINT. This means one bad seed row does
@@ -825,10 +1067,22 @@ def bridge_ready_seed_rows_to_frontier(
             try:
                 # EN: parsed_url is the frontier-ready URL decomposition for this seed.
                 # TR: parsed_url bu seed için frontier-ready URL ayrıştırmasıdır.
+                # EN: parsed_url is the required ParsedCanonicalUrl payload derived from
+                # EN: the seed row's canonical_url text. If parsing fails, control jumps
+                # EN: to the row-local error branch below.
+                # TR: parsed_url seed satırının canonical_url metninden türetilen zorunlu
+                # TR: ParsedCanonicalUrl payload'ıdır. Parse başarısız olursa akış aşağıdaki
+                # TR: satır-yerel hata dalına gider.
                 parsed_url = parse_canonical_url_text(str(seed_row["canonical_url"]))
 
                 # EN: host row is ensured first because frontier.url depends on host_id.
                 # TR: frontier.url host_id’ye bağlı olduğu için önce host satırı garanti edilir.
+                # EN: host_id is the integer frontier.host identifier used by the URL row.
+                # EN: host_created is a bool that tells whether this bridge run inserted a
+                # EN: new host row or reused an existing one.
+                # TR: host_id URL satırının kullandığı frontier.host tamsayı kimliğidir.
+                # TR: host_created bu bridge çalışmasının yeni host satırı ekleyip eklemediğini
+                # TR: veya mevcut satırı yeniden kullanıp kullanmadığını söyleyen bool değerdir.
                 host_id, host_created = ensure_frontier_host_for_parsed_url(
                     cur,
                     frontier_host_columns,
@@ -837,6 +1091,10 @@ def bridge_ready_seed_rows_to_frontier(
 
                 # EN: url row is then ensured against the exact frontier.url contract.
                 # TR: Ardından exact frontier.url sözleşmesine karşı url satırı garanti edilir.
+                # EN: url_id is the integer frontier.url identifier produced by the bridge.
+                # EN: url_created is True only when a new URL row had to be inserted.
+                # TR: url_id köprü tarafından üretilen frontier.url tamsayı kimliğidir.
+                # TR: url_created yalnızca yeni bir URL satırı eklemek gerektiğinde True olur.
                 url_id, url_created = ensure_frontier_url_for_seed_row(
                     cur,
                     frontier_url_columns,
@@ -848,8 +1106,16 @@ def bridge_ready_seed_rows_to_frontier(
                 # EN: We build one explicit result note before marking the seed row.
                 # TR: Seed satırını işaretlemeden önce tek bir açık sonuç notu kuruyoruz.
                 if url_created:
+                    # EN: note is a short operator-readable success token. In this branch
+                    # EN: it explicitly records that a new frontier.url row was created.
+                    # TR: note kısa operatör-okunur başarı tokenıdır. Bu dalda yeni bir
+                    # TR: frontier.url satırının oluşturulduğunu açıkça kaydeder.
                     note = "seed_bridged_to_frontier_url_created_v1"
                 else:
+                    # EN: This branch records that the canonical URL was already present
+                    # EN: in frontier.url and therefore no new URL row was inserted.
+                    # TR: Bu dal canonical URL'nin frontier.url içinde zaten mevcut
+                    # TR: olduğunu ve bu nedenle yeni URL satırı eklenmediğini kaydeder.
                     note = "seed_bridged_to_frontier_url_already_present_v1"
 
                 # EN: Seed row is marked as enqueued so it will not be bridged again blindly.
@@ -937,6 +1203,35 @@ def bridge_result_to_dict(result: SeedFrontierBridgeResult) -> dict[str, object]
 # TR: Bu CLI giriş noktası canlı crawler DSN’ini env dosyasından açar, bridge’i
 # TR: çalıştırır ve ardından commit veya rollback yapar.
 def main() -> int:
+    """\
+    EN:
+    CLI entry for the seed->frontier bridge corridor.
+
+    Broad steps:
+    1) resolve env file,
+    2) resolve DSN,
+    3) run bridge,
+    4) commit or roll back,
+    5) print structured JSON receipt.
+
+    Return contract:
+    - 0 when execution reaches a structured JSON receipt successfully.
+    - 1 when an exception is caught and converted into an error JSON payload.
+
+    TR:
+    Seed->frontier bridge koridorunun CLI girişidir.
+
+    Geniş adımlar:
+    1) env file çöz,
+    2) DSN çöz,
+    3) bridge çalıştır,
+    4) commit veya rollback yap,
+    5) yapılı JSON makbuz bas.
+
+    Dönüş sözleşmesi:
+    - Yapılı JSON makbuzuna başarıyla ulaşıldığında 0.
+    - İstisna yakalanıp hata JSON payload'ına çevrildiğinde 1.
+    """
     # EN: Argument parser defines the narrow operator-visible surface.
     # TR: Argument parser dar operatör-görünür yüzeyi tanımlar.
     parser = argparse.ArgumentParser(
@@ -962,6 +1257,10 @@ def main() -> int:
 
     # EN: env_file is the explicit runtime env surface chosen by the operator.
     # TR: env_file operatör tarafından seçilen açık runtime env yüzeyidir.
+    # EN: env_file is the explicit Path chosen for DSN resolution. It is always a
+    # EN: Path object here even if the CLI argument originally arrived as text.
+    # TR: env_file DSN çözümü için seçilen açık Path değeridir. CLI argümanı önce
+    # TR: metin olarak gelmiş olsa bile burada her zaman Path nesnesidir.
     env_file = Path(args.env_file)
 
     try:
@@ -973,6 +1272,10 @@ def main() -> int:
 
         # EN: dsn is resolved from the env file so the CLI stays aligned with live runtime config.
         # TR: CLI canlı runtime konfigürasyonu ile hizalı kalsın diye dsn env dosyasından çözülür.
+        # EN: dsn is the non-empty PostgreSQL connection text resolved from env_file.
+        # EN: It is required for all DB-backed bridge work and never intentionally None.
+        # TR: dsn env_file içinden çözülen boş olmayan PostgreSQL bağlantı metnidir.
+        # TR: Tüm DB-destekli bridge işleri için zorunludur ve bilinçli olarak asla None değildir.
         dsn = crawler_dsn_from_env_file(env_file)
 
         # EN: We open one explicit psycopg connection with dict_row results for readability.
@@ -983,6 +1286,10 @@ def main() -> int:
                 limit=args.limit,
             )
 
+            # EN: payload is the JSON-ready dict receipt derived from the result dataclass.
+            # EN: It becomes the single structured stdout surface for outer audits.
+            # TR: payload result dataclass'ından türetilen JSON-ready dict makbuzudur.
+            # TR: Dış auditler için tek yapılı stdout yüzeyine dönüşür.
             payload = bridge_result_to_dict(result)
             payload["env_file"] = str(env_file)
             payload["observed_at"] = utc_now_iso()

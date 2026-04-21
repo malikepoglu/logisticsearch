@@ -1,3 +1,47 @@
+"""\
+EN:
+This module is the canonical operator-facing CLI/control surface that sits
+directly under the thin root entry.
+
+Scope contract:
+- It is allowed to parse CLI arguments and print structured JSON.
+- It is allowed to inspect or mutate runtime-control state through the gateway.
+- It is allowed to execute one worker probe iteration or a repeated loop of
+  worker probe iterations.
+- It is not the place where low-level claim/fetch/parse logic is implemented;
+  that logic lives in the worker runtime family.
+
+Important payload shapes surfaced here:
+- runtime_control: dict-like snapshot returned by gateway helpers.
+- may_claim_result: dict returned by runtime-control policy evaluation.
+- config: WorkerConfig dataclass passed into run_claim_probe(...).
+- payload: JSON-serializable dict printed to stdout.
+- desired_state: normalized text token such as play/pause/stop.
+- probe_only: bool routed into WorkerConfig; True means rollback-style probe,
+  False means durable claim path.
+
+TR:
+Bu modül ince kök girişin hemen altında duran kanonik operatör-yüzlü CLI/kontrol
+yüzeyidir.
+
+Kapsam sözleşmesi:
+- CLI argümanlarını parse etmesine ve yapılı JSON basmasına izin verilir.
+- Gateway üzerinden runtime-control durumunu inceleyebilir veya değiştirebilir.
+- Tek worker probe iterasyonu veya tekrar eden worker probe iterasyonları
+  çalıştırabilir.
+- Düşük seviye claim/fetch/parse mantığının sahibi değildir; bu mantık worker
+  runtime ailesinde yaşar.
+
+Burada görünür olan önemli payload şekilleri:
+- runtime_control: gateway yardımcılarından dönen dict-benzeri anlık görüntü.
+- may_claim_result: runtime-control policy değerlendirmesinden dönen dict.
+- config: run_claim_probe(...) içine verilen WorkerConfig dataclass nesnesi.
+- payload: stdout'a basılan JSON-serileştirilebilir dict.
+- desired_state: play/pause/stop gibi normalize edilmiş metin tokenı.
+- probe_only: WorkerConfig içine taşınan bool; True rollback-benzeri probe,
+  False durable claim yolu demektir.
+"""
+
 # EN: We enable postponed evaluation of type hints for cleaner forward-friendly
 # EN: annotations.
 # TR: Daha temiz ve ileriye uyumlu annotation'lar için type hint çözümlemesini erteliyoruz.
@@ -54,10 +98,32 @@ from .logisticsearch1_1_2_worker_runtime import WorkerConfig, run_claim_probe
 # TR: Bu fonksiyon environment içinden DSN okur ve yerel audit çalışmaları için
 # TR: kontrollü bir scratch varsayılanına geri düşer.
 def default_dsn() -> str:
+    """\
+    EN:
+    Resolve the crawler DSN for this CLI surface.
+
+    Branch contract:
+    - Returns str from LOGISTICSEARCH_CRAWLER_DSN when that variable is present
+      and non-empty.
+    - Otherwise returns a controlled local scratch fallback string.
+    - This helper never returns None.
+
+    TR:
+    Bu CLI yüzeyi için crawler DSN değerini çözer.
+
+    Dal sözleşmesi:
+    - LOGISTICSEARCH_CRAWLER_DSN varsa ve boş değilse oradaki str değeri döner.
+    - Aksi durumda kontrollü yerel scratch fallback str değeri döner.
+    - Bu yardımcı asla None döndürmez.
+    """
     # EN: We first check LOGISTICSEARCH_CRAWLER_DSN because explicit operator
     # EN: configuration is more honest than a hidden hard-coded assumption.
     # TR: Önce LOGISTICSEARCH_CRAWLER_DSN değişkenini kontrol ediyoruz; çünkü
     # TR: açık operatör konfigürasyonu gizli hard-coded varsayımdan daha dürüsttür.
+    # EN: env_value is either a non-empty DSN string chosen by the operator or
+    # EN: None/empty when no explicit DSN override exists in the environment.
+    # TR: env_value ya operatör tarafından seçilmiş boş olmayan DSN metnidir ya da
+    # TR: environment içinde açık bir DSN override yoksa None/boş değerdir.
     env_value = os.getenv("LOGISTICSEARCH_CRAWLER_DSN")
 
     # EN: If the environment variable is present and non-empty, we trust that
@@ -78,8 +144,29 @@ def default_dsn() -> str:
 # TR: Bu fonksiyon environment'dan worker id okur ve deterministik, demo-dostu
 # TR: bir varsayılana geri döner.
 def default_worker_id() -> str:
+    """\
+    EN:
+    Resolve the visible worker identity used in claim-oriented calls.
+
+    Return contract:
+    - str from LOGISTICSEARCH_WORKER_ID when explicitly provided.
+    - Otherwise deterministic fallback worker id.
+    - Never returns None.
+
+    TR:
+    Claim-odaklı çağrılarda kullanılan görünür worker kimliğini çözer.
+
+    Dönüş sözleşmesi:
+    - LOGISTICSEARCH_WORKER_ID açıkça verilmişse oradaki str değer döner.
+    - Aksi durumda deterministik fallback worker id döner.
+    - Asla None döndürmez.
+    """
     # EN: We check a dedicated environment variable first.
     # TR: Önce ayrılmış environment variable değerine bakıyoruz.
+    # EN: env_value carries the visible worker identity override. It is expected
+    # EN: to be text because downstream claim surfaces use textual worker ids.
+    # TR: env_value görünür worker identity override değerini taşır. Aşağı akış
+    # TR: claim yüzeyleri metinsel worker id kullandığı için burada metin beklenir.
     env_value = os.getenv("LOGISTICSEARCH_WORKER_ID")
 
     # EN: If the operator provided a worker id, we keep it.
@@ -99,8 +186,29 @@ def default_worker_id() -> str:
 # TR: Bu fonksiyon environment'dan bir control-request kimliği okur ve stabil bir
 # TR: CLI-kaynaklı varsayılana geri düşer.
 def default_requested_by() -> str:
+    """\
+    EN:
+    Resolve the operator/requester identity written into runtime-control rows.
+
+    Return contract:
+    - str from LOGISTICSEARCH_CONTROL_REQUESTED_BY when present.
+    - Otherwise stable CLI-origin fallback identity.
+    - Never returns None.
+
+    TR:
+    Runtime-control satırlarına yazılan operatör/istekçi kimliğini çözer.
+
+    Dönüş sözleşmesi:
+    - LOGISTICSEARCH_CONTROL_REQUESTED_BY varsa oradaki str değeri döner.
+    - Aksi durumda stabil CLI-kaynaklı fallback kimliği döner.
+    - Asla None döndürmez.
+    """
     # EN: We first check the explicit operator override variable.
     # TR: Önce açık operatör override değişkenine bakıyoruz.
+    # EN: env_value is the optional text identity written into runtime-control
+    # EN: audit fields such as requested_by.
+    # TR: env_value requested_by gibi runtime-control audit alanlarına yazılan
+    # TR: opsiyonel metinsel kimliktir.
     env_value = os.getenv("LOGISTICSEARCH_CONTROL_REQUESTED_BY")
 
     # EN: If the operator provided a value, we keep it.
@@ -120,8 +228,31 @@ def default_requested_by() -> str:
 # TR: Bu fonksiyon yeni dosya yüzeyi oluşturmadan mevcut operatör yüzeyi için
 # TR: komut satırı parser'ını kurar.
 def build_parser() -> argparse.ArgumentParser:
+    """\
+    EN:
+    Build the current CLI parser for runtime-control and worker-probe operations.
+
+    Return contract:
+    - Returns argparse.ArgumentParser.
+    - The parser exposes DSN, worker_id, lease_seconds, probe_only-related
+      durable-claim selection, loop cadence, and runtime-control inspection/
+      mutation flags.
+
+    TR:
+    Runtime-control ve worker-probe işlemleri için mevcut CLI parser'ını kurar.
+
+    Dönüş sözleşmesi:
+    - argparse.ArgumentParser döndürür.
+    - Parser; DSN, worker_id, lease_seconds, probe_only ile ilişkili
+      durable-claim seçimi, loop temposu ve runtime-control inceleme/değiştirme
+      bayraklarını dışa açar.
+    """
     # EN: We create the parser with a narrow description so current scope stays honest.
     # TR: Güncel kapsam dürüst kalsın diye parser'ı dar bir açıklamayla oluşturuyoruz.
+    # EN: parser is the single ArgumentParser instance for this module. It stays
+    # EN: local to keep the file surface simple and to avoid hidden global CLI state.
+    # TR: parser bu modülün tek ArgumentParser örneğidir. Dosya yüzeyi sade kalsın
+    # TR: ve gizli global CLI durumu oluşmasın diye yerel tutulur.
     parser = argparse.ArgumentParser(
         description="Controlled worker probe, runtime-control, and loop operator surface for LogisticSearch crawler_core."
     )
@@ -265,12 +396,50 @@ def build_parser() -> argparse.ArgumentParser:
 # TR: Bu yardımcı loop modunun sonraki iterasyondan önce ne kadar uyuyacağını
 # TR: görünür runtime-control anlık görüntüsüne göre belirler.
 def sleep_between_loop_iterations(*, payload: dict, sleep_seconds: float, pause_sleep_seconds: float) -> float:
+    """\
+    EN:
+    Choose the next loop sleep duration from the visible runtime-control payload.
+
+    Input contract:
+    - payload: dict expected to possibly contain payload["runtime_control"].
+    - sleep_seconds: normal cadence when no pause state is visible.
+    - pause_sleep_seconds: slower cadence used when desired_state == "pause".
+
+    Return branches:
+    - float pause_sleep_seconds when desired_state resolves to "pause".
+    - float sleep_seconds for all remaining branches, including missing or empty
+      runtime_control payload.
+
+    TR:
+    Görünür runtime-control payload'ından bir sonraki loop uyku süresini seçer.
+
+    Girdi sözleşmesi:
+    - payload: muhtemelen payload["runtime_control"] içeren dict.
+    - sleep_seconds: görünür pause durumu yoksa normal tempo.
+    - pause_sleep_seconds: desired_state == "pause" olduğunda kullanılan daha yavaş tempo.
+
+    Dönüş dalları:
+    - desired_state "pause" ise float pause_sleep_seconds.
+    - Eksik/boş runtime_control dahil kalan tüm dallarda float sleep_seconds.
+    """
     # EN: We read the optional runtime-control snapshot from the returned payload.
     # TR: Dönen payload içinden opsiyonel runtime-control anlık görüntüsünü okuyoruz.
+    # EN: runtime_control is expected to be a dict-like snapshot. Missing/None
+    # EN: branches are normalized to an empty dict so downstream .get(...) calls
+    # EN: remain branch-safe.
+    # TR: runtime_control dict-benzeri anlık görüntü olarak beklenir. Eksik/None
+    # TR: dallar boş dict'e normalize edilir; böylece aşağıdaki .get(...) çağrıları
+    # TR: dal-güvenli kalır.
     runtime_control = payload.get("runtime_control") or {}
 
     # EN: We extract the desired state as a normalized text token.
     # TR: desired_state değerini normalize edilmiş metin tokenı olarak çıkarıyoruz.
+    # EN: desired_state is always normalized into lowercase text. Typical visible
+    # EN: values here include "pause", "play", "stop", or empty string when the
+    # EN: upstream payload did not expose a desired_state field.
+    # TR: desired_state her zaman küçük harfli metne normalize edilir. Buradaki
+    # TR: tipik görünür değerler "pause", "play", "stop" veya upstream payload
+    # TR: desired_state alanı taşımıyorsa boş metindir.
     desired_state = str(runtime_control.get("desired_state") or "").strip().lower()
 
     # EN: Pause should keep the process alive but slower.
@@ -284,6 +453,45 @@ def sleep_between_loop_iterations(*, payload: dict, sleep_seconds: float, pause_
 
 
 def main() -> int:
+    """\
+    EN:
+    Execute the canonical CLI surface for one of three broad corridors:
+    1) runtime-control inspection/mutation,
+    2) single worker probe,
+    3) repeated worker loop.
+
+    Return contract:
+    - 0 on successful structured execution.
+    - 2 when runtime-control or may-claim reads/writes are explicitly degraded
+      but still rendered as visible JSON.
+    - Unexpected exceptions are not swallowed here.
+
+    Important visible variables:
+    - config: WorkerConfig forwarded to run_claim_probe(...).
+    - runtime_control: dict snapshot read from gateway helpers.
+    - may_claim_result: dict explaining whether claims are currently permitted.
+    - payload: final JSON-serializable dict printed to stdout.
+    - probe_only: bool embedded inside config via durable-claim inversion.
+
+    TR:
+    Üç ana koridordan birini çalıştıran kanonik CLI yüzeyidir:
+    1) runtime-control inceleme/değiştirme,
+    2) tek worker probe,
+    3) tekrar eden worker loop.
+
+    Dönüş sözleşmesi:
+    - Yapılı çalıştırma başarılıysa 0.
+    - Runtime-control veya may-claim okuma/yazma açıkça degrade olup yine de
+      görünür JSON olarak basılıyorsa 2.
+    - Beklenmeyen istisnalar burada yutulmaz.
+
+    Önemli görünür değişkenler:
+    - config: run_claim_probe(...) içine iletilen WorkerConfig.
+    - runtime_control: gateway yardımcılarından okunan dict anlık görüntü.
+    - may_claim_result: claim izni verilip verilmediğini açıklayan dict.
+    - payload: stdout'a basılan son JSON-serileştirilebilir dict.
+    - probe_only: durable-claim terslenmesiyle config içine gömülen bool.
+    """
     # EN: We construct the parser first.
     # TR: Önce parser'ı kuruyoruz.
     parser = build_parser()
@@ -304,6 +512,12 @@ def main() -> int:
         try:
             # EN: We start with no set-result because show-only mode may not change anything.
             # TR: Show-only mod hiçbir şeyi değiştirmeyebileceği için başlangıçta set-result yoktur.
+            # EN: set_result starts as None because show-only runtime-control mode
+            # EN: may inspect state without writing anything. Later it becomes a dict
+            # EN: when set_webcrawler_runtime_control(...) actually runs.
+            # TR: set_result başlangıçta None'dır; çünkü yalnızca gösterim yapan
+            # TR: runtime-control modu hiçbir şey yazmadan durumu inceleyebilir.
+            # TR: set_webcrawler_runtime_control(...) çalışırsa daha sonra dict olur.
             set_result = None
 
             # EN: If the operator requested a durable state change, we execute it first.
@@ -355,6 +569,12 @@ def main() -> int:
 
             # EN: We also read the may-claim decision and merge it into the payload.
             # TR: may-claim kararını da okuyup payload içine birleştiriyoruz.
+            # EN: may_claim_result is the policy-evaluation dict returned by the
+            # EN: gateway. It normally carries a bool-like may_claim field and may also
+            # EN: carry degraded markers when the control surface cannot be trusted fully.
+            # TR: may_claim_result gateway tarafından dönen policy değerlendirme
+            # TR: dict'idir. Normalde bool-benzeri may_claim alanı taşır; ayrıca kontrol
+            # TR: yüzeyi tam güvenilir değilse degraded işaretleri de taşıyabilir.
             may_claim_result = webcrawler_runtime_may_claim(conn)
 
             # EN: A degraded may-claim read must stay visible instead of pretending
@@ -396,6 +616,13 @@ def main() -> int:
     # EN: stays visible and structured.
     # TR: Argümanların anlamı görünür ve yapılı kalsın diye açık bir runtime
     # TR: konfigürasyon nesnesi kuruyoruz.
+    # EN: config is the structured runtime contract forwarded into run_claim_probe.
+    # EN: It contains the DSN text, textual worker_id, integer lease duration, and
+    # EN: the probe_only bool that decides rollback-style vs durable claim behavior.
+    # TR: config run_claim_probe içine iletilen yapılandırılmış runtime sözleşmesidir.
+    # TR: DSN metnini, metinsel worker_id değerini, tamsayı lease süresini ve
+    # TR: rollback-benzeri probe ile durable claim davranışını belirleyen probe_only
+    # TR: bool alanını taşır.
     config = WorkerConfig(
         dsn=args.dsn,
         worker_id=args.worker_id,
@@ -404,6 +631,12 @@ def main() -> int:
         # EN: so a successful claim is committed instead of rolled back.
         # TR: Durable-claim modu istendiğinde probe_only değeri False olmalıdır;
         # TR: böylece başarılı claim rollback yerine commit edilir.
+        # EN: probe_only is False only when --durable-claim was explicitly chosen.
+        # EN: Typical branches: True -> probe/rollback corridor, False -> durable
+        # EN: leased-claim corridor.
+        # TR: probe_only yalnızca --durable-claim açıkça seçildiğinde False olur.
+        # TR: Tipik dallar: True -> probe/rollback koridoru, False -> durable
+        # TR: leased-claim koridoru.
         probe_only=not args.durable_claim,
     )
 
@@ -418,6 +651,10 @@ def main() -> int:
 
         # EN: We convert the dataclass result into plain Python data for JSON output.
         # TR: JSON çıktısı için dataclass sonucunu düz Python verisine dönüştürüyoruz.
+        # EN: payload becomes a plain dict copy of the worker result dataclass so
+        # EN: JSON serialization is deterministic and explicit.
+        # TR: payload worker sonuç dataclass'ının düz dict kopyasına dönüşür; böylece
+        # TR: JSON serileştirmesi deterministik ve açık olur.
         payload = asdict(result)
 
         # EN: We print JSON with indentation so both humans and tools can inspect it.
@@ -434,6 +671,10 @@ def main() -> int:
     # EN: optional iteration cap is reached.
     # TR: Loop modunda runtime-control stop diyene veya opsiyonel iterasyon sınırına
     # TR: ulaşılana kadar iterasyon yapıyoruz.
+    # EN: iteration is the visible loop counter. It stays integer-typed and starts
+    # EN: at 0 so the first executed loop body reports iteration 1.
+    # TR: iteration görünür loop sayacıdır. Tamsayı tipinde kalır ve 0'dan başlar;
+    # TR: böylece ilk çalıştırılan loop gövdesi iteration 1 olarak raporlanır.
     iteration = 0
 
     while True:
@@ -460,6 +701,12 @@ def main() -> int:
 
         # EN: We extract the visible runtime-control desired state from the payload.
         # TR: Payload içinden görünür runtime-control desired state değerini çıkarıyoruz.
+        # EN: runtime_control is re-read from the just-produced payload so loop exit
+        # EN: and sleep decisions are based on the same visible snapshot the operator
+        # EN: sees in stdout.
+        # TR: runtime_control yeni üretilen payload içinden tekrar okunur; böylece loop
+        # TR: çıkış ve uyku kararları operatörün stdout'ta gördüğü aynı anlık görüntüye
+        # TR: dayanır.
         runtime_control = payload.get("runtime_control") or {}
         desired_state = str(runtime_control.get("desired_state") or "").strip().lower()
 

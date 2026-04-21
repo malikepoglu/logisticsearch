@@ -1,43 +1,67 @@
-# EN: This module is the canonical root entry surface for the webcrawler runtime.
-# TR: Bu modül, webcrawler runtime'ı için kanonik kök giriş yüzeyidir.
+"""\
+EN:
+This file is the single canonical root entry for the current webcrawler runtime tree.
 
-# EN: Tree logic says there must be exactly one thin root entry at the top.
-# EN: That root entry must not own worker logic, DB logic, or loop policy.
-# EN: Its only job is to delegate execution to the next topological level and
-# EN: preserve the real process exit code honestly.
-# TR: Ağaç mantığına göre en üstte tam olarak tek bir ince kök giriş olmalıdır.
-# TR: Bu kök giriş worker mantığına, DB mantığına veya loop politikasına sahip
-# TR: olmamalıdır. Tek görevi, çalıştırmayı bir alt topolojik seviyeye devretmek
-# TR: ve gerçek süreç çıkış kodunu dürüst biçimde korumaktır.
+Topological contract:
+1) This file is intentionally thin.
+2) It must not own crawler policy, worker state, DB access, or loop branching.
+3) It imports exactly one next-level callable and returns that callable's integer
+   process status unchanged.
+4) Its only observable payload is the delegated exit code.
 
-# EN: We import the real main loop from the next topological level.
-# EN: We alias it to run_main_loop so the role of this imported callable stays
-# EN: visually explicit at the root-entry layer.
-# TR: Gerçek ana loop'u bir alt topolojik seviyeden içe aktarıyoruz.
-# TR: Bu içe aktarılan çağrılabilirin rolü kök giriş katmanında görsel olarak
-# TR: açık kalsın diye ona run_main_loop takma adını veriyoruz.
+TR:
+Bu dosya mevcut webcrawler runtime ağacının tek kanonik kök giriş noktasıdır.
+
+Topolojik sözleşme:
+1) Bu dosya bilinçli olarak ince tutulur.
+2) Crawler policy, worker state, DB access veya loop branching sahipliği yapmaz.
+3) Tam olarak bir alt-seviye çağrılabilir içe aktarır ve onun ürettiği tamsayı
+   süreç durum kodunu değiştirmeden geri döndürür.
+4) Dışarıya görünen tek payload delege edilen çıkış kodudur.
+"""
+
+# EN: The root entry imports the next topological layer and gives it a visually
+# EN: explicit alias. This alias is always expected to be a callable that accepts
+# EN: no arguments here and returns an integer process-style exit status.
+# TR: Kök giriş bir alt topolojik katmanı içe aktarır ve ona görsel olarak açık
+# TR: bir takma ad verir. Buradaki beklenti bu takma adın parametresiz çağrılabilen
+# TR: ve tamsayı süreç-benzeri çıkış kodu döndüren bir callable olmasıdır.
 from .logisticsearch1_1_main_loop import main as run_main_loop
 
 
-# EN: This function is the explicit callable root entry.
-# EN: It must stay thin and must return the exact integer process status produced
-# EN: by the delegated main loop instead of swallowing it.
-# TR: Bu fonksiyon açık çağrılabilir kök giriş noktasıdır.
-# TR: İnce kalmalı ve devredilen ana loop'un ürettiği tam sayı süreç durum kodunu
-# TR: yutmadan aynen geri döndürmelidir.
 def main() -> int:
-    # EN: We delegate execution to the main continuous loop and return its status
-    # EN: unchanged so outer CLI callers can preserve the real result.
-    # TR: Çalıştırmayı ana sürekli loop'a devrediyor ve dış CLI çağıranları gerçek
-    # TR: sonucu koruyabilsin diye onun durum kodunu değiştirmeden geri döndürüyoruz.
+    """\
+    EN:
+    Execute the next topological runtime layer and return its status unchanged.
+
+    Return contract:
+    - int: delegated process exit status from logisticsearch1_1_main_loop.main().
+    - No dict/payload/None branch exists at this layer.
+    - Unexpected exceptions are intentionally not swallowed here; they should
+      remain visible to the outer Python process.
+
+    TR:
+    Bir alt topolojik runtime katmanını çalıştırır ve onun durum kodunu aynen döndürür.
+
+    Dönüş sözleşmesi:
+    - int: logisticsearch1_1_main_loop.main() tarafından üretilen delege süreç
+      çıkış kodu.
+    - Bu katmanda dict/payload/None dalı yoktur.
+    - Beklenmeyen istisnalar burada özellikle yutulmaz; dış Python sürecine görünür
+      kalmalıdır.
+    """
+
+    # EN: There is no local branch logic here. We delegate immediately so this
+    # EN: file stays a truthful root-entry wrapper instead of becoming a second
+    # EN: hidden control layer.
+    # TR: Burada yerel branch mantığı yoktur. Bu dosya gizli ikinci bir kontrol
+    # TR: katmanına dönüşmesin diye hemen delegasyon yapıyoruz.
     return run_main_loop()
 
 
-# EN: This standard guard allows canonical module execution.
-# EN: We raise SystemExit with main() so direct module execution preserves the
-# EN: returned integer status code in normal Python CLI style.
-# TR: Bu standart guard kanonik modül çalıştırmasını sağlar.
-# TR: main() ile SystemExit yükseltiyoruz; böylece modül doğrudan çalıştırıldığında
-# TR: dönen tam sayı durum kodu normal Python CLI stilinde korunur.
 if __name__ == "__main__":
+    # EN: SystemExit(main()) preserves the delegated integer exit code when the
+    # EN: module is executed directly with Python.
+    # TR: SystemExit(main()) modül Python ile doğrudan çalıştırıldığında delege
+    # TR: edilen tamsayı çıkış kodunu korur.
     raise SystemExit(main())
