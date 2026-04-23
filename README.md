@@ -30,29 +30,35 @@ This repository is the canonical working base of the LogisticSearch project. It 
 Bu repository, LogisticSearch projesinin kanonik çalışma tabanıdır. Crawler export yüzeyini, desktop intake sözleşmesini, SQL ve Python destek katmanlarını, proje yapısını, veri akışı sınırlarını ve repository temizliği etrafında gelişen operasyon kurallarını tanımlamak ve standardize etmek için kullanılmaktadır. Repository’nin hem çalıştırılabilir bir çalışma ağacı hem de sistemin nasıl şekillendiğini gösteren uzun vadeli bir mühendislik kaydı olarak faydalı kalması beklenmektedir.
 ## Reading map for starting from zero
 
-If you are starting from zero, do **not** read the repository randomly.
+If you are starting from zero, do not read the repository randomly.
 
-Use this order:
+Read these first, in this exact order:
 
-1. `docs/README.md` — documentation hub and the safest beginner entry point
-2. `hosts/makpi51crawler/python/README.md` — Python surface map
-3. `hosts/makpi51crawler/sql/README.md` — SQL surface map
-4. `hosts/makpi51crawler/crawler_exports/README.md` — export and data-flow surface map
+1. `docs/TOPIC_BILINGUAL_COMMENT_DENSITY_AUDIT_AND_THRESHOLD_MODEL.md` — universal explanation and recoverability rule
+2. `docs/STATUS_STAGE21_PROJECT_CONTINUITY_AND_NEXT_ACTIONS.md` — current project position, continuity truth, and immediate next-action frame
+3. `docs/TODO_STAGE21_TIMESTAMPED_EXECUTION_QUEUE.md` — living timestamped execution queue; this file must keep moving as work moves
+4. `docs/README.md` — documentation hub and the safest general beginner entry point
+5. `hosts/makpi51crawler/python/README.md` — Python surface map
+6. `hosts/makpi51crawler/sql/README.md` — SQL surface map
+7. `hosts/makpi51crawler/crawler_exports/README.md` — export and data-flow surface map
 
-Only after the hub-level meaning is clear should you continue into the lower-level README files inside those surfaces.
+Only after the continuity and hub-level meaning is clear should you continue into lower-level README files and technical source files.
 
 ## Sıfırdan başlamak için okuma haritası
 
-Sıfırdan başlıyorsan repository'yi rastgele okuma.
+Sıfırdan başlıyorsan repository’yi rastgele okuma.
 
-Şu sırayı kullan:
+Önce tam olarak şu sırayı oku:
 
-1. `docs/README.md` — dokümantasyon merkezi ve başlangıç için en güvenli giriş noktası
-2. `hosts/makpi51crawler/python/README.md` — Python yüzey haritası
-3. `hosts/makpi51crawler/sql/README.md` — SQL yüzey haritası
-4. `hosts/makpi51crawler/crawler_exports/README.md` — export ve veri akışı yüzey haritası
+1. `docs/TOPIC_BILINGUAL_COMMENT_DENSITY_AUDIT_AND_THRESHOLD_MODEL.md` — evrensel açıklama ve geri-kurulabilirlik kuralı
+2. `docs/STATUS_STAGE21_PROJECT_CONTINUITY_AND_NEXT_ACTIONS.md` — güncel proje konumu, süreklilik doğrusu ve yakın sonraki adım çerçevesi
+3. `docs/TODO_STAGE21_TIMESTAMPED_EXECUTION_QUEUE.md` — yaşayan zaman damgalı execution queue; iş ilerledikçe bu dosya da ilerlemelidir
+4. `docs/README.md` — dokümantasyon merkezi ve genel başlangıç için en güvenli giriş noktası
+5. `hosts/makpi51crawler/python/README.md` — Python yüzey haritası
+6. `hosts/makpi51crawler/sql/README.md` — SQL yüzey haritası
+7. `hosts/makpi51crawler/crawler_exports/README.md` — export ve veri akışı yüzey haritası
 
-Bu yüzeylerin içindeki alt README dosyalarına ancak hub seviyesindeki anlam netleştikten sonra geç.
+Süreklilik ve hub-seviyesi anlam netleşmeden alt README dosyalarına ve teknik kaynak dosyalarına geçme.
 
 ## Taxonomy and Domain Scope
 

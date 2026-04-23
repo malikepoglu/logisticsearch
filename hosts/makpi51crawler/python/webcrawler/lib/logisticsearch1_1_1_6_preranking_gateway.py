@@ -1,7 +1,150 @@
+"""
+EN:
+This file is the preranking child of the state DB gateway family.
+
+EN:
+Why this file exists:
+- because preranking-specific DB truth should live behind one explicit named gateway child
+- because upper layers should use readable Python helpers instead of repeating raw SQL semantics for preranking persistence
+- because preranking visibility is a separate concern from frontier claim truth, runtime control truth, robots truth, and terminal fetch-attempt logging
+
+EN:
+What this file DOES:
+- expose preranking-oriented DB helper boundaries
+- expose named helpers for reading or persisting preranking-related truth
+- preserve visible branch boundaries for upper runtime layers
+
+EN:
+What this file DOES NOT do:
+- it does not own shared DB connection helpers
+- it does not own runtime-control truth
+- it does not own frontier claim truth
+- it does not parse HTML by itself
+- it does not act as an operator CLI surface
+
+EN:
+Topological role:
+- gateway_support sits below this file for shared DB support
+- this file sits in the middle for preranking-specific DB truth
+- parse/runtime layers above call these helpers instead of embedding raw preranking SQL ideas
+
+EN:
+Important visible values and shapes:
+- conn => live DB connection object
+- page or candidate identifiers => the records whose preranking truth is being read or written
+- score / signals / features / evidence payloads => structured preranking-related meaning
+- no-row / degraded visibility => non-happy branches that should remain explicit
+
+EN:
+Accepted architectural identity:
+- preranking truth gateway
+- scoring-or-persistence DB-adjacent helper layer
+- readable preranking contract boundary
+
+EN:
+Undesired architectural identity:
+- hidden crawler controller
+- hidden parse executor
+- hidden ranking engine beyond its DB-boundary role
+- hidden operator CLI surface
+
+TR:
+Bu dosya state DB gateway ailesinin preranking child yüzeyidir.
+
+TR:
+Bu dosya neden var:
+- çünkü prerankinge özgü DB doğrusu tek ve açık isimli gateway child yüzeyi arkasında yaşamalıdır
+- çünkü üst katmanlar ham SQL semantiğini tekrar etmek yerine preranking kalıcılığı için okunabilir Python yardımcıları kullanmalıdır
+- çünkü preranking görünürlüğü frontier claim doğrusu, runtime control doğrusu, robots doğrusu ve terminal fetch-attempt loggingten ayrı bir konudur
+
+TR:
+Bu dosya NE yapar:
+- preranking odaklı DB yardımcı sınırlarını açığa çıkarır
+- preranking ile ilgili doğruları okumak veya kalıcılaştırmak için isimli yardımcılar sunar
+- üst runtime katmanları için görünür dal sınırlarını korur
+
+TR:
+Bu dosya NE yapmaz:
+- ortak DB bağlantı yardımcılarının sahibi değildir
+- runtime-control doğrusunun sahibi değildir
+- frontier claim doğrusunun sahibi değildir
+- HTMLi kendi başına parse etmez
+- operatör CLI yüzeyi gibi davranmaz
+
+TR:
+Topolojik rol:
+- ortak DB desteği için gateway_support bu dosyanın altındadır
+- prerankinge özgü DB doğrusu için bu dosya ortadadır
+- üstteki parse/runtime katmanları ham preranking SQL fikrini gömmek yerine bu yardımcıları çağırır
+
+TR:
+Önemli görünür değerler ve şekiller:
+- conn => canlı DB bağlantı nesnesi
+- page veya candidate kimlikleri => preranking doğrusu okunan veya yazılan kayıtlar
+- score / signals / features / evidence payloadları => yapılı preranking anlamı
+- no-row / degraded görünürlüğü => açık kalması gereken mutlu-yol-dışı dallar
+
+TR:
+Kabul edilen mimari kimlik:
+- preranking truth gateway
+- scoring-or-persistence DB-yanı yardımcı katmanı
+- okunabilir preranking sözleşme sınırı
+
+TR:
+İstenmeyen mimari kimlik:
+- gizli crawler controller
+- gizli parse yürütücüsü
+- DB-sınırı rolünün ötesine geçen gizli ranking motoru
+- gizli operatör CLI yüzeyi
+"""
+
 # EN: This module is the preranking child of the state DB gateway family.
 # EN: It owns only taxonomy/preranking/workflow DB wrappers.
 # TR: Bu modül state DB gateway ailesinin preranking alt yüzeyidir.
 # TR: Yalnızca taxonomy/preranking/workflow DB wrapper'larını taşır.
+
+# EN: PRERANKING GATEWAY IDENTITY MEMORY BLOCK V6
+# EN:
+# EN: This file should be read as the DB-boundary layer where preranking truth becomes durable and inspectable.
+# EN: Beginner mental model:
+# EN: - earlier layers discover signals or candidate meaning
+# EN: - this gateway child helps persist or read preranking-side truth
+# EN: - upper layers should not hand-write DB logic every time they need preranking visibility
+# EN:
+# EN: Accepted architectural meaning:
+# EN: - named preranking DB-truth boundary
+# EN: - score/signal persistence helper surface
+# EN:
+# EN: Undesired architectural meaning:
+# EN: - hidden parse executor
+# EN: - hidden final-ranking engine
+# EN: - hidden operator surface
+# EN:
+# EN: Important value-shape reminders:
+# EN: - signal or scoring payloads may be structured dict-like shapes
+# EN: - page/candidate identity should remain explicit
+# EN: - missing-row or degraded branches should stay visible
+# TR: PRERANKING GATEWAY KIMLIK HAFIZA BLOĞU V6
+# TR:
+# TR: Bu dosya preranking doğrusunun kalıcı ve denetlenebilir hale geldiği DB-sınırı katmanı gibi okunmalıdır.
+# TR: Başlangıç seviyesi zihinsel model:
+# TR: - önceki katmanlar sinyal veya aday anlamını keşfeder
+# TR: - bu gateway child preranking tarafı doğrusunu okumaya veya kalıcılaştırmaya yardım eder
+# TR: - üst katmanlar her preranking görünürlüğünde DB mantığını elle yazmamalıdır
+# TR:
+# TR: Kabul edilen mimari anlam:
+# TR: - isimli preranking DB-truth sınırı
+# TR: - score/signal persistence yardımcı yüzeyi
+# TR:
+# TR: İstenmeyen mimari anlam:
+# TR: - gizli parse yürütücüsü
+# TR: - gizli final-ranking motoru
+# TR: - gizli operatör yüzeyi
+# TR:
+# TR: Önemli değer-şekli hatırlatmaları:
+# TR: - signal veya scoring payloadları yapılı dict-benzeri şekiller olabilir
+# TR: - page/candidate kimliği açık kalmalıdır
+# TR: - missing-row veya degraded dalları görünür kalmalıdır
 
 from __future__ import annotations
 
@@ -27,6 +170,65 @@ from psycopg.rows import dict_row
 # TR: Bu yardımcı preranking/workflow SQL wrapper no-row durumunu operatörün
 # TR: görebileceği degrade payload'a çevirir; böylece üst parse runtime katmanları
 # TR: yeniden çökmeden dürüst çözülmemiş durumla ilerleyebilir.
+# EN: PRERANKING HELPER PURPOSE MEMORY BLOCK V6 / build_preranking_no_row_payload
+# EN:
+# EN: Why this helper exists:
+# EN: - because preranking-specific DB truth for 'build_preranking_no_row_payload' should be exposed through one named helper boundary
+# EN: - because upper layers should call a readable preranking helper name instead of repeating raw SQL semantics
+# EN: - because preranking persistence or lookup should remain inspectable at the Python boundary
+# EN:
+# EN: Accepted input:
+# EN: - the explicit parameters of this helper are: action, url_id, input_lang_code, taxonomy_package_version, top_candidate_count, top_score, linked_snapshot_id, workflow_state, state_reason, persisted_candidate_count, error_class, error_message
+# EN: - values should match the current Python signature and the live preranking SQL contract below
+# EN:
+# EN: Accepted output:
+# EN: - a preranking-oriented result shape defined by the current function body and DB truth
+# EN: - this may be a structured payload, a score/signal write result, a lookup result, or another explicit branch result
+# EN:
+# EN: Common preranking meaning hints:
+# EN: - this helper likely exposes score, prerank, or candidate-ordering-related DB truth
+# EN: - score payloads, evidence fields, or degraded write visibility may matter here
+# EN:
+# EN: Important beginner reminder:
+# EN: - this helper is not the source of truth about full ranking policy by itself
+# EN: - it is the named boundary where preranking-side truth becomes durable or readable
+# EN:
+# EN: Undesired behavior:
+# EN: - silent hidden mutation without a named helper boundary
+# EN: - forcing upper layers to understand raw preranking SQL semantics instead of this helper contract
+# TR: PRERANKING YARDIMCISI AMAÇ HAFIZA BLOĞU V6 / build_preranking_no_row_payload
+# TR:
+# TR: Bu yardımcı neden var:
+# TR: - çünkü 'build_preranking_no_row_payload' için prerankinge özgü DB doğrusu tek ve isimli bir yardımcı sınırı üzerinden açığa çıkmalıdır
+# TR: - çünkü üst katmanlar ham preranking SQL semantiğini tekrar etmek yerine okunabilir preranking yardımcı adı çağırmalıdır
+# TR: - çünkü preranking kalıcılığı veya okuması Python sınırında denetlenebilir kalmalıdır
+# TR:
+# TR: Kabul edilen girdi:
+# TR: - bu yardımcının açık parametreleri şunlardır: action, url_id, input_lang_code, taxonomy_package_version, top_candidate_count, top_score, linked_snapshot_id, workflow_state, state_reason, persisted_candidate_count, error_class, error_message
+# TR: - değerler aşağıdaki mevcut Python imzası ve canlı preranking SQL sözleşmesi ile uyumlu olmalıdır
+# TR:
+# TR: Kabul edilen çıktı:
+# TR: - mevcut fonksiyon gövdesi ve DB doğrusu tarafından belirlenen preranking-odaklı sonuç şekli
+# TR: - bu; yapılı payload, score/signal write sonucu, lookup sonucu veya başka açık dal sonucu olabilir
+# TR:
+# TR: Ortak preranking anlam ipuçları:
+# TR: - bu yardımcı büyük ihtimalle score, prerank veya aday-sıralama ile ilgili DB doğrusunu açığa çıkarır
+# TR: - score payloadları, evidence alanları veya degrade yazma görünürlüğü burada önemli olabilir
+# TR:
+# TR: Önemli başlangıç hatırlatması:
+# TR: - bu yardımcı tek başına tam ranking politikasının kaynağı değildir
+# TR: - bu, preranking tarafı doğrusunun kalıcı veya okunabilir hale geldiği isimli sınırdır
+# TR:
+# TR: İstenmeyen davranış:
+# TR: - isimli yardımcı sınırı olmadan sessiz gizli değişim
+# TR: - üst katmanları bu yardımcı sözleşmesi yerine ham preranking SQL semantiğini anlamaya zorlamak
+
+# EN: REAL-RULE AST REPAIR / DEF build_preranking_no_row_payload
+# EN: build_preranking_no_row_payload is an explicit preranking-gateway helper/runtime contract.
+# EN: Parameters kept explicit here: action, url_id, input_lang_code, taxonomy_package_version, top_candidate_count, top_score, linked_snapshot_id, workflow_state, state_reason, persisted_candidate_count, error_class, error_message.
+# TR: REAL-RULE AST REPAIR / FONKSIYON build_preranking_no_row_payload
+# TR: build_preranking_no_row_payload acik bir preranking-gateway helper/runtime sozlesmesidir.
+# TR: Burada acik tutulan parametreler: action, url_id, input_lang_code, taxonomy_package_version, top_candidate_count, top_score, linked_snapshot_id, workflow_state, state_reason, persisted_candidate_count, error_class, error_message.
 def build_preranking_no_row_payload(
     *,
     action: str,
@@ -72,6 +274,65 @@ def build_preranking_no_row_payload(
 # EN: can persist one minimal parse payload into the parse schema.
 # TR: Bu yardımcı parse.persist_taxonomy_preranking_payload(...) çağrısını yapar;
 # TR: böylece Python tek bir minimal parse payload'ını parse şemasına yazabilir.
+# EN: PRERANKING HELPER PURPOSE MEMORY BLOCK V6 / persist_taxonomy_preranking_payload
+# EN:
+# EN: Why this helper exists:
+# EN: - because preranking-specific DB truth for 'persist_taxonomy_preranking_payload' should be exposed through one named helper boundary
+# EN: - because upper layers should call a readable preranking helper name instead of repeating raw SQL semantics
+# EN: - because preranking persistence or lookup should remain inspectable at the Python boundary
+# EN:
+# EN: Accepted input:
+# EN: - the explicit parameters of this helper are: conn, payload
+# EN: - values should match the current Python signature and the live preranking SQL contract below
+# EN:
+# EN: Accepted output:
+# EN: - a preranking-oriented result shape defined by the current function body and DB truth
+# EN: - this may be a structured payload, a score/signal write result, a lookup result, or another explicit branch result
+# EN:
+# EN: Common preranking meaning hints:
+# EN: - this helper likely exposes score, prerank, or candidate-ordering-related DB truth
+# EN: - score payloads, evidence fields, or degraded write visibility may matter here
+# EN:
+# EN: Important beginner reminder:
+# EN: - this helper is not the source of truth about full ranking policy by itself
+# EN: - it is the named boundary where preranking-side truth becomes durable or readable
+# EN:
+# EN: Undesired behavior:
+# EN: - silent hidden mutation without a named helper boundary
+# EN: - forcing upper layers to understand raw preranking SQL semantics instead of this helper contract
+# TR: PRERANKING YARDIMCISI AMAÇ HAFIZA BLOĞU V6 / persist_taxonomy_preranking_payload
+# TR:
+# TR: Bu yardımcı neden var:
+# TR: - çünkü 'persist_taxonomy_preranking_payload' için prerankinge özgü DB doğrusu tek ve isimli bir yardımcı sınırı üzerinden açığa çıkmalıdır
+# TR: - çünkü üst katmanlar ham preranking SQL semantiğini tekrar etmek yerine okunabilir preranking yardımcı adı çağırmalıdır
+# TR: - çünkü preranking kalıcılığı veya okuması Python sınırında denetlenebilir kalmalıdır
+# TR:
+# TR: Kabul edilen girdi:
+# TR: - bu yardımcının açık parametreleri şunlardır: conn, payload
+# TR: - değerler aşağıdaki mevcut Python imzası ve canlı preranking SQL sözleşmesi ile uyumlu olmalıdır
+# TR:
+# TR: Kabul edilen çıktı:
+# TR: - mevcut fonksiyon gövdesi ve DB doğrusu tarafından belirlenen preranking-odaklı sonuç şekli
+# TR: - bu; yapılı payload, score/signal write sonucu, lookup sonucu veya başka açık dal sonucu olabilir
+# TR:
+# TR: Ortak preranking anlam ipuçları:
+# TR: - bu yardımcı büyük ihtimalle score, prerank veya aday-sıralama ile ilgili DB doğrusunu açığa çıkarır
+# TR: - score payloadları, evidence alanları veya degrade yazma görünürlüğü burada önemli olabilir
+# TR:
+# TR: Önemli başlangıç hatırlatması:
+# TR: - bu yardımcı tek başına tam ranking politikasının kaynağı değildir
+# TR: - bu, preranking tarafı doğrusunun kalıcı veya okunabilir hale geldiği isimli sınırdır
+# TR:
+# TR: İstenmeyen davranış:
+# TR: - isimli yardımcı sınırı olmadan sessiz gizli değişim
+# TR: - üst katmanları bu yardımcı sözleşmesi yerine ham preranking SQL semantiğini anlamaya zorlamak
+
+# EN: REAL-RULE AST REPAIR / DEF persist_taxonomy_preranking_payload
+# EN: persist_taxonomy_preranking_payload is an explicit preranking-gateway helper/runtime contract.
+# EN: Parameters kept explicit here: conn, payload.
+# TR: REAL-RULE AST REPAIR / FONKSIYON persist_taxonomy_preranking_payload
+# TR: persist_taxonomy_preranking_payload acik bir preranking-gateway helper/runtime sozlesmesidir.
+# TR: Burada acik tutulan parametreler: conn, payload.
 def persist_taxonomy_preranking_payload(
     conn: psycopg.Connection,
     payload: dict,
@@ -86,10 +347,18 @@ def persist_taxonomy_preranking_payload(
     # EN: invalid Python payload cannot poison the current transaction.
     # TR: SQL çağrısından önce candidate listesini savunmacı biçimde doğruluyoruz;
     # TR: böylece geçersiz Python payload'ı mevcut transaction'ı zehirleyemez.
+    # EN: REAL-RULE AST REPAIR / LOCAL persist_taxonomy_preranking_payload / candidates
+    # EN: candidates are assigned here as explicit intermediate branch values.
+    # TR: REAL-RULE AST REPAIR / YEREL persist_taxonomy_preranking_payload / candidates
+    # TR: candidates burada acik ara dal degerleri olarak atanir.
     candidates = payload.get("candidates", [])
     if not isinstance(candidates, list):
         raise RuntimeError("payload['candidates'] must be a list")
 
+    # EN: REAL-RULE AST REPAIR / LOCAL persist_taxonomy_preranking_payload / invalid_candidate_indexes
+    # EN: invalid_candidate_indexes are assigned here as explicit intermediate branch values.
+    # TR: REAL-RULE AST REPAIR / YEREL persist_taxonomy_preranking_payload / invalid_candidate_indexes
+    # TR: invalid_candidate_indexes burada acik ara dal degerleri olarak atanir.
     invalid_candidate_indexes: list[int] = []
 
     # EN: The currently proven hard requirement is taxonomy_package_id.
@@ -154,6 +423,65 @@ def persist_taxonomy_preranking_payload(
 # TR: Bu yardımcı parse.persist_page_preranking_snapshot(...) çağrısını yapar;
 # TR: böylece evidence/candidate persistence sonrasında kalıcı preranking snapshot
 # TR: satırı Python tarafından üretilebilir.
+# EN: PRERANKING HELPER PURPOSE MEMORY BLOCK V6 / persist_page_preranking_snapshot
+# EN:
+# EN: Why this helper exists:
+# EN: - because preranking-specific DB truth for 'persist_page_preranking_snapshot' should be exposed through one named helper boundary
+# EN: - because upper layers should call a readable preranking helper name instead of repeating raw SQL semantics
+# EN: - because preranking persistence or lookup should remain inspectable at the Python boundary
+# EN:
+# EN: Accepted input:
+# EN: - the explicit parameters of this helper are: conn, url_id, input_lang_code, taxonomy_package_version, top_candidate_count, top_score, candidate_summary, snapshot_metadata, source_run_id, source_note, review_status
+# EN: - values should match the current Python signature and the live preranking SQL contract below
+# EN:
+# EN: Accepted output:
+# EN: - a preranking-oriented result shape defined by the current function body and DB truth
+# EN: - this may be a structured payload, a score/signal write result, a lookup result, or another explicit branch result
+# EN:
+# EN: Common preranking meaning hints:
+# EN: - this helper likely exposes score, prerank, or candidate-ordering-related DB truth
+# EN: - score payloads, evidence fields, or degraded write visibility may matter here
+# EN:
+# EN: Important beginner reminder:
+# EN: - this helper is not the source of truth about full ranking policy by itself
+# EN: - it is the named boundary where preranking-side truth becomes durable or readable
+# EN:
+# EN: Undesired behavior:
+# EN: - silent hidden mutation without a named helper boundary
+# EN: - forcing upper layers to understand raw preranking SQL semantics instead of this helper contract
+# TR: PRERANKING YARDIMCISI AMAÇ HAFIZA BLOĞU V6 / persist_page_preranking_snapshot
+# TR:
+# TR: Bu yardımcı neden var:
+# TR: - çünkü 'persist_page_preranking_snapshot' için prerankinge özgü DB doğrusu tek ve isimli bir yardımcı sınırı üzerinden açığa çıkmalıdır
+# TR: - çünkü üst katmanlar ham preranking SQL semantiğini tekrar etmek yerine okunabilir preranking yardımcı adı çağırmalıdır
+# TR: - çünkü preranking kalıcılığı veya okuması Python sınırında denetlenebilir kalmalıdır
+# TR:
+# TR: Kabul edilen girdi:
+# TR: - bu yardımcının açık parametreleri şunlardır: conn, url_id, input_lang_code, taxonomy_package_version, top_candidate_count, top_score, candidate_summary, snapshot_metadata, source_run_id, source_note, review_status
+# TR: - değerler aşağıdaki mevcut Python imzası ve canlı preranking SQL sözleşmesi ile uyumlu olmalıdır
+# TR:
+# TR: Kabul edilen çıktı:
+# TR: - mevcut fonksiyon gövdesi ve DB doğrusu tarafından belirlenen preranking-odaklı sonuç şekli
+# TR: - bu; yapılı payload, score/signal write sonucu, lookup sonucu veya başka açık dal sonucu olabilir
+# TR:
+# TR: Ortak preranking anlam ipuçları:
+# TR: - bu yardımcı büyük ihtimalle score, prerank veya aday-sıralama ile ilgili DB doğrusunu açığa çıkarır
+# TR: - score payloadları, evidence alanları veya degrade yazma görünürlüğü burada önemli olabilir
+# TR:
+# TR: Önemli başlangıç hatırlatması:
+# TR: - bu yardımcı tek başına tam ranking politikasının kaynağı değildir
+# TR: - bu, preranking tarafı doğrusunun kalıcı veya okunabilir hale geldiği isimli sınırdır
+# TR:
+# TR: İstenmeyen davranış:
+# TR: - isimli yardımcı sınırı olmadan sessiz gizli değişim
+# TR: - üst katmanları bu yardımcı sözleşmesi yerine ham preranking SQL semantiğini anlamaya zorlamak
+
+# EN: REAL-RULE AST REPAIR / DEF persist_page_preranking_snapshot
+# EN: persist_page_preranking_snapshot is an explicit preranking-gateway helper/runtime contract.
+# EN: Parameters kept explicit here: conn, url_id, input_lang_code, taxonomy_package_version, top_candidate_count, top_score, candidate_summary, snapshot_metadata, source_run_id, source_note, review_status.
+# TR: REAL-RULE AST REPAIR / FONKSIYON persist_page_preranking_snapshot
+# TR: persist_page_preranking_snapshot acik bir preranking-gateway helper/runtime sozlesmesidir.
+# TR: Burada acik tutulan parametreler: conn, url_id, input_lang_code, taxonomy_package_version, top_candidate_count, top_score, candidate_summary, snapshot_metadata, source_run_id, source_note, review_status.
 def persist_page_preranking_snapshot(
     conn: psycopg.Connection,
     *,
@@ -174,7 +502,15 @@ def persist_page_preranking_snapshot(
 
     # EN: We serialize optional JSON-shaped inputs only when needed.
     # TR: Opsiyonel JSON-biçimli girdileri yalnızca gerektiğinde serileştiriyoruz.
+    # EN: REAL-RULE AST REPAIR / LOCAL persist_page_preranking_snapshot / candidate_summary_json
+    # EN: candidate_summary_json are assigned here as explicit intermediate branch values.
+    # TR: REAL-RULE AST REPAIR / YEREL persist_page_preranking_snapshot / candidate_summary_json
+    # TR: candidate_summary_json burada acik ara dal degerleri olarak atanir.
     candidate_summary_json = json.dumps(candidate_summary or [])
+    # EN: REAL-RULE AST REPAIR / LOCAL persist_page_preranking_snapshot / snapshot_metadata_json
+    # EN: snapshot_metadata_json are assigned here as explicit intermediate branch values.
+    # TR: REAL-RULE AST REPAIR / YEREL persist_page_preranking_snapshot / snapshot_metadata_json
+    # TR: snapshot_metadata_json burada acik ara dal degerleri olarak atanir.
     snapshot_metadata_json = json.dumps(snapshot_metadata or {})
 
     # EN: We execute the canonical SQL function inside the caller-owned transaction.
@@ -240,6 +576,63 @@ def persist_page_preranking_snapshot(
 # EN: the current parse workflow state of one URL explicitly.
 # TR: Bu yardımcı parse.upsert_page_workflow_status(...) çağrısını yapar; böylece
 # TR: Python tek bir URL'nin mevcut parse workflow durumunu açık biçimde işaretleyebilir.
+# EN: PRERANKING HELPER PURPOSE MEMORY BLOCK V6 / upsert_page_workflow_status
+# EN:
+# EN: Why this helper exists:
+# EN: - because preranking-specific DB truth for 'upsert_page_workflow_status' should be exposed through one named helper boundary
+# EN: - because upper layers should call a readable preranking helper name instead of repeating raw SQL semantics
+# EN: - because preranking persistence or lookup should remain inspectable at the Python boundary
+# EN:
+# EN: Accepted input:
+# EN: - the explicit parameters of this helper are: conn, url_id, workflow_state, state_reason, linked_snapshot_id, source_run_id, source_note, status_metadata
+# EN: - values should match the current Python signature and the live preranking SQL contract below
+# EN:
+# EN: Accepted output:
+# EN: - a preranking-oriented result shape defined by the current function body and DB truth
+# EN: - this may be a structured payload, a score/signal write result, a lookup result, or another explicit branch result
+# EN:
+# EN: Common preranking meaning hints:
+# EN: - this helper exposes one named preranking-specific DB-truth boundary
+# EN:
+# EN: Important beginner reminder:
+# EN: - this helper is not the source of truth about full ranking policy by itself
+# EN: - it is the named boundary where preranking-side truth becomes durable or readable
+# EN:
+# EN: Undesired behavior:
+# EN: - silent hidden mutation without a named helper boundary
+# EN: - forcing upper layers to understand raw preranking SQL semantics instead of this helper contract
+# TR: PRERANKING YARDIMCISI AMAÇ HAFIZA BLOĞU V6 / upsert_page_workflow_status
+# TR:
+# TR: Bu yardımcı neden var:
+# TR: - çünkü 'upsert_page_workflow_status' için prerankinge özgü DB doğrusu tek ve isimli bir yardımcı sınırı üzerinden açığa çıkmalıdır
+# TR: - çünkü üst katmanlar ham preranking SQL semantiğini tekrar etmek yerine okunabilir preranking yardımcı adı çağırmalıdır
+# TR: - çünkü preranking kalıcılığı veya okuması Python sınırında denetlenebilir kalmalıdır
+# TR:
+# TR: Kabul edilen girdi:
+# TR: - bu yardımcının açık parametreleri şunlardır: conn, url_id, workflow_state, state_reason, linked_snapshot_id, source_run_id, source_note, status_metadata
+# TR: - değerler aşağıdaki mevcut Python imzası ve canlı preranking SQL sözleşmesi ile uyumlu olmalıdır
+# TR:
+# TR: Kabul edilen çıktı:
+# TR: - mevcut fonksiyon gövdesi ve DB doğrusu tarafından belirlenen preranking-odaklı sonuç şekli
+# TR: - bu; yapılı payload, score/signal write sonucu, lookup sonucu veya başka açık dal sonucu olabilir
+# TR:
+# TR: Ortak preranking anlam ipuçları:
+# TR: - bu yardımcı prerankinge özgü isimli bir DB-truth sınırını açığa çıkarır
+# TR:
+# TR: Önemli başlangıç hatırlatması:
+# TR: - bu yardımcı tek başına tam ranking politikasının kaynağı değildir
+# TR: - bu, preranking tarafı doğrusunun kalıcı veya okunabilir hale geldiği isimli sınırdır
+# TR:
+# TR: İstenmeyen davranış:
+# TR: - isimli yardımcı sınırı olmadan sessiz gizli değişim
+# TR: - üst katmanları bu yardımcı sözleşmesi yerine ham preranking SQL semantiğini anlamaya zorlamak
+
+# EN: REAL-RULE AST REPAIR / DEF upsert_page_workflow_status
+# EN: upsert_page_workflow_status is an explicit preranking-gateway helper/runtime contract.
+# EN: Parameters kept explicit here: conn, url_id, workflow_state, state_reason, linked_snapshot_id, source_run_id, source_note, status_metadata.
+# TR: REAL-RULE AST REPAIR / FONKSIYON upsert_page_workflow_status
+# TR: upsert_page_workflow_status acik bir preranking-gateway helper/runtime sozlesmesidir.
+# TR: Burada acik tutulan parametreler: conn, url_id, workflow_state, state_reason, linked_snapshot_id, source_run_id, source_note, status_metadata.
 def upsert_page_workflow_status(
     conn: psycopg.Connection,
     *,
@@ -255,6 +648,10 @@ def upsert_page_workflow_status(
     # EN: a valid JSON object shape.
     # TR: SQL katmanı her zaman geçerli bir JSON nesne şekli alsın diye metadata'yı
     # TR: varsayılan olarak boş sözlüğe indiriyoruz.
+    # EN: REAL-RULE AST REPAIR / LOCAL upsert_page_workflow_status / effective_status_metadata
+    # EN: effective_status_metadata are assigned here as explicit intermediate branch values.
+    # TR: REAL-RULE AST REPAIR / YEREL upsert_page_workflow_status / effective_status_metadata
+    # TR: effective_status_metadata burada acik ara dal degerleri olarak atanir.
     effective_status_metadata = {} if status_metadata is None else status_metadata
 
     # EN: We import json locally because this helper converts Python metadata into

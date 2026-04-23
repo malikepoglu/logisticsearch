@@ -45,6 +45,142 @@ Bu dosyadaki önemli runtime değerleri:
 # TR: worker’ın gerçekten claim edebildiği frontier.host / frontier.url runtime
 # TR: yüzeyleri arasındaki repo-tracked köprüdür.
 
+
+# EN: SEED BRIDGE IDENTITY MEMORY BLOCK V5
+# EN:
+# EN: This file exists because the crawler has two different truths that beginners
+# EN: may incorrectly assume are already the same.
+# EN:
+# EN: Truth A:
+# EN: - reviewed seed truth
+# EN: - meaning: "this startpoint was reviewed and is allowed to enter the system"
+# EN:
+# EN: Truth B:
+# EN: - live frontier truth
+# EN: - meaning: "this work item is now in the live queue and workers may claim it"
+# EN:
+# EN: This file is the exact controlled transformer between Truth A and Truth B.
+# EN:
+# EN: Why that matters:
+# EN: - a reviewed startpoint is not yet automatically live worker work
+# EN: - a worker should not silently assume reviewed seeds are already frontier rows
+# EN: - the project needs an auditable place where reviewed entry becomes live queue truth
+# EN:
+# EN: Accepted architectural role:
+# EN: - bridge
+# EN: - queue-preparation surface
+# EN: - seed-to-frontier transformer
+# EN: - audit-friendly transition layer
+# EN:
+# EN: Undesired architectural role:
+# EN: - fetch engine
+# EN: - parse engine
+# EN: - taxonomy engine
+# EN: - ranking engine
+# EN: - outreach decision engine
+# TR: SEED KÖPRÜ KİMLİK HAFIZA BLOĞU V5
+# TR:
+# TR: Bu dosya vardır; çünkü crawler içinde yeni başlayanların yanlışlıkla
+# TR: zaten aynı sanabileceği iki farklı gerçek vardır.
+# TR:
+# TR: Gerçek A:
+# TR: - gözden geçirilmiş seed doğrusu
+# TR: - anlamı: "bu başlangıç noktası gözden geçirildi ve sisteme girmesine izin verildi"
+# TR:
+# TR: Gerçek B:
+# TR: - canlı frontier doğrusu
+# TR: - anlamı: "bu iş öğesi artık canlı kuyruktadır ve worker'lar claim edebilir"
+# TR:
+# TR: Bu dosya Gerçek A ile Gerçek B arasındaki tam kontrollü dönüştürücüdür.
+# TR:
+# TR: Bu neden önemlidir:
+# TR: - gözden geçirilmiş başlangıç noktası otomatik olarak canlı worker işi değildir
+# TR: - bir worker reviewed seed'leri frontier satırı sanmamalıdır
+# TR: - proje gözden geçirilmiş girişin canlı kuyruk doğrusuna dönüştüğü denetlenebilir bir yüzeye ihtiyaç duyar
+# TR:
+# TR: Kabul edilen mimari rol:
+# TR: - köprü
+# TR: - kuyruk hazırlama yüzeyi
+# TR: - seed-to-frontier dönüştürücü
+# TR: - audit dostu geçiş katmanı
+# TR:
+# TR: İstenmeyen mimari rol:
+# TR: - fetch motoru
+# TR: - parse motoru
+# TR: - taxonomy motoru
+# TR: - ranking motoru
+# TR: - outreach karar motoru
+
+# EN: WHY-THIS-FILE-EXISTS NEEDLE BLOCK V6
+# EN:
+# EN: Why this file exists:
+# EN: - because reviewed seed truth and claimable frontier truth are different runtime layers
+# EN: - because the project needs one auditable place where reviewed startpoints become live queue work
+# EN: - because workers should not silently assume reviewed seeds are already frontier rows
+# EN:
+# EN: What this file DOES:
+# EN: - transform reviewed seed-side truth into claimable frontier-side truth
+# EN: - keep that transition explicit and auditable
+# EN:
+# EN: What this file DOES NOT do:
+# EN: - it does not fetch
+# EN: - it does not parse
+# EN: - it does not rank
+# EN: - it does not decide outreach
+# TR: EXACT-NEEDLE KÖPRÜ BLOĞU V6
+# TR:
+# TR: Bu dosya neden var:
+# TR: - çünkü gözden geçirilmiş seed doğrusu ile claim edilebilir frontier doğrusu farklı runtime katmanlarıdır
+# TR: - çünkü proje gözden geçirilmiş başlangıç noktalarının canlı kuyruk işine dönüştüğü tek ve denetlenebilir bir yere ihtiyaç duyar
+# TR: - çünkü worker'lar reviewed seed'lerin zaten frontier satırı olduğunu sessizce varsaymamalıdır
+# TR:
+# TR: Bu dosya NE yapar:
+# TR: - gözden geçirilmiş seed tarafı doğrusunu claim edilebilir frontier tarafı doğrusuna dönüştürür
+# TR: - bu geçişi açık ve denetlenebilir tutar
+# TR:
+# TR: Bu dosya NE yapmaz:
+# TR: - fetch etmez
+# TR: - parse etmez
+# TR: - rank etmez
+# TR: - outreach kararı vermez
+
+# EN: VARIABLE / PAYLOAD VISIBILITY NEEDLE BLOCK V7
+# EN:
+# EN: Important variable and payload meanings:
+# EN: - DEFAULT_ENV_FILE => explicit env path identity for CLI-side DSN resolution
+# EN: - ParsedCanonicalUrl => normalized URL decomposition package used by bridge logic
+# EN: - ready_seed_rows => list[dict] payload of reviewed rows still eligible for bridging
+# EN: - row_results => per-row human-auditable receipts
+# EN: - host_id / url_id => positive integer live frontier identifiers on success-style branches
+# EN: - committed => outer CLI transaction outcome visibility
+# EN:
+# EN: Accepted value-shape examples:
+# EN: - ready_seed_rows may be [] on normal no-work branch
+# EN: - row_results remains a list payload even when empty
+# EN: - host_id / url_id fall back to 0 only in explicit row-level error receipts
+# EN:
+# EN: Undesired misunderstandings:
+# EN: - assuming reviewed seeds are already claimable frontier work
+# EN: - assuming row_results can be omitted when aggregate counts exist
+# TR: DEĞİŞKEN / PAYLOAD GÖRÜNÜRLÜK NEEDLE BLOĞU V7
+# TR:
+# TR: Önemli değişken ve payload anlamları:
+# TR: - DEFAULT_ENV_FILE => CLI tarafı DSN çözümü için açık env yol kimliği
+# TR: - ParsedCanonicalUrl => bridge mantığının kullandığı normalize URL ayrıştırma paketi
+# TR: - ready_seed_rows => hâlâ köprülenmeye uygun gözden geçirilmiş satırları taşıyan list[dict] payload
+# TR: - row_results => satır-başı insan tarafından denetlenebilir makbuzlar
+# TR: - host_id / url_id => başarı tarzı dallarda pozitif tamsayı canlı frontier kimlikleri
+# TR: - committed => dış CLI transaction sonucunun görünürlüğü
+# TR:
+# TR: Kabul edilen değer-şekli örnekleri:
+# TR: - ready_seed_rows normal no-work dalında [] olabilir
+# TR: - row_results boş olsa bile list payload olarak kalır
+# TR: - host_id / url_id yalnızca açık satır-seviyesi hata makbuzlarında 0 fallback'ine düşer
+# TR:
+# TR: İstenmeyen yanlış anlamalar:
+# TR: - reviewed seed'lerin zaten claim edilebilir frontier işi olduğunu sanmak
+# TR: - toplu sayaçlar varken row_results'in atlanabileceğini sanmak
+
 from __future__ import annotations
 
 # EN: We import argparse because this module must also be runnable as a small
@@ -161,6 +297,64 @@ DEFAULT_ENV_FILE = Path("/logisticsearch/webcrawler/config/webcrawler.env")
 # EN: This dataclass holds the exact frontier-ready decomposition of one
 # EN: canonical URL.
 # TR: Bu dataclass tek bir canonical URL’nin exact frontier-ready ayrıştırmasını tutar.
+
+# EN: DATACLASS PURPOSE MEMORY BLOCK V5 / ParsedCanonicalUrl
+# EN:
+# EN: This dataclass exists because serious queue logic cannot safely operate on
+# EN: one anonymous long URL string alone.
+# EN:
+# EN: The bridge needs named parts:
+# EN: - canonical_url
+# EN: - scheme
+# EN: - host
+# EN: - port
+# EN: - path
+# EN: - query
+# EN:
+# EN: Accepted meaning:
+# EN: - one canonical URL decomposed into stable named fields
+# EN:
+# EN: Undesired misunderstanding:
+# EN: - assuming this object performs parsing by itself
+# EN: It does not; it stores the parsing result.
+# TR: DATACLASS AMAÇ HAFIZA BLOĞU V5 / ParsedCanonicalUrl
+# TR:
+# TR: Bu dataclass vardır; çünkü ciddi kuyruk mantığı tek ve isimsiz uzun URL
+# TR: metni üzerinde güvenle çalışamaz.
+# TR:
+# TR: Köprü isimli parçalara ihtiyaç duyar:
+# TR: - canonical_url
+# TR: - scheme
+# TR: - host
+# TR: - port
+# TR: - path
+# TR: - query
+# TR:
+# TR: Kabul edilen anlam:
+# TR: - tek bir canonical URL'nin stabil ve isimli alanlara ayrılmış hali
+# TR:
+# TR: İstenmeyen yanlış anlama:
+# TR: - bu nesnenin parse işini kendi başına yaptığını sanmak
+# TR: Yapmaz; parse sonucunu taşır.
+
+# EN: REAL-RULE REPAIR BLOCK / CLASS ParsedCanonicalUrl
+# EN: Why this immediate class block exists:
+# EN: - because the class boundary itself must explain why it exists, even if earlier prose is skipped
+# EN: Accepted semantic role:
+# EN: - stable named package carrying one already-parsed canonical URL decomposition
+# EN: Expected field family:
+# EN: - canonical_url, hash, scheme, host, port, authority identity, registrable-domain approximation, path, query
+# EN: Undesired misunderstanding:
+# EN: - assuming this class performs parsing by itself; it carries already-derived URL pieces
+# TR: REAL-RULE REPAIR BLOCK / CLASS ParsedCanonicalUrl
+# TR: Bu immediate class bloğu neden var:
+# TR: - çünkü sınıf sınırı, önceki uzun açıklama atlanmış olsa bile neden var olduğunu kendi başına anlatmalıdır
+# TR: Kabul edilen semantik rol:
+# TR: - önceden ayrıştırılmış tek canonical URL parçalarını taşıyan kararlı ve isimli paket
+# TR: Beklenen alan ailesi:
+# TR: - canonical_url, hash, scheme, host, port, authority kimliği, registrable-domain yaklaşımı, path, query
+# TR: İstenmeyen yanlış anlama:
+# TR: - bu sınıfın parse işini kendi başına yaptığı sanılmamalıdır; türetilmiş URL parçalarını taşır
 @dataclass(slots=True)
 class ParsedCanonicalUrl:
     """\
@@ -233,6 +427,50 @@ class ParsedCanonicalUrl:
 
 # EN: This dataclass stores one row-level bridge outcome.
 # TR: Bu dataclass tek bir satır düzeyi bridge sonucunu tutar.
+
+# EN: DATACLASS PURPOSE MEMORY BLOCK V5 / SeedFrontierBridgeRowResult
+# EN:
+# EN: This dataclass exists because each seed row deserves its own explicit receipt.
+# EN:
+# EN: If only aggregate counters existed:
+# EN: - debugging row-level mistakes would be much harder
+# EN: - it would be less clear which URL was created, reused, or failed
+# EN:
+# EN: Accepted semantic role:
+# EN: - one-row receipt
+# EN: - one-row explanation
+# EN: - one-row created/reused/error visibility
+# TR: DATACLASS AMAÇ HAFIZA BLOĞU V5 / SeedFrontierBridgeRowResult
+# TR:
+# TR: Bu dataclass vardır; çünkü her seed satırı kendi açık makbuzunu hak eder.
+# TR:
+# TR: Yalnızca toplu sayaçlar olsaydı:
+# TR: - satır düzeyindeki hataları debug etmek çok daha zor olurdu
+# TR: - hangi URL'nin oluşturulduğu, yeniden kullanıldığı veya fail ettiği daha az görünür olurdu
+# TR:
+# TR: Kabul edilen semantik rol:
+# TR: - tek satırlık makbuz
+# TR: - tek satırlık açıklama
+# TR: - tek satırlık created/reused/error görünürlüğü
+
+# EN: REAL-RULE REPAIR BLOCK / CLASS SeedFrontierBridgeRowResult
+# EN: Why this immediate class block exists:
+# EN: - because each seed row needs its own readable receipt boundary directly at the class line
+# EN: Accepted semantic role:
+# EN: - one-row bridge receipt with created/reused/error visibility
+# EN: Expected value family:
+# EN: - source identity, seed identity, host/url ids, canonical URL text, and explicit note text
+# EN: Undesired misunderstanding:
+# EN: - treating row-level visibility as optional debug noise instead of part of the bridge contract
+# TR: REAL-RULE REPAIR BLOCK / CLASS SeedFrontierBridgeRowResult
+# TR: Bu immediate class bloğu neden var:
+# TR: - çünkü her seed satırının kendi okunabilir makbuz sınırı doğrudan sınıf çizgisinde görünür kalmalıdır
+# TR: Kabul edilen semantik rol:
+# TR: - created/reused/error görünürlüğü taşıyan tek-satırlık bridge makbuzu
+# TR: Beklenen değer ailesi:
+# TR: - source kimliği, seed kimliği, host/url id'leri, canonical URL metni ve açık note metni
+# TR: İstenmeyen yanlış anlama:
+# TR: - satır düzeyi görünürlüğü bridge sözleşmesinin parçası yerine opsiyonel debug gürültüsü sanmak
 @dataclass(slots=True)
 class SeedFrontierBridgeRowResult:
     """\
@@ -294,6 +532,50 @@ class SeedFrontierBridgeRowResult:
 
 # EN: This dataclass stores the full bridge run result.
 # TR: Bu dataclass tam bridge çalıştırmasının sonucunu tutar.
+
+# EN: DATACLASS PURPOSE MEMORY BLOCK V5 / SeedFrontierBridgeResult
+# EN:
+# EN: This dataclass exists because the whole bridge pass needs one run-level receipt.
+# EN:
+# EN: Accepted semantic role:
+# EN: - preserve aggregate counters
+# EN: - preserve row_results
+# EN: - preserve commit/rollback visibility
+# EN:
+# EN: Undesired misunderstanding:
+# EN: - assuming row-level receipts alone are enough
+# EN: They are not; the full run also needs a summary object.
+# TR: DATACLASS AMAÇ HAFIZA BLOĞU V5 / SeedFrontierBridgeResult
+# TR:
+# TR: Bu dataclass vardır; çünkü tüm bridge geçişinin tek bir run-seviyesi makbuzu olmalıdır.
+# TR:
+# TR: Kabul edilen semantik rol:
+# TR: - toplu sayaçları korumak
+# TR: - row_results'i korumak
+# TR: - commit/rollback görünürlüğünü korumak
+# TR:
+# TR: İstenmeyen yanlış anlama:
+# TR: - sadece satır düzeyi makbuzların yeterli olduğunu sanmak
+# TR: Yeterli değildir; tüm çalışmanın da özet nesnesi olmalıdır.
+
+# EN: REAL-RULE REPAIR BLOCK / CLASS SeedFrontierBridgeResult
+# EN: Why this immediate class block exists:
+# EN: - because the full bridge run also needs a readable summary contract directly at the class boundary
+# EN: Accepted semantic role:
+# EN: - run-level bridge receipt carrying counters, row receipts, and outer commit visibility
+# EN: Expected value family:
+# EN: - scanned counts, created/existing counts, enqueue counts, row_results payload, committed truth
+# EN: Undesired misunderstanding:
+# EN: - assuming row receipts alone are enough without a full-run summary object
+# TR: REAL-RULE REPAIR BLOCK / CLASS SeedFrontierBridgeResult
+# TR: Bu immediate class bloğu neden var:
+# TR: - çünkü tüm bridge çalışmasının da sınıf sınırında doğrudan görünen okunabilir özet sözleşmesi olmalıdır
+# TR: Kabul edilen semantik rol:
+# TR: - sayaçları, row makbuzlarını ve dış commit görünürlüğünü taşıyan run-seviyesi bridge makbuzu
+# TR: Beklenen değer ailesi:
+# TR: - scanned sayaçları, created/existing sayaçları, enqueue sayaçları, row_results payloadı, committed doğrusu
+# TR: İstenmeyen yanlış anlama:
+# TR: - tam çalışma özet nesnesi olmadan yalnızca satır makbuzlarının yeterli olduğunu sanmak
 @dataclass(slots=True)
 class SeedFrontierBridgeResult:
     """\
@@ -359,6 +641,50 @@ def utc_now_iso() -> str:
 
 # EN: This helper reads a small KEY=VALUE env file without executing shell code.
 # TR: Bu yardımcı küçük KEY=VALUE env dosyasını shell kodu çalıştırmadan okur.
+
+# EN: ENV PARSING PURPOSE MEMORY BLOCK V5
+# EN:
+# EN: This helper exists because the bridge CLI must read configuration text
+# EN: without executing shell behavior.
+# EN:
+# EN: Accepted job:
+# EN: - read plain KEY=VALUE text
+# EN: - ignore comments
+# EN: - ignore blank lines
+# EN:
+# EN: Undesired job:
+# EN: - executing shell syntax
+# EN: - guessing missing configuration silently
+# TR: ENV PARSE AMAÇ HAFIZA BLOĞU V5
+# TR:
+# TR: Bu yardımcı vardır; çünkü bridge CLI shell davranışı çalıştırmadan
+# TR: konfigürasyon metni okuyabilmelidir.
+# TR:
+# TR: Kabul edilen görev:
+# TR: - düz KEY=VALUE metni okumak
+# TR: - yorumları yok saymak
+# TR: - boş satırları yok saymak
+# TR:
+# TR: İstenmeyen görev:
+# TR: - shell sözdizimi çalıştırmak
+# TR: - eksik konfigürasyonu sessizce tahmin etmek
+
+# EN: REAL-RULE REPAIR BLOCK / PARAMS parse_simple_env_file
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - path => readable Path to an env-style text file
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS parse_simple_env_file
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - path => env-tarzı metin dosyasını gösteren okunabilir Path nesnesi
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def parse_simple_env_file(path: Path) -> dict[str, str]:
     """\
     EN:
@@ -378,7 +704,16 @@ def parse_simple_env_file(path: Path) -> dict[str, str]:
     - Dosya mevcut olsa bile kullanılabilir KEY=VALUE satırı üretmiyorsa boş dict.
     - Dosya normal biçimde okunamazsa FileNotFoundError veya çözümleme/runtime
       hataları yükseltir.
-    """
+    
+    Accepted input line shapes:
+    - blank line
+    - comment line
+    - KEY=VALUE line
+    Kabul edilen girdi satırı şekilleri:
+    - boş satır
+    - yorum satırı
+    - KEY=VALUE satırı
+"""
     # EN: data collects the parsed key/value pairs.
     # TR: data ayrıştırılmış anahtar/değer çiftlerini toplar.
     # EN: data is the accumulating plain string dictionary produced by this narrow
@@ -408,8 +743,35 @@ def parse_simple_env_file(path: Path) -> dict[str, str]:
 
         # EN: key/value split happens only on the first equals sign.
         # TR: key/value ayrımı yalnızca ilk eşittir işaretinde yapılır.
+# EN: key is the normalized environment variable name and value is the raw paired text
+# EN: split from one KEY=VALUE line before later cleanup/refinement steps run.
+# TR: key normalize environment variable adıdır; value ise sonraki temizlik/adımlardan
+# TR: önce tek bir KEY=VALUE satırından ayrılan ham eşlenik metindir.
         key, value = line.split("=", 1)
+# EN: `key` is the narrow local runtime value introduced here inside `parse_simple_env_file`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `key` burada `parse_simple_env_file` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: key is the normalized environment variable name extracted from one KEY=VALUE line.
+# TR: key tek bir KEY=VALUE satırından çıkarılan normalize environment variable adıdır.
+
         key = key.strip()
+# EN: `value` is the narrow local runtime value introduced here inside `parse_simple_env_file`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `value` burada `parse_simple_env_file` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: value is the progressively normalized environment value carried through parse and unquote steps.
+# TR: value parse ve quote açma adımları boyunca taşınan kademeli normalize environment değeridir.
+# EN: value is the evolving environment value being normalized, unquoted, or otherwise
+# EN: refined before it is finally stored into the parsed env dictionary.
+# TR: value parsed env sözlüğüne yazılmadan önce normalize edilen, quote'u açılan veya
+# TR: başka biçimde rafine edilen gelişen environment değeridir.
         value = value.strip()
 
         # EN: Empty keys are ignored defensively.
@@ -421,8 +783,34 @@ def parse_simple_env_file(path: Path) -> dict[str, str]:
         # TR: Quoted değerler mümkünse literal_eval ile güvenli biçimde açılır.
         if value and value[0] in {"'", '"'}:
             try:
+# EN: `value` is the narrow local runtime value introduced here inside `parse_simple_env_file`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `value` burada `parse_simple_env_file` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: value is the progressively normalized environment value carried through parse and unquote steps.
+# TR: value parse ve quote açma adımları boyunca taşınan kademeli normalize environment değeridir.
+# EN: value is the evolving environment value being normalized, unquoted, or otherwise
+# EN: refined before it is finally stored into the parsed env dictionary.
+# TR: value parsed env sözlüğüne yazılmadan önce normalize edilen, quote'u açılan veya
+# TR: başka biçimde rafine edilen gelişen environment değeridir.
                 value = ast.literal_eval(value)
             except Exception:
+# EN: `value` is the narrow local runtime value introduced here inside `parse_simple_env_file`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `value` burada `parse_simple_env_file` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: value is the progressively normalized environment value carried through parse and unquote steps.
+# TR: value parse ve quote açma adımları boyunca taşınan kademeli normalize environment değeridir.
+# EN: value is the evolving environment value being normalized, unquoted, or otherwise
+# EN: refined before it is finally stored into the parsed env dictionary.
+# TR: value parsed env sözlüğüne yazılmadan önce normalize edilen, quote'u açılan veya
+# TR: başka biçimde rafine edilen gelişen environment değeridir.
                 value = value.strip("'").strip('"')
 
         # EN: Parsed value is stored under the normalized key.
@@ -434,6 +822,48 @@ def parse_simple_env_file(path: Path) -> dict[str, str]:
 
 # EN: This helper extracts the crawler DSN from the runtime env file.
 # TR: Bu yardımcı crawler DSN’ini runtime env dosyasından çıkarır.
+
+# EN: DSN RESOLUTION PURPOSE MEMORY BLOCK V5
+# EN:
+# EN: This helper exists because bridge work is DB-backed and should fail loudly
+# EN: if crawler DSN truth is missing.
+# EN:
+# EN: Accepted outcome:
+# EN: - one explicit non-empty DSN string
+# EN:
+# EN: Undesired outcome:
+# EN: - missing key
+# EN: - empty DSN
+# EN: - silent fallback guessing
+# TR: DSN ÇÖZÜM AMAÇ HAFIZA BLOĞU V5
+# TR:
+# TR: Bu yardımcı vardır; çünkü bridge işi DB desteklidir ve crawler DSN doğrusu
+# TR: eksikse yüksek sesle fail etmelidir.
+# TR:
+# TR: Kabul edilen sonuç:
+# TR: - tek bir açık ve boş olmayan DSN metni
+# TR:
+# TR: İstenmeyen sonuç:
+# TR: - eksik anahtar
+# TR: - boş DSN
+# TR: - sessiz fallback tahmini
+
+# EN: REAL-RULE REPAIR BLOCK / PARAMS crawler_dsn_from_env_file
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - env_file => readable Path to an env file that must contain the crawler DSN
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS crawler_dsn_from_env_file
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - env_file => crawler DSN bilgisini içermesi gereken env dosyasına giden okunabilir Path
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def crawler_dsn_from_env_file(env_file: Path) -> str:
     """\
     EN:
@@ -451,7 +881,16 @@ def crawler_dsn_from_env_file(env_file: Path) -> str:
     - Boş olmayan DSN metni döndürür.
     - Beklenen anahtar yoksa veya boşsa RuntimeError yükseltir.
     - Asla None döndürmez.
-    """
+    
+    Undesired values:
+    - empty string
+    - whitespace-only string
+    - None
+    İstenmeyen değerler:
+    - boş string
+    - yalnızca boşluk
+    - None
+"""
     # EN: env_map stores the parsed env file contents.
     # TR: env_map ayrıştırılmış env dosyası içeriğini tutar.
     env_map = parse_simple_env_file(env_file)
@@ -468,6 +907,26 @@ def crawler_dsn_from_env_file(env_file: Path) -> str:
 # TR: Bu yardımcı scheme/host/port üçlüsünden stabil authority_key türetir.
 # EN: This helper derives a stable authority_key from scheme/host/port.
 # TR: Bu yardımcı scheme/host/port üçlüsünden stabil authority_key türetir.
+# EN: REAL-RULE REPAIR BLOCK / PARAMS build_authority_key
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - scheme => normalized URL scheme text, expected to be "http" or "https"
+# EN: - host => normalized host text; expected non-empty and already lowercased when appropriate
+# EN: - port => effective port value used to build stable authority identity
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS build_authority_key
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - scheme => normalize URL scheme metni; beklenen değerler "http" veya "https"
+# TR: - host => normalize host metni; boş olmaması ve gerektiğinde küçük harfe indirilmiş olması beklenir
+# TR: - port => kararlı authority kimliği kurmak için kullanılan etkin port değeri
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def build_authority_key(scheme: str, host: str, port: int) -> str:
     # EN: The live pi51c frontier.host audit showed that the generated authority_key
     # EN: unique surface currently behaves as host:port, including default ports.
@@ -486,6 +945,22 @@ def build_authority_key(scheme: str, host: str, port: int) -> str:
 # EN: for current crawler runtime needs.
 # TR: Bu yardımcı mevcut crawler runtime ihtiyaçlarına uygun pratik bir
 # TR: registrable-domain yaklaşımı üretir.
+# EN: REAL-RULE REPAIR BLOCK / PARAMS build_registrable_domain
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - host => normalized host text; expected non-empty and already lowercased when appropriate
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS build_registrable_domain
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - host => normalize host metni; boş olmaması ve gerektiğinde küçük harfe indirilmiş olması beklenir
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def build_registrable_domain(host: str) -> str:
     # EN: normalized_host is the stripped lowercase hostname candidate.
     # TR: normalized_host kırpılmış küçük harfli hostname adayını tutar.
@@ -528,6 +1003,18 @@ def build_registrable_domain(host: str) -> str:
     # EN: tail2 and tail3 are the compact suffix windows used by the approximation.
     # TR: tail2 ve tail3 yaklaşımın kullandığı kompakt suffix pencereleridir.
     tail2 = ".".join(labels[-2:])
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL build_registrable_domain / tail3 / 1
+    # EN: Why local `tail3` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: list-like last-three-label slice used by the registrable-domain approximation branch
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL build_registrable_domain / tail3 / 1
+    # TR: `tail3` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: registrable-domain yaklaşım dalında kullanılan son üç label dilimini taşıyan liste-benzeri değer
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     tail3 = ".".join(labels[-3:])
 
     # EN: Known second-level suffix patterns keep one additional label.
@@ -542,6 +1029,50 @@ def build_registrable_domain(host: str) -> str:
 
 # EN: This helper parses one canonical URL into frontier-ready fields.
 # TR: Bu yardımcı tek bir canonical URL’yi frontier-ready alanlara ayrıştırır.
+
+# EN: CANONICAL URL PARSING PURPOSE MEMORY BLOCK V5
+# EN:
+# EN: This helper exists because queue-preparation needs exact normalized URL fields.
+# EN:
+# EN: Accepted input semantics:
+# EN: - non-empty canonical URL text
+# EN: - supported schemes in current code: http / https
+# EN:
+# EN: Undesired input semantics:
+# EN: - empty input
+# EN: - missing host
+# EN: - unsupported scheme
+# EN: - malformed canonical URL
+# TR: CANONICAL URL PARSE AMAÇ HAFIZA BLOĞU V5
+# TR:
+# TR: Bu yardımcı vardır; çünkü kuyruk hazırlama exact normalize URL alanlarına ihtiyaç duyar.
+# TR:
+# TR: Kabul edilen girdi semantiği:
+# TR: - boş olmayan canonical URL metni
+# TR: - mevcut kodda desteklenen scheme'ler: http / https
+# TR:
+# TR: İstenmeyen girdi semantiği:
+# TR: - boş girdi
+# TR: - eksik host
+# TR: - desteklenmeyen scheme
+# TR: - bozuk canonical URL
+
+# EN: REAL-RULE REPAIR BLOCK / PARAMS parse_canonical_url_text
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - canonical_url => normalized canonical URL text for one frontier-ready URL
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS parse_canonical_url_text
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - canonical_url => tek bir frontier-ready URL için normalize canonical URL metni
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def parse_canonical_url_text(canonical_url: str) -> ParsedCanonicalUrl:
     """\
     EN:
@@ -565,7 +1096,10 @@ def parse_canonical_url_text(canonical_url: str) -> ParsedCanonicalUrl:
     Dönüş dalları:
     - Başarıda ParsedCanonicalUrl.
     - Scheme/host gereksinimleri sağlanmazsa ValueError yükseltir.
-    """
+    
+    Accepted schemes in current code: http / https
+    Mevcut kodda kabul edilen scheme değerleri: http / https
+"""
     # EN: parts stores the structured URL decomposition.
     # TR: parts yapılandırılmış URL ayrıştırmasını tutar.
     # EN: parts is the standard-library URL decomposition object. It is not yet the
@@ -639,6 +1173,24 @@ def parse_canonical_url_text(canonical_url: str) -> ParsedCanonicalUrl:
 
 # EN: This helper reads the exact current frontier column set for one table.
 # TR: Bu yardımcı tek bir tablo için exact güncel frontier sütun kümesini okur.
+# EN: REAL-RULE REPAIR BLOCK / PARAMS load_frontier_column_names
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - cur => live database cursor compatible with the SQL executed below
+# EN: - table_name => explicit table-name text used for a controlled metadata lookup
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS load_frontier_column_names
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - cur => aşağıdaki SQL ile uyumlu canlı veritabanı cursor nesnesi
+# TR: - table_name => kontrollü metadata sorgusunda kullanılan açık table-name metni
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def load_frontier_column_names(cur: psycopg.Cursor, table_name: str) -> set[str]:
     # EN: We ask information_schema instead of hard-coding one table shape.
     # TR: Tek bir tablo şekli hard-code edilmesin diye information_schema’ya soruyoruz.
@@ -657,6 +1209,24 @@ def load_frontier_column_names(cur: psycopg.Cursor, table_name: str) -> set[str]
 
 # EN: This helper selects ready seed rows that have not yet been marked as enqueued.
 # TR: Bu yardımcı henüz enqueued olarak işaretlenmemiş hazır seed satırlarını seçer.
+# EN: REAL-RULE REPAIR BLOCK / PARAMS select_ready_seed_rows
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - cur => live database cursor compatible with the SQL executed below
+# EN: - limit => positive integer upper bound controlling how many rows may be processed
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS select_ready_seed_rows
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - cur => aşağıdaki SQL ile uyumlu canlı veritabanı cursor nesnesi
+# TR: - limit => kaç satırın işlenebileceğini sınırlayan pozitif tamsayı üst sınırı
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def select_ready_seed_rows(
     cur: psycopg.Cursor,
     *,
@@ -697,10 +1267,39 @@ def select_ready_seed_rows(
 
     # EN: limit_clause is appended only when the caller requested a finite slice.
     # TR: limit_clause yalnızca çağıran sonlu bir dilim istediğinde eklenir.
+# EN: limit_clause is the optional SQL fragment added only when the operator requested
+# EN: that the ready-seed selection be capped to a maximum row count.
+# TR: limit_clause yalnızca operatör hazır seed seçiminin azami satır sayısıyla
+# TR: sınırlandırılmasını istediğinde eklenen opsiyonel SQL parçasıdır.
     limit_clause = sql.SQL("")
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL select_ready_seed_rows / params / 1
+    # EN: Why local `params` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: SQL parameter tuple/list passed into the ready-seed selection query
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL select_ready_seed_rows / params / 1
+    # TR: `params` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: hazır seed seçimi sorgusuna verilen SQL parametre tuple/list değeri
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     params: list[object] = []
 
     if limit is not None:
+# EN: `limit_clause` is the narrow local runtime value introduced here inside `select_ready_seed_rows`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `limit_clause` burada `select_ready_seed_rows` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: limit_clause is the optional SQL fragment added only when the operator requested a row cap.
+# TR: limit_clause yalnızca operatör satır sınırı istediğinde eklenen opsiyonel SQL parçasıdır.
+# EN: limit_clause is the optional SQL fragment added only when the operator requested
+# EN: that the ready-seed selection be capped to a maximum row count.
+# TR: limit_clause yalnızca operatör hazır seed seçiminin azami satır sayısıyla
+# TR: sınırlandırılmasını istediğinde eklenen opsiyonel SQL parçasıdır.
         limit_clause = sql.SQL(" limit %s")
         params.append(int(limit))
 
@@ -712,6 +1311,26 @@ def select_ready_seed_rows(
 
 # EN: This helper looks up or creates one frontier.host row for a parsed URL.
 # TR: Bu yardımcı ayrıştırılmış URL için bir frontier.host satırını bulur veya oluşturur.
+# EN: REAL-RULE REPAIR BLOCK / PARAMS ensure_frontier_host_for_parsed_url
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - cur => live database cursor compatible with the SQL executed below
+# EN: - frontier_host_columns => loaded column-name mapping for the frontier.host insert-or-read path
+# EN: - parsed_url => ParsedCanonicalUrl object carrying already-parsed canonical URL pieces
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS ensure_frontier_host_for_parsed_url
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - cur => aşağıdaki SQL ile uyumlu canlı veritabanı cursor nesnesi
+# TR: - frontier_host_columns => frontier.host insert-or-read yolunda kullanılan yüklenmiş sütun-adı eşlemesi
+# TR: - parsed_url => önceden ayrıştırılmış canonical URL parçalarını taşıyan ParsedCanonicalUrl nesnesi
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def ensure_frontier_host_for_parsed_url(
     cur: psycopg.Cursor,
     frontier_host_columns: set[str],
@@ -732,6 +1351,22 @@ def ensure_frontier_host_for_parsed_url(
         """,
         (parsed_url.scheme, parsed_url.host, parsed_url.port),
     )
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_host_for_parsed_url / existing_row / 1
+    # EN: Why local `existing_row` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: already-present DB row returned by the read-before-insert branch
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_host_for_parsed_url / existing_row / 1
+    # TR: `existing_row` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: insert öncesi okuma dalında dönen zaten-mevcut DB satırı
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
+# EN: existing_row stores the already-present frontier.host row returned by the current
+# EN: reconciliation query so the bridge can reuse live host truth safely.
+# TR: existing_row köprünün canlı host doğrusunu güvenli biçimde yeniden kullanabilmesi
+# TR: için mevcut uzlaştırma sorgusunun döndürdüğü zaten-var frontier.host satırını tutar.
     existing_row = cur.fetchone()
     if existing_row is not None:
         return int(existing_row["host_id"]), False
@@ -749,6 +1384,22 @@ def ensure_frontier_host_for_parsed_url(
             """,
             (parsed_url.authority_key,),
         )
+        # EN: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_host_for_parsed_url / existing_row / 2
+        # EN: Why local `existing_row` exists here:
+        # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+        # EN: Expected value shape: already-present DB row returned by the read-before-insert branch
+        # EN: Undesired value shape:
+        # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+        # TR: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_host_for_parsed_url / existing_row / 2
+        # TR: `existing_row` isimli local değişken burada neden var:
+        # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+        # TR: Beklenen değer şekli: insert öncesi okuma dalında dönen zaten-mevcut DB satırı
+        # TR: İstenmeyen değer şekli:
+        # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
+# EN: existing_row stores the already-present frontier.host row returned by the current
+# EN: reconciliation query so the bridge can reuse live host truth safely.
+# TR: existing_row köprünün canlı host doğrusunu güvenli biçimde yeniden kullanabilmesi
+# TR: için mevcut uzlaştırma sorgusunun döndürdüğü zaten-var frontier.host satırını tutar.
         existing_row = cur.fetchone()
         if existing_row is not None:
             return int(existing_row["host_id"]), False
@@ -768,7 +1419,31 @@ def ensure_frontier_host_for_parsed_url(
     if "registrable_domain" in frontier_host_columns:
         insert_values["registrable_domain"] = parsed_url.registrable_domain
 
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_host_for_parsed_url / cols / 1
+    # EN: Why local `cols` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: ordered insert column-name sequence used to build a controlled INSERT statement
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_host_for_parsed_url / cols / 1
+    # TR: `cols` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: kontrollü INSERT ifadesini kurmak için kullanılan sıralı sütun-adı dizisi
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     cols = list(insert_values.keys())
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_host_for_parsed_url / vals / 1
+    # EN: Why local `vals` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: ordered insert value sequence aligned with the cols list
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_host_for_parsed_url / vals / 1
+    # TR: `vals` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: cols listesiyle hizalı sıralı insert değer dizisi
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     vals = [insert_values[col] for col in cols]
 
     # EN: We insert conflict-safely against the live unique authority_key surface.
@@ -789,6 +1464,18 @@ def ensure_frontier_host_for_parsed_url(
         vals,
     )
 
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_host_for_parsed_url / inserted_row / 1
+    # EN: Why local `inserted_row` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: freshly inserted DB row returned by INSERT ... RETURNING
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_host_for_parsed_url / inserted_row / 1
+    # TR: `inserted_row` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: INSERT ... RETURNING tarafından dönen yeni eklenmiş DB satırı
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     inserted_row = cur.fetchone()
     if inserted_row is not None:
         return int(inserted_row["host_id"]), True
@@ -805,6 +1492,19 @@ def ensure_frontier_host_for_parsed_url(
         """,
         (parsed_url.scheme, parsed_url.host, parsed_url.port),
     )
+# EN: `existing_row` is the narrow local runtime value introduced here inside `ensure_frontier_host_for_parsed_url`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `existing_row` burada `ensure_frontier_host_for_parsed_url` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: existing_row stores the already-present frontier.host record returned by the reconciliation query.
+# TR: existing_row uzlaştırma sorgusunun döndürdüğü mevcut frontier.host kaydını tutar.
+# EN: existing_row stores the already-present frontier.host row returned by the current
+# EN: reconciliation query so the bridge can reuse live host truth safely.
+# TR: existing_row köprünün canlı host doğrusunu güvenli biçimde yeniden kullanabilmesi
+# TR: için mevcut uzlaştırma sorgusunun döndürdüğü zaten-var frontier.host satırını tutar.
     existing_row = cur.fetchone()
     if existing_row is not None:
         return int(existing_row["host_id"]), False
@@ -820,6 +1520,19 @@ def ensure_frontier_host_for_parsed_url(
             """,
             (parsed_url.authority_key,),
         )
+# EN: `existing_row` is the narrow local runtime value introduced here inside `ensure_frontier_host_for_parsed_url`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `existing_row` burada `ensure_frontier_host_for_parsed_url` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: existing_row stores the already-present frontier.host record returned by the reconciliation query.
+# TR: existing_row uzlaştırma sorgusunun döndürdüğü mevcut frontier.host kaydını tutar.
+# EN: existing_row stores the already-present frontier.host row returned by the current
+# EN: reconciliation query so the bridge can reuse live host truth safely.
+# TR: existing_row köprünün canlı host doğrusunu güvenli biçimde yeniden kullanabilmesi
+# TR: için mevcut uzlaştırma sorgusunun döndürdüğü zaten-var frontier.host satırını tutar.
         existing_row = cur.fetchone()
         if existing_row is not None:
             return int(existing_row["host_id"]), False
@@ -834,6 +1547,30 @@ def ensure_frontier_host_for_parsed_url(
 
 # EN: This helper looks up or creates one frontier.url row for a seed row.
 # TR: Bu yardımcı bir seed satırı için frontier.url satırını bulur veya oluşturur.
+# EN: REAL-RULE REPAIR BLOCK / PARAMS ensure_frontier_url_for_seed_row
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - cur => live database cursor compatible with the SQL executed below
+# EN: - frontier_url_columns => loaded column-name mapping for the frontier.url insert-or-read path
+# EN: - seed_row => one ready seed row payload that is being bridged into frontier truth
+# EN: - parsed_url => ParsedCanonicalUrl object carrying already-parsed canonical URL pieces
+# EN: - host_id => positive frontier.host identifier already resolved for the URL host
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS ensure_frontier_url_for_seed_row
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - cur => aşağıdaki SQL ile uyumlu canlı veritabanı cursor nesnesi
+# TR: - frontier_url_columns => frontier.url insert-or-read yolunda kullanılan yüklenmiş sütun-adı eşlemesi
+# TR: - seed_row => frontier gerçeğine köprülenen tek bir hazır seed satırı payloadı
+# TR: - parsed_url => önceden ayrıştırılmış canonical URL parçalarını taşıyan ParsedCanonicalUrl nesnesi
+# TR: - host_id => URL hostu için önceden çözülmüş pozitif frontier.host kimliği
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def ensure_frontier_url_for_seed_row(
     cur: psycopg.Cursor,
     frontier_url_columns: set[str],
@@ -854,6 +1591,18 @@ def ensure_frontier_url_for_seed_row(
         (parsed_url.canonical_url,),
     )
 
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_url_for_seed_row / existing_row / 1
+    # EN: Why local `existing_row` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: already-present DB row returned by the read-before-insert branch
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_url_for_seed_row / existing_row / 1
+    # TR: `existing_row` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: insert öncesi okuma dalında dönen zaten-mevcut DB satırı
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     existing_row = cur.fetchone()
     if existing_row is not None:
         return int(existing_row["url_id"]), False
@@ -902,7 +1651,31 @@ def ensure_frontier_url_for_seed_row(
     if "source_id" in frontier_url_columns:
         insert_values["source_id"] = seed_row["source_id"]
 
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_url_for_seed_row / cols / 1
+    # EN: Why local `cols` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: ordered insert column-name sequence used to build a controlled INSERT statement
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_url_for_seed_row / cols / 1
+    # TR: `cols` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: kontrollü INSERT ifadesini kurmak için kullanılan sıralı sütun-adı dizisi
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     cols = list(insert_values.keys())
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_url_for_seed_row / vals / 1
+    # EN: Why local `vals` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: ordered insert value sequence aligned with the cols list
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_url_for_seed_row / vals / 1
+    # TR: `vals` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: cols listesiyle hizalı sıralı insert değer dizisi
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     vals = [insert_values[col] for col in cols]
 
     # EN: URL insert is also conflict-safe, because another worker/process may insert
@@ -921,6 +1694,18 @@ def ensure_frontier_url_for_seed_row(
         vals,
     )
 
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_url_for_seed_row / inserted_row / 1
+    # EN: Why local `inserted_row` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: freshly inserted DB row returned by INSERT ... RETURNING
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_url_for_seed_row / inserted_row / 1
+    # TR: `inserted_row` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: INSERT ... RETURNING tarafından dönen yeni eklenmiş DB satırı
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     inserted_row = cur.fetchone()
     if inserted_row is not None:
         return int(inserted_row["url_id"]), True
@@ -935,6 +1720,18 @@ def ensure_frontier_url_for_seed_row(
         """,
         (parsed_url.canonical_url,),
     )
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_url_for_seed_row / existing_row / 2
+    # EN: Why local `existing_row` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: already-present DB row returned by the read-before-insert branch
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL ensure_frontier_url_for_seed_row / existing_row / 2
+    # TR: `existing_row` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: insert öncesi okuma dalında dönen zaten-mevcut DB satırı
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     existing_row = cur.fetchone()
     if existing_row is not None:
         return int(existing_row["url_id"]), False
@@ -947,6 +1744,26 @@ def ensure_frontier_url_for_seed_row(
 
 # EN: This helper marks one seed.seed_url row as enqueued.
 # TR: Bu yardımcı tek bir seed.seed_url satırını enqueued olarak işaretler.
+# EN: REAL-RULE REPAIR BLOCK / PARAMS mark_seed_row_enqueued
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - cur => live database cursor compatible with the SQL executed below
+# EN: - seed_id => seed.seed_url row identifier that must be marked as enqueued
+# EN: - note => short explicit note text that explains the visible enqueue outcome
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS mark_seed_row_enqueued
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - cur => aşağıdaki SQL ile uyumlu canlı veritabanı cursor nesnesi
+# TR: - seed_id => enqueued olarak işaretlenmesi gereken seed.seed_url satır kimliği
+# TR: - note => görünür enqueue sonucunu anlatan kısa ve açık not metni
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def mark_seed_row_enqueued(
     cur: psycopg.Cursor,
     *,
@@ -975,6 +1792,52 @@ def mark_seed_row_enqueued(
 # TR: Bu ana repo-tracked bridge fonksiyonudur. Hazır seed satırlarını seçer,
 # TR: frontier.host satırlarını garanti eder, frontier.url satırlarını garanti eder
 # TR: ve ardından seed satırlarını enqueued olarak işaretler.
+
+# EN: CORE BRIDGE PURPOSE MEMORY BLOCK V5
+# EN:
+# EN: The core bridge function exists so one place owns the staged transition:
+# EN: seed row -> parsed URL -> host row -> url row -> row receipt -> run receipt
+# EN:
+# EN: Accepted branch families:
+# EN: - no-work
+# EN: - success-style reconciliation
+# EN: - row-local error receipt
+# EN:
+# EN: Undesired misunderstanding:
+# EN: - thinking one bad row should erase visibility of the others
+# EN: Row receipts are part of the identity of this file for exactly that reason.
+# TR: ÇEKİRDEK KÖPRÜ AMAÇ HAFIZA BLOĞU V5
+# TR:
+# TR: Çekirdek köprü fonksiyonu tek bir yerin şu aşamalı geçişe sahip olabilmesi için vardır:
+# TR: seed satırı -> parse URL -> host satırı -> url satırı -> satır makbuzu -> run makbuzu
+# TR:
+# TR: Kabul edilen dal aileleri:
+# TR: - no-work
+# TR: - başarı tarzı uzlaştırma
+# TR: - satır-yerel hata makbuzu
+# TR:
+# TR: İstenmeyen yanlış anlama:
+# TR: - tek kötü satırın diğerlerinin görünürlüğünü silmesi gerektiğini sanmak
+# TR: Satır makbuzları tam da bu yüzden bu dosyanın kimliğinin parçasıdır.
+
+# EN: REAL-RULE REPAIR BLOCK / PARAMS bridge_ready_seed_rows_to_frontier
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - conn => live psycopg connection owning the current bridge transaction
+# EN: - limit => positive integer upper bound controlling how many rows may be processed
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS bridge_ready_seed_rows_to_frontier
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - conn => mevcut bridge transaction işini taşıyan canlı psycopg bağlantısı
+# TR: - limit => kaç satırın işlenebileceğini sınırlayan pozitif tamsayı üst sınırı
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def bridge_ready_seed_rows_to_frontier(
     conn: psycopg.Connection,
     *,
@@ -1016,7 +1879,16 @@ def bridge_ready_seed_rows_to_frontier(
     - parsed_url: satır başına başarı dalında ParsedCanonicalUrl.
     - host_id/url_id: başarılı satır uzlaştırmasında int kimlikler.
     - note: başarı tokenı veya açık hata tokenı.
-    """
+    
+    - ready_seed_rows may be empty on the normal no-work branch
+    - row_results remains a list payload even when empty
+    - host_id/url_id are positive integers on success-style branches
+    - host_id/url_id may fall back to 0 only in explicit row-level error receipts
+    - ready_seed_rows normal no-work dalında boş olabilir
+    - row_results boş olsa bile list payload olarak kalır
+    - host_id/url_id başarı tarzı dallarda pozitif tamsayıdır
+    - host_id/url_id yalnızca açık satır-seviyesi hata makbuzlarında 0 fallback'ine düşebilir
+"""
     # EN: result_rows accumulates per-seed outcomes in operator-readable form.
     # TR: result_rows seed-başı sonuçları operatör-okunur biçimde biriktirir.
     result_rows: list[dict[str, object]] = []
@@ -1024,8 +1896,44 @@ def bridge_ready_seed_rows_to_frontier(
     # EN: These counters keep the top-level receipt compact and auditable.
     # TR: Bu sayaçlar üst-seviye makbuzu kompakt ve denetlenebilir tutar.
     frontier_host_created_count = 0
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL bridge_ready_seed_rows_to_frontier / frontier_url_created_count / 1
+    # EN: Why local `frontier_url_created_count` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: non-negative integer counter for newly created frontier.url rows
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL bridge_ready_seed_rows_to_frontier / frontier_url_created_count / 1
+    # TR: `frontier_url_created_count` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: yeni oluşturulan frontier.url satırları için sıfır veya pozitif sayaç
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     frontier_url_created_count = 0
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL bridge_ready_seed_rows_to_frontier / frontier_url_existing_count / 1
+    # EN: Why local `frontier_url_existing_count` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: non-negative integer counter for already-existing frontier.url rows
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL bridge_ready_seed_rows_to_frontier / frontier_url_existing_count / 1
+    # TR: `frontier_url_existing_count` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: zaten mevcut frontier.url satırları için sıfır veya pozitif sayaç
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     frontier_url_existing_count = 0
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL bridge_ready_seed_rows_to_frontier / seed_rows_marked_enqueued_count / 1
+    # EN: Why local `seed_rows_marked_enqueued_count` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: non-negative integer counter for seed rows marked enqueued
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL bridge_ready_seed_rows_to_frontier / seed_rows_marked_enqueued_count / 1
+    # TR: `seed_rows_marked_enqueued_count` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: enqueued olarak işaretlenen seed satırları için sıfır veya pozitif sayaç
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     seed_rows_marked_enqueued_count = 0
 
     # EN: DB-backed bridge execution requires a real psycopg runtime.
@@ -1137,6 +2045,19 @@ def bridge_ready_seed_rows_to_frontier(
                 if seed_marked_enqueued:
                     seed_rows_marked_enqueued_count += 1
 
+# EN: `row_result` is the narrow local runtime value introduced here inside `bridge_ready_seed_rows_to_frontier`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `row_result` burada `bridge_ready_seed_rows_to_frontier` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: row_result is the structured per-seed receipt that records the exact bridge outcome for one row.
+# TR: row_result tek bir seed satırı için exact bridge sonucunu kaydeden yapılı makbuzdur.
+# EN: row_result is the structured per-seed receipt that captures the exact bridge
+# EN: outcome for one reviewed seed row before it is appended to the final result list.
+# TR: row_result nihai sonuç listesine eklenmeden önce tek bir reviewed seed satırı için
+# TR: exact bridge sonucunu yakalayan yapılı satır-makbuzudur.
                 row_result = SeedFrontierBridgeRowResult(
                     source_code=str(seed_row["source_code"]),
                     seed_id=str(seed_row["seed_id"]),
@@ -1160,12 +2081,38 @@ def bridge_ready_seed_rows_to_frontier(
                 cur.execute("rollback to savepoint seed_bridge_row_sp")
                 cur.execute("release savepoint seed_bridge_row_sp")
 
+# EN: `error_note` is the narrow local runtime value introduced here inside `bridge_ready_seed_rows_to_frontier`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `error_note` burada `bridge_ready_seed_rows_to_frontier` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: error_note is the compact operator-readable failure marker stored in the row-level receipt.
+# TR: error_note satır düzeyi makbuzda tutulan kısa operatör-okunur hata işaretidir.
+# EN: error_note is the compact operator-readable failure marker recorded when one seed
+# EN: row fails and the bridge rolls back only that row's savepoint-scoped work.
+# TR: error_note bir seed satırı başarısız olduğunda ve köprü yalnızca o satırın
+# TR: savepoint kapsamındaki işini geri aldığında kaydedilen kısa operatör-okunur hata işaretidir.
                 error_note = (
                     "seed_bridge_error_v1:"
                     f"{exc.__class__.__name__}:"
                     f"{str(exc)}"
                 )
 
+# EN: `row_result` is the narrow local runtime value introduced here inside `bridge_ready_seed_rows_to_frontier`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `row_result` burada `bridge_ready_seed_rows_to_frontier` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: row_result is the structured per-seed receipt that records the exact bridge outcome for one row.
+# TR: row_result tek bir seed satırı için exact bridge sonucunu kaydeden yapılı makbuzdur.
+# EN: row_result is the structured per-seed receipt that captures the exact bridge
+# EN: outcome for one reviewed seed row before it is appended to the final result list.
+# TR: row_result nihai sonuç listesine eklenmeden önce tek bir reviewed seed satırı için
+# TR: exact bridge sonucunu yakalayan yapılı satır-makbuzudur.
                 row_result = SeedFrontierBridgeRowResult(
                     source_code=str(seed_row.get("source_code", "")),
                     seed_id=str(seed_row.get("seed_id", "")),
@@ -1194,6 +2141,22 @@ def bridge_ready_seed_rows_to_frontier(
 
 # EN: This helper turns the dataclass result into a JSON-ready dict.
 # TR: Bu yardımcı dataclass sonucunu JSON-ready dict’e dönüştürür.
+# EN: REAL-RULE REPAIR BLOCK / PARAMS bridge_result_to_dict
+# EN: Immediate parameter visibility contract:
+# EN: - every parameter name must remain readable directly above the function boundary
+# EN: - a beginner should learn the input surface before entering the live body
+# EN: Expected parameter meanings:
+# EN: - result => SeedFrontierBridgeResult object that must be rendered into a stable dict payload
+# EN: Undesired misunderstanding:
+# EN: - treating unnamed parameters as self-explanatory or silently inferred
+# TR: REAL-RULE REPAIR BLOCK / PARAMS bridge_result_to_dict
+# TR: Immediate parametre görünürlük sözleşmesi:
+# TR: - her parametre adı fonksiyon sınırının hemen üstünde okunabilir kalmalıdır
+# TR: - yeni başlayan biri canlı gövdeye girmeden önce giriş yüzeyini öğrenebilmelidir
+# TR: Beklenen parametre anlamları:
+# TR: - result => kararlı dict payloadına çevrilmesi gereken SeedFrontierBridgeResult nesnesi
+# TR: İstenmeyen yanlış anlama:
+# TR: - adı görünmeyen parametreleri kendiliğinden anlaşılır veya sessizce tahmin edilir sanmak
 def bridge_result_to_dict(result: SeedFrontierBridgeResult) -> dict[str, object]:
     return asdict(result)
 
@@ -1202,6 +2165,49 @@ def bridge_result_to_dict(result: SeedFrontierBridgeResult) -> dict[str, object]
 # EN: bridge, and either commits or rolls back.
 # TR: Bu CLI giriş noktası canlı crawler DSN’ini env dosyasından açar, bridge’i
 # TR: çalıştırır ve ardından commit veya rollback yapar.
+
+# EN: CLI BRIDGE ENTRY PURPOSE MEMORY BLOCK V5
+# EN:
+# EN: The CLI entry in this file exists so an operator can run the bridge as one
+# EN: explicit, auditable operation.
+# EN:
+# EN: Accepted visible job:
+# EN: - choose env file
+# EN: - resolve DSN
+# EN: - run bridge
+# EN: - print structured receipt
+# EN:
+# EN: Undesired hidden behavior:
+# EN: - silent state mutation without receipt
+# TR: CLI KÖPRÜ GİRİŞ AMAÇ HAFIZA BLOĞU V5
+# TR:
+# TR: Bu dosyadaki CLI giriş yüzeyi operatörün köprüyü tek ve denetlenebilir bir
+# TR: operasyon olarak çalıştırabilmesi için vardır.
+# TR:
+# TR: Kabul edilen görünür görev:
+# TR: - env file seçmek
+# TR: - DSN çözmek
+# TR: - köprüyü çalıştırmak
+# TR: - yapılı makbuz basmak
+# TR:
+# TR: İstenmeyen gizli davranış:
+# TR: - makbuz olmadan sessiz state değişimi
+
+# EN: `main` is a narrow bridge-side function and must keep an immediate EN/TR purpose block at the exact declaration boundary.
+# EN: Explicit parameters carried by `main`: (no explicit parameters).
+# EN: This keeps the seed->frontier transition auditable without forcing readers to infer the function contract from body details.
+# TR: `main` dar bir bridge-tarafı fonksiyonudur ve tam bildirim sınırında immediate EN/TR amaç bloğunu korumalıdır.
+# TR: `main` tarafından taşınan açık parametreler: (açık parametre yok).
+# TR: Bu sayede okuyucu fonksiyon sözleşmesini gövde ayrıntılarından tahmin etmek zorunda kalmadan seed->frontier geçişi denetlenebilir kalır.
+
+# EN: main is the CLI entrypoint that resolves operator input, builds the DSN, runs the
+# EN: seed-to-frontier bridge, and emits the final JSON-ready receipt for outer audits.
+# TR: main operatör girdisini çözen, DSN oluşturan, seed-to-frontier köprüsünü çalıştıran
+# TR: ve dış auditler için nihai JSON-ready makbuzu üreten CLI giriş noktasıdır.
+# EN: main is the CLI entrypoint that resolves the env file, builds the DSN, runs the
+# EN: seed-to-frontier bridge, and emits the final JSON-ready receipt for outer audits.
+# TR: main env dosyasını çözen, DSN oluşturan, seed-to-frontier köprüsünü çalıştıran
+# TR: ve dış auditler için nihai JSON-ready makbuzu üreten CLI giriş noktasıdır.
 def main() -> int:
     """\
     EN:
@@ -1253,6 +2259,18 @@ def main() -> int:
         action="store_true",
         help="Run the bridge and then roll back instead of committing.",
     )
+    # EN: REAL-RULE REPAIR BLOCK / LOCAL main / args / 1
+    # EN: Why local `args` exists here:
+    # EN: - because this branch keeps an intermediate runtime truth explicit instead of hiding it inside a longer expression
+    # EN: Expected value shape: parsed CLI namespace returned by argparse for the outer main entry branch
+    # EN: Undesired value shape:
+    # EN: - silent None/garbage/ambiguous data that would hide the real bridge branch meaning
+    # TR: REAL-RULE REPAIR BLOCK / LOCAL main / args / 1
+    # TR: `args` isimli local değişken burada neden var:
+    # TR: - çünkü bu dal ara runtime doğrusunu daha uzun bir ifadenin içine gizlemek yerine açık tutar
+    # TR: Beklenen değer şekli: dış main giriş dalı için argparse tarafından dönen parse edilmiş CLI namespace nesnesi
+    # TR: İstenmeyen değer şekli:
+    # TR: - gerçek bridge dal anlamını gizleyecek sessiz None/çöp/belirsiz veri
     args = parser.parse_args()
 
     # EN: env_file is the explicit runtime env surface chosen by the operator.
@@ -1281,6 +2299,19 @@ def main() -> int:
         # EN: We open one explicit psycopg connection with dict_row results for readability.
         # TR: Okunabilirlik için dict_row sonuçlarıyla tek bir açık psycopg bağlantısı açıyoruz.
         with psycopg.connect(dsn, row_factory=dict_row) as conn:
+# EN: `result` is the narrow local runtime value introduced here inside `main`.
+# EN: Expected value shape: explicit bridge-side intermediate data used by the current step, never hidden ambiguous junk.
+# EN: This local name must stay documented immediately above the assignment so the row/bridge decision flow remains traceable.
+# TR: `result` burada `main` içinde üretilen dar local runtime değeridir.
+# TR: Beklenen değer şekli: mevcut adımda kullanılan açık bridge-tarafı ara veri; gizli belirsiz çöp veri değildir.
+# TR: Satır/bridge karar akışı izlenebilir kalsın diye bu local isim immediate olarak assignment üstünde belgelenmelidir.
+
+# EN: result is the final structured bridge result returned by the seed-to-frontier runtime corridor.
+# TR: result seed-to-frontier runtime koridorunun döndürdüğü nihai yapılı bridge sonucudur.
+# EN: result is the final structured bridge result returned by the seed-to-frontier
+# EN: runtime corridor before it is converted into the outer JSON receipt payload.
+# TR: result dış JSON makbuz payloadına dönüştürülmeden önce seed-to-frontier runtime
+# TR: koridorunun döndürdüğü nihai yapılı bridge sonucudur.
             result = bridge_ready_seed_rows_to_frontier(
                 conn,
                 limit=args.limit,
