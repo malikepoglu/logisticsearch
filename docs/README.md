@@ -543,3 +543,7 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 - [Pi51c termal, fan ve Wi-Fi kontrol sözleşmesi](TOPIC_PI51C_THERMAL_FAN_WIFI_CONTROL_CONTRACT.md)
 - [Runbook: Pi51c termal, fan ve Wi-Fi kontrolü](RUNBOOK_PI51C_THERMAL_FAN_WIFI_CONTROL.md)
 <!-- END PI51C_THERMAL_FAN_WIFI_LINKS -->
+
+## Taxonomy seals / Taksonomi mühürleri
+
+- [Stage2 Turkish leasing taxonomy patch/sync/live-swap seal](docs/TOPIC_TAXONOMY_STAGE2_TURKISH_LEASING_PATCH_SYNC_SEAL_2026_04_25.md)
