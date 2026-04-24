@@ -546,4 +546,4 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 
 ## Taxonomy seals / Taksonomi mühürleri
 
-- [Stage2 Turkish leasing taxonomy patch/sync/live-swap seal](docs/TOPIC_TAXONOMY_STAGE2_TURKISH_LEASING_PATCH_SYNC_SEAL_2026_04_25.md)
+- [Stage2 Turkish leasing taxonomy patch/sync/live-swap seal](TOPIC_TAXONOMY_STAGE2_TURKISH_LEASING_PATCH_SYNC_SEAL_2026_04_25.md)
