@@ -548,3 +548,4 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 
 - [Stage1 English baseline taxonomy review seal](TOPIC_TAXONOMY_STAGE1_ENGLISH_BASELINE_REVIEW_SEAL_2026_04_25.md)
 - [Stage2 Turkish leasing taxonomy patch/sync/live-swap seal](TOPIC_TAXONOMY_STAGE2_TURKISH_LEASING_PATCH_SYNC_SEAL_2026_04_25.md)
+- [Stage3 German baseline taxonomy review seal](TOPIC_TAXONOMY_STAGE3_GERMAN_BASELINE_REVIEW_SEAL_2026_04_25.md)
