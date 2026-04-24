@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+MODE="/etc/pi51c-fans/fan1.mode"
+
+show() {
+  echo "fan1: $(cat "$MODE" 2>/dev/null || echo missing)"
+}
+
+[ $# -eq 1 ] || { echo "usage: fan1 auto|0-255"; show; exit 2; }
+
+if [ "$1" = "auto" ]; then
+  echo auto | sudo tee "$MODE" >/dev/null
+  echo "fan1=auto"
+  exit 0
+fi
+
+if [[ "$1" =~ ^[0-9]+$ ]] && [ "$1" -ge 0 ] && [ "$1" -le 255 ]; then
+  echo "manual $1" | sudo tee "$MODE" >/dev/null
+  echo "fan1=manual value=$1"
+  exit 0
+fi
+
+echo "invalid input ignored: $1"
+show
+exit 0

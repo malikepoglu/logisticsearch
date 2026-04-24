@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+if [ "${EUID:-$(id -u)}" -ne 0 ]; then
+  exec sudo /usr/local/bin/wifioff "$@"
+fi
+WIFI_DISABLED="/etc/netplan/60-wlan0.yaml.disabled"
+WIFI_ENABLED="/etc/netplan/60-wlan0.yaml"
+if [ -f "$WIFI_ENABLED" ]; then
+  mv "$WIFI_ENABLED" "$WIFI_DISABLED"
+else
+  echo "Wi-Fi config already disabled."
+fi
+netplan generate
+netplan apply
+echo "WIFI_OFF_APPLY_DONE"
+ip -br a | grep -E "^(eth0|wlan0)" || true
+ip route || true

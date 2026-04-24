@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+set -Eeuo pipefail
+
+if [ "${1:-}" = "status" ]; then
+  echo "service=$(systemctl is-active pi51c-gpio-fan-controller.service 2>/dev/null || true)"
+  echo "fan0=$(cat /etc/pi51c-fans/fan0.mode 2>/dev/null || echo missing)"
+  echo "fan1=$(cat /etc/pi51c-fans/fan1.mode 2>/dev/null || echo missing)"
+  echo "fan2=$(cat /etc/pi51c-fans/fan2.mode 2>/dev/null || echo missing)"
+  echo
+
+  echo "== TEMPERATURES =="
+  for f in /sys/class/hwmon/hwmon*/temp*_input; do
+    [ -f "$f" ] || continue
+    name="$(cat "$(dirname "$f")/name" 2>/dev/null || echo unknown)"
+    raw="$(cat "$f")"
+    c="$(awk "BEGIN { printf \"%.1f\", $raw/1000 }")"
+    echo "$name=$c C path=$f"
+  done
+
+  echo
+  echo "== FAN0 COOLING DEVICE =="
+  cat /sys/class/thermal/cooling_device0/type 2>/dev/null || true
+  echo -n "cur_state="; cat /sys/class/thermal/cooling_device0/cur_state 2>/dev/null || true
+  echo -n "max_state="; cat /sys/class/thermal/cooling_device0/max_state 2>/dev/null || true
+
+  echo
+  echo "== SERVICE LOG =="
+  journalctl -u pi51c-gpio-fan-controller.service -n 8 --no-pager
+  exit 0
+fi
+
+echo "usage: fan status"
+exit 2

@@ -531,3 +531,15 @@ Read this when you need the strict beginner-first boundary between raw fetch, pa
 
 1. `TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
 Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfaların ele alınışı arasındaki katı beginner-first sınırı anlaman gerektiğinde bunu oku.
+
+<!-- BEGIN PI51C_THERMAL_FAN_WIFI_LINKS -->
+## EN — Pi51c thermal, fan, and Wi-Fi host-control layer
+
+- [Pi51c thermal, fan, and Wi-Fi control contract](TOPIC_PI51C_THERMAL_FAN_WIFI_CONTROL_CONTRACT.md)
+- [Runbook: Pi51c thermal, fan, and Wi-Fi control](RUNBOOK_PI51C_THERMAL_FAN_WIFI_CONTROL.md)
+
+## TR — Pi51c termal, fan ve Wi-Fi host-control katmanı
+
+- [Pi51c termal, fan ve Wi-Fi kontrol sözleşmesi](TOPIC_PI51C_THERMAL_FAN_WIFI_CONTROL_CONTRACT.md)
+- [Runbook: Pi51c termal, fan ve Wi-Fi kontrolü](RUNBOOK_PI51C_THERMAL_FAN_WIFI_CONTROL.md)
+<!-- END PI51C_THERMAL_FAN_WIFI_LINKS -->
