@@ -12,5 +12,4026 @@
     "ranking_policy": "taxonomy_ids_only_no_scores_here",
     "mutation_policy": "json_to_scratch_audit_then_live_swap"
   },
-  "entries": []
+  "entries": [
+    {
+      "node_code": "1",
+      "title": "النقل ونقل البضائع",
+      "terms": [
+        {
+          "term_id": "ar_1_primary_001",
+          "term": "النقل ونقل البضائع",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1",
+      "title": "النقل البري",
+      "terms": [
+        {
+          "term_id": "ar_1_1_primary_001",
+          "term": "نقل الشاحنات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.1",
+      "title": "حمولة شاحنة كاملة - FTL",
+      "terms": [
+        {
+          "term_id": "ar_1_1_1_primary_001",
+          "term": "حمولة شاحنة كاملة - FTL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.2",
+      "title": "حمولة جزئية - LTL",
+      "terms": [
+        {
+          "term_id": "ar_1_1_2_primary_001",
+          "term": "حمولة جزئية - LTL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.3",
+      "title": "التوزيع المحلي / النقل الحضري بالشاحنات",
+      "terms": [
+        {
+          "term_id": "ar_1_1_3_primary_001",
+          "term": "التوزيع المحلي / النقل الحضري بالشاحنات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.4",
+      "title": "النقل التعاقدي المخصص",
+      "terms": [
+        {
+          "term_id": "ar_1_1_4_primary_001",
+          "term": "النقل التعاقدي المخصص",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.5",
+      "title": "نقل البضائع الدولي براً",
+      "terms": [
+        {
+          "term_id": "ar_1_1_5_primary_001",
+          "term": "نقل البضائع الدولي براً",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.6",
+      "title": "خدمات الطرود البرية وخدمات الميل الأخير",
+      "terms": [
+        {
+          "term_id": "ar_1_1_6_primary_001",
+          "term": "خدمات الطرود البرية وخدمات الميل الأخير",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.6.1",
+      "title": "توصيل الميل الأخير",
+      "terms": [
+        {
+          "term_id": "ar_1_1_6_1_primary_001",
+          "term": "توصيل الميل الأخير",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.7",
+      "title": "خدمات نقل المنزل / الانتقال",
+      "terms": [
+        {
+          "term_id": "ar_1_1_7_primary_001",
+          "term": "خدمات نقل المنزل / الانتقال",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.8",
+      "title": "النقل البري للبضائع السائبة الجافة",
+      "terms": [
+        {
+          "term_id": "ar_1_1_8_primary_001",
+          "term": "النقل البري للبضائع السائبة الجافة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.9",
+      "title": "النقل بالصهاريج",
+      "terms": [
+        {
+          "term_id": "ar_1_1_9_primary_001",
+          "term": "النقل بالصهاريج",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.10",
+      "title": "النقل الثقيل / الشحنات كبيرة الأبعاد",
+      "terms": [
+        {
+          "term_id": "ar_1_1_10_primary_001",
+          "term": "النقل الثقيل / الشحنات كبيرة الأبعاد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.11",
+      "title": "خدمات نقل المركبات",
+      "terms": [
+        {
+          "term_id": "ar_1_1_11_primary_001",
+          "term": "خدمات نقل المركبات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.12",
+      "title": "نقل الماشية الحية",
+      "terms": [
+        {
+          "term_id": "ar_1_1_12_primary_001",
+          "term": "نقل الماشية الحية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.13",
+      "title": "نقل المواد الخطرة - Hazmat",
+      "terms": [
+        {
+          "term_id": "ar_1_1_13_primary_001",
+          "term": "نقل المواد الخطرة - Hazmat",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2",
+      "title": "النقل البحري",
+      "terms": [
+        {
+          "term_id": "ar_1_2_primary_001",
+          "term": "النقل البحري",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.1",
+      "title": "الشحن بالحاويات",
+      "terms": [
+        {
+          "term_id": "ar_1_2_1_primary_001",
+          "term": "الشحن بالحاويات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.1.1",
+      "title": "حمولة حاوية كاملة - FCL",
+      "terms": [
+        {
+          "term_id": "ar_1_2_1_1_primary_001",
+          "term": "حمولة حاوية كاملة - FCL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.1.2",
+      "title": "حمولة جزئية للحاوية - LCL",
+      "terms": [
+        {
+          "term_id": "ar_1_2_1_2_primary_001",
+          "term": "حمولة جزئية للحاوية - LCL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.2",
+      "title": "الشحن البحري للبضائع السائبة الجافة",
+      "terms": [
+        {
+          "term_id": "ar_1_2_2_primary_001",
+          "term": "الشحن البحري للبضائع السائبة الجافة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.3",
+      "title": "الشحن البحري للبضائع السائلة السائبة",
+      "terms": [
+        {
+          "term_id": "ar_1_2_3_primary_001",
+          "term": "الشحن البحري للبضائع السائلة السائبة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.4",
+      "title": "النقل بنظام الرورو",
+      "terms": [
+        {
+          "term_id": "ar_1_2_4_primary_001",
+          "term": "النقل بنظام الرورو",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.5",
+      "title": "الشحن البحري المنتظم",
+      "terms": [
+        {
+          "term_id": "ar_1_2_5_primary_001",
+          "term": "الشحن البحري المنتظم",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.6",
+      "title": "الشحن البحري غير المنتظم",
+      "terms": [
+        {
+          "term_id": "ar_1_2_6_primary_001",
+          "term": "الشحن البحري غير المنتظم",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.7",
+      "title": "الشحن البحري قصير المدى - SSS",
+      "terms": [
+        {
+          "term_id": "ar_1_2_7_primary_001",
+          "term": "الشحن البحري قصير المدى - SSS",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.8",
+      "title": "الخدمات اللوجستية البحرية الخارجية",
+      "terms": [
+        {
+          "term_id": "ar_1_2_8_primary_001",
+          "term": "الخدمات اللوجستية البحرية الخارجية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.9",
+      "title": "خدمات الملاحة والقطر",
+      "terms": [
+        {
+          "term_id": "ar_1_2_9_primary_001",
+          "term": "خدمات الملاحة والقطر",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.9.1",
+      "title": "خدمات القاطرات البحرية",
+      "terms": [
+        {
+          "term_id": "ar_1_2_9_1_primary_001",
+          "term": "خدمات القاطرات البحرية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.9.2",
+      "title": "تشغيل الجسور المتحركة",
+      "terms": [
+        {
+          "term_id": "ar_1_2_9_2_primary_001",
+          "term": "تشغيل الجسور المتحركة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.9.3",
+      "title": "خدمات الملاحة أو الاتصالات البحرية",
+      "terms": [
+        {
+          "term_id": "ar_1_2_9_3_primary_001",
+          "term": "خدمات الملاحة أو الاتصالات البحرية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.9.4",
+      "title": "خدمة dead man anchor",
+      "terms": [
+        {
+          "term_id": "ar_1_2_9_4_primary_001",
+          "term": "خدمة dead man anchor",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3",
+      "title": "الشحن الجوي",
+      "terms": [
+        {
+          "term_id": "ar_1_3_primary_001",
+          "term": "الشحن الجوي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3.1",
+      "title": "خدمات الشحن الجوي",
+      "terms": [
+        {
+          "term_id": "ar_1_3_1_primary_001",
+          "term": "خدمات الشحن الجوي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3.2",
+      "title": "الشحن الجوي السريع",
+      "terms": [
+        {
+          "term_id": "ar_1_3_2_primary_001",
+          "term": "الشحن الجوي السريع",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3.3",
+      "title": "الشحن الجوي من الباب إلى الباب",
+      "terms": [
+        {
+          "term_id": "ar_1_3_3_primary_001",
+          "term": "الشحن الجوي من الباب إلى الباب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3.4",
+      "title": "تجميع الشحنات الجوية",
+      "terms": [
+        {
+          "term_id": "ar_1_3_4_primary_001",
+          "term": "تجميع الشحنات الجوية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3.5",
+      "title": "خدمات الشحن الجوي العارض",
+      "terms": [
+        {
+          "term_id": "ar_1_3_5_primary_001",
+          "term": "خدمات الشحن الجوي العارض",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4",
+      "title": "الشحن بالسكك الحديدية",
+      "terms": [
+        {
+          "term_id": "ar_1_4_primary_001",
+          "term": "الشحن بالسكك الحديدية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.1",
+      "title": "شحن حمولة العربة بالسكك الحديدية",
+      "terms": [
+        {
+          "term_id": "ar_1_4_1_primary_001",
+          "term": "شحن حمولة العربة بالسكك الحديدية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.2",
+      "title": "النقل الحديدي متعدد الوسائط",
+      "terms": [
+        {
+          "term_id": "ar_1_4_2_primary_001",
+          "term": "النقل الحديدي متعدد الوسائط",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.2.1",
+      "title": "النقل المشترك سكة-طريق",
+      "terms": [
+        {
+          "term_id": "ar_1_4_2_1_primary_001",
+          "term": "النقل المشترك سكة-طريق",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.3",
+      "title": "شحن السكك الحديدية عالي السرعة",
+      "terms": [
+        {
+          "term_id": "ar_1_4_3_primary_001",
+          "term": "شحن السكك الحديدية عالي السرعة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.4",
+      "title": "خدمات تأجير عربات السكك الحديدية",
+      "terms": [
+        {
+          "term_id": "ar_1_4_4_primary_001",
+          "term": "خدمات تأجير عربات السكك الحديدية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.4.1",
+      "title": "تأجير عربات الشحن بالسكك الحديدية",
+      "terms": [
+        {
+          "term_id": "ar_1_4_4_1_primary_001",
+          "term": "تأجير عربات الشحن بالسكك الحديدية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.4.2",
+      "title": "تأجير صهاريج السكك الحديدية",
+      "terms": [
+        {
+          "term_id": "ar_1_4_4_2_primary_001",
+          "term": "تأجير صهاريج السكك الحديدية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5",
+      "title": "النقل عبر خطوط الأنابيب",
+      "terms": [
+        {
+          "term_id": "ar_1_5_primary_001",
+          "term": "النقل عبر خطوط الأنابيب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5.1",
+      "title": "نقل المنتجات النفطية عبر خطوط الأنابيب",
+      "terms": [
+        {
+          "term_id": "ar_1_5_1_primary_001",
+          "term": "نقل المنتجات النفطية عبر خطوط الأنابيب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5.2",
+      "title": "نقل المياه عبر خطوط الأنابيب",
+      "terms": [
+        {
+          "term_id": "ar_1_5_2_primary_001",
+          "term": "نقل المياه عبر خطوط الأنابيب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5.3",
+      "title": "نقل الغاز الطبيعي عبر خطوط الأنابيب",
+      "terms": [
+        {
+          "term_id": "ar_1_5_3_primary_001",
+          "term": "نقل الغاز الطبيعي عبر خطوط الأنابيب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5.4",
+      "title": "نقل المواد الكيميائية عبر خطوط الأنابيب",
+      "terms": [
+        {
+          "term_id": "ar_1_5_4_primary_001",
+          "term": "نقل المواد الكيميائية عبر خطوط الأنابيب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5.5",
+      "title": "الفحص الداخلي لخطوط الأنابيب",
+      "terms": [
+        {
+          "term_id": "ar_1_5_5_primary_001",
+          "term": "الفحص الداخلي لخطوط الأنابيب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6",
+      "title": "النقل متعدد الوسائط والمشترك للبضائع",
+      "terms": [
+        {
+          "term_id": "ar_1_6_primary_001",
+          "term": "النقل متعدد الوسائط والمشترك للبضائع",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6.1",
+      "title": "النقل متعدد الوسائط للحاويات",
+      "terms": [
+        {
+          "term_id": "ar_1_6_1_primary_001",
+          "term": "النقل متعدد الوسائط للحاويات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6.2",
+      "title": "النقل الجوي البحري",
+      "terms": [
+        {
+          "term_id": "ar_1_6_2_primary_001",
+          "term": "النقل الجوي البحري",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6.3",
+      "title": "النقل البحري بالسكك الحديدية",
+      "terms": [
+        {
+          "term_id": "ar_1_6_3_primary_001",
+          "term": "النقل البحري بالسكك الحديدية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6.4",
+      "title": "النقل البحري البري",
+      "terms": [
+        {
+          "term_id": "ar_1_6_4_primary_001",
+          "term": "النقل البحري البري",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6.5",
+      "title": "النقل الجوي البري",
+      "terms": [
+        {
+          "term_id": "ar_1_6_5_primary_001",
+          "term": "النقل الجوي البري",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7",
+      "title": "خدمات البريد / التوصيل السريع",
+      "terms": [
+        {
+          "term_id": "ar_1_7_primary_001",
+          "term": "خدمات البريد / التوصيل السريع",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.1",
+      "title": "خدمات التوصيل البريدي الوطنية",
+      "terms": [
+        {
+          "term_id": "ar_1_7_1_primary_001",
+          "term": "خدمات التوصيل البريدي الوطنية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.2",
+      "title": "خدمات صندوق البريد",
+      "terms": [
+        {
+          "term_id": "ar_1_7_2_primary_001",
+          "term": "خدمات صندوق البريد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.3",
+      "title": "خدمات إرسال / جمع / تسليم البريد",
+      "terms": [
+        {
+          "term_id": "ar_1_7_3_primary_001",
+          "term": "خدمات إرسال / جمع / تسليم البريد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.4",
+      "title": "خدمات عالمية لتسليم الرسائل أو الطرود الصغيرة",
+      "terms": [
+        {
+          "term_id": "ar_1_7_4_primary_001",
+          "term": "خدمات عالمية لتسليم الرسائل أو الطرود الصغيرة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.5",
+      "title": "خدمات محلية لتسليم الرسائل أو الطرود الصغيرة",
+      "terms": [
+        {
+          "term_id": "ar_1_7_5_primary_001",
+          "term": "خدمات محلية لتسليم الرسائل أو الطرود الصغيرة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.6",
+      "title": "خدمات التوصيل بالدراجة أو السكوتر",
+      "terms": [
+        {
+          "term_id": "ar_1_7_6_primary_001",
+          "term": "خدمات التوصيل بالدراجة أو السكوتر",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2",
+      "title": "خدمات سلسلة الإمداد والخدمات اللوجستية",
+      "terms": [
+        {
+          "term_id": "ar_2_primary_001",
+          "term": "خدمات سلسلة الإمداد والخدمات اللوجستية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.1",
+      "title": "التخطيط والاستشارات",
+      "terms": [
+        {
+          "term_id": "ar_2_1_primary_001",
+          "term": "التخطيط والاستشارات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.1.1",
+      "title": "استشارات سلسلة الإمداد",
+      "terms": [
+        {
+          "term_id": "ar_2_1_1_primary_001",
+          "term": "استشارات سلسلة الإمداد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.1.2",
+      "title": "تخطيط الطلب والمخزون",
+      "terms": [
+        {
+          "term_id": "ar_2_1_2_primary_001",
+          "term": "تخطيط الطلب والمخزون",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.1.3",
+      "title": "تحسين الشبكة",
+      "terms": [
+        {
+          "term_id": "ar_2_1_3_primary_001",
+          "term": "تحسين الشبكة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.2",
+      "title": "خدمات تنظيم النقل",
+      "terms": [
+        {
+          "term_id": "ar_2_2_primary_001",
+          "term": "خدمات تنظيم النقل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.2.1",
+      "title": "خدمات الشحن والترتيب اللوجستي",
+      "terms": [
+        {
+          "term_id": "ar_2_2_1_primary_001",
+          "term": "خدمات الشحن والترتيب اللوجستي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.2.1.1",
+      "title": "تجميع الشحنات",
+      "terms": [
+        {
+          "term_id": "ar_2_2_1_1_primary_001",
+          "term": "تجميع الشحنات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.2.2",
+      "title": "اللوجستيات العابرة للحدود",
+      "terms": [
+        {
+          "term_id": "ar_2_2_2_primary_001",
+          "term": "اللوجستيات العابرة للحدود",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.2.3",
+      "title": "خدمات شحن تشمل التأمين",
+      "terms": [
+        {
+          "term_id": "ar_2_2_3_primary_001",
+          "term": "خدمات شحن تشمل التأمين",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3",
+      "title": "التخزين والتوزيع",
+      "terms": [
+        {
+          "term_id": "ar_2_3_primary_001",
+          "term": "التخزين والتوزيع",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.1",
+      "title": "التخزين العام",
+      "terms": [
+        {
+          "term_id": "ar_2_3_1_primary_001",
+          "term": "التخزين العام",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.2",
+      "title": "التخزين التعاقدي",
+      "terms": [
+        {
+          "term_id": "ar_2_3_2_primary_001",
+          "term": "التخزين التعاقدي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.3",
+      "title": "إدارة مراكز التوزيع",
+      "terms": [
+        {
+          "term_id": "ar_2_3_3_primary_001",
+          "term": "إدارة مراكز التوزيع",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.4",
+      "title": "التخزين بدرجة حرارة مضبوطة",
+      "terms": [
+        {
+          "term_id": "ar_2_3_4_primary_001",
+          "term": "التخزين بدرجة حرارة مضبوطة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.5",
+      "title": "التخزين الجمركي",
+      "terms": [
+        {
+          "term_id": "ar_2_3_5_primary_001",
+          "term": "التخزين الجمركي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.6",
+      "title": "مراكز تنفيذ طلبات التجارة الإلكترونية",
+      "terms": [
+        {
+          "term_id": "ar_2_3_6_primary_001",
+          "term": "مراكز تنفيذ طلبات التجارة الإلكترونية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.7",
+      "title": "إدارة المخزون",
+      "terms": [
+        {
+          "term_id": "ar_2_3_7_primary_001",
+          "term": "إدارة المخزون",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.8",
+      "title": "كروس دوكينغ",
+      "terms": [
+        {
+          "term_id": "ar_2_3_8_primary_001",
+          "term": "كروس دوكينغ",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.9",
+      "title": "تخزين المواد السائبة",
+      "terms": [
+        {
+          "term_id": "ar_2_3_9_primary_001",
+          "term": "تخزين المواد السائبة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4",
+      "title": "الخدمات اللوجستية ذات القيمة المضافة",
+      "terms": [
+        {
+          "term_id": "ar_2_4_primary_001",
+          "term": "الخدمات اللوجستية ذات القيمة المضافة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.1",
+      "title": "التجميع والتعبئة",
+      "terms": [
+        {
+          "term_id": "ar_2_4_1_primary_001",
+          "term": "التجميع والتعبئة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.2",
+      "title": "وضع الملصقات والتسعير",
+      "terms": [
+        {
+          "term_id": "ar_2_4_2_primary_001",
+          "term": "وضع الملصقات والتسعير",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.3",
+      "title": "تجميع مجموعات",
+      "terms": [
+        {
+          "term_id": "ar_2_4_3_primary_001",
+          "term": "تجميع مجموعات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.4",
+      "title": "الترقيم التسلسلي",
+      "terms": [
+        {
+          "term_id": "ar_2_4_4_primary_001",
+          "term": "الترقيم التسلسلي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.5",
+      "title": "خدمات التعبئة والتغليف",
+      "terms": [
+        {
+          "term_id": "ar_2_4_5_primary_001",
+          "term": "خدمات التعبئة والتغليف",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.6",
+      "title": "خدمات مناولة المواد",
+      "terms": [
+        {
+          "term_id": "ar_2_4_6_primary_001",
+          "term": "خدمات مناولة المواد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.5",
+      "title": "التخليص الجمركي والامتثال التجاري",
+      "terms": [
+        {
+          "term_id": "ar_2_5_primary_001",
+          "term": "التخليص الجمركي والامتثال التجاري",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.5.1",
+      "title": "الوساطة الجمركية",
+      "terms": [
+        {
+          "term_id": "ar_2_5_1_primary_001",
+          "term": "الوساطة الجمركية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.5.2",
+      "title": "امتثال التجارة الخارجية",
+      "terms": [
+        {
+          "term_id": "ar_2_5_2_primary_001",
+          "term": "امتثال التجارة الخارجية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.5.3",
+      "title": "توثيق الاستيراد والتصدير",
+      "terms": [
+        {
+          "term_id": "ar_2_5_3_primary_001",
+          "term": "توثيق الاستيراد والتصدير",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.6",
+      "title": "نماذج مقدمي الخدمات اللوجستية",
+      "terms": [
+        {
+          "term_id": "ar_2_6_primary_001",
+          "term": "نماذج مقدمي الخدمات اللوجستية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.6.1",
+      "title": "لوجستيات الطرف الثالث - 3PL",
+      "terms": [
+        {
+          "term_id": "ar_2_6_1_primary_001",
+          "term": "لوجستيات الطرف الثالث - 3PL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.6.2",
+      "title": "لوجستيات الطرف الرابع - 4PL",
+      "terms": [
+        {
+          "term_id": "ar_2_6_2_primary_001",
+          "term": "لوجستيات الطرف الرابع - 4PL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.7",
+      "title": "خدمات التفتيش والمعاينة",
+      "terms": [
+        {
+          "term_id": "ar_2_7_primary_001",
+          "term": "خدمات التفتيش والمعاينة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.7.1",
+      "title": "خدمات فحص التعبئة والتغليف",
+      "terms": [
+        {
+          "term_id": "ar_2_7_1_primary_001",
+          "term": "خدمات فحص التعبئة والتغليف",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.7.2",
+      "title": "خدمات معاينة الشحنات",
+      "terms": [
+        {
+          "term_id": "ar_2_7_2_primary_001",
+          "term": "خدمات معاينة الشحنات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.7.3",
+      "title": "عمليات تفتيش مكافحة الآفات",
+      "terms": [
+        {
+          "term_id": "ar_2_7_3_primary_001",
+          "term": "عمليات تفتيش مكافحة الآفات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3",
+      "title": "الخدمات اللوجستية المتخصصة",
+      "terms": [
+        {
+          "term_id": "ar_3_primary_001",
+          "term": "الخدمات اللوجستية المتخصصة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.1",
+      "title": "لوجستيات مضبوطة الحرارة",
+      "terms": [
+        {
+          "term_id": "ar_3_1_primary_001",
+          "term": "لوجستيات مضبوطة الحرارة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.1.1",
+      "title": "لوجستيات سلسلة التبريد",
+      "terms": [
+        {
+          "term_id": "ar_3_1_1_primary_001",
+          "term": "لوجستيات سلسلة التبريد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.1.2",
+      "title": "اللوجستيات الدوائية",
+      "terms": [
+        {
+          "term_id": "ar_3_1_2_primary_001",
+          "term": "اللوجستيات الدوائية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.1.3",
+      "title": "لوجستيات السلع القابلة للتلف",
+      "terms": [
+        {
+          "term_id": "ar_3_1_3_primary_001",
+          "term": "لوجستيات السلع القابلة للتلف",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.2",
+      "title": "لوجستيات الأحمال الثقيلة والمشاريع",
+      "terms": [
+        {
+          "term_id": "ar_3_2_primary_001",
+          "term": "لوجستيات الأحمال الثقيلة والمشاريع",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.2.1",
+      "title": "لوجستيات قطاع الطاقة",
+      "terms": [
+        {
+          "term_id": "ar_3_2_1_primary_001",
+          "term": "لوجستيات قطاع الطاقة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.2.2",
+      "title": "لوجستيات البناء",
+      "terms": [
+        {
+          "term_id": "ar_3_2_2_primary_001",
+          "term": "لوجستيات البناء",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3",
+      "title": "اللوجستيات الخاصة بالقطاعات",
+      "terms": [
+        {
+          "term_id": "ar_3_3_primary_001",
+          "term": "اللوجستيات الخاصة بالقطاعات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.1",
+      "title": "لوجستيات السيارات",
+      "terms": [
+        {
+          "term_id": "ar_3_3_1_primary_001",
+          "term": "لوجستيات السيارات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.1.1",
+      "title": "لوجستيات قطع الغيار",
+      "terms": [
+        {
+          "term_id": "ar_3_3_1_1_primary_001",
+          "term": "لوجستيات قطع الغيار",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.1.2",
+      "title": "لوجستيات المركبات الجاهزة",
+      "terms": [
+        {
+          "term_id": "ar_3_3_1_2_primary_001",
+          "term": "لوجستيات المركبات الجاهزة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.2",
+      "title": "لوجستيات التجزئة",
+      "terms": [
+        {
+          "term_id": "ar_3_3_2_primary_001",
+          "term": "لوجستيات التجزئة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.2.1",
+      "title": "لوجستيات الموضة السريعة",
+      "terms": [
+        {
+          "term_id": "ar_3_3_2_1_primary_001",
+          "term": "لوجستيات الموضة السريعة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.3",
+      "title": "لوجستيات الطيران والدفاع",
+      "terms": [
+        {
+          "term_id": "ar_3_3_3_primary_001",
+          "term": "لوجستيات الطيران والدفاع",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.4",
+      "title": "لوجستيات التكنولوجيا العالية والإلكترونيات",
+      "terms": [
+        {
+          "term_id": "ar_3_3_4_primary_001",
+          "term": "لوجستيات التكنولوجيا العالية والإلكترونيات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.5",
+      "title": "اللوجستيات الكيميائية",
+      "terms": [
+        {
+          "term_id": "ar_3_3_5_primary_001",
+          "term": "اللوجستيات الكيميائية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.6",
+      "title": "لوجستيات النفط والغاز",
+      "terms": [
+        {
+          "term_id": "ar_3_3_6_primary_001",
+          "term": "لوجستيات النفط والغاز",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4",
+      "title": "خدمات لوجستية متخصصة أخرى",
+      "terms": [
+        {
+          "term_id": "ar_3_4_primary_001",
+          "term": "خدمات لوجستية متخصصة أخرى",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.1",
+      "title": "لوجستيات المواد الخطرة",
+      "terms": [
+        {
+          "term_id": "ar_3_4_1_primary_001",
+          "term": "لوجستيات المواد الخطرة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.2",
+      "title": "لوجستيات الحيوانات الحية",
+      "terms": [
+        {
+          "term_id": "ar_3_4_2_primary_001",
+          "term": "لوجستيات الحيوانات الحية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.3",
+      "title": "لوجستيات البضائع عالية القيمة والمؤمنة",
+      "terms": [
+        {
+          "term_id": "ar_3_4_3_primary_001",
+          "term": "لوجستيات البضائع عالية القيمة والمؤمنة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.4",
+      "title": "لوجستيات الفن والمعارض",
+      "terms": [
+        {
+          "term_id": "ar_3_4_4_primary_001",
+          "term": "لوجستيات الفن والمعارض",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.5",
+      "title": "اللوجستيات الحضرية",
+      "terms": [
+        {
+          "term_id": "ar_3_4_5_primary_001",
+          "term": "اللوجستيات الحضرية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.6",
+      "title": "اللوجستيات العكسية",
+      "terms": [
+        {
+          "term_id": "ar_3_4_6_primary_001",
+          "term": "اللوجستيات العكسية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.6.1",
+      "title": "إدارة المرتجعات",
+      "terms": [
+        {
+          "term_id": "ar_3_4_6_1_primary_001",
+          "term": "إدارة المرتجعات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.6.2",
+      "title": "الإصلاح وإعادة التأهيل",
+      "terms": [
+        {
+          "term_id": "ar_3_4_6_2_primary_001",
+          "term": "الإصلاح وإعادة التأهيل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.6.3",
+      "title": "إعادة التدوير واسترداد المواد",
+      "terms": [
+        {
+          "term_id": "ar_3_4_6_3_primary_001",
+          "term": "إعادة التدوير واسترداد المواد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4",
+      "title": "البنية التحتية والمعدات اللوجستية",
+      "terms": [
+        {
+          "term_id": "ar_4_primary_001",
+          "term": "البنية التحتية والمعدات اللوجستية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1",
+      "title": "المحطات والموانئ",
+      "terms": [
+        {
+          "term_id": "ar_4_1_primary_001",
+          "term": "المحطات والموانئ",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.1",
+      "title": "عمليات الموانئ",
+      "terms": [
+        {
+          "term_id": "ar_4_1_1_primary_001",
+          "term": "عمليات الموانئ",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.2",
+      "title": "عمليات الموانئ الداخلية",
+      "terms": [
+        {
+          "term_id": "ar_4_1_2_primary_001",
+          "term": "عمليات الموانئ الداخلية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.3",
+      "title": "محطات الشحن بالسكك الحديدية",
+      "terms": [
+        {
+          "term_id": "ar_4_1_3_primary_001",
+          "term": "محطات الشحن بالسكك الحديدية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.4",
+      "title": "محطات الشحن الجوي",
+      "terms": [
+        {
+          "term_id": "ar_4_1_4_primary_001",
+          "term": "محطات الشحن الجوي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.5",
+      "title": "خدمات القاعدة الساحلية للدعم البحري",
+      "terms": [
+        {
+          "term_id": "ar_4_1_5_primary_001",
+          "term": "خدمات القاعدة الساحلية للدعم البحري",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.6",
+      "title": "خدمات مراقبة الحركة الجوية",
+      "terms": [
+        {
+          "term_id": "ar_4_1_6_primary_001",
+          "term": "خدمات مراقبة الحركة الجوية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.2",
+      "title": "العقارات اللوجستية",
+      "terms": [
+        {
+          "term_id": "ar_4_2_primary_001",
+          "term": "العقارات اللوجستية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.2.1",
+      "title": "المتنزهات اللوجستية والمناطق الحرة",
+      "terms": [
+        {
+          "term_id": "ar_4_2_1_primary_001",
+          "term": "المتنزهات اللوجستية والمناطق الحرة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.3",
+      "title": "المعدات اللوجستية",
+      "terms": [
+        {
+          "term_id": "ar_4_3_primary_001",
+          "term": "المعدات اللوجستية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.3.1",
+      "title": "حاويات الشحن",
+      "terms": [
+        {
+          "term_id": "ar_4_3_1_primary_001",
+          "term": "حاويات الشحن",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.3.2",
+      "title": "هياكل حاويات الشحن",
+      "terms": [
+        {
+          "term_id": "ar_4_3_2_primary_001",
+          "term": "هياكل حاويات الشحن",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.3.3",
+      "title": "الرافعات الشوكية",
+      "terms": [
+        {
+          "term_id": "ar_4_3_3_primary_001",
+          "term": "الرافعات الشوكية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.3.4",
+      "title": "معدات المستودعات",
+      "terms": [
+        {
+          "term_id": "ar_4_3_4_primary_001",
+          "term": "معدات المستودعات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4",
+      "title": "تأجير واستئجار الأصول اللوجستية",
+      "terms": [
+        {
+          "term_id": "ar_4_4_primary_001",
+          "term": "تأجير واستئجار الأصول اللوجستية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.1",
+      "title": "خدمات تأجير حاويات النقل",
+      "terms": [
+        {
+          "term_id": "ar_4_4_1_primary_001",
+          "term": "خدمات تأجير حاويات النقل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.1.1",
+      "title": "خدمة تأجير حاويات الشحن متعددة الوسائط",
+      "terms": [
+        {
+          "term_id": "ar_4_4_1_1_primary_001",
+          "term": "خدمة تأجير حاويات الشحن متعددة الوسائط",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.2",
+      "title": "خدمات تأجير أو استئجار وسائل النقل",
+      "terms": [
+        {
+          "term_id": "ar_4_4_2_primary_001",
+          "term": "خدمات تأجير أو استئجار وسائل النقل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.2.1",
+      "title": "تأجير طائرة شحن مع مشغل",
+      "terms": [
+        {
+          "term_id": "ar_4_4_2_1_primary_001",
+          "term": "تأجير طائرة شحن مع مشغل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.2.2",
+      "title": "تأجير سفينة شحن للنقل المائي الداخلي مع مشغل",
+      "terms": [
+        {
+          "term_id": "ar_4_4_2_2_primary_001",
+          "term": "تأجير سفينة شحن للنقل المائي الداخلي مع مشغل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.2.3",
+      "title": "تأجير سفينة شحن للنقل الساحلي وعبر المحيطات مع مشغل",
+      "terms": [
+        {
+          "term_id": "ar_4_4_2_3_primary_001",
+          "term": "تأجير سفينة شحن للنقل الساحلي وعبر المحيطات مع مشغل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.2.4",
+      "title": "تأجير شاحنة مع مشغل",
+      "terms": [
+        {
+          "term_id": "ar_4_4_2_4_primary_001",
+          "term": "تأجير شاحنة مع مشغل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5",
+      "title": "تكنولوجيا اللوجستيات والرقمنة",
+      "terms": [
+        {
+          "term_id": "ar_5_primary_001",
+          "term": "تكنولوجيا اللوجستيات والرقمنة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1",
+      "title": "برمجيات اللوجستيات",
+      "terms": [
+        {
+          "term_id": "ar_5_1_primary_001",
+          "term": "برمجيات اللوجستيات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.1",
+      "title": "نظام إدارة النقل - TMS",
+      "terms": [
+        {
+          "term_id": "ar_5_1_1_primary_001",
+          "term": "نظام إدارة النقل - TMS",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.2",
+      "title": "نظام إدارة المستودع - WMS",
+      "terms": [
+        {
+          "term_id": "ar_5_1_2_primary_001",
+          "term": "نظام إدارة المستودع - WMS",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.3",
+      "title": "برنامج إدارة سلسلة الإمداد",
+      "terms": [
+        {
+          "term_id": "ar_5_1_3_primary_001",
+          "term": "برنامج إدارة سلسلة الإمداد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.4",
+      "title": "برنامج تخطيط المسارات وإدارة الأسطول",
+      "terms": [
+        {
+          "term_id": "ar_5_1_4_primary_001",
+          "term": "برنامج تخطيط المسارات وإدارة الأسطول",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.5",
+      "title": "أنظمة التتبع والتعقب",
+      "terms": [
+        {
+          "term_id": "ar_5_1_5_primary_001",
+          "term": "أنظمة التتبع والتعقب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.6",
+      "title": "نظام إدارة الساحة - YMS",
+      "terms": [
+        {
+          "term_id": "ar_5_1_6_primary_001",
+          "term": "نظام إدارة الساحة - YMS",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.2",
+      "title": "المنصات الرقمية والتكامل",
+      "terms": [
+        {
+          "term_id": "ar_5_2_primary_001",
+          "term": "المنصات الرقمية والتكامل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.2.1",
+      "title": "منصات الشحن الرقمية",
+      "terms": [
+        {
+          "term_id": "ar_5_2_1_primary_001",
+          "term": "منصات الشحن الرقمية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.2.2",
+      "title": "حلول واجهات برمجة التطبيقات والتكامل اللوجستي",
+      "terms": [
+        {
+          "term_id": "ar_5_2_2_primary_001",
+          "term": "حلول واجهات برمجة التطبيقات والتكامل اللوجستي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.3",
+      "title": "التقنيات الناشئة",
+      "terms": [
+        {
+          "term_id": "ar_5_3_primary_001",
+          "term": "التقنيات الناشئة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.3.1",
+      "title": "الذكاء الاصطناعي وتحليلات البيانات في اللوجستيات",
+      "terms": [
+        {
+          "term_id": "ar_5_3_1_primary_001",
+          "term": "الذكاء الاصطناعي وتحليلات البيانات في اللوجستيات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.3.2",
+      "title": "البلوك تشين في اللوجستيات",
+      "terms": [
+        {
+          "term_id": "ar_5_3_2_primary_001",
+          "term": "البلوك تشين في اللوجستيات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.3.3",
+      "title": "المركبات ذاتية القيادة في اللوجستيات",
+      "terms": [
+        {
+          "term_id": "ar_5_3_3_primary_001",
+          "term": "المركبات ذاتية القيادة في اللوجستيات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6",
+      "title": "خدمات الدعم والأعمال",
+      "terms": [
+        {
+          "term_id": "ar_6_primary_001",
+          "term": "خدمات الدعم والأعمال",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.1",
+      "title": "الاستشارات والتدريب",
+      "terms": [
+        {
+          "term_id": "ar_6_1_primary_001",
+          "term": "الاستشارات والتدريب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.1.1",
+      "title": "تحسين العمليات اللوجستية",
+      "terms": [
+        {
+          "term_id": "ar_6_1_1_primary_001",
+          "term": "تحسين العمليات اللوجستية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.1.2",
+      "title": "التدريب والشهادات اللوجستية",
+      "terms": [
+        {
+          "term_id": "ar_6_1_2_primary_001",
+          "term": "التدريب والشهادات اللوجستية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2",
+      "title": "الخدمات المالية والتأمينية",
+      "terms": [
+        {
+          "term_id": "ar_6_2_primary_001",
+          "term": "الخدمات المالية والتأمينية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.1",
+      "title": "تأمين الشحنات",
+      "terms": [
+        {
+          "term_id": "ar_6_2_1_primary_001",
+          "term": "تأمين الشحنات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.2",
+      "title": "تأمين المسؤولية",
+      "terms": [
+        {
+          "term_id": "ar_6_2_2_primary_001",
+          "term": "تأمين المسؤولية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.3",
+      "title": "تأمين المركبات والأساطيل",
+      "terms": [
+        {
+          "term_id": "ar_6_2_3_primary_001",
+          "term": "تأمين المركبات والأساطيل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.4",
+      "title": "تمويل التجارة",
+      "terms": [
+        {
+          "term_id": "ar_6_2_4_primary_001",
+          "term": "تمويل التجارة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.5",
+      "title": "التخصيم",
+      "terms": [
+        {
+          "term_id": "ar_6_2_5_primary_001",
+          "term": "التخصيم",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.6",
+      "title": "دفع وتدقيق أجور الشحن",
+      "terms": [
+        {
+          "term_id": "ar_6_2_6_primary_001",
+          "term": "دفع وتدقيق أجور الشحن",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.3",
+      "title": "الخدمات القانونية",
+      "terms": [
+        {
+          "term_id": "ar_6_3_primary_001",
+          "term": "الخدمات القانونية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.3.1",
+      "title": "قانون عقود النقل",
+      "terms": [
+        {
+          "term_id": "ar_6_3_1_primary_001",
+          "term": "قانون عقود النقل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.3.2",
+      "title": "قانون الجمارك والتجارة الخارجية",
+      "terms": [
+        {
+          "term_id": "ar_6_3_2_primary_001",
+          "term": "قانون الجمارك والتجارة الخارجية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7",
+      "title": "الاستدامة واللوجستيات الخضراء",
+      "terms": [
+        {
+          "term_id": "ar_7_primary_001",
+          "term": "الاستدامة واللوجستيات الخضراء",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.1",
+      "title": "تقييم الكربون والانبعاثات",
+      "terms": [
+        {
+          "term_id": "ar_7_1_primary_001",
+          "term": "تقييم الكربون والانبعاثات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.1.1",
+      "title": "حساب البصمة الكربونية",
+      "terms": [
+        {
+          "term_id": "ar_7_1_1_primary_001",
+          "term": "حساب البصمة الكربونية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.2",
+      "title": "الحلول الخضراء",
+      "terms": [
+        {
+          "term_id": "ar_7_2_primary_001",
+          "term": "الحلول الخضراء",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.2.1",
+      "title": "حلول الوقود المستدام",
+      "terms": [
+        {
+          "term_id": "ar_7_2_1_primary_001",
+          "term": "حلول الوقود المستدام",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.2.2",
+      "title": "استشارات اللوجستيات الخضراء",
+      "terms": [
+        {
+          "term_id": "ar_7_2_2_primary_001",
+          "term": "استشارات اللوجستيات الخضراء",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.3",
+      "title": "التغليف المستدام وتقليل النفايات",
+      "terms": [
+        {
+          "term_id": "ar_7_3_primary_001",
+          "term": "التغليف المستدام وتقليل النفايات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.3.1",
+      "title": "تحسين النفايات والتغليف",
+      "terms": [
+        {
+          "term_id": "ar_7_3_1_primary_001",
+          "term": "تحسين النفايات والتغليف",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.4",
+      "title": "التخطيط البيئي وإزالة الكربون",
+      "terms": [
+        {
+          "term_id": "ar_7_4_primary_001",
+          "term": "التخطيط البيئي وإزالة الكربون",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.4.1",
+      "title": "خارطة طريق الاستدامة وتخطيط التحول",
+      "terms": [
+        {
+          "term_id": "ar_7_4_1_primary_001",
+          "term": "خارطة طريق الاستدامة وتخطيط التحول",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.5",
+      "title": "التدقيق البيئي",
+      "terms": [
+        {
+          "term_id": "ar_7_5_primary_001",
+          "term": "التدقيق البيئي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.5.1",
+      "title": "مراجعة التدقيق البيئي والامتثال",
+      "terms": [
+        {
+          "term_id": "ar_7_5_1_primary_001",
+          "term": "مراجعة التدقيق البيئي والامتثال",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.6",
+      "title": "التقارير والإفصاح البيئي",
+      "terms": [
+        {
+          "term_id": "ar_7_6_primary_001",
+          "term": "التقارير والإفصاح البيئي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.6.1",
+      "title": "تقارير الانبعاثات / الاستدامة",
+      "terms": [
+        {
+          "term_id": "ar_7_6_1_primary_001",
+          "term": "تقارير الانبعاثات / الاستدامة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8",
+      "title": "خدمات نقل الركاب والتنقل",
+      "terms": [
+        {
+          "term_id": "ar_8_primary_001",
+          "term": "خدمات نقل الركاب والتنقل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1",
+      "title": "النقل الجوي للركاب",
+      "terms": [
+        {
+          "term_id": "ar_8_1_primary_001",
+          "term": "النقل الجوي للركاب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.1",
+      "title": "خدمات الهليكوبتر",
+      "terms": [
+        {
+          "term_id": "ar_8_1_1_primary_001",
+          "term": "خدمات الهليكوبتر",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.2",
+      "title": "السفر بالطائرة التجارية",
+      "terms": [
+        {
+          "term_id": "ar_8_1_2_primary_001",
+          "term": "السفر بالطائرة التجارية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.3",
+      "title": "السفر بالطائرة المستأجرة",
+      "terms": [
+        {
+          "term_id": "ar_8_1_3_primary_001",
+          "term": "السفر بالطائرة المستأجرة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.4",
+      "title": "خدمة الجولات الجوية",
+      "terms": [
+        {
+          "term_id": "ar_8_1_4_primary_001",
+          "term": "خدمة الجولات الجوية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.5",
+      "title": "خدمة تأجير أو استئجار طائرات الركاب",
+      "terms": [
+        {
+          "term_id": "ar_8_1_5_primary_001",
+          "term": "خدمة تأجير أو استئجار طائرات الركاب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.6",
+      "title": "الإخلاء الطبي بواسطة الإسعاف الجوي",
+      "terms": [
+        {
+          "term_id": "ar_8_1_6_primary_001",
+          "term": "الإخلاء الطبي بواسطة الإسعاف الجوي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.2",
+      "title": "نقل الركاب بالسكك الحديدية",
+      "terms": [
+        {
+          "term_id": "ar_8_2_primary_001",
+          "term": "نقل الركاب بالسكك الحديدية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.2.1",
+      "title": "خدمات النقل بالقطار الخفيف",
+      "terms": [
+        {
+          "term_id": "ar_8_2_1_primary_001",
+          "term": "خدمات النقل بالقطار الخفيف",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.2.2",
+      "title": "النقل بالمترو",
+      "terms": [
+        {
+          "term_id": "ar_8_2_2_primary_001",
+          "term": "النقل بالمترو",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.2.3",
+      "title": "خدمات السكك الحديدية القارية / العابرة للقارات",
+      "terms": [
+        {
+          "term_id": "ar_8_2_3_primary_001",
+          "term": "خدمات السكك الحديدية القارية / العابرة للقارات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3",
+      "title": "النقل البحري للركاب",
+      "terms": [
+        {
+          "term_id": "ar_8_3_primary_001",
+          "term": "النقل البحري للركاب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.1",
+      "title": "التاكسي المائي",
+      "terms": [
+        {
+          "term_id": "ar_8_3_1_primary_001",
+          "term": "التاكسي المائي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.2",
+      "title": "رحلات بحرية مع مبيت",
+      "terms": [
+        {
+          "term_id": "ar_8_3_2_primary_001",
+          "term": "رحلات بحرية مع مبيت",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.3",
+      "title": "رحلات القوارب السياحية",
+      "terms": [
+        {
+          "term_id": "ar_8_3_3_primary_001",
+          "term": "رحلات القوارب السياحية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.4",
+      "title": "خدمة تأجير أو استئجار الوسائط البحرية",
+      "terms": [
+        {
+          "term_id": "ar_8_3_4_primary_001",
+          "term": "خدمة تأجير أو استئجار الوسائط البحرية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.5",
+      "title": "خدمة نقل العاملين إلى المنصات البحرية",
+      "terms": [
+        {
+          "term_id": "ar_8_3_5_primary_001",
+          "term": "خدمة نقل العاملين إلى المنصات البحرية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.6",
+      "title": "عبّارة ركاب ساحلية وعبر المحيطات",
+      "terms": [
+        {
+          "term_id": "ar_8_3_6_primary_001",
+          "term": "عبّارة ركاب ساحلية وعبر المحيطات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.7",
+      "title": "عبّارة ركاب للممرات المائية الداخلية",
+      "terms": [
+        {
+          "term_id": "ar_8_3_7_primary_001",
+          "term": "عبّارة ركاب للممرات المائية الداخلية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4",
+      "title": "نقل الركاب البري",
+      "terms": [
+        {
+          "term_id": "ar_8_4_primary_001",
+          "term": "نقل الركاب البري",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.1",
+      "title": "خدمات الحافلات المجدولة",
+      "terms": [
+        {
+          "term_id": "ar_8_4_1_primary_001",
+          "term": "خدمات الحافلات المجدولة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.2",
+      "title": "خدمات الحافلات المستأجرة",
+      "terms": [
+        {
+          "term_id": "ar_8_4_2_primary_001",
+          "term": "خدمات الحافلات المستأجرة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.3",
+      "title": "خدمات سيارات الأجرة",
+      "terms": [
+        {
+          "term_id": "ar_8_4_3_primary_001",
+          "term": "خدمات سيارات الأجرة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.4",
+      "title": "رسوم مواقف السيارات",
+      "terms": [
+        {
+          "term_id": "ar_8_4_4_primary_001",
+          "term": "رسوم مواقف السيارات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.5",
+      "title": "تأجير المركبات",
+      "terms": [
+        {
+          "term_id": "ar_8_4_5_primary_001",
+          "term": "تأجير المركبات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.6",
+      "title": "تأجير تشغيلي لسيارات سيدان / كوبيه / ستيشن واجن",
+      "terms": [
+        {
+          "term_id": "ar_8_4_6_primary_001",
+          "term": "تأجير تشغيلي لسيارات سيدان / كوبيه / ستيشن واجن",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.7",
+      "title": "خدمة الليموزين أو السيارة التنفيذية",
+      "terms": [
+        {
+          "term_id": "ar_8_4_7_primary_001",
+          "term": "خدمة الليموزين أو السيارة التنفيذية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.8",
+      "title": "تأجير تشغيلي للشاحنات الخفيفة / مركبات SUV",
+      "terms": [
+        {
+          "term_id": "ar_8_4_8_primary_001",
+          "term": "تأجير تشغيلي للشاحنات الخفيفة / مركبات SUV",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.9",
+      "title": "تأجير تشغيلي لفانات الركاب / الميني فان",
+      "terms": [
+        {
+          "term_id": "ar_8_4_9_primary_001",
+          "term": "تأجير تشغيلي لفانات الركاب / الميني فان",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.10",
+      "title": "خدمة الجولات البرية",
+      "terms": [
+        {
+          "term_id": "ar_8_4_10_primary_001",
+          "term": "خدمة الجولات البرية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.11",
+      "title": "الإخلاء الطبي بواسطة سيارة إسعاف",
+      "terms": [
+        {
+          "term_id": "ar_8_4_11_primary_001",
+          "term": "الإخلاء الطبي بواسطة سيارة إسعاف",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.5",
+      "title": "خدمات النقل المتعدد الوسائط للركاب",
+      "terms": [
+        {
+          "term_id": "ar_8_5_primary_001",
+          "term": "خدمات النقل المتعدد الوسائط للركاب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.5.1",
+      "title": "النقل الحضري والضواحي متعدد الوسائط للركاب",
+      "terms": [
+        {
+          "term_id": "ar_8_5_1_primary_001",
+          "term": "النقل الحضري والضواحي متعدد الوسائط للركاب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.6",
+      "title": "نقل الركاب الفضائي",
+      "terms": [
+        {
+          "term_id": "ar_8_6_primary_001",
+          "term": "نقل الركاب الفضائي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9",
+      "title": "أصول النقل والمركبات ووسائط النقل",
+      "terms": [
+        {
+          "term_id": "ar_9_primary_001",
+          "term": "أصول النقل والمركبات ووسائط النقل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1",
+      "title": "مركبات آلية",
+      "terms": [
+        {
+          "term_id": "ar_9_1_primary_001",
+          "term": "مركبات آلية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1",
+      "title": "مركبات الركاب الآلية",
+      "terms": [
+        {
+          "term_id": "ar_9_1_1_primary_001",
+          "term": "مركبات الركاب الآلية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.1",
+      "title": "حافلات صغيرة",
+      "terms": [
+        {
+          "term_id": "ar_9_1_1_1_primary_001",
+          "term": "حافلات صغيرة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.2",
+      "title": "حافلات",
+      "terms": [
+        {
+          "term_id": "ar_9_1_1_2_primary_001",
+          "term": "حافلات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.3",
+      "title": "سيارات / عربات",
+      "terms": [
+        {
+          "term_id": "ar_9_1_1_3_primary_001",
+          "term": "سيارات / عربات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.4",
+      "title": "سيارات ستيشن واغن",
+      "terms": [
+        {
+          "term_id": "ar_9_1_1_4_primary_001",
+          "term": "سيارات ستيشن واغن",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.5",
+      "title": "ميني فان أو فان",
+      "terms": [
+        {
+          "term_id": "ar_9_1_1_5_primary_001",
+          "term": "ميني فان أو فان",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.6",
+      "title": "سيارات ليموزين",
+      "terms": [
+        {
+          "term_id": "ar_9_1_1_6_primary_001",
+          "term": "سيارات ليموزين",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.7",
+      "title": "شاحنات خفيفة أو مركبات رياضية متعددة الاستخدام",
+      "terms": [
+        {
+          "term_id": "ar_9_1_1_7_primary_001",
+          "term": "شاحنات خفيفة أو مركبات رياضية متعددة الاستخدام",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.8",
+      "title": "مركبات كهربائية",
+      "terms": [
+        {
+          "term_id": "ar_9_1_1_8_primary_001",
+          "term": "مركبات كهربائية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.9",
+      "title": "مركبات آلية مدرعة",
+      "terms": [
+        {
+          "term_id": "ar_9_1_1_9_primary_001",
+          "term": "مركبات آلية مدرعة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.2",
+      "title": "مركبات ثنائية العجلات مزودة بمحرك",
+      "terms": [
+        {
+          "term_id": "ar_9_1_2_primary_001",
+          "term": "مركبات ثنائية العجلات مزودة بمحرك",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.2.1",
+      "title": "دراجات نارية",
+      "terms": [
+        {
+          "term_id": "ar_9_1_2_1_primary_001",
+          "term": "دراجات نارية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.2.2",
+      "title": "سكوترات",
+      "terms": [
+        {
+          "term_id": "ar_9_1_2_2_primary_001",
+          "term": "سكوترات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.2.3",
+      "title": "دراجات بخارية",
+      "terms": [
+        {
+          "term_id": "ar_9_1_2_3_primary_001",
+          "term": "دراجات بخارية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2",
+      "title": "السفن البحرية",
+      "terms": [
+        {
+          "term_id": "ar_9_2_primary_001",
+          "term": "السفن البحرية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1",
+      "title": "سفن بحرية تجارية",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_primary_001",
+          "term": "سفن بحرية تجارية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.1",
+      "title": "سفن شحن أو حاويات",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_1_primary_001",
+          "term": "سفن شحن أو حاويات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.2",
+      "title": "ناقلات",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_2_primary_001",
+          "term": "ناقلات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.3",
+      "title": "قوارب قطر",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_3_primary_001",
+          "term": "قوارب قطر",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.4",
+      "title": "صنادل",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_4_primary_001",
+          "term": "صنادل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.5",
+      "title": "عبارات ركاب أو سيارات",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_5_primary_001",
+          "term": "عبارات ركاب أو سيارات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.6",
+      "title": "سفن سياحية",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_6_primary_001",
+          "term": "سفن سياحية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.7",
+      "title": "قوارب طاقم النفط أو الغاز",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_7_primary_001",
+          "term": "قوارب طاقم النفط أو الغاز",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.8",
+      "title": "قوارب عمل للنفط أو الغاز",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_8_primary_001",
+          "term": "قوارب عمل للنفط أو الغاز",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.9",
+      "title": "سفن زلزالية",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_9_primary_001",
+          "term": "سفن زلزالية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.10",
+      "title": "كاسحات جليد",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_10_primary_001",
+          "term": "كاسحات جليد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.11",
+      "title": "ناقلات غاز مسال",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_11_primary_001",
+          "term": "ناقلات غاز مسال",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.12",
+      "title": "ناقلات كيماوية",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_12_primary_001",
+          "term": "ناقلات كيماوية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.13",
+      "title": "سفن بضائع سائبة",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_13_primary_001",
+          "term": "سفن بضائع سائبة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.14",
+      "title": "سفن نقل سيارات / رورو",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_14_primary_001",
+          "term": "سفن نقل سيارات / رورو",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.15",
+      "title": "قوارب إرشاد",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_15_primary_001",
+          "term": "قوارب إرشاد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.16",
+      "title": "سفن أبحاث",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_16_primary_001",
+          "term": "سفن أبحاث",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.17",
+      "title": "سفن مد الكابلات",
+      "terms": [
+        {
+          "term_id": "ar_9_2_1_17_primary_001",
+          "term": "سفن مد الكابلات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.2",
+      "title": "قوارب ترفيهية",
+      "terms": [
+        {
+          "term_id": "ar_9_2_2_primary_001",
+          "term": "قوارب ترفيهية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.2.1",
+      "title": "قوارب دنغي",
+      "terms": [
+        {
+          "term_id": "ar_9_2_2_1_primary_001",
+          "term": "قوارب دنغي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.2.2",
+      "title": "يخوت",
+      "terms": [
+        {
+          "term_id": "ar_9_2_2_2_primary_001",
+          "term": "يخوت",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.2.3",
+      "title": "سكيف",
+      "terms": [
+        {
+          "term_id": "ar_9_2_2_3_primary_001",
+          "term": "سكيف",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.3",
+      "title": "آلات ومعدات السكك الحديدية والترام",
+      "terms": [
+        {
+          "term_id": "ar_9_3_primary_001",
+          "term": "آلات ومعدات السكك الحديدية والترام",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4",
+      "title": "طائرات",
+      "terms": [
+        {
+          "term_id": "ar_9_4_primary_001",
+          "term": "طائرات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1",
+      "title": "طائرات ثابتة الجناح مزودة بمحرك",
+      "terms": [
+        {
+          "term_id": "ar_9_4_1_primary_001",
+          "term": "طائرات ثابتة الجناح مزودة بمحرك",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.1",
+      "title": "طائرات زراعية ثابتة الجناح",
+      "terms": [
+        {
+          "term_id": "ar_9_4_1_1_primary_001",
+          "term": "طائرات زراعية ثابتة الجناح",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.2",
+      "title": "طائرات شحن مروحية",
+      "terms": [
+        {
+          "term_id": "ar_9_4_1_2_primary_001",
+          "term": "طائرات شحن مروحية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.3",
+      "title": "طائرات مائية",
+      "terms": [
+        {
+          "term_id": "ar_9_4_1_3_primary_001",
+          "term": "طائرات مائية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.4",
+      "title": "طائرات ركاب تجارية مروحية",
+      "terms": [
+        {
+          "term_id": "ar_9_4_1_4_primary_001",
+          "term": "طائرات ركاب تجارية مروحية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.5",
+      "title": "طائرات شحن نفاثة",
+      "terms": [
+        {
+          "term_id": "ar_9_4_1_5_primary_001",
+          "term": "طائرات شحن نفاثة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.6",
+      "title": "طائرات ركاب تجارية نفاثة",
+      "terms": [
+        {
+          "term_id": "ar_9_4_1_6_primary_001",
+          "term": "طائرات ركاب تجارية نفاثة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.7",
+      "title": "طائرات خاصة أو رجال أعمال مروحية",
+      "terms": [
+        {
+          "term_id": "ar_9_4_1_7_primary_001",
+          "term": "طائرات خاصة أو رجال أعمال مروحية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.8",
+      "title": "طائرات خاصة أو رجال أعمال نفاثة",
+      "terms": [
+        {
+          "term_id": "ar_9_4_1_8_primary_001",
+          "term": "طائرات خاصة أو رجال أعمال نفاثة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.9",
+      "title": "طائرات تفتيش جوي",
+      "terms": [
+        {
+          "term_id": "ar_9_4_1_9_primary_001",
+          "term": "طائرات تفتيش جوي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.2",
+      "title": "طائرات مدنية وتجارية دوارة الجناح",
+      "terms": [
+        {
+          "term_id": "ar_9_4_2_primary_001",
+          "term": "طائرات مدنية وتجارية دوارة الجناح",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.2.1",
+      "title": "مروحيات نقل الركاب",
+      "terms": [
+        {
+          "term_id": "ar_9_4_2_1_primary_001",
+          "term": "مروحيات نقل الركاب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.2.2",
+      "title": "مروحيات نقل البضائع",
+      "terms": [
+        {
+          "term_id": "ar_9_4_2_2_primary_001",
+          "term": "مروحيات نقل البضائع",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.2.3",
+      "title": "مروحيات طبية أو إنقاذ",
+      "terms": [
+        {
+          "term_id": "ar_9_4_2_3_primary_001",
+          "term": "مروحيات طبية أو إنقاذ",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.3",
+      "title": "طائرات متخصصة",
+      "terms": [
+        {
+          "term_id": "ar_9_4_3_primary_001",
+          "term": "طائرات متخصصة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.3.1",
+      "title": "مناطيد",
+      "terms": [
+        {
+          "term_id": "ar_9_4_3_1_primary_001",
+          "term": "مناطيد",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.3.2",
+      "title": "نماذج طائرات",
+      "terms": [
+        {
+          "term_id": "ar_9_4_3_2_primary_001",
+          "term": "نماذج طائرات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.4",
+      "title": "طائرات ترفيهية",
+      "terms": [
+        {
+          "term_id": "ar_9_4_4_primary_001",
+          "term": "طائرات ترفيهية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.5",
+      "title": "مركبات فضائية",
+      "terms": [
+        {
+          "term_id": "ar_9_5_primary_001",
+          "term": "مركبات فضائية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.6",
+      "title": "معدات خدمات النقل",
+      "terms": [
+        {
+          "term_id": "ar_9_6_primary_001",
+          "term": "معدات خدمات النقل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10",
+      "title": "طبقة خدمات التأجير / الاستئجار / الليزينغ",
+      "terms": [
+        {
+          "term_id": "ar_10_primary_001",
+          "term": "طبقة خدمات التأجير / الاستئجار / الليزينغ",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1",
+      "title": "طبقة خدمات التشارتر",
+      "terms": [
+        {
+          "term_id": "ar_10_1_primary_001",
+          "term": "طبقة خدمات التشارتر",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.1",
+      "title": "تشارتر شحن",
+      "terms": [
+        {
+          "term_id": "ar_10_1_1_primary_001",
+          "term": "تشارتر شحن",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.2",
+      "title": "تشارتر ركاب",
+      "terms": [
+        {
+          "term_id": "ar_10_1_2_primary_001",
+          "term": "تشارتر ركاب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.3",
+      "title": "تشارتر مروحيات",
+      "terms": [
+        {
+          "term_id": "ar_10_1_3_primary_001",
+          "term": "تشارتر مروحيات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.4",
+      "title": "تشارتر يخوت / قوارب",
+      "terms": [
+        {
+          "term_id": "ar_10_1_4_primary_001",
+          "term": "تشارتر يخوت / قوارب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.5",
+      "title": "تشارتر حافلات",
+      "terms": [
+        {
+          "term_id": "ar_10_1_5_primary_001",
+          "term": "تشارتر حافلات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.6",
+      "title": "تشارتر ليموزين / كبار الشخصيات",
+      "terms": [
+        {
+          "term_id": "ar_10_1_6_primary_001",
+          "term": "تشارتر ليموزين / كبار الشخصيات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2",
+      "title": "طبقة خدمات الإيجار",
+      "terms": [
+        {
+          "term_id": "ar_10_2_primary_001",
+          "term": "طبقة خدمات الإيجار",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.1",
+      "title": "تأجير الحاويات",
+      "terms": [
+        {
+          "term_id": "ar_10_2_1_primary_001",
+          "term": "تأجير الحاويات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.2",
+      "title": "تأجير الحاويات متعددة الوسائط",
+      "terms": [
+        {
+          "term_id": "ar_10_2_2_primary_001",
+          "term": "تأجير الحاويات متعددة الوسائط",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.3",
+      "title": "خدمات تأجير المركبات",
+      "terms": [
+        {
+          "term_id": "ar_10_2_3_primary_001",
+          "term": "خدمات تأجير المركبات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.4",
+      "title": "تأجير الوسائط البحرية",
+      "terms": [
+        {
+          "term_id": "ar_10_2_4_primary_001",
+          "term": "تأجير الوسائط البحرية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.5",
+      "title": "تأجير قصير أو طويل الأجل لطائرات الركاب",
+      "terms": [
+        {
+          "term_id": "ar_10_2_5_primary_001",
+          "term": "تأجير قصير أو طويل الأجل لطائرات الركاب",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.6",
+      "title": "تأجير طائرات شحن مع مشغل",
+      "terms": [
+        {
+          "term_id": "ar_10_2_6_primary_001",
+          "term": "تأجير طائرات شحن مع مشغل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.7",
+      "title": "تأجير سفينة شحن مع مشغل",
+      "terms": [
+        {
+          "term_id": "ar_10_2_7_primary_001",
+          "term": "تأجير سفينة شحن مع مشغل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.8",
+      "title": "تأجير سفينة شحن ساحلية / عابرة للمحيطات مع مشغل",
+      "terms": [
+        {
+          "term_id": "ar_10_2_8_primary_001",
+          "term": "تأجير سفينة شحن ساحلية / عابرة للمحيطات مع مشغل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.9",
+      "title": "خدمات تأجير شاحنة مع مشغل",
+      "terms": [
+        {
+          "term_id": "ar_10_2_9_primary_001",
+          "term": "خدمات تأجير شاحنة مع مشغل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.3",
+      "title": "طبقة خدمات الليزينغ",
+      "terms": [
+        {
+          "term_id": "ar_10_3_primary_001",
+          "term": "طبقة خدمات الليزينغ",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.3.1",
+      "title": "تأجير طويل الأجل لسيارات سيدان / كوبيه / ستيشن واجن",
+      "terms": [
+        {
+          "term_id": "ar_10_3_1_primary_001",
+          "term": "تأجير طويل الأجل لسيارات سيدان / كوبيه / ستيشن واجن",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.3.2",
+      "title": "تأجير طويل الأجل لشاحنات خفيفة / سيارات رياضية متعددة الاستخدامات",
+      "terms": [
+        {
+          "term_id": "ar_10_3_2_primary_001",
+          "term": "تأجير طويل الأجل لشاحنات خفيفة / سيارات رياضية متعددة الاستخدامات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.3.3",
+      "title": "تأجير طويل الأجل لمركبات ركاب / حافلات صغيرة",
+      "terms": [
+        {
+          "term_id": "ar_10_3_3_primary_001",
+          "term": "تأجير طويل الأجل لمركبات ركاب / حافلات صغيرة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.3.4",
+      "title": "تأجير طويل الأجل لوسائط النقل",
+      "terms": [
+        {
+          "term_id": "ar_10_3_4_primary_001",
+          "term": "تأجير طويل الأجل لوسائط النقل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11",
+      "title": "طبقة الصيانة / التزود بالوقود / التخزين / الدعم",
+      "terms": [
+        {
+          "term_id": "ar_11_primary_001",
+          "term": "طبقة الصيانة / التزود بالوقود / التخزين / الدعم",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1",
+      "title": "صيانة وإصلاح المركبات",
+      "terms": [
+        {
+          "term_id": "ar_11_1_primary_001",
+          "term": "صيانة وإصلاح المركبات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.1",
+      "title": "خدمة إصلاح هيكل المركبة أو طلائها",
+      "terms": [
+        {
+          "term_id": "ar_11_1_1_primary_001",
+          "term": "خدمة إصلاح هيكل المركبة أو طلائها",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.2",
+      "title": "خدمة فحص المركبات",
+      "terms": [
+        {
+          "term_id": "ar_11_1_2_primary_001",
+          "term": "خدمة فحص المركبات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.3",
+      "title": "خدمة استبدال زجاج المركبات",
+      "terms": [
+        {
+          "term_id": "ar_11_1_3_primary_001",
+          "term": "خدمة استبدال زجاج المركبات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.4",
+      "title": "صيانة وإصلاح السيارات والشاحنات الخفيفة",
+      "terms": [
+        {
+          "term_id": "ar_11_1_4_primary_001",
+          "term": "صيانة وإصلاح السيارات والشاحنات الخفيفة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.5",
+      "title": "صيانة وإصلاح الشاحنات الثقيلة",
+      "terms": [
+        {
+          "term_id": "ar_11_1_5_primary_001",
+          "term": "صيانة وإصلاح الشاحنات الثقيلة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.6",
+      "title": "خدمة فحص وصيانة عربات السكك الحديدية",
+      "terms": [
+        {
+          "term_id": "ar_11_1_6_primary_001",
+          "term": "خدمة فحص وصيانة عربات السكك الحديدية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.2",
+      "title": "خدمات السمكرة والطلاء",
+      "terms": [
+        {
+          "term_id": "ar_11_2_primary_001",
+          "term": "خدمات السمكرة والطلاء",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.2.1",
+      "title": "خدمة إصلاح الصفائح المعدنية",
+      "terms": [
+        {
+          "term_id": "ar_11_2_1_primary_001",
+          "term": "خدمة إصلاح الصفائح المعدنية",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.3",
+      "title": "التزود بالوقود / التخزين / الدعم التشغيلي",
+      "terms": [
+        {
+          "term_id": "ar_11_3_primary_001",
+          "term": "التزود بالوقود / التخزين / الدعم التشغيلي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.3.1",
+      "title": "خدمة تزويد المركبات بالوقود",
+      "terms": [
+        {
+          "term_id": "ar_11_3_1_primary_001",
+          "term": "خدمة تزويد المركبات بالوقود",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.3.2",
+      "title": "خدمة التخزين لعمليات النقل",
+      "terms": [
+        {
+          "term_id": "ar_11_3_2_primary_001",
+          "term": "خدمة التخزين لعمليات النقل",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.3.3",
+      "title": "خدمة ركن المركبات",
+      "terms": [
+        {
+          "term_id": "ar_11_3_3_primary_001",
+          "term": "خدمة ركن المركبات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.3.4",
+      "title": "خدمة بطاقة شحن الوقود / البطاقة المدفوعة مسبقاً للوقود",
+      "terms": [
+        {
+          "term_id": "ar_11_3_4_primary_001",
+          "term": "خدمة بطاقة شحن الوقود / البطاقة المدفوعة مسبقاً للوقود",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.4",
+      "title": "صيانة وإصلاح الطائرات",
+      "terms": [
+        {
+          "term_id": "ar_11_4_primary_001",
+          "term": "صيانة وإصلاح الطائرات",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.5",
+      "title": "صيانة وإصلاح معدات الملاحة",
+      "terms": [
+        {
+          "term_id": "ar_11_5_primary_001",
+          "term": "صيانة وإصلاح معدات الملاحة",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.6",
+      "title": "صيانة وإصلاح سفن النقل المائي",
+      "terms": [
+        {
+          "term_id": "ar_11_6_primary_001",
+          "term": "صيانة وإصلاح سفن النقل المائي",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.7",
+      "title": "طبقة دعم إدارة الأسطول",
+      "terms": [
+        {
+          "term_id": "ar_11_7_primary_001",
+          "term": "طبقة دعم إدارة الأسطول",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    }
+  ]
 }
