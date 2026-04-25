@@ -1,0 +1,16 @@
+{
+  "schema_version": "taxonomy_language_v1",
+  "language": {
+    "order": 19,
+    "code": "hi",
+    "english_name": "Hindi",
+    "native_name": "हिन्दी"
+  },
+  "source_policy": {
+    "canonical_source": "json",
+    "runtime_database": "postgresql",
+    "ranking_policy": "taxonomy_ids_only_no_scores_here",
+    "mutation_policy": "json_to_scratch_audit_then_live_swap"
+  },
+  "entries": []
+}

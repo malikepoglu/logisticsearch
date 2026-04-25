@@ -1,0 +1,16 @@
+{
+  "schema_version": "taxonomy_language_v1",
+  "language": {
+    "order": 18,
+    "code": "zh",
+    "english_name": "Chinese",
+    "native_name": "简体中文"
+  },
+  "source_policy": {
+    "canonical_source": "json",
+    "runtime_database": "postgresql",
+    "ranking_policy": "taxonomy_ids_only_no_scores_here",
+    "mutation_policy": "json_to_scratch_audit_then_live_swap"
+  },
+  "entries": []
+}
