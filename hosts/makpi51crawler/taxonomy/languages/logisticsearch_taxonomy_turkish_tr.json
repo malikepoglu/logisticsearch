@@ -12,5 +12,4026 @@
     "ranking_policy": "taxonomy_ids_only_no_scores_here",
     "mutation_policy": "json_to_scratch_audit_then_live_swap"
   },
-  "entries": []
+  "entries": [
+    {
+      "node_code": "1",
+      "title": "Taşımacılık ve Yük Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_primary_001",
+          "term": "Taşımacılık ve Yük Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1",
+      "title": "kara yolu taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_1_primary_001",
+          "term": "kamyon taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.1",
+      "title": "Tam Kamyon/Tır Yükü - FTL / TL",
+      "terms": [
+        {
+          "term_id": "tr_1_1_1_primary_001",
+          "term": "Tam Kamyon/Tır Yükü - FTL / TL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.2",
+      "title": "Parsiyel / Parça Yük - LTL",
+      "terms": [
+        {
+          "term_id": "tr_1_1_2_primary_001",
+          "term": "Parsiyel / Parça Yük - LTL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.3",
+      "title": "Yerel Dağıtım / Kent İçi Taşıma",
+      "terms": [
+        {
+          "term_id": "tr_1_1_3_primary_001",
+          "term": "Yerel Dağıtım / Kent İçi Taşıma",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.4",
+      "title": "Özel Sözleşmeli Taşıma",
+      "terms": [
+        {
+          "term_id": "tr_1_1_4_primary_001",
+          "term": "Özel Sözleşmeli Taşıma",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.5",
+      "title": "Uluslararası Karayolu Yük Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_1_5_primary_001",
+          "term": "Uluslararası Karayolu Yük Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.6",
+      "title": "Karayolu Paket ve Son Mil Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_1_6_primary_001",
+          "term": "Karayolu Paket ve Son Mil Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.6.1",
+      "title": "Son Mil Teslimatı",
+      "terms": [
+        {
+          "term_id": "tr_1_1_6_1_primary_001",
+          "term": "Son Mil Teslimatı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.7",
+      "title": "Evden Eve Nakliyat / Taşınma Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_1_7_primary_001",
+          "term": "Evden Eve Nakliyat / Taşınma Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.8",
+      "title": "Kuru Dökme Yük Kara Yolu Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_1_8_primary_001",
+          "term": "Kuru Dökme Yük Kara Yolu Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.9",
+      "title": "Tanker Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_1_9_primary_001",
+          "term": "Tanker Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.10",
+      "title": "Ağır Nakliye / Gabari Dışı Yük",
+      "terms": [
+        {
+          "term_id": "tr_1_1_10_primary_001",
+          "term": "Ağır Nakliye / Gabari Dışı Yük",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.11",
+      "title": "Araç Taşıma Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_1_11_primary_001",
+          "term": "Araç Taşıma Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.12",
+      "title": "Canlı Hayvan Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_1_12_primary_001",
+          "term": "Canlı Hayvan Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.1.13",
+      "title": "Tehlikeli Madde Taşımacılığı - Hazmat",
+      "terms": [
+        {
+          "term_id": "tr_1_1_13_primary_001",
+          "term": "Tehlikeli Madde Taşımacılığı - Hazmat",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2",
+      "title": "deniz taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_2_primary_001",
+          "term": "deniz taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.1",
+      "title": "Konteyner Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_2_1_primary_001",
+          "term": "Konteyner Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.1.1",
+      "title": "Tam Konteyner Yük - FCL",
+      "terms": [
+        {
+          "term_id": "tr_1_2_1_1_primary_001",
+          "term": "Tam Konteyner Yük - FCL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.1.2",
+      "title": "Parça Konteyner Yük - LCL",
+      "terms": [
+        {
+          "term_id": "tr_1_2_1_2_primary_001",
+          "term": "Parça Konteyner Yük - LCL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.2",
+      "title": "Kuru Dökme Yük Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_2_2_primary_001",
+          "term": "Kuru Dökme Yük Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.3",
+      "title": "Sıvı Dökme Yük Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_2_3_primary_001",
+          "term": "Sıvı Dökme Yük Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.4",
+      "title": "Ro-Ro Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_2_4_primary_001",
+          "term": "Ro-Ro Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.5",
+      "title": "Düzenli Hat Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_2_5_primary_001",
+          "term": "Düzenli Hat Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.6",
+      "title": "Tarifesiz Taşımacılık",
+      "terms": [
+        {
+          "term_id": "tr_1_2_6_primary_001",
+          "term": "Tarifesiz Taşımacılık",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.7",
+      "title": "Kısa Deniz Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_2_7_primary_001",
+          "term": "Kısa Deniz Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.8",
+      "title": "Açık Deniz Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_1_2_8_primary_001",
+          "term": "Açık Deniz Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.9",
+      "title": "Seyrüsefer ve Römorkaj Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_2_9_primary_001",
+          "term": "Seyrüsefer ve Römorkaj Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.9.1",
+      "title": "Römorkör Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_2_9_1_primary_001",
+          "term": "Römorkör Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.9.2",
+      "title": "Açılır Köprü Operasyonları",
+      "terms": [
+        {
+          "term_id": "tr_1_2_9_2_primary_001",
+          "term": "Açılır Köprü Operasyonları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.9.3",
+      "title": "Deniz Seyrüsefer veya Haberleşme Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_2_9_3_primary_001",
+          "term": "Deniz Seyrüsefer veya Haberleşme Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.2.9.4",
+      "title": "Dead Man Anchor Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_1_2_9_4_primary_001",
+          "term": "Dead Man Anchor Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3",
+      "title": "Hava Kargo",
+      "terms": [
+        {
+          "term_id": "tr_1_3_primary_001",
+          "term": "Hava Kargo",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3.1",
+      "title": "Havayolu Kargo Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_3_1_primary_001",
+          "term": "Havayolu Kargo Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3.2",
+      "title": "Express Hava Kargo",
+      "terms": [
+        {
+          "term_id": "tr_1_3_2_primary_001",
+          "term": "Express Hava Kargo",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3.3",
+      "title": "Kapıdan Kapıya Hava Kargo",
+      "terms": [
+        {
+          "term_id": "tr_1_3_3_primary_001",
+          "term": "Kapıdan Kapıya Hava Kargo",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3.4",
+      "title": "Hava Kargo Konsolidasyonu",
+      "terms": [
+        {
+          "term_id": "tr_1_3_4_primary_001",
+          "term": "Hava Kargo Konsolidasyonu",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.3.5",
+      "title": "Charter Hava Kargo Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_3_5_primary_001",
+          "term": "Charter Hava Kargo Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4",
+      "title": "Demir Yolu Yük Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_4_primary_001",
+          "term": "Demir Yolu Yük Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.1",
+      "title": "Vagon Yükü Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_4_1_primary_001",
+          "term": "Vagon Yükü Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.2",
+      "title": "Intermodal Demiryolu Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_4_2_primary_001",
+          "term": "Intermodal Demiryolu Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.2.1",
+      "title": "Demiryolu-Karayolu Kombine Taşıma",
+      "terms": [
+        {
+          "term_id": "tr_1_4_2_1_primary_001",
+          "term": "Demiryolu-Karayolu Kombine Taşıma",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.3",
+      "title": "Yüksek Hızlı Demiryolu Kargo",
+      "terms": [
+        {
+          "term_id": "tr_1_4_3_primary_001",
+          "term": "Yüksek Hızlı Demiryolu Kargo",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.4",
+      "title": "Demiryolu Vagon Kiralama Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_4_4_primary_001",
+          "term": "Demiryolu Vagon Kiralama Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.4.1",
+      "title": "Yük Vagonu Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_1_4_4_1_primary_001",
+          "term": "Yük Vagonu Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.4.4.2",
+      "title": "Tanker Vagon Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_1_4_4_2_primary_001",
+          "term": "Tanker Vagon Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5",
+      "title": "Boru Hattı Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_5_primary_001",
+          "term": "Boru Hattı Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5.1",
+      "title": "Petrol ve Petrol Ürünleri Boru Hattı Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_5_1_primary_001",
+          "term": "Petrol ve Petrol Ürünleri Boru Hattı Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5.2",
+      "title": "Su Boru Hattı Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_5_2_primary_001",
+          "term": "Su Boru Hattı Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5.3",
+      "title": "Doğal Gaz Boru Hattı Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_5_3_primary_001",
+          "term": "Doğal Gaz Boru Hattı Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5.4",
+      "title": "Kimyasal Madde Boru Hattı Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_5_4_primary_001",
+          "term": "Kimyasal Madde Boru Hattı Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.5.5",
+      "title": "Boru Hattı Hat İçi Muayene",
+      "terms": [
+        {
+          "term_id": "tr_1_5_5_primary_001",
+          "term": "Boru Hattı Hat İçi Muayene",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6",
+      "title": "Intermodal ve Kombine Yük Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_6_primary_001",
+          "term": "Intermodal ve Kombine Yük Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6.1",
+      "title": "Konteyner Intermodal Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_6_1_primary_001",
+          "term": "Konteyner Intermodal Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6.2",
+      "title": "Hava-Deniz Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_6_2_primary_001",
+          "term": "Hava-Deniz Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6.3",
+      "title": "Deniz-Demiryolu Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_6_3_primary_001",
+          "term": "Deniz-Demiryolu Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6.4",
+      "title": "Deniz-Karayolu Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_6_4_primary_001",
+          "term": "Deniz-Karayolu Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.6.5",
+      "title": "Hava-Karayolu Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_1_6_5_primary_001",
+          "term": "Hava-Karayolu Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7",
+      "title": "Kurye / Posta Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_7_primary_001",
+          "term": "Kurye / Posta Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.1",
+      "title": "Ulusal Posta Teslimat Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_7_1_primary_001",
+          "term": "Ulusal Posta Teslimat Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.2",
+      "title": "Posta Kutusu Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_7_2_primary_001",
+          "term": "Posta Kutusu Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.3",
+      "title": "Postalama / Posta Toplama / Teslimat Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_7_3_primary_001",
+          "term": "Postalama / Posta Toplama / Teslimat Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.4",
+      "title": "Mektup veya Küçük Paket Dünya Çapında Teslimat Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_7_4_primary_001",
+          "term": "Mektup veya Küçük Paket Dünya Çapında Teslimat Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.5",
+      "title": "Mektup veya Küçük Paket Yerel Teslimat Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_7_5_primary_001",
+          "term": "Mektup veya Küçük Paket Yerel Teslimat Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "1.7.6",
+      "title": "Bisiklet veya Scooter Kurye Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_1_7_6_primary_001",
+          "term": "Bisiklet veya Scooter Kurye Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2",
+      "title": "Tedarik Zinciri ve Lojistik Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_2_primary_001",
+          "term": "Tedarik Zinciri ve Lojistik Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.1",
+      "title": "Planlama ve Danışmanlık",
+      "terms": [
+        {
+          "term_id": "tr_2_1_primary_001",
+          "term": "Planlama ve Danışmanlık",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.1.1",
+      "title": "Tedarik Zinciri Danışmanlığı",
+      "terms": [
+        {
+          "term_id": "tr_2_1_1_primary_001",
+          "term": "Tedarik Zinciri Danışmanlığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.1.2",
+      "title": "Talep ve Stok Planlama",
+      "terms": [
+        {
+          "term_id": "tr_2_1_2_primary_001",
+          "term": "Talep ve Stok Planlama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.1.3",
+      "title": "Ağ Optimizasyonu",
+      "terms": [
+        {
+          "term_id": "tr_2_1_3_primary_001",
+          "term": "Ağ Optimizasyonu",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.2",
+      "title": "Taşıma Organizasyon Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_2_2_primary_001",
+          "term": "Taşıma Organizasyon Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.2.1",
+      "title": "Freight Forwarding / Taşıma Organizasyonu",
+      "terms": [
+        {
+          "term_id": "tr_2_2_1_primary_001",
+          "term": "Freight Forwarding / Taşıma Organizasyonu",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.2.1.1",
+      "title": "Yük Konsolidasyonu / Co-loading",
+      "terms": [
+        {
+          "term_id": "tr_2_2_1_1_primary_001",
+          "term": "Yük Konsolidasyonu / Co-loading",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.2.2",
+      "title": "Sınır Ötesi Lojistik",
+      "terms": [
+        {
+          "term_id": "tr_2_2_2_primary_001",
+          "term": "Sınır Ötesi Lojistik",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.2.3",
+      "title": "Sigorta Dahil Navlun Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_2_2_3_primary_001",
+          "term": "Sigorta Dahil Navlun Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3",
+      "title": "Depolama ve Dağıtım",
+      "terms": [
+        {
+          "term_id": "tr_2_3_primary_001",
+          "term": "Depolama ve Dağıtım",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.1",
+      "title": "Genel Depolama",
+      "terms": [
+        {
+          "term_id": "tr_2_3_1_primary_001",
+          "term": "Genel Depolama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.2",
+      "title": "Sözleşmeli Depolama",
+      "terms": [
+        {
+          "term_id": "tr_2_3_2_primary_001",
+          "term": "Sözleşmeli Depolama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.3",
+      "title": "Dağıtım Merkezi İşletmeciliği",
+      "terms": [
+        {
+          "term_id": "tr_2_3_3_primary_001",
+          "term": "Dağıtım Merkezi İşletmeciliği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.4",
+      "title": "Sıcaklık Kontrollü Depolama",
+      "terms": [
+        {
+          "term_id": "tr_2_3_4_primary_001",
+          "term": "Sıcaklık Kontrollü Depolama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.5",
+      "title": "Gümrüklü Depolama",
+      "terms": [
+        {
+          "term_id": "tr_2_3_5_primary_001",
+          "term": "Gümrüklü Depolama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.6",
+      "title": "E-Ticaret Fulfillment Merkezleri",
+      "terms": [
+        {
+          "term_id": "tr_2_3_6_primary_001",
+          "term": "E-Ticaret Fulfillment Merkezleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.7",
+      "title": "Stok Yönetimi",
+      "terms": [
+        {
+          "term_id": "tr_2_3_7_primary_001",
+          "term": "Stok Yönetimi",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.8",
+      "title": "Cross-Docking",
+      "terms": [
+        {
+          "term_id": "tr_2_3_8_primary_001",
+          "term": "Cross-Docking",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.3.9",
+      "title": "Dökme Depolama",
+      "terms": [
+        {
+          "term_id": "tr_2_3_9_primary_001",
+          "term": "Dökme Depolama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4",
+      "title": "Katma Değerli Lojistik Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_2_4_primary_001",
+          "term": "Katma Değerli Lojistik Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.1",
+      "title": "Sipariş Toplama ve Paketleme",
+      "terms": [
+        {
+          "term_id": "tr_2_4_1_primary_001",
+          "term": "Sipariş Toplama ve Paketleme",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.2",
+      "title": "Etiketleme ve Fiyatlandırma",
+      "terms": [
+        {
+          "term_id": "tr_2_4_2_primary_001",
+          "term": "Etiketleme ve Fiyatlandırma",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.3",
+      "title": "Kit Oluşturma",
+      "terms": [
+        {
+          "term_id": "tr_2_4_3_primary_001",
+          "term": "Kit Oluşturma",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.4",
+      "title": "Serileştirme",
+      "terms": [
+        {
+          "term_id": "tr_2_4_4_primary_001",
+          "term": "Serileştirme",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.5",
+      "title": "Paketleme Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_2_4_5_primary_001",
+          "term": "Paketleme Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.4.6",
+      "title": "Yük Elleçleme Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_2_4_6_primary_001",
+          "term": "Yük Elleçleme Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.5",
+      "title": "Gümrükleme ve Dış Ticaret Uyumu",
+      "terms": [
+        {
+          "term_id": "tr_2_5_primary_001",
+          "term": "Gümrükleme ve Dış Ticaret Uyumu",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.5.1",
+      "title": "Gümrük Müşavirliği / Gümrükleme",
+      "terms": [
+        {
+          "term_id": "tr_2_5_1_primary_001",
+          "term": "Gümrük Müşavirliği / Gümrükleme",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.5.2",
+      "title": "Dış Ticaret Uyumu",
+      "terms": [
+        {
+          "term_id": "tr_2_5_2_primary_001",
+          "term": "Dış Ticaret Uyumu",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.5.3",
+      "title": "İthalat/İhracat Dokümantasyonu",
+      "terms": [
+        {
+          "term_id": "tr_2_5_3_primary_001",
+          "term": "İthalat/İhracat Dokümantasyonu",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.6",
+      "title": "Lojistik Hizmet Sağlayıcı Modelleri",
+      "terms": [
+        {
+          "term_id": "tr_2_6_primary_001",
+          "term": "Lojistik Hizmet Sağlayıcı Modelleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.6.1",
+      "title": "Üçüncü Taraf Lojistik - 3PL",
+      "terms": [
+        {
+          "term_id": "tr_2_6_1_primary_001",
+          "term": "Üçüncü Taraf Lojistik - 3PL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.6.2",
+      "title": "Dördüncü Taraf Lojistik - 4PL",
+      "terms": [
+        {
+          "term_id": "tr_2_6_2_primary_001",
+          "term": "Dördüncü Taraf Lojistik - 4PL",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.7",
+      "title": "Muayene ve Survey Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_2_7_primary_001",
+          "term": "Muayene ve Survey Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.7.1",
+      "title": "Paketleme Muayene Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_2_7_1_primary_001",
+          "term": "Paketleme Muayene Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.7.2",
+      "title": "Kargo Survey Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_2_7_2_primary_001",
+          "term": "Kargo Survey Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "2.7.3",
+      "title": "Haşere Kontrol Muayeneleri",
+      "terms": [
+        {
+          "term_id": "tr_2_7_3_primary_001",
+          "term": "Haşere Kontrol Muayeneleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3",
+      "title": "Özel Lojistik",
+      "terms": [
+        {
+          "term_id": "tr_3_primary_001",
+          "term": "Özel Lojistik",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.1",
+      "title": "Sıcaklık Kontrollü Lojistik",
+      "terms": [
+        {
+          "term_id": "tr_3_1_primary_001",
+          "term": "Sıcaklık Kontrollü Lojistik",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.1.1",
+      "title": "Soğuk Zincir Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_1_1_primary_001",
+          "term": "Soğuk Zincir Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.1.2",
+      "title": "İlaç Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_1_2_primary_001",
+          "term": "İlaç Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.1.3",
+      "title": "Bozulabilir Ürün Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_1_3_primary_001",
+          "term": "Bozulabilir Ürün Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.2",
+      "title": "Ağır Yük ve Proje Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_2_primary_001",
+          "term": "Ağır Yük ve Proje Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.2.1",
+      "title": "Enerji Sektörü Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_2_1_primary_001",
+          "term": "Enerji Sektörü Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.2.2",
+      "title": "İnşaat Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_2_2_primary_001",
+          "term": "İnşaat Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3",
+      "title": "Sektöre Özgü Lojistik",
+      "terms": [
+        {
+          "term_id": "tr_3_3_primary_001",
+          "term": "Sektöre Özgü Lojistik",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.1",
+      "title": "Otomotiv Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_3_1_primary_001",
+          "term": "Otomotiv Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.1.1",
+      "title": "Yedek Parça Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_3_1_1_primary_001",
+          "term": "Yedek Parça Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.1.2",
+      "title": "Bitmiş Araç Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_3_1_2_primary_001",
+          "term": "Bitmiş Araç Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.2",
+      "title": "Perakende Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_3_2_primary_001",
+          "term": "Perakende Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.2.1",
+      "title": "Hızlı Moda Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_3_2_1_primary_001",
+          "term": "Hızlı Moda Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.3",
+      "title": "Havacılık ve Savunma Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_3_3_primary_001",
+          "term": "Havacılık ve Savunma Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.4",
+      "title": "Yüksek Teknoloji ve Elektronik Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_3_4_primary_001",
+          "term": "Yüksek Teknoloji ve Elektronik Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.5",
+      "title": "Kimya Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_3_5_primary_001",
+          "term": "Kimya Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.3.6",
+      "title": "Petrol ve Gaz Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_3_6_primary_001",
+          "term": "Petrol ve Gaz Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4",
+      "title": "Diğer Özel Lojistik Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_3_4_primary_001",
+          "term": "Diğer Özel Lojistik Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.1",
+      "title": "Tehlikeli Madde Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_4_1_primary_001",
+          "term": "Tehlikeli Madde Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.2",
+      "title": "Canlı Hayvan Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_4_2_primary_001",
+          "term": "Canlı Hayvan Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.3",
+      "title": "Yüksek Değerli ve Güvenlikli Lojistik",
+      "terms": [
+        {
+          "term_id": "tr_3_4_3_primary_001",
+          "term": "Yüksek Değerli ve Güvenlikli Lojistik",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.4",
+      "title": "Sanat ve Sergi Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_4_4_primary_001",
+          "term": "Sanat ve Sergi Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.5",
+      "title": "Kent Lojistiği",
+      "terms": [
+        {
+          "term_id": "tr_3_4_5_primary_001",
+          "term": "Kent Lojistiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.6",
+      "title": "Tersine Lojistik",
+      "terms": [
+        {
+          "term_id": "tr_3_4_6_primary_001",
+          "term": "Tersine Lojistik",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.6.1",
+      "title": "İade Yönetimi",
+      "terms": [
+        {
+          "term_id": "tr_3_4_6_1_primary_001",
+          "term": "İade Yönetimi",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.6.2",
+      "title": "Onarım ve Yenileme",
+      "terms": [
+        {
+          "term_id": "tr_3_4_6_2_primary_001",
+          "term": "Onarım ve Yenileme",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "3.4.6.3",
+      "title": "Geri Dönüşüm ve Malzeme Geri Kazanımı",
+      "terms": [
+        {
+          "term_id": "tr_3_4_6_3_primary_001",
+          "term": "Geri Dönüşüm ve Malzeme Geri Kazanımı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4",
+      "title": "Lojistik Altyapı ve Ekipman",
+      "terms": [
+        {
+          "term_id": "tr_4_primary_001",
+          "term": "Lojistik Altyapı ve Ekipman",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1",
+      "title": "Terminaller ve Limanlar",
+      "terms": [
+        {
+          "term_id": "tr_4_1_primary_001",
+          "term": "Terminaller ve Limanlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.1",
+      "title": "Liman Operasyonları",
+      "terms": [
+        {
+          "term_id": "tr_4_1_1_primary_001",
+          "term": "Liman Operasyonları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.2",
+      "title": "İç Liman Operasyonları",
+      "terms": [
+        {
+          "term_id": "tr_4_1_2_primary_001",
+          "term": "İç Liman Operasyonları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.3",
+      "title": "Demiryolu Yük Terminalleri",
+      "terms": [
+        {
+          "term_id": "tr_4_1_3_primary_001",
+          "term": "Demiryolu Yük Terminalleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.4",
+      "title": "Hava Kargo Terminalleri",
+      "terms": [
+        {
+          "term_id": "tr_4_1_4_primary_001",
+          "term": "Hava Kargo Terminalleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.5",
+      "title": "Açık Deniz Destek Kara Üssü Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_4_1_5_primary_001",
+          "term": "Açık Deniz Destek Kara Üssü Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.1.6",
+      "title": "Hava Trafik Kontrol Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_4_1_6_primary_001",
+          "term": "Hava Trafik Kontrol Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.2",
+      "title": "Lojistik Gayrimenkul",
+      "terms": [
+        {
+          "term_id": "tr_4_2_primary_001",
+          "term": "Lojistik Gayrimenkul",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.2.1",
+      "title": "Lojistik Parklar ve Serbest Bölgeler",
+      "terms": [
+        {
+          "term_id": "tr_4_2_1_primary_001",
+          "term": "Lojistik Parklar ve Serbest Bölgeler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.3",
+      "title": "Lojistik Ekipmanları",
+      "terms": [
+        {
+          "term_id": "tr_4_3_primary_001",
+          "term": "Lojistik Ekipmanları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.3.1",
+      "title": "Yük Konteynerleri",
+      "terms": [
+        {
+          "term_id": "tr_4_3_1_primary_001",
+          "term": "Yük Konteynerleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.3.2",
+      "title": "Konteyner Şasileri",
+      "terms": [
+        {
+          "term_id": "tr_4_3_2_primary_001",
+          "term": "Konteyner Şasileri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.3.3",
+      "title": "Forkliftler",
+      "terms": [
+        {
+          "term_id": "tr_4_3_3_primary_001",
+          "term": "Forkliftler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.3.4",
+      "title": "Depo Ekipmanları",
+      "terms": [
+        {
+          "term_id": "tr_4_3_4_primary_001",
+          "term": "Depo Ekipmanları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4",
+      "title": "Lojistik Varlık Kiralama ve Leasing",
+      "terms": [
+        {
+          "term_id": "tr_4_4_primary_001",
+          "term": "Lojistik Varlık Kiralama ve Leasing",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.1",
+      "title": "Taşıma Konteyneri Kiralama Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_4_4_1_primary_001",
+          "term": "Taşıma Konteyneri Kiralama Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.1.1",
+      "title": "İntermodal Yük Konteyneri Kiralama Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_4_4_1_1_primary_001",
+          "term": "İntermodal Yük Konteyneri Kiralama Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.2",
+      "title": "Taşıma Aracı Kiralama veya Leasing Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_4_4_2_primary_001",
+          "term": "Taşıma Aracı Kiralama veya Leasing Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.2.1",
+      "title": "Operatörlü Kargo Uçağı Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_4_4_2_1_primary_001",
+          "term": "Operatörlü Kargo Uçağı Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.2.2",
+      "title": "Operatörlü İç Su Yolu Yük Gemisi Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_4_4_2_2_primary_001",
+          "term": "Operatörlü İç Su Yolu Yük Gemisi Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.2.3",
+      "title": "Operatörlü Kıyı ve Okyanus Aşırı Yük Gemisi Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_4_4_2_3_primary_001",
+          "term": "Operatörlü Kıyı ve Okyanus Aşırı Yük Gemisi Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "4.4.2.4",
+      "title": "Operatörlü Kamyon Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_4_4_2_4_primary_001",
+          "term": "Operatörlü Kamyon Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5",
+      "title": "Lojistik Teknolojisi ve Dijitalleşme",
+      "terms": [
+        {
+          "term_id": "tr_5_primary_001",
+          "term": "Lojistik Teknolojisi ve Dijitalleşme",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1",
+      "title": "yazılım çözümleri",
+      "terms": [
+        {
+          "term_id": "tr_5_1_primary_001",
+          "term": "yazılım çözümleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.1",
+      "title": "Taşıma Yönetim Sistemi - TMS",
+      "terms": [
+        {
+          "term_id": "tr_5_1_1_primary_001",
+          "term": "Taşıma Yönetim Sistemi - TMS",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.2",
+      "title": "Depo Yönetim Sistemi - WMS",
+      "terms": [
+        {
+          "term_id": "tr_5_1_2_primary_001",
+          "term": "Depo Yönetim Sistemi - WMS",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.3",
+      "title": "Tedarik Zinciri Yönetim Yazılımı",
+      "terms": [
+        {
+          "term_id": "tr_5_1_3_primary_001",
+          "term": "Tedarik Zinciri Yönetim Yazılımı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.4",
+      "title": "Güzergâh ve Filo Yönetim Yazılımı",
+      "terms": [
+        {
+          "term_id": "tr_5_1_4_primary_001",
+          "term": "Güzergâh ve Filo Yönetim Yazılımı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.5",
+      "title": "Takip ve İzleme Sistemleri",
+      "terms": [
+        {
+          "term_id": "tr_5_1_5_primary_001",
+          "term": "Takip ve İzleme Sistemleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.1.6",
+      "title": "Saha Yönetim Sistemi - YMS",
+      "terms": [
+        {
+          "term_id": "tr_5_1_6_primary_001",
+          "term": "Saha Yönetim Sistemi - YMS",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.2",
+      "title": "Dijital Platformlar ve Entegrasyon",
+      "terms": [
+        {
+          "term_id": "tr_5_2_primary_001",
+          "term": "Dijital Platformlar ve Entegrasyon",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.2.1",
+      "title": "Dijital Navlun Platformları",
+      "terms": [
+        {
+          "term_id": "tr_5_2_1_primary_001",
+          "term": "Dijital Navlun Platformları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.2.2",
+      "title": "Lojistik API ve Entegrasyon Çözümleri",
+      "terms": [
+        {
+          "term_id": "tr_5_2_2_primary_001",
+          "term": "Lojistik API ve Entegrasyon Çözümleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.3",
+      "title": "Gelişen Teknolojiler",
+      "terms": [
+        {
+          "term_id": "tr_5_3_primary_001",
+          "term": "Gelişen Teknolojiler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.3.1",
+      "title": "Lojistikte Yapay Zekâ ve Veri Analitiği",
+      "terms": [
+        {
+          "term_id": "tr_5_3_1_primary_001",
+          "term": "Lojistikte Yapay Zekâ ve Veri Analitiği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.3.2",
+      "title": "Lojistikte Blockchain",
+      "terms": [
+        {
+          "term_id": "tr_5_3_2_primary_001",
+          "term": "Lojistikte Blockchain",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "5.3.3",
+      "title": "Lojistikte Otonom Araçlar",
+      "terms": [
+        {
+          "term_id": "tr_5_3_3_primary_001",
+          "term": "Lojistikte Otonom Araçlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6",
+      "title": "Destek ve İş Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_6_primary_001",
+          "term": "Destek ve İş Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.1",
+      "title": "Danışmanlık ve Eğitim",
+      "terms": [
+        {
+          "term_id": "tr_6_1_primary_001",
+          "term": "Danışmanlık ve Eğitim",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.1.1",
+      "title": "Lojistik Süreç İyileştirme",
+      "terms": [
+        {
+          "term_id": "tr_6_1_1_primary_001",
+          "term": "Lojistik Süreç İyileştirme",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.1.2",
+      "title": "Lojistik Eğitim ve Sertifikasyon",
+      "terms": [
+        {
+          "term_id": "tr_6_1_2_primary_001",
+          "term": "Lojistik Eğitim ve Sertifikasyon",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2",
+      "title": "Finansal ve Sigorta Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_6_2_primary_001",
+          "term": "Finansal ve Sigorta Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.1",
+      "title": "Kargo Sigortası",
+      "terms": [
+        {
+          "term_id": "tr_6_2_1_primary_001",
+          "term": "Kargo Sigortası",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.2",
+      "title": "Sorumluluk Sigortası",
+      "terms": [
+        {
+          "term_id": "tr_6_2_2_primary_001",
+          "term": "Sorumluluk Sigortası",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.3",
+      "title": "Araç ve Filo Sigortası",
+      "terms": [
+        {
+          "term_id": "tr_6_2_3_primary_001",
+          "term": "Araç ve Filo Sigortası",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.4",
+      "title": "Ticaret Finansmanı",
+      "terms": [
+        {
+          "term_id": "tr_6_2_4_primary_001",
+          "term": "Ticaret Finansmanı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.5",
+      "title": "Factoring",
+      "terms": [
+        {
+          "term_id": "tr_6_2_5_primary_001",
+          "term": "Factoring",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.2.6",
+      "title": "Navlun Ödeme ve Denetim",
+      "terms": [
+        {
+          "term_id": "tr_6_2_6_primary_001",
+          "term": "Navlun Ödeme ve Denetim",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.3",
+      "title": "Hukuk Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_6_3_primary_001",
+          "term": "Hukuk Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.3.1",
+      "title": "Taşıma Sözleşmeleri Hukuku",
+      "terms": [
+        {
+          "term_id": "tr_6_3_1_primary_001",
+          "term": "Taşıma Sözleşmeleri Hukuku",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "6.3.2",
+      "title": "Gümrük ve Dış Ticaret Hukuku",
+      "terms": [
+        {
+          "term_id": "tr_6_3_2_primary_001",
+          "term": "Gümrük ve Dış Ticaret Hukuku",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7",
+      "title": "Sürdürülebilirlik ve Yeşil Lojistik",
+      "terms": [
+        {
+          "term_id": "tr_7_primary_001",
+          "term": "Sürdürülebilirlik ve Yeşil Lojistik",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.1",
+      "title": "Karbon ve Emisyon Değerlendirmesi",
+      "terms": [
+        {
+          "term_id": "tr_7_1_primary_001",
+          "term": "Karbon ve Emisyon Değerlendirmesi",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.1.1",
+      "title": "Karbon Ayak İzi Hesaplama",
+      "terms": [
+        {
+          "term_id": "tr_7_1_1_primary_001",
+          "term": "Karbon Ayak İzi Hesaplama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.2",
+      "title": "Yeşil Çözümler",
+      "terms": [
+        {
+          "term_id": "tr_7_2_primary_001",
+          "term": "Yeşil Çözümler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.2.1",
+      "title": "Sürdürülebilir Yakıt Çözümleri",
+      "terms": [
+        {
+          "term_id": "tr_7_2_1_primary_001",
+          "term": "Sürdürülebilir Yakıt Çözümleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.2.2",
+      "title": "Yeşil Lojistik Danışmanlığı",
+      "terms": [
+        {
+          "term_id": "tr_7_2_2_primary_001",
+          "term": "Yeşil Lojistik Danışmanlığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.3",
+      "title": "Sürdürülebilir Ambalaj ve Atık Azaltımı",
+      "terms": [
+        {
+          "term_id": "tr_7_3_primary_001",
+          "term": "Sürdürülebilir Ambalaj ve Atık Azaltımı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.3.1",
+      "title": "Atık ve Ambalaj Optimizasyonu",
+      "terms": [
+        {
+          "term_id": "tr_7_3_1_primary_001",
+          "term": "Atık ve Ambalaj Optimizasyonu",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.4",
+      "title": "Çevresel Planlama ve Karbonsuzlaştırma",
+      "terms": [
+        {
+          "term_id": "tr_7_4_primary_001",
+          "term": "Çevresel Planlama ve Karbonsuzlaştırma",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.4.1",
+      "title": "Sürdürülebilirlik Yol Haritası ve Geçiş Planlaması",
+      "terms": [
+        {
+          "term_id": "tr_7_4_1_primary_001",
+          "term": "Sürdürülebilirlik Yol Haritası ve Geçiş Planlaması",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.5",
+      "title": "Çevresel Denetim",
+      "terms": [
+        {
+          "term_id": "tr_7_5_primary_001",
+          "term": "Çevresel Denetim",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.5.1",
+      "title": "Çevresel Denetim ve Uyum İncelemesi",
+      "terms": [
+        {
+          "term_id": "tr_7_5_1_primary_001",
+          "term": "Çevresel Denetim ve Uyum İncelemesi",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.6",
+      "title": "Çevresel Raporlama ve Beyan",
+      "terms": [
+        {
+          "term_id": "tr_7_6_primary_001",
+          "term": "Çevresel Raporlama ve Beyan",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "7.6.1",
+      "title": "Emisyon / Sürdürülebilirlik Raporlaması",
+      "terms": [
+        {
+          "term_id": "tr_7_6_1_primary_001",
+          "term": "Emisyon / Sürdürülebilirlik Raporlaması",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8",
+      "title": "Yolcu Taşımacılığı ve Mobilite Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_8_primary_001",
+          "term": "Yolcu Taşımacılığı ve Mobilite Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1",
+      "title": "Yolcu Hava Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_8_1_primary_001",
+          "term": "Yolcu Hava Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.1",
+      "title": "Helikopter Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_8_1_1_primary_001",
+          "term": "Helikopter Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.2",
+      "title": "Ticari Uçak Seyahati",
+      "terms": [
+        {
+          "term_id": "tr_8_1_2_primary_001",
+          "term": "Ticari Uçak Seyahati",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.3",
+      "title": "Charter Uçak Seyahati",
+      "terms": [
+        {
+          "term_id": "tr_8_1_3_primary_001",
+          "term": "Charter Uçak Seyahati",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.4",
+      "title": "Hava Yoluyla Gezi Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_8_1_4_primary_001",
+          "term": "Hava Yoluyla Gezi Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.5",
+      "title": "Yolcu Uçağı Kiralama veya Leasing Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_8_1_5_primary_001",
+          "term": "Yolcu Uçağı Kiralama veya Leasing Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.1.6",
+      "title": "Hava Ambulansı ile Tıbbi Tahliye",
+      "terms": [
+        {
+          "term_id": "tr_8_1_6_primary_001",
+          "term": "Hava Ambulansı ile Tıbbi Tahliye",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.2",
+      "title": "Yolcu Demiryolu Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_8_2_primary_001",
+          "term": "Yolcu Demiryolu Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.2.1",
+      "title": "Hafif Raylı Sistem Taşıma Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_8_2_1_primary_001",
+          "term": "Hafif Raylı Sistem Taşıma Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.2.2",
+      "title": "Metro Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_8_2_2_primary_001",
+          "term": "Metro Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.2.3",
+      "title": "Kıtasal / Kıtalararası Demiryolu Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_8_2_3_primary_001",
+          "term": "Kıtasal / Kıtalararası Demiryolu Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3",
+      "title": "Yolcu Deniz Yolu Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_8_3_primary_001",
+          "term": "Yolcu Deniz Yolu Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.1",
+      "title": "Su Taksi Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_8_3_1_primary_001",
+          "term": "Su Taksi Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.2",
+      "title": "Gecelik Gemi Kruvaziyerleri",
+      "terms": [
+        {
+          "term_id": "tr_8_3_2_primary_001",
+          "term": "Gecelik Gemi Kruvaziyerleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.3",
+      "title": "Gezi Teknesi Turları",
+      "terms": [
+        {
+          "term_id": "tr_8_3_3_primary_001",
+          "term": "Gezi Teknesi Turları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.4",
+      "title": "Deniz Aracı Kiralama veya Leasing Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_8_3_4_primary_001",
+          "term": "Deniz Aracı Kiralama veya Leasing Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.5",
+      "title": "Açık Deniz Platform Personel Taşıma Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_8_3_5_primary_001",
+          "term": "Açık Deniz Platform Personel Taşıma Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.6",
+      "title": "Kıyı ve Okyanus Aşırı Yolcu Feribotu",
+      "terms": [
+        {
+          "term_id": "tr_8_3_6_primary_001",
+          "term": "Kıyı ve Okyanus Aşırı Yolcu Feribotu",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.3.7",
+      "title": "İç Su Yolu Yolcu Feribotu",
+      "terms": [
+        {
+          "term_id": "tr_8_3_7_primary_001",
+          "term": "İç Su Yolu Yolcu Feribotu",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4",
+      "title": "Yolcu Karayolu Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_8_4_primary_001",
+          "term": "Yolcu Karayolu Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.1",
+      "title": "Tarifeli Otobüs Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_8_4_1_primary_001",
+          "term": "Tarifeli Otobüs Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.2",
+      "title": "Charter Otobüs Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_8_4_2_primary_001",
+          "term": "Charter Otobüs Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.3",
+      "title": "Taksi Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_8_4_3_primary_001",
+          "term": "Taksi Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.4",
+      "title": "Otopark Ücretleri",
+      "terms": [
+        {
+          "term_id": "tr_8_4_4_primary_001",
+          "term": "Otopark Ücretleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.5",
+      "title": "Araç Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_8_4_5_primary_001",
+          "term": "Araç Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.6",
+      "title": "Sedan / Coupe / Station Wagon Araç Leasingi",
+      "terms": [
+        {
+          "term_id": "tr_8_4_6_primary_001",
+          "term": "Sedan / Coupe / Station Wagon Araç Leasingi",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.7",
+      "title": "Limuzin veya Şoförlü Sedan Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_8_4_7_primary_001",
+          "term": "Limuzin veya Şoförlü Sedan Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.8",
+      "title": "Hafif Kamyon / SUV Leasingi",
+      "terms": [
+        {
+          "term_id": "tr_8_4_8_primary_001",
+          "term": "Hafif Kamyon / SUV Leasingi",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.9",
+      "title": "Yolcu Vanı / Minivan Leasingi",
+      "terms": [
+        {
+          "term_id": "tr_8_4_9_primary_001",
+          "term": "Yolcu Vanı / Minivan Leasingi",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.10",
+      "title": "Kara Yoluyla Gezi Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_8_4_10_primary_001",
+          "term": "Kara Yoluyla Gezi Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.4.11",
+      "title": "Ambulansla Tıbbi Tahliye",
+      "terms": [
+        {
+          "term_id": "tr_8_4_11_primary_001",
+          "term": "Ambulansla Tıbbi Tahliye",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.5",
+      "title": "İntermodal Yolcu Taşımacılığı Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_8_5_primary_001",
+          "term": "İntermodal Yolcu Taşımacılığı Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.5.1",
+      "title": "Yolcular için Karma Modlu Kentsel ve Banliyö Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_8_5_1_primary_001",
+          "term": "Yolcular için Karma Modlu Kentsel ve Banliyö Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "8.6",
+      "title": "Uzay Yolcu Taşımacılığı",
+      "terms": [
+        {
+          "term_id": "tr_8_6_primary_001",
+          "term": "Uzay Yolcu Taşımacılığı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9",
+      "title": "Taşıma Varlıkları, Araçlar ve Taşıtlar",
+      "terms": [
+        {
+          "term_id": "tr_9_primary_001",
+          "term": "Taşıma Varlıkları, Araçlar ve Taşıtlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1",
+      "title": "Motorlu Araçlar",
+      "terms": [
+        {
+          "term_id": "tr_9_1_primary_001",
+          "term": "Motorlu Araçlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1",
+      "title": "Yolcu Motorlu Araçları",
+      "terms": [
+        {
+          "term_id": "tr_9_1_1_primary_001",
+          "term": "Yolcu Motorlu Araçları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.1",
+      "title": "Minibüsler",
+      "terms": [
+        {
+          "term_id": "tr_9_1_1_1_primary_001",
+          "term": "Minibüsler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.2",
+      "title": "Otobüsler",
+      "terms": [
+        {
+          "term_id": "tr_9_1_1_2_primary_001",
+          "term": "Otobüsler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.3",
+      "title": "Otomobiller / Arabalar",
+      "terms": [
+        {
+          "term_id": "tr_9_1_1_3_primary_001",
+          "term": "Otomobiller / Arabalar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.4",
+      "title": "Station Wagonlar",
+      "terms": [
+        {
+          "term_id": "tr_9_1_1_4_primary_001",
+          "term": "Station Wagonlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.5",
+      "title": "Minivanlar veya Vanlar",
+      "terms": [
+        {
+          "term_id": "tr_9_1_1_5_primary_001",
+          "term": "Minivanlar veya Vanlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.6",
+      "title": "Limuzinler",
+      "terms": [
+        {
+          "term_id": "tr_9_1_1_6_primary_001",
+          "term": "Limuzinler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.7",
+      "title": "Hafif Kamyonlar veya Spor Amaçlı Araçlar",
+      "terms": [
+        {
+          "term_id": "tr_9_1_1_7_primary_001",
+          "term": "Hafif Kamyonlar veya Spor Amaçlı Araçlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.8",
+      "title": "Elektrikle Çalışan Araçlar",
+      "terms": [
+        {
+          "term_id": "tr_9_1_1_8_primary_001",
+          "term": "Elektrikle Çalışan Araçlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.1.9",
+      "title": "Zırhlı Motorlu Araçlar",
+      "terms": [
+        {
+          "term_id": "tr_9_1_1_9_primary_001",
+          "term": "Zırhlı Motorlu Araçlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.2",
+      "title": "Motorlu İki Tekerlekli Araçlar",
+      "terms": [
+        {
+          "term_id": "tr_9_1_2_primary_001",
+          "term": "Motorlu İki Tekerlekli Araçlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.2.1",
+      "title": "Motosikletler",
+      "terms": [
+        {
+          "term_id": "tr_9_1_2_1_primary_001",
+          "term": "Motosikletler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.2.2",
+      "title": "Scooterlar",
+      "terms": [
+        {
+          "term_id": "tr_9_1_2_2_primary_001",
+          "term": "Scooterlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.1.2.3",
+      "title": "Mopedler",
+      "terms": [
+        {
+          "term_id": "tr_9_1_2_3_primary_001",
+          "term": "Mopedler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2",
+      "title": "deniz taşıtları",
+      "terms": [
+        {
+          "term_id": "tr_9_2_primary_001",
+          "term": "deniz taşıtları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1",
+      "title": "Ticari Deniz Araçları",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_primary_001",
+          "term": "Ticari Deniz Araçları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.1",
+      "title": "Kargo veya Konteyner Gemileri",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_1_primary_001",
+          "term": "Kargo veya Konteyner Gemileri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.2",
+      "title": "Tankerler",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_2_primary_001",
+          "term": "Tankerler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.3",
+      "title": "Römorkörler",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_3_primary_001",
+          "term": "Römorkörler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.4",
+      "title": "Mavnalar",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_4_primary_001",
+          "term": "Mavnalar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.5",
+      "title": "Yolcu veya Otomobil Feribotları",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_5_primary_001",
+          "term": "Yolcu veya Otomobil Feribotları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.6",
+      "title": "Kruvaziyer Gemileri",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_6_primary_001",
+          "term": "Kruvaziyer Gemileri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.7",
+      "title": "Petrol veya Gaz Mürettebat Botları",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_7_primary_001",
+          "term": "Petrol veya Gaz Mürettebat Botları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.8",
+      "title": "Petrol veya Gaz Çalışma Botları",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_8_primary_001",
+          "term": "Petrol veya Gaz Çalışma Botları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.9",
+      "title": "Sismik Gemiler",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_9_primary_001",
+          "term": "Sismik Gemiler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.10",
+      "title": "Buzkıranlar",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_10_primary_001",
+          "term": "Buzkıranlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.11",
+      "title": "Sıvılaştırılmış Gaz Taşıyıcıları",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_11_primary_001",
+          "term": "Sıvılaştırılmış Gaz Taşıyıcıları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.12",
+      "title": "Kimyasal Tanker Taşıyıcıları",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_12_primary_001",
+          "term": "Kimyasal Tanker Taşıyıcıları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.13",
+      "title": "Dökme Yük Gemileri",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_13_primary_001",
+          "term": "Dökme Yük Gemileri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.14",
+      "title": "Saf Araç Taşıyıcı / RoRo Gemileri",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_14_primary_001",
+          "term": "Saf Araç Taşıyıcı / RoRo Gemileri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.15",
+      "title": "Pilot Botları",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_15_primary_001",
+          "term": "Pilot Botları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.16",
+      "title": "Araştırma Gemileri",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_16_primary_001",
+          "term": "Araştırma Gemileri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.1.17",
+      "title": "Kablo Döşeme Gemileri",
+      "terms": [
+        {
+          "term_id": "tr_9_2_1_17_primary_001",
+          "term": "Kablo Döşeme Gemileri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.2",
+      "title": "Eğlence Amaçlı Su Araçları",
+      "terms": [
+        {
+          "term_id": "tr_9_2_2_primary_001",
+          "term": "Eğlence Amaçlı Su Araçları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.2.1",
+      "title": "Dingiler",
+      "terms": [
+        {
+          "term_id": "tr_9_2_2_1_primary_001",
+          "term": "Dingiler",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.2.2",
+      "title": "Yatlar",
+      "terms": [
+        {
+          "term_id": "tr_9_2_2_2_primary_001",
+          "term": "Yatlar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.2.2.3",
+      "title": "Skiff",
+      "terms": [
+        {
+          "term_id": "tr_9_2_2_3_primary_001",
+          "term": "Skiff",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.3",
+      "title": "Demiryolu ve Tramvay Makine ve Ekipmanları",
+      "terms": [
+        {
+          "term_id": "tr_9_3_primary_001",
+          "term": "Demiryolu ve Tramvay Makine ve Ekipmanları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4",
+      "title": "Hava Araçları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_primary_001",
+          "term": "Hava Araçları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1",
+      "title": "Motorlu Sabit Kanatlı Hava Araçları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_1_primary_001",
+          "term": "Motorlu Sabit Kanatlı Hava Araçları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.1",
+      "title": "Sabit Kanatlı Tarım Uçakları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_1_1_primary_001",
+          "term": "Sabit Kanatlı Tarım Uçakları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.2",
+      "title": "Kargo Pervaneli Uçaklar",
+      "terms": [
+        {
+          "term_id": "tr_9_4_1_2_primary_001",
+          "term": "Kargo Pervaneli Uçaklar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.3",
+      "title": "Deniz Uçakları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_1_3_primary_001",
+          "term": "Deniz Uçakları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.4",
+      "title": "Ticari Yolcu Pervaneli Uçaklar",
+      "terms": [
+        {
+          "term_id": "tr_9_4_1_4_primary_001",
+          "term": "Ticari Yolcu Pervaneli Uçaklar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.5",
+      "title": "Kargo Jet Uçakları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_1_5_primary_001",
+          "term": "Kargo Jet Uçakları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.6",
+      "title": "Ticari Yolcu Jet Uçakları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_1_6_primary_001",
+          "term": "Ticari Yolcu Jet Uçakları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.7",
+      "title": "Özel veya İş Amaçlı Pervaneli Uçaklar",
+      "terms": [
+        {
+          "term_id": "tr_9_4_1_7_primary_001",
+          "term": "Özel veya İş Amaçlı Pervaneli Uçaklar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.8",
+      "title": "Özel veya İş Amaçlı Jet Uçakları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_1_8_primary_001",
+          "term": "Özel veya İş Amaçlı Jet Uçakları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.1.9",
+      "title": "Uçuş Kontrol Uçakları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_1_9_primary_001",
+          "term": "Uçuş Kontrol Uçakları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.2",
+      "title": "Sivil ve Ticari Döner Kanatlı Hava Araçları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_2_primary_001",
+          "term": "Sivil ve Ticari Döner Kanatlı Hava Araçları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.2.1",
+      "title": "Yolcu Taşıma Helikopterleri",
+      "terms": [
+        {
+          "term_id": "tr_9_4_2_1_primary_001",
+          "term": "Yolcu Taşıma Helikopterleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.2.2",
+      "title": "Kargo Taşıma Helikopterleri",
+      "terms": [
+        {
+          "term_id": "tr_9_4_2_2_primary_001",
+          "term": "Kargo Taşıma Helikopterleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.2.3",
+      "title": "Tıbbi veya Kurtarma Helikopterleri",
+      "terms": [
+        {
+          "term_id": "tr_9_4_2_3_primary_001",
+          "term": "Tıbbi veya Kurtarma Helikopterleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.3",
+      "title": "Özel Amaçlı Hava Araçları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_3_primary_001",
+          "term": "Özel Amaçlı Hava Araçları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.3.1",
+      "title": "Hava Gemileri",
+      "terms": [
+        {
+          "term_id": "tr_9_4_3_1_primary_001",
+          "term": "Hava Gemileri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.3.2",
+      "title": "Model Uçaklar",
+      "terms": [
+        {
+          "term_id": "tr_9_4_3_2_primary_001",
+          "term": "Model Uçaklar",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.4.4",
+      "title": "Eğlence Amaçlı Hava Araçları",
+      "terms": [
+        {
+          "term_id": "tr_9_4_4_primary_001",
+          "term": "Eğlence Amaçlı Hava Araçları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.5",
+      "title": "Uzay Araçları",
+      "terms": [
+        {
+          "term_id": "tr_9_5_primary_001",
+          "term": "Uzay Araçları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "9.6",
+      "title": "Taşımacılık Hizmet Ekipmanları",
+      "terms": [
+        {
+          "term_id": "tr_9_6_primary_001",
+          "term": "Taşımacılık Hizmet Ekipmanları",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10",
+      "title": "Charter, Kiralama ve Leasing Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_10_primary_001",
+          "term": "Charter, Kiralama ve Leasing Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1",
+      "title": "Charter Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_10_1_primary_001",
+          "term": "Charter Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.1",
+      "title": "Kargo Charter",
+      "terms": [
+        {
+          "term_id": "tr_10_1_1_primary_001",
+          "term": "Kargo Charter",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.2",
+      "title": "Yolcu Charter",
+      "terms": [
+        {
+          "term_id": "tr_10_1_2_primary_001",
+          "term": "Yolcu Charter",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.3",
+      "title": "Helikopter Charter",
+      "terms": [
+        {
+          "term_id": "tr_10_1_3_primary_001",
+          "term": "Helikopter Charter",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.4",
+      "title": "Yat / Tekne Charter",
+      "terms": [
+        {
+          "term_id": "tr_10_1_4_primary_001",
+          "term": "Yat / Tekne Charter",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.5",
+      "title": "Otobüs Charter",
+      "terms": [
+        {
+          "term_id": "tr_10_1_5_primary_001",
+          "term": "Otobüs Charter",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.1.6",
+      "title": "Limuzin / VIP Charter",
+      "terms": [
+        {
+          "term_id": "tr_10_1_6_primary_001",
+          "term": "Limuzin / VIP Charter",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2",
+      "title": "Kiralama Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_10_2_primary_001",
+          "term": "Kiralama Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.1",
+      "title": "Konteyner Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_10_2_1_primary_001",
+          "term": "Konteyner Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.2",
+      "title": "İntermodal Konteyner Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_10_2_2_primary_001",
+          "term": "İntermodal Konteyner Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.3",
+      "title": "Araç Kiralama hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_10_2_3_primary_001",
+          "term": "Araç Kiralama hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.4",
+      "title": "Deniz Aracı Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_10_2_4_primary_001",
+          "term": "Deniz Aracı Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.5",
+      "title": "Yolcu Uçağı Kiralama veya Leasing",
+      "terms": [
+        {
+          "term_id": "tr_10_2_5_primary_001",
+          "term": "Yolcu Uçağı Kiralama veya Leasing",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.6",
+      "title": "Operatörlü Kargo Uçağı Kiralama hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_10_2_6_primary_001",
+          "term": "Operatörlü Kargo Uçağı Kiralama hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.7",
+      "title": "Operatörlü Yük Gemisi Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_10_2_7_primary_001",
+          "term": "Operatörlü Yük Gemisi Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.8",
+      "title": "Operatörlü Kıyı / Okyanus Aşırı Yük Gemisi Kiralama",
+      "terms": [
+        {
+          "term_id": "tr_10_2_8_primary_001",
+          "term": "Operatörlü Kıyı / Okyanus Aşırı Yük Gemisi Kiralama",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.2.9",
+      "title": "Operatörlü Kamyon Kiralama hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_10_2_9_primary_001",
+          "term": "Operatörlü Kamyon Kiralama hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.3",
+      "title": "Leasing Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_10_3_primary_001",
+          "term": "Leasing Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.3.1",
+      "title": "Sedan / Coupe / Station Wagon Leasingi",
+      "terms": [
+        {
+          "term_id": "tr_10_3_1_primary_001",
+          "term": "Sedan / Coupe / Station Wagon Leasingi",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.3.2",
+      "title": "Hafif Kamyon / SUV Leasing Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_10_3_2_primary_001",
+          "term": "Hafif Kamyon / SUV Leasing Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.3.3",
+      "title": "Yolcu Vanı / Minivan Leasing Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_10_3_3_primary_001",
+          "term": "Yolcu Vanı / Minivan Leasing Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "10.3.4",
+      "title": "Taşıma Aracı Leasingi",
+      "terms": [
+        {
+          "term_id": "tr_10_3_4_primary_001",
+          "term": "Taşıma Aracı Leasingi",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11",
+      "title": "Bakım, Yakıt İkmali, Depolama ve Destek Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_11_primary_001",
+          "term": "Bakım, Yakıt İkmali, Depolama ve Destek Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1",
+      "title": "Araç Bakım ve Onarımı",
+      "terms": [
+        {
+          "term_id": "tr_11_1_primary_001",
+          "term": "Araç Bakım ve Onarımı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.1",
+      "title": "Araç Kaporta Onarım veya Boyama Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_11_1_1_primary_001",
+          "term": "Araç Kaporta Onarım veya Boyama Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.2",
+      "title": "Araç Muayene Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_11_1_2_primary_001",
+          "term": "Araç Muayene Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.3",
+      "title": "Araç Cam Değişim Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_11_1_3_primary_001",
+          "term": "Araç Cam Değişim Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.4",
+      "title": "Otomotiv ve Hafif Kamyon Bakım ve Onarımı",
+      "terms": [
+        {
+          "term_id": "tr_11_1_4_primary_001",
+          "term": "Otomotiv ve Hafif Kamyon Bakım ve Onarımı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.5",
+      "title": "Ağır Kamyon Bakım ve Onarımı",
+      "terms": [
+        {
+          "term_id": "tr_11_1_5_primary_001",
+          "term": "Ağır Kamyon Bakım ve Onarımı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.1.6",
+      "title": "Demiryolu Vagonu Muayene ve Bakım Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_11_1_6_primary_001",
+          "term": "Demiryolu Vagonu Muayene ve Bakım Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.2",
+      "title": "Kaporta ve Boya Hizmetleri",
+      "terms": [
+        {
+          "term_id": "tr_11_2_primary_001",
+          "term": "Kaporta ve Boya Hizmetleri",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.2.1",
+      "title": "Kaporta Düzeltme Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_11_2_1_primary_001",
+          "term": "Kaporta Düzeltme Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.3",
+      "title": "Yakıt İkmali / Depolama / Operasyonel Destek",
+      "terms": [
+        {
+          "term_id": "tr_11_3_primary_001",
+          "term": "Yakıt İkmali / Depolama / Operasyonel Destek",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.3.1",
+      "title": "Araç Yakıt İkmal Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_11_3_1_primary_001",
+          "term": "Araç Yakıt İkmal Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.3.2",
+      "title": "Taşıma Depolama Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_11_3_2_primary_001",
+          "term": "Taşıma Depolama Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.3.3",
+      "title": "Araç Park Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_11_3_3_primary_001",
+          "term": "Araç Park Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.3.4",
+      "title": "Yakıt Yükleme Kartı / Ön Ödemeli Yakıt Kartı Hizmeti",
+      "terms": [
+        {
+          "term_id": "tr_11_3_4_primary_001",
+          "term": "Yakıt Yükleme Kartı / Ön Ödemeli Yakıt Kartı Hizmeti",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.4",
+      "title": "Uçak Bakım ve Onarımı",
+      "terms": [
+        {
+          "term_id": "tr_11_4_primary_001",
+          "term": "Uçak Bakım ve Onarımı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.5",
+      "title": "Seyrüsefer Ekipmanı Bakım ve Onarımı",
+      "terms": [
+        {
+          "term_id": "tr_11_5_primary_001",
+          "term": "Seyrüsefer Ekipmanı Bakım ve Onarımı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.6",
+      "title": "Su Yolu Taşıma Gemisi Bakım ve Onarımı",
+      "terms": [
+        {
+          "term_id": "tr_11_6_primary_001",
+          "term": "Su Yolu Taşıma Gemisi Bakım ve Onarımı",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    },
+    {
+      "node_code": "11.7",
+      "title": "Filo Yönetimi Desteği",
+      "terms": [
+        {
+          "term_id": "tr_11_7_primary_001",
+          "term": "Filo Yönetimi Desteği",
+          "role": "primary",
+          "is_searchable": true
+        }
+      ]
+    }
+  ]
 }
