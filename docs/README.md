@@ -551,3 +551,4 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 - [Stage3 German baseline taxonomy review seal](TOPIC_TAXONOMY_STAGE3_GERMAN_BASELINE_REVIEW_SEAL_2026_04_25.md)
 - [Stage4 Arabic taxonomy patch/review/sync/live-swap seal](TOPIC_TAXONOMY_STAGE4_ARABIC_PATCH_REVIEW_SYNC_SEAL_2026_04_25.md)
 - [Stage5 Bulgarian taxonomy patch/review/sync/live-swap seal](TOPIC_TAXONOMY_STAGE5_BULGARIAN_PATCH_REVIEW_SYNC_SEAL_2026_04_25.md)
+- [TOPIC_TAXONOMY_JSON_FIRST_RUNTIME_BRIDGE_CONTRACT.md](TOPIC_TAXONOMY_JSON_FIRST_RUNTIME_BRIDGE_CONTRACT.md) — JSON-first taxonomy authoring, PostgreSQL runtime bridge, placeholder-language safety, and runtime non-direct-JSON-read contract.
