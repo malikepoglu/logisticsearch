@@ -18,10 +18,6 @@
 -- 1) base runtime objects
 -- 2) prepare/load functions
 -- 3) overlay/runtime extension layer
--- 4) JSON-first runtime bridge skeleton
---
--- The JSON-first bridge does not make Python read canonical JSON files directly.
--- PostgreSQL remains the runtime execution surface.
 --
 -- TR
 -- Pi51crawler üzerinde taxonomy_core için kontrollü apply yüzeyi.
@@ -31,10 +27,6 @@
 -- 1) temel runtime nesneleri
 -- 2) hazırlama/yükleme fonksiyonları
 -- 3) overlay/runtime genişleme katmanı
--- 4) JSON-first runtime bridge skeleton
---
--- JSON-first bridge, Python'ın kanonik JSON dosyalarını doğrudan okuması anlamına gelmez.
--- PostgreSQL runtime çalışma yüzeyi olarak kalır.
 
 \echo
 \echo == TAXONOMY_CORE CONTROLLED APPLY ==
@@ -50,10 +42,6 @@
 \echo
 \echo == 3) APPLY 003_taxonomy_runtime_overlay.sql ==
 \i hosts/makpi51crawler/sql/taxonomy_core/003_taxonomy_runtime_overlay.sql
-
-\echo
-\echo == 4) APPLY 011_taxonomy_json_first_runtime_bridge.sql ==
-\i hosts/makpi51crawler/sql/taxonomy_core/011_taxonomy_json_first_runtime_bridge.sql
 
 \echo
 \echo TAXONOMY_CORE_APPLY_RESULT=PASS
