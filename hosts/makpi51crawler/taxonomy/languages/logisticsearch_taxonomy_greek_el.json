@@ -1,1 +1,6032 @@
-[]
+[
+  {
+    "term_id": "el-1",
+    "concept_id": "CID-1",
+    "hierarchy_id": "1",
+    "unspsc_code": "78100000",
+    "language": "el",
+    "term": "Μεταφορές και μεταφορά φορτίων",
+    "description": "Μεταφορές και μεταφορά φορτίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-2",
+    "concept_id": "CID-2",
+    "hierarchy_id": "1.1",
+    "unspsc_code": "78101800",
+    "language": "el",
+    "term": "μεταφορά με φορτηγό",
+    "description": "οδικές εμπορευματικές μεταφορές",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-3",
+    "concept_id": "CID-3",
+    "hierarchy_id": "1.1.1",
+    "unspsc_code": "78101802",
+    "language": "el",
+    "term": "Πλήρες φορτίο φορτηγού - FTL",
+    "description": "Πλήρες φορτίο φορτηγού - FTL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-4",
+    "concept_id": "CID-4",
+    "hierarchy_id": "1.1.2",
+    "unspsc_code": "78101802",
+    "language": "el",
+    "term": "Μερικό φορτίο - LTL",
+    "description": "Μερικό φορτίο - LTL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-5",
+    "concept_id": "CID-5",
+    "hierarchy_id": "1.1.3",
+    "unspsc_code": "78101801",
+    "language": "el",
+    "term": "Τοπική διανομή / αστικές φορτηγές μεταφορές",
+    "description": "Τοπική διανομή / αστικές φορτηγές μεταφορές",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-6",
+    "concept_id": "CID-6",
+    "hierarchy_id": "1.1.4",
+    "unspsc_code": "78101802",
+    "language": "el",
+    "term": "Αποκλειστική συμβατική μεταφορά",
+    "description": "Αποκλειστική συμβατική μεταφορά",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-7",
+    "concept_id": "CID-7",
+    "hierarchy_id": "1.1.5",
+    "unspsc_code": "78101806",
+    "language": "el",
+    "term": "Διεθνείς οδικές εμπορευματικές μεταφορές",
+    "description": "Διεθνείς οδικές εμπορευματικές μεταφορές",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-8",
+    "concept_id": "CID-8",
+    "hierarchy_id": "1.1.6",
+    "unspsc_code": "78101809",
+    "language": "el",
+    "term": "Οδικές υπηρεσίες δεμάτων και τελευταίου μιλίου",
+    "description": "Οδικές υπηρεσίες δεμάτων και τελευταίου μιλίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-9",
+    "concept_id": "CID-9",
+    "hierarchy_id": "1.1.6.1",
+    "unspsc_code": "78101809",
+    "language": "el",
+    "term": "Παράδοση τελευταίου μιλίου",
+    "description": "Παράδοση τελευταίου μιλίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-10",
+    "concept_id": "CID-10",
+    "hierarchy_id": "1.1.7",
+    "unspsc_code": "78101804",
+    "language": "el",
+    "term": "Υπηρεσίες μετακόμισης κατοικίας",
+    "description": "Υπηρεσίες μετακόμισης κατοικίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-11",
+    "concept_id": "CID-11",
+    "hierarchy_id": "1.1.8",
+    "unspsc_code": "78101808",
+    "language": "el",
+    "term": "Οδική μεταφορά ξηρού χύδην φορτίου",
+    "description": "Οδική μεταφορά ξηρού χύδην φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-12",
+    "concept_id": "CID-12",
+    "hierarchy_id": "1.1.9",
+    "unspsc_code": "78101807",
+    "language": "el",
+    "term": "Μεταφορές με βυτιοφόρα",
+    "description": "Μεταφορές με βυτιοφόρα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-13",
+    "concept_id": "CID-13",
+    "hierarchy_id": "1.1.10",
+    "unspsc_code": "78101802",
+    "language": "el",
+    "term": "Βαριές μεταφορές / υπερμεγέθη φορτία",
+    "description": "Βαριές μεταφορές / υπερμεγέθη φορτία",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-14",
+    "concept_id": "CID-14",
+    "hierarchy_id": "1.1.11",
+    "unspsc_code": "78101803",
+    "language": "el",
+    "term": "Υπηρεσίες μεταφοράς οχημάτων",
+    "description": "Υπηρεσίες μεταφοράς οχημάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-15",
+    "concept_id": "CID-15",
+    "hierarchy_id": "1.1.12",
+    "unspsc_code": "78101810",
+    "language": "el",
+    "term": "Μεταφορά ζώντων ζώων",
+    "description": "Μεταφορά ζώντων ζώων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-16",
+    "concept_id": "CID-16",
+    "hierarchy_id": "1.1.13",
+    "unspsc_code": "78101807",
+    "language": "el",
+    "term": "Μεταφορά επικίνδυνων υλικών - Hazmat",
+    "description": "Μεταφορά επικίνδυνων υλικών - Hazmat",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-17",
+    "concept_id": "CID-17",
+    "hierarchy_id": "1.2",
+    "unspsc_code": "78101700",
+    "language": "el",
+    "term": "θαλάσσιες μεταφορές",
+    "description": "θαλάσσιες μεταφορές",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-18",
+    "concept_id": "CID-18",
+    "hierarchy_id": "1.2.1",
+    "unspsc_code": "78101700",
+    "language": "el",
+    "term": "Μεταφορά εμπορευματοκιβωτίων",
+    "description": "Μεταφορά εμπορευματοκιβωτίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-19",
+    "concept_id": "CID-19",
+    "hierarchy_id": "1.2.1.1",
+    "unspsc_code": "78101700",
+    "language": "el",
+    "term": "Πλήρες φορτίο κοντέινερ - FCL",
+    "description": "Πλήρες φορτίο κοντέινερ - FCL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-20",
+    "concept_id": "CID-20",
+    "hierarchy_id": "1.2.1.2",
+    "unspsc_code": "78101700",
+    "language": "el",
+    "term": "Μερικό φορτίο κοντέινερ - LCL",
+    "description": "Μερικό φορτίο κοντέινερ - LCL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-21",
+    "concept_id": "CID-21",
+    "hierarchy_id": "1.2.2",
+    "unspsc_code": "78101700",
+    "language": "el",
+    "term": "Θαλάσσια μεταφορά ξηρού χύδην φορτίου",
+    "description": "Θαλάσσια μεταφορά ξηρού χύδην φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-22",
+    "concept_id": "CID-22",
+    "hierarchy_id": "1.2.3",
+    "unspsc_code": "78101700",
+    "language": "el",
+    "term": "Θαλάσσια μεταφορά υγρού χύδην φορτίου",
+    "description": "Θαλάσσια μεταφορά υγρού χύδην φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-23",
+    "concept_id": "CID-23",
+    "hierarchy_id": "1.2.4",
+    "unspsc_code": "78101700",
+    "language": "el",
+    "term": "Μεταφορά Ro-Ro",
+    "description": "Μεταφορά Ro-Ro",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-24",
+    "concept_id": "CID-24",
+    "hierarchy_id": "1.2.5",
+    "unspsc_code": "78101700",
+    "language": "el",
+    "term": "Τακτική γραμμή θαλάσσιων μεταφορών",
+    "description": "Τακτική γραμμή θαλάσσιων μεταφορών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-25",
+    "concept_id": "CID-25",
+    "hierarchy_id": "1.2.6",
+    "unspsc_code": "78101700",
+    "language": "el",
+    "term": "Τραμπ ναυτιλία",
+    "description": "Τραμπ ναυτιλία",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-26",
+    "concept_id": "CID-26",
+    "hierarchy_id": "1.2.7",
+    "unspsc_code": "78101700",
+    "language": "el",
+    "term": "Θαλάσσιες μεταφορές μικρών αποστάσεων - SSS",
+    "description": "Θαλάσσιες μεταφορές μικρών αποστάσεων - SSS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-27",
+    "concept_id": "CID-27",
+    "hierarchy_id": "1.2.8",
+    "unspsc_code": "78101706",
+    "language": "el",
+    "term": "Υπεράκτια εφοδιαστική",
+    "description": "Υπεράκτια εφοδιαστική",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-28",
+    "concept_id": "CID-28",
+    "hierarchy_id": "1.2.9",
+    "unspsc_code": "78141700",
+    "language": "el",
+    "term": "Υπηρεσίες πλοήγησης και ρυμούλκησης",
+    "description": "Υπηρεσίες πλοήγησης και ρυμούλκησης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-29",
+    "concept_id": "CID-29",
+    "hierarchy_id": "1.2.9.1",
+    "unspsc_code": "78141701",
+    "language": "el",
+    "term": "Υπηρεσίες ρυμουλκού",
+    "description": "Υπηρεσίες ρυμουλκού",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-30",
+    "concept_id": "CID-30",
+    "hierarchy_id": "1.2.9.2",
+    "unspsc_code": "78141702",
+    "language": "el",
+    "term": "Λειτουργία κινητής γέφυρας",
+    "description": "Λειτουργία κινητής γέφυρας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-31",
+    "concept_id": "CID-31",
+    "hierarchy_id": "1.2.9.3",
+    "unspsc_code": "78141703",
+    "language": "el",
+    "term": "Θαλάσσιες υπηρεσίες πλοήγησης ή επικοινωνίας",
+    "description": "Θαλάσσιες υπηρεσίες πλοήγησης ή επικοινωνίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-32",
+    "concept_id": "CID-32",
+    "hierarchy_id": "1.2.9.4",
+    "unspsc_code": "78141704",
+    "language": "el",
+    "term": "Υπηρεσία dead man anchor",
+    "description": "Υπηρεσία dead man anchor",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-33",
+    "concept_id": "CID-33",
+    "hierarchy_id": "1.3",
+    "unspsc_code": "78101500",
+    "language": "el",
+    "term": "Αεροπορικές εμπορευματικές μεταφορές",
+    "description": "Αεροπορικές εμπορευματικές μεταφορές",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-34",
+    "concept_id": "CID-34",
+    "hierarchy_id": "1.3.1",
+    "unspsc_code": "78101500",
+    "language": "el",
+    "term": "Υπηρεσίες αεροπορικού φορτίου",
+    "description": "Υπηρεσίες αεροπορικού φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-35",
+    "concept_id": "CID-35",
+    "hierarchy_id": "1.3.2",
+    "unspsc_code": "78101500",
+    "language": "el",
+    "term": "Αεροπορικό εξπρές φορτίο",
+    "description": "Αεροπορικό εξπρές φορτίο",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-36",
+    "concept_id": "CID-36",
+    "hierarchy_id": "1.3.3",
+    "unspsc_code": "78101500",
+    "language": "el",
+    "term": "Αεροπορικό φορτίο πόρτα-πόρτα",
+    "description": "Αεροπορικό φορτίο πόρτα-πόρτα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-37",
+    "concept_id": "CID-37",
+    "hierarchy_id": "1.3.4",
+    "unspsc_code": "78141501",
+    "language": "el",
+    "term": "Ενοποίηση αεροπορικού φορτίου",
+    "description": "Ενοποίηση αεροπορικού φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-38",
+    "concept_id": "CID-38",
+    "hierarchy_id": "1.3.5",
+    "unspsc_code": "78101500",
+    "language": "el",
+    "term": "Υπηρεσίες charter αεροπορικού φορτίου",
+    "description": "Υπηρεσίες charter αεροπορικού φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-39",
+    "concept_id": "CID-39",
+    "hierarchy_id": "1.4",
+    "unspsc_code": "78101600",
+    "language": "el",
+    "term": "Σιδηροδρομικές εμπορευματικές μεταφορές",
+    "description": "Σιδηροδρομικές εμπορευματικές μεταφορές",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-40",
+    "concept_id": "CID-40",
+    "hierarchy_id": "1.4.1",
+    "unspsc_code": "78101600",
+    "language": "el",
+    "term": "Σιδηροδρομική μεταφορά ανά βαγόνι",
+    "description": "Σιδηροδρομική μεταφορά ανά βαγόνι",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-41",
+    "concept_id": "CID-41",
+    "hierarchy_id": "1.4.2",
+    "unspsc_code": "78101900",
+    "language": "el",
+    "term": "Διατροπικές σιδηροδρομικές μεταφορές",
+    "description": "Διατροπικές σιδηροδρομικές μεταφορές",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-42",
+    "concept_id": "CID-42",
+    "hierarchy_id": "1.4.2.1",
+    "unspsc_code": "78101905",
+    "language": "el",
+    "term": "Συνδυασμένες μεταφορές οδού-σιδηροδρόμου",
+    "description": "Συνδυασμένες μεταφορές οδού-σιδηροδρόμου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-43",
+    "concept_id": "CID-43",
+    "hierarchy_id": "1.4.3",
+    "unspsc_code": "78101600",
+    "language": "el",
+    "term": "Υψηλής ταχύτητας σιδηροδρομικό φορτίο",
+    "description": "Υψηλής ταχύτητας σιδηροδρομικό φορτίο",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-44",
+    "concept_id": "CID-44",
+    "hierarchy_id": "1.4.4",
+    "unspsc_code": "78101600",
+    "language": "el",
+    "term": "Υπηρεσίες μίσθωσης σιδηροδρομικών βαγονιών",
+    "description": "Υπηρεσίες μίσθωσης σιδηροδρομικών βαγονιών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-45",
+    "concept_id": "CID-45",
+    "hierarchy_id": "1.4.4.1",
+    "unspsc_code": "78101606",
+    "language": "el",
+    "term": "Μίσθωση σιδηροδρομικών βαγονιών φορτίου",
+    "description": "Μίσθωση σιδηροδρομικών βαγονιών φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-46",
+    "concept_id": "CID-46",
+    "hierarchy_id": "1.4.4.2",
+    "unspsc_code": "78101605",
+    "language": "el",
+    "term": "Μίσθωση σιδηροδρομικών βαγονιών-δεξαμενών",
+    "description": "Μίσθωση σιδηροδρομικών βαγονιών-δεξαμενών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-47",
+    "concept_id": "CID-47",
+    "hierarchy_id": "1.5",
+    "unspsc_code": "78102100",
+    "language": "el",
+    "term": "Μεταφορά μέσω αγωγών",
+    "description": "Μεταφορά μέσω αγωγών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-48",
+    "concept_id": "CID-48",
+    "hierarchy_id": "1.5.1",
+    "unspsc_code": "78102101",
+    "language": "el",
+    "term": "Μεταφορά πετρελαϊκών προϊόντων μέσω αγωγών",
+    "description": "Μεταφορά πετρελαϊκών προϊόντων μέσω αγωγών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-49",
+    "concept_id": "CID-49",
+    "hierarchy_id": "1.5.2",
+    "unspsc_code": "78102102",
+    "language": "el",
+    "term": "Μεταφορά νερού μέσω αγωγών",
+    "description": "Μεταφορά νερού μέσω αγωγών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-50",
+    "concept_id": "CID-50",
+    "hierarchy_id": "1.5.3",
+    "unspsc_code": "83101604",
+    "language": "el",
+    "term": "Μεταφορά φυσικού αερίου μέσω αγωγών",
+    "description": "Μεταφορά φυσικού αερίου μέσω αγωγών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-51",
+    "concept_id": "CID-51",
+    "hierarchy_id": "1.5.4",
+    "unspsc_code": "78102100",
+    "language": "el",
+    "term": "Μεταφορά χημικών ουσιών μέσω αγωγών",
+    "description": "Μεταφορά χημικών ουσιών μέσω αγωγών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-52",
+    "concept_id": "CID-52",
+    "hierarchy_id": "1.5.5",
+    "unspsc_code": "78102103",
+    "language": "el",
+    "term": "Επιθεώρηση αγωγών εντός γραμμής",
+    "description": "Επιθεώρηση αγωγών εντός γραμμής",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-53",
+    "concept_id": "CID-53",
+    "hierarchy_id": "1.6",
+    "unspsc_code": "78101900",
+    "language": "el",
+    "term": "Διατροπικές και συνδυασμένες εμπορευματικές μεταφορές",
+    "description": "Διατροπικές και συνδυασμένες εμπορευματικές μεταφορές",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-54",
+    "concept_id": "CID-54",
+    "hierarchy_id": "1.6.1",
+    "unspsc_code": "78101900",
+    "language": "el",
+    "term": "Διατροπική μεταφορά εμπορευματοκιβωτίων",
+    "description": "Διατροπική μεταφορά εμπορευματοκιβωτίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-55",
+    "concept_id": "CID-55",
+    "hierarchy_id": "1.6.2",
+    "unspsc_code": "78101901",
+    "language": "el",
+    "term": "Αεροθαλάσσια μεταφορά",
+    "description": "Αεροθαλάσσια μεταφορά",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-56",
+    "concept_id": "CID-56",
+    "hierarchy_id": "1.6.3",
+    "unspsc_code": "78101902",
+    "language": "el",
+    "term": "Θαλάσσια-σιδηροδρομική μεταφορά",
+    "description": "Θαλάσσια-σιδηροδρομική μεταφορά",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-57",
+    "concept_id": "CID-57",
+    "hierarchy_id": "1.6.4",
+    "unspsc_code": "78101903",
+    "language": "el",
+    "term": "Θαλάσσια-οδική μεταφορά",
+    "description": "Θαλάσσια-οδική μεταφορά",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-58",
+    "concept_id": "CID-58",
+    "hierarchy_id": "1.6.5",
+    "unspsc_code": "78101904",
+    "language": "el",
+    "term": "Αεροπορική-οδική μεταφορά",
+    "description": "Αεροπορική-οδική μεταφορά",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-59",
+    "concept_id": "CID-59",
+    "hierarchy_id": "1.7",
+    "unspsc_code": "78102200",
+    "language": "el",
+    "term": "Υπηρεσίες courier / ταχυδρομείου",
+    "description": "Υπηρεσίες courier / ταχυδρομείου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-60",
+    "concept_id": "CID-60",
+    "hierarchy_id": "1.7.1",
+    "unspsc_code": "78102201",
+    "language": "el",
+    "term": "Εθνικές υπηρεσίες ταχυδρομικής διανομής",
+    "description": "Εθνικές υπηρεσίες ταχυδρομικής διανομής",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-61",
+    "concept_id": "CID-61",
+    "hierarchy_id": "1.7.2",
+    "unspsc_code": "78102202",
+    "language": "el",
+    "term": "Υπηρεσίες ταχυδρομικής θυρίδας",
+    "description": "Υπηρεσίες ταχυδρομικής θυρίδας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-62",
+    "concept_id": "CID-62",
+    "hierarchy_id": "1.7.3",
+    "unspsc_code": "78102203",
+    "language": "el",
+    "term": "Υπηρεσίες αποστολής / παραλαβής / διανομής αλληλογραφίας",
+    "description": "Υπηρεσίες αποστολής / παραλαβής / διανομής αλληλογραφίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-63",
+    "concept_id": "CID-63",
+    "hierarchy_id": "1.7.4",
+    "unspsc_code": "78102204",
+    "language": "el",
+    "term": "Παγκόσμιες υπηρεσίες διανομής επιστολών ή μικρών δεμάτων",
+    "description": "Παγκόσμιες υπηρεσίες διανομής επιστολών ή μικρών δεμάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-64",
+    "concept_id": "CID-64",
+    "hierarchy_id": "1.7.5",
+    "unspsc_code": "78102205",
+    "language": "el",
+    "term": "Τοπικές υπηρεσίες διανομής επιστολών ή μικρών δεμάτων",
+    "description": "Τοπικές υπηρεσίες διανομής επιστολών ή μικρών δεμάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-65",
+    "concept_id": "CID-65",
+    "hierarchy_id": "1.7.6",
+    "unspsc_code": "78102206",
+    "language": "el",
+    "term": "Υπηρεσίες ταχυμεταφοράς με ποδήλατο ή σκούτερ",
+    "description": "Υπηρεσίες ταχυμεταφοράς με ποδήλατο ή σκούτερ",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-66",
+    "concept_id": "CID-66",
+    "hierarchy_id": "2",
+    "unspsc_code": "78170000",
+    "language": "el",
+    "term": "Υπηρεσίες εφοδιαστικής αλυσίδας και logistics",
+    "description": "Υπηρεσίες εφοδιαστικής αλυσίδας και logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-67",
+    "concept_id": "CID-67",
+    "hierarchy_id": "2.1",
+    "unspsc_code": "80100000",
+    "language": "el",
+    "term": "Σχεδιασμός και συμβουλευτική",
+    "description": "Σχεδιασμός και συμβουλευτική",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-68",
+    "concept_id": "CID-68",
+    "hierarchy_id": "2.1.1",
+    "unspsc_code": "80101704",
+    "language": "el",
+    "term": "Συμβουλευτική εφοδιαστικής αλυσίδας",
+    "description": "Συμβουλευτική εφοδιαστικής αλυσίδας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-69",
+    "concept_id": "CID-69",
+    "hierarchy_id": "2.1.2",
+    "unspsc_code": "80101704",
+    "language": "el",
+    "term": "Σχεδιασμός ζήτησης και αποθεμάτων",
+    "description": "Σχεδιασμός ζήτησης και αποθεμάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-70",
+    "concept_id": "CID-70",
+    "hierarchy_id": "2.1.3",
+    "unspsc_code": "80101704",
+    "language": "el",
+    "term": "Βελτιστοποίηση δικτύου",
+    "description": "Βελτιστοποίηση δικτύου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-71",
+    "concept_id": "CID-71",
+    "hierarchy_id": "2.2",
+    "unspsc_code": "78141500",
+    "language": "el",
+    "term": "Υπηρεσίες οργάνωσης μεταφορών",
+    "description": "Υπηρεσίες οργάνωσης μεταφορών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-72",
+    "concept_id": "CID-72",
+    "hierarchy_id": "2.2.1",
+    "unspsc_code": "78141501",
+    "language": "el",
+    "term": "Διαμεταφορά φορτίων",
+    "description": "Διαμεταφορά φορτίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-73",
+    "concept_id": "CID-73",
+    "hierarchy_id": "2.2.1.1",
+    "unspsc_code": "78141501",
+    "language": "el",
+    "term": "Ενοποίηση φορτίων",
+    "description": "Ενοποίηση φορτίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-74",
+    "concept_id": "CID-74",
+    "hierarchy_id": "2.2.2",
+    "unspsc_code": "78141500",
+    "language": "el",
+    "term": "Διασυνοριακή logistics",
+    "description": "Διασυνοριακή logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-75",
+    "concept_id": "CID-75",
+    "hierarchy_id": "2.2.3",
+    "unspsc_code": "78141510",
+    "language": "el",
+    "term": "Υπηρεσίες μεταφοράς φορτίου με ασφάλιση",
+    "description": "Υπηρεσίες μεταφοράς φορτίου με ασφάλιση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-76",
+    "concept_id": "CID-76",
+    "hierarchy_id": "2.3",
+    "unspsc_code": "78130000",
+    "language": "el",
+    "term": "Αποθήκευση και διανομή",
+    "description": "Αποθήκευση και διανομή",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-77",
+    "concept_id": "CID-77",
+    "hierarchy_id": "2.3.1",
+    "unspsc_code": "78131600",
+    "language": "el",
+    "term": "Δημόσια αποθήκευση",
+    "description": "Δημόσια αποθήκευση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-78",
+    "concept_id": "CID-78",
+    "hierarchy_id": "2.3.2",
+    "unspsc_code": "78131600",
+    "language": "el",
+    "term": "Συμβατική αποθήκευση",
+    "description": "Συμβατική αποθήκευση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-79",
+    "concept_id": "CID-79",
+    "hierarchy_id": "2.3.3",
+    "unspsc_code": "78131600",
+    "language": "el",
+    "term": "Διαχείριση κέντρων διανομής",
+    "description": "Διαχείριση κέντρων διανομής",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-80",
+    "concept_id": "CID-80",
+    "hierarchy_id": "2.3.4",
+    "unspsc_code": "78131801",
+    "language": "el",
+    "term": "Αποθήκευση ελεγχόμενης θερμοκρασίας",
+    "description": "Αποθήκευση ελεγχόμενης θερμοκρασίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-81",
+    "concept_id": "CID-81",
+    "hierarchy_id": "2.3.5",
+    "unspsc_code": "78131802",
+    "language": "el",
+    "term": "Τελωνειακή αποθήκευση",
+    "description": "Τελωνειακή αποθήκευση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-82",
+    "concept_id": "CID-82",
+    "hierarchy_id": "2.3.6",
+    "unspsc_code": "78131800",
+    "language": "el",
+    "term": "Κέντρα fulfillment ηλεκτρονικού εμπορίου",
+    "description": "Κέντρα fulfillment ηλεκτρονικού εμπορίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-83",
+    "concept_id": "CID-83",
+    "hierarchy_id": "2.3.7",
+    "unspsc_code": "80161602",
+    "language": "el",
+    "term": "Διαχείριση αποθεμάτων",
+    "description": "Διαχείριση αποθεμάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-84",
+    "concept_id": "CID-84",
+    "hierarchy_id": "2.3.8",
+    "unspsc_code": "78121601",
+    "language": "el",
+    "term": "Cross-docking",
+    "description": "Cross-docking",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-85",
+    "concept_id": "CID-85",
+    "hierarchy_id": "2.3.9",
+    "unspsc_code": "78131700",
+    "language": "el",
+    "term": "Αποθήκευση χύδην φορτίου",
+    "description": "Αποθήκευση χύδην φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-86",
+    "concept_id": "CID-86",
+    "hierarchy_id": "2.4",
+    "unspsc_code": "78121600",
+    "language": "el",
+    "term": "Λογιστικές υπηρεσίες προστιθέμενης αξίας",
+    "description": "Λογιστικές υπηρεσίες προστιθέμενης αξίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-87",
+    "concept_id": "CID-87",
+    "hierarchy_id": "2.4.1",
+    "unspsc_code": "78121600",
+    "language": "el",
+    "term": "Συλλογή και συσκευασία παραγγελιών",
+    "description": "Συλλογή και συσκευασία παραγγελιών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-88",
+    "concept_id": "CID-88",
+    "hierarchy_id": "2.4.2",
+    "unspsc_code": "78121600",
+    "language": "el",
+    "term": "Ετικετοποίηση και τιμολόγηση",
+    "description": "Ετικετοποίηση και τιμολόγηση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-89",
+    "concept_id": "CID-89",
+    "hierarchy_id": "2.4.3",
+    "unspsc_code": "78121600",
+    "language": "el",
+    "term": "Kitting",
+    "description": "Kitting",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-90",
+    "concept_id": "CID-90",
+    "hierarchy_id": "2.4.4",
+    "unspsc_code": "78121600",
+    "language": "el",
+    "term": "Σειριοποίηση",
+    "description": "Σειριοποίηση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-91",
+    "concept_id": "CID-91",
+    "hierarchy_id": "2.4.5",
+    "unspsc_code": "78121500",
+    "language": "el",
+    "term": "Υπηρεσίες συσκευασίας",
+    "description": "Υπηρεσίες συσκευασίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-92",
+    "concept_id": "CID-92",
+    "hierarchy_id": "2.4.6",
+    "unspsc_code": "78121600",
+    "language": "el",
+    "term": "Υπηρεσίες διακίνησης υλικών",
+    "description": "Υπηρεσίες διακίνησης υλικών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-93",
+    "concept_id": "CID-93",
+    "hierarchy_id": "2.5",
+    "unspsc_code": "78141500",
+    "language": "el",
+    "term": "Τελωνειακή εκπροσώπηση και συμμόρφωση εμπορίου",
+    "description": "Τελωνειακή εκπροσώπηση και συμμόρφωση εμπορίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-94",
+    "concept_id": "CID-94",
+    "hierarchy_id": "2.5.1",
+    "unspsc_code": "78141502",
+    "language": "el",
+    "term": "Τελωνειακή διαμεσολάβηση",
+    "description": "Τελωνειακή διαμεσολάβηση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-95",
+    "concept_id": "CID-95",
+    "hierarchy_id": "2.5.2",
+    "unspsc_code": "80101514",
+    "language": "el",
+    "term": "Συμμόρφωση εξωτερικού εμπορίου",
+    "description": "Συμμόρφωση εξωτερικού εμπορίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-96",
+    "concept_id": "CID-96",
+    "hierarchy_id": "2.5.3",
+    "unspsc_code": "78141500",
+    "language": "el",
+    "term": "Τεκμηρίωση εισαγωγών/εξαγωγών",
+    "description": "Τεκμηρίωση εισαγωγών/εξαγωγών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-97",
+    "concept_id": "CID-97",
+    "hierarchy_id": "2.6",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Μοντέλα παρόχων logistics",
+    "description": "Μοντέλα παρόχων logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-98",
+    "concept_id": "CID-98",
+    "hierarchy_id": "2.6.1",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Third-Party Logistics - 3PL",
+    "description": "Third-Party Logistics - 3PL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-99",
+    "concept_id": "CID-99",
+    "hierarchy_id": "2.6.2",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Fourth-Party Logistics - 4PL",
+    "description": "Fourth-Party Logistics - 4PL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-100",
+    "concept_id": "CID-100",
+    "hierarchy_id": "2.7",
+    "unspsc_code": "78141600",
+    "language": "el",
+    "term": "Υπηρεσίες επιθεώρησης και survey",
+    "description": "Υπηρεσίες επιθεώρησης και survey",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-101",
+    "concept_id": "CID-101",
+    "hierarchy_id": "2.7.1",
+    "unspsc_code": "78141601",
+    "language": "el",
+    "term": "Υπηρεσίες επιθεώρησης συσκευασίας",
+    "description": "Υπηρεσίες επιθεώρησης συσκευασίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-102",
+    "concept_id": "CID-102",
+    "hierarchy_id": "2.7.2",
+    "unspsc_code": "78141602",
+    "language": "el",
+    "term": "Υπηρεσίες survey φορτίου",
+    "description": "Υπηρεσίες survey φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-103",
+    "concept_id": "CID-103",
+    "hierarchy_id": "2.7.3",
+    "unspsc_code": "78141603",
+    "language": "el",
+    "term": "Επιθεωρήσεις ελέγχου παρασίτων",
+    "description": "Επιθεωρήσεις ελέγχου παρασίτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-104",
+    "concept_id": "CID-104",
+    "hierarchy_id": "3",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Εξειδικευμένη logistics",
+    "description": "Εξειδικευμένη logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-105",
+    "concept_id": "CID-105",
+    "hierarchy_id": "3.1",
+    "unspsc_code": "78131800",
+    "language": "el",
+    "term": "Ελεγχόμενη θερμοκρασιακά logistics",
+    "description": "Ελεγχόμενη θερμοκρασιακά logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-106",
+    "concept_id": "CID-106",
+    "hierarchy_id": "3.1.1",
+    "unspsc_code": "78131801",
+    "language": "el",
+    "term": "Logistics ψυχρής αλυσίδας",
+    "description": "Logistics ψυχρής αλυσίδας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-107",
+    "concept_id": "CID-107",
+    "hierarchy_id": "3.1.2",
+    "unspsc_code": "78131801",
+    "language": "el",
+    "term": "Φαρμακευτική logistics",
+    "description": "Φαρμακευτική logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-108",
+    "concept_id": "CID-108",
+    "hierarchy_id": "3.1.3",
+    "unspsc_code": "78131801",
+    "language": "el",
+    "term": "Logistics ευπαθών προϊόντων",
+    "description": "Logistics ευπαθών προϊόντων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-109",
+    "concept_id": "CID-109",
+    "hierarchy_id": "3.2",
+    "unspsc_code": "78141500",
+    "language": "el",
+    "term": "Logistics βαρέων φορτίων και έργων",
+    "description": "Logistics βαρέων φορτίων και έργων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-110",
+    "concept_id": "CID-110",
+    "hierarchy_id": "3.2.1",
+    "unspsc_code": "78141500",
+    "language": "el",
+    "term": "Logistics ενεργειακού τομέα",
+    "description": "Logistics ενεργειακού τομέα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-111",
+    "concept_id": "CID-111",
+    "hierarchy_id": "3.2.2",
+    "unspsc_code": "78141500",
+    "language": "el",
+    "term": "Logistics κατασκευών",
+    "description": "Logistics κατασκευών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-112",
+    "concept_id": "CID-112",
+    "hierarchy_id": "3.3",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Κλαδική logistics",
+    "description": "Κλαδική logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-113",
+    "concept_id": "CID-113",
+    "hierarchy_id": "3.3.1",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Αυτοκινητοβιομηχανική logistics",
+    "description": "Αυτοκινητοβιομηχανική logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-114",
+    "concept_id": "CID-114",
+    "hierarchy_id": "3.3.1.1",
+    "unspsc_code": "78131807",
+    "language": "el",
+    "term": "Logistics ανταλλακτικών",
+    "description": "Logistics ανταλλακτικών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-115",
+    "concept_id": "CID-115",
+    "hierarchy_id": "3.3.1.2",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Logistics έτοιμων οχημάτων",
+    "description": "Logistics έτοιμων οχημάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-116",
+    "concept_id": "CID-116",
+    "hierarchy_id": "3.3.2",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Λιανική logistics",
+    "description": "Λιανική logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-117",
+    "concept_id": "CID-117",
+    "hierarchy_id": "3.3.2.1",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Fast-fashion logistics",
+    "description": "Fast-fashion logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-118",
+    "concept_id": "CID-118",
+    "hierarchy_id": "3.3.3",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Αεροδιαστημική και αμυντική logistics",
+    "description": "Αεροδιαστημική και αμυντική logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-119",
+    "concept_id": "CID-119",
+    "hierarchy_id": "3.3.4",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "High-tech και ηλεκτρονική logistics",
+    "description": "High-tech και ηλεκτρονική logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-120",
+    "concept_id": "CID-120",
+    "hierarchy_id": "3.3.5",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Χημική logistics",
+    "description": "Χημική logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-121",
+    "concept_id": "CID-121",
+    "hierarchy_id": "3.3.6",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Πετρελαϊκή και αερίου logistics",
+    "description": "Πετρελαϊκή και αερίου logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-122",
+    "concept_id": "CID-122",
+    "hierarchy_id": "3.4",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Άλλες εξειδικευμένες logistics υπηρεσίες",
+    "description": "Άλλες εξειδικευμένες logistics υπηρεσίες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-123",
+    "concept_id": "CID-123",
+    "hierarchy_id": "3.4.1",
+    "unspsc_code": "78131803",
+    "language": "el",
+    "term": "Logistics επικίνδυνων εμπορευμάτων",
+    "description": "Logistics επικίνδυνων εμπορευμάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-124",
+    "concept_id": "CID-124",
+    "hierarchy_id": "3.4.2",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Logistics ζώντων ζώων",
+    "description": "Logistics ζώντων ζώων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-125",
+    "concept_id": "CID-125",
+    "hierarchy_id": "3.4.3",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Ασφαλής logistics υψηλής αξίας",
+    "description": "Ασφαλής logistics υψηλής αξίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-126",
+    "concept_id": "CID-126",
+    "hierarchy_id": "3.4.4",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Logistics τέχνης και εκθέσεων",
+    "description": "Logistics τέχνης και εκθέσεων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-127",
+    "concept_id": "CID-127",
+    "hierarchy_id": "3.4.5",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Αστική logistics",
+    "description": "Αστική logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-128",
+    "concept_id": "CID-128",
+    "hierarchy_id": "3.4.6",
+    "unspsc_code": "80161700",
+    "language": "el",
+    "term": "Αντίστροφη logistics",
+    "description": "Αντίστροφη logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-129",
+    "concept_id": "CID-129",
+    "hierarchy_id": "3.4.6.1",
+    "unspsc_code": "80161700",
+    "language": "el",
+    "term": "Διαχείριση επιστροφών",
+    "description": "Διαχείριση επιστροφών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-130",
+    "concept_id": "CID-130",
+    "hierarchy_id": "3.4.6.2",
+    "unspsc_code": "80161700",
+    "language": "el",
+    "term": "Επισκευή και ανακατασκευή",
+    "description": "Επισκευή και ανακατασκευή",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-131",
+    "concept_id": "CID-131",
+    "hierarchy_id": "3.4.6.3",
+    "unspsc_code": "80161703",
+    "language": "el",
+    "term": "Ανακύκλωση και ανάκτηση υλικών",
+    "description": "Ανακύκλωση και ανάκτηση υλικών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-132",
+    "concept_id": "CID-132",
+    "hierarchy_id": "4",
+    "unspsc_code": "78000000",
+    "language": "el",
+    "term": "Υποδομές και εξοπλισμός logistics",
+    "description": "Υποδομές και εξοπλισμός logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-133",
+    "concept_id": "CID-133",
+    "hierarchy_id": "4.1",
+    "unspsc_code": "78141800",
+    "language": "el",
+    "term": "Τερματικοί σταθμοί και λιμάνια",
+    "description": "Τερματικοί σταθμοί και λιμάνια",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-134",
+    "concept_id": "CID-134",
+    "hierarchy_id": "4.1.1",
+    "unspsc_code": "78141800",
+    "language": "el",
+    "term": "Λιμενικές λειτουργίες",
+    "description": "Λιμενικές λειτουργίες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-135",
+    "concept_id": "CID-135",
+    "hierarchy_id": "4.1.2",
+    "unspsc_code": "78141800",
+    "language": "el",
+    "term": "Λειτουργίες εσωτερικού λιμένα",
+    "description": "Λειτουργίες εσωτερικού λιμένα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-136",
+    "concept_id": "CID-136",
+    "hierarchy_id": "4.1.3",
+    "unspsc_code": "78141804",
+    "language": "el",
+    "term": "Σιδηροδρομικοί τερματικοί εμπορευμάτων",
+    "description": "Σιδηροδρομικοί τερματικοί εμπορευμάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-137",
+    "concept_id": "CID-137",
+    "hierarchy_id": "4.1.4",
+    "unspsc_code": "78141805",
+    "language": "el",
+    "term": "Τερματικοί αεροπορικού φορτίου",
+    "description": "Τερματικοί αεροπορικού φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-138",
+    "concept_id": "CID-138",
+    "hierarchy_id": "4.1.5",
+    "unspsc_code": "78141806",
+    "language": "el",
+    "term": "Υπηρεσίες χερσαίας βάσης υποστήριξης offshore",
+    "description": "Υπηρεσίες χερσαίας βάσης υποστήριξης offshore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-139",
+    "concept_id": "CID-139",
+    "hierarchy_id": "4.1.6",
+    "unspsc_code": "78141807",
+    "language": "el",
+    "term": "Υπηρεσίες ελέγχου εναέριας κυκλοφορίας",
+    "description": "Υπηρεσίες ελέγχου εναέριας κυκλοφορίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-140",
+    "concept_id": "CID-140",
+    "hierarchy_id": "4.2",
+    "unspsc_code": "80131500",
+    "language": "el",
+    "term": "Ακίνητα logistics",
+    "description": "Ακίνητα logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-141",
+    "concept_id": "CID-141",
+    "hierarchy_id": "4.2.1",
+    "unspsc_code": "80131502",
+    "language": "el",
+    "term": "Πάρκα logistics και ελεύθερες ζώνες",
+    "description": "Πάρκα logistics και ελεύθερες ζώνες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-142",
+    "concept_id": "CID-142",
+    "hierarchy_id": "4.3",
+    "unspsc_code": "24000000",
+    "language": "el",
+    "term": "Εξοπλισμός logistics",
+    "description": "Εξοπλισμός logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-143",
+    "concept_id": "CID-143",
+    "hierarchy_id": "4.3.1",
+    "unspsc_code": "24112800",
+    "language": "el",
+    "term": "Εμπορευματοκιβώτια φορτίου",
+    "description": "Εμπορευματοκιβώτια φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-144",
+    "concept_id": "CID-144",
+    "hierarchy_id": "4.3.2",
+    "unspsc_code": "25181701",
+    "language": "el",
+    "term": "Σασί εμπορευματοκιβωτίων",
+    "description": "Σασί εμπορευματοκιβωτίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-145",
+    "concept_id": "CID-145",
+    "hierarchy_id": "4.3.3",
+    "unspsc_code": "24101600",
+    "language": "el",
+    "term": "Περονοφόρα",
+    "description": "Περονοφόρα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-146",
+    "concept_id": "CID-146",
+    "hierarchy_id": "4.3.4",
+    "unspsc_code": "24102100",
+    "language": "el",
+    "term": "Εξοπλισμός αποθήκης",
+    "description": "Εξοπλισμός αποθήκης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-147",
+    "concept_id": "CID-147",
+    "hierarchy_id": "4.4",
+    "unspsc_code": "78140000",
+    "language": "el",
+    "term": "Ενοικίαση και leasing logistics assets",
+    "description": "Ενοικίαση και leasing logistics assets",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-148",
+    "concept_id": "CID-148",
+    "hierarchy_id": "4.4.1",
+    "unspsc_code": "78141900",
+    "language": "el",
+    "term": "Υπηρεσίες ενοικίασης μεταφορικών εμπορευματοκιβωτίων",
+    "description": "Υπηρεσίες ενοικίασης μεταφορικών εμπορευματοκιβωτίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-149",
+    "concept_id": "CID-149",
+    "hierarchy_id": "4.4.1.1",
+    "unspsc_code": "78141903",
+    "language": "el",
+    "term": "Υπηρεσία ενοικίασης intermodal cargo container",
+    "description": "Υπηρεσία ενοικίασης intermodal cargo container",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-150",
+    "concept_id": "CID-150",
+    "hierarchy_id": "4.4.2",
+    "unspsc_code": "78142000",
+    "language": "el",
+    "term": "Υπηρεσίες ενοικίασης ή leasing μεταφορικών μέσων",
+    "description": "Υπηρεσίες ενοικίασης ή leasing μεταφορικών μέσων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-151",
+    "concept_id": "CID-151",
+    "hierarchy_id": "4.4.2.1",
+    "unspsc_code": "78142001",
+    "language": "el",
+    "term": "Ενοικίαση φορτηγού αεροσκάφους με χειριστή",
+    "description": "Ενοικίαση φορτηγού αεροσκάφους με χειριστή",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-152",
+    "concept_id": "CID-152",
+    "hierarchy_id": "4.4.2.2",
+    "unspsc_code": "78142002",
+    "language": "el",
+    "term": "Ενοικίαση φορτηγού πλοίου εσωτερικών υδάτων με χειριστή",
+    "description": "Ενοικίαση φορτηγού πλοίου εσωτερικών υδάτων με χειριστή",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-153",
+    "concept_id": "CID-153",
+    "hierarchy_id": "4.4.2.3",
+    "unspsc_code": "78142003",
+    "language": "el",
+    "term": "Ενοικίαση φορτηγού πλοίου παράκτιας και υπερωκεάνιας μεταφοράς με χειριστή",
+    "description": "Ενοικίαση φορτηγού πλοίου παράκτιας και υπερωκεάνιας μεταφοράς με χειριστή",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-154",
+    "concept_id": "CID-154",
+    "hierarchy_id": "4.4.2.4",
+    "unspsc_code": "78142004",
+    "language": "el",
+    "term": "Ενοικίαση φορτηγού με χειριστή",
+    "description": "Ενοικίαση φορτηγού με χειριστή",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-155",
+    "concept_id": "CID-155",
+    "hierarchy_id": "5",
+    "unspsc_code": "43000000",
+    "language": "el",
+    "term": "Τεχνολογία logistics και ψηφιοποίηση",
+    "description": "Τεχνολογία logistics και ψηφιοποίηση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-156",
+    "concept_id": "CID-156",
+    "hierarchy_id": "5.1",
+    "unspsc_code": "43230000",
+    "language": "el",
+    "term": "λογισμικό logistics",
+    "description": "λογισμικό logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-157",
+    "concept_id": "CID-157",
+    "hierarchy_id": "5.1.1",
+    "unspsc_code": "43231506",
+    "language": "el",
+    "term": "Σύστημα διαχείρισης μεταφορών - TMS",
+    "description": "Σύστημα διαχείρισης μεταφορών - TMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-158",
+    "concept_id": "CID-158",
+    "hierarchy_id": "5.1.2",
+    "unspsc_code": "43231508",
+    "language": "el",
+    "term": "Σύστημα διαχείρισης αποθήκης - WMS",
+    "description": "Σύστημα διαχείρισης αποθήκης - WMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-159",
+    "concept_id": "CID-159",
+    "hierarchy_id": "5.1.3",
+    "unspsc_code": "43231506",
+    "language": "el",
+    "term": "Λογισμικό διαχείρισης εφοδιαστικής αλυσίδας",
+    "description": "Λογισμικό διαχείρισης εφοδιαστικής αλυσίδας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-160",
+    "concept_id": "CID-160",
+    "hierarchy_id": "5.1.4",
+    "unspsc_code": "43232504",
+    "language": "el",
+    "term": "Λογισμικό σχεδιασμού δρομολογίων και διαχείρισης στόλου",
+    "description": "Λογισμικό σχεδιασμού δρομολογίων και διαχείρισης στόλου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-161",
+    "concept_id": "CID-161",
+    "hierarchy_id": "5.1.5",
+    "unspsc_code": "43231515",
+    "language": "el",
+    "term": "Συστήματα track and trace",
+    "description": "Συστήματα track and trace",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-162",
+    "concept_id": "CID-162",
+    "hierarchy_id": "5.1.6",
+    "unspsc_code": "43232603",
+    "language": "el",
+    "term": "Σύστημα διαχείρισης αυλής - YMS",
+    "description": "Σύστημα διαχείρισης αυλής - YMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-163",
+    "concept_id": "CID-163",
+    "hierarchy_id": "5.2",
+    "unspsc_code": "43230000",
+    "language": "el",
+    "term": "Ψηφιακές πλατφόρμες και ολοκλήρωση",
+    "description": "Ψηφιακές πλατφόρμες και ολοκλήρωση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-164",
+    "concept_id": "CID-164",
+    "hierarchy_id": "5.2.1",
+    "unspsc_code": "43233513",
+    "language": "el",
+    "term": "Ψηφιακές πλατφόρμες φορτίου",
+    "description": "Ψηφιακές πλατφόρμες φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-165",
+    "concept_id": "CID-165",
+    "hierarchy_id": "5.2.2",
+    "unspsc_code": "43232403",
+    "language": "el",
+    "term": "Λύσεις API και ενοποίησης logistics",
+    "description": "Λύσεις API και ενοποίησης logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-166",
+    "concept_id": "CID-166",
+    "hierarchy_id": "5.3",
+    "unspsc_code": "43000000",
+    "language": "el",
+    "term": "Αναδυόμενες τεχνολογίες",
+    "description": "Αναδυόμενες τεχνολογίες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-167",
+    "concept_id": "CID-167",
+    "hierarchy_id": "5.3.1",
+    "unspsc_code": "43232314",
+    "language": "el",
+    "term": "Τεχνητή νοημοσύνη και ανάλυση δεδομένων στη logistics",
+    "description": "Τεχνητή νοημοσύνη και ανάλυση δεδομένων στη logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-168",
+    "concept_id": "CID-168",
+    "hierarchy_id": "5.3.2",
+    "unspsc_code": "43233513",
+    "language": "el",
+    "term": "Blockchain στη logistics",
+    "description": "Blockchain στη logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-169",
+    "concept_id": "CID-169",
+    "hierarchy_id": "5.3.3",
+    "unspsc_code": "43000000",
+    "language": "el",
+    "term": "Αυτόνομα οχήματα στη logistics",
+    "description": "Αυτόνομα οχήματα στη logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-170",
+    "concept_id": "CID-170",
+    "hierarchy_id": "6",
+    "unspsc_code": "80000000",
+    "language": "el",
+    "term": "Υποστηρικτικές και επιχειρηματικές υπηρεσίες",
+    "description": "Υποστηρικτικές και επιχειρηματικές υπηρεσίες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-171",
+    "concept_id": "CID-171",
+    "hierarchy_id": "6.1",
+    "unspsc_code": "80000000",
+    "language": "el",
+    "term": "Συμβουλευτική και εκπαίδευση",
+    "description": "Συμβουλευτική και εκπαίδευση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-172",
+    "concept_id": "CID-172",
+    "hierarchy_id": "6.1.1",
+    "unspsc_code": "80101704",
+    "language": "el",
+    "term": "Βελτίωση logistics διαδικασιών",
+    "description": "Βελτίωση logistics διαδικασιών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-173",
+    "concept_id": "CID-173",
+    "hierarchy_id": "6.1.2",
+    "unspsc_code": "86101704",
+    "language": "el",
+    "term": "Εκπαίδευση και πιστοποίηση logistics",
+    "description": "Εκπαίδευση και πιστοποίηση logistics",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-174",
+    "concept_id": "CID-174",
+    "hierarchy_id": "6.2",
+    "unspsc_code": "84000000",
+    "language": "el",
+    "term": "Χρηματοοικονομικές και ασφαλιστικές υπηρεσίες",
+    "description": "Χρηματοοικονομικές και ασφαλιστικές υπηρεσίες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-175",
+    "concept_id": "CID-175",
+    "hierarchy_id": "6.2.1",
+    "unspsc_code": "84131504",
+    "language": "el",
+    "term": "Ασφάλιση φορτίου",
+    "description": "Ασφάλιση φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-176",
+    "concept_id": "CID-176",
+    "hierarchy_id": "6.2.2",
+    "unspsc_code": "84131607",
+    "language": "el",
+    "term": "Ασφάλιση αστικής ευθύνης",
+    "description": "Ασφάλιση αστικής ευθύνης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-177",
+    "concept_id": "CID-177",
+    "hierarchy_id": "6.2.3",
+    "unspsc_code": "84131503",
+    "language": "el",
+    "term": "Ασφάλιση οχημάτων και στόλου",
+    "description": "Ασφάλιση οχημάτων και στόλου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-178",
+    "concept_id": "CID-178",
+    "hierarchy_id": "6.2.4",
+    "unspsc_code": "84121600",
+    "language": "el",
+    "term": "Χρηματοδότηση εμπορίου",
+    "description": "Χρηματοδότηση εμπορίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-179",
+    "concept_id": "CID-179",
+    "hierarchy_id": "6.2.5",
+    "unspsc_code": "84121600",
+    "language": "el",
+    "term": "Factoring",
+    "description": "Factoring",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-180",
+    "concept_id": "CID-180",
+    "hierarchy_id": "6.2.6",
+    "unspsc_code": "78141503",
+    "language": "el",
+    "term": "Πληρωμή και έλεγχος ναύλου",
+    "description": "Πληρωμή και έλεγχος ναύλου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-181",
+    "concept_id": "CID-181",
+    "hierarchy_id": "6.3",
+    "unspsc_code": "80120000",
+    "language": "el",
+    "term": "Νομικές υπηρεσίες",
+    "description": "Νομικές υπηρεσίες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-182",
+    "concept_id": "CID-182",
+    "hierarchy_id": "6.3.1",
+    "unspsc_code": "80121704",
+    "language": "el",
+    "term": "Δίκαιο συμβάσεων μεταφοράς",
+    "description": "Δίκαιο συμβάσεων μεταφοράς",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-183",
+    "concept_id": "CID-183",
+    "hierarchy_id": "6.3.2",
+    "unspsc_code": "80121601",
+    "language": "el",
+    "term": "Τελωνειακό και εξωτερικό εμπορικό δίκαιο",
+    "description": "Τελωνειακό και εξωτερικό εμπορικό δίκαιο",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-184",
+    "concept_id": "CID-184",
+    "hierarchy_id": "7",
+    "unspsc_code": "77100000",
+    "language": "el",
+    "term": "Βιωσιμότητα και πράσινη εφοδιαστική",
+    "description": "Βιωσιμότητα και πράσινη εφοδιαστική",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-185",
+    "concept_id": "CID-185",
+    "hierarchy_id": "7.1",
+    "unspsc_code": "77101500",
+    "language": "el",
+    "term": "Αξιολόγηση άνθρακα και εκπομπών",
+    "description": "Αξιολόγηση άνθρακα και εκπομπών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-186",
+    "concept_id": "CID-186",
+    "hierarchy_id": "7.1.1",
+    "unspsc_code": "77101503",
+    "language": "el",
+    "term": "Υπολογισμός ανθρακικού αποτυπώματος",
+    "description": "Υπολογισμός ανθρακικού αποτυπώματος",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-187",
+    "concept_id": "CID-187",
+    "hierarchy_id": "7.2",
+    "unspsc_code": "77101700",
+    "language": "el",
+    "term": "Πράσινες λύσεις",
+    "description": "Πράσινες λύσεις",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-188",
+    "concept_id": "CID-188",
+    "hierarchy_id": "7.2.1",
+    "unspsc_code": "77101704",
+    "language": "el",
+    "term": "Λύσεις βιώσιμων καυσίμων",
+    "description": "Λύσεις βιώσιμων καυσίμων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-189",
+    "concept_id": "CID-189",
+    "hierarchy_id": "7.2.2",
+    "unspsc_code": "77101705",
+    "language": "el",
+    "term": "Συμβουλευτική πράσινης εφοδιαστικής",
+    "description": "Συμβουλευτική πράσινης εφοδιαστικής",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-190",
+    "concept_id": "CID-190",
+    "hierarchy_id": "7.3",
+    "unspsc_code": "77101700",
+    "language": "el",
+    "term": "Βιώσιμη συσκευασία και μείωση αποβλήτων",
+    "description": "Βιώσιμη συσκευασία και μείωση αποβλήτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-191",
+    "concept_id": "CID-191",
+    "hierarchy_id": "7.3.1",
+    "unspsc_code": "77101704",
+    "language": "el",
+    "term": "Βελτιστοποίηση αποβλήτων και συσκευασίας",
+    "description": "Βελτιστοποίηση αποβλήτων και συσκευασίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-192",
+    "concept_id": "CID-192",
+    "hierarchy_id": "7.4",
+    "unspsc_code": "77101600",
+    "language": "el",
+    "term": "Περιβαλλοντικός σχεδιασμός και απανθρακοποίηση",
+    "description": "Περιβαλλοντικός σχεδιασμός και απανθρακοποίηση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-193",
+    "concept_id": "CID-193",
+    "hierarchy_id": "7.4.1",
+    "unspsc_code": "77101600",
+    "language": "el",
+    "term": "Οδικός χάρτης βιωσιμότητας και σχεδιασμός μετάβασης",
+    "description": "Οδικός χάρτης βιωσιμότητας και σχεδιασμός μετάβασης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-194",
+    "concept_id": "CID-194",
+    "hierarchy_id": "7.5",
+    "unspsc_code": "77101800",
+    "language": "el",
+    "term": "Περιβαλλοντικός έλεγχος",
+    "description": "Περιβαλλοντικός έλεγχος",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-195",
+    "concept_id": "CID-195",
+    "hierarchy_id": "7.5.1",
+    "unspsc_code": "77101800",
+    "language": "el",
+    "term": "Περιβαλλοντικός έλεγχος και ανασκόπηση συμμόρφωσης",
+    "description": "Περιβαλλοντικός έλεγχος και ανασκόπηση συμμόρφωσης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-196",
+    "concept_id": "CID-196",
+    "hierarchy_id": "7.6",
+    "unspsc_code": "77102000",
+    "language": "el",
+    "term": "Περιβαλλοντική αναφορά και δημοσιοποίηση",
+    "description": "Περιβαλλοντική αναφορά και δημοσιοποίηση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-197",
+    "concept_id": "CID-197",
+    "hierarchy_id": "7.6.1",
+    "unspsc_code": "77102000",
+    "language": "el",
+    "term": "Αναφορά εκπομπών / βιωσιμότητας",
+    "description": "Αναφορά εκπομπών / βιωσιμότητας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-198",
+    "concept_id": "CID-198",
+    "hierarchy_id": "8",
+    "unspsc_code": "78110000",
+    "language": "el",
+    "term": "Υπηρεσίες επιβατικών μεταφορών και κινητικότητας",
+    "description": "Υπηρεσίες επιβατικών μεταφορών και κινητικότητας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-199",
+    "concept_id": "CID-199",
+    "hierarchy_id": "8.1",
+    "unspsc_code": "78111500",
+    "language": "el",
+    "term": "Αεροπορική μεταφορά επιβατών",
+    "description": "Αεροπορική μεταφορά επιβατών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-200",
+    "concept_id": "CID-200",
+    "hierarchy_id": "8.1.1",
+    "unspsc_code": "78111501",
+    "language": "el",
+    "term": "Υπηρεσίες ελικοπτέρου",
+    "description": "Υπηρεσίες ελικοπτέρου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-201",
+    "concept_id": "CID-201",
+    "hierarchy_id": "8.1.2",
+    "unspsc_code": "78111502",
+    "language": "el",
+    "term": "Εμπορικά αεροπορικά ταξίδια",
+    "description": "Εμπορικά αεροπορικά ταξίδια",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-202",
+    "concept_id": "CID-202",
+    "hierarchy_id": "8.1.3",
+    "unspsc_code": "78111503",
+    "language": "el",
+    "term": "Ταξίδι με ναυλωμένο αεροσκάφος",
+    "description": "Ταξίδι με ναυλωμένο αεροσκάφος",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-203",
+    "concept_id": "CID-203",
+    "hierarchy_id": "8.1.4",
+    "unspsc_code": "78111504",
+    "language": "el",
+    "term": "Υπηρεσία εναέριας περιήγησης",
+    "description": "Υπηρεσία εναέριας περιήγησης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-204",
+    "concept_id": "CID-204",
+    "hierarchy_id": "8.1.5",
+    "unspsc_code": "78111505",
+    "language": "el",
+    "term": "Υπηρεσία ενοικίασης ή leasing επιβατικού αεροσκάφους",
+    "description": "Υπηρεσία ενοικίασης ή leasing επιβατικού αεροσκάφους",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-205",
+    "concept_id": "CID-205",
+    "hierarchy_id": "8.1.6",
+    "unspsc_code": "78111506",
+    "language": "el",
+    "term": "Ιατρική διακομιδή με αεροασθενοφόρο",
+    "description": "Ιατρική διακομιδή με αεροασθενοφόρο",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-206",
+    "concept_id": "CID-206",
+    "hierarchy_id": "8.2",
+    "unspsc_code": "78111600",
+    "language": "el",
+    "term": "Σιδηροδρομική μεταφορά επιβατών",
+    "description": "Σιδηροδρομική μεταφορά επιβατών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-207",
+    "concept_id": "CID-207",
+    "hierarchy_id": "8.2.1",
+    "unspsc_code": "78111601",
+    "language": "el",
+    "term": "Υπηρεσίες μεταφοράς με ελαφρύ σιδηρόδρομο",
+    "description": "Υπηρεσίες μεταφοράς με ελαφρύ σιδηρόδρομο",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-208",
+    "concept_id": "CID-208",
+    "hierarchy_id": "8.2.2",
+    "unspsc_code": "78111602",
+    "language": "el",
+    "term": "Μεταφορά με μετρό",
+    "description": "Μεταφορά με μετρό",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-209",
+    "concept_id": "CID-209",
+    "hierarchy_id": "8.2.3",
+    "unspsc_code": "78111603",
+    "language": "el",
+    "term": "Ηπειρωτικές / διηπειρωτικές σιδηροδρομικές υπηρεσίες",
+    "description": "Ηπειρωτικές / διηπειρωτικές σιδηροδρομικές υπηρεσίες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-210",
+    "concept_id": "CID-210",
+    "hierarchy_id": "8.3",
+    "unspsc_code": "78111700",
+    "language": "el",
+    "term": "Θαλάσσια μεταφορά επιβατών",
+    "description": "Θαλάσσια μεταφορά επιβατών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-211",
+    "concept_id": "CID-211",
+    "hierarchy_id": "8.3.1",
+    "unspsc_code": "78111701",
+    "language": "el",
+    "term": "Θαλάσσια ταξί",
+    "description": "Θαλάσσια ταξί",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-212",
+    "concept_id": "CID-212",
+    "hierarchy_id": "8.3.2",
+    "unspsc_code": "78111702",
+    "language": "el",
+    "term": "Κρουαζιέρες με διανυκτέρευση",
+    "description": "Κρουαζιέρες με διανυκτέρευση",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-213",
+    "concept_id": "CID-213",
+    "hierarchy_id": "8.3.3",
+    "unspsc_code": "78111703",
+    "language": "el",
+    "term": "Τουριστικές εκδρομές με σκάφος",
+    "description": "Τουριστικές εκδρομές με σκάφος",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-214",
+    "concept_id": "CID-214",
+    "hierarchy_id": "8.3.4",
+    "unspsc_code": "78111704",
+    "language": "el",
+    "term": "Υπηρεσία ενοικίασης ή leasing θαλάσσιων σκαφών",
+    "description": "Υπηρεσία ενοικίασης ή leasing θαλάσσιων σκαφών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-215",
+    "concept_id": "CID-215",
+    "hierarchy_id": "8.3.5",
+    "unspsc_code": "78111705",
+    "language": "el",
+    "term": "Υπηρεσία μεταφοράς προσωπικού σε offshore πλατφόρμες",
+    "description": "Υπηρεσία μεταφοράς προσωπικού σε offshore πλατφόρμες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-216",
+    "concept_id": "CID-216",
+    "hierarchy_id": "8.3.6",
+    "unspsc_code": "78111706",
+    "language": "el",
+    "term": "Παράκτιο και υπερωκεάνιο επιβατηγό πορθμείο",
+    "description": "Παράκτιο και υπερωκεάνιο επιβατηγό πορθμείο",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-217",
+    "concept_id": "CID-217",
+    "hierarchy_id": "8.3.7",
+    "unspsc_code": "78111707",
+    "language": "el",
+    "term": "Επιβατηγό πορθμείο εσωτερικών υδάτων",
+    "description": "Επιβατηγό πορθμείο εσωτερικών υδάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-218",
+    "concept_id": "CID-218",
+    "hierarchy_id": "8.4",
+    "unspsc_code": "78111800",
+    "language": "el",
+    "term": "Οδική μεταφορά επιβατών",
+    "description": "Οδική μεταφορά επιβατών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-219",
+    "concept_id": "CID-219",
+    "hierarchy_id": "8.4.1",
+    "unspsc_code": "78111802",
+    "language": "el",
+    "term": "Τακτικές λεωφορειακές υπηρεσίες",
+    "description": "Τακτικές λεωφορειακές υπηρεσίες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-220",
+    "concept_id": "CID-220",
+    "hierarchy_id": "8.4.2",
+    "unspsc_code": "78111803",
+    "language": "el",
+    "term": "Υπηρεσίες μισθωμένων λεωφορείων",
+    "description": "Υπηρεσίες μισθωμένων λεωφορείων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-221",
+    "concept_id": "CID-221",
+    "hierarchy_id": "8.4.3",
+    "unspsc_code": "78111804",
+    "language": "el",
+    "term": "Υπηρεσίες ταξί",
+    "description": "Υπηρεσίες ταξί",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-222",
+    "concept_id": "CID-222",
+    "hierarchy_id": "8.4.4",
+    "unspsc_code": "78111807",
+    "language": "el",
+    "term": "Τέλη στάθμευσης",
+    "description": "Τέλη στάθμευσης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-223",
+    "concept_id": "CID-223",
+    "hierarchy_id": "8.4.5",
+    "unspsc_code": "78111808",
+    "language": "el",
+    "term": "Ενοικίαση οχημάτων",
+    "description": "Ενοικίαση οχημάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-224",
+    "concept_id": "CID-224",
+    "hierarchy_id": "8.4.6",
+    "unspsc_code": "78111809",
+    "language": "el",
+    "term": "Leasing σεντάν / κουπέ / station wagon",
+    "description": "Leasing σεντάν / κουπέ / station wagon",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-225",
+    "concept_id": "CID-225",
+    "hierarchy_id": "8.4.7",
+    "unspsc_code": "78111810",
+    "language": "el",
+    "term": "Υπηρεσία λιμουζίνας ή executive car",
+    "description": "Υπηρεσία λιμουζίνας ή executive car",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-226",
+    "concept_id": "CID-226",
+    "hierarchy_id": "8.4.8",
+    "unspsc_code": "78111811",
+    "language": "el",
+    "term": "Leasing ελαφρών φορτηγών / SUV",
+    "description": "Leasing ελαφρών φορτηγών / SUV",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-227",
+    "concept_id": "CID-227",
+    "hierarchy_id": "8.4.9",
+    "unspsc_code": "78111812",
+    "language": "el",
+    "term": "Leasing επιβατικών van / minivan",
+    "description": "Leasing επιβατικών van / minivan",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-228",
+    "concept_id": "CID-228",
+    "hierarchy_id": "8.4.10",
+    "unspsc_code": "78111813",
+    "language": "el",
+    "term": "Υπηρεσία χερσαίας περιήγησης",
+    "description": "Υπηρεσία χερσαίας περιήγησης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-229",
+    "concept_id": "CID-229",
+    "hierarchy_id": "8.4.11",
+    "unspsc_code": "78111815",
+    "language": "el",
+    "term": "Ιατρική διακομιδή με ασθενοφόρο",
+    "description": "Ιατρική διακομιδή με ασθενοφόρο",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-230",
+    "concept_id": "CID-230",
+    "hierarchy_id": "8.5",
+    "unspsc_code": "78112000",
+    "language": "el",
+    "term": "Υπηρεσίες διατροπικής μεταφοράς επιβατών",
+    "description": "Υπηρεσίες διατροπικής μεταφοράς επιβατών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-231",
+    "concept_id": "CID-231",
+    "hierarchy_id": "8.5.1",
+    "unspsc_code": "78112001",
+    "language": "el",
+    "term": "Μικτή αστική και προαστιακή μεταφορά επιβατών",
+    "description": "Μικτή αστική και προαστιακή μεταφορά επιβατών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-232",
+    "concept_id": "CID-232",
+    "hierarchy_id": "8.6",
+    "unspsc_code": "78111900",
+    "language": "el",
+    "term": "Διαστημική μεταφορά επιβατών",
+    "description": "Διαστημική μεταφορά επιβατών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-233",
+    "concept_id": "CID-233",
+    "hierarchy_id": "9",
+    "unspsc_code": "25000000",
+    "language": "el",
+    "term": "Μεταφορικά περιουσιακά στοιχεία, οχήματα και σκάφη",
+    "description": "Μεταφορικά περιουσιακά στοιχεία, οχήματα και σκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-234",
+    "concept_id": "CID-234",
+    "hierarchy_id": "9.1",
+    "unspsc_code": "25100000",
+    "language": "el",
+    "term": "Μηχανοκίνητα οχήματα",
+    "description": "Μηχανοκίνητα οχήματα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-235",
+    "concept_id": "CID-235",
+    "hierarchy_id": "9.1.1",
+    "unspsc_code": "25101500",
+    "language": "el",
+    "term": "Επιβατικά μηχανοκίνητα οχήματα",
+    "description": "Επιβατικά μηχανοκίνητα οχήματα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-236",
+    "concept_id": "CID-236",
+    "hierarchy_id": "9.1.1.1",
+    "unspsc_code": "25101501",
+    "language": "el",
+    "term": "Μικρά λεωφορεία",
+    "description": "Μικρά λεωφορεία",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-237",
+    "concept_id": "CID-237",
+    "hierarchy_id": "9.1.1.2",
+    "unspsc_code": "25101502",
+    "language": "el",
+    "term": "Λεωφορεία",
+    "description": "Λεωφορεία",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-238",
+    "concept_id": "CID-238",
+    "hierarchy_id": "9.1.1.3",
+    "unspsc_code": "25101503",
+    "language": "el",
+    "term": "Αυτοκίνητα / επιβατικά αυτοκίνητα",
+    "description": "Αυτοκίνητα / επιβατικά αυτοκίνητα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-239",
+    "concept_id": "CID-239",
+    "hierarchy_id": "9.1.1.4",
+    "unspsc_code": "25101504",
+    "language": "el",
+    "term": "Οχήματα station wagon",
+    "description": "Οχήματα station wagon",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-240",
+    "concept_id": "CID-240",
+    "hierarchy_id": "9.1.1.5",
+    "unspsc_code": "25101505",
+    "language": "el",
+    "term": "Μίνι βαν ή βαν",
+    "description": "Μίνι βαν ή βαν",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-241",
+    "concept_id": "CID-241",
+    "hierarchy_id": "9.1.1.6",
+    "unspsc_code": "25101506",
+    "language": "el",
+    "term": "Λιμουζίνες",
+    "description": "Λιμουζίνες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-242",
+    "concept_id": "CID-242",
+    "hierarchy_id": "9.1.1.7",
+    "unspsc_code": "25101507",
+    "language": "el",
+    "term": "Ελαφρά φορτηγά ή SUV",
+    "description": "Ελαφρά φορτηγά ή SUV",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-243",
+    "concept_id": "CID-243",
+    "hierarchy_id": "9.1.1.8",
+    "unspsc_code": "25101509",
+    "language": "el",
+    "term": "Ηλεκτροκίνητα οχήματα",
+    "description": "Ηλεκτροκίνητα οχήματα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-244",
+    "concept_id": "CID-244",
+    "hierarchy_id": "9.1.1.9",
+    "unspsc_code": "25101510",
+    "language": "el",
+    "term": "Θωρακισμένα μηχανοκίνητα οχήματα",
+    "description": "Θωρακισμένα μηχανοκίνητα οχήματα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-245",
+    "concept_id": "CID-245",
+    "hierarchy_id": "9.1.2",
+    "unspsc_code": "25101800",
+    "language": "el",
+    "term": "Μηχανοκίνητα δίκυκλα",
+    "description": "Μηχανοκίνητα δίκυκλα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-246",
+    "concept_id": "CID-246",
+    "hierarchy_id": "9.1.2.1",
+    "unspsc_code": "25101801",
+    "language": "el",
+    "term": "Μοτοσικλέτες",
+    "description": "Μοτοσικλέτες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-247",
+    "concept_id": "CID-247",
+    "hierarchy_id": "9.1.2.2",
+    "unspsc_code": "25101802",
+    "language": "el",
+    "term": "Σκούτερ",
+    "description": "Σκούτερ",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-248",
+    "concept_id": "CID-248",
+    "hierarchy_id": "9.1.2.3",
+    "unspsc_code": "25101803",
+    "language": "el",
+    "term": "Μοτοποδήλατα",
+    "description": "Μοτοποδήλατα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-249",
+    "concept_id": "CID-249",
+    "hierarchy_id": "9.2",
+    "unspsc_code": "25110000",
+    "language": "el",
+    "term": "θαλάσσια σκάφη",
+    "description": "θαλάσσια σκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-250",
+    "concept_id": "CID-250",
+    "hierarchy_id": "9.2.1",
+    "unspsc_code": "25111500",
+    "language": "el",
+    "term": "Εμπορικά θαλάσσια σκάφη",
+    "description": "Εμπορικά θαλάσσια σκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-251",
+    "concept_id": "CID-251",
+    "hierarchy_id": "9.2.1.1",
+    "unspsc_code": "25111503",
+    "language": "el",
+    "term": "Πλοία φορτίου ή μεταφοράς εμπορευματοκιβωτίων",
+    "description": "Πλοία φορτίου ή μεταφοράς εμπορευματοκιβωτίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-252",
+    "concept_id": "CID-252",
+    "hierarchy_id": "9.2.1.2",
+    "unspsc_code": "25111505",
+    "language": "el",
+    "term": "Δεξαμενόπλοια",
+    "description": "Δεξαμενόπλοια",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-253",
+    "concept_id": "CID-253",
+    "hierarchy_id": "9.2.1.3",
+    "unspsc_code": "25111506",
+    "language": "el",
+    "term": "Ρυμουλκά",
+    "description": "Ρυμουλκά",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-254",
+    "concept_id": "CID-254",
+    "hierarchy_id": "9.2.1.4",
+    "unspsc_code": "25111507",
+    "language": "el",
+    "term": "Φορτηγίδες",
+    "description": "Φορτηγίδες",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-255",
+    "concept_id": "CID-255",
+    "hierarchy_id": "9.2.1.5",
+    "unspsc_code": "25111508",
+    "language": "el",
+    "term": "Επιβατηγά ή οχηματαγωγά πλοία",
+    "description": "Επιβατηγά ή οχηματαγωγά πλοία",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-256",
+    "concept_id": "CID-256",
+    "hierarchy_id": "9.2.1.6",
+    "unspsc_code": "25111509",
+    "language": "el",
+    "term": "Κρουαζιερόπλοια",
+    "description": "Κρουαζιερόπλοια",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-257",
+    "concept_id": "CID-257",
+    "hierarchy_id": "9.2.1.7",
+    "unspsc_code": "25111511",
+    "language": "el",
+    "term": "Σκάφη μεταφοράς πληρώματος πετρελαίου ή φυσικού αερίου",
+    "description": "Σκάφη μεταφοράς πληρώματος πετρελαίου ή φυσικού αερίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-258",
+    "concept_id": "CID-258",
+    "hierarchy_id": "9.2.1.8",
+    "unspsc_code": "25111512",
+    "language": "el",
+    "term": "Εργασιακά σκάφη πετρελαίου ή φυσικού αερίου",
+    "description": "Εργασιακά σκάφη πετρελαίου ή φυσικού αερίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-259",
+    "concept_id": "CID-259",
+    "hierarchy_id": "9.2.1.9",
+    "unspsc_code": "25111513",
+    "language": "el",
+    "term": "Σεισμικά σκάφη",
+    "description": "Σεισμικά σκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-260",
+    "concept_id": "CID-260",
+    "hierarchy_id": "9.2.1.10",
+    "unspsc_code": "25111514",
+    "language": "el",
+    "term": "Παγοθραυστικά",
+    "description": "Παγοθραυστικά",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-261",
+    "concept_id": "CID-261",
+    "hierarchy_id": "9.2.1.11",
+    "unspsc_code": "25111515",
+    "language": "el",
+    "term": "Πλοία μεταφοράς υγροποιημένου αερίου",
+    "description": "Πλοία μεταφοράς υγροποιημένου αερίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-262",
+    "concept_id": "CID-262",
+    "hierarchy_id": "9.2.1.12",
+    "unspsc_code": "25111522",
+    "language": "el",
+    "term": "Χημικά δεξαμενόπλοια",
+    "description": "Χημικά δεξαμενόπλοια",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-263",
+    "concept_id": "CID-263",
+    "hierarchy_id": "9.2.1.13",
+    "unspsc_code": "25111524",
+    "language": "el",
+    "term": "Φορτηγά πλοία χύδην φορτίου",
+    "description": "Φορτηγά πλοία χύδην φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-264",
+    "concept_id": "CID-264",
+    "hierarchy_id": "9.2.1.14",
+    "unspsc_code": "25111525",
+    "language": "el",
+    "term": "Πλοία μεταφοράς αυτοκινήτων / RoRo",
+    "description": "Πλοία μεταφοράς αυτοκινήτων / RoRo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-265",
+    "concept_id": "CID-265",
+    "hierarchy_id": "9.2.1.15",
+    "unspsc_code": "25111530",
+    "language": "el",
+    "term": "Πλοηγικά σκάφη",
+    "description": "Πλοηγικά σκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-266",
+    "concept_id": "CID-266",
+    "hierarchy_id": "9.2.1.16",
+    "unspsc_code": "25111534",
+    "language": "el",
+    "term": "Ερευνητικά σκάφη",
+    "description": "Ερευνητικά σκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-267",
+    "concept_id": "CID-267",
+    "hierarchy_id": "9.2.1.17",
+    "unspsc_code": "25111535",
+    "language": "el",
+    "term": "Πλοία πόντισης καλωδίων",
+    "description": "Πλοία πόντισης καλωδίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-268",
+    "concept_id": "CID-268",
+    "hierarchy_id": "9.2.2",
+    "unspsc_code": "25111800",
+    "language": "el",
+    "term": "Σκάφη αναψυχής",
+    "description": "Σκάφη αναψυχής",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-269",
+    "concept_id": "CID-269",
+    "hierarchy_id": "9.2.2.1",
+    "unspsc_code": "25111807",
+    "language": "el",
+    "term": "Ντίνγκι",
+    "description": "Ντίνγκι",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-270",
+    "concept_id": "CID-270",
+    "hierarchy_id": "9.2.2.2",
+    "unspsc_code": "25111808",
+    "language": "el",
+    "term": "Γιοτ",
+    "description": "Γιοτ",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-271",
+    "concept_id": "CID-271",
+    "hierarchy_id": "9.2.2.3",
+    "unspsc_code": "25111809",
+    "language": "el",
+    "term": "Σκίφ",
+    "description": "Σκίφ",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-272",
+    "concept_id": "CID-272",
+    "hierarchy_id": "9.3",
+    "unspsc_code": "25120000",
+    "language": "el",
+    "term": "Σιδηροδρομικά και τραμ μηχανήματα και εξοπλισμός",
+    "description": "Σιδηροδρομικά και τραμ μηχανήματα και εξοπλισμός",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-273",
+    "concept_id": "CID-273",
+    "hierarchy_id": "9.4",
+    "unspsc_code": "25130000",
+    "language": "el",
+    "term": "Αεροσκάφη",
+    "description": "Αεροσκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-274",
+    "concept_id": "CID-274",
+    "hierarchy_id": "9.4.1",
+    "unspsc_code": "25131500",
+    "language": "el",
+    "term": "Μηχανοκίνητα αεροσκάφη σταθερών πτερύγων",
+    "description": "Μηχανοκίνητα αεροσκάφη σταθερών πτερύγων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-275",
+    "concept_id": "CID-275",
+    "hierarchy_id": "9.4.1.1",
+    "unspsc_code": "25131501",
+    "language": "el",
+    "term": "Γεωργικά αεροσκάφη σταθερών πτερύγων",
+    "description": "Γεωργικά αεροσκάφη σταθερών πτερύγων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-276",
+    "concept_id": "CID-276",
+    "hierarchy_id": "9.4.1.2",
+    "unspsc_code": "25131502",
+    "language": "el",
+    "term": "Ελικοφόρα αεροσκάφη φορτίου",
+    "description": "Ελικοφόρα αεροσκάφη φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-277",
+    "concept_id": "CID-277",
+    "hierarchy_id": "9.4.1.3",
+    "unspsc_code": "25131503",
+    "language": "el",
+    "term": "Υδροπλάνα",
+    "description": "Υδροπλάνα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-278",
+    "concept_id": "CID-278",
+    "hierarchy_id": "9.4.1.4",
+    "unspsc_code": "25131504",
+    "language": "el",
+    "term": "Εμπορικά επιβατικά ελικοφόρα αεροσκάφη",
+    "description": "Εμπορικά επιβατικά ελικοφόρα αεροσκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-279",
+    "concept_id": "CID-279",
+    "hierarchy_id": "9.4.1.5",
+    "unspsc_code": "25131505",
+    "language": "el",
+    "term": "Αεριωθούμενα αεροσκάφη φορτίου",
+    "description": "Αεριωθούμενα αεροσκάφη φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-280",
+    "concept_id": "CID-280",
+    "hierarchy_id": "9.4.1.6",
+    "unspsc_code": "25131506",
+    "language": "el",
+    "term": "Εμπορικά επιβατικά αεριωθούμενα αεροσκάφη",
+    "description": "Εμπορικά επιβατικά αεριωθούμενα αεροσκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-281",
+    "concept_id": "CID-281",
+    "hierarchy_id": "9.4.1.7",
+    "unspsc_code": "25131507",
+    "language": "el",
+    "term": "Ιδιωτικά ή επιχειρηματικά ελικοφόρα αεροσκάφη",
+    "description": "Ιδιωτικά ή επιχειρηματικά ελικοφόρα αεροσκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-282",
+    "concept_id": "CID-282",
+    "hierarchy_id": "9.4.1.8",
+    "unspsc_code": "25131508",
+    "language": "el",
+    "term": "Ιδιωτικά ή επιχειρηματικά αεριωθούμενα αεροσκάφη",
+    "description": "Ιδιωτικά ή επιχειρηματικά αεριωθούμενα αεροσκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-283",
+    "concept_id": "CID-283",
+    "hierarchy_id": "9.4.1.9",
+    "unspsc_code": "25131513",
+    "language": "el",
+    "term": "Αεροσκάφη επιθεώρησης πτήσεων",
+    "description": "Αεροσκάφη επιθεώρησης πτήσεων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-284",
+    "concept_id": "CID-284",
+    "hierarchy_id": "9.4.2",
+    "unspsc_code": "25131600",
+    "language": "el",
+    "term": "Πολιτικά και εμπορικά αεροσκάφη περιστροφικών πτερύγων",
+    "description": "Πολιτικά και εμπορικά αεροσκάφη περιστροφικών πτερύγων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-285",
+    "concept_id": "CID-285",
+    "hierarchy_id": "9.4.2.1",
+    "unspsc_code": "25131601",
+    "language": "el",
+    "term": "Ελικόπτερα μεταφοράς επιβατών",
+    "description": "Ελικόπτερα μεταφοράς επιβατών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-286",
+    "concept_id": "CID-286",
+    "hierarchy_id": "9.4.2.2",
+    "unspsc_code": "25131602",
+    "language": "el",
+    "term": "Ελικόπτερα μεταφοράς φορτίου",
+    "description": "Ελικόπτερα μεταφοράς φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-287",
+    "concept_id": "CID-287",
+    "hierarchy_id": "9.4.2.3",
+    "unspsc_code": "25131604",
+    "language": "el",
+    "term": "Ιατρικά ή διασωστικά ελικόπτερα",
+    "description": "Ιατρικά ή διασωστικά ελικόπτερα",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-288",
+    "concept_id": "CID-288",
+    "hierarchy_id": "9.4.3",
+    "unspsc_code": "25131800",
+    "language": "el",
+    "term": "Ειδικά αεροσκάφη",
+    "description": "Ειδικά αεροσκάφη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-289",
+    "concept_id": "CID-289",
+    "hierarchy_id": "9.4.3.1",
+    "unspsc_code": "25131801",
+    "language": "el",
+    "term": "Αερόπλοια",
+    "description": "Αερόπλοια",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-290",
+    "concept_id": "CID-290",
+    "hierarchy_id": "9.4.3.2",
+    "unspsc_code": "25131802",
+    "language": "el",
+    "term": "Μοντέλα αεροσκαφών",
+    "description": "Μοντέλα αεροσκαφών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-291",
+    "concept_id": "CID-291",
+    "hierarchy_id": "9.4.4",
+    "unspsc_code": "25132000",
+    "language": "el",
+    "term": "Αεροσκάφη αναψυχής",
+    "description": "Αεροσκάφη αναψυχής",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-292",
+    "concept_id": "CID-292",
+    "hierarchy_id": "9.5",
+    "unspsc_code": "25150000",
+    "language": "el",
+    "term": "Διαστημόπλοια",
+    "description": "Διαστημόπλοια",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-293",
+    "concept_id": "CID-293",
+    "hierarchy_id": "9.6",
+    "unspsc_code": "25190000",
+    "language": "el",
+    "term": "Εξοπλισμός υπηρεσιών μεταφορών",
+    "description": "Εξοπλισμός υπηρεσιών μεταφορών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-294",
+    "concept_id": "CID-294",
+    "hierarchy_id": "10",
+    "unspsc_code": "",
+    "language": "el",
+    "term": "Επικάλυψη ναύλωσης / ενοικίασης / leasing",
+    "description": "Επικάλυψη ναύλωσης / ενοικίασης / leasing",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-295",
+    "concept_id": "CID-295",
+    "hierarchy_id": "10.1",
+    "unspsc_code": "",
+    "language": "el",
+    "term": "Επικάλυψη υπηρεσιών charter",
+    "description": "Επικάλυψη υπηρεσιών charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-296",
+    "concept_id": "CID-296",
+    "hierarchy_id": "10.1.1",
+    "unspsc_code": "",
+    "language": "el",
+    "term": "Ναύλωση φορτίου",
+    "description": "Ναύλωση φορτίου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-297",
+    "concept_id": "CID-297",
+    "hierarchy_id": "10.1.2",
+    "unspsc_code": "",
+    "language": "el",
+    "term": "Ναύλωση επιβατών",
+    "description": "Ναύλωση επιβατών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-298",
+    "concept_id": "CID-298",
+    "hierarchy_id": "10.1.3",
+    "unspsc_code": "",
+    "language": "el",
+    "term": "Ναύλωση ελικοπτέρου",
+    "description": "Ναύλωση ελικοπτέρου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-299",
+    "concept_id": "CID-299",
+    "hierarchy_id": "10.1.4",
+    "unspsc_code": "",
+    "language": "el",
+    "term": "Ναύλωση γιοτ / σκάφους",
+    "description": "Ναύλωση γιοτ / σκάφους",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-300",
+    "concept_id": "CID-300",
+    "hierarchy_id": "10.1.5",
+    "unspsc_code": "",
+    "language": "el",
+    "term": "Ναύλωση λεωφορείου",
+    "description": "Ναύλωση λεωφορείου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-301",
+    "concept_id": "CID-301",
+    "hierarchy_id": "10.1.6",
+    "unspsc_code": "",
+    "language": "el",
+    "term": "Ναύλωση λιμουζίνας / VIP",
+    "description": "Ναύλωση λιμουζίνας / VIP",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-302",
+    "concept_id": "CID-302",
+    "hierarchy_id": "10.2",
+    "unspsc_code": "",
+    "language": "el",
+    "term": "Επικάλυψη υπηρεσιών ενοικίασης",
+    "description": "Επικάλυψη υπηρεσιών ενοικίασης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-303",
+    "concept_id": "CID-303",
+    "hierarchy_id": "10.2.1",
+    "unspsc_code": "78141900",
+    "language": "el",
+    "term": "Ενοικίαση εμπορευματοκιβωτίων",
+    "description": "Ενοικίαση εμπορευματοκιβωτίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-304",
+    "concept_id": "CID-304",
+    "hierarchy_id": "10.2.2",
+    "unspsc_code": "78141903",
+    "language": "el",
+    "term": "Ενοικίαση διατροπικών εμπορευματοκιβωτίων",
+    "description": "Ενοικίαση διατροπικών εμπορευματοκιβωτίων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-305",
+    "concept_id": "CID-305",
+    "hierarchy_id": "10.2.3",
+    "unspsc_code": "78111808",
+    "language": "el",
+    "term": "Υπηρεσίες: Ενοικίαση οχημάτων",
+    "description": "Υπηρεσίες: Ενοικίαση οχημάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-306",
+    "concept_id": "CID-306",
+    "hierarchy_id": "10.2.4",
+    "unspsc_code": "78111704",
+    "language": "el",
+    "term": "Ενοικίαση θαλάσσιων σκαφών",
+    "description": "Ενοικίαση θαλάσσιων σκαφών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-307",
+    "concept_id": "CID-307",
+    "hierarchy_id": "10.2.5",
+    "unspsc_code": "78111505",
+    "language": "el",
+    "term": "Ενοικίαση ή leasing επιβατικών αεροσκαφών",
+    "description": "Ενοικίαση ή leasing επιβατικών αεροσκαφών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-308",
+    "concept_id": "CID-308",
+    "hierarchy_id": "10.2.6",
+    "unspsc_code": "78142001",
+    "language": "el",
+    "term": "Υπηρεσίες: Ενοικίαση φορτηγού αεροσκάφους με χειριστή",
+    "description": "Υπηρεσίες: Ενοικίαση φορτηγού αεροσκάφους με χειριστή",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-309",
+    "concept_id": "CID-309",
+    "hierarchy_id": "10.2.7",
+    "unspsc_code": "78142002",
+    "language": "el",
+    "term": "Ενοικίαση φορτηγού πλοίου με χειριστή",
+    "description": "Ενοικίαση φορτηγού πλοίου με χειριστή",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-310",
+    "concept_id": "CID-310",
+    "hierarchy_id": "10.2.8",
+    "unspsc_code": "78142003",
+    "language": "el",
+    "term": "Ενοικίαση παράκτιου / υπερωκεάνιου φορτηγού πλοίου με χειριστή",
+    "description": "Ενοικίαση παράκτιου / υπερωκεάνιου φορτηγού πλοίου με χειριστή",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-311",
+    "concept_id": "CID-311",
+    "hierarchy_id": "10.2.9",
+    "unspsc_code": "78142004",
+    "language": "el",
+    "term": "Υπηρεσίες: Ενοικίαση φορτηγού με χειριστή",
+    "description": "Υπηρεσίες: Ενοικίαση φορτηγού με χειριστή",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-312",
+    "concept_id": "CID-312",
+    "hierarchy_id": "10.3",
+    "unspsc_code": "",
+    "language": "el",
+    "term": "Επικάλυψη υπηρεσιών leasing",
+    "description": "Επικάλυψη υπηρεσιών leasing",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-313",
+    "concept_id": "CID-313",
+    "hierarchy_id": "10.3.1",
+    "unspsc_code": "78111809",
+    "language": "el",
+    "term": "Leasing sedan / coupe / station wagon",
+    "description": "Leasing sedan / coupe / station wagon",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-314",
+    "concept_id": "CID-314",
+    "hierarchy_id": "10.3.2",
+    "unspsc_code": "78111811",
+    "language": "el",
+    "term": "Υπηρεσίες leasing: Leasing ελαφρών φορτηγών / SUV",
+    "description": "Υπηρεσίες leasing: Leasing ελαφρών φορτηγών / SUV",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-315",
+    "concept_id": "CID-315",
+    "hierarchy_id": "10.3.3",
+    "unspsc_code": "78111812",
+    "language": "el",
+    "term": "Leasing επιβατικού van / minivan",
+    "description": "Leasing επιβατικού van / minivan",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-316",
+    "concept_id": "CID-316",
+    "hierarchy_id": "10.3.4",
+    "unspsc_code": "78142000",
+    "language": "el",
+    "term": "Leasing μεταφορικού μέσου",
+    "description": "Leasing μεταφορικού μέσου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-317",
+    "concept_id": "CID-317",
+    "hierarchy_id": "11",
+    "unspsc_code": "78180000",
+    "language": "el",
+    "term": "Επικάλυψη συντήρησης / ανεφοδιασμού / αποθήκευσης / υποστήριξης",
+    "description": "Επικάλυψη συντήρησης / ανεφοδιασμού / αποθήκευσης / υποστήριξης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-318",
+    "concept_id": "CID-318",
+    "hierarchy_id": "11.1",
+    "unspsc_code": "78181500",
+    "language": "el",
+    "term": "Συντήρηση και επισκευή οχημάτων",
+    "description": "Συντήρηση και επισκευή οχημάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-319",
+    "concept_id": "CID-319",
+    "hierarchy_id": "11.1.1",
+    "unspsc_code": "78181501",
+    "language": "el",
+    "term": "Υπηρεσία επισκευής αμαξώματος ή βαφής οχήματος",
+    "description": "Υπηρεσία επισκευής αμαξώματος ή βαφής οχήματος",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-320",
+    "concept_id": "CID-320",
+    "hierarchy_id": "11.1.2",
+    "unspsc_code": "78181505",
+    "language": "el",
+    "term": "Υπηρεσία επιθεώρησης οχήματος",
+    "description": "Υπηρεσία επιθεώρησης οχήματος",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-321",
+    "concept_id": "CID-321",
+    "hierarchy_id": "11.1.3",
+    "unspsc_code": "78181506",
+    "language": "el",
+    "term": "Υπηρεσία αντικατάστασης υαλοπινάκων οχήματος",
+    "description": "Υπηρεσία αντικατάστασης υαλοπινάκων οχήματος",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-322",
+    "concept_id": "CID-322",
+    "hierarchy_id": "11.1.4",
+    "unspsc_code": "78181507",
+    "language": "el",
+    "term": "Συντήρηση και επισκευή αυτοκινήτων και ελαφρών φορτηγών",
+    "description": "Συντήρηση και επισκευή αυτοκινήτων και ελαφρών φορτηγών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-323",
+    "concept_id": "CID-323",
+    "hierarchy_id": "11.1.5",
+    "unspsc_code": "78181508",
+    "language": "el",
+    "term": "Συντήρηση και επισκευή βαρέων φορτηγών",
+    "description": "Συντήρηση και επισκευή βαρέων φορτηγών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-324",
+    "concept_id": "CID-324",
+    "hierarchy_id": "11.1.6",
+    "unspsc_code": "78181509",
+    "language": "el",
+    "term": "Υπηρεσία επιθεώρησης και συντήρησης σιδηροδρομικών βαγονιών",
+    "description": "Υπηρεσία επιθεώρησης και συντήρησης σιδηροδρομικών βαγονιών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-325",
+    "concept_id": "CID-325",
+    "hierarchy_id": "11.2",
+    "unspsc_code": "78181600",
+    "language": "el",
+    "term": "Υπηρεσίες φανοποιίας και βαφής",
+    "description": "Υπηρεσίες φανοποιίας και βαφής",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-326",
+    "concept_id": "CID-326",
+    "hierarchy_id": "11.2.1",
+    "unspsc_code": "78181601",
+    "language": "el",
+    "term": "Υπηρεσία φανοποιίας",
+    "description": "Υπηρεσία φανοποιίας",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-327",
+    "concept_id": "CID-327",
+    "hierarchy_id": "11.3",
+    "unspsc_code": "78181700",
+    "language": "el",
+    "term": "Ανεφοδιασμός / αποθήκευση / λειτουργική υποστήριξη",
+    "description": "Ανεφοδιασμός / αποθήκευση / λειτουργική υποστήριξη",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-328",
+    "concept_id": "CID-328",
+    "hierarchy_id": "11.3.1",
+    "unspsc_code": "78181701",
+    "language": "el",
+    "term": "Υπηρεσία ανεφοδιασμού οχημάτων",
+    "description": "Υπηρεσία ανεφοδιασμού οχημάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-329",
+    "concept_id": "CID-329",
+    "hierarchy_id": "11.3.2",
+    "unspsc_code": "78181702",
+    "language": "el",
+    "term": "Υπηρεσία αποθήκευσης μεταφορικών λειτουργιών",
+    "description": "Υπηρεσία αποθήκευσης μεταφορικών λειτουργιών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-330",
+    "concept_id": "CID-330",
+    "hierarchy_id": "11.3.3",
+    "unspsc_code": "78181703",
+    "language": "el",
+    "term": "Υπηρεσία στάθμευσης οχημάτων",
+    "description": "Υπηρεσία στάθμευσης οχημάτων",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-331",
+    "concept_id": "CID-331",
+    "hierarchy_id": "11.3.4",
+    "unspsc_code": "78181704",
+    "language": "el",
+    "term": "Υπηρεσία κάρτας φόρτισης καυσίμου / προπληρωμένης κάρτας καυσίμου",
+    "description": "Υπηρεσία κάρτας φόρτισης καυσίμου / προπληρωμένης κάρτας καυσίμου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-332",
+    "concept_id": "CID-332",
+    "hierarchy_id": "11.4",
+    "unspsc_code": "78181800",
+    "language": "el",
+    "term": "Συντήρηση και επισκευή αεροσκαφών",
+    "description": "Συντήρηση και επισκευή αεροσκαφών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-333",
+    "concept_id": "CID-333",
+    "hierarchy_id": "11.5",
+    "unspsc_code": "78181900",
+    "language": "el",
+    "term": "Συντήρηση και επισκευή εξοπλισμού πλοήγησης",
+    "description": "Συντήρηση και επισκευή εξοπλισμού πλοήγησης",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-334",
+    "concept_id": "CID-334",
+    "hierarchy_id": "11.6",
+    "unspsc_code": "78182000",
+    "language": "el",
+    "term": "Συντήρηση και επισκευή πλοίων υδάτινων μεταφορών",
+    "description": "Συντήρηση και επισκευή πλοίων υδάτινων μεταφορών",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "el-335",
+    "concept_id": "CID-335",
+    "hierarchy_id": "11.7",
+    "unspsc_code": "80161505",
+    "language": "el",
+    "term": "Επικάλυψη υποστήριξης διαχείρισης στόλου",
+    "description": "Επικάλυψη υποστήριξης διαχείρισης στόλου",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  }
+]
