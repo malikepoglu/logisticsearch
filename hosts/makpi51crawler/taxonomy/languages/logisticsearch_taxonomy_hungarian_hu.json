@@ -1,1 +1,6032 @@
-[]
+[
+  {
+    "term_id": "hu-1",
+    "concept_id": "CID-1",
+    "hierarchy_id": "1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállítás és áruszállítás",
+    "description": "Szállítás és áruszállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-2",
+    "concept_id": "CID-2",
+    "hierarchy_id": "1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "teherautós szállítás",
+    "description": "közúti szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-3",
+    "concept_id": "CID-3",
+    "hierarchy_id": "1.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teljes kamionrakomány - FTL",
+    "description": "Teljes kamionrakomány - FTL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-4",
+    "concept_id": "CID-4",
+    "hierarchy_id": "1.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Részrakomány - LTL",
+    "description": "Részrakomány - LTL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-5",
+    "concept_id": "CID-5",
+    "hierarchy_id": "1.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Helyi disztribúció / városi teherfuvarozás",
+    "description": "Helyi disztribúció / városi teherfuvarozás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-6",
+    "concept_id": "CID-6",
+    "hierarchy_id": "1.1.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Dedikált szerződéses fuvarozás",
+    "description": "Dedikált szerződéses fuvarozás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-7",
+    "concept_id": "CID-7",
+    "hierarchy_id": "1.1.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Nemzetközi közúti áruszállítás",
+    "description": "Nemzetközi közúti áruszállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-8",
+    "concept_id": "CID-8",
+    "hierarchy_id": "1.1.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Közúti csomag- és last-mile szolgáltatások",
+    "description": "Közúti csomag- és last-mile szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-9",
+    "concept_id": "CID-9",
+    "hierarchy_id": "1.1.6.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Utolsó mérföldes kézbesítés",
+    "description": "Utolsó mérföldes kézbesítés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-10",
+    "concept_id": "CID-10",
+    "hierarchy_id": "1.1.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Lakossági költöztetés / költöztetési szolgáltatások",
+    "description": "Lakossági költöztetés / költöztetési szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-11",
+    "concept_id": "CID-11",
+    "hierarchy_id": "1.1.8",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Száraz ömlesztett áru közúti szállítása",
+    "description": "Száraz ömlesztett áru közúti szállítása",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-12",
+    "concept_id": "CID-12",
+    "hierarchy_id": "1.1.9",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Tartányos szállítás",
+    "description": "Tartányos szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-13",
+    "concept_id": "CID-13",
+    "hierarchy_id": "1.1.10",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Nehézfuvar / túlméretes rakomány",
+    "description": "Nehézfuvar / túlméretes rakomány",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-14",
+    "concept_id": "CID-14",
+    "hierarchy_id": "1.1.11",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Járműszállítási szolgáltatások",
+    "description": "Járműszállítási szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-15",
+    "concept_id": "CID-15",
+    "hierarchy_id": "1.1.12",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Élőállat-szállítás",
+    "description": "Élőállat-szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-16",
+    "concept_id": "CID-16",
+    "hierarchy_id": "1.1.13",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Veszélyes anyagok szállítása - Hazmat",
+    "description": "Veszélyes anyagok szállítása - Hazmat",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-17",
+    "concept_id": "CID-17",
+    "hierarchy_id": "1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "tengeri szállítás",
+    "description": "tengeri szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-18",
+    "concept_id": "CID-18",
+    "hierarchy_id": "1.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Konténeres szállítás",
+    "description": "Konténeres szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-19",
+    "concept_id": "CID-19",
+    "hierarchy_id": "1.2.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teljes konténerrakomány - FCL",
+    "description": "Teljes konténerrakomány - FCL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-20",
+    "concept_id": "CID-20",
+    "hierarchy_id": "1.2.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Részleges konténerrakomány - LCL",
+    "description": "Részleges konténerrakomány - LCL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-21",
+    "concept_id": "CID-21",
+    "hierarchy_id": "1.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Száraz ömlesztett áru tengeri szállítása",
+    "description": "Száraz ömlesztett áru tengeri szállítása",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-22",
+    "concept_id": "CID-22",
+    "hierarchy_id": "1.2.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Folyékony ömlesztett áru tengeri szállítása",
+    "description": "Folyékony ömlesztett áru tengeri szállítása",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-23",
+    "concept_id": "CID-23",
+    "hierarchy_id": "1.2.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Ro-Ro szállítás",
+    "description": "Ro-Ro szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-24",
+    "concept_id": "CID-24",
+    "hierarchy_id": "1.2.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Menetrend szerinti hajózás",
+    "description": "Menetrend szerinti hajózás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-25",
+    "concept_id": "CID-25",
+    "hierarchy_id": "1.2.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Tramp hajózás",
+    "description": "Tramp hajózás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-26",
+    "concept_id": "CID-26",
+    "hierarchy_id": "1.2.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Rövid távú tengeri szállítás - SSS",
+    "description": "Rövid távú tengeri szállítás - SSS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-27",
+    "concept_id": "CID-27",
+    "hierarchy_id": "1.2.8",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Offshore logisztika",
+    "description": "Offshore logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-28",
+    "concept_id": "CID-28",
+    "hierarchy_id": "1.2.9",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Navigációs és vontatási szolgáltatások",
+    "description": "Navigációs és vontatási szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-29",
+    "concept_id": "CID-29",
+    "hierarchy_id": "1.2.9.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vontatóhajó-szolgáltatások",
+    "description": "Vontatóhajó-szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-30",
+    "concept_id": "CID-30",
+    "hierarchy_id": "1.2.9.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Nyitható híd üzemeltetése",
+    "description": "Nyitható híd üzemeltetése",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-31",
+    "concept_id": "CID-31",
+    "hierarchy_id": "1.2.9.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Tengeri navigációs vagy kommunikációs szolgáltatások",
+    "description": "Tengeri navigációs vagy kommunikációs szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-32",
+    "concept_id": "CID-32",
+    "hierarchy_id": "1.2.9.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Dead man anchor szolgáltatás",
+    "description": "Dead man anchor szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-33",
+    "concept_id": "CID-33",
+    "hierarchy_id": "1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légi áruszállítás",
+    "description": "Légi áruszállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-34",
+    "concept_id": "CID-34",
+    "hierarchy_id": "1.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légi árufuvarozási szolgáltatások",
+    "description": "Légi árufuvarozási szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-35",
+    "concept_id": "CID-35",
+    "hierarchy_id": "1.3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Expressz légi árufuvarozás",
+    "description": "Expressz légi árufuvarozás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-36",
+    "concept_id": "CID-36",
+    "hierarchy_id": "1.3.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Háztól házig légi áru",
+    "description": "Háztól házig légi áru",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-37",
+    "concept_id": "CID-37",
+    "hierarchy_id": "1.3.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légi áru konszolidáció",
+    "description": "Légi áru konszolidáció",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-38",
+    "concept_id": "CID-38",
+    "hierarchy_id": "1.3.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légi áru charter szolgáltatások",
+    "description": "Légi áru charter szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-39",
+    "concept_id": "CID-39",
+    "hierarchy_id": "1.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vasúti árufuvarozás",
+    "description": "Vasúti árufuvarozás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-40",
+    "concept_id": "CID-40",
+    "hierarchy_id": "1.4.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vasúti kocsirakományos fuvarozás",
+    "description": "Vasúti kocsirakományos fuvarozás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-41",
+    "concept_id": "CID-41",
+    "hierarchy_id": "1.4.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Intermodális vasúti szállítás",
+    "description": "Intermodális vasúti szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-42",
+    "concept_id": "CID-42",
+    "hierarchy_id": "1.4.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Közút-vasút kombinált szállítás",
+    "description": "Közút-vasút kombinált szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-43",
+    "concept_id": "CID-43",
+    "hierarchy_id": "1.4.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Nagysebességű vasúti árufuvarozás",
+    "description": "Nagysebességű vasúti árufuvarozás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-44",
+    "concept_id": "CID-44",
+    "hierarchy_id": "1.4.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vasúti teherkocsi lízingszolgáltatások",
+    "description": "Vasúti teherkocsi lízingszolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-45",
+    "concept_id": "CID-45",
+    "hierarchy_id": "1.4.4.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vasúti teherkocsi bérlés",
+    "description": "Vasúti teherkocsi bérlés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-46",
+    "concept_id": "CID-46",
+    "hierarchy_id": "1.4.4.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vasúti tartálykocsi bérlés",
+    "description": "Vasúti tartálykocsi bérlés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-47",
+    "concept_id": "CID-47",
+    "hierarchy_id": "1.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Csővezetékes szállítás",
+    "description": "Csővezetékes szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-48",
+    "concept_id": "CID-48",
+    "hierarchy_id": "1.5.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kőolajtermékek csővezetéken történő szállítása",
+    "description": "Kőolajtermékek csővezetéken történő szállítása",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-49",
+    "concept_id": "CID-49",
+    "hierarchy_id": "1.5.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Víz szállítása csővezetéken",
+    "description": "Víz szállítása csővezetéken",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-50",
+    "concept_id": "CID-50",
+    "hierarchy_id": "1.5.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Földgáz szállítása csővezetéken",
+    "description": "Földgáz szállítása csővezetéken",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-51",
+    "concept_id": "CID-51",
+    "hierarchy_id": "1.5.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vegyi anyagok szállítása csővezetéken",
+    "description": "Vegyi anyagok szállítása csővezetéken",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-52",
+    "concept_id": "CID-52",
+    "hierarchy_id": "1.5.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Csővezeték inline vizsgálat",
+    "description": "Csővezeték inline vizsgálat",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-53",
+    "concept_id": "CID-53",
+    "hierarchy_id": "1.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Intermodális és kombinált áruszállítás",
+    "description": "Intermodális és kombinált áruszállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-54",
+    "concept_id": "CID-54",
+    "hierarchy_id": "1.6.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Konténeres intermodális szállítás",
+    "description": "Konténeres intermodális szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-55",
+    "concept_id": "CID-55",
+    "hierarchy_id": "1.6.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légi-tengeri szállítás",
+    "description": "Légi-tengeri szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-56",
+    "concept_id": "CID-56",
+    "hierarchy_id": "1.6.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Tengeri-vasúti szállítás",
+    "description": "Tengeri-vasúti szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-57",
+    "concept_id": "CID-57",
+    "hierarchy_id": "1.6.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Tengeri-közúti szállítás",
+    "description": "Tengeri-közúti szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-58",
+    "concept_id": "CID-58",
+    "hierarchy_id": "1.6.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légi-közúti szállítás",
+    "description": "Légi-közúti szállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-59",
+    "concept_id": "CID-59",
+    "hierarchy_id": "1.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Futár- / postai szolgáltatások",
+    "description": "Futár- / postai szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-60",
+    "concept_id": "CID-60",
+    "hierarchy_id": "1.7.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Nemzeti postai kézbesítési szolgáltatások",
+    "description": "Nemzeti postai kézbesítési szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-61",
+    "concept_id": "CID-61",
+    "hierarchy_id": "1.7.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Postafiók-szolgáltatások",
+    "description": "Postafiók-szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-62",
+    "concept_id": "CID-62",
+    "hierarchy_id": "1.7.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Postai feladás / begyűjtés / kézbesítési szolgáltatások",
+    "description": "Postai feladás / begyűjtés / kézbesítési szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-63",
+    "concept_id": "CID-63",
+    "hierarchy_id": "1.7.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Levelek vagy kiscsomagok világméretű kézbesítési szolgáltatásai",
+    "description": "Levelek vagy kiscsomagok világméretű kézbesítési szolgáltatásai",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-64",
+    "concept_id": "CID-64",
+    "hierarchy_id": "1.7.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Levelek vagy kiscsomagok helyi kézbesítési szolgáltatásai",
+    "description": "Levelek vagy kiscsomagok helyi kézbesítési szolgáltatásai",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-65",
+    "concept_id": "CID-65",
+    "hierarchy_id": "1.7.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kerékpáros vagy robogós futárszolgáltatások",
+    "description": "Kerékpáros vagy robogós futárszolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-66",
+    "concept_id": "CID-66",
+    "hierarchy_id": "2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Ellátási lánc és logisztikai szolgáltatások",
+    "description": "Ellátási lánc és logisztikai szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-67",
+    "concept_id": "CID-67",
+    "hierarchy_id": "2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Tervezés és tanácsadás",
+    "description": "Tervezés és tanácsadás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-68",
+    "concept_id": "CID-68",
+    "hierarchy_id": "2.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Ellátási lánc tanácsadás",
+    "description": "Ellátási lánc tanácsadás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-69",
+    "concept_id": "CID-69",
+    "hierarchy_id": "2.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kereslet- és készlettervezés",
+    "description": "Kereslet- és készlettervezés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-70",
+    "concept_id": "CID-70",
+    "hierarchy_id": "2.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Hálózatoptimalizálás",
+    "description": "Hálózatoptimalizálás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-71",
+    "concept_id": "CID-71",
+    "hierarchy_id": "2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállításszervezési szolgáltatások",
+    "description": "Szállításszervezési szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-72",
+    "concept_id": "CID-72",
+    "hierarchy_id": "2.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállítmányozás",
+    "description": "Szállítmányozás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-73",
+    "concept_id": "CID-73",
+    "hierarchy_id": "2.2.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Rakománykonszolidáció",
+    "description": "Rakománykonszolidáció",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-74",
+    "concept_id": "CID-74",
+    "hierarchy_id": "2.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Határon átnyúló logisztika",
+    "description": "Határon átnyúló logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-75",
+    "concept_id": "CID-75",
+    "hierarchy_id": "2.2.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Biztosítást is tartalmazó fuvarozási szolgáltatások",
+    "description": "Biztosítást is tartalmazó fuvarozási szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-76",
+    "concept_id": "CID-76",
+    "hierarchy_id": "2.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Raktározás és disztribúció",
+    "description": "Raktározás és disztribúció",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-77",
+    "concept_id": "CID-77",
+    "hierarchy_id": "2.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Közraktározás",
+    "description": "Közraktározás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-78",
+    "concept_id": "CID-78",
+    "hierarchy_id": "2.3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szerződéses raktározás",
+    "description": "Szerződéses raktározás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-79",
+    "concept_id": "CID-79",
+    "hierarchy_id": "2.3.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Elosztóközpont-menedzsment",
+    "description": "Elosztóközpont-menedzsment",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-80",
+    "concept_id": "CID-80",
+    "hierarchy_id": "2.3.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Hőmérséklet-szabályozott tárolás",
+    "description": "Hőmérséklet-szabályozott tárolás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-81",
+    "concept_id": "CID-81",
+    "hierarchy_id": "2.3.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vámraktározás",
+    "description": "Vámraktározás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-82",
+    "concept_id": "CID-82",
+    "hierarchy_id": "2.3.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "E-kereskedelmi fulfillment központok",
+    "description": "E-kereskedelmi fulfillment központok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-83",
+    "concept_id": "CID-83",
+    "hierarchy_id": "2.3.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Készletgazdálkodás",
+    "description": "Készletgazdálkodás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-84",
+    "concept_id": "CID-84",
+    "hierarchy_id": "2.3.8",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Cross-docking",
+    "description": "Cross-docking",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-85",
+    "concept_id": "CID-85",
+    "hierarchy_id": "2.3.9",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Ömlesztettáru-tárolás",
+    "description": "Ömlesztettáru-tárolás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-86",
+    "concept_id": "CID-86",
+    "hierarchy_id": "2.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Hozzáadott értékű logisztikai szolgáltatások",
+    "description": "Hozzáadott értékű logisztikai szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-87",
+    "concept_id": "CID-87",
+    "hierarchy_id": "2.4.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Komissiózás és csomagolás",
+    "description": "Komissiózás és csomagolás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-88",
+    "concept_id": "CID-88",
+    "hierarchy_id": "2.4.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Címkézés és árazás",
+    "description": "Címkézés és árazás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-89",
+    "concept_id": "CID-89",
+    "hierarchy_id": "2.4.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kitting",
+    "description": "Kitting",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-90",
+    "concept_id": "CID-90",
+    "hierarchy_id": "2.4.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szerializálás",
+    "description": "Szerializálás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-91",
+    "concept_id": "CID-91",
+    "hierarchy_id": "2.4.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Csomagolási szolgáltatások",
+    "description": "Csomagolási szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-92",
+    "concept_id": "CID-92",
+    "hierarchy_id": "2.4.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Anyagmozgatási szolgáltatások",
+    "description": "Anyagmozgatási szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-93",
+    "concept_id": "CID-93",
+    "hierarchy_id": "2.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vámkezelés és külkereskedelmi megfelelés",
+    "description": "Vámkezelés és külkereskedelmi megfelelés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-94",
+    "concept_id": "CID-94",
+    "hierarchy_id": "2.5.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vámügynöki szolgáltatás",
+    "description": "Vámügynöki szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-95",
+    "concept_id": "CID-95",
+    "hierarchy_id": "2.5.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Külkereskedelmi megfelelés",
+    "description": "Külkereskedelmi megfelelés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-96",
+    "concept_id": "CID-96",
+    "hierarchy_id": "2.5.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Import-/exportdokumentáció",
+    "description": "Import-/exportdokumentáció",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-97",
+    "concept_id": "CID-97",
+    "hierarchy_id": "2.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Logisztikai szolgáltatói modellek",
+    "description": "Logisztikai szolgáltatói modellek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-98",
+    "concept_id": "CID-98",
+    "hierarchy_id": "2.6.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Harmadik fél logisztika - 3PL",
+    "description": "Harmadik fél logisztika - 3PL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-99",
+    "concept_id": "CID-99",
+    "hierarchy_id": "2.6.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Negyedik fél logisztika - 4PL",
+    "description": "Negyedik fél logisztika - 4PL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-100",
+    "concept_id": "CID-100",
+    "hierarchy_id": "2.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Ellenőrzési és survey szolgáltatások",
+    "description": "Ellenőrzési és survey szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-101",
+    "concept_id": "CID-101",
+    "hierarchy_id": "2.7.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Csomagolás-ellenőrzési szolgáltatások",
+    "description": "Csomagolás-ellenőrzési szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-102",
+    "concept_id": "CID-102",
+    "hierarchy_id": "2.7.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Rakományfelmérési szolgáltatások",
+    "description": "Rakományfelmérési szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-103",
+    "concept_id": "CID-103",
+    "hierarchy_id": "2.7.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kártevőirtási ellenőrzések",
+    "description": "Kártevőirtási ellenőrzések",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-104",
+    "concept_id": "CID-104",
+    "hierarchy_id": "3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Speciális logisztika",
+    "description": "Speciális logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-105",
+    "concept_id": "CID-105",
+    "hierarchy_id": "3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Hőmérséklet-szabályozott logisztika",
+    "description": "Hőmérséklet-szabályozott logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-106",
+    "concept_id": "CID-106",
+    "hierarchy_id": "3.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Hűtőlánc-logisztika",
+    "description": "Hűtőlánc-logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-107",
+    "concept_id": "CID-107",
+    "hierarchy_id": "3.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Gyógyszerlogisztika",
+    "description": "Gyógyszerlogisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-108",
+    "concept_id": "CID-108",
+    "hierarchy_id": "3.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Romlandó áruk logisztikája",
+    "description": "Romlandó áruk logisztikája",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-109",
+    "concept_id": "CID-109",
+    "hierarchy_id": "3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Nehézáru- és projektlogisztika",
+    "description": "Nehézáru- és projektlogisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-110",
+    "concept_id": "CID-110",
+    "hierarchy_id": "3.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Energetikai logisztika",
+    "description": "Energetikai logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-111",
+    "concept_id": "CID-111",
+    "hierarchy_id": "3.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Építőipari logisztika",
+    "description": "Építőipari logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-112",
+    "concept_id": "CID-112",
+    "hierarchy_id": "3.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Iparág-specifikus logisztika",
+    "description": "Iparág-specifikus logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-113",
+    "concept_id": "CID-113",
+    "hierarchy_id": "3.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Autóipari logisztika",
+    "description": "Autóipari logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-114",
+    "concept_id": "CID-114",
+    "hierarchy_id": "3.3.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Alkatrészlogisztika",
+    "description": "Alkatrészlogisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-115",
+    "concept_id": "CID-115",
+    "hierarchy_id": "3.3.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Készjármű-logisztika",
+    "description": "Készjármű-logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-116",
+    "concept_id": "CID-116",
+    "hierarchy_id": "3.3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kiskereskedelmi logisztika",
+    "description": "Kiskereskedelmi logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-117",
+    "concept_id": "CID-117",
+    "hierarchy_id": "3.3.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Fast fashion logisztika",
+    "description": "Fast fashion logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-118",
+    "concept_id": "CID-118",
+    "hierarchy_id": "3.3.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Űr- és védelmi logisztika",
+    "description": "Űr- és védelmi logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-119",
+    "concept_id": "CID-119",
+    "hierarchy_id": "3.3.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "High-tech és elektronikai logisztika",
+    "description": "High-tech és elektronikai logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-120",
+    "concept_id": "CID-120",
+    "hierarchy_id": "3.3.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vegyipari logisztika",
+    "description": "Vegyipari logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-121",
+    "concept_id": "CID-121",
+    "hierarchy_id": "3.3.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Olaj- és gázipari logisztika",
+    "description": "Olaj- és gázipari logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-122",
+    "concept_id": "CID-122",
+    "hierarchy_id": "3.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Egyéb speciális logisztikai szolgáltatások",
+    "description": "Egyéb speciális logisztikai szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-123",
+    "concept_id": "CID-123",
+    "hierarchy_id": "3.4.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Veszélyes áruk logisztikája",
+    "description": "Veszélyes áruk logisztikája",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-124",
+    "concept_id": "CID-124",
+    "hierarchy_id": "3.4.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Élőállat-logisztika",
+    "description": "Élőállat-logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-125",
+    "concept_id": "CID-125",
+    "hierarchy_id": "3.4.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Nagy értékű és biztonsági logisztika",
+    "description": "Nagy értékű és biztonsági logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-126",
+    "concept_id": "CID-126",
+    "hierarchy_id": "3.4.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Művészeti és kiállítási logisztika",
+    "description": "Művészeti és kiállítási logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-127",
+    "concept_id": "CID-127",
+    "hierarchy_id": "3.4.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Városi logisztika",
+    "description": "Városi logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-128",
+    "concept_id": "CID-128",
+    "hierarchy_id": "3.4.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Inverz logisztika",
+    "description": "Inverz logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-129",
+    "concept_id": "CID-129",
+    "hierarchy_id": "3.4.6.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Visszáru-kezelés",
+    "description": "Visszáru-kezelés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-130",
+    "concept_id": "CID-130",
+    "hierarchy_id": "3.4.6.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Javítás és felújítás",
+    "description": "Javítás és felújítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-131",
+    "concept_id": "CID-131",
+    "hierarchy_id": "3.4.6.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Újrahasznosítás és anyag-visszanyerés",
+    "description": "Újrahasznosítás és anyag-visszanyerés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-132",
+    "concept_id": "CID-132",
+    "hierarchy_id": "4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Logisztikai infrastruktúra és berendezések",
+    "description": "Logisztikai infrastruktúra és berendezések",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-133",
+    "concept_id": "CID-133",
+    "hierarchy_id": "4.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Terminálok és kikötők",
+    "description": "Terminálok és kikötők",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-134",
+    "concept_id": "CID-134",
+    "hierarchy_id": "4.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kikötői műveletek",
+    "description": "Kikötői műveletek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-135",
+    "concept_id": "CID-135",
+    "hierarchy_id": "4.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Belvízi kikötői műveletek",
+    "description": "Belvízi kikötői műveletek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-136",
+    "concept_id": "CID-136",
+    "hierarchy_id": "4.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vasúti áruterminálok",
+    "description": "Vasúti áruterminálok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-137",
+    "concept_id": "CID-137",
+    "hierarchy_id": "4.1.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légiáru-terminálok",
+    "description": "Légiáru-terminálok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-138",
+    "concept_id": "CID-138",
+    "hierarchy_id": "4.1.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Offshore támogató parti bázisszolgáltatások",
+    "description": "Offshore támogató parti bázisszolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-139",
+    "concept_id": "CID-139",
+    "hierarchy_id": "4.1.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légiforgalmi irányítási szolgáltatások",
+    "description": "Légiforgalmi irányítási szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-140",
+    "concept_id": "CID-140",
+    "hierarchy_id": "4.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Logisztikai ingatlanok",
+    "description": "Logisztikai ingatlanok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-141",
+    "concept_id": "CID-141",
+    "hierarchy_id": "4.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Logisztikai parkok és szabadövezetek",
+    "description": "Logisztikai parkok és szabadövezetek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-142",
+    "concept_id": "CID-142",
+    "hierarchy_id": "4.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Logisztikai berendezések",
+    "description": "Logisztikai berendezések",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-143",
+    "concept_id": "CID-143",
+    "hierarchy_id": "4.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teherkonténerek",
+    "description": "Teherkonténerek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-144",
+    "concept_id": "CID-144",
+    "hierarchy_id": "4.3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Konténeralvázak",
+    "description": "Konténeralvázak",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-145",
+    "concept_id": "CID-145",
+    "hierarchy_id": "4.3.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Targoncák",
+    "description": "Targoncák",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-146",
+    "concept_id": "CID-146",
+    "hierarchy_id": "4.3.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Raktári berendezések",
+    "description": "Raktári berendezések",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-147",
+    "concept_id": "CID-147",
+    "hierarchy_id": "4.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Logisztikai eszközbérlet és lízing",
+    "description": "Logisztikai eszközbérlet és lízing",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-148",
+    "concept_id": "CID-148",
+    "hierarchy_id": "4.4.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállítási konténer bérleti szolgáltatások",
+    "description": "Szállítási konténer bérleti szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-149",
+    "concept_id": "CID-149",
+    "hierarchy_id": "4.4.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Intermodális rakománykonténer-bérleti szolgáltatás",
+    "description": "Intermodális rakománykonténer-bérleti szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-150",
+    "concept_id": "CID-150",
+    "hierarchy_id": "4.4.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállítóeszköz-bérleti vagy lízingszolgáltatások",
+    "description": "Szállítóeszköz-bérleti vagy lízingszolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-151",
+    "concept_id": "CID-151",
+    "hierarchy_id": "4.4.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teherszállító repülőgép bérlése kezelővel",
+    "description": "Teherszállító repülőgép bérlése kezelővel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-152",
+    "concept_id": "CID-152",
+    "hierarchy_id": "4.4.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Belvízi teherszállító hajó bérlése kezelővel",
+    "description": "Belvízi teherszállító hajó bérlése kezelővel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-153",
+    "concept_id": "CID-153",
+    "hierarchy_id": "4.4.2.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Parti és transzóceáni teherszállító hajó bérlése kezelővel",
+    "description": "Parti és transzóceáni teherszállító hajó bérlése kezelővel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-154",
+    "concept_id": "CID-154",
+    "hierarchy_id": "4.4.2.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teherautó bérlése kezelővel",
+    "description": "Teherautó bérlése kezelővel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-155",
+    "concept_id": "CID-155",
+    "hierarchy_id": "5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Logisztikai technológia és digitalizáció",
+    "description": "Logisztikai technológia és digitalizáció",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-156",
+    "concept_id": "CID-156",
+    "hierarchy_id": "5.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "szoftvermegoldások",
+    "description": "szoftvermegoldások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-157",
+    "concept_id": "CID-157",
+    "hierarchy_id": "5.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállításirányítási rendszer - TMS",
+    "description": "Szállításirányítási rendszer - TMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-158",
+    "concept_id": "CID-158",
+    "hierarchy_id": "5.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Raktárirányítási rendszer - WMS",
+    "description": "Raktárirányítási rendszer - WMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-159",
+    "concept_id": "CID-159",
+    "hierarchy_id": "5.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Ellátásilánc-kezelő szoftver",
+    "description": "Ellátásilánc-kezelő szoftver",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-160",
+    "concept_id": "CID-160",
+    "hierarchy_id": "5.1.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Útvonaltervező és flottakezelő szoftver",
+    "description": "Útvonaltervező és flottakezelő szoftver",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-161",
+    "concept_id": "CID-161",
+    "hierarchy_id": "5.1.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Nyomonkövető rendszerek",
+    "description": "Nyomonkövető rendszerek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-162",
+    "concept_id": "CID-162",
+    "hierarchy_id": "5.1.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Yard menedzsment rendszer - YMS",
+    "description": "Yard menedzsment rendszer - YMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-163",
+    "concept_id": "CID-163",
+    "hierarchy_id": "5.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Digitális platformok és integráció",
+    "description": "Digitális platformok és integráció",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-164",
+    "concept_id": "CID-164",
+    "hierarchy_id": "5.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Digitális fuvarplatformok",
+    "description": "Digitális fuvarplatformok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-165",
+    "concept_id": "CID-165",
+    "hierarchy_id": "5.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Logisztikai API- és integrációs megoldások",
+    "description": "Logisztikai API- és integrációs megoldások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-166",
+    "concept_id": "CID-166",
+    "hierarchy_id": "5.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Feltörekvő technológiák",
+    "description": "Feltörekvő technológiák",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-167",
+    "concept_id": "CID-167",
+    "hierarchy_id": "5.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Mesterséges intelligencia és adatelemzés a logisztikában",
+    "description": "Mesterséges intelligencia és adatelemzés a logisztikában",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-168",
+    "concept_id": "CID-168",
+    "hierarchy_id": "5.3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Blockchain a logisztikában",
+    "description": "Blockchain a logisztikában",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-169",
+    "concept_id": "CID-169",
+    "hierarchy_id": "5.3.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Autonóm járművek a logisztikában",
+    "description": "Autonóm járművek a logisztikában",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-170",
+    "concept_id": "CID-170",
+    "hierarchy_id": "6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Támogató és üzleti szolgáltatások",
+    "description": "Támogató és üzleti szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-171",
+    "concept_id": "CID-171",
+    "hierarchy_id": "6.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Tanácsadás és képzés",
+    "description": "Tanácsadás és képzés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-172",
+    "concept_id": "CID-172",
+    "hierarchy_id": "6.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Logisztikai folyamatfejlesztés",
+    "description": "Logisztikai folyamatfejlesztés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-173",
+    "concept_id": "CID-173",
+    "hierarchy_id": "6.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Logisztikai képzés és tanúsítás",
+    "description": "Logisztikai képzés és tanúsítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-174",
+    "concept_id": "CID-174",
+    "hierarchy_id": "6.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Pénzügyi és biztosítási szolgáltatások",
+    "description": "Pénzügyi és biztosítási szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-175",
+    "concept_id": "CID-175",
+    "hierarchy_id": "6.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Rakománybiztosítás",
+    "description": "Rakománybiztosítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-176",
+    "concept_id": "CID-176",
+    "hierarchy_id": "6.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Felelősségbiztosítás",
+    "description": "Felelősségbiztosítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-177",
+    "concept_id": "CID-177",
+    "hierarchy_id": "6.2.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Jármű- és flottabiztosítás",
+    "description": "Jármű- és flottabiztosítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-178",
+    "concept_id": "CID-178",
+    "hierarchy_id": "6.2.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kereskedelemfinanszírozás",
+    "description": "Kereskedelemfinanszírozás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-179",
+    "concept_id": "CID-179",
+    "hierarchy_id": "6.2.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Faktoring",
+    "description": "Faktoring",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-180",
+    "concept_id": "CID-180",
+    "hierarchy_id": "6.2.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Fuvarfizetés és audit",
+    "description": "Fuvarfizetés és audit",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-181",
+    "concept_id": "CID-181",
+    "hierarchy_id": "6.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Jogi szolgáltatások",
+    "description": "Jogi szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-182",
+    "concept_id": "CID-182",
+    "hierarchy_id": "6.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállítási szerződési jog",
+    "description": "Szállítási szerződési jog",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-183",
+    "concept_id": "CID-183",
+    "hierarchy_id": "6.3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vám- és külkereskedelmi jog",
+    "description": "Vám- és külkereskedelmi jog",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-184",
+    "concept_id": "CID-184",
+    "hierarchy_id": "7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Fenntarthatóság és zöld logisztika",
+    "description": "Fenntarthatóság és zöld logisztika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-185",
+    "concept_id": "CID-185",
+    "hierarchy_id": "7.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szén- és kibocsátásértékelés",
+    "description": "Szén- és kibocsátásértékelés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-186",
+    "concept_id": "CID-186",
+    "hierarchy_id": "7.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Karbonlábnyom-számítás",
+    "description": "Karbonlábnyom-számítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-187",
+    "concept_id": "CID-187",
+    "hierarchy_id": "7.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Zöld megoldások",
+    "description": "Zöld megoldások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-188",
+    "concept_id": "CID-188",
+    "hierarchy_id": "7.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Fenntartható üzemanyag-megoldások",
+    "description": "Fenntartható üzemanyag-megoldások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-189",
+    "concept_id": "CID-189",
+    "hierarchy_id": "7.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Zöld logisztikai tanácsadás",
+    "description": "Zöld logisztikai tanácsadás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-190",
+    "concept_id": "CID-190",
+    "hierarchy_id": "7.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Fenntartható csomagolás és hulladékcsökkentés",
+    "description": "Fenntartható csomagolás és hulladékcsökkentés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-191",
+    "concept_id": "CID-191",
+    "hierarchy_id": "7.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Hulladék- és csomagolásoptimalizálás",
+    "description": "Hulladék- és csomagolásoptimalizálás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-192",
+    "concept_id": "CID-192",
+    "hierarchy_id": "7.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Környezeti tervezés és dekarbonizáció",
+    "description": "Környezeti tervezés és dekarbonizáció",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-193",
+    "concept_id": "CID-193",
+    "hierarchy_id": "7.4.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Fenntarthatósági ütemterv és átállási tervezés",
+    "description": "Fenntarthatósági ütemterv és átállási tervezés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-194",
+    "concept_id": "CID-194",
+    "hierarchy_id": "7.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Környezeti audit",
+    "description": "Környezeti audit",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-195",
+    "concept_id": "CID-195",
+    "hierarchy_id": "7.5.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Környezeti audit és megfelelőségi felülvizsgálat",
+    "description": "Környezeti audit és megfelelőségi felülvizsgálat",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-196",
+    "concept_id": "CID-196",
+    "hierarchy_id": "7.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Környezeti jelentéskészítés és közzététel",
+    "description": "Környezeti jelentéskészítés és közzététel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-197",
+    "concept_id": "CID-197",
+    "hierarchy_id": "7.6.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kibocsátási / fenntarthatósági jelentéskészítés",
+    "description": "Kibocsátási / fenntarthatósági jelentéskészítés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-198",
+    "concept_id": "CID-198",
+    "hierarchy_id": "8",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Személyszállítási és mobilitási szolgáltatások",
+    "description": "Személyszállítási és mobilitási szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-199",
+    "concept_id": "CID-199",
+    "hierarchy_id": "8.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légi személyszállítás",
+    "description": "Légi személyszállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-200",
+    "concept_id": "CID-200",
+    "hierarchy_id": "8.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Helikopteres szolgáltatások",
+    "description": "Helikopteres szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-201",
+    "concept_id": "CID-201",
+    "hierarchy_id": "8.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kereskedelmi repülőút",
+    "description": "Kereskedelmi repülőút",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-202",
+    "concept_id": "CID-202",
+    "hierarchy_id": "8.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Charter repülőút",
+    "description": "Charter repülőút",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-203",
+    "concept_id": "CID-203",
+    "hierarchy_id": "8.1.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légi városnéző szolgáltatás",
+    "description": "Légi városnéző szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-204",
+    "concept_id": "CID-204",
+    "hierarchy_id": "8.1.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Utasszállító repülőgép bérleti vagy lízingszolgáltatás",
+    "description": "Utasszállító repülőgép bérleti vagy lízingszolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-205",
+    "concept_id": "CID-205",
+    "hierarchy_id": "8.1.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Egészségügyi evakuálás légimentővel",
+    "description": "Egészségügyi evakuálás légimentővel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-206",
+    "concept_id": "CID-206",
+    "hierarchy_id": "8.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vasúti személyszállítás",
+    "description": "Vasúti személyszállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-207",
+    "concept_id": "CID-207",
+    "hierarchy_id": "8.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Könnyűvasúti közlekedési szolgáltatások",
+    "description": "Könnyűvasúti közlekedési szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-208",
+    "concept_id": "CID-208",
+    "hierarchy_id": "8.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Metróközlekedés",
+    "description": "Metróközlekedés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-209",
+    "concept_id": "CID-209",
+    "hierarchy_id": "8.2.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kontinentális / interkontinentális vasúti szolgáltatások",
+    "description": "Kontinentális / interkontinentális vasúti szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-210",
+    "concept_id": "CID-210",
+    "hierarchy_id": "8.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vízi személyszállítás",
+    "description": "Vízi személyszállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-211",
+    "concept_id": "CID-211",
+    "hierarchy_id": "8.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vízi taxik",
+    "description": "Vízi taxik",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-212",
+    "concept_id": "CID-212",
+    "hierarchy_id": "8.3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Többnapos hajóutak szállással",
+    "description": "Többnapos hajóutak szállással",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-213",
+    "concept_id": "CID-213",
+    "hierarchy_id": "8.3.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Hajós városnéző kirándulások",
+    "description": "Hajós városnéző kirándulások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-214",
+    "concept_id": "CID-214",
+    "hierarchy_id": "8.3.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vízi jármű bérleti vagy lízingszolgáltatás",
+    "description": "Vízi jármű bérleti vagy lízingszolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-215",
+    "concept_id": "CID-215",
+    "hierarchy_id": "8.3.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Offshore platform személyszállítási szolgáltatás",
+    "description": "Offshore platform személyszállítási szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-216",
+    "concept_id": "CID-216",
+    "hierarchy_id": "8.3.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Part menti és transzóceáni személyszállító komp",
+    "description": "Part menti és transzóceáni személyszállító komp",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-217",
+    "concept_id": "CID-217",
+    "hierarchy_id": "8.3.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Belvízi személyszállító komp",
+    "description": "Belvízi személyszállító komp",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-218",
+    "concept_id": "CID-218",
+    "hierarchy_id": "8.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Közúti személyszállítás",
+    "description": "Közúti személyszállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-219",
+    "concept_id": "CID-219",
+    "hierarchy_id": "8.4.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Menetrend szerinti buszjáratok",
+    "description": "Menetrend szerinti buszjáratok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-220",
+    "concept_id": "CID-220",
+    "hierarchy_id": "8.4.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Charter buszszolgáltatások",
+    "description": "Charter buszszolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-221",
+    "concept_id": "CID-221",
+    "hierarchy_id": "8.4.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Taxiszolgáltatások",
+    "description": "Taxiszolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-222",
+    "concept_id": "CID-222",
+    "hierarchy_id": "8.4.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Parkolási díjak",
+    "description": "Parkolási díjak",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-223",
+    "concept_id": "CID-223",
+    "hierarchy_id": "8.4.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Járműbérlés",
+    "description": "Járműbérlés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-224",
+    "concept_id": "CID-224",
+    "hierarchy_id": "8.4.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szedán / kupé / kombi gépjármű lízing",
+    "description": "Szedán / kupé / kombi gépjármű lízing",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-225",
+    "concept_id": "CID-225",
+    "hierarchy_id": "8.4.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Limuzin vagy reprezentatív autó szolgáltatás",
+    "description": "Limuzin vagy reprezentatív autó szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-226",
+    "concept_id": "CID-226",
+    "hierarchy_id": "8.4.8",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Könnyű teherautó / SUV lízing",
+    "description": "Könnyű teherautó / SUV lízing",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-227",
+    "concept_id": "CID-227",
+    "hierarchy_id": "8.4.9",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Személyszállító furgon / minivan lízing",
+    "description": "Személyszállító furgon / minivan lízing",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-228",
+    "concept_id": "CID-228",
+    "hierarchy_id": "8.4.10",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szárazföldi városnéző szolgáltatás",
+    "description": "Szárazföldi városnéző szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-229",
+    "concept_id": "CID-229",
+    "hierarchy_id": "8.4.11",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Egészségügyi evakuálás mentőautóval",
+    "description": "Egészségügyi evakuálás mentőautóval",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-230",
+    "concept_id": "CID-230",
+    "hierarchy_id": "8.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Intermodális személyszállítási szolgáltatások",
+    "description": "Intermodális személyszállítási szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-231",
+    "concept_id": "CID-231",
+    "hierarchy_id": "8.5.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vegyes módú városi és elővárosi személyszállítás",
+    "description": "Vegyes módú városi és elővárosi személyszállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-232",
+    "concept_id": "CID-232",
+    "hierarchy_id": "8.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Űrbeli személyszállítás",
+    "description": "Űrbeli személyszállítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-233",
+    "concept_id": "CID-233",
+    "hierarchy_id": "9",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállítási eszközök, járművek és vízi járművek",
+    "description": "Szállítási eszközök, járművek és vízi járművek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-234",
+    "concept_id": "CID-234",
+    "hierarchy_id": "9.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Gépjárművek",
+    "description": "Gépjárművek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-235",
+    "concept_id": "CID-235",
+    "hierarchy_id": "9.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Személyszállító gépjárművek",
+    "description": "Személyszállító gépjárművek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-236",
+    "concept_id": "CID-236",
+    "hierarchy_id": "9.1.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Minibuszok",
+    "description": "Minibuszok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-237",
+    "concept_id": "CID-237",
+    "hierarchy_id": "9.1.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Buszok",
+    "description": "Buszok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-238",
+    "concept_id": "CID-238",
+    "hierarchy_id": "9.1.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Személygépkocsik / autók",
+    "description": "Személygépkocsik / autók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-239",
+    "concept_id": "CID-239",
+    "hierarchy_id": "9.1.1.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kombi személyautók",
+    "description": "Kombi személyautók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-240",
+    "concept_id": "CID-240",
+    "hierarchy_id": "9.1.1.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Minivanok vagy furgonok",
+    "description": "Minivanok vagy furgonok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-241",
+    "concept_id": "CID-241",
+    "hierarchy_id": "9.1.1.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Limuzinok",
+    "description": "Limuzinok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-242",
+    "concept_id": "CID-242",
+    "hierarchy_id": "9.1.1.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Könnyű teherautók vagy SUV-k",
+    "description": "Könnyű teherautók vagy SUV-k",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-243",
+    "concept_id": "CID-243",
+    "hierarchy_id": "9.1.1.8",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Elektromos meghajtású járművek",
+    "description": "Elektromos meghajtású járművek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-244",
+    "concept_id": "CID-244",
+    "hierarchy_id": "9.1.1.9",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Páncélozott gépjárművek",
+    "description": "Páncélozott gépjárművek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-245",
+    "concept_id": "CID-245",
+    "hierarchy_id": "9.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Motoros kétkerekű járművek",
+    "description": "Motoros kétkerekű járművek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-246",
+    "concept_id": "CID-246",
+    "hierarchy_id": "9.1.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Motorkerékpárok",
+    "description": "Motorkerékpárok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-247",
+    "concept_id": "CID-247",
+    "hierarchy_id": "9.1.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Robogók",
+    "description": "Robogók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-248",
+    "concept_id": "CID-248",
+    "hierarchy_id": "9.1.2.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Segédmotoros kerékpárok",
+    "description": "Segédmotoros kerékpárok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-249",
+    "concept_id": "CID-249",
+    "hierarchy_id": "9.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "tengeri hajók",
+    "description": "tengeri hajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-250",
+    "concept_id": "CID-250",
+    "hierarchy_id": "9.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kereskedelmi hajók",
+    "description": "Kereskedelmi hajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-251",
+    "concept_id": "CID-251",
+    "hierarchy_id": "9.2.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teher- vagy konténerszállító hajók",
+    "description": "Teher- vagy konténerszállító hajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-252",
+    "concept_id": "CID-252",
+    "hierarchy_id": "9.2.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Tankhajók",
+    "description": "Tankhajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-253",
+    "concept_id": "CID-253",
+    "hierarchy_id": "9.2.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vontatóhajók",
+    "description": "Vontatóhajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-254",
+    "concept_id": "CID-254",
+    "hierarchy_id": "9.2.1.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Uszályok",
+    "description": "Uszályok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-255",
+    "concept_id": "CID-255",
+    "hierarchy_id": "9.2.1.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Személy- vagy autós kompok",
+    "description": "Személy- vagy autós kompok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-256",
+    "concept_id": "CID-256",
+    "hierarchy_id": "9.2.1.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Tengerjáró hajók",
+    "description": "Tengerjáró hajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-257",
+    "concept_id": "CID-257",
+    "hierarchy_id": "9.2.1.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Olaj- vagy gázipari személyzeti hajók",
+    "description": "Olaj- vagy gázipari személyzeti hajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-258",
+    "concept_id": "CID-258",
+    "hierarchy_id": "9.2.1.8",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Olaj- vagy gázipari munkahajók",
+    "description": "Olaj- vagy gázipari munkahajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-259",
+    "concept_id": "CID-259",
+    "hierarchy_id": "9.2.1.9",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szeizmikus kutatóhajók",
+    "description": "Szeizmikus kutatóhajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-260",
+    "concept_id": "CID-260",
+    "hierarchy_id": "9.2.1.10",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Jégtörők",
+    "description": "Jégtörők",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-261",
+    "concept_id": "CID-261",
+    "hierarchy_id": "9.2.1.11",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Cseppfolyós gázszállító hajók",
+    "description": "Cseppfolyós gázszállító hajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-262",
+    "concept_id": "CID-262",
+    "hierarchy_id": "9.2.1.12",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vegyi anyag szállító tankerhajók",
+    "description": "Vegyi anyag szállító tankerhajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-263",
+    "concept_id": "CID-263",
+    "hierarchy_id": "9.2.1.13",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Ömlesztettáru-szállító hajók",
+    "description": "Ömlesztettáru-szállító hajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-264",
+    "concept_id": "CID-264",
+    "hierarchy_id": "9.2.1.14",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Autószállító / RoRo hajók",
+    "description": "Autószállító / RoRo hajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-265",
+    "concept_id": "CID-265",
+    "hierarchy_id": "9.2.1.15",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kalauzhajók",
+    "description": "Kalauzhajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-266",
+    "concept_id": "CID-266",
+    "hierarchy_id": "9.2.1.16",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kutatóhajók",
+    "description": "Kutatóhajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-267",
+    "concept_id": "CID-267",
+    "hierarchy_id": "9.2.1.17",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kábel-fektető hajók",
+    "description": "Kábel-fektető hajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-268",
+    "concept_id": "CID-268",
+    "hierarchy_id": "9.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szabadidős vízi járművek",
+    "description": "Szabadidős vízi járművek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-269",
+    "concept_id": "CID-269",
+    "hierarchy_id": "9.2.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Dingik",
+    "description": "Dingik",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-270",
+    "concept_id": "CID-270",
+    "hierarchy_id": "9.2.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Jachtok",
+    "description": "Jachtok",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-271",
+    "concept_id": "CID-271",
+    "hierarchy_id": "9.2.2.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Skiffek",
+    "description": "Skiffek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-272",
+    "concept_id": "CID-272",
+    "hierarchy_id": "9.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vasúti és villamosipari gépek és berendezések",
+    "description": "Vasúti és villamosipari gépek és berendezések",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-273",
+    "concept_id": "CID-273",
+    "hierarchy_id": "9.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légi járművek",
+    "description": "Légi járművek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-274",
+    "concept_id": "CID-274",
+    "hierarchy_id": "9.4.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Motoros merevszárnyú repülőgépek",
+    "description": "Motoros merevszárnyú repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-275",
+    "concept_id": "CID-275",
+    "hierarchy_id": "9.4.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Merevszárnyú mezőgazdasági repülőgépek",
+    "description": "Merevszárnyú mezőgazdasági repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-276",
+    "concept_id": "CID-276",
+    "hierarchy_id": "9.4.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légcsavaros teherszállító repülőgépek",
+    "description": "Légcsavaros teherszállító repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-277",
+    "concept_id": "CID-277",
+    "hierarchy_id": "9.4.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vízirepülőgépek",
+    "description": "Vízirepülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-278",
+    "concept_id": "CID-278",
+    "hierarchy_id": "9.4.1.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kereskedelmi utasszállító légcsavaros repülőgépek",
+    "description": "Kereskedelmi utasszállító légcsavaros repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-279",
+    "concept_id": "CID-279",
+    "hierarchy_id": "9.4.1.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teherszállító sugárhajtású repülőgépek",
+    "description": "Teherszállító sugárhajtású repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-280",
+    "concept_id": "CID-280",
+    "hierarchy_id": "9.4.1.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Kereskedelmi utasszállító sugárhajtású repülőgépek",
+    "description": "Kereskedelmi utasszállító sugárhajtású repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-281",
+    "concept_id": "CID-281",
+    "hierarchy_id": "9.4.1.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Magán- vagy üzleti célú légcsavaros repülőgépek",
+    "description": "Magán- vagy üzleti célú légcsavaros repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-282",
+    "concept_id": "CID-282",
+    "hierarchy_id": "9.4.1.8",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Magán- vagy üzleti célú sugárhajtású repülőgépek",
+    "description": "Magán- vagy üzleti célú sugárhajtású repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-283",
+    "concept_id": "CID-283",
+    "hierarchy_id": "9.4.1.9",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Repülésellenőrző repülőgépek",
+    "description": "Repülésellenőrző repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-284",
+    "concept_id": "CID-284",
+    "hierarchy_id": "9.4.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Polgári és kereskedelmi forgószárnyas légijárművek",
+    "description": "Polgári és kereskedelmi forgószárnyas légijárművek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-285",
+    "concept_id": "CID-285",
+    "hierarchy_id": "9.4.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Személyszállító helikopterek",
+    "description": "Személyszállító helikopterek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-286",
+    "concept_id": "CID-286",
+    "hierarchy_id": "9.4.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teherszállító helikopterek",
+    "description": "Teherszállító helikopterek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-287",
+    "concept_id": "CID-287",
+    "hierarchy_id": "9.4.2.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Egészségügyi vagy mentőhelikopterek",
+    "description": "Egészségügyi vagy mentőhelikopterek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-288",
+    "concept_id": "CID-288",
+    "hierarchy_id": "9.4.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Speciális rendeltetésű repülőgépek",
+    "description": "Speciális rendeltetésű repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-289",
+    "concept_id": "CID-289",
+    "hierarchy_id": "9.4.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Léghajók",
+    "description": "Léghajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-290",
+    "concept_id": "CID-290",
+    "hierarchy_id": "9.4.3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Modellrepülőgépek",
+    "description": "Modellrepülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-291",
+    "concept_id": "CID-291",
+    "hierarchy_id": "9.4.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szabadidős repülőgépek",
+    "description": "Szabadidős repülőgépek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-292",
+    "concept_id": "CID-292",
+    "hierarchy_id": "9.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Űrhajók",
+    "description": "Űrhajók",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-293",
+    "concept_id": "CID-293",
+    "hierarchy_id": "9.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállítási szolgáltatási berendezések",
+    "description": "Szállítási szolgáltatási berendezések",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-294",
+    "concept_id": "CID-294",
+    "hierarchy_id": "10",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Charter-, bérleti és lízingszolgáltatások",
+    "description": "Charter-, bérleti és lízingszolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-295",
+    "concept_id": "CID-295",
+    "hierarchy_id": "10.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Charter szolgáltatások",
+    "description": "Charter szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-296",
+    "concept_id": "CID-296",
+    "hierarchy_id": "10.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teher charter",
+    "description": "Teher charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-297",
+    "concept_id": "CID-297",
+    "hierarchy_id": "10.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Utas charter",
+    "description": "Utas charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-298",
+    "concept_id": "CID-298",
+    "hierarchy_id": "10.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Helikopter charter",
+    "description": "Helikopter charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-299",
+    "concept_id": "CID-299",
+    "hierarchy_id": "10.1.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Jacht / hajó charter",
+    "description": "Jacht / hajó charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-300",
+    "concept_id": "CID-300",
+    "hierarchy_id": "10.1.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Busz charter",
+    "description": "Busz charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-301",
+    "concept_id": "CID-301",
+    "hierarchy_id": "10.1.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Limuzin / VIP charter",
+    "description": "Limuzin / VIP charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-302",
+    "concept_id": "CID-302",
+    "hierarchy_id": "10.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Bérleti szolgáltatások",
+    "description": "Bérleti szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-303",
+    "concept_id": "CID-303",
+    "hierarchy_id": "10.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Konténerbérlés",
+    "description": "Konténerbérlés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-304",
+    "concept_id": "CID-304",
+    "hierarchy_id": "10.2.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Intermodális konténerbérlés",
+    "description": "Intermodális konténerbérlés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-305",
+    "concept_id": "CID-305",
+    "hierarchy_id": "10.2.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Járműbérlés szolgáltatások",
+    "description": "Járműbérlés szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-306",
+    "concept_id": "CID-306",
+    "hierarchy_id": "10.2.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vízi jármű bérlés",
+    "description": "Vízi jármű bérlés",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-307",
+    "concept_id": "CID-307",
+    "hierarchy_id": "10.2.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Utasszállító repülőgép bérlése vagy lízingje",
+    "description": "Utasszállító repülőgép bérlése vagy lízingje",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-308",
+    "concept_id": "CID-308",
+    "hierarchy_id": "10.2.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teherszállító repülőgép bérlése kezelővel szolgáltatások",
+    "description": "Teherszállító repülőgép bérlése kezelővel szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-309",
+    "concept_id": "CID-309",
+    "hierarchy_id": "10.2.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teherszállító hajó bérlése kezelővel",
+    "description": "Teherszállító hajó bérlése kezelővel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-310",
+    "concept_id": "CID-310",
+    "hierarchy_id": "10.2.8",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Parti / óceánjáró teherszállító hajó bérlése kezelővel",
+    "description": "Parti / óceánjáró teherszállító hajó bérlése kezelővel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-311",
+    "concept_id": "CID-311",
+    "hierarchy_id": "10.2.9",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Teherautó bérlése kezelővel szolgáltatások",
+    "description": "Teherautó bérlése kezelővel szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-312",
+    "concept_id": "CID-312",
+    "hierarchy_id": "10.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Lízingszolgáltatások",
+    "description": "Lízingszolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-313",
+    "concept_id": "CID-313",
+    "hierarchy_id": "10.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Sedan / kupé / kombi lízing",
+    "description": "Sedan / kupé / kombi lízing",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-314",
+    "concept_id": "CID-314",
+    "hierarchy_id": "10.3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Könnyű teherautó / SUV lízing lízingszolgáltatások",
+    "description": "Könnyű teherautó / SUV lízing lízingszolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-315",
+    "concept_id": "CID-315",
+    "hierarchy_id": "10.3.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Személyszállító furgon / minivan lízing lízingszolgáltatások",
+    "description": "Személyszállító furgon / minivan lízing lízingszolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-316",
+    "concept_id": "CID-316",
+    "hierarchy_id": "10.3.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállítóeszköz lízing",
+    "description": "Szállítóeszköz lízing",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-317",
+    "concept_id": "CID-317",
+    "hierarchy_id": "11",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Karbantartás, üzemanyag-feltöltés, tárolás és támogatás",
+    "description": "Karbantartás, üzemanyag-feltöltés, tárolás és támogatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-318",
+    "concept_id": "CID-318",
+    "hierarchy_id": "11.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Járműkarbantartás és javítás",
+    "description": "Járműkarbantartás és javítás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-319",
+    "concept_id": "CID-319",
+    "hierarchy_id": "11.1.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Karosszériajavítási vagy fényezési szolgáltatás",
+    "description": "Karosszériajavítási vagy fényezési szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-320",
+    "concept_id": "CID-320",
+    "hierarchy_id": "11.1.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Járművizsgálati szolgáltatás",
+    "description": "Járművizsgálati szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-321",
+    "concept_id": "CID-321",
+    "hierarchy_id": "11.1.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Járműüveg-csere szolgáltatás",
+    "description": "Járműüveg-csere szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-322",
+    "concept_id": "CID-322",
+    "hierarchy_id": "11.1.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Személyautók és könnyű teherautók karbantartása és javítása",
+    "description": "Személyautók és könnyű teherautók karbantartása és javítása",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-323",
+    "concept_id": "CID-323",
+    "hierarchy_id": "11.1.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Nehéz teherautók karbantartása és javítása",
+    "description": "Nehéz teherautók karbantartása és javítása",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-324",
+    "concept_id": "CID-324",
+    "hierarchy_id": "11.1.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vasúti kocsi ellenőrzési és karbantartási szolgáltatás",
+    "description": "Vasúti kocsi ellenőrzési és karbantartási szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-325",
+    "concept_id": "CID-325",
+    "hierarchy_id": "11.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Karosszéria- és fényezési szolgáltatások",
+    "description": "Karosszéria- és fényezési szolgáltatások",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-326",
+    "concept_id": "CID-326",
+    "hierarchy_id": "11.2.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Karosszérialakatos szolgáltatás",
+    "description": "Karosszérialakatos szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-327",
+    "concept_id": "CID-327",
+    "hierarchy_id": "11.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Üzemanyag-feltöltés / tárolás / operatív támogatás",
+    "description": "Üzemanyag-feltöltés / tárolás / operatív támogatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-328",
+    "concept_id": "CID-328",
+    "hierarchy_id": "11.3.1",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Jármű üzemanyag-feltöltési szolgáltatás",
+    "description": "Jármű üzemanyag-feltöltési szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-329",
+    "concept_id": "CID-329",
+    "hierarchy_id": "11.3.2",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Szállítási tárolási szolgáltatás",
+    "description": "Szállítási tárolási szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-330",
+    "concept_id": "CID-330",
+    "hierarchy_id": "11.3.3",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Járműparkolási szolgáltatás",
+    "description": "Járműparkolási szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-331",
+    "concept_id": "CID-331",
+    "hierarchy_id": "11.3.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Üzemanyag-feltöltő kártya / előre fizetett üzemanyagkártya szolgáltatás",
+    "description": "Üzemanyag-feltöltő kártya / előre fizetett üzemanyagkártya szolgáltatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-332",
+    "concept_id": "CID-332",
+    "hierarchy_id": "11.4",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Légi járművek karbantartása és javítása",
+    "description": "Légi járművek karbantartása és javítása",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-333",
+    "concept_id": "CID-333",
+    "hierarchy_id": "11.5",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Navigációs berendezések karbantartása és javítása",
+    "description": "Navigációs berendezések karbantartása és javítása",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-334",
+    "concept_id": "CID-334",
+    "hierarchy_id": "11.6",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Vízi közlekedési hajók karbantartása és javítása",
+    "description": "Vízi közlekedési hajók karbantartása és javítása",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "hu-335",
+    "concept_id": "CID-335",
+    "hierarchy_id": "11.7",
+    "unspsc_code": "",
+    "language": "hu",
+    "term": "Flottakezelési támogatás",
+    "description": "Flottakezelési támogatás",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  }
+]
