@@ -1,1 +1,6032 @@
-[]
+[
+  {
+    "term_id": "it-1",
+    "concept_id": "CID-1",
+    "hierarchy_id": "1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto e trasporto merci",
+    "description": "Trasporto e trasporto merci",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-2",
+    "concept_id": "CID-2",
+    "hierarchy_id": "1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "trasporto camion",
+    "description": "trasporto su strada",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-3",
+    "concept_id": "CID-3",
+    "hierarchy_id": "1.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Carico completo - FTL",
+    "description": "Carico completo - FTL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-4",
+    "concept_id": "CID-4",
+    "hierarchy_id": "1.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Carico parziale - LTL",
+    "description": "Carico parziale - LTL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-5",
+    "concept_id": "CID-5",
+    "hierarchy_id": "1.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Distribuzione locale / trasporto urbano",
+    "description": "Distribuzione locale / trasporto urbano",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-6",
+    "concept_id": "CID-6",
+    "hierarchy_id": "1.1.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto dedicato su contratto",
+    "description": "Trasporto dedicato su contratto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-7",
+    "concept_id": "CID-7",
+    "hierarchy_id": "1.1.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto merci stradale internazionale",
+    "description": "Trasporto merci stradale internazionale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-8",
+    "concept_id": "CID-8",
+    "hierarchy_id": "1.1.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi stradali per pacchi e ultimo miglio",
+    "description": "Servizi stradali per pacchi e ultimo miglio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-9",
+    "concept_id": "CID-9",
+    "hierarchy_id": "1.1.6.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Consegna dell'ultimo miglio",
+    "description": "Consegna dell'ultimo miglio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-10",
+    "concept_id": "CID-10",
+    "hierarchy_id": "1.1.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Traslochi domestici / servizi di trasloco",
+    "description": "Traslochi domestici / servizi di trasloco",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-11",
+    "concept_id": "CID-11",
+    "hierarchy_id": "1.1.8",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto stradale di rinfuse secche",
+    "description": "Trasporto stradale di rinfuse secche",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-12",
+    "concept_id": "CID-12",
+    "hierarchy_id": "1.1.9",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto con autocisterne",
+    "description": "Trasporto con autocisterne",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-13",
+    "concept_id": "CID-13",
+    "hierarchy_id": "1.1.10",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto pesante / carichi fuori sagoma",
+    "description": "Trasporto pesante / carichi fuori sagoma",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-14",
+    "concept_id": "CID-14",
+    "hierarchy_id": "1.1.11",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di trasporto veicoli",
+    "description": "Servizi di trasporto veicoli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-15",
+    "concept_id": "CID-15",
+    "hierarchy_id": "1.1.12",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto di bestiame",
+    "description": "Trasporto di bestiame",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-16",
+    "concept_id": "CID-16",
+    "hierarchy_id": "1.1.13",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto di materiali pericolosi - Hazmat",
+    "description": "Trasporto di materiali pericolosi - Hazmat",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-17",
+    "concept_id": "CID-17",
+    "hierarchy_id": "1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "trasporto marittimo",
+    "description": "trasporto marittimo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-18",
+    "concept_id": "CID-18",
+    "hierarchy_id": "1.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto container",
+    "description": "Trasporto container",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-19",
+    "concept_id": "CID-19",
+    "hierarchy_id": "1.2.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Carico completo del container - FCL",
+    "description": "Carico completo del container - FCL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-20",
+    "concept_id": "CID-20",
+    "hierarchy_id": "1.2.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Carico parziale del container - LCL",
+    "description": "Carico parziale del container - LCL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-21",
+    "concept_id": "CID-21",
+    "hierarchy_id": "1.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto marittimo di rinfuse secche",
+    "description": "Trasporto marittimo di rinfuse secche",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-22",
+    "concept_id": "CID-22",
+    "hierarchy_id": "1.2.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto marittimo di rinfuse liquide",
+    "description": "Trasporto marittimo di rinfuse liquide",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-23",
+    "concept_id": "CID-23",
+    "hierarchy_id": "1.2.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto Ro-Ro",
+    "description": "Trasporto Ro-Ro",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-24",
+    "concept_id": "CID-24",
+    "hierarchy_id": "1.2.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navigazione di linea",
+    "description": "Navigazione di linea",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-25",
+    "concept_id": "CID-25",
+    "hierarchy_id": "1.2.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navigazione tramp",
+    "description": "Navigazione tramp",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-26",
+    "concept_id": "CID-26",
+    "hierarchy_id": "1.2.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto marittimo a corto raggio - SSS",
+    "description": "Trasporto marittimo a corto raggio - SSS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-27",
+    "concept_id": "CID-27",
+    "hierarchy_id": "1.2.8",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica offshore",
+    "description": "Logistica offshore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-28",
+    "concept_id": "CID-28",
+    "hierarchy_id": "1.2.9",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di navigazione e rimorchio",
+    "description": "Servizi di navigazione e rimorchio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-29",
+    "concept_id": "CID-29",
+    "hierarchy_id": "1.2.9.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di rimorchiatore",
+    "description": "Servizi di rimorchiatore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-30",
+    "concept_id": "CID-30",
+    "hierarchy_id": "1.2.9.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Operazioni di ponte levatoio",
+    "description": "Operazioni di ponte levatoio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-31",
+    "concept_id": "CID-31",
+    "hierarchy_id": "1.2.9.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi marittimi di navigazione o comunicazione",
+    "description": "Servizi marittimi di navigazione o comunicazione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-32",
+    "concept_id": "CID-32",
+    "hierarchy_id": "1.2.9.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio dead man anchor",
+    "description": "Servizio dead man anchor",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-33",
+    "concept_id": "CID-33",
+    "hierarchy_id": "1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto aereo merci",
+    "description": "Trasporto aereo merci",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-34",
+    "concept_id": "CID-34",
+    "hierarchy_id": "1.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di trasporto aereo merci",
+    "description": "Servizi di trasporto aereo merci",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-35",
+    "concept_id": "CID-35",
+    "hierarchy_id": "1.3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Corriere aereo espresso",
+    "description": "Corriere aereo espresso",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-36",
+    "concept_id": "CID-36",
+    "hierarchy_id": "1.3.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto aereo door-to-door",
+    "description": "Trasporto aereo door-to-door",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-37",
+    "concept_id": "CID-37",
+    "hierarchy_id": "1.3.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Consolidamento del carico aereo",
+    "description": "Consolidamento del carico aereo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-38",
+    "concept_id": "CID-38",
+    "hierarchy_id": "1.3.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi charter per carico aereo",
+    "description": "Servizi charter per carico aereo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-39",
+    "concept_id": "CID-39",
+    "hierarchy_id": "1.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto ferroviario merci",
+    "description": "Trasporto ferroviario merci",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-40",
+    "concept_id": "CID-40",
+    "hierarchy_id": "1.4.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto ferroviario a carro singolo",
+    "description": "Trasporto ferroviario a carro singolo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-41",
+    "concept_id": "CID-41",
+    "hierarchy_id": "1.4.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto ferroviario intermodale",
+    "description": "Trasporto ferroviario intermodale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-42",
+    "concept_id": "CID-42",
+    "hierarchy_id": "1.4.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto combinato strada-rotaia",
+    "description": "Trasporto combinato strada-rotaia",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-43",
+    "concept_id": "CID-43",
+    "hierarchy_id": "1.4.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Cargo ferroviario ad alta velocità",
+    "description": "Cargo ferroviario ad alta velocità",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-44",
+    "concept_id": "CID-44",
+    "hierarchy_id": "1.4.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di leasing di carri ferroviari",
+    "description": "Servizi di leasing di carri ferroviari",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-45",
+    "concept_id": "CID-45",
+    "hierarchy_id": "1.4.4.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio di carri merci ferroviari",
+    "description": "Noleggio di carri merci ferroviari",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-46",
+    "concept_id": "CID-46",
+    "hierarchy_id": "1.4.4.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio di carri cisterna ferroviari",
+    "description": "Noleggio di carri cisterna ferroviari",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-47",
+    "concept_id": "CID-47",
+    "hierarchy_id": "1.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto via condotta",
+    "description": "Trasporto via condotta",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-48",
+    "concept_id": "CID-48",
+    "hierarchy_id": "1.5.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto via condotta di prodotti petroliferi",
+    "description": "Trasporto via condotta di prodotti petroliferi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-49",
+    "concept_id": "CID-49",
+    "hierarchy_id": "1.5.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto di acqua via condotta",
+    "description": "Trasporto di acqua via condotta",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-50",
+    "concept_id": "CID-50",
+    "hierarchy_id": "1.5.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto di gas naturale via condotta",
+    "description": "Trasporto di gas naturale via condotta",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-51",
+    "concept_id": "CID-51",
+    "hierarchy_id": "1.5.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto di sostanze chimiche via condotta",
+    "description": "Trasporto di sostanze chimiche via condotta",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-52",
+    "concept_id": "CID-52",
+    "hierarchy_id": "1.5.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Ispezione interna in linea di condotte",
+    "description": "Ispezione interna in linea di condotte",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-53",
+    "concept_id": "CID-53",
+    "hierarchy_id": "1.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto merci intermodale e combinato",
+    "description": "Trasporto merci intermodale e combinato",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-54",
+    "concept_id": "CID-54",
+    "hierarchy_id": "1.6.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto intermodale di container",
+    "description": "Trasporto intermodale di container",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-55",
+    "concept_id": "CID-55",
+    "hierarchy_id": "1.6.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto aereo-mare",
+    "description": "Trasporto aereo-mare",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-56",
+    "concept_id": "CID-56",
+    "hierarchy_id": "1.6.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto mare-ferrovia",
+    "description": "Trasporto mare-ferrovia",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-57",
+    "concept_id": "CID-57",
+    "hierarchy_id": "1.6.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto mare-camion",
+    "description": "Trasporto mare-camion",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-58",
+    "concept_id": "CID-58",
+    "hierarchy_id": "1.6.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto aereo-camion",
+    "description": "Trasporto aereo-camion",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-59",
+    "concept_id": "CID-59",
+    "hierarchy_id": "1.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di corriere / posta",
+    "description": "Servizi di corriere / posta",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-60",
+    "concept_id": "CID-60",
+    "hierarchy_id": "1.7.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi nazionali di consegna postale",
+    "description": "Servizi nazionali di consegna postale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-61",
+    "concept_id": "CID-61",
+    "hierarchy_id": "1.7.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di casella postale",
+    "description": "Servizi di casella postale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-62",
+    "concept_id": "CID-62",
+    "hierarchy_id": "1.7.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di spedizione postale / ritiro / consegna",
+    "description": "Servizi di spedizione postale / ritiro / consegna",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-63",
+    "concept_id": "CID-63",
+    "hierarchy_id": "1.7.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi mondiali di consegna di lettere o piccoli pacchi",
+    "description": "Servizi mondiali di consegna di lettere o piccoli pacchi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-64",
+    "concept_id": "CID-64",
+    "hierarchy_id": "1.7.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi locali di consegna di lettere o piccoli pacchi",
+    "description": "Servizi locali di consegna di lettere o piccoli pacchi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-65",
+    "concept_id": "CID-65",
+    "hierarchy_id": "1.7.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di corriere in bicicletta o scooter",
+    "description": "Servizi di corriere in bicicletta o scooter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-66",
+    "concept_id": "CID-66",
+    "hierarchy_id": "2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di supply chain e logistica",
+    "description": "Servizi di supply chain e logistica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-67",
+    "concept_id": "CID-67",
+    "hierarchy_id": "2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Pianificazione e consulenza",
+    "description": "Pianificazione e consulenza",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-68",
+    "concept_id": "CID-68",
+    "hierarchy_id": "2.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Consulenza sulla supply chain",
+    "description": "Consulenza sulla supply chain",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-69",
+    "concept_id": "CID-69",
+    "hierarchy_id": "2.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Pianificazione della domanda e delle scorte",
+    "description": "Pianificazione della domanda e delle scorte",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-70",
+    "concept_id": "CID-70",
+    "hierarchy_id": "2.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Ottimizzazione della rete",
+    "description": "Ottimizzazione della rete",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-71",
+    "concept_id": "CID-71",
+    "hierarchy_id": "2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di organizzazione del trasporto",
+    "description": "Servizi di organizzazione del trasporto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-72",
+    "concept_id": "CID-72",
+    "hierarchy_id": "2.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Spedizione merci",
+    "description": "Spedizione merci",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-73",
+    "concept_id": "CID-73",
+    "hierarchy_id": "2.2.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Consolidamento carichi",
+    "description": "Consolidamento carichi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-74",
+    "concept_id": "CID-74",
+    "hierarchy_id": "2.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica transfrontaliera",
+    "description": "Logistica transfrontaliera",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-75",
+    "concept_id": "CID-75",
+    "hierarchy_id": "2.2.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di trasporto merci comprensivi di assicurazione",
+    "description": "Servizi di trasporto merci comprensivi di assicurazione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-76",
+    "concept_id": "CID-76",
+    "hierarchy_id": "2.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Magazzinaggio e distribuzione",
+    "description": "Magazzinaggio e distribuzione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-77",
+    "concept_id": "CID-77",
+    "hierarchy_id": "2.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Magazzinaggio pubblico",
+    "description": "Magazzinaggio pubblico",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-78",
+    "concept_id": "CID-78",
+    "hierarchy_id": "2.3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Magazzinaggio in conto contratto",
+    "description": "Magazzinaggio in conto contratto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-79",
+    "concept_id": "CID-79",
+    "hierarchy_id": "2.3.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Gestione dei centri di distribuzione",
+    "description": "Gestione dei centri di distribuzione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-80",
+    "concept_id": "CID-80",
+    "hierarchy_id": "2.3.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Stoccaggio a temperatura controllata",
+    "description": "Stoccaggio a temperatura controllata",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-81",
+    "concept_id": "CID-81",
+    "hierarchy_id": "2.3.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Magazzinaggio doganale",
+    "description": "Magazzinaggio doganale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-82",
+    "concept_id": "CID-82",
+    "hierarchy_id": "2.3.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Centri di fulfillment e-commerce",
+    "description": "Centri di fulfillment e-commerce",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-83",
+    "concept_id": "CID-83",
+    "hierarchy_id": "2.3.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Gestione delle scorte",
+    "description": "Gestione delle scorte",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-84",
+    "concept_id": "CID-84",
+    "hierarchy_id": "2.3.8",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Cross-docking",
+    "description": "Cross-docking",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-85",
+    "concept_id": "CID-85",
+    "hierarchy_id": "2.3.9",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Stoccaggio alla rinfusa",
+    "description": "Stoccaggio alla rinfusa",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-86",
+    "concept_id": "CID-86",
+    "hierarchy_id": "2.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi logistici a valore aggiunto",
+    "description": "Servizi logistici a valore aggiunto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-87",
+    "concept_id": "CID-87",
+    "hierarchy_id": "2.4.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Prelievo e imballaggio",
+    "description": "Prelievo e imballaggio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-88",
+    "concept_id": "CID-88",
+    "hierarchy_id": "2.4.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Etichettatura e prezzatura",
+    "description": "Etichettatura e prezzatura",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-89",
+    "concept_id": "CID-89",
+    "hierarchy_id": "2.4.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Kitting",
+    "description": "Kitting",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-90",
+    "concept_id": "CID-90",
+    "hierarchy_id": "2.4.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Serializzazione",
+    "description": "Serializzazione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-91",
+    "concept_id": "CID-91",
+    "hierarchy_id": "2.4.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di imballaggio",
+    "description": "Servizi di imballaggio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-92",
+    "concept_id": "CID-92",
+    "hierarchy_id": "2.4.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di movimentazione materiali",
+    "description": "Servizi di movimentazione materiali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-93",
+    "concept_id": "CID-93",
+    "hierarchy_id": "2.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Dogana e conformità commerciale",
+    "description": "Dogana e conformità commerciale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-94",
+    "concept_id": "CID-94",
+    "hierarchy_id": "2.5.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi doganali",
+    "description": "Servizi doganali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-95",
+    "concept_id": "CID-95",
+    "hierarchy_id": "2.5.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Conformità del commercio estero",
+    "description": "Conformità del commercio estero",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-96",
+    "concept_id": "CID-96",
+    "hierarchy_id": "2.5.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Documentazione import/export",
+    "description": "Documentazione import/export",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-97",
+    "concept_id": "CID-97",
+    "hierarchy_id": "2.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Modelli di fornitori di servizi logistici",
+    "description": "Modelli di fornitori di servizi logistici",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-98",
+    "concept_id": "CID-98",
+    "hierarchy_id": "2.6.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica di terza parte - 3PL",
+    "description": "Logistica di terza parte - 3PL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-99",
+    "concept_id": "CID-99",
+    "hierarchy_id": "2.6.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica di quarta parte - 4PL",
+    "description": "Logistica di quarta parte - 4PL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-100",
+    "concept_id": "CID-100",
+    "hierarchy_id": "2.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di ispezione e survey",
+    "description": "Servizi di ispezione e survey",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-101",
+    "concept_id": "CID-101",
+    "hierarchy_id": "2.7.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di ispezione dell'imballaggio",
+    "description": "Servizi di ispezione dell'imballaggio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-102",
+    "concept_id": "CID-102",
+    "hierarchy_id": "2.7.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di cargo survey",
+    "description": "Servizi di cargo survey",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-103",
+    "concept_id": "CID-103",
+    "hierarchy_id": "2.7.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Ispezioni di controllo dei parassiti",
+    "description": "Ispezioni di controllo dei parassiti",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-104",
+    "concept_id": "CID-104",
+    "hierarchy_id": "3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica specializzata",
+    "description": "Logistica specializzata",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-105",
+    "concept_id": "CID-105",
+    "hierarchy_id": "3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica a temperatura controllata",
+    "description": "Logistica a temperatura controllata",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-106",
+    "concept_id": "CID-106",
+    "hierarchy_id": "3.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica della catena del freddo",
+    "description": "Logistica della catena del freddo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-107",
+    "concept_id": "CID-107",
+    "hierarchy_id": "3.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica farmaceutica",
+    "description": "Logistica farmaceutica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-108",
+    "concept_id": "CID-108",
+    "hierarchy_id": "3.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica di merci deperibili",
+    "description": "Logistica di merci deperibili",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-109",
+    "concept_id": "CID-109",
+    "hierarchy_id": "3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica heavy lift e di progetto",
+    "description": "Logistica heavy lift e di progetto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-110",
+    "concept_id": "CID-110",
+    "hierarchy_id": "3.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica del settore energetico",
+    "description": "Logistica del settore energetico",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-111",
+    "concept_id": "CID-111",
+    "hierarchy_id": "3.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica delle costruzioni",
+    "description": "Logistica delle costruzioni",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-112",
+    "concept_id": "CID-112",
+    "hierarchy_id": "3.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica specifica di settore",
+    "description": "Logistica specifica di settore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-113",
+    "concept_id": "CID-113",
+    "hierarchy_id": "3.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica automotive",
+    "description": "Logistica automotive",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-114",
+    "concept_id": "CID-114",
+    "hierarchy_id": "3.3.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica dei ricambi",
+    "description": "Logistica dei ricambi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-115",
+    "concept_id": "CID-115",
+    "hierarchy_id": "3.3.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica dei veicoli finiti",
+    "description": "Logistica dei veicoli finiti",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-116",
+    "concept_id": "CID-116",
+    "hierarchy_id": "3.3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica retail",
+    "description": "Logistica retail",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-117",
+    "concept_id": "CID-117",
+    "hierarchy_id": "3.3.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica fast fashion",
+    "description": "Logistica fast fashion",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-118",
+    "concept_id": "CID-118",
+    "hierarchy_id": "3.3.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica aerospaziale e della difesa",
+    "description": "Logistica aerospaziale e della difesa",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-119",
+    "concept_id": "CID-119",
+    "hierarchy_id": "3.3.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica high-tech ed elettronica",
+    "description": "Logistica high-tech ed elettronica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-120",
+    "concept_id": "CID-120",
+    "hierarchy_id": "3.3.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica chimica",
+    "description": "Logistica chimica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-121",
+    "concept_id": "CID-121",
+    "hierarchy_id": "3.3.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica oil and gas",
+    "description": "Logistica oil and gas",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-122",
+    "concept_id": "CID-122",
+    "hierarchy_id": "3.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Altri servizi logistici specializzati",
+    "description": "Altri servizi logistici specializzati",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-123",
+    "concept_id": "CID-123",
+    "hierarchy_id": "3.4.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica di merci pericolose",
+    "description": "Logistica di merci pericolose",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-124",
+    "concept_id": "CID-124",
+    "hierarchy_id": "3.4.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica di animali vivi",
+    "description": "Logistica di animali vivi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-125",
+    "concept_id": "CID-125",
+    "hierarchy_id": "3.4.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica di beni di alto valore e sicurezza",
+    "description": "Logistica di beni di alto valore e sicurezza",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-126",
+    "concept_id": "CID-126",
+    "hierarchy_id": "3.4.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica per arte e mostre",
+    "description": "Logistica per arte e mostre",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-127",
+    "concept_id": "CID-127",
+    "hierarchy_id": "3.4.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica urbana",
+    "description": "Logistica urbana",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-128",
+    "concept_id": "CID-128",
+    "hierarchy_id": "3.4.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Logistica inversa",
+    "description": "Logistica inversa",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-129",
+    "concept_id": "CID-129",
+    "hierarchy_id": "3.4.6.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Gestione dei resi",
+    "description": "Gestione dei resi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-130",
+    "concept_id": "CID-130",
+    "hierarchy_id": "3.4.6.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Riparazione e ricondizionamento",
+    "description": "Riparazione e ricondizionamento",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-131",
+    "concept_id": "CID-131",
+    "hierarchy_id": "3.4.6.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Riciclo e recupero dei materiali",
+    "description": "Riciclo e recupero dei materiali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-132",
+    "concept_id": "CID-132",
+    "hierarchy_id": "4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Infrastruttura e attrezzature logistiche",
+    "description": "Infrastruttura e attrezzature logistiche",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-133",
+    "concept_id": "CID-133",
+    "hierarchy_id": "4.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Terminal e porti",
+    "description": "Terminal e porti",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-134",
+    "concept_id": "CID-134",
+    "hierarchy_id": "4.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Operazioni portuali",
+    "description": "Operazioni portuali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-135",
+    "concept_id": "CID-135",
+    "hierarchy_id": "4.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Operazioni portuali interne",
+    "description": "Operazioni portuali interne",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-136",
+    "concept_id": "CID-136",
+    "hierarchy_id": "4.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Terminal merci ferroviari",
+    "description": "Terminal merci ferroviari",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-137",
+    "concept_id": "CID-137",
+    "hierarchy_id": "4.1.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Terminal cargo aerei",
+    "description": "Terminal cargo aerei",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-138",
+    "concept_id": "CID-138",
+    "hierarchy_id": "4.1.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di base costiera di supporto offshore",
+    "description": "Servizi di base costiera di supporto offshore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-139",
+    "concept_id": "CID-139",
+    "hierarchy_id": "4.1.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di controllo del traffico aereo",
+    "description": "Servizi di controllo del traffico aereo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-140",
+    "concept_id": "CID-140",
+    "hierarchy_id": "4.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Immobili logistici",
+    "description": "Immobili logistici",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-141",
+    "concept_id": "CID-141",
+    "hierarchy_id": "4.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Parchi logistici e zone franche",
+    "description": "Parchi logistici e zone franche",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-142",
+    "concept_id": "CID-142",
+    "hierarchy_id": "4.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Attrezzature logistiche",
+    "description": "Attrezzature logistiche",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-143",
+    "concept_id": "CID-143",
+    "hierarchy_id": "4.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Container per merci",
+    "description": "Container per merci",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-144",
+    "concept_id": "CID-144",
+    "hierarchy_id": "4.3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Telai per container",
+    "description": "Telai per container",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-145",
+    "concept_id": "CID-145",
+    "hierarchy_id": "4.3.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Carrelli elevatori",
+    "description": "Carrelli elevatori",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-146",
+    "concept_id": "CID-146",
+    "hierarchy_id": "4.3.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Attrezzature di magazzino",
+    "description": "Attrezzature di magazzino",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-147",
+    "concept_id": "CID-147",
+    "hierarchy_id": "4.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio e leasing di asset logistici",
+    "description": "Noleggio e leasing di asset logistici",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-148",
+    "concept_id": "CID-148",
+    "hierarchy_id": "4.4.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di noleggio di container di trasporto",
+    "description": "Servizi di noleggio di container di trasporto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-149",
+    "concept_id": "CID-149",
+    "hierarchy_id": "4.4.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di noleggio di container intermodali per merci",
+    "description": "Servizio di noleggio di container intermodali per merci",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-150",
+    "concept_id": "CID-150",
+    "hierarchy_id": "4.4.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di noleggio o leasing di mezzi di trasporto",
+    "description": "Servizi di noleggio o leasing di mezzi di trasporto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-151",
+    "concept_id": "CID-151",
+    "hierarchy_id": "4.4.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio di aeromobili cargo con operatore",
+    "description": "Noleggio di aeromobili cargo con operatore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-152",
+    "concept_id": "CID-152",
+    "hierarchy_id": "4.4.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio di nave da carico per trasporto per vie d'acqua interne con operatore",
+    "description": "Noleggio di nave da carico per trasporto per vie d'acqua interne con operatore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-153",
+    "concept_id": "CID-153",
+    "hierarchy_id": "4.4.2.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio di nave da carico per trasporto costiero e transoceanico con operatore",
+    "description": "Noleggio di nave da carico per trasporto costiero e transoceanico con operatore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-154",
+    "concept_id": "CID-154",
+    "hierarchy_id": "4.4.2.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio di camion con operatore",
+    "description": "Noleggio di camion con operatore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-155",
+    "concept_id": "CID-155",
+    "hierarchy_id": "5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Tecnologia e digitalizzazione della logistica",
+    "description": "Tecnologia e digitalizzazione della logistica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-156",
+    "concept_id": "CID-156",
+    "hierarchy_id": "5.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "soluzioni software",
+    "description": "soluzioni software",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-157",
+    "concept_id": "CID-157",
+    "hierarchy_id": "5.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Sistema di gestione del trasporto - TMS",
+    "description": "Sistema di gestione del trasporto - TMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-158",
+    "concept_id": "CID-158",
+    "hierarchy_id": "5.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Sistema di gestione del magazzino - WMS",
+    "description": "Sistema di gestione del magazzino - WMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-159",
+    "concept_id": "CID-159",
+    "hierarchy_id": "5.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Software per la gestione della supply chain",
+    "description": "Software per la gestione della supply chain",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-160",
+    "concept_id": "CID-160",
+    "hierarchy_id": "5.1.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Software di pianificazione percorsi e gestione flotte",
+    "description": "Software di pianificazione percorsi e gestione flotte",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-161",
+    "concept_id": "CID-161",
+    "hierarchy_id": "5.1.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Sistemi di track & trace",
+    "description": "Sistemi di track & trace",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-162",
+    "concept_id": "CID-162",
+    "hierarchy_id": "5.1.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Sistema di gestione del piazzale - YMS",
+    "description": "Sistema di gestione del piazzale - YMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-163",
+    "concept_id": "CID-163",
+    "hierarchy_id": "5.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Piattaforme digitali e integrazione",
+    "description": "Piattaforme digitali e integrazione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-164",
+    "concept_id": "CID-164",
+    "hierarchy_id": "5.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Piattaforme digitali di trasporto merci",
+    "description": "Piattaforme digitali di trasporto merci",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-165",
+    "concept_id": "CID-165",
+    "hierarchy_id": "5.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Soluzioni API e integrazione logistica",
+    "description": "Soluzioni API e integrazione logistica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-166",
+    "concept_id": "CID-166",
+    "hierarchy_id": "5.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Tecnologie emergenti",
+    "description": "Tecnologie emergenti",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-167",
+    "concept_id": "CID-167",
+    "hierarchy_id": "5.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "IA e analisi dei dati nella logistica",
+    "description": "IA e analisi dei dati nella logistica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-168",
+    "concept_id": "CID-168",
+    "hierarchy_id": "5.3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Blockchain nella logistica",
+    "description": "Blockchain nella logistica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-169",
+    "concept_id": "CID-169",
+    "hierarchy_id": "5.3.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Veicoli autonomi nella logistica",
+    "description": "Veicoli autonomi nella logistica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-170",
+    "concept_id": "CID-170",
+    "hierarchy_id": "6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di supporto e aziendali",
+    "description": "Servizi di supporto e aziendali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-171",
+    "concept_id": "CID-171",
+    "hierarchy_id": "6.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Consulenza e formazione",
+    "description": "Consulenza e formazione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-172",
+    "concept_id": "CID-172",
+    "hierarchy_id": "6.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Miglioramento dei processi logistici",
+    "description": "Miglioramento dei processi logistici",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-173",
+    "concept_id": "CID-173",
+    "hierarchy_id": "6.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Formazione e certificazione logistica",
+    "description": "Formazione e certificazione logistica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-174",
+    "concept_id": "CID-174",
+    "hierarchy_id": "6.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi finanziari e assicurativi",
+    "description": "Servizi finanziari e assicurativi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-175",
+    "concept_id": "CID-175",
+    "hierarchy_id": "6.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Assicurazione del carico",
+    "description": "Assicurazione del carico",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-176",
+    "concept_id": "CID-176",
+    "hierarchy_id": "6.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Assicurazione di responsabilità civile",
+    "description": "Assicurazione di responsabilità civile",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-177",
+    "concept_id": "CID-177",
+    "hierarchy_id": "6.2.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Assicurazione veicoli e flotte",
+    "description": "Assicurazione veicoli e flotte",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-178",
+    "concept_id": "CID-178",
+    "hierarchy_id": "6.2.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Finanza commerciale",
+    "description": "Finanza commerciale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-179",
+    "concept_id": "CID-179",
+    "hierarchy_id": "6.2.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Factoring",
+    "description": "Factoring",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-180",
+    "concept_id": "CID-180",
+    "hierarchy_id": "6.2.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Pagamento e audit del trasporto merci",
+    "description": "Pagamento e audit del trasporto merci",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-181",
+    "concept_id": "CID-181",
+    "hierarchy_id": "6.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi legali",
+    "description": "Servizi legali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-182",
+    "concept_id": "CID-182",
+    "hierarchy_id": "6.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Diritto dei contratti di trasporto",
+    "description": "Diritto dei contratti di trasporto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-183",
+    "concept_id": "CID-183",
+    "hierarchy_id": "6.3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Diritto doganale e del commercio estero",
+    "description": "Diritto doganale e del commercio estero",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-184",
+    "concept_id": "CID-184",
+    "hierarchy_id": "7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Sostenibilità e logistica verde",
+    "description": "Sostenibilità e logistica verde",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-185",
+    "concept_id": "CID-185",
+    "hierarchy_id": "7.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Valutazione del carbonio e delle emissioni",
+    "description": "Valutazione del carbonio e delle emissioni",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-186",
+    "concept_id": "CID-186",
+    "hierarchy_id": "7.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Calcolo dell'impronta di carbonio",
+    "description": "Calcolo dell'impronta di carbonio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-187",
+    "concept_id": "CID-187",
+    "hierarchy_id": "7.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Soluzioni verdi",
+    "description": "Soluzioni verdi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-188",
+    "concept_id": "CID-188",
+    "hierarchy_id": "7.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Soluzioni di carburanti sostenibili",
+    "description": "Soluzioni di carburanti sostenibili",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-189",
+    "concept_id": "CID-189",
+    "hierarchy_id": "7.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Consulenza per la logistica verde",
+    "description": "Consulenza per la logistica verde",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-190",
+    "concept_id": "CID-190",
+    "hierarchy_id": "7.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Imballaggi sostenibili e riduzione dei rifiuti",
+    "description": "Imballaggi sostenibili e riduzione dei rifiuti",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-191",
+    "concept_id": "CID-191",
+    "hierarchy_id": "7.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Ottimizzazione dei rifiuti e degli imballaggi",
+    "description": "Ottimizzazione dei rifiuti e degli imballaggi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-192",
+    "concept_id": "CID-192",
+    "hierarchy_id": "7.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Pianificazione ambientale e decarbonizzazione",
+    "description": "Pianificazione ambientale e decarbonizzazione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-193",
+    "concept_id": "CID-193",
+    "hierarchy_id": "7.4.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Roadmap di sostenibilità e pianificazione della transizione",
+    "description": "Roadmap di sostenibilità e pianificazione della transizione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-194",
+    "concept_id": "CID-194",
+    "hierarchy_id": "7.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Audit ambientale",
+    "description": "Audit ambientale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-195",
+    "concept_id": "CID-195",
+    "hierarchy_id": "7.5.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Audit ambientale e revisione della conformità",
+    "description": "Audit ambientale e revisione della conformità",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-196",
+    "concept_id": "CID-196",
+    "hierarchy_id": "7.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Reporting e divulgazione ambientale",
+    "description": "Reporting e divulgazione ambientale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-197",
+    "concept_id": "CID-197",
+    "hierarchy_id": "7.6.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Rendicontazione emissioni / sostenibilità",
+    "description": "Rendicontazione emissioni / sostenibilità",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-198",
+    "concept_id": "CID-198",
+    "hierarchy_id": "8",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di trasporto passeggeri e mobilità",
+    "description": "Servizi di trasporto passeggeri e mobilità",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-199",
+    "concept_id": "CID-199",
+    "hierarchy_id": "8.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto aereo passeggeri",
+    "description": "Trasporto aereo passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-200",
+    "concept_id": "CID-200",
+    "hierarchy_id": "8.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di elicottero",
+    "description": "Servizi di elicottero",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-201",
+    "concept_id": "CID-201",
+    "hierarchy_id": "8.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Viaggio aereo commerciale",
+    "description": "Viaggio aereo commerciale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-202",
+    "concept_id": "CID-202",
+    "hierarchy_id": "8.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Viaggio in aereo charter",
+    "description": "Viaggio in aereo charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-203",
+    "concept_id": "CID-203",
+    "hierarchy_id": "8.1.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di visita panoramica aerea",
+    "description": "Servizio di visita panoramica aerea",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-204",
+    "concept_id": "CID-204",
+    "hierarchy_id": "8.1.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di noleggio o leasing di aeromobili passeggeri",
+    "description": "Servizio di noleggio o leasing di aeromobili passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-205",
+    "concept_id": "CID-205",
+    "hierarchy_id": "8.1.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Evacuazione medica con aeroambulanza",
+    "description": "Evacuazione medica con aeroambulanza",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-206",
+    "concept_id": "CID-206",
+    "hierarchy_id": "8.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto ferroviario passeggeri",
+    "description": "Trasporto ferroviario passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-207",
+    "concept_id": "CID-207",
+    "hierarchy_id": "8.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di trasporto con metropolitana leggera",
+    "description": "Servizi di trasporto con metropolitana leggera",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-208",
+    "concept_id": "CID-208",
+    "hierarchy_id": "8.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto metropolitano",
+    "description": "Trasporto metropolitano",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-209",
+    "concept_id": "CID-209",
+    "hierarchy_id": "8.2.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi ferroviari continentali / intercontinentali",
+    "description": "Servizi ferroviari continentali / intercontinentali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-210",
+    "concept_id": "CID-210",
+    "hierarchy_id": "8.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto marittimo passeggeri",
+    "description": "Trasporto marittimo passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-211",
+    "concept_id": "CID-211",
+    "hierarchy_id": "8.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Taxi acquei",
+    "description": "Taxi acquei",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-212",
+    "concept_id": "CID-212",
+    "hierarchy_id": "8.3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Crociere con pernottamento",
+    "description": "Crociere con pernottamento",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-213",
+    "concept_id": "CID-213",
+    "hierarchy_id": "8.3.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Escursioni turistiche in barca",
+    "description": "Escursioni turistiche in barca",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-214",
+    "concept_id": "CID-214",
+    "hierarchy_id": "8.3.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di noleggio o leasing di imbarcazioni",
+    "description": "Servizio di noleggio o leasing di imbarcazioni",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-215",
+    "concept_id": "CID-215",
+    "hierarchy_id": "8.3.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di trasporto del personale verso piattaforme offshore",
+    "description": "Servizio di trasporto del personale verso piattaforme offshore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-216",
+    "concept_id": "CID-216",
+    "hierarchy_id": "8.3.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Traghetto passeggeri costiero e transoceanico",
+    "description": "Traghetto passeggeri costiero e transoceanico",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-217",
+    "concept_id": "CID-217",
+    "hierarchy_id": "8.3.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Traghetto passeggeri per vie d'acqua interne",
+    "description": "Traghetto passeggeri per vie d'acqua interne",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-218",
+    "concept_id": "CID-218",
+    "hierarchy_id": "8.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto stradale passeggeri",
+    "description": "Trasporto stradale passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-219",
+    "concept_id": "CID-219",
+    "hierarchy_id": "8.4.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di autobus di linea",
+    "description": "Servizi di autobus di linea",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-220",
+    "concept_id": "CID-220",
+    "hierarchy_id": "8.4.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di autobus charter",
+    "description": "Servizi di autobus charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-221",
+    "concept_id": "CID-221",
+    "hierarchy_id": "8.4.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi taxi",
+    "description": "Servizi taxi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-222",
+    "concept_id": "CID-222",
+    "hierarchy_id": "8.4.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Tariffe di parcheggio",
+    "description": "Tariffe di parcheggio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-223",
+    "concept_id": "CID-223",
+    "hierarchy_id": "8.4.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio veicoli",
+    "description": "Noleggio veicoli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-224",
+    "concept_id": "CID-224",
+    "hierarchy_id": "8.4.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Leasing di berline / coupé / station wagon",
+    "description": "Leasing di berline / coupé / station wagon",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-225",
+    "concept_id": "CID-225",
+    "hierarchy_id": "8.4.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio limousine o auto con autista",
+    "description": "Servizio limousine o auto con autista",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-226",
+    "concept_id": "CID-226",
+    "hierarchy_id": "8.4.8",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Leasing di autocarri leggeri / SUV",
+    "description": "Leasing di autocarri leggeri / SUV",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-227",
+    "concept_id": "CID-227",
+    "hierarchy_id": "8.4.9",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Leasing di van passeggeri / minivan",
+    "description": "Leasing di van passeggeri / minivan",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-228",
+    "concept_id": "CID-228",
+    "hierarchy_id": "8.4.10",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di visita panoramica via terra",
+    "description": "Servizio di visita panoramica via terra",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-229",
+    "concept_id": "CID-229",
+    "hierarchy_id": "8.4.11",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Evacuazione medica in ambulanza",
+    "description": "Evacuazione medica in ambulanza",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-230",
+    "concept_id": "CID-230",
+    "hierarchy_id": "8.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di trasporto passeggeri intermodale",
+    "description": "Servizi di trasporto passeggeri intermodale",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-231",
+    "concept_id": "CID-231",
+    "hierarchy_id": "8.5.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto urbano e suburbano multimodale per passeggeri",
+    "description": "Trasporto urbano e suburbano multimodale per passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-232",
+    "concept_id": "CID-232",
+    "hierarchy_id": "8.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Trasporto spaziale passeggeri",
+    "description": "Trasporto spaziale passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-233",
+    "concept_id": "CID-233",
+    "hierarchy_id": "9",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Asset di trasporto, veicoli e mezzi",
+    "description": "Asset di trasporto, veicoli e mezzi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-234",
+    "concept_id": "CID-234",
+    "hierarchy_id": "9.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Veicoli a motore",
+    "description": "Veicoli a motore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-235",
+    "concept_id": "CID-235",
+    "hierarchy_id": "9.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Veicoli a motore per il trasporto passeggeri",
+    "description": "Veicoli a motore per il trasporto passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-236",
+    "concept_id": "CID-236",
+    "hierarchy_id": "9.1.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Minibus",
+    "description": "Minibus",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-237",
+    "concept_id": "CID-237",
+    "hierarchy_id": "9.1.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Autobus",
+    "description": "Autobus",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-238",
+    "concept_id": "CID-238",
+    "hierarchy_id": "9.1.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Automobili / Auto",
+    "description": "Automobili / Auto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-239",
+    "concept_id": "CID-239",
+    "hierarchy_id": "9.1.1.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Station wagon",
+    "description": "Station wagon",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-240",
+    "concept_id": "CID-240",
+    "hierarchy_id": "9.1.1.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Minivan o van",
+    "description": "Minivan o van",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-241",
+    "concept_id": "CID-241",
+    "hierarchy_id": "9.1.1.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Limousine",
+    "description": "Limousine",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-242",
+    "concept_id": "CID-242",
+    "hierarchy_id": "9.1.1.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Autocarri leggeri o SUV",
+    "description": "Autocarri leggeri o SUV",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-243",
+    "concept_id": "CID-243",
+    "hierarchy_id": "9.1.1.8",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Veicoli a propulsione elettrica",
+    "description": "Veicoli a propulsione elettrica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-244",
+    "concept_id": "CID-244",
+    "hierarchy_id": "9.1.1.9",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Veicoli blindati",
+    "description": "Veicoli blindati",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-245",
+    "concept_id": "CID-245",
+    "hierarchy_id": "9.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Veicoli a due ruote motorizzati",
+    "description": "Veicoli a due ruote motorizzati",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-246",
+    "concept_id": "CID-246",
+    "hierarchy_id": "9.1.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Motocicli",
+    "description": "Motocicli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-247",
+    "concept_id": "CID-247",
+    "hierarchy_id": "9.1.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Scooter",
+    "description": "Scooter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-248",
+    "concept_id": "CID-248",
+    "hierarchy_id": "9.1.2.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Ciclomotori",
+    "description": "Ciclomotori",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-249",
+    "concept_id": "CID-249",
+    "hierarchy_id": "9.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "imbarcazioni marittime",
+    "description": "imbarcazioni marittime",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-250",
+    "concept_id": "CID-250",
+    "hierarchy_id": "9.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Imbarcazioni marittime commerciali",
+    "description": "Imbarcazioni marittime commerciali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-251",
+    "concept_id": "CID-251",
+    "hierarchy_id": "9.2.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navi cargo o portacontainer",
+    "description": "Navi cargo o portacontainer",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-252",
+    "concept_id": "CID-252",
+    "hierarchy_id": "9.2.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navi cisterna",
+    "description": "Navi cisterna",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-253",
+    "concept_id": "CID-253",
+    "hierarchy_id": "9.2.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Rimorchiatori",
+    "description": "Rimorchiatori",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-254",
+    "concept_id": "CID-254",
+    "hierarchy_id": "9.2.1.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Chiatte",
+    "description": "Chiatte",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-255",
+    "concept_id": "CID-255",
+    "hierarchy_id": "9.2.1.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Traghetti passeggeri o per automobili",
+    "description": "Traghetti passeggeri o per automobili",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-256",
+    "concept_id": "CID-256",
+    "hierarchy_id": "9.2.1.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navi da crociera",
+    "description": "Navi da crociera",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-257",
+    "concept_id": "CID-257",
+    "hierarchy_id": "9.2.1.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Imbarcazioni per equipaggio per petrolio o gas",
+    "description": "Imbarcazioni per equipaggio per petrolio o gas",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-258",
+    "concept_id": "CID-258",
+    "hierarchy_id": "9.2.1.8",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Imbarcazioni di lavoro per petrolio o gas",
+    "description": "Imbarcazioni di lavoro per petrolio o gas",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-259",
+    "concept_id": "CID-259",
+    "hierarchy_id": "9.2.1.9",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navi sismiche",
+    "description": "Navi sismiche",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-260",
+    "concept_id": "CID-260",
+    "hierarchy_id": "9.2.1.10",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Rompighiaccio",
+    "description": "Rompighiaccio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-261",
+    "concept_id": "CID-261",
+    "hierarchy_id": "9.2.1.11",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Gasiere per gas liquefatto",
+    "description": "Gasiere per gas liquefatto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-262",
+    "concept_id": "CID-262",
+    "hierarchy_id": "9.2.1.12",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navi cisterna chimiche",
+    "description": "Navi cisterna chimiche",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-263",
+    "concept_id": "CID-263",
+    "hierarchy_id": "9.2.1.13",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navi portarinfuse",
+    "description": "Navi portarinfuse",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-264",
+    "concept_id": "CID-264",
+    "hierarchy_id": "9.2.1.14",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navi porta-auto / RoRo",
+    "description": "Navi porta-auto / RoRo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-265",
+    "concept_id": "CID-265",
+    "hierarchy_id": "9.2.1.15",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Pilotine",
+    "description": "Pilotine",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-266",
+    "concept_id": "CID-266",
+    "hierarchy_id": "9.2.1.16",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navi da ricerca",
+    "description": "Navi da ricerca",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-267",
+    "concept_id": "CID-267",
+    "hierarchy_id": "9.2.1.17",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Navi posacavi",
+    "description": "Navi posacavi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-268",
+    "concept_id": "CID-268",
+    "hierarchy_id": "9.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Imbarcazioni da diporto",
+    "description": "Imbarcazioni da diporto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-269",
+    "concept_id": "CID-269",
+    "hierarchy_id": "9.2.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Dinghy",
+    "description": "Dinghy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-270",
+    "concept_id": "CID-270",
+    "hierarchy_id": "9.2.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Yacht",
+    "description": "Yacht",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-271",
+    "concept_id": "CID-271",
+    "hierarchy_id": "9.2.2.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Skiff",
+    "description": "Skiff",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-272",
+    "concept_id": "CID-272",
+    "hierarchy_id": "9.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Macchinari e attrezzature ferroviarie e tranviarie",
+    "description": "Macchinari e attrezzature ferroviarie e tranviarie",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-273",
+    "concept_id": "CID-273",
+    "hierarchy_id": "9.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aeromobili",
+    "description": "Aeromobili",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-274",
+    "concept_id": "CID-274",
+    "hierarchy_id": "9.4.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aeromobili ad ala fissa motorizzati",
+    "description": "Aeromobili ad ala fissa motorizzati",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-275",
+    "concept_id": "CID-275",
+    "hierarchy_id": "9.4.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aeromobili agricoli ad ala fissa",
+    "description": "Aeromobili agricoli ad ala fissa",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-276",
+    "concept_id": "CID-276",
+    "hierarchy_id": "9.4.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aerei cargo a elica",
+    "description": "Aerei cargo a elica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-277",
+    "concept_id": "CID-277",
+    "hierarchy_id": "9.4.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Idrovolanti",
+    "description": "Idrovolanti",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-278",
+    "concept_id": "CID-278",
+    "hierarchy_id": "9.4.1.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aerei commerciali passeggeri a elica",
+    "description": "Aerei commerciali passeggeri a elica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-279",
+    "concept_id": "CID-279",
+    "hierarchy_id": "9.4.1.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aerei cargo a reazione",
+    "description": "Aerei cargo a reazione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-280",
+    "concept_id": "CID-280",
+    "hierarchy_id": "9.4.1.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aerei commerciali passeggeri a reazione",
+    "description": "Aerei commerciali passeggeri a reazione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-281",
+    "concept_id": "CID-281",
+    "hierarchy_id": "9.4.1.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aerei privati o business a elica",
+    "description": "Aerei privati o business a elica",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-282",
+    "concept_id": "CID-282",
+    "hierarchy_id": "9.4.1.8",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Jet privati o business",
+    "description": "Jet privati o business",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-283",
+    "concept_id": "CID-283",
+    "hierarchy_id": "9.4.1.9",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aerei per ispezione di volo",
+    "description": "Aerei per ispezione di volo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-284",
+    "concept_id": "CID-284",
+    "hierarchy_id": "9.4.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aeromobili civili e commerciali ad ala rotante",
+    "description": "Aeromobili civili e commerciali ad ala rotante",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-285",
+    "concept_id": "CID-285",
+    "hierarchy_id": "9.4.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Elicotteri per trasporto passeggeri",
+    "description": "Elicotteri per trasporto passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-286",
+    "concept_id": "CID-286",
+    "hierarchy_id": "9.4.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Elicotteri per trasporto merci",
+    "description": "Elicotteri per trasporto merci",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-287",
+    "concept_id": "CID-287",
+    "hierarchy_id": "9.4.2.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Elicotteri medici o di soccorso",
+    "description": "Elicotteri medici o di soccorso",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-288",
+    "concept_id": "CID-288",
+    "hierarchy_id": "9.4.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aeromobili speciali",
+    "description": "Aeromobili speciali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-289",
+    "concept_id": "CID-289",
+    "hierarchy_id": "9.4.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Dirigibili",
+    "description": "Dirigibili",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-290",
+    "concept_id": "CID-290",
+    "hierarchy_id": "9.4.3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aeromodelli",
+    "description": "Aeromodelli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-291",
+    "concept_id": "CID-291",
+    "hierarchy_id": "9.4.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Aeromobili ricreativi",
+    "description": "Aeromobili ricreativi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-292",
+    "concept_id": "CID-292",
+    "hierarchy_id": "9.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Veicoli spaziali",
+    "description": "Veicoli spaziali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-293",
+    "concept_id": "CID-293",
+    "hierarchy_id": "9.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Attrezzature per servizi di trasporto",
+    "description": "Attrezzature per servizi di trasporto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-294",
+    "concept_id": "CID-294",
+    "hierarchy_id": "10",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di charter, noleggio e leasing",
+    "description": "Servizi di charter, noleggio e leasing",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-295",
+    "concept_id": "CID-295",
+    "hierarchy_id": "10.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi charter",
+    "description": "Servizi charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-296",
+    "concept_id": "CID-296",
+    "hierarchy_id": "10.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Charter cargo",
+    "description": "Charter cargo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-297",
+    "concept_id": "CID-297",
+    "hierarchy_id": "10.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Charter passeggeri",
+    "description": "Charter passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-298",
+    "concept_id": "CID-298",
+    "hierarchy_id": "10.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Charter elicotteri",
+    "description": "Charter elicotteri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-299",
+    "concept_id": "CID-299",
+    "hierarchy_id": "10.1.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Charter yacht / barche",
+    "description": "Charter yacht / barche",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-300",
+    "concept_id": "CID-300",
+    "hierarchy_id": "10.1.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Charter autobus",
+    "description": "Charter autobus",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-301",
+    "concept_id": "CID-301",
+    "hierarchy_id": "10.1.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Charter limousine / VIP",
+    "description": "Charter limousine / VIP",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-302",
+    "concept_id": "CID-302",
+    "hierarchy_id": "10.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di noleggio",
+    "description": "Servizi di noleggio",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-303",
+    "concept_id": "CID-303",
+    "hierarchy_id": "10.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio container",
+    "description": "Noleggio container",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-304",
+    "concept_id": "CID-304",
+    "hierarchy_id": "10.2.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio di container intermodali",
+    "description": "Noleggio di container intermodali",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-305",
+    "concept_id": "CID-305",
+    "hierarchy_id": "10.2.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "servizi di Noleggio veicoli",
+    "description": "servizi di Noleggio veicoli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-306",
+    "concept_id": "CID-306",
+    "hierarchy_id": "10.2.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio di imbarcazioni",
+    "description": "Noleggio di imbarcazioni",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-307",
+    "concept_id": "CID-307",
+    "hierarchy_id": "10.2.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio o leasing di aeromobili passeggeri",
+    "description": "Noleggio o leasing di aeromobili passeggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-308",
+    "concept_id": "CID-308",
+    "hierarchy_id": "10.2.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "servizi di Noleggio di aeromobili cargo con operatore",
+    "description": "servizi di Noleggio di aeromobili cargo con operatore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-309",
+    "concept_id": "CID-309",
+    "hierarchy_id": "10.2.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio di navi da carico con operatore",
+    "description": "Noleggio di navi da carico con operatore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-310",
+    "concept_id": "CID-310",
+    "hierarchy_id": "10.2.8",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio di navi da carico costiere / transoceaniche con operatore",
+    "description": "Noleggio di navi da carico costiere / transoceaniche con operatore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-311",
+    "concept_id": "CID-311",
+    "hierarchy_id": "10.2.9",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Noleggio camion con operatore",
+    "description": "Noleggio camion con operatore",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-312",
+    "concept_id": "CID-312",
+    "hierarchy_id": "10.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di leasing",
+    "description": "Servizi di leasing",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-313",
+    "concept_id": "CID-313",
+    "hierarchy_id": "10.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "servizi di leasing per Leasing di berline / coupé / station wagon",
+    "description": "servizi di leasing per Leasing di berline / coupé / station wagon",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-314",
+    "concept_id": "CID-314",
+    "hierarchy_id": "10.3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Leasing di camion leggeri / SUV",
+    "description": "Leasing di camion leggeri / SUV",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-315",
+    "concept_id": "CID-315",
+    "hierarchy_id": "10.3.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "servizi di leasing per Leasing di van passeggeri / minivan",
+    "description": "servizi di leasing per Leasing di van passeggeri / minivan",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-316",
+    "concept_id": "CID-316",
+    "hierarchy_id": "10.3.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Leasing di mezzi di trasporto",
+    "description": "Leasing di mezzi di trasporto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-317",
+    "concept_id": "CID-317",
+    "hierarchy_id": "11",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Manutenzione, rifornimento, stoccaggio e supporto",
+    "description": "Manutenzione, rifornimento, stoccaggio e supporto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-318",
+    "concept_id": "CID-318",
+    "hierarchy_id": "11.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Manutenzione e riparazione veicoli",
+    "description": "Manutenzione e riparazione veicoli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-319",
+    "concept_id": "CID-319",
+    "hierarchy_id": "11.1.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di riparazione carrozzeria o verniciatura veicoli",
+    "description": "Servizio di riparazione carrozzeria o verniciatura veicoli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-320",
+    "concept_id": "CID-320",
+    "hierarchy_id": "11.1.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di ispezione veicoli",
+    "description": "Servizio di ispezione veicoli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-321",
+    "concept_id": "CID-321",
+    "hierarchy_id": "11.1.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di sostituzione vetri per veicoli",
+    "description": "Servizio di sostituzione vetri per veicoli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-322",
+    "concept_id": "CID-322",
+    "hierarchy_id": "11.1.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Manutenzione e riparazione di autovetture e camion leggeri",
+    "description": "Manutenzione e riparazione di autovetture e camion leggeri",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-323",
+    "concept_id": "CID-323",
+    "hierarchy_id": "11.1.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Manutenzione e riparazione di camion pesanti",
+    "description": "Manutenzione e riparazione di camion pesanti",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-324",
+    "concept_id": "CID-324",
+    "hierarchy_id": "11.1.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di ispezione e manutenzione di carri ferroviari",
+    "description": "Servizio di ispezione e manutenzione di carri ferroviari",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-325",
+    "concept_id": "CID-325",
+    "hierarchy_id": "11.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizi di carrozzeria e verniciatura",
+    "description": "Servizi di carrozzeria e verniciatura",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-326",
+    "concept_id": "CID-326",
+    "hierarchy_id": "11.2.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di lattoneria",
+    "description": "Servizio di lattoneria",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-327",
+    "concept_id": "CID-327",
+    "hierarchy_id": "11.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Rifornimento / stoccaggio / supporto operativo",
+    "description": "Rifornimento / stoccaggio / supporto operativo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-328",
+    "concept_id": "CID-328",
+    "hierarchy_id": "11.3.1",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di rifornimento veicoli",
+    "description": "Servizio di rifornimento veicoli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-329",
+    "concept_id": "CID-329",
+    "hierarchy_id": "11.3.2",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di stoccaggio per il trasporto",
+    "description": "Servizio di stoccaggio per il trasporto",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-330",
+    "concept_id": "CID-330",
+    "hierarchy_id": "11.3.3",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio di parcheggio veicoli",
+    "description": "Servizio di parcheggio veicoli",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-331",
+    "concept_id": "CID-331",
+    "hierarchy_id": "11.3.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Servizio carte carburante ricaricabili / prepagate",
+    "description": "Servizio carte carburante ricaricabili / prepagate",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-332",
+    "concept_id": "CID-332",
+    "hierarchy_id": "11.4",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Manutenzione e riparazione di aeromobili",
+    "description": "Manutenzione e riparazione di aeromobili",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-333",
+    "concept_id": "CID-333",
+    "hierarchy_id": "11.5",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Manutenzione e riparazione di apparecchiature di navigazione",
+    "description": "Manutenzione e riparazione di apparecchiature di navigazione",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-334",
+    "concept_id": "CID-334",
+    "hierarchy_id": "11.6",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Manutenzione e riparazione di imbarcazioni per trasporto acquatico",
+    "description": "Manutenzione e riparazione di imbarcazioni per trasporto acquatico",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "it-335",
+    "concept_id": "CID-335",
+    "hierarchy_id": "11.7",
+    "unspsc_code": "",
+    "language": "it",
+    "term": "Supporto alla gestione flotte",
+    "description": "Supporto alla gestione flotte",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  }
+]
