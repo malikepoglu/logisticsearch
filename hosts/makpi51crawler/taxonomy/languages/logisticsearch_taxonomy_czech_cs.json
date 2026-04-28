@@ -1,1 +1,6032 @@
-[]
+[
+  {
+    "term_id": "cs-1",
+    "concept_id": "CID-1",
+    "hierarchy_id": "1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Doprava a nákladní přeprava",
+    "description": "Doprava a nákladní přeprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-2",
+    "concept_id": "CID-2",
+    "hierarchy_id": "1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "kamionová doprava",
+    "description": "silniční doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-3",
+    "concept_id": "CID-3",
+    "hierarchy_id": "1.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Celovozová přeprava - FTL / TL",
+    "description": "Celovozová přeprava - FTL / TL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-4",
+    "concept_id": "CID-4",
+    "hierarchy_id": "1.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kusová / částečná zásilka - LTL",
+    "description": "Kusová / částečná zásilka - LTL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-5",
+    "concept_id": "CID-5",
+    "hierarchy_id": "1.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Místní distribuce / městská nákladní doprava",
+    "description": "Místní distribuce / městská nákladní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-6",
+    "concept_id": "CID-6",
+    "hierarchy_id": "1.1.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vyhrazená smluvní přeprava",
+    "description": "Vyhrazená smluvní přeprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-7",
+    "concept_id": "CID-7",
+    "hierarchy_id": "1.1.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Mezinárodní silniční nákladní doprava",
+    "description": "Mezinárodní silniční nákladní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-8",
+    "concept_id": "CID-8",
+    "hierarchy_id": "1.1.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Silniční balíkové a last mile služby",
+    "description": "Silniční balíkové a last mile služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-9",
+    "concept_id": "CID-9",
+    "hierarchy_id": "1.1.6.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Doručení poslední míle",
+    "description": "Doručení poslední míle",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-10",
+    "concept_id": "CID-10",
+    "hierarchy_id": "1.1.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Stěhování domácností / relokační služby",
+    "description": "Stěhování domácností / relokační služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-11",
+    "concept_id": "CID-11",
+    "hierarchy_id": "1.1.8",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Silniční přeprava suchých sypkých materiálů",
+    "description": "Silniční přeprava suchých sypkých materiálů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-12",
+    "concept_id": "CID-12",
+    "hierarchy_id": "1.1.9",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Cisternová přeprava",
+    "description": "Cisternová přeprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-13",
+    "concept_id": "CID-13",
+    "hierarchy_id": "1.1.10",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Těžká přeprava / nadrozměrný náklad",
+    "description": "Těžká přeprava / nadrozměrný náklad",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-14",
+    "concept_id": "CID-14",
+    "hierarchy_id": "1.1.11",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služby přepravy vozidel",
+    "description": "Služby přepravy vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-15",
+    "concept_id": "CID-15",
+    "hierarchy_id": "1.1.12",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Přeprava živých zvířat",
+    "description": "Přeprava živých zvířat",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-16",
+    "concept_id": "CID-16",
+    "hierarchy_id": "1.1.13",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Přeprava nebezpečných materiálů - Hazmat",
+    "description": "Přeprava nebezpečných materiálů - Hazmat",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-17",
+    "concept_id": "CID-17",
+    "hierarchy_id": "1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "námořní doprava",
+    "description": "námořní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-18",
+    "concept_id": "CID-18",
+    "hierarchy_id": "1.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kontejnerová přeprava",
+    "description": "Kontejnerová přeprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-19",
+    "concept_id": "CID-19",
+    "hierarchy_id": "1.2.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Plný kontejnerový náklad - FCL",
+    "description": "Plný kontejnerový náklad - FCL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-20",
+    "concept_id": "CID-20",
+    "hierarchy_id": "1.2.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Částečný kontejnerový náklad - LCL",
+    "description": "Částečný kontejnerový náklad - LCL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-21",
+    "concept_id": "CID-21",
+    "hierarchy_id": "1.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Námořní přeprava suchých sypkých materiálů",
+    "description": "Námořní přeprava suchých sypkých materiálů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-22",
+    "concept_id": "CID-22",
+    "hierarchy_id": "1.2.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Námořní přeprava kapalných hromadných nákladů",
+    "description": "Námořní přeprava kapalných hromadných nákladů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-23",
+    "concept_id": "CID-23",
+    "hierarchy_id": "1.2.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Ro-Ro přeprava",
+    "description": "Ro-Ro přeprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-24",
+    "concept_id": "CID-24",
+    "hierarchy_id": "1.2.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Linková námořní přeprava",
+    "description": "Linková námořní přeprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-25",
+    "concept_id": "CID-25",
+    "hierarchy_id": "1.2.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Trampová námořní přeprava",
+    "description": "Trampová námořní přeprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-26",
+    "concept_id": "CID-26",
+    "hierarchy_id": "1.2.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Krátkomořská přeprava - SSS",
+    "description": "Krátkomořská přeprava - SSS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-27",
+    "concept_id": "CID-27",
+    "hierarchy_id": "1.2.8",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Offshore logistika",
+    "description": "Offshore logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-28",
+    "concept_id": "CID-28",
+    "hierarchy_id": "1.2.9",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Navigační a vlečné služby",
+    "description": "Navigační a vlečné služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-29",
+    "concept_id": "CID-29",
+    "hierarchy_id": "1.2.9.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Remorkérské služby",
+    "description": "Remorkérské služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-30",
+    "concept_id": "CID-30",
+    "hierarchy_id": "1.2.9.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Provoz zvedacích mostů",
+    "description": "Provoz zvedacích mostů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-31",
+    "concept_id": "CID-31",
+    "hierarchy_id": "1.2.9.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Námořní navigační nebo komunikační služby",
+    "description": "Námořní navigační nebo komunikační služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-32",
+    "concept_id": "CID-32",
+    "hierarchy_id": "1.2.9.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba Dead Man Anchor",
+    "description": "Služba Dead Man Anchor",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-33",
+    "concept_id": "CID-33",
+    "hierarchy_id": "1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Letecká nákladní doprava",
+    "description": "Letecká nákladní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-34",
+    "concept_id": "CID-34",
+    "hierarchy_id": "1.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služby letecké nákladní dopravy",
+    "description": "Služby letecké nákladní dopravy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-35",
+    "concept_id": "CID-35",
+    "hierarchy_id": "1.3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Expresní letecká nákladní doprava",
+    "description": "Expresní letecká nákladní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-36",
+    "concept_id": "CID-36",
+    "hierarchy_id": "1.3.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Letecká nákladní doprava door-to-door",
+    "description": "Letecká nákladní doprava door-to-door",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-37",
+    "concept_id": "CID-37",
+    "hierarchy_id": "1.3.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Konsolidace leteckého carga",
+    "description": "Konsolidace leteckého carga",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-38",
+    "concept_id": "CID-38",
+    "hierarchy_id": "1.3.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Charterové služby letecké nákladní dopravy",
+    "description": "Charterové služby letecké nákladní dopravy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-39",
+    "concept_id": "CID-39",
+    "hierarchy_id": "1.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Železniční nákladní doprava",
+    "description": "Železniční nákladní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-40",
+    "concept_id": "CID-40",
+    "hierarchy_id": "1.4.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Přeprava vozových zásilek",
+    "description": "Přeprava vozových zásilek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-41",
+    "concept_id": "CID-41",
+    "hierarchy_id": "1.4.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Intermodální železniční doprava",
+    "description": "Intermodální železniční doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-42",
+    "concept_id": "CID-42",
+    "hierarchy_id": "1.4.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Piggyback přeprava",
+    "description": "Piggyback přeprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-43",
+    "concept_id": "CID-43",
+    "hierarchy_id": "1.4.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vysokorychlostní železniční cargo",
+    "description": "Vysokorychlostní železniční cargo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-44",
+    "concept_id": "CID-44",
+    "hierarchy_id": "1.4.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasing železničních vozů",
+    "description": "Leasing železničních vozů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-45",
+    "concept_id": "CID-45",
+    "hierarchy_id": "1.4.4.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasing krytých nákladních železničních vozů",
+    "description": "Leasing krytých nákladních železničních vozů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-46",
+    "concept_id": "CID-46",
+    "hierarchy_id": "1.4.4.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasing železničních cisternových vozů",
+    "description": "Leasing železničních cisternových vozů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-47",
+    "concept_id": "CID-47",
+    "hierarchy_id": "1.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Potrubní doprava",
+    "description": "Potrubní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-48",
+    "concept_id": "CID-48",
+    "hierarchy_id": "1.5.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Potrubní doprava ropných produktů",
+    "description": "Potrubní doprava ropných produktů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-49",
+    "concept_id": "CID-49",
+    "hierarchy_id": "1.5.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Potrubní doprava vody",
+    "description": "Potrubní doprava vody",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-50",
+    "concept_id": "CID-50",
+    "hierarchy_id": "1.5.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Potrubní doprava zemního plynu",
+    "description": "Potrubní doprava zemního plynu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-51",
+    "concept_id": "CID-51",
+    "hierarchy_id": "1.5.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Potrubní doprava chemických látek",
+    "description": "Potrubní doprava chemických látek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-52",
+    "concept_id": "CID-52",
+    "hierarchy_id": "1.5.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vnitřní inspekce potrubí",
+    "description": "Vnitřní inspekce potrubí",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-53",
+    "concept_id": "CID-53",
+    "hierarchy_id": "1.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Intermodální a kombinovaná nákladní doprava",
+    "description": "Intermodální a kombinovaná nákladní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-54",
+    "concept_id": "CID-54",
+    "hierarchy_id": "1.6.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kontejnerová intermodální doprava",
+    "description": "Kontejnerová intermodální doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-55",
+    "concept_id": "CID-55",
+    "hierarchy_id": "1.6.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Letecko-námořní doprava",
+    "description": "Letecko-námořní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-56",
+    "concept_id": "CID-56",
+    "hierarchy_id": "1.6.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Námořně-železniční doprava",
+    "description": "Námořně-železniční doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-57",
+    "concept_id": "CID-57",
+    "hierarchy_id": "1.6.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Námořně-silniční doprava",
+    "description": "Námořně-silniční doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-58",
+    "concept_id": "CID-58",
+    "hierarchy_id": "1.6.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Letecko-silniční doprava",
+    "description": "Letecko-silniční doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-59",
+    "concept_id": "CID-59",
+    "hierarchy_id": "1.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kurýrní / poštovní služby",
+    "description": "Kurýrní / poštovní služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-60",
+    "concept_id": "CID-60",
+    "hierarchy_id": "1.7.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Národní poštovní doručovací služby",
+    "description": "Národní poštovní doručovací služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-61",
+    "concept_id": "CID-61",
+    "hierarchy_id": "1.7.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služby poštovních schránek",
+    "description": "Služby poštovních schránek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-62",
+    "concept_id": "CID-62",
+    "hierarchy_id": "1.7.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služby podání / vyzvednutí / doručení pošty",
+    "description": "Služby podání / vyzvednutí / doručení pošty",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-63",
+    "concept_id": "CID-63",
+    "hierarchy_id": "1.7.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Celosvětové doručování dopisů nebo malých balíků",
+    "description": "Celosvětové doručování dopisů nebo malých balíků",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-64",
+    "concept_id": "CID-64",
+    "hierarchy_id": "1.7.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Místní doručování dopisů nebo malých balíků",
+    "description": "Místní doručování dopisů nebo malých balíků",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-65",
+    "concept_id": "CID-65",
+    "hierarchy_id": "1.7.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kurýrní služby na kole nebo skútru",
+    "description": "Kurýrní služby na kole nebo skútru",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-66",
+    "concept_id": "CID-66",
+    "hierarchy_id": "2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služby dodavatelského řetězce a logistiky",
+    "description": "Služby dodavatelského řetězce a logistiky",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-67",
+    "concept_id": "CID-67",
+    "hierarchy_id": "2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Plánování a poradenství",
+    "description": "Plánování a poradenství",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-68",
+    "concept_id": "CID-68",
+    "hierarchy_id": "2.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Poradenství v oblasti dodavatelského řetězce",
+    "description": "Poradenství v oblasti dodavatelského řetězce",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-69",
+    "concept_id": "CID-69",
+    "hierarchy_id": "2.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Plánování poptávky a zásob",
+    "description": "Plánování poptávky a zásob",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-70",
+    "concept_id": "CID-70",
+    "hierarchy_id": "2.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Optimalizace sítě",
+    "description": "Optimalizace sítě",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-71",
+    "concept_id": "CID-71",
+    "hierarchy_id": "2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služby organizace přepravy",
+    "description": "Služby organizace přepravy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-72",
+    "concept_id": "CID-72",
+    "hierarchy_id": "2.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Spediční služby",
+    "description": "Spediční služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-73",
+    "concept_id": "CID-73",
+    "hierarchy_id": "2.2.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Co-loading",
+    "description": "Co-loading",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-74",
+    "concept_id": "CID-74",
+    "hierarchy_id": "2.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Přeshraniční logistika",
+    "description": "Přeshraniční logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-75",
+    "concept_id": "CID-75",
+    "hierarchy_id": "2.2.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Přepravní služby včetně pojištění",
+    "description": "Přepravní služby včetně pojištění",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-76",
+    "concept_id": "CID-76",
+    "hierarchy_id": "2.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Skladování a distribuce",
+    "description": "Skladování a distribuce",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-77",
+    "concept_id": "CID-77",
+    "hierarchy_id": "2.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Veřejné skladování",
+    "description": "Veřejné skladování",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-78",
+    "concept_id": "CID-78",
+    "hierarchy_id": "2.3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Smluvní skladování",
+    "description": "Smluvní skladování",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-79",
+    "concept_id": "CID-79",
+    "hierarchy_id": "2.3.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Řízení distribučního centra",
+    "description": "Řízení distribučního centra",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-80",
+    "concept_id": "CID-80",
+    "hierarchy_id": "2.3.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Teplotně řízené skladování",
+    "description": "Teplotně řízené skladování",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-81",
+    "concept_id": "CID-81",
+    "hierarchy_id": "2.3.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Celní skladování",
+    "description": "Celní skladování",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-82",
+    "concept_id": "CID-82",
+    "hierarchy_id": "2.3.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Fulfillment centra pro e-commerce",
+    "description": "Fulfillment centra pro e-commerce",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-83",
+    "concept_id": "CID-83",
+    "hierarchy_id": "2.3.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Řízení zásob",
+    "description": "Řízení zásob",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-84",
+    "concept_id": "CID-84",
+    "hierarchy_id": "2.3.8",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Cross-docking",
+    "description": "Cross-docking",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-85",
+    "concept_id": "CID-85",
+    "hierarchy_id": "2.3.9",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Skladování sypkých materiálů",
+    "description": "Skladování sypkých materiálů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-86",
+    "concept_id": "CID-86",
+    "hierarchy_id": "2.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistické služby s přidanou hodnotou",
+    "description": "Logistické služby s přidanou hodnotou",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-87",
+    "concept_id": "CID-87",
+    "hierarchy_id": "2.4.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vychystání a balení",
+    "description": "Vychystání a balení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-88",
+    "concept_id": "CID-88",
+    "hierarchy_id": "2.4.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Označování a oceňování",
+    "description": "Označování a oceňování",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-89",
+    "concept_id": "CID-89",
+    "hierarchy_id": "2.4.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kitting",
+    "description": "Kitting",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-90",
+    "concept_id": "CID-90",
+    "hierarchy_id": "2.4.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Serializace",
+    "description": "Serializace",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-91",
+    "concept_id": "CID-91",
+    "hierarchy_id": "2.4.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Balicí služby",
+    "description": "Balicí služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-92",
+    "concept_id": "CID-92",
+    "hierarchy_id": "2.4.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Manipulační služby",
+    "description": "Manipulační služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-93",
+    "concept_id": "CID-93",
+    "hierarchy_id": "2.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Celní zastoupení a soulad v zahraničním obchodu",
+    "description": "Celní zastoupení a soulad v zahraničním obchodu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-94",
+    "concept_id": "CID-94",
+    "hierarchy_id": "2.5.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Celní zastoupení",
+    "description": "Celní zastoupení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-95",
+    "concept_id": "CID-95",
+    "hierarchy_id": "2.5.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Soulad v zahraničním obchodu",
+    "description": "Soulad v zahraničním obchodu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-96",
+    "concept_id": "CID-96",
+    "hierarchy_id": "2.5.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Dokumentace pro dovoz/vývoz",
+    "description": "Dokumentace pro dovoz/vývoz",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-97",
+    "concept_id": "CID-97",
+    "hierarchy_id": "2.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Modely poskytovatelů logistických služeb",
+    "description": "Modely poskytovatelů logistických služeb",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-98",
+    "concept_id": "CID-98",
+    "hierarchy_id": "2.6.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika třetí strany - 3PL",
+    "description": "Logistika třetí strany - 3PL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-99",
+    "concept_id": "CID-99",
+    "hierarchy_id": "2.6.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika čtvrté strany - 4PL",
+    "description": "Logistika čtvrté strany - 4PL",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-100",
+    "concept_id": "CID-100",
+    "hierarchy_id": "2.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Inspekční a survey služby",
+    "description": "Inspekční a survey služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-101",
+    "concept_id": "CID-101",
+    "hierarchy_id": "2.7.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Inspekční služby balení",
+    "description": "Inspekční služby balení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-102",
+    "concept_id": "CID-102",
+    "hierarchy_id": "2.7.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Cargo survey služby",
+    "description": "Cargo survey služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-103",
+    "concept_id": "CID-103",
+    "hierarchy_id": "2.7.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Inspekce kontroly škůdců",
+    "description": "Inspekce kontroly škůdců",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-104",
+    "concept_id": "CID-104",
+    "hierarchy_id": "3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Specializovaná logistika",
+    "description": "Specializovaná logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-105",
+    "concept_id": "CID-105",
+    "hierarchy_id": "3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika s řízenou teplotou",
+    "description": "Logistika s řízenou teplotou",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-106",
+    "concept_id": "CID-106",
+    "hierarchy_id": "3.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika chladového řetězce",
+    "description": "Logistika chladového řetězce",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-107",
+    "concept_id": "CID-107",
+    "hierarchy_id": "3.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Farmaceutická logistika",
+    "description": "Farmaceutická logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-108",
+    "concept_id": "CID-108",
+    "hierarchy_id": "3.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika zboží podléhajícího zkáze",
+    "description": "Logistika zboží podléhajícího zkáze",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-109",
+    "concept_id": "CID-109",
+    "hierarchy_id": "3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika těžkých a projektových zásilek",
+    "description": "Logistika těžkých a projektových zásilek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-110",
+    "concept_id": "CID-110",
+    "hierarchy_id": "3.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika pro energetický sektor",
+    "description": "Logistika pro energetický sektor",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-111",
+    "concept_id": "CID-111",
+    "hierarchy_id": "3.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Stavební logistika",
+    "description": "Stavební logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-112",
+    "concept_id": "CID-112",
+    "hierarchy_id": "3.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Odvětvově specifická logistika",
+    "description": "Odvětvově specifická logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-113",
+    "concept_id": "CID-113",
+    "hierarchy_id": "3.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Automobilová logistika",
+    "description": "Automobilová logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-114",
+    "concept_id": "CID-114",
+    "hierarchy_id": "3.3.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika náhradních dílů",
+    "description": "Logistika náhradních dílů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-115",
+    "concept_id": "CID-115",
+    "hierarchy_id": "3.3.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika hotových vozidel",
+    "description": "Logistika hotových vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-116",
+    "concept_id": "CID-116",
+    "hierarchy_id": "3.3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Maloobchodní logistika",
+    "description": "Maloobchodní logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-117",
+    "concept_id": "CID-117",
+    "hierarchy_id": "3.3.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika rychlé módy",
+    "description": "Logistika rychlé módy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-118",
+    "concept_id": "CID-118",
+    "hierarchy_id": "3.3.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika pro letectví a obranu",
+    "description": "Logistika pro letectví a obranu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-119",
+    "concept_id": "CID-119",
+    "hierarchy_id": "3.3.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika high-tech a elektroniky",
+    "description": "Logistika high-tech a elektroniky",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-120",
+    "concept_id": "CID-120",
+    "hierarchy_id": "3.3.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Chemická logistika",
+    "description": "Chemická logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-121",
+    "concept_id": "CID-121",
+    "hierarchy_id": "3.3.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika ropy a plynu",
+    "description": "Logistika ropy a plynu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-122",
+    "concept_id": "CID-122",
+    "hierarchy_id": "3.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Ostatní specializované logistické služby",
+    "description": "Ostatní specializované logistické služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-123",
+    "concept_id": "CID-123",
+    "hierarchy_id": "3.4.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika nebezpečného zboží",
+    "description": "Logistika nebezpečného zboží",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-124",
+    "concept_id": "CID-124",
+    "hierarchy_id": "3.4.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika živých zvířat",
+    "description": "Logistika živých zvířat",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-125",
+    "concept_id": "CID-125",
+    "hierarchy_id": "3.4.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika vysoce hodnotného a zabezpečeného zboží",
+    "description": "Logistika vysoce hodnotného a zabezpečeného zboží",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-126",
+    "concept_id": "CID-126",
+    "hierarchy_id": "3.4.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistika umění a výstav",
+    "description": "Logistika umění a výstav",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-127",
+    "concept_id": "CID-127",
+    "hierarchy_id": "3.4.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Městská logistika",
+    "description": "Městská logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-128",
+    "concept_id": "CID-128",
+    "hierarchy_id": "3.4.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Reverzní logistika",
+    "description": "Reverzní logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-129",
+    "concept_id": "CID-129",
+    "hierarchy_id": "3.4.6.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Řízení vratek",
+    "description": "Řízení vratek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-130",
+    "concept_id": "CID-130",
+    "hierarchy_id": "3.4.6.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Opravy a renovace",
+    "description": "Opravy a renovace",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-131",
+    "concept_id": "CID-131",
+    "hierarchy_id": "3.4.6.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Recyklace a materiálové využití",
+    "description": "Recyklace a materiálové využití",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-132",
+    "concept_id": "CID-132",
+    "hierarchy_id": "4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistická infrastruktura a vybavení",
+    "description": "Logistická infrastruktura a vybavení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-133",
+    "concept_id": "CID-133",
+    "hierarchy_id": "4.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Terminály a přístavy",
+    "description": "Terminály a přístavy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-134",
+    "concept_id": "CID-134",
+    "hierarchy_id": "4.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Přístavní operace",
+    "description": "Přístavní operace",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-135",
+    "concept_id": "CID-135",
+    "hierarchy_id": "4.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Operace vnitrozemských přístavů",
+    "description": "Operace vnitrozemských přístavů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-136",
+    "concept_id": "CID-136",
+    "hierarchy_id": "4.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Železniční nákladní terminály",
+    "description": "Železniční nákladní terminály",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-137",
+    "concept_id": "CID-137",
+    "hierarchy_id": "4.1.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Terminály leteckého nákladu",
+    "description": "Terminály leteckého nákladu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-138",
+    "concept_id": "CID-138",
+    "hierarchy_id": "4.1.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pobřežní základnové služby pro offshore podporu",
+    "description": "Pobřežní základnové služby pro offshore podporu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-139",
+    "concept_id": "CID-139",
+    "hierarchy_id": "4.1.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služby řízení letového provozu",
+    "description": "Služby řízení letového provozu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-140",
+    "concept_id": "CID-140",
+    "hierarchy_id": "4.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistické nemovitosti",
+    "description": "Logistické nemovitosti",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-141",
+    "concept_id": "CID-141",
+    "hierarchy_id": "4.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistické parky a svobodná pásma",
+    "description": "Logistické parky a svobodná pásma",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-142",
+    "concept_id": "CID-142",
+    "hierarchy_id": "4.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistické vybavení",
+    "description": "Logistické vybavení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-143",
+    "concept_id": "CID-143",
+    "hierarchy_id": "4.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Nákladní kontejnery",
+    "description": "Nákladní kontejnery",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-144",
+    "concept_id": "CID-144",
+    "hierarchy_id": "4.3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kontejnerové podvozky",
+    "description": "Kontejnerové podvozky",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-145",
+    "concept_id": "CID-145",
+    "hierarchy_id": "4.3.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vysokozdvižné vozíky",
+    "description": "Vysokozdvižné vozíky",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-146",
+    "concept_id": "CID-146",
+    "hierarchy_id": "4.3.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Skladové vybavení",
+    "description": "Skladové vybavení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-147",
+    "concept_id": "CID-147",
+    "hierarchy_id": "4.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem a leasing logistických aktiv",
+    "description": "Pronájem a leasing logistických aktiv",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-148",
+    "concept_id": "CID-148",
+    "hierarchy_id": "4.4.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služby pronájmu přepravních kontejnerů",
+    "description": "Služby pronájmu přepravních kontejnerů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-149",
+    "concept_id": "CID-149",
+    "hierarchy_id": "4.4.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba pronájmu intermodálních nákladních kontejnerů",
+    "description": "Služba pronájmu intermodálních nákladních kontejnerů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-150",
+    "concept_id": "CID-150",
+    "hierarchy_id": "4.4.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služby pronájmu nebo leasingu dopravních prostředků",
+    "description": "Služby pronájmu nebo leasingu dopravních prostředků",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-151",
+    "concept_id": "CID-151",
+    "hierarchy_id": "4.4.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem nákladního letadla s operátorem",
+    "description": "Pronájem nákladního letadla s operátorem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-152",
+    "concept_id": "CID-152",
+    "hierarchy_id": "4.4.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem nákladního plavidla pro vnitrozemskou vodní dopravu s operátorem",
+    "description": "Pronájem nákladního plavidla pro vnitrozemskou vodní dopravu s operátorem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-153",
+    "concept_id": "CID-153",
+    "hierarchy_id": "4.4.2.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem nákladního plavidla pro pobřežní a zaoceánskou vodní dopravu s operátorem",
+    "description": "Pronájem nákladního plavidla pro pobřežní a zaoceánskou vodní dopravu s operátorem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-154",
+    "concept_id": "CID-154",
+    "hierarchy_id": "4.4.2.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem nákladního vozidla s operátorem",
+    "description": "Pronájem nákladního vozidla s operátorem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-155",
+    "concept_id": "CID-155",
+    "hierarchy_id": "5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistické technologie a digitalizace",
+    "description": "Logistické technologie a digitalizace",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-156",
+    "concept_id": "CID-156",
+    "hierarchy_id": "5.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "softwarová řešení",
+    "description": "softwarová řešení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-157",
+    "concept_id": "CID-157",
+    "hierarchy_id": "5.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Systém řízení dopravy - TMS",
+    "description": "Systém řízení dopravy - TMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-158",
+    "concept_id": "CID-158",
+    "hierarchy_id": "5.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Systém řízení skladu - WMS",
+    "description": "Systém řízení skladu - WMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-159",
+    "concept_id": "CID-159",
+    "hierarchy_id": "5.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Software pro řízení dodavatelského řetězce",
+    "description": "Software pro řízení dodavatelského řetězce",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-160",
+    "concept_id": "CID-160",
+    "hierarchy_id": "5.1.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Software pro plánování tras a správu vozového parku",
+    "description": "Software pro plánování tras a správu vozového parku",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-161",
+    "concept_id": "CID-161",
+    "hierarchy_id": "5.1.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Systémy sledování zásilek",
+    "description": "Systémy sledování zásilek",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-162",
+    "concept_id": "CID-162",
+    "hierarchy_id": "5.1.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Systém řízení dvora - YMS",
+    "description": "Systém řízení dvora - YMS",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-163",
+    "concept_id": "CID-163",
+    "hierarchy_id": "5.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Digitální platformy a integrace",
+    "description": "Digitální platformy a integrace",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-164",
+    "concept_id": "CID-164",
+    "hierarchy_id": "5.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Digitální nákladní platformy",
+    "description": "Digitální nákladní platformy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-165",
+    "concept_id": "CID-165",
+    "hierarchy_id": "5.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistická API a integrační řešení",
+    "description": "Logistická API a integrační řešení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-166",
+    "concept_id": "CID-166",
+    "hierarchy_id": "5.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Nové technologie",
+    "description": "Nové technologie",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-167",
+    "concept_id": "CID-167",
+    "hierarchy_id": "5.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Umělá inteligence a datová analytika v logistice",
+    "description": "Umělá inteligence a datová analytika v logistice",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-168",
+    "concept_id": "CID-168",
+    "hierarchy_id": "5.3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Blockchain v logistice",
+    "description": "Blockchain v logistice",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-169",
+    "concept_id": "CID-169",
+    "hierarchy_id": "5.3.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Autonomní vozidla v logistice",
+    "description": "Autonomní vozidla v logistice",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-170",
+    "concept_id": "CID-170",
+    "hierarchy_id": "6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Podpůrné a obchodní služby",
+    "description": "Podpůrné a obchodní služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-171",
+    "concept_id": "CID-171",
+    "hierarchy_id": "6.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Poradenství a školení",
+    "description": "Poradenství a školení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-172",
+    "concept_id": "CID-172",
+    "hierarchy_id": "6.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Zlepšování logistických procesů",
+    "description": "Zlepšování logistických procesů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-173",
+    "concept_id": "CID-173",
+    "hierarchy_id": "6.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Logistické školení a certifikace",
+    "description": "Logistické školení a certifikace",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-174",
+    "concept_id": "CID-174",
+    "hierarchy_id": "6.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Finanční a pojišťovací služby",
+    "description": "Finanční a pojišťovací služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-175",
+    "concept_id": "CID-175",
+    "hierarchy_id": "6.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pojištění nákladu",
+    "description": "Pojištění nákladu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-176",
+    "concept_id": "CID-176",
+    "hierarchy_id": "6.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pojištění odpovědnosti",
+    "description": "Pojištění odpovědnosti",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-177",
+    "concept_id": "CID-177",
+    "hierarchy_id": "6.2.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pojištění vozidel a vozového parku",
+    "description": "Pojištění vozidel a vozového parku",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-178",
+    "concept_id": "CID-178",
+    "hierarchy_id": "6.2.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Obchodní financování",
+    "description": "Obchodní financování",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-179",
+    "concept_id": "CID-179",
+    "hierarchy_id": "6.2.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Faktoring",
+    "description": "Faktoring",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-180",
+    "concept_id": "CID-180",
+    "hierarchy_id": "6.2.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Platba a audit přepravného",
+    "description": "Platba a audit přepravného",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-181",
+    "concept_id": "CID-181",
+    "hierarchy_id": "6.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Právní služby",
+    "description": "Právní služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-182",
+    "concept_id": "CID-182",
+    "hierarchy_id": "6.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Právo přepravních smluv",
+    "description": "Právo přepravních smluv",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-183",
+    "concept_id": "CID-183",
+    "hierarchy_id": "6.3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Celní a zahraničněobchodní právo",
+    "description": "Celní a zahraničněobchodní právo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-184",
+    "concept_id": "CID-184",
+    "hierarchy_id": "7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Udržitelnost a zelená logistika",
+    "description": "Udržitelnost a zelená logistika",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-185",
+    "concept_id": "CID-185",
+    "hierarchy_id": "7.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Posuzování uhlíkové stopy a emisí",
+    "description": "Posuzování uhlíkové stopy a emisí",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-186",
+    "concept_id": "CID-186",
+    "hierarchy_id": "7.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Výpočet uhlíkové stopy",
+    "description": "Výpočet uhlíkové stopy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-187",
+    "concept_id": "CID-187",
+    "hierarchy_id": "7.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Zelená řešení",
+    "description": "Zelená řešení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-188",
+    "concept_id": "CID-188",
+    "hierarchy_id": "7.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Řešení udržitelných paliv",
+    "description": "Řešení udržitelných paliv",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-189",
+    "concept_id": "CID-189",
+    "hierarchy_id": "7.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Poradenství v oblasti zelené logistiky",
+    "description": "Poradenství v oblasti zelené logistiky",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-190",
+    "concept_id": "CID-190",
+    "hierarchy_id": "7.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Udržitelné obaly a snižování odpadu",
+    "description": "Udržitelné obaly a snižování odpadu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-191",
+    "concept_id": "CID-191",
+    "hierarchy_id": "7.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Optimalizace odpadu a obalů",
+    "description": "Optimalizace odpadu a obalů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-192",
+    "concept_id": "CID-192",
+    "hierarchy_id": "7.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Environmentální plánování a dekarbonizace",
+    "description": "Environmentální plánování a dekarbonizace",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-193",
+    "concept_id": "CID-193",
+    "hierarchy_id": "7.4.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Plán udržitelnosti a plánování přechodu",
+    "description": "Plán udržitelnosti a plánování přechodu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-194",
+    "concept_id": "CID-194",
+    "hierarchy_id": "7.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Environmentální audit",
+    "description": "Environmentální audit",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-195",
+    "concept_id": "CID-195",
+    "hierarchy_id": "7.5.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Environmentální audit a přezkum souladu",
+    "description": "Environmentální audit a přezkum souladu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-196",
+    "concept_id": "CID-196",
+    "hierarchy_id": "7.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Environmentální reporting a zveřejňování",
+    "description": "Environmentální reporting a zveřejňování",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-197",
+    "concept_id": "CID-197",
+    "hierarchy_id": "7.6.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Reporting emisí / udržitelnosti",
+    "description": "Reporting emisí / udržitelnosti",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-198",
+    "concept_id": "CID-198",
+    "hierarchy_id": "8",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Osobní doprava a mobilita",
+    "description": "Osobní doprava a mobilita",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-199",
+    "concept_id": "CID-199",
+    "hierarchy_id": "8.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Letecká osobní doprava",
+    "description": "Letecká osobní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-200",
+    "concept_id": "CID-200",
+    "hierarchy_id": "8.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Helikoptérové služby",
+    "description": "Helikoptérové služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-201",
+    "concept_id": "CID-201",
+    "hierarchy_id": "8.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Cestování komerčním letadlem",
+    "description": "Cestování komerčním letadlem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-202",
+    "concept_id": "CID-202",
+    "hierarchy_id": "8.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Charterové cestování letadlem",
+    "description": "Charterové cestování letadlem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-203",
+    "concept_id": "CID-203",
+    "hierarchy_id": "8.1.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vyhlídkové lety",
+    "description": "Vyhlídkové lety",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-204",
+    "concept_id": "CID-204",
+    "hierarchy_id": "8.1.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba pronájmu nebo leasingu osobního letadla",
+    "description": "Služba pronájmu nebo leasingu osobního letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-205",
+    "concept_id": "CID-205",
+    "hierarchy_id": "8.1.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Lékařská evakuace leteckou ambulancí",
+    "description": "Lékařská evakuace leteckou ambulancí",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-206",
+    "concept_id": "CID-206",
+    "hierarchy_id": "8.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Železniční osobní doprava",
+    "description": "Železniční osobní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-207",
+    "concept_id": "CID-207",
+    "hierarchy_id": "8.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Přepravní služby lehké kolejové dopravy",
+    "description": "Přepravní služby lehké kolejové dopravy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-208",
+    "concept_id": "CID-208",
+    "hierarchy_id": "8.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Doprava metrem",
+    "description": "Doprava metrem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-209",
+    "concept_id": "CID-209",
+    "hierarchy_id": "8.2.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kontinentální / mezikontinentální železniční služby",
+    "description": "Kontinentální / mezikontinentální železniční služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-210",
+    "concept_id": "CID-210",
+    "hierarchy_id": "8.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Námořní osobní doprava",
+    "description": "Námořní osobní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-211",
+    "concept_id": "CID-211",
+    "hierarchy_id": "8.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vodní taxi",
+    "description": "Vodní taxi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-212",
+    "concept_id": "CID-212",
+    "hierarchy_id": "8.3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Noční lodní plavby",
+    "description": "Noční lodní plavby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-213",
+    "concept_id": "CID-213",
+    "hierarchy_id": "8.3.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vyhlídkové plavby lodí",
+    "description": "Vyhlídkové plavby lodí",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-214",
+    "concept_id": "CID-214",
+    "hierarchy_id": "8.3.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba pronájmu nebo leasingu plavidla",
+    "description": "Služba pronájmu nebo leasingu plavidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-215",
+    "concept_id": "CID-215",
+    "hierarchy_id": "8.3.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba přepravy personálu na offshore platformy",
+    "description": "Služba přepravy personálu na offshore platformy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-216",
+    "concept_id": "CID-216",
+    "hierarchy_id": "8.3.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pobřežní a zaoceánský osobní trajekt",
+    "description": "Pobřežní a zaoceánský osobní trajekt",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-217",
+    "concept_id": "CID-217",
+    "hierarchy_id": "8.3.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vnitrozemský vodní osobní trajekt",
+    "description": "Vnitrozemský vodní osobní trajekt",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-218",
+    "concept_id": "CID-218",
+    "hierarchy_id": "8.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Silniční osobní doprava",
+    "description": "Silniční osobní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-219",
+    "concept_id": "CID-219",
+    "hierarchy_id": "8.4.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Linkové autobusové služby",
+    "description": "Linkové autobusové služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-220",
+    "concept_id": "CID-220",
+    "hierarchy_id": "8.4.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Charterové autobusové služby",
+    "description": "Charterové autobusové služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-221",
+    "concept_id": "CID-221",
+    "hierarchy_id": "8.4.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Taxi služby",
+    "description": "Taxi služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-222",
+    "concept_id": "CID-222",
+    "hierarchy_id": "8.4.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Poplatky za parkování",
+    "description": "Poplatky za parkování",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-223",
+    "concept_id": "CID-223",
+    "hierarchy_id": "8.4.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem vozidel",
+    "description": "Pronájem vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-224",
+    "concept_id": "CID-224",
+    "hierarchy_id": "8.4.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasing sedanů / kupé / kombi",
+    "description": "Leasing sedanů / kupé / kombi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-225",
+    "concept_id": "CID-225",
+    "hierarchy_id": "8.4.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Limuzína nebo osobní vůz s řidičem",
+    "description": "Limuzína nebo osobní vůz s řidičem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-226",
+    "concept_id": "CID-226",
+    "hierarchy_id": "8.4.8",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasing lehkých nákladních vozidel / SUV",
+    "description": "Leasing lehkých nákladních vozidel / SUV",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-227",
+    "concept_id": "CID-227",
+    "hierarchy_id": "8.4.9",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasing osobních vanů / minivanů",
+    "description": "Leasing osobních vanů / minivanů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-228",
+    "concept_id": "CID-228",
+    "hierarchy_id": "8.4.10",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pozemní vyhlídkové služby",
+    "description": "Pozemní vyhlídkové služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-229",
+    "concept_id": "CID-229",
+    "hierarchy_id": "8.4.11",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Lékařská evakuace sanitkou",
+    "description": "Lékařská evakuace sanitkou",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-230",
+    "concept_id": "CID-230",
+    "hierarchy_id": "8.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Intermodální služby osobní dopravy",
+    "description": "Intermodální služby osobní dopravy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-231",
+    "concept_id": "CID-231",
+    "hierarchy_id": "8.5.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Smíšená městská a příměstská doprava pro cestující",
+    "description": "Smíšená městská a příměstská doprava pro cestující",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-232",
+    "concept_id": "CID-232",
+    "hierarchy_id": "8.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kosmická osobní doprava",
+    "description": "Kosmická osobní doprava",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-233",
+    "concept_id": "CID-233",
+    "hierarchy_id": "9",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Dopravní aktiva, vozidla a plavidla",
+    "description": "Dopravní aktiva, vozidla a plavidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-234",
+    "concept_id": "CID-234",
+    "hierarchy_id": "9.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Motorová vozidla",
+    "description": "Motorová vozidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-235",
+    "concept_id": "CID-235",
+    "hierarchy_id": "9.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Osobní motorová vozidla",
+    "description": "Osobní motorová vozidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-236",
+    "concept_id": "CID-236",
+    "hierarchy_id": "9.1.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Minibusy",
+    "description": "Minibusy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-237",
+    "concept_id": "CID-237",
+    "hierarchy_id": "9.1.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Autobusy",
+    "description": "Autobusy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-238",
+    "concept_id": "CID-238",
+    "hierarchy_id": "9.1.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Automobily / auta",
+    "description": "Automobily / auta",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-239",
+    "concept_id": "CID-239",
+    "hierarchy_id": "9.1.1.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kombi vozy",
+    "description": "Kombi vozy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-240",
+    "concept_id": "CID-240",
+    "hierarchy_id": "9.1.1.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Minivany nebo dodávky",
+    "description": "Minivany nebo dodávky",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-241",
+    "concept_id": "CID-241",
+    "hierarchy_id": "9.1.1.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Limuzíny",
+    "description": "Limuzíny",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-242",
+    "concept_id": "CID-242",
+    "hierarchy_id": "9.1.1.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Lehké nákladní vozy nebo SUV",
+    "description": "Lehké nákladní vozy nebo SUV",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-243",
+    "concept_id": "CID-243",
+    "hierarchy_id": "9.1.1.8",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Elektricky poháněná vozidla",
+    "description": "Elektricky poháněná vozidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-244",
+    "concept_id": "CID-244",
+    "hierarchy_id": "9.1.1.9",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Obrněná motorová vozidla",
+    "description": "Obrněná motorová vozidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-245",
+    "concept_id": "CID-245",
+    "hierarchy_id": "9.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Motorové dvoukolky",
+    "description": "Motorové dvoukolky",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-246",
+    "concept_id": "CID-246",
+    "hierarchy_id": "9.1.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Motocykly",
+    "description": "Motocykly",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-247",
+    "concept_id": "CID-247",
+    "hierarchy_id": "9.1.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Skútry",
+    "description": "Skútry",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-248",
+    "concept_id": "CID-248",
+    "hierarchy_id": "9.1.2.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Mopedy",
+    "description": "Mopedy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-249",
+    "concept_id": "CID-249",
+    "hierarchy_id": "9.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "námořní plavidla",
+    "description": "námořní plavidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-250",
+    "concept_id": "CID-250",
+    "hierarchy_id": "9.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Komerční námořní plavidla",
+    "description": "Komerční námořní plavidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-251",
+    "concept_id": "CID-251",
+    "hierarchy_id": "9.2.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Nákladní nebo kontejnerové lodě",
+    "description": "Nákladní nebo kontejnerové lodě",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-252",
+    "concept_id": "CID-252",
+    "hierarchy_id": "9.2.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Tankery",
+    "description": "Tankery",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-253",
+    "concept_id": "CID-253",
+    "hierarchy_id": "9.2.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Remorkéry",
+    "description": "Remorkéry",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-254",
+    "concept_id": "CID-254",
+    "hierarchy_id": "9.2.1.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Nákladní bárky",
+    "description": "Nákladní bárky",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-255",
+    "concept_id": "CID-255",
+    "hierarchy_id": "9.2.1.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Osobní nebo automobilové trajekty",
+    "description": "Osobní nebo automobilové trajekty",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-256",
+    "concept_id": "CID-256",
+    "hierarchy_id": "9.2.1.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Výletní lodě",
+    "description": "Výletní lodě",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-257",
+    "concept_id": "CID-257",
+    "hierarchy_id": "9.2.1.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Čluny pro posádku ropných a plynových zařízení",
+    "description": "Čluny pro posádku ropných a plynových zařízení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-258",
+    "concept_id": "CID-258",
+    "hierarchy_id": "9.2.1.8",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pracovní čluny pro ropný a plynárenský průmysl",
+    "description": "Pracovní čluny pro ropný a plynárenský průmysl",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-259",
+    "concept_id": "CID-259",
+    "hierarchy_id": "9.2.1.9",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Seismická plavidla",
+    "description": "Seismická plavidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-260",
+    "concept_id": "CID-260",
+    "hierarchy_id": "9.2.1.10",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Ledoborce",
+    "description": "Ledoborce",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-261",
+    "concept_id": "CID-261",
+    "hierarchy_id": "9.2.1.11",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Lodě pro přepravu zkapalněného plynu",
+    "description": "Lodě pro přepravu zkapalněného plynu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-262",
+    "concept_id": "CID-262",
+    "hierarchy_id": "9.2.1.12",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Chemické tankerové lodě",
+    "description": "Chemické tankerové lodě",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-263",
+    "concept_id": "CID-263",
+    "hierarchy_id": "9.2.1.13",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Lodě pro hromadný náklad",
+    "description": "Lodě pro hromadný náklad",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-264",
+    "concept_id": "CID-264",
+    "hierarchy_id": "9.2.1.14",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Lodě pro přepravu automobilů / RoRo",
+    "description": "Lodě pro přepravu automobilů / RoRo",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-265",
+    "concept_id": "CID-265",
+    "hierarchy_id": "9.2.1.15",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pilotní čluny",
+    "description": "Pilotní čluny",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-266",
+    "concept_id": "CID-266",
+    "hierarchy_id": "9.2.1.16",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Výzkumná plavidla",
+    "description": "Výzkumná plavidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-267",
+    "concept_id": "CID-267",
+    "hierarchy_id": "9.2.1.17",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Lodě pro pokládku kabelů",
+    "description": "Lodě pro pokládku kabelů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-268",
+    "concept_id": "CID-268",
+    "hierarchy_id": "9.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Rekreační plavidla",
+    "description": "Rekreační plavidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-269",
+    "concept_id": "CID-269",
+    "hierarchy_id": "9.2.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Čluny dinghy",
+    "description": "Čluny dinghy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-270",
+    "concept_id": "CID-270",
+    "hierarchy_id": "9.2.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Jachty",
+    "description": "Jachty",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-271",
+    "concept_id": "CID-271",
+    "hierarchy_id": "9.2.2.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Skify",
+    "description": "Skify",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-272",
+    "concept_id": "CID-272",
+    "hierarchy_id": "9.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Železniční a tramvajové stroje a zařízení",
+    "description": "Železniční a tramvajové stroje a zařízení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-273",
+    "concept_id": "CID-273",
+    "hierarchy_id": "9.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Letadla",
+    "description": "Letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-274",
+    "concept_id": "CID-274",
+    "hierarchy_id": "9.4.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Motorová letadla s pevným křídlem",
+    "description": "Motorová letadla s pevným křídlem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-275",
+    "concept_id": "CID-275",
+    "hierarchy_id": "9.4.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Zemědělská letadla s pevným křídlem",
+    "description": "Zemědělská letadla s pevným křídlem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-276",
+    "concept_id": "CID-276",
+    "hierarchy_id": "9.4.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Nákladní vrtulová letadla",
+    "description": "Nákladní vrtulová letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-277",
+    "concept_id": "CID-277",
+    "hierarchy_id": "9.4.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Hydroplány",
+    "description": "Hydroplány",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-278",
+    "concept_id": "CID-278",
+    "hierarchy_id": "9.4.1.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Komerční osobní vrtulová letadla",
+    "description": "Komerční osobní vrtulová letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-279",
+    "concept_id": "CID-279",
+    "hierarchy_id": "9.4.1.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Nákladní proudová letadla",
+    "description": "Nákladní proudová letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-280",
+    "concept_id": "CID-280",
+    "hierarchy_id": "9.4.1.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Komerční osobní proudová letadla",
+    "description": "Komerční osobní proudová letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-281",
+    "concept_id": "CID-281",
+    "hierarchy_id": "9.4.1.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Soukromá nebo obchodní vrtulová letadla",
+    "description": "Soukromá nebo obchodní vrtulová letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-282",
+    "concept_id": "CID-282",
+    "hierarchy_id": "9.4.1.8",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Soukromá nebo obchodní proudová letadla",
+    "description": "Soukromá nebo obchodní proudová letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-283",
+    "concept_id": "CID-283",
+    "hierarchy_id": "9.4.1.9",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Letadla pro letové inspekce",
+    "description": "Letadla pro letové inspekce",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-284",
+    "concept_id": "CID-284",
+    "hierarchy_id": "9.4.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Civilní a komerční rotorová letadla",
+    "description": "Civilní a komerční rotorová letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-285",
+    "concept_id": "CID-285",
+    "hierarchy_id": "9.4.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vrtulníky pro přepravu cestujících",
+    "description": "Vrtulníky pro přepravu cestujících",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-286",
+    "concept_id": "CID-286",
+    "hierarchy_id": "9.4.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Nákladní vrtulníky",
+    "description": "Nákladní vrtulníky",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-287",
+    "concept_id": "CID-287",
+    "hierarchy_id": "9.4.2.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Zdravotnické nebo záchranné vrtulníky",
+    "description": "Zdravotnické nebo záchranné vrtulníky",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-288",
+    "concept_id": "CID-288",
+    "hierarchy_id": "9.4.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Speciální letadla",
+    "description": "Speciální letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-289",
+    "concept_id": "CID-289",
+    "hierarchy_id": "9.4.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vzducholodě",
+    "description": "Vzducholodě",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-290",
+    "concept_id": "CID-290",
+    "hierarchy_id": "9.4.3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Modely letadel",
+    "description": "Modely letadel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-291",
+    "concept_id": "CID-291",
+    "hierarchy_id": "9.4.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Rekreační letadla",
+    "description": "Rekreační letadla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-292",
+    "concept_id": "CID-292",
+    "hierarchy_id": "9.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Kosmická plavidla",
+    "description": "Kosmická plavidla",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-293",
+    "concept_id": "CID-293",
+    "hierarchy_id": "9.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vybavení pro dopravní služby",
+    "description": "Vybavení pro dopravní služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-294",
+    "concept_id": "CID-294",
+    "hierarchy_id": "10",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Charterové, nájemní a leasingové služby",
+    "description": "Charterové, nájemní a leasingové služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-295",
+    "concept_id": "CID-295",
+    "hierarchy_id": "10.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Charterové služby",
+    "description": "Charterové služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-296",
+    "concept_id": "CID-296",
+    "hierarchy_id": "10.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Nákladní charter",
+    "description": "Nákladní charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-297",
+    "concept_id": "CID-297",
+    "hierarchy_id": "10.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Osobní charter",
+    "description": "Osobní charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-298",
+    "concept_id": "CID-298",
+    "hierarchy_id": "10.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Vrtulníkový charter",
+    "description": "Vrtulníkový charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-299",
+    "concept_id": "CID-299",
+    "hierarchy_id": "10.1.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Charter jachty / lodi",
+    "description": "Charter jachty / lodi",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-300",
+    "concept_id": "CID-300",
+    "hierarchy_id": "10.1.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Autobusový charter",
+    "description": "Autobusový charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-301",
+    "concept_id": "CID-301",
+    "hierarchy_id": "10.1.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Limuzínový / VIP charter",
+    "description": "Limuzínový / VIP charter",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-302",
+    "concept_id": "CID-302",
+    "hierarchy_id": "10.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Nájemní služby",
+    "description": "Nájemní služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-303",
+    "concept_id": "CID-303",
+    "hierarchy_id": "10.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem kontejnerů",
+    "description": "Pronájem kontejnerů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-304",
+    "concept_id": "CID-304",
+    "hierarchy_id": "10.2.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem intermodálních kontejnerů",
+    "description": "Pronájem intermodálních kontejnerů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-305",
+    "concept_id": "CID-305",
+    "hierarchy_id": "10.2.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem vozidel služby",
+    "description": "Pronájem vozidel služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-306",
+    "concept_id": "CID-306",
+    "hierarchy_id": "10.2.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem plavidel",
+    "description": "Pronájem plavidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-307",
+    "concept_id": "CID-307",
+    "hierarchy_id": "10.2.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem nebo leasing osobních letadel",
+    "description": "Pronájem nebo leasing osobních letadel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-308",
+    "concept_id": "CID-308",
+    "hierarchy_id": "10.2.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem nákladních letadel s operátorem",
+    "description": "Pronájem nákladních letadel s operátorem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-309",
+    "concept_id": "CID-309",
+    "hierarchy_id": "10.2.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem nákladní lodi s operátorem",
+    "description": "Pronájem nákladní lodi s operátorem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-310",
+    "concept_id": "CID-310",
+    "hierarchy_id": "10.2.8",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem pobřežní / transoceánské nákladní lodi s operátorem",
+    "description": "Pronájem pobřežní / transoceánské nákladní lodi s operátorem",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-311",
+    "concept_id": "CID-311",
+    "hierarchy_id": "10.2.9",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Pronájem nákladního vozidla s operátorem služby",
+    "description": "Pronájem nákladního vozidla s operátorem služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-312",
+    "concept_id": "CID-312",
+    "hierarchy_id": "10.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasingové služby",
+    "description": "Leasingové služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-313",
+    "concept_id": "CID-313",
+    "hierarchy_id": "10.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasing sedanů / kupé / kombi leasingové služby",
+    "description": "Leasing sedanů / kupé / kombi leasingové služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-314",
+    "concept_id": "CID-314",
+    "hierarchy_id": "10.3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasing lehkých nákladních vozidel / SUV leasingové služby",
+    "description": "Leasing lehkých nákladních vozidel / SUV leasingové služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-315",
+    "concept_id": "CID-315",
+    "hierarchy_id": "10.3.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasing osobních vanů / minivanů leasingové služby",
+    "description": "Leasing osobních vanů / minivanů leasingové služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-316",
+    "concept_id": "CID-316",
+    "hierarchy_id": "10.3.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Leasing dopravních prostředků",
+    "description": "Leasing dopravních prostředků",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-317",
+    "concept_id": "CID-317",
+    "hierarchy_id": "11",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Údržba, tankování, skladování a podpora",
+    "description": "Údržba, tankování, skladování a podpora",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-318",
+    "concept_id": "CID-318",
+    "hierarchy_id": "11.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Údržba a opravy vozidel",
+    "description": "Údržba a opravy vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-319",
+    "concept_id": "CID-319",
+    "hierarchy_id": "11.1.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba opravy karoserie nebo lakování vozidel",
+    "description": "Služba opravy karoserie nebo lakování vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-320",
+    "concept_id": "CID-320",
+    "hierarchy_id": "11.1.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba kontroly vozidel",
+    "description": "Služba kontroly vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-321",
+    "concept_id": "CID-321",
+    "hierarchy_id": "11.1.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba výměny skel vozidel",
+    "description": "Služba výměny skel vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-322",
+    "concept_id": "CID-322",
+    "hierarchy_id": "11.1.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Údržba a opravy automobilů a lehkých nákladních vozidel",
+    "description": "Údržba a opravy automobilů a lehkých nákladních vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-323",
+    "concept_id": "CID-323",
+    "hierarchy_id": "11.1.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Údržba a opravy těžkých nákladních vozidel",
+    "description": "Údržba a opravy těžkých nákladních vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-324",
+    "concept_id": "CID-324",
+    "hierarchy_id": "11.1.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba kontroly a údržby železničních vozů",
+    "description": "Služba kontroly a údržby železničních vozů",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-325",
+    "concept_id": "CID-325",
+    "hierarchy_id": "11.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Klempířské a lakýrnické služby",
+    "description": "Klempířské a lakýrnické služby",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-326",
+    "concept_id": "CID-326",
+    "hierarchy_id": "11.2.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Klempířská opravárenská služba",
+    "description": "Klempířská opravárenská služba",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-327",
+    "concept_id": "CID-327",
+    "hierarchy_id": "11.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Tankování / skladování / provozní podpora",
+    "description": "Tankování / skladování / provozní podpora",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-328",
+    "concept_id": "CID-328",
+    "hierarchy_id": "11.3.1",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba tankování vozidel",
+    "description": "Služba tankování vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-329",
+    "concept_id": "CID-329",
+    "hierarchy_id": "11.3.2",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba skladování pro dopravu",
+    "description": "Služba skladování pro dopravu",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-330",
+    "concept_id": "CID-330",
+    "hierarchy_id": "11.3.3",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba parkování vozidel",
+    "description": "Služba parkování vozidel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-331",
+    "concept_id": "CID-331",
+    "hierarchy_id": "11.3.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Služba dobíjecí palivové karty / předplacené palivové karty",
+    "description": "Služba dobíjecí palivové karty / předplacené palivové karty",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-332",
+    "concept_id": "CID-332",
+    "hierarchy_id": "11.4",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Údržba a opravy letadel",
+    "description": "Údržba a opravy letadel",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-333",
+    "concept_id": "CID-333",
+    "hierarchy_id": "11.5",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Údržba a opravy navigačního vybavení",
+    "description": "Údržba a opravy navigačního vybavení",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-334",
+    "concept_id": "CID-334",
+    "hierarchy_id": "11.6",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Údržba a opravy plavidel vodní dopravy",
+    "description": "Údržba a opravy plavidel vodní dopravy",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "cs-335",
+    "concept_id": "CID-335",
+    "hierarchy_id": "11.7",
+    "unspsc_code": "",
+    "language": "cs",
+    "term": "Podpora správy vozového parku",
+    "description": "Podpora správy vozového parku",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  }
+]
