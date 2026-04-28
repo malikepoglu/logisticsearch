@@ -1,1 +1,6032 @@
-[]
+[
+  {
+    "term_id": "bg_1_primary_001",
+    "concept_id": "CID-000001",
+    "hierarchy_id": "1",
+    "unspsc_code": "78100000",
+    "language": "bg",
+    "term": "Транспорт и превоз на товари",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_primary_001",
+    "concept_id": "CID-000002",
+    "hierarchy_id": "1.1",
+    "unspsc_code": "78101800",
+    "language": "bg",
+    "term": "транспорт с камиони",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_1_primary_001",
+    "concept_id": "CID-000003",
+    "hierarchy_id": "1.1.1",
+    "unspsc_code": "78101802",
+    "language": "bg",
+    "term": "Цял камионен товар - FTL / TL",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_2_primary_001",
+    "concept_id": "CID-000004",
+    "hierarchy_id": "1.1.2",
+    "unspsc_code": "78101802",
+    "language": "bg",
+    "term": "Частичен товар - LTL",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_3_primary_001",
+    "concept_id": "CID-000005",
+    "hierarchy_id": "1.1.3",
+    "unspsc_code": "78101801",
+    "language": "bg",
+    "term": "Локална дистрибуция / градски автомобилен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_4_primary_001",
+    "concept_id": "CID-000006",
+    "hierarchy_id": "1.1.4",
+    "unspsc_code": "78101802",
+    "language": "bg",
+    "term": "Специализиран договорен превоз",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_5_primary_001",
+    "concept_id": "CID-000007",
+    "hierarchy_id": "1.1.5",
+    "unspsc_code": "78101806",
+    "language": "bg",
+    "term": "Международен автомобилен товарен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_6_primary_001",
+    "concept_id": "CID-000008",
+    "hierarchy_id": "1.1.6",
+    "unspsc_code": "78101809",
+    "language": "bg",
+    "term": "Пътни колетни и услуги за последна миля",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_6_1_primary_001",
+    "concept_id": "CID-000009",
+    "hierarchy_id": "1.1.6.1",
+    "unspsc_code": "78101809",
+    "language": "bg",
+    "term": "Доставка до последна миля",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_7_primary_001",
+    "concept_id": "CID-000010",
+    "hierarchy_id": "1.1.7",
+    "unspsc_code": "78101804",
+    "language": "bg",
+    "term": "Услуги по преместване на домакинства / релокация",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_8_primary_001",
+    "concept_id": "CID-000011",
+    "hierarchy_id": "1.1.8",
+    "unspsc_code": "78101808",
+    "language": "bg",
+    "term": "Автомобилен транспорт на сухи насипни товари",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_9_primary_001",
+    "concept_id": "CID-000012",
+    "hierarchy_id": "1.1.9",
+    "unspsc_code": "78101807",
+    "language": "bg",
+    "term": "Цистернов транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_10_primary_001",
+    "concept_id": "CID-000013",
+    "hierarchy_id": "1.1.10",
+    "unspsc_code": "78101802",
+    "language": "bg",
+    "term": "Тежък превоз / извънгабаритен товар",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_11_primary_001",
+    "concept_id": "CID-000014",
+    "hierarchy_id": "1.1.11",
+    "unspsc_code": "78101803",
+    "language": "bg",
+    "term": "Услуги по превоз на превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_12_primary_001",
+    "concept_id": "CID-000015",
+    "hierarchy_id": "1.1.12",
+    "unspsc_code": "78101810",
+    "language": "bg",
+    "term": "Превоз на живи животни",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_1_13_primary_001",
+    "concept_id": "CID-000016",
+    "hierarchy_id": "1.1.13",
+    "unspsc_code": "78101807",
+    "language": "bg",
+    "term": "Превоз на опасни материали - Hazmat",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_primary_001",
+    "concept_id": "CID-000017",
+    "hierarchy_id": "1.2",
+    "unspsc_code": "78101700",
+    "language": "bg",
+    "term": "морски транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_1_primary_001",
+    "concept_id": "CID-000018",
+    "hierarchy_id": "1.2.1",
+    "unspsc_code": "78101700",
+    "language": "bg",
+    "term": "Контейнерен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_1_1_primary_001",
+    "concept_id": "CID-000019",
+    "hierarchy_id": "1.2.1.1",
+    "unspsc_code": "78101700",
+    "language": "bg",
+    "term": "Пълен контейнерен товар - FCL",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_1_2_primary_001",
+    "concept_id": "CID-000020",
+    "hierarchy_id": "1.2.1.2",
+    "unspsc_code": "78101700",
+    "language": "bg",
+    "term": "Частичен контейнерен товар - LCL",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_2_primary_001",
+    "concept_id": "CID-000021",
+    "hierarchy_id": "1.2.2",
+    "unspsc_code": "78101700",
+    "language": "bg",
+    "term": "Превоз на сухи насипни товари по море",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_3_primary_001",
+    "concept_id": "CID-000022",
+    "hierarchy_id": "1.2.3",
+    "unspsc_code": "78101700",
+    "language": "bg",
+    "term": "Превоз на течни насипни товари по море",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_4_primary_001",
+    "concept_id": "CID-000023",
+    "hierarchy_id": "1.2.4",
+    "unspsc_code": "78101700",
+    "language": "bg",
+    "term": "Ro-Ro транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_5_primary_001",
+    "concept_id": "CID-000024",
+    "hierarchy_id": "1.2.5",
+    "unspsc_code": "78101700",
+    "language": "bg",
+    "term": "Линейно корабоплаване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_6_primary_001",
+    "concept_id": "CID-000025",
+    "hierarchy_id": "1.2.6",
+    "unspsc_code": "78101700",
+    "language": "bg",
+    "term": "Трампово корабоплаване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_7_primary_001",
+    "concept_id": "CID-000026",
+    "hierarchy_id": "1.2.7",
+    "unspsc_code": "78101700",
+    "language": "bg",
+    "term": "Късоморско корабоплаване - SSS",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_8_primary_001",
+    "concept_id": "CID-000027",
+    "hierarchy_id": "1.2.8",
+    "unspsc_code": "78101706",
+    "language": "bg",
+    "term": "Офшорна логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_9_primary_001",
+    "concept_id": "CID-000028",
+    "hierarchy_id": "1.2.9",
+    "unspsc_code": "78141700",
+    "language": "bg",
+    "term": "Навигационни и буксирни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_9_1_primary_001",
+    "concept_id": "CID-000029",
+    "hierarchy_id": "1.2.9.1",
+    "unspsc_code": "78141701",
+    "language": "bg",
+    "term": "Буксирни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_9_2_primary_001",
+    "concept_id": "CID-000030",
+    "hierarchy_id": "1.2.9.2",
+    "unspsc_code": "78141702",
+    "language": "bg",
+    "term": "Операции по подвижни мостове",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_9_3_primary_001",
+    "concept_id": "CID-000031",
+    "hierarchy_id": "1.2.9.3",
+    "unspsc_code": "78141703",
+    "language": "bg",
+    "term": "Морски навигационни или комуникационни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_2_9_4_primary_001",
+    "concept_id": "CID-000032",
+    "hierarchy_id": "1.2.9.4",
+    "unspsc_code": "78141704",
+    "language": "bg",
+    "term": "Услуга Dead Man Anchor",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_3_primary_001",
+    "concept_id": "CID-000033",
+    "hierarchy_id": "1.3",
+    "unspsc_code": "78101500",
+    "language": "bg",
+    "term": "Въздушен товарен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_3_1_primary_001",
+    "concept_id": "CID-000034",
+    "hierarchy_id": "1.3.1",
+    "unspsc_code": "78101500",
+    "language": "bg",
+    "term": "Услуги за въздушно карго",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_3_2_primary_001",
+    "concept_id": "CID-000035",
+    "hierarchy_id": "1.3.2",
+    "unspsc_code": "78101500",
+    "language": "bg",
+    "term": "Експресно въздушно карго",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_3_3_primary_001",
+    "concept_id": "CID-000036",
+    "hierarchy_id": "1.3.3",
+    "unspsc_code": "78101500",
+    "language": "bg",
+    "term": "Въздушен товарен транспорт от врата до врата",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_3_4_primary_001",
+    "concept_id": "CID-000037",
+    "hierarchy_id": "1.3.4",
+    "unspsc_code": "78141501",
+    "language": "bg",
+    "term": "Консолидация на въздушно карго",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_3_5_primary_001",
+    "concept_id": "CID-000038",
+    "hierarchy_id": "1.3.5",
+    "unspsc_code": "78101500",
+    "language": "bg",
+    "term": "Чартърни услуги за въздушно карго",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_4_primary_001",
+    "concept_id": "CID-000039",
+    "hierarchy_id": "1.4",
+    "unspsc_code": "78101600",
+    "language": "bg",
+    "term": "Железопътен товарен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_4_1_primary_001",
+    "concept_id": "CID-000040",
+    "hierarchy_id": "1.4.1",
+    "unspsc_code": "78101600",
+    "language": "bg",
+    "term": "Вагонен товарен превоз",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_4_2_primary_001",
+    "concept_id": "CID-000041",
+    "hierarchy_id": "1.4.2",
+    "unspsc_code": "78101900",
+    "language": "bg",
+    "term": "Интермодален железопътен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_4_2_1_primary_001",
+    "concept_id": "CID-000042",
+    "hierarchy_id": "1.4.2.1",
+    "unspsc_code": "78101905",
+    "language": "bg",
+    "term": "Комбиниран превоз тип Piggyback",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_4_3_primary_001",
+    "concept_id": "CID-000043",
+    "hierarchy_id": "1.4.3",
+    "unspsc_code": "78101600",
+    "language": "bg",
+    "term": "Високоскоростно железопътно карго",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_4_4_primary_001",
+    "concept_id": "CID-000044",
+    "hierarchy_id": "1.4.4",
+    "unspsc_code": "78101600",
+    "language": "bg",
+    "term": "Услуги по лизинг на железопътни вагони",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_4_4_1_primary_001",
+    "concept_id": "CID-000045",
+    "hierarchy_id": "1.4.4.1",
+    "unspsc_code": "78101606",
+    "language": "bg",
+    "term": "Лизинг на закрити товарни вагони / товарни вагони",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_4_4_2_primary_001",
+    "concept_id": "CID-000046",
+    "hierarchy_id": "1.4.4.2",
+    "unspsc_code": "78101605",
+    "language": "bg",
+    "term": "Лизинг на железопътни цистерни",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_5_primary_001",
+    "concept_id": "CID-000047",
+    "hierarchy_id": "1.5",
+    "unspsc_code": "78102100",
+    "language": "bg",
+    "term": "Тръбопроводен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_5_1_primary_001",
+    "concept_id": "CID-000048",
+    "hierarchy_id": "1.5.1",
+    "unspsc_code": "78102101",
+    "language": "bg",
+    "term": "Тръбопроводен транспорт на петролни продукти",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_5_2_primary_001",
+    "concept_id": "CID-000049",
+    "hierarchy_id": "1.5.2",
+    "unspsc_code": "78102102",
+    "language": "bg",
+    "term": "Тръбопроводен транспорт на вода",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_5_3_primary_001",
+    "concept_id": "CID-000050",
+    "hierarchy_id": "1.5.3",
+    "unspsc_code": "83101604",
+    "language": "bg",
+    "term": "Тръбопроводен транспорт на природен газ",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_5_4_primary_001",
+    "concept_id": "CID-000051",
+    "hierarchy_id": "1.5.4",
+    "unspsc_code": "78102100",
+    "language": "bg",
+    "term": "Тръбопроводен транспорт на химикали",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_5_5_primary_001",
+    "concept_id": "CID-000052",
+    "hierarchy_id": "1.5.5",
+    "unspsc_code": "78102103",
+    "language": "bg",
+    "term": "Вътрешна инспекция на тръбопроводи",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_6_primary_001",
+    "concept_id": "CID-000053",
+    "hierarchy_id": "1.6",
+    "unspsc_code": "78101900",
+    "language": "bg",
+    "term": "Интермодален и комбиниран товарен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_6_1_primary_001",
+    "concept_id": "CID-000054",
+    "hierarchy_id": "1.6.1",
+    "unspsc_code": "78101900",
+    "language": "bg",
+    "term": "Контейнерен интермодален транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_6_2_primary_001",
+    "concept_id": "CID-000055",
+    "hierarchy_id": "1.6.2",
+    "unspsc_code": "78101901",
+    "language": "bg",
+    "term": "Въздушно-морски транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_6_3_primary_001",
+    "concept_id": "CID-000056",
+    "hierarchy_id": "1.6.3",
+    "unspsc_code": "78101902",
+    "language": "bg",
+    "term": "Морско-железопътен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_6_4_primary_001",
+    "concept_id": "CID-000057",
+    "hierarchy_id": "1.6.4",
+    "unspsc_code": "78101903",
+    "language": "bg",
+    "term": "Морско-автомобилен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_6_5_primary_001",
+    "concept_id": "CID-000058",
+    "hierarchy_id": "1.6.5",
+    "unspsc_code": "78101904",
+    "language": "bg",
+    "term": "Въздушно-автомобилен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_7_primary_001",
+    "concept_id": "CID-000059",
+    "hierarchy_id": "1.7",
+    "unspsc_code": "78102200",
+    "language": "bg",
+    "term": "Куриерски / пощенски услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_7_1_primary_001",
+    "concept_id": "CID-000060",
+    "hierarchy_id": "1.7.1",
+    "unspsc_code": "78102201",
+    "language": "bg",
+    "term": "Национални пощенски услуги за доставка",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_7_2_primary_001",
+    "concept_id": "CID-000061",
+    "hierarchy_id": "1.7.2",
+    "unspsc_code": "78102202",
+    "language": "bg",
+    "term": "Услуги за пощенски кутии",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_7_3_primary_001",
+    "concept_id": "CID-000062",
+    "hierarchy_id": "1.7.3",
+    "unspsc_code": "78102203",
+    "language": "bg",
+    "term": "Услуги по изпращане / събиране / доставка на поща",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_7_4_primary_001",
+    "concept_id": "CID-000063",
+    "hierarchy_id": "1.7.4",
+    "unspsc_code": "78102204",
+    "language": "bg",
+    "term": "Световни услуги за доставка на писма или малки колети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_7_5_primary_001",
+    "concept_id": "CID-000064",
+    "hierarchy_id": "1.7.5",
+    "unspsc_code": "78102205",
+    "language": "bg",
+    "term": "Локални услуги за доставка на писма или малки колети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_1_7_6_primary_001",
+    "concept_id": "CID-000065",
+    "hierarchy_id": "1.7.6",
+    "unspsc_code": "78102206",
+    "language": "bg",
+    "term": "Куриерски услуги с велосипед или скутер",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_primary_001",
+    "concept_id": "CID-000066",
+    "hierarchy_id": "2",
+    "unspsc_code": "78170000",
+    "language": "bg",
+    "term": "Услуги по веригата на доставки и логистиката",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_1_primary_001",
+    "concept_id": "CID-000067",
+    "hierarchy_id": "2.1",
+    "unspsc_code": "80100000",
+    "language": "bg",
+    "term": "Планиране и консултиране",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_1_1_primary_001",
+    "concept_id": "CID-000068",
+    "hierarchy_id": "2.1.1",
+    "unspsc_code": "80101704",
+    "language": "bg",
+    "term": "Консултиране по веригата на доставки",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_1_2_primary_001",
+    "concept_id": "CID-000069",
+    "hierarchy_id": "2.1.2",
+    "unspsc_code": "80101704",
+    "language": "bg",
+    "term": "Планиране на търсенето и запасите",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_1_3_primary_001",
+    "concept_id": "CID-000070",
+    "hierarchy_id": "2.1.3",
+    "unspsc_code": "80101704",
+    "language": "bg",
+    "term": "Оптимизация на мрежата",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_2_primary_001",
+    "concept_id": "CID-000071",
+    "hierarchy_id": "2.2",
+    "unspsc_code": "78141500",
+    "language": "bg",
+    "term": "Услуги по организиране на транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_2_1_primary_001",
+    "concept_id": "CID-000072",
+    "hierarchy_id": "2.2.1",
+    "unspsc_code": "78141501",
+    "language": "bg",
+    "term": "Спедиторски услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_2_1_1_primary_001",
+    "concept_id": "CID-000073",
+    "hierarchy_id": "2.2.1.1",
+    "unspsc_code": "78141501",
+    "language": "bg",
+    "term": "Ко-лоудинг",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_2_2_primary_001",
+    "concept_id": "CID-000074",
+    "hierarchy_id": "2.2.2",
+    "unspsc_code": "78141500",
+    "language": "bg",
+    "term": "Трансгранична логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_2_3_primary_001",
+    "concept_id": "CID-000075",
+    "hierarchy_id": "2.2.3",
+    "unspsc_code": "78141510",
+    "language": "bg",
+    "term": "Услуги по навло със застраховка",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_3_primary_001",
+    "concept_id": "CID-000076",
+    "hierarchy_id": "2.3",
+    "unspsc_code": "78130000",
+    "language": "bg",
+    "term": "Складиране и дистрибуция",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_3_1_primary_001",
+    "concept_id": "CID-000077",
+    "hierarchy_id": "2.3.1",
+    "unspsc_code": "78131600",
+    "language": "bg",
+    "term": "Обществено складиране",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_3_2_primary_001",
+    "concept_id": "CID-000078",
+    "hierarchy_id": "2.3.2",
+    "unspsc_code": "78131600",
+    "language": "bg",
+    "term": "Договорно складиране",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_3_3_primary_001",
+    "concept_id": "CID-000079",
+    "hierarchy_id": "2.3.3",
+    "unspsc_code": "78131600",
+    "language": "bg",
+    "term": "Управление на дистрибуционен център",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_3_4_primary_001",
+    "concept_id": "CID-000080",
+    "hierarchy_id": "2.3.4",
+    "unspsc_code": "78131801",
+    "language": "bg",
+    "term": "Температурно контролирано съхранение",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_3_5_primary_001",
+    "concept_id": "CID-000081",
+    "hierarchy_id": "2.3.5",
+    "unspsc_code": "78131802",
+    "language": "bg",
+    "term": "Митническо складиране",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_3_6_primary_001",
+    "concept_id": "CID-000082",
+    "hierarchy_id": "2.3.6",
+    "unspsc_code": "78131800",
+    "language": "bg",
+    "term": "Фулфилмънт центрове за електронна търговия",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_3_7_primary_001",
+    "concept_id": "CID-000083",
+    "hierarchy_id": "2.3.7",
+    "unspsc_code": "80161602",
+    "language": "bg",
+    "term": "Управление на запасите",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_3_8_primary_001",
+    "concept_id": "CID-000084",
+    "hierarchy_id": "2.3.8",
+    "unspsc_code": "78121601",
+    "language": "bg",
+    "term": "Крос-докинг",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_3_9_primary_001",
+    "concept_id": "CID-000085",
+    "hierarchy_id": "2.3.9",
+    "unspsc_code": "78131700",
+    "language": "bg",
+    "term": "Съхранение на насипни товари",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_4_primary_001",
+    "concept_id": "CID-000086",
+    "hierarchy_id": "2.4",
+    "unspsc_code": "78121600",
+    "language": "bg",
+    "term": "Логистични услуги с добавена стойност",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_4_1_primary_001",
+    "concept_id": "CID-000087",
+    "hierarchy_id": "2.4.1",
+    "unspsc_code": "78121600",
+    "language": "bg",
+    "term": "Събиране и пакетиране",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_4_2_primary_001",
+    "concept_id": "CID-000088",
+    "hierarchy_id": "2.4.2",
+    "unspsc_code": "78121600",
+    "language": "bg",
+    "term": "Етикетиране и ценообразуване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_4_3_primary_001",
+    "concept_id": "CID-000089",
+    "hierarchy_id": "2.4.3",
+    "unspsc_code": "78121600",
+    "language": "bg",
+    "term": "Комплектоване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_4_4_primary_001",
+    "concept_id": "CID-000090",
+    "hierarchy_id": "2.4.4",
+    "unspsc_code": "78121600",
+    "language": "bg",
+    "term": "Сериализация",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_4_5_primary_001",
+    "concept_id": "CID-000091",
+    "hierarchy_id": "2.4.5",
+    "unspsc_code": "78121500",
+    "language": "bg",
+    "term": "Услуги по пакетиране",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_4_6_primary_001",
+    "concept_id": "CID-000092",
+    "hierarchy_id": "2.4.6",
+    "unspsc_code": "78121600",
+    "language": "bg",
+    "term": "Услуги по товарообработка",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_5_primary_001",
+    "concept_id": "CID-000093",
+    "hierarchy_id": "2.5",
+    "unspsc_code": "78141500",
+    "language": "bg",
+    "term": "Митническо посредничество и търговско съответствие",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_5_1_primary_001",
+    "concept_id": "CID-000094",
+    "hierarchy_id": "2.5.1",
+    "unspsc_code": "78141502",
+    "language": "bg",
+    "term": "Митническо посредничество",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_5_2_primary_001",
+    "concept_id": "CID-000095",
+    "hierarchy_id": "2.5.2",
+    "unspsc_code": "80101514",
+    "language": "bg",
+    "term": "Търговско съответствие",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_5_3_primary_001",
+    "concept_id": "CID-000096",
+    "hierarchy_id": "2.5.3",
+    "unspsc_code": "78141500",
+    "language": "bg",
+    "term": "Документация за внос/износ",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_6_primary_001",
+    "concept_id": "CID-000097",
+    "hierarchy_id": "2.6",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Модели на логистични доставчици",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_6_1_primary_001",
+    "concept_id": "CID-000098",
+    "hierarchy_id": "2.6.1",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика от трета страна - 3PL",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_6_2_primary_001",
+    "concept_id": "CID-000099",
+    "hierarchy_id": "2.6.2",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика от четвърта страна - 4PL",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_7_primary_001",
+    "concept_id": "CID-000100",
+    "hierarchy_id": "2.7",
+    "unspsc_code": "78141600",
+    "language": "bg",
+    "term": "Услуги по инспекция и сюрвей",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_7_1_primary_001",
+    "concept_id": "CID-000101",
+    "hierarchy_id": "2.7.1",
+    "unspsc_code": "78141601",
+    "language": "bg",
+    "term": "Услуги по инспекция на опаковки",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_7_2_primary_001",
+    "concept_id": "CID-000102",
+    "hierarchy_id": "2.7.2",
+    "unspsc_code": "78141602",
+    "language": "bg",
+    "term": "Карго сюрвей услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_2_7_3_primary_001",
+    "concept_id": "CID-000103",
+    "hierarchy_id": "2.7.3",
+    "unspsc_code": "78141603",
+    "language": "bg",
+    "term": "Инспекции за контрол на вредители",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_primary_001",
+    "concept_id": "CID-000104",
+    "hierarchy_id": "3",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Специализирана логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_1_primary_001",
+    "concept_id": "CID-000105",
+    "hierarchy_id": "3.1",
+    "unspsc_code": "78131800",
+    "language": "bg",
+    "term": "Температурно контролирана логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_1_1_primary_001",
+    "concept_id": "CID-000106",
+    "hierarchy_id": "3.1.1",
+    "unspsc_code": "78131801",
+    "language": "bg",
+    "term": "Логистика на студената верига",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_1_2_primary_001",
+    "concept_id": "CID-000107",
+    "hierarchy_id": "3.1.2",
+    "unspsc_code": "78131801",
+    "language": "bg",
+    "term": "Фармацевтична логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_1_3_primary_001",
+    "concept_id": "CID-000108",
+    "hierarchy_id": "3.1.3",
+    "unspsc_code": "78131801",
+    "language": "bg",
+    "term": "Логистика на бързоразвалящи се стоки",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_2_primary_001",
+    "concept_id": "CID-000109",
+    "hierarchy_id": "3.2",
+    "unspsc_code": "78141500",
+    "language": "bg",
+    "term": "Логистика на тежки товари и проекти",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_2_1_primary_001",
+    "concept_id": "CID-000110",
+    "hierarchy_id": "3.2.1",
+    "unspsc_code": "78141500",
+    "language": "bg",
+    "term": "Логистика за енергийния сектор",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_2_2_primary_001",
+    "concept_id": "CID-000111",
+    "hierarchy_id": "3.2.2",
+    "unspsc_code": "78141500",
+    "language": "bg",
+    "term": "Строителна логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_3_primary_001",
+    "concept_id": "CID-000112",
+    "hierarchy_id": "3.3",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Специфична за индустрията логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_3_1_primary_001",
+    "concept_id": "CID-000113",
+    "hierarchy_id": "3.3.1",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Автомобилна логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_3_1_1_primary_001",
+    "concept_id": "CID-000114",
+    "hierarchy_id": "3.3.1.1",
+    "unspsc_code": "78131807",
+    "language": "bg",
+    "term": "Логистика на резервни части",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_3_1_2_primary_001",
+    "concept_id": "CID-000115",
+    "hierarchy_id": "3.3.1.2",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика на готови превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_3_2_primary_001",
+    "concept_id": "CID-000116",
+    "hierarchy_id": "3.3.2",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика за търговията на дребно",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_3_2_1_primary_001",
+    "concept_id": "CID-000117",
+    "hierarchy_id": "3.3.2.1",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика за бърза мода",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_3_3_primary_001",
+    "concept_id": "CID-000118",
+    "hierarchy_id": "3.3.3",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика за авиацията и отбраната",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_3_4_primary_001",
+    "concept_id": "CID-000119",
+    "hierarchy_id": "3.3.4",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика за високите технологии и електрониката",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_3_5_primary_001",
+    "concept_id": "CID-000120",
+    "hierarchy_id": "3.3.5",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Химическа логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_3_6_primary_001",
+    "concept_id": "CID-000121",
+    "hierarchy_id": "3.3.6",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика за нефт и газ",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_4_primary_001",
+    "concept_id": "CID-000122",
+    "hierarchy_id": "3.4",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Други специализирани логистични услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_4_1_primary_001",
+    "concept_id": "CID-000123",
+    "hierarchy_id": "3.4.1",
+    "unspsc_code": "78131803",
+    "language": "bg",
+    "term": "Логистика на опасни товари",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_4_2_primary_001",
+    "concept_id": "CID-000124",
+    "hierarchy_id": "3.4.2",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика на живи животни",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_4_3_primary_001",
+    "concept_id": "CID-000125",
+    "hierarchy_id": "3.4.3",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика за стоки с висока стойност и сигурност",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_4_4_primary_001",
+    "concept_id": "CID-000126",
+    "hierarchy_id": "3.4.4",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Логистика за изкуство и изложби",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_4_5_primary_001",
+    "concept_id": "CID-000127",
+    "hierarchy_id": "3.4.5",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Градска логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_4_6_primary_001",
+    "concept_id": "CID-000128",
+    "hierarchy_id": "3.4.6",
+    "unspsc_code": "80161700",
+    "language": "bg",
+    "term": "Обратна логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_4_6_1_primary_001",
+    "concept_id": "CID-000129",
+    "hierarchy_id": "3.4.6.1",
+    "unspsc_code": "80161700",
+    "language": "bg",
+    "term": "Управление на връщанията",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_4_6_2_primary_001",
+    "concept_id": "CID-000130",
+    "hierarchy_id": "3.4.6.2",
+    "unspsc_code": "80161700",
+    "language": "bg",
+    "term": "Ремонт и обновяване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_3_4_6_3_primary_001",
+    "concept_id": "CID-000131",
+    "hierarchy_id": "3.4.6.3",
+    "unspsc_code": "80161703",
+    "language": "bg",
+    "term": "Рециклиране и възстановяване на материали",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_primary_001",
+    "concept_id": "CID-000132",
+    "hierarchy_id": "4",
+    "unspsc_code": "78000000",
+    "language": "bg",
+    "term": "Логистическа инфраструктура и оборудване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_1_primary_001",
+    "concept_id": "CID-000133",
+    "hierarchy_id": "4.1",
+    "unspsc_code": "78141800",
+    "language": "bg",
+    "term": "Терминали и пристанища",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_1_1_primary_001",
+    "concept_id": "CID-000134",
+    "hierarchy_id": "4.1.1",
+    "unspsc_code": "78141800",
+    "language": "bg",
+    "term": "Пристанищни операции",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_1_2_primary_001",
+    "concept_id": "CID-000135",
+    "hierarchy_id": "4.1.2",
+    "unspsc_code": "78141800",
+    "language": "bg",
+    "term": "Операции на вътрешни пристанища",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_1_3_primary_001",
+    "concept_id": "CID-000136",
+    "hierarchy_id": "4.1.3",
+    "unspsc_code": "78141804",
+    "language": "bg",
+    "term": "Железопътни товарни терминали",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_1_4_primary_001",
+    "concept_id": "CID-000137",
+    "hierarchy_id": "4.1.4",
+    "unspsc_code": "78141805",
+    "language": "bg",
+    "term": "Терминали за въздушни товари",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_1_5_primary_001",
+    "concept_id": "CID-000138",
+    "hierarchy_id": "4.1.5",
+    "unspsc_code": "78141806",
+    "language": "bg",
+    "term": "Брегови базови услуги за офшорна поддръжка",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_1_6_primary_001",
+    "concept_id": "CID-000139",
+    "hierarchy_id": "4.1.6",
+    "unspsc_code": "78141807",
+    "language": "bg",
+    "term": "Услуги за контрол на въздушното движение",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_2_primary_001",
+    "concept_id": "CID-000140",
+    "hierarchy_id": "4.2",
+    "unspsc_code": "80131500",
+    "language": "bg",
+    "term": "Логистически недвижими имоти",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_2_1_primary_001",
+    "concept_id": "CID-000141",
+    "hierarchy_id": "4.2.1",
+    "unspsc_code": "80131502",
+    "language": "bg",
+    "term": "Логистически паркове и свободни зони",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_3_primary_001",
+    "concept_id": "CID-000142",
+    "hierarchy_id": "4.3",
+    "unspsc_code": "24000000",
+    "language": "bg",
+    "term": "Логистическо оборудване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_3_1_primary_001",
+    "concept_id": "CID-000143",
+    "hierarchy_id": "4.3.1",
+    "unspsc_code": "24112800",
+    "language": "bg",
+    "term": "Товарни контейнери",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_3_2_primary_001",
+    "concept_id": "CID-000144",
+    "hierarchy_id": "4.3.2",
+    "unspsc_code": "25181701",
+    "language": "bg",
+    "term": "Контейнерни шасита",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_3_3_primary_001",
+    "concept_id": "CID-000145",
+    "hierarchy_id": "4.3.3",
+    "unspsc_code": "24101600",
+    "language": "bg",
+    "term": "Мотокари",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_3_4_primary_001",
+    "concept_id": "CID-000146",
+    "hierarchy_id": "4.3.4",
+    "unspsc_code": "24102100",
+    "language": "bg",
+    "term": "Складово оборудване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_4_primary_001",
+    "concept_id": "CID-000147",
+    "hierarchy_id": "4.4",
+    "unspsc_code": "78140000",
+    "language": "bg",
+    "term": "Наем и лизинг на логистически активи",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_4_1_primary_001",
+    "concept_id": "CID-000148",
+    "hierarchy_id": "4.4.1",
+    "unspsc_code": "78141900",
+    "language": "bg",
+    "term": "Услуги по наем на транспортни контейнери",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_4_1_1_primary_001",
+    "concept_id": "CID-000149",
+    "hierarchy_id": "4.4.1.1",
+    "unspsc_code": "78141903",
+    "language": "bg",
+    "term": "Услуга по наем на интермодални товарни контейнери",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_4_2_primary_001",
+    "concept_id": "CID-000150",
+    "hierarchy_id": "4.4.2",
+    "unspsc_code": "78142000",
+    "language": "bg",
+    "term": "Услуги по наем или лизинг на транспортни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_4_2_1_primary_001",
+    "concept_id": "CID-000151",
+    "hierarchy_id": "4.4.2.1",
+    "unspsc_code": "78142001",
+    "language": "bg",
+    "term": "Наем на товарен самолет с оператор",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_4_2_2_primary_001",
+    "concept_id": "CID-000152",
+    "hierarchy_id": "4.4.2.2",
+    "unspsc_code": "78142002",
+    "language": "bg",
+    "term": "Наем на товарен кораб за вътрешноводен транспорт с оператор",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_4_2_3_primary_001",
+    "concept_id": "CID-000153",
+    "hierarchy_id": "4.4.2.3",
+    "unspsc_code": "78142003",
+    "language": "bg",
+    "term": "Наем на товарен кораб за крайбрежен и трансокеански воден транспорт с оператор",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_4_4_2_4_primary_001",
+    "concept_id": "CID-000154",
+    "hierarchy_id": "4.4.2.4",
+    "unspsc_code": "78142004",
+    "language": "bg",
+    "term": "Наем на камион с оператор",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_primary_001",
+    "concept_id": "CID-000155",
+    "hierarchy_id": "5",
+    "unspsc_code": "43000000",
+    "language": "bg",
+    "term": "Логистически технологии и дигитализация",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_1_primary_001",
+    "concept_id": "CID-000156",
+    "hierarchy_id": "5.1",
+    "unspsc_code": "43230000",
+    "language": "bg",
+    "term": "софтуерни решения",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_1_1_primary_001",
+    "concept_id": "CID-000157",
+    "hierarchy_id": "5.1.1",
+    "unspsc_code": "43231506",
+    "language": "bg",
+    "term": "Система за управление на транспорта - TMS",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_1_2_primary_001",
+    "concept_id": "CID-000158",
+    "hierarchy_id": "5.1.2",
+    "unspsc_code": "43231508",
+    "language": "bg",
+    "term": "Система за управление на склад - WMS",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_1_3_primary_001",
+    "concept_id": "CID-000159",
+    "hierarchy_id": "5.1.3",
+    "unspsc_code": "43231506",
+    "language": "bg",
+    "term": "Софтуер за управление на веригата на доставки",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_1_4_primary_001",
+    "concept_id": "CID-000160",
+    "hierarchy_id": "5.1.4",
+    "unspsc_code": "43232504",
+    "language": "bg",
+    "term": "Софтуер за планиране на маршрути и управление на автопарк",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_1_5_primary_001",
+    "concept_id": "CID-000161",
+    "hierarchy_id": "5.1.5",
+    "unspsc_code": "43231515",
+    "language": "bg",
+    "term": "Системи за проследяване и мониторинг",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_1_6_primary_001",
+    "concept_id": "CID-000162",
+    "hierarchy_id": "5.1.6",
+    "unspsc_code": "43232603",
+    "language": "bg",
+    "term": "Система за управление на двор - YMS",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_2_primary_001",
+    "concept_id": "CID-000163",
+    "hierarchy_id": "5.2",
+    "unspsc_code": "43230000",
+    "language": "bg",
+    "term": "Дигитални платформи и интеграция",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_2_1_primary_001",
+    "concept_id": "CID-000164",
+    "hierarchy_id": "5.2.1",
+    "unspsc_code": "43233513",
+    "language": "bg",
+    "term": "Дигитални платформи за товари",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_2_2_primary_001",
+    "concept_id": "CID-000165",
+    "hierarchy_id": "5.2.2",
+    "unspsc_code": "43232403",
+    "language": "bg",
+    "term": "Логистически API и интеграционни решения",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_3_primary_001",
+    "concept_id": "CID-000166",
+    "hierarchy_id": "5.3",
+    "unspsc_code": "43000000",
+    "language": "bg",
+    "term": "Нововъзникващи технологии",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_3_1_primary_001",
+    "concept_id": "CID-000167",
+    "hierarchy_id": "5.3.1",
+    "unspsc_code": "43232314",
+    "language": "bg",
+    "term": "Изкуствен интелект и анализ на данни в логистиката",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_3_2_primary_001",
+    "concept_id": "CID-000168",
+    "hierarchy_id": "5.3.2",
+    "unspsc_code": "43233513",
+    "language": "bg",
+    "term": "Блокчейн в логистиката",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_5_3_3_primary_001",
+    "concept_id": "CID-000169",
+    "hierarchy_id": "5.3.3",
+    "unspsc_code": "43000000",
+    "language": "bg",
+    "term": "Автономни превозни средства в логистиката",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_primary_001",
+    "concept_id": "CID-000170",
+    "hierarchy_id": "6",
+    "unspsc_code": "80000000",
+    "language": "bg",
+    "term": "Поддържащи и бизнес услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_1_primary_001",
+    "concept_id": "CID-000171",
+    "hierarchy_id": "6.1",
+    "unspsc_code": "80000000",
+    "language": "bg",
+    "term": "Консултиране и обучение",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_1_1_primary_001",
+    "concept_id": "CID-000172",
+    "hierarchy_id": "6.1.1",
+    "unspsc_code": "80101704",
+    "language": "bg",
+    "term": "Подобряване на логистичните процеси",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_1_2_primary_001",
+    "concept_id": "CID-000173",
+    "hierarchy_id": "6.1.2",
+    "unspsc_code": "86101704",
+    "language": "bg",
+    "term": "Логистическо обучение и сертификация",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_2_primary_001",
+    "concept_id": "CID-000174",
+    "hierarchy_id": "6.2",
+    "unspsc_code": "84000000",
+    "language": "bg",
+    "term": "Финансови и застрахователни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_2_1_primary_001",
+    "concept_id": "CID-000175",
+    "hierarchy_id": "6.2.1",
+    "unspsc_code": "84131504",
+    "language": "bg",
+    "term": "Застраховка на товари",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_2_2_primary_001",
+    "concept_id": "CID-000176",
+    "hierarchy_id": "6.2.2",
+    "unspsc_code": "84131607",
+    "language": "bg",
+    "term": "Застраховка от отговорност",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_2_3_primary_001",
+    "concept_id": "CID-000177",
+    "hierarchy_id": "6.2.3",
+    "unspsc_code": "84131503",
+    "language": "bg",
+    "term": "Застраховка на превозни средства и автопарк",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_2_4_primary_001",
+    "concept_id": "CID-000178",
+    "hierarchy_id": "6.2.4",
+    "unspsc_code": "84121600",
+    "language": "bg",
+    "term": "Търговско финансиране",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_2_5_primary_001",
+    "concept_id": "CID-000179",
+    "hierarchy_id": "6.2.5",
+    "unspsc_code": "84121600",
+    "language": "bg",
+    "term": "Факторинг",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_2_6_primary_001",
+    "concept_id": "CID-000180",
+    "hierarchy_id": "6.2.6",
+    "unspsc_code": "78141503",
+    "language": "bg",
+    "term": "Плащане и одит на навло",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_3_primary_001",
+    "concept_id": "CID-000181",
+    "hierarchy_id": "6.3",
+    "unspsc_code": "80120000",
+    "language": "bg",
+    "term": "Правни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_3_1_primary_001",
+    "concept_id": "CID-000182",
+    "hierarchy_id": "6.3.1",
+    "unspsc_code": "80121704",
+    "language": "bg",
+    "term": "Право на транспортните договори",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_6_3_2_primary_001",
+    "concept_id": "CID-000183",
+    "hierarchy_id": "6.3.2",
+    "unspsc_code": "80121601",
+    "language": "bg",
+    "term": "Митническо и външнотърговско право",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_primary_001",
+    "concept_id": "CID-000184",
+    "hierarchy_id": "7",
+    "unspsc_code": "77100000",
+    "language": "bg",
+    "term": "Устойчивост и зелена логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_1_primary_001",
+    "concept_id": "CID-000185",
+    "hierarchy_id": "7.1",
+    "unspsc_code": "77101500",
+    "language": "bg",
+    "term": "Оценка на въглеродния отпечатък и емисиите",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_1_1_primary_001",
+    "concept_id": "CID-000186",
+    "hierarchy_id": "7.1.1",
+    "unspsc_code": "77101503",
+    "language": "bg",
+    "term": "Изчисляване на въглеродния отпечатък",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_2_primary_001",
+    "concept_id": "CID-000187",
+    "hierarchy_id": "7.2",
+    "unspsc_code": "77101700",
+    "language": "bg",
+    "term": "Зелени решения",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_2_1_primary_001",
+    "concept_id": "CID-000188",
+    "hierarchy_id": "7.2.1",
+    "unspsc_code": "77101704",
+    "language": "bg",
+    "term": "Решения за устойчиви горива",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_2_2_primary_001",
+    "concept_id": "CID-000189",
+    "hierarchy_id": "7.2.2",
+    "unspsc_code": "77101705",
+    "language": "bg",
+    "term": "Консултиране по зелена логистика",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_3_primary_001",
+    "concept_id": "CID-000190",
+    "hierarchy_id": "7.3",
+    "unspsc_code": "77101700",
+    "language": "bg",
+    "term": "Устойчива опаковка и намаляване на отпадъците",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_3_1_primary_001",
+    "concept_id": "CID-000191",
+    "hierarchy_id": "7.3.1",
+    "unspsc_code": "77101704",
+    "language": "bg",
+    "term": "Оптимизация на отпадъците и опаковките",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_4_primary_001",
+    "concept_id": "CID-000192",
+    "hierarchy_id": "7.4",
+    "unspsc_code": "77101600",
+    "language": "bg",
+    "term": "Екологично планиране и декарбонизация",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_4_1_primary_001",
+    "concept_id": "CID-000193",
+    "hierarchy_id": "7.4.1",
+    "unspsc_code": "77101600",
+    "language": "bg",
+    "term": "Пътна карта за устойчивост и планиране на прехода",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_5_primary_001",
+    "concept_id": "CID-000194",
+    "hierarchy_id": "7.5",
+    "unspsc_code": "77101800",
+    "language": "bg",
+    "term": "Екологичен одит",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_5_1_primary_001",
+    "concept_id": "CID-000195",
+    "hierarchy_id": "7.5.1",
+    "unspsc_code": "77101800",
+    "language": "bg",
+    "term": "Екологичен одит и преглед на съответствието",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_6_primary_001",
+    "concept_id": "CID-000196",
+    "hierarchy_id": "7.6",
+    "unspsc_code": "77102000",
+    "language": "bg",
+    "term": "Екологично отчитане и оповестяване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_7_6_1_primary_001",
+    "concept_id": "CID-000197",
+    "hierarchy_id": "7.6.1",
+    "unspsc_code": "77102000",
+    "language": "bg",
+    "term": "Отчитане на емисиите / устойчивостта",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_primary_001",
+    "concept_id": "CID-000198",
+    "hierarchy_id": "8",
+    "unspsc_code": "78110000",
+    "language": "bg",
+    "term": "Пътнически транспорт и мобилност",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_1_primary_001",
+    "concept_id": "CID-000199",
+    "hierarchy_id": "8.1",
+    "unspsc_code": "78111500",
+    "language": "bg",
+    "term": "Пътнически въздушен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_1_1_primary_001",
+    "concept_id": "CID-000200",
+    "hierarchy_id": "8.1.1",
+    "unspsc_code": "78111501",
+    "language": "bg",
+    "term": "Хеликоптерни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_1_2_primary_001",
+    "concept_id": "CID-000201",
+    "hierarchy_id": "8.1.2",
+    "unspsc_code": "78111502",
+    "language": "bg",
+    "term": "Пътуване с търговски самолет",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_1_3_primary_001",
+    "concept_id": "CID-000202",
+    "hierarchy_id": "8.1.3",
+    "unspsc_code": "78111503",
+    "language": "bg",
+    "term": "Чартърно пътуване със самолет",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_1_4_primary_001",
+    "concept_id": "CID-000203",
+    "hierarchy_id": "8.1.4",
+    "unspsc_code": "78111504",
+    "language": "bg",
+    "term": "Панорамни полети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_1_5_primary_001",
+    "concept_id": "CID-000204",
+    "hierarchy_id": "8.1.5",
+    "unspsc_code": "78111505",
+    "language": "bg",
+    "term": "Услуга за наем или лизинг на пътнически самолет",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_1_6_primary_001",
+    "concept_id": "CID-000205",
+    "hierarchy_id": "8.1.6",
+    "unspsc_code": "78111506",
+    "language": "bg",
+    "term": "Медицинска евакуация с въздушна линейка",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_2_primary_001",
+    "concept_id": "CID-000206",
+    "hierarchy_id": "8.2",
+    "unspsc_code": "78111600",
+    "language": "bg",
+    "term": "Пътнически железопътен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_2_1_primary_001",
+    "concept_id": "CID-000207",
+    "hierarchy_id": "8.2.1",
+    "unspsc_code": "78111601",
+    "language": "bg",
+    "term": "Услуги за превоз с лек релсов транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_2_2_primary_001",
+    "concept_id": "CID-000208",
+    "hierarchy_id": "8.2.2",
+    "unspsc_code": "78111602",
+    "language": "bg",
+    "term": "Метро транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_2_3_primary_001",
+    "concept_id": "CID-000209",
+    "hierarchy_id": "8.2.3",
+    "unspsc_code": "78111603",
+    "language": "bg",
+    "term": "Континентални / междуконтинентални железопътни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_3_primary_001",
+    "concept_id": "CID-000210",
+    "hierarchy_id": "8.3",
+    "unspsc_code": "78111700",
+    "language": "bg",
+    "term": "Пътнически морски транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_3_1_primary_001",
+    "concept_id": "CID-000211",
+    "hierarchy_id": "8.3.1",
+    "unspsc_code": "78111701",
+    "language": "bg",
+    "term": "Водни таксита",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_3_2_primary_001",
+    "concept_id": "CID-000212",
+    "hierarchy_id": "8.3.2",
+    "unspsc_code": "78111702",
+    "language": "bg",
+    "term": "Нощни корабни круизи",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_3_3_primary_001",
+    "concept_id": "CID-000213",
+    "hierarchy_id": "8.3.3",
+    "unspsc_code": "78111703",
+    "language": "bg",
+    "term": "Панорамни разходки с лодка",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_3_4_primary_001",
+    "concept_id": "CID-000214",
+    "hierarchy_id": "8.3.4",
+    "unspsc_code": "78111704",
+    "language": "bg",
+    "term": "Услуга за наем или лизинг на плавателен съд",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_3_5_primary_001",
+    "concept_id": "CID-000215",
+    "hierarchy_id": "8.3.5",
+    "unspsc_code": "78111705",
+    "language": "bg",
+    "term": "Услуга за превоз на персонал до офшорни платформи",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_3_6_primary_001",
+    "concept_id": "CID-000216",
+    "hierarchy_id": "8.3.6",
+    "unspsc_code": "78111706",
+    "language": "bg",
+    "term": "Крайбрежен и трансокеански пътнически ферибот",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_3_7_primary_001",
+    "concept_id": "CID-000217",
+    "hierarchy_id": "8.3.7",
+    "unspsc_code": "78111707",
+    "language": "bg",
+    "term": "Вътрешноводен пътнически ферибот",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_primary_001",
+    "concept_id": "CID-000218",
+    "hierarchy_id": "8.4",
+    "unspsc_code": "78111800",
+    "language": "bg",
+    "term": "Пътнически автомобилен транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_1_primary_001",
+    "concept_id": "CID-000219",
+    "hierarchy_id": "8.4.1",
+    "unspsc_code": "78111802",
+    "language": "bg",
+    "term": "Редовни автобусни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_2_primary_001",
+    "concept_id": "CID-000220",
+    "hierarchy_id": "8.4.2",
+    "unspsc_code": "78111803",
+    "language": "bg",
+    "term": "Чартърни автобусни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_3_primary_001",
+    "concept_id": "CID-000221",
+    "hierarchy_id": "8.4.3",
+    "unspsc_code": "78111804",
+    "language": "bg",
+    "term": "Таксиметрови услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_4_primary_001",
+    "concept_id": "CID-000222",
+    "hierarchy_id": "8.4.4",
+    "unspsc_code": "78111807",
+    "language": "bg",
+    "term": "Такси за паркиране",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_5_primary_001",
+    "concept_id": "CID-000223",
+    "hierarchy_id": "8.4.5",
+    "unspsc_code": "78111808",
+    "language": "bg",
+    "term": "Наем на превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_6_primary_001",
+    "concept_id": "CID-000224",
+    "hierarchy_id": "8.4.6",
+    "unspsc_code": "78111809",
+    "language": "bg",
+    "term": "Лизинг на седани / купета / комби",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_7_primary_001",
+    "concept_id": "CID-000225",
+    "hierarchy_id": "8.4.7",
+    "unspsc_code": "78111810",
+    "language": "bg",
+    "term": "Лимузина или шофьорска кола",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_8_primary_001",
+    "concept_id": "CID-000226",
+    "hierarchy_id": "8.4.8",
+    "unspsc_code": "78111811",
+    "language": "bg",
+    "term": "Лизинг на леки камиони / SUV",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_9_primary_001",
+    "concept_id": "CID-000227",
+    "hierarchy_id": "8.4.9",
+    "unspsc_code": "78111812",
+    "language": "bg",
+    "term": "Лизинг на пътнически ванове / миниванове",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_10_primary_001",
+    "concept_id": "CID-000228",
+    "hierarchy_id": "8.4.10",
+    "unspsc_code": "78111813",
+    "language": "bg",
+    "term": "Наземни туристически услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_4_11_primary_001",
+    "concept_id": "CID-000229",
+    "hierarchy_id": "8.4.11",
+    "unspsc_code": "78111815",
+    "language": "bg",
+    "term": "Медицинска евакуация с линейка",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_5_primary_001",
+    "concept_id": "CID-000230",
+    "hierarchy_id": "8.5",
+    "unspsc_code": "78112000",
+    "language": "bg",
+    "term": "Интермодални услуги за пътнически транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_5_1_primary_001",
+    "concept_id": "CID-000231",
+    "hierarchy_id": "8.5.1",
+    "unspsc_code": "78112001",
+    "language": "bg",
+    "term": "Смесен градски и крайградски транспорт за пътници",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_8_6_primary_001",
+    "concept_id": "CID-000232",
+    "hierarchy_id": "8.6",
+    "unspsc_code": "78111900",
+    "language": "bg",
+    "term": "Космически пътнически транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_primary_001",
+    "concept_id": "CID-000233",
+    "hierarchy_id": "9",
+    "unspsc_code": "25000000",
+    "language": "bg",
+    "term": "Транспортни активи, превозни средства и плавателни съдове",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_primary_001",
+    "concept_id": "CID-000234",
+    "hierarchy_id": "9.1",
+    "unspsc_code": "25100000",
+    "language": "bg",
+    "term": "Моторни превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_1_primary_001",
+    "concept_id": "CID-000235",
+    "hierarchy_id": "9.1.1",
+    "unspsc_code": "25101500",
+    "language": "bg",
+    "term": "Пътнически моторни превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_1_1_primary_001",
+    "concept_id": "CID-000236",
+    "hierarchy_id": "9.1.1.1",
+    "unspsc_code": "25101501",
+    "language": "bg",
+    "term": "Минибуси",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_1_2_primary_001",
+    "concept_id": "CID-000237",
+    "hierarchy_id": "9.1.1.2",
+    "unspsc_code": "25101502",
+    "language": "bg",
+    "term": "Автобуси",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_1_3_primary_001",
+    "concept_id": "CID-000238",
+    "hierarchy_id": "9.1.1.3",
+    "unspsc_code": "25101503",
+    "language": "bg",
+    "term": "Автомобили / коли",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_1_4_primary_001",
+    "concept_id": "CID-000239",
+    "hierarchy_id": "9.1.1.4",
+    "unspsc_code": "25101504",
+    "language": "bg",
+    "term": "Комбита",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_1_5_primary_001",
+    "concept_id": "CID-000240",
+    "hierarchy_id": "9.1.1.5",
+    "unspsc_code": "25101505",
+    "language": "bg",
+    "term": "Миниванове или ванове",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_1_6_primary_001",
+    "concept_id": "CID-000241",
+    "hierarchy_id": "9.1.1.6",
+    "unspsc_code": "25101506",
+    "language": "bg",
+    "term": "Лимузини",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_1_7_primary_001",
+    "concept_id": "CID-000242",
+    "hierarchy_id": "9.1.1.7",
+    "unspsc_code": "25101507",
+    "language": "bg",
+    "term": "Леки камиони или SUV",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_1_8_primary_001",
+    "concept_id": "CID-000243",
+    "hierarchy_id": "9.1.1.8",
+    "unspsc_code": "25101509",
+    "language": "bg",
+    "term": "Електрически превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_1_9_primary_001",
+    "concept_id": "CID-000244",
+    "hierarchy_id": "9.1.1.9",
+    "unspsc_code": "25101510",
+    "language": "bg",
+    "term": "Бронирани моторни превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_2_primary_001",
+    "concept_id": "CID-000245",
+    "hierarchy_id": "9.1.2",
+    "unspsc_code": "25101800",
+    "language": "bg",
+    "term": "Моторизирани двуколесни превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_2_1_primary_001",
+    "concept_id": "CID-000246",
+    "hierarchy_id": "9.1.2.1",
+    "unspsc_code": "25101801",
+    "language": "bg",
+    "term": "Мотоциклети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_2_2_primary_001",
+    "concept_id": "CID-000247",
+    "hierarchy_id": "9.1.2.2",
+    "unspsc_code": "25101802",
+    "language": "bg",
+    "term": "Скутери",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_1_2_3_primary_001",
+    "concept_id": "CID-000248",
+    "hierarchy_id": "9.1.2.3",
+    "unspsc_code": "25101803",
+    "language": "bg",
+    "term": "Мопеди",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_primary_001",
+    "concept_id": "CID-000249",
+    "hierarchy_id": "9.2",
+    "unspsc_code": "25110000",
+    "language": "bg",
+    "term": "морски плавателни съдове",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_primary_001",
+    "concept_id": "CID-000250",
+    "hierarchy_id": "9.2.1",
+    "unspsc_code": "25111500",
+    "language": "bg",
+    "term": "Търговски плавателни съдове",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_1_primary_001",
+    "concept_id": "CID-000251",
+    "hierarchy_id": "9.2.1.1",
+    "unspsc_code": "25111503",
+    "language": "bg",
+    "term": "Кораби за товари или контейнери",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_2_primary_001",
+    "concept_id": "CID-000252",
+    "hierarchy_id": "9.2.1.2",
+    "unspsc_code": "25111505",
+    "language": "bg",
+    "term": "Танкерни кораби",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_3_primary_001",
+    "concept_id": "CID-000253",
+    "hierarchy_id": "9.2.1.3",
+    "unspsc_code": "25111506",
+    "language": "bg",
+    "term": "Влекачи",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_4_primary_001",
+    "concept_id": "CID-000254",
+    "hierarchy_id": "9.2.1.4",
+    "unspsc_code": "25111507",
+    "language": "bg",
+    "term": "Шлепове",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_5_primary_001",
+    "concept_id": "CID-000255",
+    "hierarchy_id": "9.2.1.5",
+    "unspsc_code": "25111508",
+    "language": "bg",
+    "term": "Пътнически или автомобилни фериботи",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_6_primary_001",
+    "concept_id": "CID-000256",
+    "hierarchy_id": "9.2.1.6",
+    "unspsc_code": "25111509",
+    "language": "bg",
+    "term": "Круизни кораби",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_7_primary_001",
+    "concept_id": "CID-000257",
+    "hierarchy_id": "9.2.1.7",
+    "unspsc_code": "25111511",
+    "language": "bg",
+    "term": "Кораби за екипаж за нефт и газ",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_8_primary_001",
+    "concept_id": "CID-000258",
+    "hierarchy_id": "9.2.1.8",
+    "unspsc_code": "25111512",
+    "language": "bg",
+    "term": "Работни кораби за нефт и газ",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_9_primary_001",
+    "concept_id": "CID-000259",
+    "hierarchy_id": "9.2.1.9",
+    "unspsc_code": "25111513",
+    "language": "bg",
+    "term": "Сеизмични кораби",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_10_primary_001",
+    "concept_id": "CID-000260",
+    "hierarchy_id": "9.2.1.10",
+    "unspsc_code": "25111514",
+    "language": "bg",
+    "term": "Ледоразбивачи",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_11_primary_001",
+    "concept_id": "CID-000261",
+    "hierarchy_id": "9.2.1.11",
+    "unspsc_code": "25111515",
+    "language": "bg",
+    "term": "Кораби за превоз на втечнен газ",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_12_primary_001",
+    "concept_id": "CID-000262",
+    "hierarchy_id": "9.2.1.12",
+    "unspsc_code": "25111522",
+    "language": "bg",
+    "term": "Химически танкерни кораби",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_13_primary_001",
+    "concept_id": "CID-000263",
+    "hierarchy_id": "9.2.1.13",
+    "unspsc_code": "25111524",
+    "language": "bg",
+    "term": "Кораби за насипни товари",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_14_primary_001",
+    "concept_id": "CID-000264",
+    "hierarchy_id": "9.2.1.14",
+    "unspsc_code": "25111525",
+    "language": "bg",
+    "term": "Кораби за превоз на автомобили / RoRo",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_15_primary_001",
+    "concept_id": "CID-000265",
+    "hierarchy_id": "9.2.1.15",
+    "unspsc_code": "25111530",
+    "language": "bg",
+    "term": "Лоцмански катери",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_16_primary_001",
+    "concept_id": "CID-000266",
+    "hierarchy_id": "9.2.1.16",
+    "unspsc_code": "25111534",
+    "language": "bg",
+    "term": "Изследователски кораби",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_1_17_primary_001",
+    "concept_id": "CID-000267",
+    "hierarchy_id": "9.2.1.17",
+    "unspsc_code": "25111535",
+    "language": "bg",
+    "term": "Кораби за полагане на кабели",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_2_primary_001",
+    "concept_id": "CID-000268",
+    "hierarchy_id": "9.2.2",
+    "unspsc_code": "25111800",
+    "language": "bg",
+    "term": "Развлекателни плавателни съдове",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_2_1_primary_001",
+    "concept_id": "CID-000269",
+    "hierarchy_id": "9.2.2.1",
+    "unspsc_code": "25111807",
+    "language": "bg",
+    "term": "Динги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_2_2_primary_001",
+    "concept_id": "CID-000270",
+    "hierarchy_id": "9.2.2.2",
+    "unspsc_code": "25111808",
+    "language": "bg",
+    "term": "Яхти",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_2_2_3_primary_001",
+    "concept_id": "CID-000271",
+    "hierarchy_id": "9.2.2.3",
+    "unspsc_code": "25111809",
+    "language": "bg",
+    "term": "Скифове",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_3_primary_001",
+    "concept_id": "CID-000272",
+    "hierarchy_id": "9.3",
+    "unspsc_code": "25120000",
+    "language": "bg",
+    "term": "Железопътни и трамвайни машини и оборудване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_primary_001",
+    "concept_id": "CID-000273",
+    "hierarchy_id": "9.4",
+    "unspsc_code": "25130000",
+    "language": "bg",
+    "term": "Въздухоплавателни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_1_primary_001",
+    "concept_id": "CID-000274",
+    "hierarchy_id": "9.4.1",
+    "unspsc_code": "25131500",
+    "language": "bg",
+    "term": "Самолети с неподвижно крило и двигател",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_1_1_primary_001",
+    "concept_id": "CID-000275",
+    "hierarchy_id": "9.4.1.1",
+    "unspsc_code": "25131501",
+    "language": "bg",
+    "term": "Селскостопански самолети с неподвижно крило",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_1_2_primary_001",
+    "concept_id": "CID-000276",
+    "hierarchy_id": "9.4.1.2",
+    "unspsc_code": "25131502",
+    "language": "bg",
+    "term": "Товарни витлови самолети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_1_3_primary_001",
+    "concept_id": "CID-000277",
+    "hierarchy_id": "9.4.1.3",
+    "unspsc_code": "25131503",
+    "language": "bg",
+    "term": "Хидроплани",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_1_4_primary_001",
+    "concept_id": "CID-000278",
+    "hierarchy_id": "9.4.1.4",
+    "unspsc_code": "25131504",
+    "language": "bg",
+    "term": "Търговски пътнически витлови самолети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_1_5_primary_001",
+    "concept_id": "CID-000279",
+    "hierarchy_id": "9.4.1.5",
+    "unspsc_code": "25131505",
+    "language": "bg",
+    "term": "Товарни реактивни самолети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_1_6_primary_001",
+    "concept_id": "CID-000280",
+    "hierarchy_id": "9.4.1.6",
+    "unspsc_code": "25131506",
+    "language": "bg",
+    "term": "Търговски пътнически реактивни самолети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_1_7_primary_001",
+    "concept_id": "CID-000281",
+    "hierarchy_id": "9.4.1.7",
+    "unspsc_code": "25131507",
+    "language": "bg",
+    "term": "Частни или бизнес витлови самолети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_1_8_primary_001",
+    "concept_id": "CID-000282",
+    "hierarchy_id": "9.4.1.8",
+    "unspsc_code": "25131508",
+    "language": "bg",
+    "term": "Частни или бизнес реактивни самолети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_1_9_primary_001",
+    "concept_id": "CID-000283",
+    "hierarchy_id": "9.4.1.9",
+    "unspsc_code": "25131513",
+    "language": "bg",
+    "term": "Самолети за летателни инспекции",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_2_primary_001",
+    "concept_id": "CID-000284",
+    "hierarchy_id": "9.4.2",
+    "unspsc_code": "25131600",
+    "language": "bg",
+    "term": "Граждански и търговски въртокрили въздухоплавателни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_2_1_primary_001",
+    "concept_id": "CID-000285",
+    "hierarchy_id": "9.4.2.1",
+    "unspsc_code": "25131601",
+    "language": "bg",
+    "term": "Хеликоптери за превоз на пътници",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_2_2_primary_001",
+    "concept_id": "CID-000286",
+    "hierarchy_id": "9.4.2.2",
+    "unspsc_code": "25131602",
+    "language": "bg",
+    "term": "Хеликоптери за превоз на товари",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_2_3_primary_001",
+    "concept_id": "CID-000287",
+    "hierarchy_id": "9.4.2.3",
+    "unspsc_code": "25131604",
+    "language": "bg",
+    "term": "Медицински или спасителни хеликоптери",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_3_primary_001",
+    "concept_id": "CID-000288",
+    "hierarchy_id": "9.4.3",
+    "unspsc_code": "25131800",
+    "language": "bg",
+    "term": "Специализирани въздухоплавателни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_3_1_primary_001",
+    "concept_id": "CID-000289",
+    "hierarchy_id": "9.4.3.1",
+    "unspsc_code": "25131801",
+    "language": "bg",
+    "term": "Дирижабли",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_3_2_primary_001",
+    "concept_id": "CID-000290",
+    "hierarchy_id": "9.4.3.2",
+    "unspsc_code": "25131802",
+    "language": "bg",
+    "term": "Моделни самолети",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_4_4_primary_001",
+    "concept_id": "CID-000291",
+    "hierarchy_id": "9.4.4",
+    "unspsc_code": "25132000",
+    "language": "bg",
+    "term": "Развлекателни въздухоплавателни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_5_primary_001",
+    "concept_id": "CID-000292",
+    "hierarchy_id": "9.5",
+    "unspsc_code": "25150000",
+    "language": "bg",
+    "term": "Космически кораби",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": false,
+      "morphology": "noun",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_9_6_primary_001",
+    "concept_id": "CID-000293",
+    "hierarchy_id": "9.6",
+    "unspsc_code": "25190000",
+    "language": "bg",
+    "term": "Оборудване за транспортни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_primary_001",
+    "concept_id": "CID-000294",
+    "hierarchy_id": "10",
+    "unspsc_code": "",
+    "language": "bg",
+    "term": "Чартър, наем и лизинг услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_1_primary_001",
+    "concept_id": "CID-000295",
+    "hierarchy_id": "10.1",
+    "unspsc_code": "",
+    "language": "bg",
+    "term": "Чартърни услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_1_1_primary_001",
+    "concept_id": "CID-000296",
+    "hierarchy_id": "10.1.1",
+    "unspsc_code": "",
+    "language": "bg",
+    "term": "Товарен чартър",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_1_2_primary_001",
+    "concept_id": "CID-000297",
+    "hierarchy_id": "10.1.2",
+    "unspsc_code": "",
+    "language": "bg",
+    "term": "Пътнически чартър",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_1_3_primary_001",
+    "concept_id": "CID-000298",
+    "hierarchy_id": "10.1.3",
+    "unspsc_code": "",
+    "language": "bg",
+    "term": "Хеликоптерен чартър",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_1_4_primary_001",
+    "concept_id": "CID-000299",
+    "hierarchy_id": "10.1.4",
+    "unspsc_code": "",
+    "language": "bg",
+    "term": "Чартър на яхта / лодка",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_1_5_primary_001",
+    "concept_id": "CID-000300",
+    "hierarchy_id": "10.1.5",
+    "unspsc_code": "",
+    "language": "bg",
+    "term": "Автобусен чартър",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_1_6_primary_001",
+    "concept_id": "CID-000301",
+    "hierarchy_id": "10.1.6",
+    "unspsc_code": "",
+    "language": "bg",
+    "term": "Лимузинен / VIP чартър",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_2_primary_001",
+    "concept_id": "CID-000302",
+    "hierarchy_id": "10.2",
+    "unspsc_code": "",
+    "language": "bg",
+    "term": "Услуги за наем",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_2_1_primary_001",
+    "concept_id": "CID-000303",
+    "hierarchy_id": "10.2.1",
+    "unspsc_code": "78141900",
+    "language": "bg",
+    "term": "Наем на контейнери",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_2_2_primary_001",
+    "concept_id": "CID-000304",
+    "hierarchy_id": "10.2.2",
+    "unspsc_code": "78141903",
+    "language": "bg",
+    "term": "Наем на интермодални контейнери",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_2_3_primary_001",
+    "concept_id": "CID-000305",
+    "hierarchy_id": "10.2.3",
+    "unspsc_code": "78111808",
+    "language": "bg",
+    "term": "Услуги за наем на превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_2_4_primary_001",
+    "concept_id": "CID-000306",
+    "hierarchy_id": "10.2.4",
+    "unspsc_code": "78111704",
+    "language": "bg",
+    "term": "Наем на плавателни съдове",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_2_5_primary_001",
+    "concept_id": "CID-000307",
+    "hierarchy_id": "10.2.5",
+    "unspsc_code": "78111505",
+    "language": "bg",
+    "term": "Наем или лизинг на пътнически въздухоплавателни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_2_6_primary_001",
+    "concept_id": "CID-000308",
+    "hierarchy_id": "10.2.6",
+    "unspsc_code": "78142001",
+    "language": "bg",
+    "term": "Наем на товарни самолети с оператор",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_2_7_primary_001",
+    "concept_id": "CID-000309",
+    "hierarchy_id": "10.2.7",
+    "unspsc_code": "78142002",
+    "language": "bg",
+    "term": "Наем на товарен кораб с оператор",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_2_8_primary_001",
+    "concept_id": "CID-000310",
+    "hierarchy_id": "10.2.8",
+    "unspsc_code": "78142003",
+    "language": "bg",
+    "term": "Наем на крайбрежен / трансокеански товарен кораб с оператор",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_2_9_primary_001",
+    "concept_id": "CID-000311",
+    "hierarchy_id": "10.2.9",
+    "unspsc_code": "78142004",
+    "language": "bg",
+    "term": "Услуги за наем на камион с оператор",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_3_primary_001",
+    "concept_id": "CID-000312",
+    "hierarchy_id": "10.3",
+    "unspsc_code": "",
+    "language": "bg",
+    "term": "Лизингови услуги",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_3_1_primary_001",
+    "concept_id": "CID-000313",
+    "hierarchy_id": "10.3.1",
+    "unspsc_code": "78111809",
+    "language": "bg",
+    "term": "Лизинг на седан / купе / комби",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_3_2_primary_001",
+    "concept_id": "CID-000314",
+    "hierarchy_id": "10.3.2",
+    "unspsc_code": "78111811",
+    "language": "bg",
+    "term": "Лизинг на лекотоварни автомобили / SUV",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_3_3_primary_001",
+    "concept_id": "CID-000315",
+    "hierarchy_id": "10.3.3",
+    "unspsc_code": "78111812",
+    "language": "bg",
+    "term": "Лизинг на пътнически ван / миниван",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_10_3_4_primary_001",
+    "concept_id": "CID-000316",
+    "hierarchy_id": "10.3.4",
+    "unspsc_code": "78142000",
+    "language": "bg",
+    "term": "Лизинг на транспортни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_primary_001",
+    "concept_id": "CID-000317",
+    "hierarchy_id": "11",
+    "unspsc_code": "78180000",
+    "language": "bg",
+    "term": "Поддръжка, зареждане, съхранение и оперативна подкрепа",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_1_primary_001",
+    "concept_id": "CID-000318",
+    "hierarchy_id": "11.1",
+    "unspsc_code": "78181500",
+    "language": "bg",
+    "term": "Поддръжка и ремонт на превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_1_1_primary_001",
+    "concept_id": "CID-000319",
+    "hierarchy_id": "11.1.1",
+    "unspsc_code": "78181501",
+    "language": "bg",
+    "term": "Услуга за ремонт на каросерия или боядисване на превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_1_2_primary_001",
+    "concept_id": "CID-000320",
+    "hierarchy_id": "11.1.2",
+    "unspsc_code": "78181505",
+    "language": "bg",
+    "term": "Услуга за преглед на превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_1_3_primary_001",
+    "concept_id": "CID-000321",
+    "hierarchy_id": "11.1.3",
+    "unspsc_code": "78181506",
+    "language": "bg",
+    "term": "Услуга за подмяна на автостъкла",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_1_4_primary_001",
+    "concept_id": "CID-000322",
+    "hierarchy_id": "11.1.4",
+    "unspsc_code": "78181507",
+    "language": "bg",
+    "term": "Поддръжка и ремонт на автомобили и лекотоварни камиони",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_1_5_primary_001",
+    "concept_id": "CID-000323",
+    "hierarchy_id": "11.1.5",
+    "unspsc_code": "78181508",
+    "language": "bg",
+    "term": "Поддръжка и ремонт на тежкотоварни камиони",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_1_6_primary_001",
+    "concept_id": "CID-000324",
+    "hierarchy_id": "11.1.6",
+    "unspsc_code": "78181509",
+    "language": "bg",
+    "term": "Услуга за преглед и поддръжка на железопътни вагони",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_2_primary_001",
+    "concept_id": "CID-000325",
+    "hierarchy_id": "11.2",
+    "unspsc_code": "78181600",
+    "language": "bg",
+    "term": "Услуги по тенекеджийство и боядисване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_2_1_primary_001",
+    "concept_id": "CID-000326",
+    "hierarchy_id": "11.2.1",
+    "unspsc_code": "78181601",
+    "language": "bg",
+    "term": "Услуга по изправяне на ламарина",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_3_primary_001",
+    "concept_id": "CID-000327",
+    "hierarchy_id": "11.3",
+    "unspsc_code": "78181700",
+    "language": "bg",
+    "term": "Зареждане / съхранение / оперативна подкрепа",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_3_1_primary_001",
+    "concept_id": "CID-000328",
+    "hierarchy_id": "11.3.1",
+    "unspsc_code": "78181701",
+    "language": "bg",
+    "term": "Услуга по зареждане на превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_3_2_primary_001",
+    "concept_id": "CID-000329",
+    "hierarchy_id": "11.3.2",
+    "unspsc_code": "78181702",
+    "language": "bg",
+    "term": "Услуга по съхранение за транспорт",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_3_3_primary_001",
+    "concept_id": "CID-000330",
+    "hierarchy_id": "11.3.3",
+    "unspsc_code": "78181703",
+    "language": "bg",
+    "term": "Услуга за паркиране на превозни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_3_4_primary_001",
+    "concept_id": "CID-000331",
+    "hierarchy_id": "11.3.4",
+    "unspsc_code": "78181704",
+    "language": "bg",
+    "term": "Услуга за карта за зареждане / предплатена карта за гориво",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_4_primary_001",
+    "concept_id": "CID-000332",
+    "hierarchy_id": "11.4",
+    "unspsc_code": "78181800",
+    "language": "bg",
+    "term": "Поддръжка и ремонт на въздухоплавателни средства",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_5_primary_001",
+    "concept_id": "CID-000333",
+    "hierarchy_id": "11.5",
+    "unspsc_code": "78181900",
+    "language": "bg",
+    "term": "Поддръжка и ремонт на навигационно оборудване",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_6_primary_001",
+    "concept_id": "CID-000334",
+    "hierarchy_id": "11.6",
+    "unspsc_code": "78182000",
+    "language": "bg",
+    "term": "Поддръжка и ремонт на плавателни съдове за воден transport",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  },
+  {
+    "term_id": "bg_11_7_primary_001",
+    "concept_id": "CID-000335",
+    "hierarchy_id": "11.7",
+    "unspsc_code": "80161505",
+    "language": "bg",
+    "term": "Подкрепа за управление на автопарк",
+    "description": null,
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "is_compound": true,
+      "morphology": "noun_phrase",
+      "priority": "high",
+      "industry_standards": []
+    }
+  }
+]
