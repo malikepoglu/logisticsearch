@@ -3,7 +3,7 @@
     "term_id": "ar-1",
     "concept_id": "CID-1",
     "hierarchy_id": "1",
-    "unspsc_code": "",
+    "unspsc_code": "78100000",
     "language": "ar",
     "term": "النقل ونقل البضائع",
     "description": "",
@@ -14,14 +14,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78100000"
+      ]
     }
   },
   {
     "term_id": "ar-2",
     "concept_id": "CID-2",
     "hierarchy_id": "1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101800",
     "language": "ar",
     "term": "نقل الشاحنات",
     "description": "",
@@ -32,14 +34,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101800"
+      ]
     }
   },
   {
     "term_id": "ar-3",
     "concept_id": "CID-3",
     "hierarchy_id": "1.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "ar",
     "term": "حمولة شاحنة كاملة - FTL",
     "description": "",
@@ -50,14 +54,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "ar-4",
     "concept_id": "CID-4",
     "hierarchy_id": "1.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "ar",
     "term": "حمولة جزئية - LTL",
     "description": "",
@@ -68,14 +74,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "ar-5",
     "concept_id": "CID-5",
     "hierarchy_id": "1.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101801",
     "language": "ar",
     "term": "التوزيع المحلي / النقل الحضري بالشاحنات",
     "description": "",
@@ -86,14 +94,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101801"
+      ]
     }
   },
   {
     "term_id": "ar-6",
     "concept_id": "CID-6",
     "hierarchy_id": "1.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "ar",
     "term": "النقل التعاقدي المخصص",
     "description": "",
@@ -104,14 +114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "ar-7",
     "concept_id": "CID-7",
     "hierarchy_id": "1.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101806",
     "language": "ar",
     "term": "نقل البضائع الدولي براً",
     "description": "",
@@ -122,14 +134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101806"
+      ]
     }
   },
   {
     "term_id": "ar-8",
     "concept_id": "CID-8",
     "hierarchy_id": "1.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78101809",
     "language": "ar",
     "term": "خدمات الطرود البرية وخدمات الميل الأخير",
     "description": "",
@@ -140,14 +154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101809"
+      ]
     }
   },
   {
     "term_id": "ar-9",
     "concept_id": "CID-9",
     "hierarchy_id": "1.1.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101809",
     "language": "ar",
     "term": "توصيل الميل الأخير",
     "description": "",
@@ -158,14 +174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101809"
+      ]
     }
   },
   {
     "term_id": "ar-10",
     "concept_id": "CID-10",
     "hierarchy_id": "1.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "78101804",
     "language": "ar",
     "term": "خدمات نقل المنزل / الانتقال",
     "description": "",
@@ -176,14 +194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101804"
+      ]
     }
   },
   {
     "term_id": "ar-11",
     "concept_id": "CID-11",
     "hierarchy_id": "1.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "78101808",
     "language": "ar",
     "term": "النقل البري للبضائع السائبة الجافة",
     "description": "",
@@ -194,14 +214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101808"
+      ]
     }
   },
   {
     "term_id": "ar-12",
     "concept_id": "CID-12",
     "hierarchy_id": "1.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "78101807",
     "language": "ar",
     "term": "النقل بالصهاريج",
     "description": "",
@@ -212,14 +234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101807"
+      ]
     }
   },
   {
     "term_id": "ar-13",
     "concept_id": "CID-13",
     "hierarchy_id": "1.1.10",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "ar",
     "term": "النقل الثقيل / الشحنات كبيرة الأبعاد",
     "description": "",
@@ -230,14 +254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "ar-14",
     "concept_id": "CID-14",
     "hierarchy_id": "1.1.11",
-    "unspsc_code": "",
+    "unspsc_code": "78101803",
     "language": "ar",
     "term": "خدمات نقل المركبات",
     "description": "",
@@ -248,14 +274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101803"
+      ]
     }
   },
   {
     "term_id": "ar-15",
     "concept_id": "CID-15",
     "hierarchy_id": "1.1.12",
-    "unspsc_code": "",
+    "unspsc_code": "78101810",
     "language": "ar",
     "term": "نقل الماشية الحية",
     "description": "",
@@ -266,14 +294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101810"
+      ]
     }
   },
   {
     "term_id": "ar-16",
     "concept_id": "CID-16",
     "hierarchy_id": "1.1.13",
-    "unspsc_code": "",
+    "unspsc_code": "78101807",
     "language": "ar",
     "term": "نقل المواد الخطرة - Hazmat",
     "description": "",
@@ -284,14 +314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101807"
+      ]
     }
   },
   {
     "term_id": "ar-17",
     "concept_id": "CID-17",
     "hierarchy_id": "1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "ar",
     "term": "النقل البحري",
     "description": "",
@@ -302,14 +334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "ar-18",
     "concept_id": "CID-18",
     "hierarchy_id": "1.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "ar",
     "term": "الشحن بالحاويات",
     "description": "",
@@ -320,14 +354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "ar-19",
     "concept_id": "CID-19",
     "hierarchy_id": "1.2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "ar",
     "term": "حمولة حاوية كاملة - FCL",
     "description": "",
@@ -338,14 +374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "ar-20",
     "concept_id": "CID-20",
     "hierarchy_id": "1.2.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "ar",
     "term": "حمولة جزئية للحاوية - LCL",
     "description": "",
@@ -356,14 +394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "ar-21",
     "concept_id": "CID-21",
     "hierarchy_id": "1.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "ar",
     "term": "الشحن البحري للبضائع السائبة الجافة",
     "description": "",
@@ -374,14 +414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "ar-22",
     "concept_id": "CID-22",
     "hierarchy_id": "1.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "ar",
     "term": "الشحن البحري للبضائع السائلة السائبة",
     "description": "",
@@ -392,14 +434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "ar-23",
     "concept_id": "CID-23",
     "hierarchy_id": "1.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "ar",
     "term": "النقل بنظام الرورو",
     "description": "",
@@ -410,14 +454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "ar-24",
     "concept_id": "CID-24",
     "hierarchy_id": "1.2.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "ar",
     "term": "الشحن البحري المنتظم",
     "description": "",
@@ -428,14 +474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "ar-25",
     "concept_id": "CID-25",
     "hierarchy_id": "1.2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "ar",
     "term": "الشحن البحري غير المنتظم",
     "description": "",
@@ -446,14 +494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "ar-26",
     "concept_id": "CID-26",
     "hierarchy_id": "1.2.7",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "ar",
     "term": "الشحن البحري قصير المدى - SSS",
     "description": "",
@@ -464,14 +514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "ar-27",
     "concept_id": "CID-27",
     "hierarchy_id": "1.2.8",
-    "unspsc_code": "",
+    "unspsc_code": "78101706",
     "language": "ar",
     "term": "الخدمات اللوجستية البحرية الخارجية",
     "description": "",
@@ -482,14 +534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101706"
+      ]
     }
   },
   {
     "term_id": "ar-28",
     "concept_id": "CID-28",
     "hierarchy_id": "1.2.9",
-    "unspsc_code": "",
+    "unspsc_code": "78141700",
     "language": "ar",
     "term": "خدمات الملاحة والقطر",
     "description": "",
@@ -500,14 +554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141700"
+      ]
     }
   },
   {
     "term_id": "ar-29",
     "concept_id": "CID-29",
     "hierarchy_id": "1.2.9.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141701",
     "language": "ar",
     "term": "خدمات القاطرات البحرية",
     "description": "",
@@ -518,14 +574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141701"
+      ]
     }
   },
   {
     "term_id": "ar-30",
     "concept_id": "CID-30",
     "hierarchy_id": "1.2.9.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141702",
     "language": "ar",
     "term": "تشغيل الجسور المتحركة",
     "description": "",
@@ -536,14 +594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141702"
+      ]
     }
   },
   {
     "term_id": "ar-31",
     "concept_id": "CID-31",
     "hierarchy_id": "1.2.9.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141703",
     "language": "ar",
     "term": "خدمات الملاحة أو الاتصالات البحرية",
     "description": "",
@@ -554,14 +614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141703"
+      ]
     }
   },
   {
     "term_id": "ar-32",
     "concept_id": "CID-32",
     "hierarchy_id": "1.2.9.4",
-    "unspsc_code": "",
+    "unspsc_code": "78141704",
     "language": "ar",
     "term": "خدمة dead man anchor",
     "description": "",
@@ -572,14 +634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141704"
+      ]
     }
   },
   {
     "term_id": "ar-33",
     "concept_id": "CID-33",
     "hierarchy_id": "1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "ar",
     "term": "الشحن الجوي",
     "description": "",
@@ -590,14 +654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "ar-34",
     "concept_id": "CID-34",
     "hierarchy_id": "1.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "ar",
     "term": "خدمات الشحن الجوي",
     "description": "",
@@ -608,14 +674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "ar-35",
     "concept_id": "CID-35",
     "hierarchy_id": "1.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "ar",
     "term": "الشحن الجوي السريع",
     "description": "",
@@ -626,14 +694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "ar-36",
     "concept_id": "CID-36",
     "hierarchy_id": "1.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "ar",
     "term": "الشحن الجوي من الباب إلى الباب",
     "description": "",
@@ -644,14 +714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "ar-37",
     "concept_id": "CID-37",
     "hierarchy_id": "1.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78141501",
     "language": "ar",
     "term": "تجميع الشحنات الجوية",
     "description": "",
@@ -662,14 +734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141501"
+      ]
     }
   },
   {
     "term_id": "ar-38",
     "concept_id": "CID-38",
     "hierarchy_id": "1.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "ar",
     "term": "خدمات الشحن الجوي العارض",
     "description": "",
@@ -680,14 +754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "ar-39",
     "concept_id": "CID-39",
     "hierarchy_id": "1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "ar",
     "term": "الشحن بالسكك الحديدية",
     "description": "",
@@ -698,14 +774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "ar-40",
     "concept_id": "CID-40",
     "hierarchy_id": "1.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "ar",
     "term": "شحن حمولة العربة بالسكك الحديدية",
     "description": "",
@@ -716,14 +794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "ar-41",
     "concept_id": "CID-41",
     "hierarchy_id": "1.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101900",
     "language": "ar",
     "term": "النقل الحديدي متعدد الوسائط",
     "description": "",
@@ -734,14 +814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101900"
+      ]
     }
   },
   {
     "term_id": "ar-42",
     "concept_id": "CID-42",
     "hierarchy_id": "1.4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101905",
     "language": "ar",
     "term": "النقل المشترك سكة-طريق",
     "description": "",
@@ -752,14 +834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101905"
+      ]
     }
   },
   {
     "term_id": "ar-43",
     "concept_id": "CID-43",
     "hierarchy_id": "1.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "ar",
     "term": "شحن السكك الحديدية عالي السرعة",
     "description": "",
@@ -770,14 +854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "ar-44",
     "concept_id": "CID-44",
     "hierarchy_id": "1.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "ar",
     "term": "خدمات تأجير عربات السكك الحديدية",
     "description": "",
@@ -788,14 +874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "ar-45",
     "concept_id": "CID-45",
     "hierarchy_id": "1.4.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101606",
     "language": "ar",
     "term": "تأجير عربات الشحن بالسكك الحديدية",
     "description": "",
@@ -806,14 +894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101606"
+      ]
     }
   },
   {
     "term_id": "ar-46",
     "concept_id": "CID-46",
     "hierarchy_id": "1.4.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101605",
     "language": "ar",
     "term": "تأجير صهاريج السكك الحديدية",
     "description": "",
@@ -824,14 +914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101605"
+      ]
     }
   },
   {
     "term_id": "ar-47",
     "concept_id": "CID-47",
     "hierarchy_id": "1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78102100",
     "language": "ar",
     "term": "النقل عبر خطوط الأنابيب",
     "description": "",
@@ -842,14 +934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102100"
+      ]
     }
   },
   {
     "term_id": "ar-48",
     "concept_id": "CID-48",
     "hierarchy_id": "1.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "78102101",
     "language": "ar",
     "term": "نقل المنتجات النفطية عبر خطوط الأنابيب",
     "description": "",
@@ -860,14 +954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102101"
+      ]
     }
   },
   {
     "term_id": "ar-49",
     "concept_id": "CID-49",
     "hierarchy_id": "1.5.2",
-    "unspsc_code": "",
+    "unspsc_code": "78102102",
     "language": "ar",
     "term": "نقل المياه عبر خطوط الأنابيب",
     "description": "",
@@ -878,14 +974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102102"
+      ]
     }
   },
   {
     "term_id": "ar-50",
     "concept_id": "CID-50",
     "hierarchy_id": "1.5.3",
-    "unspsc_code": "",
+    "unspsc_code": "83101604",
     "language": "ar",
     "term": "نقل الغاز الطبيعي عبر خطوط الأنابيب",
     "description": "",
@@ -896,14 +994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:83101604"
+      ]
     }
   },
   {
     "term_id": "ar-51",
     "concept_id": "CID-51",
     "hierarchy_id": "1.5.4",
-    "unspsc_code": "",
+    "unspsc_code": "78102100",
     "language": "ar",
     "term": "نقل المواد الكيميائية عبر خطوط الأنابيب",
     "description": "",
@@ -914,14 +1014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102100"
+      ]
     }
   },
   {
     "term_id": "ar-52",
     "concept_id": "CID-52",
     "hierarchy_id": "1.5.5",
-    "unspsc_code": "",
+    "unspsc_code": "78102103",
     "language": "ar",
     "term": "الفحص الداخلي لخطوط الأنابيب",
     "description": "",
@@ -932,14 +1034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102103"
+      ]
     }
   },
   {
     "term_id": "ar-53",
     "concept_id": "CID-53",
     "hierarchy_id": "1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78101900",
     "language": "ar",
     "term": "النقل متعدد الوسائط والمشترك للبضائع",
     "description": "",
@@ -950,14 +1054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101900"
+      ]
     }
   },
   {
     "term_id": "ar-54",
     "concept_id": "CID-54",
     "hierarchy_id": "1.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101900",
     "language": "ar",
     "term": "النقل متعدد الوسائط للحاويات",
     "description": "",
@@ -968,14 +1074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101900"
+      ]
     }
   },
   {
     "term_id": "ar-55",
     "concept_id": "CID-55",
     "hierarchy_id": "1.6.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101901",
     "language": "ar",
     "term": "النقل الجوي البحري",
     "description": "",
@@ -986,14 +1094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101901"
+      ]
     }
   },
   {
     "term_id": "ar-56",
     "concept_id": "CID-56",
     "hierarchy_id": "1.6.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101902",
     "language": "ar",
     "term": "النقل البحري بالسكك الحديدية",
     "description": "",
@@ -1004,14 +1114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101902"
+      ]
     }
   },
   {
     "term_id": "ar-57",
     "concept_id": "CID-57",
     "hierarchy_id": "1.6.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101903",
     "language": "ar",
     "term": "النقل البحري البري",
     "description": "",
@@ -1022,14 +1134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101903"
+      ]
     }
   },
   {
     "term_id": "ar-58",
     "concept_id": "CID-58",
     "hierarchy_id": "1.6.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101904",
     "language": "ar",
     "term": "النقل الجوي البري",
     "description": "",
@@ -1040,14 +1154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101904"
+      ]
     }
   },
   {
     "term_id": "ar-59",
     "concept_id": "CID-59",
     "hierarchy_id": "1.7",
-    "unspsc_code": "",
+    "unspsc_code": "78102200",
     "language": "ar",
     "term": "خدمات البريد / التوصيل السريع",
     "description": "",
@@ -1058,14 +1174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102200"
+      ]
     }
   },
   {
     "term_id": "ar-60",
     "concept_id": "CID-60",
     "hierarchy_id": "1.7.1",
-    "unspsc_code": "",
+    "unspsc_code": "78102201",
     "language": "ar",
     "term": "خدمات التوصيل البريدي الوطنية",
     "description": "",
@@ -1076,14 +1194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102201"
+      ]
     }
   },
   {
     "term_id": "ar-61",
     "concept_id": "CID-61",
     "hierarchy_id": "1.7.2",
-    "unspsc_code": "",
+    "unspsc_code": "78102202",
     "language": "ar",
     "term": "خدمات صندوق البريد",
     "description": "",
@@ -1094,14 +1214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102202"
+      ]
     }
   },
   {
     "term_id": "ar-62",
     "concept_id": "CID-62",
     "hierarchy_id": "1.7.3",
-    "unspsc_code": "",
+    "unspsc_code": "78102203",
     "language": "ar",
     "term": "خدمات إرسال / جمع / تسليم البريد",
     "description": "",
@@ -1112,14 +1234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102203"
+      ]
     }
   },
   {
     "term_id": "ar-63",
     "concept_id": "CID-63",
     "hierarchy_id": "1.7.4",
-    "unspsc_code": "",
+    "unspsc_code": "78102204",
     "language": "ar",
     "term": "خدمات عالمية لتسليم الرسائل أو الطرود الصغيرة",
     "description": "",
@@ -1130,14 +1254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102204"
+      ]
     }
   },
   {
     "term_id": "ar-64",
     "concept_id": "CID-64",
     "hierarchy_id": "1.7.5",
-    "unspsc_code": "",
+    "unspsc_code": "78102205",
     "language": "ar",
     "term": "خدمات محلية لتسليم الرسائل أو الطرود الصغيرة",
     "description": "",
@@ -1148,14 +1274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102205"
+      ]
     }
   },
   {
     "term_id": "ar-65",
     "concept_id": "CID-65",
     "hierarchy_id": "1.7.6",
-    "unspsc_code": "",
+    "unspsc_code": "78102206",
     "language": "ar",
     "term": "خدمات التوصيل بالدراجة أو السكوتر",
     "description": "",
@@ -1166,14 +1294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102206"
+      ]
     }
   },
   {
     "term_id": "ar-66",
     "concept_id": "CID-66",
     "hierarchy_id": "2",
-    "unspsc_code": "",
+    "unspsc_code": "78170000",
     "language": "ar",
     "term": "خدمات سلسلة الإمداد والخدمات اللوجستية",
     "description": "",
@@ -1184,14 +1314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78170000"
+      ]
     }
   },
   {
     "term_id": "ar-67",
     "concept_id": "CID-67",
     "hierarchy_id": "2.1",
-    "unspsc_code": "",
+    "unspsc_code": "80100000",
     "language": "ar",
     "term": "التخطيط والاستشارات",
     "description": "",
@@ -1202,14 +1334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80100000"
+      ]
     }
   },
   {
     "term_id": "ar-68",
     "concept_id": "CID-68",
     "hierarchy_id": "2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "ar",
     "term": "استشارات سلسلة الإمداد",
     "description": "",
@@ -1220,14 +1354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "ar-69",
     "concept_id": "CID-69",
     "hierarchy_id": "2.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "ar",
     "term": "تخطيط الطلب والمخزون",
     "description": "",
@@ -1238,14 +1374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "ar-70",
     "concept_id": "CID-70",
     "hierarchy_id": "2.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "ar",
     "term": "تحسين الشبكة",
     "description": "",
@@ -1256,14 +1394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "ar-71",
     "concept_id": "CID-71",
     "hierarchy_id": "2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "ar",
     "term": "خدمات تنظيم النقل",
     "description": "",
@@ -1274,14 +1414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "ar-72",
     "concept_id": "CID-72",
     "hierarchy_id": "2.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141501",
     "language": "ar",
     "term": "خدمات الشحن والترتيب اللوجستي",
     "description": "",
@@ -1292,14 +1434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141501"
+      ]
     }
   },
   {
     "term_id": "ar-73",
     "concept_id": "CID-73",
     "hierarchy_id": "2.2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141501",
     "language": "ar",
     "term": "تجميع الشحنات",
     "description": "",
@@ -1310,14 +1454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141501"
+      ]
     }
   },
   {
     "term_id": "ar-74",
     "concept_id": "CID-74",
     "hierarchy_id": "2.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "ar",
     "term": "اللوجستيات العابرة للحدود",
     "description": "",
@@ -1328,14 +1474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "ar-75",
     "concept_id": "CID-75",
     "hierarchy_id": "2.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141510",
     "language": "ar",
     "term": "خدمات شحن تشمل التأمين",
     "description": "",
@@ -1346,14 +1494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141510"
+      ]
     }
   },
   {
     "term_id": "ar-76",
     "concept_id": "CID-76",
     "hierarchy_id": "2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78130000",
     "language": "ar",
     "term": "التخزين والتوزيع",
     "description": "",
@@ -1364,14 +1514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78130000"
+      ]
     }
   },
   {
     "term_id": "ar-77",
     "concept_id": "CID-77",
     "hierarchy_id": "2.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131600",
     "language": "ar",
     "term": "التخزين العام",
     "description": "",
@@ -1382,14 +1534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131600"
+      ]
     }
   },
   {
     "term_id": "ar-78",
     "concept_id": "CID-78",
     "hierarchy_id": "2.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78131600",
     "language": "ar",
     "term": "التخزين التعاقدي",
     "description": "",
@@ -1400,14 +1554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131600"
+      ]
     }
   },
   {
     "term_id": "ar-79",
     "concept_id": "CID-79",
     "hierarchy_id": "2.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78131600",
     "language": "ar",
     "term": "إدارة مراكز التوزيع",
     "description": "",
@@ -1418,14 +1574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131600"
+      ]
     }
   },
   {
     "term_id": "ar-80",
     "concept_id": "CID-80",
     "hierarchy_id": "2.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "ar",
     "term": "التخزين بدرجة حرارة مضبوطة",
     "description": "",
@@ -1436,14 +1594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "ar-81",
     "concept_id": "CID-81",
     "hierarchy_id": "2.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78131802",
     "language": "ar",
     "term": "التخزين الجمركي",
     "description": "",
@@ -1454,14 +1614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131802"
+      ]
     }
   },
   {
     "term_id": "ar-82",
     "concept_id": "CID-82",
     "hierarchy_id": "2.3.6",
-    "unspsc_code": "",
+    "unspsc_code": "78131800",
     "language": "ar",
     "term": "مراكز تنفيذ طلبات التجارة الإلكترونية",
     "description": "",
@@ -1472,14 +1634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131800"
+      ]
     }
   },
   {
     "term_id": "ar-83",
     "concept_id": "CID-83",
     "hierarchy_id": "2.3.7",
-    "unspsc_code": "",
+    "unspsc_code": "80161602",
     "language": "ar",
     "term": "إدارة المخزون",
     "description": "",
@@ -1490,14 +1654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161602"
+      ]
     }
   },
   {
     "term_id": "ar-84",
     "concept_id": "CID-84",
     "hierarchy_id": "2.3.8",
-    "unspsc_code": "",
+    "unspsc_code": "78121601",
     "language": "ar",
     "term": "كروس دوكينغ",
     "description": "",
@@ -1508,14 +1674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121601"
+      ]
     }
   },
   {
     "term_id": "ar-85",
     "concept_id": "CID-85",
     "hierarchy_id": "2.3.9",
-    "unspsc_code": "",
+    "unspsc_code": "78131700",
     "language": "ar",
     "term": "تخزين المواد السائبة",
     "description": "",
@@ -1526,14 +1694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131700"
+      ]
     }
   },
   {
     "term_id": "ar-86",
     "concept_id": "CID-86",
     "hierarchy_id": "2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "ar",
     "term": "الخدمات اللوجستية ذات القيمة المضافة",
     "description": "",
@@ -1544,14 +1714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "ar-87",
     "concept_id": "CID-87",
     "hierarchy_id": "2.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "ar",
     "term": "التجميع والتعبئة",
     "description": "",
@@ -1562,14 +1734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "ar-88",
     "concept_id": "CID-88",
     "hierarchy_id": "2.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "ar",
     "term": "وضع الملصقات والتسعير",
     "description": "",
@@ -1580,14 +1754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "ar-89",
     "concept_id": "CID-89",
     "hierarchy_id": "2.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "ar",
     "term": "تجميع مجموعات",
     "description": "",
@@ -1598,14 +1774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "ar-90",
     "concept_id": "CID-90",
     "hierarchy_id": "2.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "ar",
     "term": "الترقيم التسلسلي",
     "description": "",
@@ -1616,14 +1794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "ar-91",
     "concept_id": "CID-91",
     "hierarchy_id": "2.4.5",
-    "unspsc_code": "",
+    "unspsc_code": "78121500",
     "language": "ar",
     "term": "خدمات التعبئة والتغليف",
     "description": "",
@@ -1634,14 +1814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121500"
+      ]
     }
   },
   {
     "term_id": "ar-92",
     "concept_id": "CID-92",
     "hierarchy_id": "2.4.6",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "ar",
     "term": "خدمات مناولة المواد",
     "description": "",
@@ -1652,14 +1834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "ar-93",
     "concept_id": "CID-93",
     "hierarchy_id": "2.5",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "ar",
     "term": "التخليص الجمركي والامتثال التجاري",
     "description": "",
@@ -1670,14 +1854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "ar-94",
     "concept_id": "CID-94",
     "hierarchy_id": "2.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141502",
     "language": "ar",
     "term": "الوساطة الجمركية",
     "description": "",
@@ -1688,14 +1874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141502"
+      ]
     }
   },
   {
     "term_id": "ar-95",
     "concept_id": "CID-95",
     "hierarchy_id": "2.5.2",
-    "unspsc_code": "",
+    "unspsc_code": "80101514",
     "language": "ar",
     "term": "امتثال التجارة الخارجية",
     "description": "",
@@ -1706,14 +1894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101514"
+      ]
     }
   },
   {
     "term_id": "ar-96",
     "concept_id": "CID-96",
     "hierarchy_id": "2.5.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "ar",
     "term": "توثيق الاستيراد والتصدير",
     "description": "",
@@ -1724,14 +1914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "ar-97",
     "concept_id": "CID-97",
     "hierarchy_id": "2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "نماذج مقدمي الخدمات اللوجستية",
     "description": "",
@@ -1742,14 +1934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-98",
     "concept_id": "CID-98",
     "hierarchy_id": "2.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات الطرف الثالث - 3PL",
     "description": "",
@@ -1760,14 +1954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-99",
     "concept_id": "CID-99",
     "hierarchy_id": "2.6.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات الطرف الرابع - 4PL",
     "description": "",
@@ -1778,14 +1974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-100",
     "concept_id": "CID-100",
     "hierarchy_id": "2.7",
-    "unspsc_code": "",
+    "unspsc_code": "78141600",
     "language": "ar",
     "term": "خدمات التفتيش والمعاينة",
     "description": "",
@@ -1796,14 +1994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141600"
+      ]
     }
   },
   {
     "term_id": "ar-101",
     "concept_id": "CID-101",
     "hierarchy_id": "2.7.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141601",
     "language": "ar",
     "term": "خدمات فحص التعبئة والتغليف",
     "description": "",
@@ -1814,14 +2014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141601"
+      ]
     }
   },
   {
     "term_id": "ar-102",
     "concept_id": "CID-102",
     "hierarchy_id": "2.7.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141602",
     "language": "ar",
     "term": "خدمات معاينة الشحنات",
     "description": "",
@@ -1832,14 +2034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141602"
+      ]
     }
   },
   {
     "term_id": "ar-103",
     "concept_id": "CID-103",
     "hierarchy_id": "2.7.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141603",
     "language": "ar",
     "term": "عمليات تفتيش مكافحة الآفات",
     "description": "",
@@ -1850,14 +2054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141603"
+      ]
     }
   },
   {
     "term_id": "ar-104",
     "concept_id": "CID-104",
     "hierarchy_id": "3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "الخدمات اللوجستية المتخصصة",
     "description": "",
@@ -1868,14 +2074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-105",
     "concept_id": "CID-105",
     "hierarchy_id": "3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131800",
     "language": "ar",
     "term": "لوجستيات مضبوطة الحرارة",
     "description": "",
@@ -1886,14 +2094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131800"
+      ]
     }
   },
   {
     "term_id": "ar-106",
     "concept_id": "CID-106",
     "hierarchy_id": "3.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "ar",
     "term": "لوجستيات سلسلة التبريد",
     "description": "",
@@ -1904,14 +2114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "ar-107",
     "concept_id": "CID-107",
     "hierarchy_id": "3.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "ar",
     "term": "اللوجستيات الدوائية",
     "description": "",
@@ -1922,14 +2134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "ar-108",
     "concept_id": "CID-108",
     "hierarchy_id": "3.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "ar",
     "term": "لوجستيات السلع القابلة للتلف",
     "description": "",
@@ -1940,14 +2154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "ar-109",
     "concept_id": "CID-109",
     "hierarchy_id": "3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "ar",
     "term": "لوجستيات الأحمال الثقيلة والمشاريع",
     "description": "",
@@ -1958,14 +2174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "ar-110",
     "concept_id": "CID-110",
     "hierarchy_id": "3.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "ar",
     "term": "لوجستيات قطاع الطاقة",
     "description": "",
@@ -1976,14 +2194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "ar-111",
     "concept_id": "CID-111",
     "hierarchy_id": "3.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "ar",
     "term": "لوجستيات البناء",
     "description": "",
@@ -1994,14 +2214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "ar-112",
     "concept_id": "CID-112",
     "hierarchy_id": "3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "اللوجستيات الخاصة بالقطاعات",
     "description": "",
@@ -2012,14 +2234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-113",
     "concept_id": "CID-113",
     "hierarchy_id": "3.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات السيارات",
     "description": "",
@@ -2030,14 +2254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-114",
     "concept_id": "CID-114",
     "hierarchy_id": "3.3.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131807",
     "language": "ar",
     "term": "لوجستيات قطع الغيار",
     "description": "",
@@ -2048,14 +2274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131807"
+      ]
     }
   },
   {
     "term_id": "ar-115",
     "concept_id": "CID-115",
     "hierarchy_id": "3.3.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات المركبات الجاهزة",
     "description": "",
@@ -2066,14 +2294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-116",
     "concept_id": "CID-116",
     "hierarchy_id": "3.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات التجزئة",
     "description": "",
@@ -2084,14 +2314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-117",
     "concept_id": "CID-117",
     "hierarchy_id": "3.3.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات الموضة السريعة",
     "description": "",
@@ -2102,14 +2334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-118",
     "concept_id": "CID-118",
     "hierarchy_id": "3.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات الطيران والدفاع",
     "description": "",
@@ -2120,14 +2354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-119",
     "concept_id": "CID-119",
     "hierarchy_id": "3.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات التكنولوجيا العالية والإلكترونيات",
     "description": "",
@@ -2138,14 +2374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-120",
     "concept_id": "CID-120",
     "hierarchy_id": "3.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "اللوجستيات الكيميائية",
     "description": "",
@@ -2156,14 +2394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-121",
     "concept_id": "CID-121",
     "hierarchy_id": "3.3.6",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات النفط والغاز",
     "description": "",
@@ -2174,14 +2414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-122",
     "concept_id": "CID-122",
     "hierarchy_id": "3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "خدمات لوجستية متخصصة أخرى",
     "description": "",
@@ -2192,14 +2434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-123",
     "concept_id": "CID-123",
     "hierarchy_id": "3.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131803",
     "language": "ar",
     "term": "لوجستيات المواد الخطرة",
     "description": "",
@@ -2210,14 +2454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131803"
+      ]
     }
   },
   {
     "term_id": "ar-124",
     "concept_id": "CID-124",
     "hierarchy_id": "3.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات الحيوانات الحية",
     "description": "",
@@ -2228,14 +2474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-125",
     "concept_id": "CID-125",
     "hierarchy_id": "3.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات البضائع عالية القيمة والمؤمنة",
     "description": "",
@@ -2246,14 +2494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-126",
     "concept_id": "CID-126",
     "hierarchy_id": "3.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "لوجستيات الفن والمعارض",
     "description": "",
@@ -2264,14 +2514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-127",
     "concept_id": "CID-127",
     "hierarchy_id": "3.4.5",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "اللوجستيات الحضرية",
     "description": "",
@@ -2282,14 +2534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-128",
     "concept_id": "CID-128",
     "hierarchy_id": "3.4.6",
-    "unspsc_code": "",
+    "unspsc_code": "80161700",
     "language": "ar",
     "term": "اللوجستيات العكسية",
     "description": "",
@@ -2300,14 +2554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161700"
+      ]
     }
   },
   {
     "term_id": "ar-129",
     "concept_id": "CID-129",
     "hierarchy_id": "3.4.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "80161700",
     "language": "ar",
     "term": "إدارة المرتجعات",
     "description": "",
@@ -2318,14 +2574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161700"
+      ]
     }
   },
   {
     "term_id": "ar-130",
     "concept_id": "CID-130",
     "hierarchy_id": "3.4.6.2",
-    "unspsc_code": "",
+    "unspsc_code": "80161700",
     "language": "ar",
     "term": "الإصلاح وإعادة التأهيل",
     "description": "",
@@ -2336,14 +2594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161700"
+      ]
     }
   },
   {
     "term_id": "ar-131",
     "concept_id": "CID-131",
     "hierarchy_id": "3.4.6.3",
-    "unspsc_code": "",
+    "unspsc_code": "80161703",
     "language": "ar",
     "term": "إعادة التدوير واسترداد المواد",
     "description": "",
@@ -2354,14 +2614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161703"
+      ]
     }
   },
   {
     "term_id": "ar-132",
     "concept_id": "CID-132",
     "hierarchy_id": "4",
-    "unspsc_code": "",
+    "unspsc_code": "78000000",
     "language": "ar",
     "term": "البنية التحتية والمعدات اللوجستية",
     "description": "",
@@ -2372,14 +2634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78000000"
+      ]
     }
   },
   {
     "term_id": "ar-133",
     "concept_id": "CID-133",
     "hierarchy_id": "4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141800",
     "language": "ar",
     "term": "المحطات والموانئ",
     "description": "",
@@ -2390,14 +2654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141800"
+      ]
     }
   },
   {
     "term_id": "ar-134",
     "concept_id": "CID-134",
     "hierarchy_id": "4.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141800",
     "language": "ar",
     "term": "عمليات الموانئ",
     "description": "",
@@ -2408,14 +2674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141800"
+      ]
     }
   },
   {
     "term_id": "ar-135",
     "concept_id": "CID-135",
     "hierarchy_id": "4.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141800",
     "language": "ar",
     "term": "عمليات الموانئ الداخلية",
     "description": "",
@@ -2426,14 +2694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141800"
+      ]
     }
   },
   {
     "term_id": "ar-136",
     "concept_id": "CID-136",
     "hierarchy_id": "4.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141804",
     "language": "ar",
     "term": "محطات الشحن بالسكك الحديدية",
     "description": "",
@@ -2444,14 +2714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141804"
+      ]
     }
   },
   {
     "term_id": "ar-137",
     "concept_id": "CID-137",
     "hierarchy_id": "4.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78141805",
     "language": "ar",
     "term": "محطات الشحن الجوي",
     "description": "",
@@ -2462,14 +2734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141805"
+      ]
     }
   },
   {
     "term_id": "ar-138",
     "concept_id": "CID-138",
     "hierarchy_id": "4.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78141806",
     "language": "ar",
     "term": "خدمات القاعدة الساحلية للدعم البحري",
     "description": "",
@@ -2480,14 +2754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141806"
+      ]
     }
   },
   {
     "term_id": "ar-139",
     "concept_id": "CID-139",
     "hierarchy_id": "4.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78141807",
     "language": "ar",
     "term": "خدمات مراقبة الحركة الجوية",
     "description": "",
@@ -2498,14 +2774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141807"
+      ]
     }
   },
   {
     "term_id": "ar-140",
     "concept_id": "CID-140",
     "hierarchy_id": "4.2",
-    "unspsc_code": "",
+    "unspsc_code": "80131500",
     "language": "ar",
     "term": "العقارات اللوجستية",
     "description": "",
@@ -2516,14 +2794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80131500"
+      ]
     }
   },
   {
     "term_id": "ar-141",
     "concept_id": "CID-141",
     "hierarchy_id": "4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "80131502",
     "language": "ar",
     "term": "المتنزهات اللوجستية والمناطق الحرة",
     "description": "",
@@ -2534,14 +2814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80131502"
+      ]
     }
   },
   {
     "term_id": "ar-142",
     "concept_id": "CID-142",
     "hierarchy_id": "4.3",
-    "unspsc_code": "",
+    "unspsc_code": "24000000",
     "language": "ar",
     "term": "المعدات اللوجستية",
     "description": "",
@@ -2552,14 +2834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24000000"
+      ]
     }
   },
   {
     "term_id": "ar-143",
     "concept_id": "CID-143",
     "hierarchy_id": "4.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "24112800",
     "language": "ar",
     "term": "حاويات الشحن",
     "description": "",
@@ -2570,14 +2854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24112800"
+      ]
     }
   },
   {
     "term_id": "ar-144",
     "concept_id": "CID-144",
     "hierarchy_id": "4.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "25181701",
     "language": "ar",
     "term": "هياكل حاويات الشحن",
     "description": "",
@@ -2588,14 +2874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25181701"
+      ]
     }
   },
   {
     "term_id": "ar-145",
     "concept_id": "CID-145",
     "hierarchy_id": "4.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "24101600",
     "language": "ar",
     "term": "الرافعات الشوكية",
     "description": "",
@@ -2606,14 +2894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24101600"
+      ]
     }
   },
   {
     "term_id": "ar-146",
     "concept_id": "CID-146",
     "hierarchy_id": "4.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "24102100",
     "language": "ar",
     "term": "معدات المستودعات",
     "description": "",
@@ -2624,14 +2914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24102100"
+      ]
     }
   },
   {
     "term_id": "ar-147",
     "concept_id": "CID-147",
     "hierarchy_id": "4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "ar",
     "term": "تأجير واستئجار الأصول اللوجستية",
     "description": "",
@@ -2642,14 +2934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "ar-148",
     "concept_id": "CID-148",
     "hierarchy_id": "4.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141900",
     "language": "ar",
     "term": "خدمات تأجير حاويات النقل",
     "description": "",
@@ -2660,14 +2954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141900"
+      ]
     }
   },
   {
     "term_id": "ar-149",
     "concept_id": "CID-149",
     "hierarchy_id": "4.4.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141903",
     "language": "ar",
     "term": "خدمة تأجير حاويات الشحن متعددة الوسائط",
     "description": "",
@@ -2678,14 +2974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141903"
+      ]
     }
   },
   {
     "term_id": "ar-150",
     "concept_id": "CID-150",
     "hierarchy_id": "4.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78142000",
     "language": "ar",
     "term": "خدمات تأجير أو استئجار وسائل النقل",
     "description": "",
@@ -2696,14 +2994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142000"
+      ]
     }
   },
   {
     "term_id": "ar-151",
     "concept_id": "CID-151",
     "hierarchy_id": "4.4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78142001",
     "language": "ar",
     "term": "تأجير طائرة شحن مع مشغل",
     "description": "",
@@ -2714,14 +3014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142001"
+      ]
     }
   },
   {
     "term_id": "ar-152",
     "concept_id": "CID-152",
     "hierarchy_id": "4.4.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78142002",
     "language": "ar",
     "term": "تأجير سفينة شحن للنقل المائي الداخلي مع مشغل",
     "description": "",
@@ -2732,14 +3034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142002"
+      ]
     }
   },
   {
     "term_id": "ar-153",
     "concept_id": "CID-153",
     "hierarchy_id": "4.4.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78142003",
     "language": "ar",
     "term": "تأجير سفينة شحن للنقل الساحلي وعبر المحيطات مع مشغل",
     "description": "",
@@ -2750,14 +3054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142003"
+      ]
     }
   },
   {
     "term_id": "ar-154",
     "concept_id": "CID-154",
     "hierarchy_id": "4.4.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78142004",
     "language": "ar",
     "term": "تأجير شاحنة مع مشغل",
     "description": "",
@@ -2768,14 +3074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142004"
+      ]
     }
   },
   {
     "term_id": "ar-155",
     "concept_id": "CID-155",
     "hierarchy_id": "5",
-    "unspsc_code": "",
+    "unspsc_code": "43000000",
     "language": "ar",
     "term": "تكنولوجيا اللوجستيات والرقمنة",
     "description": "",
@@ -2786,14 +3094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43000000"
+      ]
     }
   },
   {
     "term_id": "ar-156",
     "concept_id": "CID-156",
     "hierarchy_id": "5.1",
-    "unspsc_code": "",
+    "unspsc_code": "43230000",
     "language": "ar",
     "term": "برمجيات اللوجستيات",
     "description": "",
@@ -2804,14 +3114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43230000"
+      ]
     }
   },
   {
     "term_id": "ar-157",
     "concept_id": "CID-157",
     "hierarchy_id": "5.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "43231506",
     "language": "ar",
     "term": "نظام إدارة النقل - TMS",
     "description": "",
@@ -2822,14 +3134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231506"
+      ]
     }
   },
   {
     "term_id": "ar-158",
     "concept_id": "CID-158",
     "hierarchy_id": "5.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "43231508",
     "language": "ar",
     "term": "نظام إدارة المستودع - WMS",
     "description": "",
@@ -2840,14 +3154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231508"
+      ]
     }
   },
   {
     "term_id": "ar-159",
     "concept_id": "CID-159",
     "hierarchy_id": "5.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "43231506",
     "language": "ar",
     "term": "برنامج إدارة سلسلة الإمداد",
     "description": "",
@@ -2858,14 +3174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231506"
+      ]
     }
   },
   {
     "term_id": "ar-160",
     "concept_id": "CID-160",
     "hierarchy_id": "5.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "43232504",
     "language": "ar",
     "term": "برنامج تخطيط المسارات وإدارة الأسطول",
     "description": "",
@@ -2876,14 +3194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232504"
+      ]
     }
   },
   {
     "term_id": "ar-161",
     "concept_id": "CID-161",
     "hierarchy_id": "5.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "43231515",
     "language": "ar",
     "term": "أنظمة التتبع والتعقب",
     "description": "",
@@ -2894,14 +3214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231515"
+      ]
     }
   },
   {
     "term_id": "ar-162",
     "concept_id": "CID-162",
     "hierarchy_id": "5.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "43232603",
     "language": "ar",
     "term": "نظام إدارة الساحة - YMS",
     "description": "",
@@ -2912,14 +3234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232603"
+      ]
     }
   },
   {
     "term_id": "ar-163",
     "concept_id": "CID-163",
     "hierarchy_id": "5.2",
-    "unspsc_code": "",
+    "unspsc_code": "43230000",
     "language": "ar",
     "term": "المنصات الرقمية والتكامل",
     "description": "",
@@ -2930,14 +3254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43230000"
+      ]
     }
   },
   {
     "term_id": "ar-164",
     "concept_id": "CID-164",
     "hierarchy_id": "5.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "43233513",
     "language": "ar",
     "term": "منصات الشحن الرقمية",
     "description": "",
@@ -2948,14 +3274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43233513"
+      ]
     }
   },
   {
     "term_id": "ar-165",
     "concept_id": "CID-165",
     "hierarchy_id": "5.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "43232403",
     "language": "ar",
     "term": "حلول واجهات برمجة التطبيقات والتكامل اللوجستي",
     "description": "",
@@ -2966,14 +3294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232403"
+      ]
     }
   },
   {
     "term_id": "ar-166",
     "concept_id": "CID-166",
     "hierarchy_id": "5.3",
-    "unspsc_code": "",
+    "unspsc_code": "43000000",
     "language": "ar",
     "term": "التقنيات الناشئة",
     "description": "",
@@ -2984,14 +3314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43000000"
+      ]
     }
   },
   {
     "term_id": "ar-167",
     "concept_id": "CID-167",
     "hierarchy_id": "5.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "43232314",
     "language": "ar",
     "term": "الذكاء الاصطناعي وتحليلات البيانات في اللوجستيات",
     "description": "",
@@ -3002,14 +3334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232314"
+      ]
     }
   },
   {
     "term_id": "ar-168",
     "concept_id": "CID-168",
     "hierarchy_id": "5.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "43233513",
     "language": "ar",
     "term": "البلوك تشين في اللوجستيات",
     "description": "",
@@ -3020,14 +3354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43233513"
+      ]
     }
   },
   {
     "term_id": "ar-169",
     "concept_id": "CID-169",
     "hierarchy_id": "5.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "43000000",
     "language": "ar",
     "term": "المركبات ذاتية القيادة في اللوجستيات",
     "description": "",
@@ -3038,14 +3374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43000000"
+      ]
     }
   },
   {
     "term_id": "ar-170",
     "concept_id": "CID-170",
     "hierarchy_id": "6",
-    "unspsc_code": "",
+    "unspsc_code": "80000000",
     "language": "ar",
     "term": "خدمات الدعم والأعمال",
     "description": "",
@@ -3056,14 +3394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80000000"
+      ]
     }
   },
   {
     "term_id": "ar-171",
     "concept_id": "CID-171",
     "hierarchy_id": "6.1",
-    "unspsc_code": "",
+    "unspsc_code": "80000000",
     "language": "ar",
     "term": "الاستشارات والتدريب",
     "description": "",
@@ -3074,14 +3414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80000000"
+      ]
     }
   },
   {
     "term_id": "ar-172",
     "concept_id": "CID-172",
     "hierarchy_id": "6.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "ar",
     "term": "تحسين العمليات اللوجستية",
     "description": "",
@@ -3092,14 +3434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "ar-173",
     "concept_id": "CID-173",
     "hierarchy_id": "6.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "86101704",
     "language": "ar",
     "term": "التدريب والشهادات اللوجستية",
     "description": "",
@@ -3110,14 +3454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:86101704"
+      ]
     }
   },
   {
     "term_id": "ar-174",
     "concept_id": "CID-174",
     "hierarchy_id": "6.2",
-    "unspsc_code": "",
+    "unspsc_code": "84000000",
     "language": "ar",
     "term": "الخدمات المالية والتأمينية",
     "description": "",
@@ -3128,14 +3474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84000000"
+      ]
     }
   },
   {
     "term_id": "ar-175",
     "concept_id": "CID-175",
     "hierarchy_id": "6.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "84131504",
     "language": "ar",
     "term": "تأمين الشحنات",
     "description": "",
@@ -3146,14 +3494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84131504"
+      ]
     }
   },
   {
     "term_id": "ar-176",
     "concept_id": "CID-176",
     "hierarchy_id": "6.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "84131607",
     "language": "ar",
     "term": "تأمين المسؤولية",
     "description": "",
@@ -3164,14 +3514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84131607"
+      ]
     }
   },
   {
     "term_id": "ar-177",
     "concept_id": "CID-177",
     "hierarchy_id": "6.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "84131503",
     "language": "ar",
     "term": "تأمين المركبات والأساطيل",
     "description": "",
@@ -3182,14 +3534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84131503"
+      ]
     }
   },
   {
     "term_id": "ar-178",
     "concept_id": "CID-178",
     "hierarchy_id": "6.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "84121600",
     "language": "ar",
     "term": "تمويل التجارة",
     "description": "",
@@ -3200,14 +3554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84121600"
+      ]
     }
   },
   {
     "term_id": "ar-179",
     "concept_id": "CID-179",
     "hierarchy_id": "6.2.5",
-    "unspsc_code": "",
+    "unspsc_code": "84121600",
     "language": "ar",
     "term": "التخصيم",
     "description": "",
@@ -3218,14 +3574,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84121600"
+      ]
     }
   },
   {
     "term_id": "ar-180",
     "concept_id": "CID-180",
     "hierarchy_id": "6.2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78141503",
     "language": "ar",
     "term": "دفع وتدقيق أجور الشحن",
     "description": "",
@@ -3236,14 +3594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141503"
+      ]
     }
   },
   {
     "term_id": "ar-181",
     "concept_id": "CID-181",
     "hierarchy_id": "6.3",
-    "unspsc_code": "",
+    "unspsc_code": "80120000",
     "language": "ar",
     "term": "الخدمات القانونية",
     "description": "",
@@ -3254,14 +3614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80120000"
+      ]
     }
   },
   {
     "term_id": "ar-182",
     "concept_id": "CID-182",
     "hierarchy_id": "6.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "80121704",
     "language": "ar",
     "term": "قانون عقود النقل",
     "description": "",
@@ -3272,14 +3634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80121704"
+      ]
     }
   },
   {
     "term_id": "ar-183",
     "concept_id": "CID-183",
     "hierarchy_id": "6.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "80121601",
     "language": "ar",
     "term": "قانون الجمارك والتجارة الخارجية",
     "description": "",
@@ -3290,14 +3654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80121601"
+      ]
     }
   },
   {
     "term_id": "ar-184",
     "concept_id": "CID-184",
     "hierarchy_id": "7",
-    "unspsc_code": "",
+    "unspsc_code": "77100000",
     "language": "ar",
     "term": "الاستدامة واللوجستيات الخضراء",
     "description": "",
@@ -3308,14 +3674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77100000"
+      ]
     }
   },
   {
     "term_id": "ar-185",
     "concept_id": "CID-185",
     "hierarchy_id": "7.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101500",
     "language": "ar",
     "term": "تقييم الكربون والانبعاثات",
     "description": "",
@@ -3326,14 +3694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101500"
+      ]
     }
   },
   {
     "term_id": "ar-186",
     "concept_id": "CID-186",
     "hierarchy_id": "7.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101503",
     "language": "ar",
     "term": "حساب البصمة الكربونية",
     "description": "",
@@ -3344,14 +3714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101503"
+      ]
     }
   },
   {
     "term_id": "ar-187",
     "concept_id": "CID-187",
     "hierarchy_id": "7.2",
-    "unspsc_code": "",
+    "unspsc_code": "77101700",
     "language": "ar",
     "term": "الحلول الخضراء",
     "description": "",
@@ -3362,14 +3734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101700"
+      ]
     }
   },
   {
     "term_id": "ar-188",
     "concept_id": "CID-188",
     "hierarchy_id": "7.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101704",
     "language": "ar",
     "term": "حلول الوقود المستدام",
     "description": "",
@@ -3380,14 +3754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101704"
+      ]
     }
   },
   {
     "term_id": "ar-189",
     "concept_id": "CID-189",
     "hierarchy_id": "7.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "77101705",
     "language": "ar",
     "term": "استشارات اللوجستيات الخضراء",
     "description": "",
@@ -3398,14 +3774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101705"
+      ]
     }
   },
   {
     "term_id": "ar-190",
     "concept_id": "CID-190",
     "hierarchy_id": "7.3",
-    "unspsc_code": "",
+    "unspsc_code": "77101700",
     "language": "ar",
     "term": "التغليف المستدام وتقليل النفايات",
     "description": "",
@@ -3416,14 +3794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101700"
+      ]
     }
   },
   {
     "term_id": "ar-191",
     "concept_id": "CID-191",
     "hierarchy_id": "7.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101704",
     "language": "ar",
     "term": "تحسين النفايات والتغليف",
     "description": "",
@@ -3434,14 +3814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101704"
+      ]
     }
   },
   {
     "term_id": "ar-192",
     "concept_id": "CID-192",
     "hierarchy_id": "7.4",
-    "unspsc_code": "",
+    "unspsc_code": "77101600",
     "language": "ar",
     "term": "التخطيط البيئي وإزالة الكربون",
     "description": "",
@@ -3452,14 +3834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101600"
+      ]
     }
   },
   {
     "term_id": "ar-193",
     "concept_id": "CID-193",
     "hierarchy_id": "7.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101600",
     "language": "ar",
     "term": "خارطة طريق الاستدامة وتخطيط التحول",
     "description": "",
@@ -3470,14 +3854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101600"
+      ]
     }
   },
   {
     "term_id": "ar-194",
     "concept_id": "CID-194",
     "hierarchy_id": "7.5",
-    "unspsc_code": "",
+    "unspsc_code": "77101800",
     "language": "ar",
     "term": "التدقيق البيئي",
     "description": "",
@@ -3488,14 +3874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101800"
+      ]
     }
   },
   {
     "term_id": "ar-195",
     "concept_id": "CID-195",
     "hierarchy_id": "7.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101800",
     "language": "ar",
     "term": "مراجعة التدقيق البيئي والامتثال",
     "description": "",
@@ -3506,14 +3894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101800"
+      ]
     }
   },
   {
     "term_id": "ar-196",
     "concept_id": "CID-196",
     "hierarchy_id": "7.6",
-    "unspsc_code": "",
+    "unspsc_code": "77102000",
     "language": "ar",
     "term": "التقارير والإفصاح البيئي",
     "description": "",
@@ -3524,14 +3914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77102000"
+      ]
     }
   },
   {
     "term_id": "ar-197",
     "concept_id": "CID-197",
     "hierarchy_id": "7.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "77102000",
     "language": "ar",
     "term": "تقارير الانبعاثات / الاستدامة",
     "description": "",
@@ -3542,14 +3934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77102000"
+      ]
     }
   },
   {
     "term_id": "ar-198",
     "concept_id": "CID-198",
     "hierarchy_id": "8",
-    "unspsc_code": "",
+    "unspsc_code": "78110000",
     "language": "ar",
     "term": "خدمات نقل الركاب والتنقل",
     "description": "",
@@ -3560,14 +3954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78110000"
+      ]
     }
   },
   {
     "term_id": "ar-199",
     "concept_id": "CID-199",
     "hierarchy_id": "8.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111500",
     "language": "ar",
     "term": "النقل الجوي للركاب",
     "description": "",
@@ -3578,14 +3974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111500"
+      ]
     }
   },
   {
     "term_id": "ar-200",
     "concept_id": "CID-200",
     "hierarchy_id": "8.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111501",
     "language": "ar",
     "term": "خدمات الهليكوبتر",
     "description": "",
@@ -3596,14 +3994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111501"
+      ]
     }
   },
   {
     "term_id": "ar-201",
     "concept_id": "CID-201",
     "hierarchy_id": "8.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111502",
     "language": "ar",
     "term": "السفر بالطائرة التجارية",
     "description": "",
@@ -3614,14 +4014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111502"
+      ]
     }
   },
   {
     "term_id": "ar-202",
     "concept_id": "CID-202",
     "hierarchy_id": "8.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111503",
     "language": "ar",
     "term": "السفر بالطائرة المستأجرة",
     "description": "",
@@ -3632,14 +4034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111503"
+      ]
     }
   },
   {
     "term_id": "ar-203",
     "concept_id": "CID-203",
     "hierarchy_id": "8.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111504",
     "language": "ar",
     "term": "خدمة الجولات الجوية",
     "description": "",
@@ -3650,14 +4054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111504"
+      ]
     }
   },
   {
     "term_id": "ar-204",
     "concept_id": "CID-204",
     "hierarchy_id": "8.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111505",
     "language": "ar",
     "term": "خدمة تأجير أو استئجار طائرات الركاب",
     "description": "",
@@ -3668,14 +4074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111505"
+      ]
     }
   },
   {
     "term_id": "ar-205",
     "concept_id": "CID-205",
     "hierarchy_id": "8.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111506",
     "language": "ar",
     "term": "الإخلاء الطبي بواسطة الإسعاف الجوي",
     "description": "",
@@ -3686,14 +4094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111506"
+      ]
     }
   },
   {
     "term_id": "ar-206",
     "concept_id": "CID-206",
     "hierarchy_id": "8.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111600",
     "language": "ar",
     "term": "نقل الركاب بالسكك الحديدية",
     "description": "",
@@ -3704,14 +4114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111600"
+      ]
     }
   },
   {
     "term_id": "ar-207",
     "concept_id": "CID-207",
     "hierarchy_id": "8.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111601",
     "language": "ar",
     "term": "خدمات النقل بالقطار الخفيف",
     "description": "",
@@ -3722,14 +4134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111601"
+      ]
     }
   },
   {
     "term_id": "ar-208",
     "concept_id": "CID-208",
     "hierarchy_id": "8.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111602",
     "language": "ar",
     "term": "النقل بالمترو",
     "description": "",
@@ -3740,14 +4154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111602"
+      ]
     }
   },
   {
     "term_id": "ar-209",
     "concept_id": "CID-209",
     "hierarchy_id": "8.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111603",
     "language": "ar",
     "term": "خدمات السكك الحديدية القارية / العابرة للقارات",
     "description": "",
@@ -3758,14 +4174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111603"
+      ]
     }
   },
   {
     "term_id": "ar-210",
     "concept_id": "CID-210",
     "hierarchy_id": "8.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111700",
     "language": "ar",
     "term": "النقل البحري للركاب",
     "description": "",
@@ -3776,14 +4194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111700"
+      ]
     }
   },
   {
     "term_id": "ar-211",
     "concept_id": "CID-211",
     "hierarchy_id": "8.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111701",
     "language": "ar",
     "term": "التاكسي المائي",
     "description": "",
@@ -3794,14 +4214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111701"
+      ]
     }
   },
   {
     "term_id": "ar-212",
     "concept_id": "CID-212",
     "hierarchy_id": "8.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111702",
     "language": "ar",
     "term": "رحلات بحرية مع مبيت",
     "description": "",
@@ -3812,14 +4234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111702"
+      ]
     }
   },
   {
     "term_id": "ar-213",
     "concept_id": "CID-213",
     "hierarchy_id": "8.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111703",
     "language": "ar",
     "term": "رحلات القوارب السياحية",
     "description": "",
@@ -3830,14 +4254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111703"
+      ]
     }
   },
   {
     "term_id": "ar-214",
     "concept_id": "CID-214",
     "hierarchy_id": "8.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111704",
     "language": "ar",
     "term": "خدمة تأجير أو استئجار الوسائط البحرية",
     "description": "",
@@ -3848,14 +4274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111704"
+      ]
     }
   },
   {
     "term_id": "ar-215",
     "concept_id": "CID-215",
     "hierarchy_id": "8.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111705",
     "language": "ar",
     "term": "خدمة نقل العاملين إلى المنصات البحرية",
     "description": "",
@@ -3866,14 +4294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111705"
+      ]
     }
   },
   {
     "term_id": "ar-216",
     "concept_id": "CID-216",
     "hierarchy_id": "8.3.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111706",
     "language": "ar",
     "term": "عبّارة ركاب ساحلية وعبر المحيطات",
     "description": "",
@@ -3884,14 +4314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111706"
+      ]
     }
   },
   {
     "term_id": "ar-217",
     "concept_id": "CID-217",
     "hierarchy_id": "8.3.7",
-    "unspsc_code": "",
+    "unspsc_code": "78111707",
     "language": "ar",
     "term": "عبّارة ركاب للممرات المائية الداخلية",
     "description": "",
@@ -3902,14 +4334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111707"
+      ]
     }
   },
   {
     "term_id": "ar-218",
     "concept_id": "CID-218",
     "hierarchy_id": "8.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111800",
     "language": "ar",
     "term": "نقل الركاب البري",
     "description": "",
@@ -3920,14 +4354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111800"
+      ]
     }
   },
   {
     "term_id": "ar-219",
     "concept_id": "CID-219",
     "hierarchy_id": "8.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111802",
     "language": "ar",
     "term": "خدمات الحافلات المجدولة",
     "description": "",
@@ -3938,14 +4374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111802"
+      ]
     }
   },
   {
     "term_id": "ar-220",
     "concept_id": "CID-220",
     "hierarchy_id": "8.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111803",
     "language": "ar",
     "term": "خدمات الحافلات المستأجرة",
     "description": "",
@@ -3956,14 +4394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111803"
+      ]
     }
   },
   {
     "term_id": "ar-221",
     "concept_id": "CID-221",
     "hierarchy_id": "8.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111804",
     "language": "ar",
     "term": "خدمات سيارات الأجرة",
     "description": "",
@@ -3974,14 +4414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111804"
+      ]
     }
   },
   {
     "term_id": "ar-222",
     "concept_id": "CID-222",
     "hierarchy_id": "8.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111807",
     "language": "ar",
     "term": "رسوم مواقف السيارات",
     "description": "",
@@ -3992,14 +4434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111807"
+      ]
     }
   },
   {
     "term_id": "ar-223",
     "concept_id": "CID-223",
     "hierarchy_id": "8.4.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111808",
     "language": "ar",
     "term": "تأجير المركبات",
     "description": "",
@@ -4010,14 +4454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111808"
+      ]
     }
   },
   {
     "term_id": "ar-224",
     "concept_id": "CID-224",
     "hierarchy_id": "8.4.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111809",
     "language": "ar",
     "term": "تأجير تشغيلي لسيارات سيدان / كوبيه / ستيشن واجن",
     "description": "",
@@ -4028,14 +4474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111809"
+      ]
     }
   },
   {
     "term_id": "ar-225",
     "concept_id": "CID-225",
     "hierarchy_id": "8.4.7",
-    "unspsc_code": "",
+    "unspsc_code": "78111810",
     "language": "ar",
     "term": "خدمة الليموزين أو السيارة التنفيذية",
     "description": "",
@@ -4046,14 +4494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111810"
+      ]
     }
   },
   {
     "term_id": "ar-226",
     "concept_id": "CID-226",
     "hierarchy_id": "8.4.8",
-    "unspsc_code": "",
+    "unspsc_code": "78111811",
     "language": "ar",
     "term": "تأجير تشغيلي للشاحنات الخفيفة / مركبات SUV",
     "description": "",
@@ -4064,14 +4514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111811"
+      ]
     }
   },
   {
     "term_id": "ar-227",
     "concept_id": "CID-227",
     "hierarchy_id": "8.4.9",
-    "unspsc_code": "",
+    "unspsc_code": "78111812",
     "language": "ar",
     "term": "تأجير تشغيلي لفانات الركاب / الميني فان",
     "description": "",
@@ -4082,14 +4534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111812"
+      ]
     }
   },
   {
     "term_id": "ar-228",
     "concept_id": "CID-228",
     "hierarchy_id": "8.4.10",
-    "unspsc_code": "",
+    "unspsc_code": "78111813",
     "language": "ar",
     "term": "خدمة الجولات البرية",
     "description": "",
@@ -4100,14 +4554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111813"
+      ]
     }
   },
   {
     "term_id": "ar-229",
     "concept_id": "CID-229",
     "hierarchy_id": "8.4.11",
-    "unspsc_code": "",
+    "unspsc_code": "78111815",
     "language": "ar",
     "term": "الإخلاء الطبي بواسطة سيارة إسعاف",
     "description": "",
@@ -4118,14 +4574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111815"
+      ]
     }
   },
   {
     "term_id": "ar-230",
     "concept_id": "CID-230",
     "hierarchy_id": "8.5",
-    "unspsc_code": "",
+    "unspsc_code": "78112000",
     "language": "ar",
     "term": "خدمات النقل المتعدد الوسائط للركاب",
     "description": "",
@@ -4136,14 +4594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78112000"
+      ]
     }
   },
   {
     "term_id": "ar-231",
     "concept_id": "CID-231",
     "hierarchy_id": "8.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "78112001",
     "language": "ar",
     "term": "النقل الحضري والضواحي متعدد الوسائط للركاب",
     "description": "",
@@ -4154,14 +4614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78112001"
+      ]
     }
   },
   {
     "term_id": "ar-232",
     "concept_id": "CID-232",
     "hierarchy_id": "8.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111900",
     "language": "ar",
     "term": "نقل الركاب الفضائي",
     "description": "",
@@ -4172,14 +4634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111900"
+      ]
     }
   },
   {
     "term_id": "ar-233",
     "concept_id": "CID-233",
     "hierarchy_id": "9",
-    "unspsc_code": "",
+    "unspsc_code": "25000000",
     "language": "ar",
     "term": "أصول النقل والمركبات ووسائط النقل",
     "description": "",
@@ -4190,14 +4654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25000000"
+      ]
     }
   },
   {
     "term_id": "ar-234",
     "concept_id": "CID-234",
     "hierarchy_id": "9.1",
-    "unspsc_code": "",
+    "unspsc_code": "25100000",
     "language": "ar",
     "term": "مركبات آلية",
     "description": "",
@@ -4208,14 +4674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25100000"
+      ]
     }
   },
   {
     "term_id": "ar-235",
     "concept_id": "CID-235",
     "hierarchy_id": "9.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25101500",
     "language": "ar",
     "term": "مركبات الركاب الآلية",
     "description": "",
@@ -4226,14 +4694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101500"
+      ]
     }
   },
   {
     "term_id": "ar-236",
     "concept_id": "CID-236",
     "hierarchy_id": "9.1.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25101501",
     "language": "ar",
     "term": "حافلات صغيرة",
     "description": "",
@@ -4244,14 +4714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101501"
+      ]
     }
   },
   {
     "term_id": "ar-237",
     "concept_id": "CID-237",
     "hierarchy_id": "9.1.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25101502",
     "language": "ar",
     "term": "حافلات",
     "description": "",
@@ -4262,14 +4734,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101502"
+      ]
     }
   },
   {
     "term_id": "ar-238",
     "concept_id": "CID-238",
     "hierarchy_id": "9.1.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "25101503",
     "language": "ar",
     "term": "سيارات / عربات",
     "description": "",
@@ -4280,14 +4754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101503"
+      ]
     }
   },
   {
     "term_id": "ar-239",
     "concept_id": "CID-239",
     "hierarchy_id": "9.1.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "25101504",
     "language": "ar",
     "term": "سيارات ستيشن واغن",
     "description": "",
@@ -4298,14 +4774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101504"
+      ]
     }
   },
   {
     "term_id": "ar-240",
     "concept_id": "CID-240",
     "hierarchy_id": "9.1.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "25101505",
     "language": "ar",
     "term": "ميني فان أو فان",
     "description": "",
@@ -4316,14 +4794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101505"
+      ]
     }
   },
   {
     "term_id": "ar-241",
     "concept_id": "CID-241",
     "hierarchy_id": "9.1.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "25101506",
     "language": "ar",
     "term": "سيارات ليموزين",
     "description": "",
@@ -4334,14 +4814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101506"
+      ]
     }
   },
   {
     "term_id": "ar-242",
     "concept_id": "CID-242",
     "hierarchy_id": "9.1.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "25101507",
     "language": "ar",
     "term": "شاحنات خفيفة أو مركبات رياضية متعددة الاستخدام",
     "description": "",
@@ -4352,14 +4834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101507"
+      ]
     }
   },
   {
     "term_id": "ar-243",
     "concept_id": "CID-243",
     "hierarchy_id": "9.1.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "25101509",
     "language": "ar",
     "term": "مركبات كهربائية",
     "description": "",
@@ -4370,14 +4854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101509"
+      ]
     }
   },
   {
     "term_id": "ar-244",
     "concept_id": "CID-244",
     "hierarchy_id": "9.1.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "25101510",
     "language": "ar",
     "term": "مركبات آلية مدرعة",
     "description": "",
@@ -4388,14 +4874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101510"
+      ]
     }
   },
   {
     "term_id": "ar-245",
     "concept_id": "CID-245",
     "hierarchy_id": "9.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25101800",
     "language": "ar",
     "term": "مركبات ثنائية العجلات مزودة بمحرك",
     "description": "",
@@ -4406,14 +4894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101800"
+      ]
     }
   },
   {
     "term_id": "ar-246",
     "concept_id": "CID-246",
     "hierarchy_id": "9.1.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25101801",
     "language": "ar",
     "term": "دراجات نارية",
     "description": "",
@@ -4424,14 +4914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101801"
+      ]
     }
   },
   {
     "term_id": "ar-247",
     "concept_id": "CID-247",
     "hierarchy_id": "9.1.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25101802",
     "language": "ar",
     "term": "سكوترات",
     "description": "",
@@ -4442,14 +4934,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101802"
+      ]
     }
   },
   {
     "term_id": "ar-248",
     "concept_id": "CID-248",
     "hierarchy_id": "9.1.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "25101803",
     "language": "ar",
     "term": "دراجات بخارية",
     "description": "",
@@ -4460,14 +4954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101803"
+      ]
     }
   },
   {
     "term_id": "ar-249",
     "concept_id": "CID-249",
     "hierarchy_id": "9.2",
-    "unspsc_code": "",
+    "unspsc_code": "25110000",
     "language": "ar",
     "term": "السفن البحرية",
     "description": "",
@@ -4478,14 +4974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25110000"
+      ]
     }
   },
   {
     "term_id": "ar-250",
     "concept_id": "CID-250",
     "hierarchy_id": "9.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25111500",
     "language": "ar",
     "term": "سفن بحرية تجارية",
     "description": "",
@@ -4496,14 +4994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111500"
+      ]
     }
   },
   {
     "term_id": "ar-251",
     "concept_id": "CID-251",
     "hierarchy_id": "9.2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25111503",
     "language": "ar",
     "term": "سفن شحن أو حاويات",
     "description": "",
@@ -4514,14 +5014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111503"
+      ]
     }
   },
   {
     "term_id": "ar-252",
     "concept_id": "CID-252",
     "hierarchy_id": "9.2.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25111505",
     "language": "ar",
     "term": "ناقلات",
     "description": "",
@@ -4532,14 +5034,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111505"
+      ]
     }
   },
   {
     "term_id": "ar-253",
     "concept_id": "CID-253",
     "hierarchy_id": "9.2.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "25111506",
     "language": "ar",
     "term": "قوارب قطر",
     "description": "",
@@ -4550,14 +5054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111506"
+      ]
     }
   },
   {
     "term_id": "ar-254",
     "concept_id": "CID-254",
     "hierarchy_id": "9.2.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "25111507",
     "language": "ar",
     "term": "صنادل",
     "description": "",
@@ -4568,14 +5074,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111507"
+      ]
     }
   },
   {
     "term_id": "ar-255",
     "concept_id": "CID-255",
     "hierarchy_id": "9.2.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "25111508",
     "language": "ar",
     "term": "عبارات ركاب أو سيارات",
     "description": "",
@@ -4586,14 +5094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111508"
+      ]
     }
   },
   {
     "term_id": "ar-256",
     "concept_id": "CID-256",
     "hierarchy_id": "9.2.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "25111509",
     "language": "ar",
     "term": "سفن سياحية",
     "description": "",
@@ -4604,14 +5114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111509"
+      ]
     }
   },
   {
     "term_id": "ar-257",
     "concept_id": "CID-257",
     "hierarchy_id": "9.2.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "25111511",
     "language": "ar",
     "term": "قوارب طاقم النفط أو الغاز",
     "description": "",
@@ -4622,14 +5134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111511"
+      ]
     }
   },
   {
     "term_id": "ar-258",
     "concept_id": "CID-258",
     "hierarchy_id": "9.2.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "25111512",
     "language": "ar",
     "term": "قوارب عمل للنفط أو الغاز",
     "description": "",
@@ -4640,14 +5154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111512"
+      ]
     }
   },
   {
     "term_id": "ar-259",
     "concept_id": "CID-259",
     "hierarchy_id": "9.2.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "25111513",
     "language": "ar",
     "term": "سفن زلزالية",
     "description": "",
@@ -4658,14 +5174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111513"
+      ]
     }
   },
   {
     "term_id": "ar-260",
     "concept_id": "CID-260",
     "hierarchy_id": "9.2.1.10",
-    "unspsc_code": "",
+    "unspsc_code": "25111514",
     "language": "ar",
     "term": "كاسحات جليد",
     "description": "",
@@ -4676,14 +5194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111514"
+      ]
     }
   },
   {
     "term_id": "ar-261",
     "concept_id": "CID-261",
     "hierarchy_id": "9.2.1.11",
-    "unspsc_code": "",
+    "unspsc_code": "25111515",
     "language": "ar",
     "term": "ناقلات غاز مسال",
     "description": "",
@@ -4694,14 +5214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111515"
+      ]
     }
   },
   {
     "term_id": "ar-262",
     "concept_id": "CID-262",
     "hierarchy_id": "9.2.1.12",
-    "unspsc_code": "",
+    "unspsc_code": "25111522",
     "language": "ar",
     "term": "ناقلات كيماوية",
     "description": "",
@@ -4712,14 +5234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111522"
+      ]
     }
   },
   {
     "term_id": "ar-263",
     "concept_id": "CID-263",
     "hierarchy_id": "9.2.1.13",
-    "unspsc_code": "",
+    "unspsc_code": "25111524",
     "language": "ar",
     "term": "سفن بضائع سائبة",
     "description": "",
@@ -4730,14 +5254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111524"
+      ]
     }
   },
   {
     "term_id": "ar-264",
     "concept_id": "CID-264",
     "hierarchy_id": "9.2.1.14",
-    "unspsc_code": "",
+    "unspsc_code": "25111525",
     "language": "ar",
     "term": "سفن نقل سيارات / رورو",
     "description": "",
@@ -4748,14 +5274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111525"
+      ]
     }
   },
   {
     "term_id": "ar-265",
     "concept_id": "CID-265",
     "hierarchy_id": "9.2.1.15",
-    "unspsc_code": "",
+    "unspsc_code": "25111530",
     "language": "ar",
     "term": "قوارب إرشاد",
     "description": "",
@@ -4766,14 +5294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111530"
+      ]
     }
   },
   {
     "term_id": "ar-266",
     "concept_id": "CID-266",
     "hierarchy_id": "9.2.1.16",
-    "unspsc_code": "",
+    "unspsc_code": "25111534",
     "language": "ar",
     "term": "سفن أبحاث",
     "description": "",
@@ -4784,14 +5314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111534"
+      ]
     }
   },
   {
     "term_id": "ar-267",
     "concept_id": "CID-267",
     "hierarchy_id": "9.2.1.17",
-    "unspsc_code": "",
+    "unspsc_code": "25111535",
     "language": "ar",
     "term": "سفن مد الكابلات",
     "description": "",
@@ -4802,14 +5334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111535"
+      ]
     }
   },
   {
     "term_id": "ar-268",
     "concept_id": "CID-268",
     "hierarchy_id": "9.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25111800",
     "language": "ar",
     "term": "قوارب ترفيهية",
     "description": "",
@@ -4820,14 +5354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111800"
+      ]
     }
   },
   {
     "term_id": "ar-269",
     "concept_id": "CID-269",
     "hierarchy_id": "9.2.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25111807",
     "language": "ar",
     "term": "قوارب دنغي",
     "description": "",
@@ -4838,14 +5374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111807"
+      ]
     }
   },
   {
     "term_id": "ar-270",
     "concept_id": "CID-270",
     "hierarchy_id": "9.2.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25111808",
     "language": "ar",
     "term": "يخوت",
     "description": "",
@@ -4856,14 +5394,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111808"
+      ]
     }
   },
   {
     "term_id": "ar-271",
     "concept_id": "CID-271",
     "hierarchy_id": "9.2.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "25111809",
     "language": "ar",
     "term": "سكيف",
     "description": "",
@@ -4874,14 +5414,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111809"
+      ]
     }
   },
   {
     "term_id": "ar-272",
     "concept_id": "CID-272",
     "hierarchy_id": "9.3",
-    "unspsc_code": "",
+    "unspsc_code": "25120000",
     "language": "ar",
     "term": "آلات ومعدات السكك الحديدية والترام",
     "description": "",
@@ -4892,14 +5434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25120000"
+      ]
     }
   },
   {
     "term_id": "ar-273",
     "concept_id": "CID-273",
     "hierarchy_id": "9.4",
-    "unspsc_code": "",
+    "unspsc_code": "25130000",
     "language": "ar",
     "term": "طائرات",
     "description": "",
@@ -4910,14 +5454,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25130000"
+      ]
     }
   },
   {
     "term_id": "ar-274",
     "concept_id": "CID-274",
     "hierarchy_id": "9.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131500",
     "language": "ar",
     "term": "طائرات ثابتة الجناح مزودة بمحرك",
     "description": "",
@@ -4928,14 +5474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131500"
+      ]
     }
   },
   {
     "term_id": "ar-275",
     "concept_id": "CID-275",
     "hierarchy_id": "9.4.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131501",
     "language": "ar",
     "term": "طائرات زراعية ثابتة الجناح",
     "description": "",
@@ -4946,14 +5494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131501"
+      ]
     }
   },
   {
     "term_id": "ar-276",
     "concept_id": "CID-276",
     "hierarchy_id": "9.4.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131502",
     "language": "ar",
     "term": "طائرات شحن مروحية",
     "description": "",
@@ -4964,14 +5514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131502"
+      ]
     }
   },
   {
     "term_id": "ar-277",
     "concept_id": "CID-277",
     "hierarchy_id": "9.4.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "25131503",
     "language": "ar",
     "term": "طائرات مائية",
     "description": "",
@@ -4982,14 +5534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131503"
+      ]
     }
   },
   {
     "term_id": "ar-278",
     "concept_id": "CID-278",
     "hierarchy_id": "9.4.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "25131504",
     "language": "ar",
     "term": "طائرات ركاب تجارية مروحية",
     "description": "",
@@ -5000,14 +5554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131504"
+      ]
     }
   },
   {
     "term_id": "ar-279",
     "concept_id": "CID-279",
     "hierarchy_id": "9.4.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "25131505",
     "language": "ar",
     "term": "طائرات شحن نفاثة",
     "description": "",
@@ -5018,14 +5574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131505"
+      ]
     }
   },
   {
     "term_id": "ar-280",
     "concept_id": "CID-280",
     "hierarchy_id": "9.4.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "25131506",
     "language": "ar",
     "term": "طائرات ركاب تجارية نفاثة",
     "description": "",
@@ -5036,14 +5594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131506"
+      ]
     }
   },
   {
     "term_id": "ar-281",
     "concept_id": "CID-281",
     "hierarchy_id": "9.4.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "25131507",
     "language": "ar",
     "term": "طائرات خاصة أو رجال أعمال مروحية",
     "description": "",
@@ -5054,14 +5614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131507"
+      ]
     }
   },
   {
     "term_id": "ar-282",
     "concept_id": "CID-282",
     "hierarchy_id": "9.4.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "25131508",
     "language": "ar",
     "term": "طائرات خاصة أو رجال أعمال نفاثة",
     "description": "",
@@ -5072,14 +5634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131508"
+      ]
     }
   },
   {
     "term_id": "ar-283",
     "concept_id": "CID-283",
     "hierarchy_id": "9.4.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "25131513",
     "language": "ar",
     "term": "طائرات تفتيش جوي",
     "description": "",
@@ -5090,14 +5654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131513"
+      ]
     }
   },
   {
     "term_id": "ar-284",
     "concept_id": "CID-284",
     "hierarchy_id": "9.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131600",
     "language": "ar",
     "term": "طائرات مدنية وتجارية دوارة الجناح",
     "description": "",
@@ -5108,14 +5674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131600"
+      ]
     }
   },
   {
     "term_id": "ar-285",
     "concept_id": "CID-285",
     "hierarchy_id": "9.4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131601",
     "language": "ar",
     "term": "مروحيات نقل الركاب",
     "description": "",
@@ -5126,14 +5694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131601"
+      ]
     }
   },
   {
     "term_id": "ar-286",
     "concept_id": "CID-286",
     "hierarchy_id": "9.4.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131602",
     "language": "ar",
     "term": "مروحيات نقل البضائع",
     "description": "",
@@ -5144,14 +5714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131602"
+      ]
     }
   },
   {
     "term_id": "ar-287",
     "concept_id": "CID-287",
     "hierarchy_id": "9.4.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "25131604",
     "language": "ar",
     "term": "مروحيات طبية أو إنقاذ",
     "description": "",
@@ -5162,14 +5734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131604"
+      ]
     }
   },
   {
     "term_id": "ar-288",
     "concept_id": "CID-288",
     "hierarchy_id": "9.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "25131800",
     "language": "ar",
     "term": "طائرات متخصصة",
     "description": "",
@@ -5180,14 +5754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131800"
+      ]
     }
   },
   {
     "term_id": "ar-289",
     "concept_id": "CID-289",
     "hierarchy_id": "9.4.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131801",
     "language": "ar",
     "term": "مناطيد",
     "description": "",
@@ -5198,14 +5774,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131801"
+      ]
     }
   },
   {
     "term_id": "ar-290",
     "concept_id": "CID-290",
     "hierarchy_id": "9.4.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131802",
     "language": "ar",
     "term": "نماذج طائرات",
     "description": "",
@@ -5216,14 +5794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131802"
+      ]
     }
   },
   {
     "term_id": "ar-291",
     "concept_id": "CID-291",
     "hierarchy_id": "9.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "25132000",
     "language": "ar",
     "term": "طائرات ترفيهية",
     "description": "",
@@ -5234,14 +5814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25132000"
+      ]
     }
   },
   {
     "term_id": "ar-292",
     "concept_id": "CID-292",
     "hierarchy_id": "9.5",
-    "unspsc_code": "",
+    "unspsc_code": "25150000",
     "language": "ar",
     "term": "مركبات فضائية",
     "description": "",
@@ -5252,14 +5834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25150000"
+      ]
     }
   },
   {
     "term_id": "ar-293",
     "concept_id": "CID-293",
     "hierarchy_id": "9.6",
-    "unspsc_code": "",
+    "unspsc_code": "25190000",
     "language": "ar",
     "term": "معدات خدمات النقل",
     "description": "",
@@ -5270,7 +5854,9 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25190000"
+      ]
     }
   },
   {
@@ -5439,7 +6025,7 @@
     "term_id": "ar-303",
     "concept_id": "CID-303",
     "hierarchy_id": "10.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141900",
     "language": "ar",
     "term": "تأجير الحاويات",
     "description": "",
@@ -5450,14 +6036,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141900"
+      ]
     }
   },
   {
     "term_id": "ar-304",
     "concept_id": "CID-304",
     "hierarchy_id": "10.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141903",
     "language": "ar",
     "term": "تأجير الحاويات متعددة الوسائط",
     "description": "",
@@ -5468,14 +6056,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141903"
+      ]
     }
   },
   {
     "term_id": "ar-305",
     "concept_id": "CID-305",
     "hierarchy_id": "10.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111808",
     "language": "ar",
     "term": "خدمات تأجير المركبات",
     "description": "",
@@ -5486,14 +6076,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111808"
+      ]
     }
   },
   {
     "term_id": "ar-306",
     "concept_id": "CID-306",
     "hierarchy_id": "10.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111704",
     "language": "ar",
     "term": "تأجير الوسائط البحرية",
     "description": "",
@@ -5504,14 +6096,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111704"
+      ]
     }
   },
   {
     "term_id": "ar-307",
     "concept_id": "CID-307",
     "hierarchy_id": "10.2.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111505",
     "language": "ar",
     "term": "تأجير قصير أو طويل الأجل لطائرات الركاب",
     "description": "",
@@ -5522,14 +6116,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111505"
+      ]
     }
   },
   {
     "term_id": "ar-308",
     "concept_id": "CID-308",
     "hierarchy_id": "10.2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78142001",
     "language": "ar",
     "term": "تأجير طائرات شحن مع مشغل",
     "description": "",
@@ -5540,14 +6136,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142001"
+      ]
     }
   },
   {
     "term_id": "ar-309",
     "concept_id": "CID-309",
     "hierarchy_id": "10.2.7",
-    "unspsc_code": "",
+    "unspsc_code": "78142002",
     "language": "ar",
     "term": "تأجير سفينة شحن مع مشغل",
     "description": "",
@@ -5558,14 +6156,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142002"
+      ]
     }
   },
   {
     "term_id": "ar-310",
     "concept_id": "CID-310",
     "hierarchy_id": "10.2.8",
-    "unspsc_code": "",
+    "unspsc_code": "78142003",
     "language": "ar",
     "term": "تأجير سفينة شحن ساحلية / عابرة للمحيطات مع مشغل",
     "description": "",
@@ -5576,14 +6176,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142003"
+      ]
     }
   },
   {
     "term_id": "ar-311",
     "concept_id": "CID-311",
     "hierarchy_id": "10.2.9",
-    "unspsc_code": "",
+    "unspsc_code": "78142004",
     "language": "ar",
     "term": "خدمات تأجير شاحنة مع مشغل",
     "description": "",
@@ -5594,7 +6196,9 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142004"
+      ]
     }
   },
   {
@@ -5619,7 +6223,7 @@
     "term_id": "ar-313",
     "concept_id": "CID-313",
     "hierarchy_id": "10.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111809",
     "language": "ar",
     "term": "تأجير طويل الأجل لسيارات سيدان / كوبيه / ستيشن واجن",
     "description": "",
@@ -5630,14 +6234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111809"
+      ]
     }
   },
   {
     "term_id": "ar-314",
     "concept_id": "CID-314",
     "hierarchy_id": "10.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111811",
     "language": "ar",
     "term": "تأجير طويل الأجل لشاحنات خفيفة / سيارات رياضية متعددة الاستخدامات",
     "description": "",
@@ -5648,14 +6254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111811"
+      ]
     }
   },
   {
     "term_id": "ar-315",
     "concept_id": "CID-315",
     "hierarchy_id": "10.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111812",
     "language": "ar",
     "term": "تأجير طويل الأجل لمركبات ركاب / حافلات صغيرة",
     "description": "",
@@ -5666,14 +6274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111812"
+      ]
     }
   },
   {
     "term_id": "ar-316",
     "concept_id": "CID-316",
     "hierarchy_id": "10.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78142000",
     "language": "ar",
     "term": "تأجير طويل الأجل لوسائط النقل",
     "description": "",
@@ -5684,14 +6294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142000"
+      ]
     }
   },
   {
     "term_id": "ar-317",
     "concept_id": "CID-317",
     "hierarchy_id": "11",
-    "unspsc_code": "",
+    "unspsc_code": "78180000",
     "language": "ar",
     "term": "طبقة الصيانة / التزود بالوقود / التخزين / الدعم",
     "description": "",
@@ -5702,14 +6314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78180000"
+      ]
     }
   },
   {
     "term_id": "ar-318",
     "concept_id": "CID-318",
     "hierarchy_id": "11.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181500",
     "language": "ar",
     "term": "صيانة وإصلاح المركبات",
     "description": "",
@@ -5720,14 +6334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181500"
+      ]
     }
   },
   {
     "term_id": "ar-319",
     "concept_id": "CID-319",
     "hierarchy_id": "11.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181501",
     "language": "ar",
     "term": "خدمة إصلاح هيكل المركبة أو طلائها",
     "description": "",
@@ -5738,14 +6354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181501"
+      ]
     }
   },
   {
     "term_id": "ar-320",
     "concept_id": "CID-320",
     "hierarchy_id": "11.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78181505",
     "language": "ar",
     "term": "خدمة فحص المركبات",
     "description": "",
@@ -5756,14 +6374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181505"
+      ]
     }
   },
   {
     "term_id": "ar-321",
     "concept_id": "CID-321",
     "hierarchy_id": "11.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78181506",
     "language": "ar",
     "term": "خدمة استبدال زجاج المركبات",
     "description": "",
@@ -5774,14 +6394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181506"
+      ]
     }
   },
   {
     "term_id": "ar-322",
     "concept_id": "CID-322",
     "hierarchy_id": "11.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78181507",
     "language": "ar",
     "term": "صيانة وإصلاح السيارات والشاحنات الخفيفة",
     "description": "",
@@ -5792,14 +6414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181507"
+      ]
     }
   },
   {
     "term_id": "ar-323",
     "concept_id": "CID-323",
     "hierarchy_id": "11.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78181508",
     "language": "ar",
     "term": "صيانة وإصلاح الشاحنات الثقيلة",
     "description": "",
@@ -5810,14 +6434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181508"
+      ]
     }
   },
   {
     "term_id": "ar-324",
     "concept_id": "CID-324",
     "hierarchy_id": "11.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78181509",
     "language": "ar",
     "term": "خدمة فحص وصيانة عربات السكك الحديدية",
     "description": "",
@@ -5828,14 +6454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181509"
+      ]
     }
   },
   {
     "term_id": "ar-325",
     "concept_id": "CID-325",
     "hierarchy_id": "11.2",
-    "unspsc_code": "",
+    "unspsc_code": "78181600",
     "language": "ar",
     "term": "خدمات السمكرة والطلاء",
     "description": "",
@@ -5846,14 +6474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181600"
+      ]
     }
   },
   {
     "term_id": "ar-326",
     "concept_id": "CID-326",
     "hierarchy_id": "11.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181601",
     "language": "ar",
     "term": "خدمة إصلاح الصفائح المعدنية",
     "description": "",
@@ -5864,14 +6494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181601"
+      ]
     }
   },
   {
     "term_id": "ar-327",
     "concept_id": "CID-327",
     "hierarchy_id": "11.3",
-    "unspsc_code": "",
+    "unspsc_code": "78181700",
     "language": "ar",
     "term": "التزود بالوقود / التخزين / الدعم التشغيلي",
     "description": "",
@@ -5882,14 +6514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181700"
+      ]
     }
   },
   {
     "term_id": "ar-328",
     "concept_id": "CID-328",
     "hierarchy_id": "11.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181701",
     "language": "ar",
     "term": "خدمة تزويد المركبات بالوقود",
     "description": "",
@@ -5900,14 +6534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181701"
+      ]
     }
   },
   {
     "term_id": "ar-329",
     "concept_id": "CID-329",
     "hierarchy_id": "11.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78181702",
     "language": "ar",
     "term": "خدمة التخزين لعمليات النقل",
     "description": "",
@@ -5918,14 +6554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181702"
+      ]
     }
   },
   {
     "term_id": "ar-330",
     "concept_id": "CID-330",
     "hierarchy_id": "11.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78181703",
     "language": "ar",
     "term": "خدمة ركن المركبات",
     "description": "",
@@ -5936,14 +6574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181703"
+      ]
     }
   },
   {
     "term_id": "ar-331",
     "concept_id": "CID-331",
     "hierarchy_id": "11.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78181704",
     "language": "ar",
     "term": "خدمة بطاقة شحن الوقود / البطاقة المدفوعة مسبقاً للوقود",
     "description": "",
@@ -5954,14 +6594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181704"
+      ]
     }
   },
   {
     "term_id": "ar-332",
     "concept_id": "CID-332",
     "hierarchy_id": "11.4",
-    "unspsc_code": "",
+    "unspsc_code": "78181800",
     "language": "ar",
     "term": "صيانة وإصلاح الطائرات",
     "description": "",
@@ -5972,14 +6614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181800"
+      ]
     }
   },
   {
     "term_id": "ar-333",
     "concept_id": "CID-333",
     "hierarchy_id": "11.5",
-    "unspsc_code": "",
+    "unspsc_code": "78181900",
     "language": "ar",
     "term": "صيانة وإصلاح معدات الملاحة",
     "description": "",
@@ -5990,14 +6634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181900"
+      ]
     }
   },
   {
     "term_id": "ar-334",
     "concept_id": "CID-334",
     "hierarchy_id": "11.6",
-    "unspsc_code": "",
+    "unspsc_code": "78182000",
     "language": "ar",
     "term": "صيانة وإصلاح سفن النقل المائي",
     "description": "",
@@ -6008,14 +6654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78182000"
+      ]
     }
   },
   {
     "term_id": "ar-335",
     "concept_id": "CID-335",
     "hierarchy_id": "11.7",
-    "unspsc_code": "",
+    "unspsc_code": "80161505",
     "language": "ar",
     "term": "طبقة دعم إدارة الأسطول",
     "description": "",
@@ -6026,7 +6674,9 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161505"
+      ]
     }
   }
 ]

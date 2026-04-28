@@ -3,7 +3,7 @@
     "term_id": "it-1",
     "concept_id": "CID-1",
     "hierarchy_id": "1",
-    "unspsc_code": "",
+    "unspsc_code": "78100000",
     "language": "it",
     "term": "Trasporto e trasporto merci",
     "description": "Trasporto e trasporto merci",
@@ -14,14 +14,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78100000"
+      ]
     }
   },
   {
     "term_id": "it-2",
     "concept_id": "CID-2",
     "hierarchy_id": "1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101800",
     "language": "it",
     "term": "trasporto camion",
     "description": "trasporto su strada",
@@ -32,14 +34,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101800"
+      ]
     }
   },
   {
     "term_id": "it-3",
     "concept_id": "CID-3",
     "hierarchy_id": "1.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "it",
     "term": "Carico completo - FTL",
     "description": "Carico completo - FTL",
@@ -50,14 +54,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "it-4",
     "concept_id": "CID-4",
     "hierarchy_id": "1.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "it",
     "term": "Carico parziale - LTL",
     "description": "Carico parziale - LTL",
@@ -68,14 +74,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "it-5",
     "concept_id": "CID-5",
     "hierarchy_id": "1.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101801",
     "language": "it",
     "term": "Distribuzione locale / trasporto urbano",
     "description": "Distribuzione locale / trasporto urbano",
@@ -86,14 +94,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101801"
+      ]
     }
   },
   {
     "term_id": "it-6",
     "concept_id": "CID-6",
     "hierarchy_id": "1.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "it",
     "term": "Trasporto dedicato su contratto",
     "description": "Trasporto dedicato su contratto",
@@ -104,14 +114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "it-7",
     "concept_id": "CID-7",
     "hierarchy_id": "1.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101806",
     "language": "it",
     "term": "Trasporto merci stradale internazionale",
     "description": "Trasporto merci stradale internazionale",
@@ -122,14 +134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101806"
+      ]
     }
   },
   {
     "term_id": "it-8",
     "concept_id": "CID-8",
     "hierarchy_id": "1.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78101809",
     "language": "it",
     "term": "Servizi stradali per pacchi e ultimo miglio",
     "description": "Servizi stradali per pacchi e ultimo miglio",
@@ -140,14 +154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101809"
+      ]
     }
   },
   {
     "term_id": "it-9",
     "concept_id": "CID-9",
     "hierarchy_id": "1.1.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101809",
     "language": "it",
     "term": "Consegna dell'ultimo miglio",
     "description": "Consegna dell'ultimo miglio",
@@ -158,14 +174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101809"
+      ]
     }
   },
   {
     "term_id": "it-10",
     "concept_id": "CID-10",
     "hierarchy_id": "1.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "78101804",
     "language": "it",
     "term": "Traslochi domestici / servizi di trasloco",
     "description": "Traslochi domestici / servizi di trasloco",
@@ -176,14 +194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101804"
+      ]
     }
   },
   {
     "term_id": "it-11",
     "concept_id": "CID-11",
     "hierarchy_id": "1.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "78101808",
     "language": "it",
     "term": "Trasporto stradale di rinfuse secche",
     "description": "Trasporto stradale di rinfuse secche",
@@ -194,14 +214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101808"
+      ]
     }
   },
   {
     "term_id": "it-12",
     "concept_id": "CID-12",
     "hierarchy_id": "1.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "78101807",
     "language": "it",
     "term": "Trasporto con autocisterne",
     "description": "Trasporto con autocisterne",
@@ -212,14 +234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101807"
+      ]
     }
   },
   {
     "term_id": "it-13",
     "concept_id": "CID-13",
     "hierarchy_id": "1.1.10",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "it",
     "term": "Trasporto pesante / carichi fuori sagoma",
     "description": "Trasporto pesante / carichi fuori sagoma",
@@ -230,14 +254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "it-14",
     "concept_id": "CID-14",
     "hierarchy_id": "1.1.11",
-    "unspsc_code": "",
+    "unspsc_code": "78101803",
     "language": "it",
     "term": "Servizi di trasporto veicoli",
     "description": "Servizi di trasporto veicoli",
@@ -248,14 +274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101803"
+      ]
     }
   },
   {
     "term_id": "it-15",
     "concept_id": "CID-15",
     "hierarchy_id": "1.1.12",
-    "unspsc_code": "",
+    "unspsc_code": "78101810",
     "language": "it",
     "term": "Trasporto di bestiame",
     "description": "Trasporto di bestiame",
@@ -266,14 +294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101810"
+      ]
     }
   },
   {
     "term_id": "it-16",
     "concept_id": "CID-16",
     "hierarchy_id": "1.1.13",
-    "unspsc_code": "",
+    "unspsc_code": "78101807",
     "language": "it",
     "term": "Trasporto di materiali pericolosi - Hazmat",
     "description": "Trasporto di materiali pericolosi - Hazmat",
@@ -284,14 +314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101807"
+      ]
     }
   },
   {
     "term_id": "it-17",
     "concept_id": "CID-17",
     "hierarchy_id": "1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "it",
     "term": "trasporto marittimo",
     "description": "trasporto marittimo",
@@ -302,14 +334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "it-18",
     "concept_id": "CID-18",
     "hierarchy_id": "1.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "it",
     "term": "Trasporto container",
     "description": "Trasporto container",
@@ -320,14 +354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "it-19",
     "concept_id": "CID-19",
     "hierarchy_id": "1.2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "it",
     "term": "Carico completo del container - FCL",
     "description": "Carico completo del container - FCL",
@@ -338,14 +374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "it-20",
     "concept_id": "CID-20",
     "hierarchy_id": "1.2.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "it",
     "term": "Carico parziale del container - LCL",
     "description": "Carico parziale del container - LCL",
@@ -356,14 +394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "it-21",
     "concept_id": "CID-21",
     "hierarchy_id": "1.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "it",
     "term": "Trasporto marittimo di rinfuse secche",
     "description": "Trasporto marittimo di rinfuse secche",
@@ -374,14 +414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "it-22",
     "concept_id": "CID-22",
     "hierarchy_id": "1.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "it",
     "term": "Trasporto marittimo di rinfuse liquide",
     "description": "Trasporto marittimo di rinfuse liquide",
@@ -392,14 +434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "it-23",
     "concept_id": "CID-23",
     "hierarchy_id": "1.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "it",
     "term": "Trasporto Ro-Ro",
     "description": "Trasporto Ro-Ro",
@@ -410,14 +454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "it-24",
     "concept_id": "CID-24",
     "hierarchy_id": "1.2.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "it",
     "term": "Navigazione di linea",
     "description": "Navigazione di linea",
@@ -428,14 +474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "it-25",
     "concept_id": "CID-25",
     "hierarchy_id": "1.2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "it",
     "term": "Navigazione tramp",
     "description": "Navigazione tramp",
@@ -446,14 +494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "it-26",
     "concept_id": "CID-26",
     "hierarchy_id": "1.2.7",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "it",
     "term": "Trasporto marittimo a corto raggio - SSS",
     "description": "Trasporto marittimo a corto raggio - SSS",
@@ -464,14 +514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "it-27",
     "concept_id": "CID-27",
     "hierarchy_id": "1.2.8",
-    "unspsc_code": "",
+    "unspsc_code": "78101706",
     "language": "it",
     "term": "Logistica offshore",
     "description": "Logistica offshore",
@@ -482,14 +534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101706"
+      ]
     }
   },
   {
     "term_id": "it-28",
     "concept_id": "CID-28",
     "hierarchy_id": "1.2.9",
-    "unspsc_code": "",
+    "unspsc_code": "78141700",
     "language": "it",
     "term": "Servizi di navigazione e rimorchio",
     "description": "Servizi di navigazione e rimorchio",
@@ -500,14 +554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141700"
+      ]
     }
   },
   {
     "term_id": "it-29",
     "concept_id": "CID-29",
     "hierarchy_id": "1.2.9.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141701",
     "language": "it",
     "term": "Servizi di rimorchiatore",
     "description": "Servizi di rimorchiatore",
@@ -518,14 +574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141701"
+      ]
     }
   },
   {
     "term_id": "it-30",
     "concept_id": "CID-30",
     "hierarchy_id": "1.2.9.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141702",
     "language": "it",
     "term": "Operazioni di ponte levatoio",
     "description": "Operazioni di ponte levatoio",
@@ -536,14 +594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141702"
+      ]
     }
   },
   {
     "term_id": "it-31",
     "concept_id": "CID-31",
     "hierarchy_id": "1.2.9.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141703",
     "language": "it",
     "term": "Servizi marittimi di navigazione o comunicazione",
     "description": "Servizi marittimi di navigazione o comunicazione",
@@ -554,14 +614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141703"
+      ]
     }
   },
   {
     "term_id": "it-32",
     "concept_id": "CID-32",
     "hierarchy_id": "1.2.9.4",
-    "unspsc_code": "",
+    "unspsc_code": "78141704",
     "language": "it",
     "term": "Servizio dead man anchor",
     "description": "Servizio dead man anchor",
@@ -572,14 +634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141704"
+      ]
     }
   },
   {
     "term_id": "it-33",
     "concept_id": "CID-33",
     "hierarchy_id": "1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "it",
     "term": "Trasporto aereo merci",
     "description": "Trasporto aereo merci",
@@ -590,14 +654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "it-34",
     "concept_id": "CID-34",
     "hierarchy_id": "1.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "it",
     "term": "Servizi di trasporto aereo merci",
     "description": "Servizi di trasporto aereo merci",
@@ -608,14 +674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "it-35",
     "concept_id": "CID-35",
     "hierarchy_id": "1.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "it",
     "term": "Corriere aereo espresso",
     "description": "Corriere aereo espresso",
@@ -626,14 +694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "it-36",
     "concept_id": "CID-36",
     "hierarchy_id": "1.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "it",
     "term": "Trasporto aereo door-to-door",
     "description": "Trasporto aereo door-to-door",
@@ -644,14 +714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "it-37",
     "concept_id": "CID-37",
     "hierarchy_id": "1.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78141501",
     "language": "it",
     "term": "Consolidamento del carico aereo",
     "description": "Consolidamento del carico aereo",
@@ -662,14 +734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141501"
+      ]
     }
   },
   {
     "term_id": "it-38",
     "concept_id": "CID-38",
     "hierarchy_id": "1.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "it",
     "term": "Servizi charter per carico aereo",
     "description": "Servizi charter per carico aereo",
@@ -680,14 +754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "it-39",
     "concept_id": "CID-39",
     "hierarchy_id": "1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "it",
     "term": "Trasporto ferroviario merci",
     "description": "Trasporto ferroviario merci",
@@ -698,14 +774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "it-40",
     "concept_id": "CID-40",
     "hierarchy_id": "1.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "it",
     "term": "Trasporto ferroviario a carro singolo",
     "description": "Trasporto ferroviario a carro singolo",
@@ -716,14 +794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "it-41",
     "concept_id": "CID-41",
     "hierarchy_id": "1.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101900",
     "language": "it",
     "term": "Trasporto ferroviario intermodale",
     "description": "Trasporto ferroviario intermodale",
@@ -734,14 +814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101900"
+      ]
     }
   },
   {
     "term_id": "it-42",
     "concept_id": "CID-42",
     "hierarchy_id": "1.4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101905",
     "language": "it",
     "term": "Trasporto combinato strada-rotaia",
     "description": "Trasporto combinato strada-rotaia",
@@ -752,14 +834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101905"
+      ]
     }
   },
   {
     "term_id": "it-43",
     "concept_id": "CID-43",
     "hierarchy_id": "1.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "it",
     "term": "Cargo ferroviario ad alta velocità",
     "description": "Cargo ferroviario ad alta velocità",
@@ -770,14 +854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "it-44",
     "concept_id": "CID-44",
     "hierarchy_id": "1.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "it",
     "term": "Servizi di leasing di carri ferroviari",
     "description": "Servizi di leasing di carri ferroviari",
@@ -788,14 +874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "it-45",
     "concept_id": "CID-45",
     "hierarchy_id": "1.4.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101606",
     "language": "it",
     "term": "Noleggio di carri merci ferroviari",
     "description": "Noleggio di carri merci ferroviari",
@@ -806,14 +894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101606"
+      ]
     }
   },
   {
     "term_id": "it-46",
     "concept_id": "CID-46",
     "hierarchy_id": "1.4.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101605",
     "language": "it",
     "term": "Noleggio di carri cisterna ferroviari",
     "description": "Noleggio di carri cisterna ferroviari",
@@ -824,14 +914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101605"
+      ]
     }
   },
   {
     "term_id": "it-47",
     "concept_id": "CID-47",
     "hierarchy_id": "1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78102100",
     "language": "it",
     "term": "Trasporto via condotta",
     "description": "Trasporto via condotta",
@@ -842,14 +934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102100"
+      ]
     }
   },
   {
     "term_id": "it-48",
     "concept_id": "CID-48",
     "hierarchy_id": "1.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "78102101",
     "language": "it",
     "term": "Trasporto via condotta di prodotti petroliferi",
     "description": "Trasporto via condotta di prodotti petroliferi",
@@ -860,14 +954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102101"
+      ]
     }
   },
   {
     "term_id": "it-49",
     "concept_id": "CID-49",
     "hierarchy_id": "1.5.2",
-    "unspsc_code": "",
+    "unspsc_code": "78102102",
     "language": "it",
     "term": "Trasporto di acqua via condotta",
     "description": "Trasporto di acqua via condotta",
@@ -878,14 +974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102102"
+      ]
     }
   },
   {
     "term_id": "it-50",
     "concept_id": "CID-50",
     "hierarchy_id": "1.5.3",
-    "unspsc_code": "",
+    "unspsc_code": "83101604",
     "language": "it",
     "term": "Trasporto di gas naturale via condotta",
     "description": "Trasporto di gas naturale via condotta",
@@ -896,14 +994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:83101604"
+      ]
     }
   },
   {
     "term_id": "it-51",
     "concept_id": "CID-51",
     "hierarchy_id": "1.5.4",
-    "unspsc_code": "",
+    "unspsc_code": "78102100",
     "language": "it",
     "term": "Trasporto di sostanze chimiche via condotta",
     "description": "Trasporto di sostanze chimiche via condotta",
@@ -914,14 +1014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102100"
+      ]
     }
   },
   {
     "term_id": "it-52",
     "concept_id": "CID-52",
     "hierarchy_id": "1.5.5",
-    "unspsc_code": "",
+    "unspsc_code": "78102103",
     "language": "it",
     "term": "Ispezione interna in linea di condotte",
     "description": "Ispezione interna in linea di condotte",
@@ -932,14 +1034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102103"
+      ]
     }
   },
   {
     "term_id": "it-53",
     "concept_id": "CID-53",
     "hierarchy_id": "1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78101900",
     "language": "it",
     "term": "Trasporto merci intermodale e combinato",
     "description": "Trasporto merci intermodale e combinato",
@@ -950,14 +1054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101900"
+      ]
     }
   },
   {
     "term_id": "it-54",
     "concept_id": "CID-54",
     "hierarchy_id": "1.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101900",
     "language": "it",
     "term": "Trasporto intermodale di container",
     "description": "Trasporto intermodale di container",
@@ -968,14 +1074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101900"
+      ]
     }
   },
   {
     "term_id": "it-55",
     "concept_id": "CID-55",
     "hierarchy_id": "1.6.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101901",
     "language": "it",
     "term": "Trasporto aereo-mare",
     "description": "Trasporto aereo-mare",
@@ -986,14 +1094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101901"
+      ]
     }
   },
   {
     "term_id": "it-56",
     "concept_id": "CID-56",
     "hierarchy_id": "1.6.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101902",
     "language": "it",
     "term": "Trasporto mare-ferrovia",
     "description": "Trasporto mare-ferrovia",
@@ -1004,14 +1114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101902"
+      ]
     }
   },
   {
     "term_id": "it-57",
     "concept_id": "CID-57",
     "hierarchy_id": "1.6.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101903",
     "language": "it",
     "term": "Trasporto mare-camion",
     "description": "Trasporto mare-camion",
@@ -1022,14 +1134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101903"
+      ]
     }
   },
   {
     "term_id": "it-58",
     "concept_id": "CID-58",
     "hierarchy_id": "1.6.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101904",
     "language": "it",
     "term": "Trasporto aereo-camion",
     "description": "Trasporto aereo-camion",
@@ -1040,14 +1154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101904"
+      ]
     }
   },
   {
     "term_id": "it-59",
     "concept_id": "CID-59",
     "hierarchy_id": "1.7",
-    "unspsc_code": "",
+    "unspsc_code": "78102200",
     "language": "it",
     "term": "Servizi di corriere / posta",
     "description": "Servizi di corriere / posta",
@@ -1058,14 +1174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102200"
+      ]
     }
   },
   {
     "term_id": "it-60",
     "concept_id": "CID-60",
     "hierarchy_id": "1.7.1",
-    "unspsc_code": "",
+    "unspsc_code": "78102201",
     "language": "it",
     "term": "Servizi nazionali di consegna postale",
     "description": "Servizi nazionali di consegna postale",
@@ -1076,14 +1194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102201"
+      ]
     }
   },
   {
     "term_id": "it-61",
     "concept_id": "CID-61",
     "hierarchy_id": "1.7.2",
-    "unspsc_code": "",
+    "unspsc_code": "78102202",
     "language": "it",
     "term": "Servizi di casella postale",
     "description": "Servizi di casella postale",
@@ -1094,14 +1214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102202"
+      ]
     }
   },
   {
     "term_id": "it-62",
     "concept_id": "CID-62",
     "hierarchy_id": "1.7.3",
-    "unspsc_code": "",
+    "unspsc_code": "78102203",
     "language": "it",
     "term": "Servizi di spedizione postale / ritiro / consegna",
     "description": "Servizi di spedizione postale / ritiro / consegna",
@@ -1112,14 +1234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102203"
+      ]
     }
   },
   {
     "term_id": "it-63",
     "concept_id": "CID-63",
     "hierarchy_id": "1.7.4",
-    "unspsc_code": "",
+    "unspsc_code": "78102204",
     "language": "it",
     "term": "Servizi mondiali di consegna di lettere o piccoli pacchi",
     "description": "Servizi mondiali di consegna di lettere o piccoli pacchi",
@@ -1130,14 +1254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102204"
+      ]
     }
   },
   {
     "term_id": "it-64",
     "concept_id": "CID-64",
     "hierarchy_id": "1.7.5",
-    "unspsc_code": "",
+    "unspsc_code": "78102205",
     "language": "it",
     "term": "Servizi locali di consegna di lettere o piccoli pacchi",
     "description": "Servizi locali di consegna di lettere o piccoli pacchi",
@@ -1148,14 +1274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102205"
+      ]
     }
   },
   {
     "term_id": "it-65",
     "concept_id": "CID-65",
     "hierarchy_id": "1.7.6",
-    "unspsc_code": "",
+    "unspsc_code": "78102206",
     "language": "it",
     "term": "Servizi di corriere in bicicletta o scooter",
     "description": "Servizi di corriere in bicicletta o scooter",
@@ -1166,14 +1294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102206"
+      ]
     }
   },
   {
     "term_id": "it-66",
     "concept_id": "CID-66",
     "hierarchy_id": "2",
-    "unspsc_code": "",
+    "unspsc_code": "78170000",
     "language": "it",
     "term": "Servizi di supply chain e logistica",
     "description": "Servizi di supply chain e logistica",
@@ -1184,14 +1314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78170000"
+      ]
     }
   },
   {
     "term_id": "it-67",
     "concept_id": "CID-67",
     "hierarchy_id": "2.1",
-    "unspsc_code": "",
+    "unspsc_code": "80100000",
     "language": "it",
     "term": "Pianificazione e consulenza",
     "description": "Pianificazione e consulenza",
@@ -1202,14 +1334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80100000"
+      ]
     }
   },
   {
     "term_id": "it-68",
     "concept_id": "CID-68",
     "hierarchy_id": "2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "it",
     "term": "Consulenza sulla supply chain",
     "description": "Consulenza sulla supply chain",
@@ -1220,14 +1354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "it-69",
     "concept_id": "CID-69",
     "hierarchy_id": "2.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "it",
     "term": "Pianificazione della domanda e delle scorte",
     "description": "Pianificazione della domanda e delle scorte",
@@ -1238,14 +1374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "it-70",
     "concept_id": "CID-70",
     "hierarchy_id": "2.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "it",
     "term": "Ottimizzazione della rete",
     "description": "Ottimizzazione della rete",
@@ -1256,14 +1394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "it-71",
     "concept_id": "CID-71",
     "hierarchy_id": "2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "it",
     "term": "Servizi di organizzazione del trasporto",
     "description": "Servizi di organizzazione del trasporto",
@@ -1274,14 +1414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "it-72",
     "concept_id": "CID-72",
     "hierarchy_id": "2.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141501",
     "language": "it",
     "term": "Spedizione merci",
     "description": "Spedizione merci",
@@ -1292,14 +1434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141501"
+      ]
     }
   },
   {
     "term_id": "it-73",
     "concept_id": "CID-73",
     "hierarchy_id": "2.2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141501",
     "language": "it",
     "term": "Consolidamento carichi",
     "description": "Consolidamento carichi",
@@ -1310,14 +1454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141501"
+      ]
     }
   },
   {
     "term_id": "it-74",
     "concept_id": "CID-74",
     "hierarchy_id": "2.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "it",
     "term": "Logistica transfrontaliera",
     "description": "Logistica transfrontaliera",
@@ -1328,14 +1474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "it-75",
     "concept_id": "CID-75",
     "hierarchy_id": "2.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141510",
     "language": "it",
     "term": "Servizi di trasporto merci comprensivi di assicurazione",
     "description": "Servizi di trasporto merci comprensivi di assicurazione",
@@ -1346,14 +1494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141510"
+      ]
     }
   },
   {
     "term_id": "it-76",
     "concept_id": "CID-76",
     "hierarchy_id": "2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78130000",
     "language": "it",
     "term": "Magazzinaggio e distribuzione",
     "description": "Magazzinaggio e distribuzione",
@@ -1364,14 +1514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78130000"
+      ]
     }
   },
   {
     "term_id": "it-77",
     "concept_id": "CID-77",
     "hierarchy_id": "2.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131600",
     "language": "it",
     "term": "Magazzinaggio pubblico",
     "description": "Magazzinaggio pubblico",
@@ -1382,14 +1534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131600"
+      ]
     }
   },
   {
     "term_id": "it-78",
     "concept_id": "CID-78",
     "hierarchy_id": "2.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78131600",
     "language": "it",
     "term": "Magazzinaggio in conto contratto",
     "description": "Magazzinaggio in conto contratto",
@@ -1400,14 +1554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131600"
+      ]
     }
   },
   {
     "term_id": "it-79",
     "concept_id": "CID-79",
     "hierarchy_id": "2.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78131600",
     "language": "it",
     "term": "Gestione dei centri di distribuzione",
     "description": "Gestione dei centri di distribuzione",
@@ -1418,14 +1574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131600"
+      ]
     }
   },
   {
     "term_id": "it-80",
     "concept_id": "CID-80",
     "hierarchy_id": "2.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "it",
     "term": "Stoccaggio a temperatura controllata",
     "description": "Stoccaggio a temperatura controllata",
@@ -1436,14 +1594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "it-81",
     "concept_id": "CID-81",
     "hierarchy_id": "2.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78131802",
     "language": "it",
     "term": "Magazzinaggio doganale",
     "description": "Magazzinaggio doganale",
@@ -1454,14 +1614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131802"
+      ]
     }
   },
   {
     "term_id": "it-82",
     "concept_id": "CID-82",
     "hierarchy_id": "2.3.6",
-    "unspsc_code": "",
+    "unspsc_code": "78131800",
     "language": "it",
     "term": "Centri di fulfillment e-commerce",
     "description": "Centri di fulfillment e-commerce",
@@ -1472,14 +1634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131800"
+      ]
     }
   },
   {
     "term_id": "it-83",
     "concept_id": "CID-83",
     "hierarchy_id": "2.3.7",
-    "unspsc_code": "",
+    "unspsc_code": "80161602",
     "language": "it",
     "term": "Gestione delle scorte",
     "description": "Gestione delle scorte",
@@ -1490,14 +1654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161602"
+      ]
     }
   },
   {
     "term_id": "it-84",
     "concept_id": "CID-84",
     "hierarchy_id": "2.3.8",
-    "unspsc_code": "",
+    "unspsc_code": "78121601",
     "language": "it",
     "term": "Cross-docking",
     "description": "Cross-docking",
@@ -1508,14 +1674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121601"
+      ]
     }
   },
   {
     "term_id": "it-85",
     "concept_id": "CID-85",
     "hierarchy_id": "2.3.9",
-    "unspsc_code": "",
+    "unspsc_code": "78131700",
     "language": "it",
     "term": "Stoccaggio alla rinfusa",
     "description": "Stoccaggio alla rinfusa",
@@ -1526,14 +1694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131700"
+      ]
     }
   },
   {
     "term_id": "it-86",
     "concept_id": "CID-86",
     "hierarchy_id": "2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "it",
     "term": "Servizi logistici a valore aggiunto",
     "description": "Servizi logistici a valore aggiunto",
@@ -1544,14 +1714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "it-87",
     "concept_id": "CID-87",
     "hierarchy_id": "2.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "it",
     "term": "Prelievo e imballaggio",
     "description": "Prelievo e imballaggio",
@@ -1562,14 +1734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "it-88",
     "concept_id": "CID-88",
     "hierarchy_id": "2.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "it",
     "term": "Etichettatura e prezzatura",
     "description": "Etichettatura e prezzatura",
@@ -1580,14 +1754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "it-89",
     "concept_id": "CID-89",
     "hierarchy_id": "2.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "it",
     "term": "Kitting",
     "description": "Kitting",
@@ -1598,14 +1774,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "it-90",
     "concept_id": "CID-90",
     "hierarchy_id": "2.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "it",
     "term": "Serializzazione",
     "description": "Serializzazione",
@@ -1616,14 +1794,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "it-91",
     "concept_id": "CID-91",
     "hierarchy_id": "2.4.5",
-    "unspsc_code": "",
+    "unspsc_code": "78121500",
     "language": "it",
     "term": "Servizi di imballaggio",
     "description": "Servizi di imballaggio",
@@ -1634,14 +1814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121500"
+      ]
     }
   },
   {
     "term_id": "it-92",
     "concept_id": "CID-92",
     "hierarchy_id": "2.4.6",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "it",
     "term": "Servizi di movimentazione materiali",
     "description": "Servizi di movimentazione materiali",
@@ -1652,14 +1834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "it-93",
     "concept_id": "CID-93",
     "hierarchy_id": "2.5",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "it",
     "term": "Dogana e conformità commerciale",
     "description": "Dogana e conformità commerciale",
@@ -1670,14 +1854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "it-94",
     "concept_id": "CID-94",
     "hierarchy_id": "2.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141502",
     "language": "it",
     "term": "Servizi doganali",
     "description": "Servizi doganali",
@@ -1688,14 +1874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141502"
+      ]
     }
   },
   {
     "term_id": "it-95",
     "concept_id": "CID-95",
     "hierarchy_id": "2.5.2",
-    "unspsc_code": "",
+    "unspsc_code": "80101514",
     "language": "it",
     "term": "Conformità del commercio estero",
     "description": "Conformità del commercio estero",
@@ -1706,14 +1894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101514"
+      ]
     }
   },
   {
     "term_id": "it-96",
     "concept_id": "CID-96",
     "hierarchy_id": "2.5.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "it",
     "term": "Documentazione import/export",
     "description": "Documentazione import/export",
@@ -1724,14 +1914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "it-97",
     "concept_id": "CID-97",
     "hierarchy_id": "2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Modelli di fornitori di servizi logistici",
     "description": "Modelli di fornitori di servizi logistici",
@@ -1742,14 +1934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-98",
     "concept_id": "CID-98",
     "hierarchy_id": "2.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica di terza parte - 3PL",
     "description": "Logistica di terza parte - 3PL",
@@ -1760,14 +1954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-99",
     "concept_id": "CID-99",
     "hierarchy_id": "2.6.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica di quarta parte - 4PL",
     "description": "Logistica di quarta parte - 4PL",
@@ -1778,14 +1974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-100",
     "concept_id": "CID-100",
     "hierarchy_id": "2.7",
-    "unspsc_code": "",
+    "unspsc_code": "78141600",
     "language": "it",
     "term": "Servizi di ispezione e survey",
     "description": "Servizi di ispezione e survey",
@@ -1796,14 +1994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141600"
+      ]
     }
   },
   {
     "term_id": "it-101",
     "concept_id": "CID-101",
     "hierarchy_id": "2.7.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141601",
     "language": "it",
     "term": "Servizi di ispezione dell'imballaggio",
     "description": "Servizi di ispezione dell'imballaggio",
@@ -1814,14 +2014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141601"
+      ]
     }
   },
   {
     "term_id": "it-102",
     "concept_id": "CID-102",
     "hierarchy_id": "2.7.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141602",
     "language": "it",
     "term": "Servizi di cargo survey",
     "description": "Servizi di cargo survey",
@@ -1832,14 +2034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141602"
+      ]
     }
   },
   {
     "term_id": "it-103",
     "concept_id": "CID-103",
     "hierarchy_id": "2.7.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141603",
     "language": "it",
     "term": "Ispezioni di controllo dei parassiti",
     "description": "Ispezioni di controllo dei parassiti",
@@ -1850,14 +2054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141603"
+      ]
     }
   },
   {
     "term_id": "it-104",
     "concept_id": "CID-104",
     "hierarchy_id": "3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica specializzata",
     "description": "Logistica specializzata",
@@ -1868,14 +2074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-105",
     "concept_id": "CID-105",
     "hierarchy_id": "3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131800",
     "language": "it",
     "term": "Logistica a temperatura controllata",
     "description": "Logistica a temperatura controllata",
@@ -1886,14 +2094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131800"
+      ]
     }
   },
   {
     "term_id": "it-106",
     "concept_id": "CID-106",
     "hierarchy_id": "3.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "it",
     "term": "Logistica della catena del freddo",
     "description": "Logistica della catena del freddo",
@@ -1904,14 +2114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "it-107",
     "concept_id": "CID-107",
     "hierarchy_id": "3.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "it",
     "term": "Logistica farmaceutica",
     "description": "Logistica farmaceutica",
@@ -1922,14 +2134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "it-108",
     "concept_id": "CID-108",
     "hierarchy_id": "3.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "it",
     "term": "Logistica di merci deperibili",
     "description": "Logistica di merci deperibili",
@@ -1940,14 +2154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "it-109",
     "concept_id": "CID-109",
     "hierarchy_id": "3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "it",
     "term": "Logistica heavy lift e di progetto",
     "description": "Logistica heavy lift e di progetto",
@@ -1958,14 +2174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "it-110",
     "concept_id": "CID-110",
     "hierarchy_id": "3.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "it",
     "term": "Logistica del settore energetico",
     "description": "Logistica del settore energetico",
@@ -1976,14 +2194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "it-111",
     "concept_id": "CID-111",
     "hierarchy_id": "3.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "it",
     "term": "Logistica delle costruzioni",
     "description": "Logistica delle costruzioni",
@@ -1994,14 +2214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "it-112",
     "concept_id": "CID-112",
     "hierarchy_id": "3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica specifica di settore",
     "description": "Logistica specifica di settore",
@@ -2012,14 +2234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-113",
     "concept_id": "CID-113",
     "hierarchy_id": "3.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica automotive",
     "description": "Logistica automotive",
@@ -2030,14 +2254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-114",
     "concept_id": "CID-114",
     "hierarchy_id": "3.3.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131807",
     "language": "it",
     "term": "Logistica dei ricambi",
     "description": "Logistica dei ricambi",
@@ -2048,14 +2274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131807"
+      ]
     }
   },
   {
     "term_id": "it-115",
     "concept_id": "CID-115",
     "hierarchy_id": "3.3.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica dei veicoli finiti",
     "description": "Logistica dei veicoli finiti",
@@ -2066,14 +2294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-116",
     "concept_id": "CID-116",
     "hierarchy_id": "3.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica retail",
     "description": "Logistica retail",
@@ -2084,14 +2314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-117",
     "concept_id": "CID-117",
     "hierarchy_id": "3.3.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica fast fashion",
     "description": "Logistica fast fashion",
@@ -2102,14 +2334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-118",
     "concept_id": "CID-118",
     "hierarchy_id": "3.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica aerospaziale e della difesa",
     "description": "Logistica aerospaziale e della difesa",
@@ -2120,14 +2354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-119",
     "concept_id": "CID-119",
     "hierarchy_id": "3.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica high-tech ed elettronica",
     "description": "Logistica high-tech ed elettronica",
@@ -2138,14 +2374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-120",
     "concept_id": "CID-120",
     "hierarchy_id": "3.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica chimica",
     "description": "Logistica chimica",
@@ -2156,14 +2394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-121",
     "concept_id": "CID-121",
     "hierarchy_id": "3.3.6",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica oil and gas",
     "description": "Logistica oil and gas",
@@ -2174,14 +2414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-122",
     "concept_id": "CID-122",
     "hierarchy_id": "3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Altri servizi logistici specializzati",
     "description": "Altri servizi logistici specializzati",
@@ -2192,14 +2434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-123",
     "concept_id": "CID-123",
     "hierarchy_id": "3.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131803",
     "language": "it",
     "term": "Logistica di merci pericolose",
     "description": "Logistica di merci pericolose",
@@ -2210,14 +2454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131803"
+      ]
     }
   },
   {
     "term_id": "it-124",
     "concept_id": "CID-124",
     "hierarchy_id": "3.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica di animali vivi",
     "description": "Logistica di animali vivi",
@@ -2228,14 +2474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-125",
     "concept_id": "CID-125",
     "hierarchy_id": "3.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica di beni di alto valore e sicurezza",
     "description": "Logistica di beni di alto valore e sicurezza",
@@ -2246,14 +2494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-126",
     "concept_id": "CID-126",
     "hierarchy_id": "3.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica per arte e mostre",
     "description": "Logistica per arte e mostre",
@@ -2264,14 +2514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-127",
     "concept_id": "CID-127",
     "hierarchy_id": "3.4.5",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Logistica urbana",
     "description": "Logistica urbana",
@@ -2282,14 +2534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-128",
     "concept_id": "CID-128",
     "hierarchy_id": "3.4.6",
-    "unspsc_code": "",
+    "unspsc_code": "80161700",
     "language": "it",
     "term": "Logistica inversa",
     "description": "Logistica inversa",
@@ -2300,14 +2554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161700"
+      ]
     }
   },
   {
     "term_id": "it-129",
     "concept_id": "CID-129",
     "hierarchy_id": "3.4.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "80161700",
     "language": "it",
     "term": "Gestione dei resi",
     "description": "Gestione dei resi",
@@ -2318,14 +2574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161700"
+      ]
     }
   },
   {
     "term_id": "it-130",
     "concept_id": "CID-130",
     "hierarchy_id": "3.4.6.2",
-    "unspsc_code": "",
+    "unspsc_code": "80161700",
     "language": "it",
     "term": "Riparazione e ricondizionamento",
     "description": "Riparazione e ricondizionamento",
@@ -2336,14 +2594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161700"
+      ]
     }
   },
   {
     "term_id": "it-131",
     "concept_id": "CID-131",
     "hierarchy_id": "3.4.6.3",
-    "unspsc_code": "",
+    "unspsc_code": "80161703",
     "language": "it",
     "term": "Riciclo e recupero dei materiali",
     "description": "Riciclo e recupero dei materiali",
@@ -2354,14 +2614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161703"
+      ]
     }
   },
   {
     "term_id": "it-132",
     "concept_id": "CID-132",
     "hierarchy_id": "4",
-    "unspsc_code": "",
+    "unspsc_code": "78000000",
     "language": "it",
     "term": "Infrastruttura e attrezzature logistiche",
     "description": "Infrastruttura e attrezzature logistiche",
@@ -2372,14 +2634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78000000"
+      ]
     }
   },
   {
     "term_id": "it-133",
     "concept_id": "CID-133",
     "hierarchy_id": "4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141800",
     "language": "it",
     "term": "Terminal e porti",
     "description": "Terminal e porti",
@@ -2390,14 +2654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141800"
+      ]
     }
   },
   {
     "term_id": "it-134",
     "concept_id": "CID-134",
     "hierarchy_id": "4.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141800",
     "language": "it",
     "term": "Operazioni portuali",
     "description": "Operazioni portuali",
@@ -2408,14 +2674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141800"
+      ]
     }
   },
   {
     "term_id": "it-135",
     "concept_id": "CID-135",
     "hierarchy_id": "4.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141800",
     "language": "it",
     "term": "Operazioni portuali interne",
     "description": "Operazioni portuali interne",
@@ -2426,14 +2694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141800"
+      ]
     }
   },
   {
     "term_id": "it-136",
     "concept_id": "CID-136",
     "hierarchy_id": "4.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141804",
     "language": "it",
     "term": "Terminal merci ferroviari",
     "description": "Terminal merci ferroviari",
@@ -2444,14 +2714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141804"
+      ]
     }
   },
   {
     "term_id": "it-137",
     "concept_id": "CID-137",
     "hierarchy_id": "4.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78141805",
     "language": "it",
     "term": "Terminal cargo aerei",
     "description": "Terminal cargo aerei",
@@ -2462,14 +2734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141805"
+      ]
     }
   },
   {
     "term_id": "it-138",
     "concept_id": "CID-138",
     "hierarchy_id": "4.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78141806",
     "language": "it",
     "term": "Servizi di base costiera di supporto offshore",
     "description": "Servizi di base costiera di supporto offshore",
@@ -2480,14 +2754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141806"
+      ]
     }
   },
   {
     "term_id": "it-139",
     "concept_id": "CID-139",
     "hierarchy_id": "4.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78141807",
     "language": "it",
     "term": "Servizi di controllo del traffico aereo",
     "description": "Servizi di controllo del traffico aereo",
@@ -2498,14 +2774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141807"
+      ]
     }
   },
   {
     "term_id": "it-140",
     "concept_id": "CID-140",
     "hierarchy_id": "4.2",
-    "unspsc_code": "",
+    "unspsc_code": "80131500",
     "language": "it",
     "term": "Immobili logistici",
     "description": "Immobili logistici",
@@ -2516,14 +2794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80131500"
+      ]
     }
   },
   {
     "term_id": "it-141",
     "concept_id": "CID-141",
     "hierarchy_id": "4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "80131502",
     "language": "it",
     "term": "Parchi logistici e zone franche",
     "description": "Parchi logistici e zone franche",
@@ -2534,14 +2814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80131502"
+      ]
     }
   },
   {
     "term_id": "it-142",
     "concept_id": "CID-142",
     "hierarchy_id": "4.3",
-    "unspsc_code": "",
+    "unspsc_code": "24000000",
     "language": "it",
     "term": "Attrezzature logistiche",
     "description": "Attrezzature logistiche",
@@ -2552,14 +2834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24000000"
+      ]
     }
   },
   {
     "term_id": "it-143",
     "concept_id": "CID-143",
     "hierarchy_id": "4.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "24112800",
     "language": "it",
     "term": "Container per merci",
     "description": "Container per merci",
@@ -2570,14 +2854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24112800"
+      ]
     }
   },
   {
     "term_id": "it-144",
     "concept_id": "CID-144",
     "hierarchy_id": "4.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "25181701",
     "language": "it",
     "term": "Telai per container",
     "description": "Telai per container",
@@ -2588,14 +2874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25181701"
+      ]
     }
   },
   {
     "term_id": "it-145",
     "concept_id": "CID-145",
     "hierarchy_id": "4.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "24101600",
     "language": "it",
     "term": "Carrelli elevatori",
     "description": "Carrelli elevatori",
@@ -2606,14 +2894,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24101600"
+      ]
     }
   },
   {
     "term_id": "it-146",
     "concept_id": "CID-146",
     "hierarchy_id": "4.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "24102100",
     "language": "it",
     "term": "Attrezzature di magazzino",
     "description": "Attrezzature di magazzino",
@@ -2624,14 +2914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24102100"
+      ]
     }
   },
   {
     "term_id": "it-147",
     "concept_id": "CID-147",
     "hierarchy_id": "4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "it",
     "term": "Noleggio e leasing di asset logistici",
     "description": "Noleggio e leasing di asset logistici",
@@ -2642,14 +2934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "it-148",
     "concept_id": "CID-148",
     "hierarchy_id": "4.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141900",
     "language": "it",
     "term": "Servizi di noleggio di container di trasporto",
     "description": "Servizi di noleggio di container di trasporto",
@@ -2660,14 +2954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141900"
+      ]
     }
   },
   {
     "term_id": "it-149",
     "concept_id": "CID-149",
     "hierarchy_id": "4.4.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141903",
     "language": "it",
     "term": "Servizio di noleggio di container intermodali per merci",
     "description": "Servizio di noleggio di container intermodali per merci",
@@ -2678,14 +2974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141903"
+      ]
     }
   },
   {
     "term_id": "it-150",
     "concept_id": "CID-150",
     "hierarchy_id": "4.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78142000",
     "language": "it",
     "term": "Servizi di noleggio o leasing di mezzi di trasporto",
     "description": "Servizi di noleggio o leasing di mezzi di trasporto",
@@ -2696,14 +2994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142000"
+      ]
     }
   },
   {
     "term_id": "it-151",
     "concept_id": "CID-151",
     "hierarchy_id": "4.4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78142001",
     "language": "it",
     "term": "Noleggio di aeromobili cargo con operatore",
     "description": "Noleggio di aeromobili cargo con operatore",
@@ -2714,14 +3014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142001"
+      ]
     }
   },
   {
     "term_id": "it-152",
     "concept_id": "CID-152",
     "hierarchy_id": "4.4.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78142002",
     "language": "it",
     "term": "Noleggio di nave da carico per trasporto per vie d'acqua interne con operatore",
     "description": "Noleggio di nave da carico per trasporto per vie d'acqua interne con operatore",
@@ -2732,14 +3034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142002"
+      ]
     }
   },
   {
     "term_id": "it-153",
     "concept_id": "CID-153",
     "hierarchy_id": "4.4.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78142003",
     "language": "it",
     "term": "Noleggio di nave da carico per trasporto costiero e transoceanico con operatore",
     "description": "Noleggio di nave da carico per trasporto costiero e transoceanico con operatore",
@@ -2750,14 +3054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142003"
+      ]
     }
   },
   {
     "term_id": "it-154",
     "concept_id": "CID-154",
     "hierarchy_id": "4.4.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78142004",
     "language": "it",
     "term": "Noleggio di camion con operatore",
     "description": "Noleggio di camion con operatore",
@@ -2768,14 +3074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142004"
+      ]
     }
   },
   {
     "term_id": "it-155",
     "concept_id": "CID-155",
     "hierarchy_id": "5",
-    "unspsc_code": "",
+    "unspsc_code": "43000000",
     "language": "it",
     "term": "Tecnologia e digitalizzazione della logistica",
     "description": "Tecnologia e digitalizzazione della logistica",
@@ -2786,14 +3094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43000000"
+      ]
     }
   },
   {
     "term_id": "it-156",
     "concept_id": "CID-156",
     "hierarchy_id": "5.1",
-    "unspsc_code": "",
+    "unspsc_code": "43230000",
     "language": "it",
     "term": "soluzioni software",
     "description": "soluzioni software",
@@ -2804,14 +3114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43230000"
+      ]
     }
   },
   {
     "term_id": "it-157",
     "concept_id": "CID-157",
     "hierarchy_id": "5.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "43231506",
     "language": "it",
     "term": "Sistema di gestione del trasporto - TMS",
     "description": "Sistema di gestione del trasporto - TMS",
@@ -2822,14 +3134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231506"
+      ]
     }
   },
   {
     "term_id": "it-158",
     "concept_id": "CID-158",
     "hierarchy_id": "5.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "43231508",
     "language": "it",
     "term": "Sistema di gestione del magazzino - WMS",
     "description": "Sistema di gestione del magazzino - WMS",
@@ -2840,14 +3154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231508"
+      ]
     }
   },
   {
     "term_id": "it-159",
     "concept_id": "CID-159",
     "hierarchy_id": "5.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "43231506",
     "language": "it",
     "term": "Software per la gestione della supply chain",
     "description": "Software per la gestione della supply chain",
@@ -2858,14 +3174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231506"
+      ]
     }
   },
   {
     "term_id": "it-160",
     "concept_id": "CID-160",
     "hierarchy_id": "5.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "43232504",
     "language": "it",
     "term": "Software di pianificazione percorsi e gestione flotte",
     "description": "Software di pianificazione percorsi e gestione flotte",
@@ -2876,14 +3194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232504"
+      ]
     }
   },
   {
     "term_id": "it-161",
     "concept_id": "CID-161",
     "hierarchy_id": "5.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "43231515",
     "language": "it",
     "term": "Sistemi di track & trace",
     "description": "Sistemi di track & trace",
@@ -2894,14 +3214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231515"
+      ]
     }
   },
   {
     "term_id": "it-162",
     "concept_id": "CID-162",
     "hierarchy_id": "5.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "43232603",
     "language": "it",
     "term": "Sistema di gestione del piazzale - YMS",
     "description": "Sistema di gestione del piazzale - YMS",
@@ -2912,14 +3234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232603"
+      ]
     }
   },
   {
     "term_id": "it-163",
     "concept_id": "CID-163",
     "hierarchy_id": "5.2",
-    "unspsc_code": "",
+    "unspsc_code": "43230000",
     "language": "it",
     "term": "Piattaforme digitali e integrazione",
     "description": "Piattaforme digitali e integrazione",
@@ -2930,14 +3254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43230000"
+      ]
     }
   },
   {
     "term_id": "it-164",
     "concept_id": "CID-164",
     "hierarchy_id": "5.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "43233513",
     "language": "it",
     "term": "Piattaforme digitali di trasporto merci",
     "description": "Piattaforme digitali di trasporto merci",
@@ -2948,14 +3274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43233513"
+      ]
     }
   },
   {
     "term_id": "it-165",
     "concept_id": "CID-165",
     "hierarchy_id": "5.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "43232403",
     "language": "it",
     "term": "Soluzioni API e integrazione logistica",
     "description": "Soluzioni API e integrazione logistica",
@@ -2966,14 +3294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232403"
+      ]
     }
   },
   {
     "term_id": "it-166",
     "concept_id": "CID-166",
     "hierarchy_id": "5.3",
-    "unspsc_code": "",
+    "unspsc_code": "43000000",
     "language": "it",
     "term": "Tecnologie emergenti",
     "description": "Tecnologie emergenti",
@@ -2984,14 +3314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43000000"
+      ]
     }
   },
   {
     "term_id": "it-167",
     "concept_id": "CID-167",
     "hierarchy_id": "5.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "43232314",
     "language": "it",
     "term": "IA e analisi dei dati nella logistica",
     "description": "IA e analisi dei dati nella logistica",
@@ -3002,14 +3334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232314"
+      ]
     }
   },
   {
     "term_id": "it-168",
     "concept_id": "CID-168",
     "hierarchy_id": "5.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "43233513",
     "language": "it",
     "term": "Blockchain nella logistica",
     "description": "Blockchain nella logistica",
@@ -3020,14 +3354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43233513"
+      ]
     }
   },
   {
     "term_id": "it-169",
     "concept_id": "CID-169",
     "hierarchy_id": "5.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "43000000",
     "language": "it",
     "term": "Veicoli autonomi nella logistica",
     "description": "Veicoli autonomi nella logistica",
@@ -3038,14 +3374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43000000"
+      ]
     }
   },
   {
     "term_id": "it-170",
     "concept_id": "CID-170",
     "hierarchy_id": "6",
-    "unspsc_code": "",
+    "unspsc_code": "80000000",
     "language": "it",
     "term": "Servizi di supporto e aziendali",
     "description": "Servizi di supporto e aziendali",
@@ -3056,14 +3394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80000000"
+      ]
     }
   },
   {
     "term_id": "it-171",
     "concept_id": "CID-171",
     "hierarchy_id": "6.1",
-    "unspsc_code": "",
+    "unspsc_code": "80000000",
     "language": "it",
     "term": "Consulenza e formazione",
     "description": "Consulenza e formazione",
@@ -3074,14 +3414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80000000"
+      ]
     }
   },
   {
     "term_id": "it-172",
     "concept_id": "CID-172",
     "hierarchy_id": "6.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "it",
     "term": "Miglioramento dei processi logistici",
     "description": "Miglioramento dei processi logistici",
@@ -3092,14 +3434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "it-173",
     "concept_id": "CID-173",
     "hierarchy_id": "6.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "86101704",
     "language": "it",
     "term": "Formazione e certificazione logistica",
     "description": "Formazione e certificazione logistica",
@@ -3110,14 +3454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:86101704"
+      ]
     }
   },
   {
     "term_id": "it-174",
     "concept_id": "CID-174",
     "hierarchy_id": "6.2",
-    "unspsc_code": "",
+    "unspsc_code": "84000000",
     "language": "it",
     "term": "Servizi finanziari e assicurativi",
     "description": "Servizi finanziari e assicurativi",
@@ -3128,14 +3474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84000000"
+      ]
     }
   },
   {
     "term_id": "it-175",
     "concept_id": "CID-175",
     "hierarchy_id": "6.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "84131504",
     "language": "it",
     "term": "Assicurazione del carico",
     "description": "Assicurazione del carico",
@@ -3146,14 +3494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84131504"
+      ]
     }
   },
   {
     "term_id": "it-176",
     "concept_id": "CID-176",
     "hierarchy_id": "6.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "84131607",
     "language": "it",
     "term": "Assicurazione di responsabilità civile",
     "description": "Assicurazione di responsabilità civile",
@@ -3164,14 +3514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84131607"
+      ]
     }
   },
   {
     "term_id": "it-177",
     "concept_id": "CID-177",
     "hierarchy_id": "6.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "84131503",
     "language": "it",
     "term": "Assicurazione veicoli e flotte",
     "description": "Assicurazione veicoli e flotte",
@@ -3182,14 +3534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84131503"
+      ]
     }
   },
   {
     "term_id": "it-178",
     "concept_id": "CID-178",
     "hierarchy_id": "6.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "84121600",
     "language": "it",
     "term": "Finanza commerciale",
     "description": "Finanza commerciale",
@@ -3200,14 +3554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84121600"
+      ]
     }
   },
   {
     "term_id": "it-179",
     "concept_id": "CID-179",
     "hierarchy_id": "6.2.5",
-    "unspsc_code": "",
+    "unspsc_code": "84121600",
     "language": "it",
     "term": "Factoring",
     "description": "Factoring",
@@ -3218,14 +3574,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84121600"
+      ]
     }
   },
   {
     "term_id": "it-180",
     "concept_id": "CID-180",
     "hierarchy_id": "6.2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78141503",
     "language": "it",
     "term": "Pagamento e audit del trasporto merci",
     "description": "Pagamento e audit del trasporto merci",
@@ -3236,14 +3594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141503"
+      ]
     }
   },
   {
     "term_id": "it-181",
     "concept_id": "CID-181",
     "hierarchy_id": "6.3",
-    "unspsc_code": "",
+    "unspsc_code": "80120000",
     "language": "it",
     "term": "Servizi legali",
     "description": "Servizi legali",
@@ -3254,14 +3614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80120000"
+      ]
     }
   },
   {
     "term_id": "it-182",
     "concept_id": "CID-182",
     "hierarchy_id": "6.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "80121704",
     "language": "it",
     "term": "Diritto dei contratti di trasporto",
     "description": "Diritto dei contratti di trasporto",
@@ -3272,14 +3634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80121704"
+      ]
     }
   },
   {
     "term_id": "it-183",
     "concept_id": "CID-183",
     "hierarchy_id": "6.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "80121601",
     "language": "it",
     "term": "Diritto doganale e del commercio estero",
     "description": "Diritto doganale e del commercio estero",
@@ -3290,14 +3654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80121601"
+      ]
     }
   },
   {
     "term_id": "it-184",
     "concept_id": "CID-184",
     "hierarchy_id": "7",
-    "unspsc_code": "",
+    "unspsc_code": "77100000",
     "language": "it",
     "term": "Sostenibilità e logistica verde",
     "description": "Sostenibilità e logistica verde",
@@ -3308,14 +3674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77100000"
+      ]
     }
   },
   {
     "term_id": "it-185",
     "concept_id": "CID-185",
     "hierarchy_id": "7.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101500",
     "language": "it",
     "term": "Valutazione del carbonio e delle emissioni",
     "description": "Valutazione del carbonio e delle emissioni",
@@ -3326,14 +3694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101500"
+      ]
     }
   },
   {
     "term_id": "it-186",
     "concept_id": "CID-186",
     "hierarchy_id": "7.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101503",
     "language": "it",
     "term": "Calcolo dell'impronta di carbonio",
     "description": "Calcolo dell'impronta di carbonio",
@@ -3344,14 +3714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101503"
+      ]
     }
   },
   {
     "term_id": "it-187",
     "concept_id": "CID-187",
     "hierarchy_id": "7.2",
-    "unspsc_code": "",
+    "unspsc_code": "77101700",
     "language": "it",
     "term": "Soluzioni verdi",
     "description": "Soluzioni verdi",
@@ -3362,14 +3734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101700"
+      ]
     }
   },
   {
     "term_id": "it-188",
     "concept_id": "CID-188",
     "hierarchy_id": "7.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101704",
     "language": "it",
     "term": "Soluzioni di carburanti sostenibili",
     "description": "Soluzioni di carburanti sostenibili",
@@ -3380,14 +3754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101704"
+      ]
     }
   },
   {
     "term_id": "it-189",
     "concept_id": "CID-189",
     "hierarchy_id": "7.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "77101705",
     "language": "it",
     "term": "Consulenza per la logistica verde",
     "description": "Consulenza per la logistica verde",
@@ -3398,14 +3774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101705"
+      ]
     }
   },
   {
     "term_id": "it-190",
     "concept_id": "CID-190",
     "hierarchy_id": "7.3",
-    "unspsc_code": "",
+    "unspsc_code": "77101700",
     "language": "it",
     "term": "Imballaggi sostenibili e riduzione dei rifiuti",
     "description": "Imballaggi sostenibili e riduzione dei rifiuti",
@@ -3416,14 +3794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101700"
+      ]
     }
   },
   {
     "term_id": "it-191",
     "concept_id": "CID-191",
     "hierarchy_id": "7.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101704",
     "language": "it",
     "term": "Ottimizzazione dei rifiuti e degli imballaggi",
     "description": "Ottimizzazione dei rifiuti e degli imballaggi",
@@ -3434,14 +3814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101704"
+      ]
     }
   },
   {
     "term_id": "it-192",
     "concept_id": "CID-192",
     "hierarchy_id": "7.4",
-    "unspsc_code": "",
+    "unspsc_code": "77101600",
     "language": "it",
     "term": "Pianificazione ambientale e decarbonizzazione",
     "description": "Pianificazione ambientale e decarbonizzazione",
@@ -3452,14 +3834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101600"
+      ]
     }
   },
   {
     "term_id": "it-193",
     "concept_id": "CID-193",
     "hierarchy_id": "7.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101600",
     "language": "it",
     "term": "Roadmap di sostenibilità e pianificazione della transizione",
     "description": "Roadmap di sostenibilità e pianificazione della transizione",
@@ -3470,14 +3854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101600"
+      ]
     }
   },
   {
     "term_id": "it-194",
     "concept_id": "CID-194",
     "hierarchy_id": "7.5",
-    "unspsc_code": "",
+    "unspsc_code": "77101800",
     "language": "it",
     "term": "Audit ambientale",
     "description": "Audit ambientale",
@@ -3488,14 +3874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101800"
+      ]
     }
   },
   {
     "term_id": "it-195",
     "concept_id": "CID-195",
     "hierarchy_id": "7.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101800",
     "language": "it",
     "term": "Audit ambientale e revisione della conformità",
     "description": "Audit ambientale e revisione della conformità",
@@ -3506,14 +3894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101800"
+      ]
     }
   },
   {
     "term_id": "it-196",
     "concept_id": "CID-196",
     "hierarchy_id": "7.6",
-    "unspsc_code": "",
+    "unspsc_code": "77102000",
     "language": "it",
     "term": "Reporting e divulgazione ambientale",
     "description": "Reporting e divulgazione ambientale",
@@ -3524,14 +3914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77102000"
+      ]
     }
   },
   {
     "term_id": "it-197",
     "concept_id": "CID-197",
     "hierarchy_id": "7.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "77102000",
     "language": "it",
     "term": "Rendicontazione emissioni / sostenibilità",
     "description": "Rendicontazione emissioni / sostenibilità",
@@ -3542,14 +3934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77102000"
+      ]
     }
   },
   {
     "term_id": "it-198",
     "concept_id": "CID-198",
     "hierarchy_id": "8",
-    "unspsc_code": "",
+    "unspsc_code": "78110000",
     "language": "it",
     "term": "Servizi di trasporto passeggeri e mobilità",
     "description": "Servizi di trasporto passeggeri e mobilità",
@@ -3560,14 +3954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78110000"
+      ]
     }
   },
   {
     "term_id": "it-199",
     "concept_id": "CID-199",
     "hierarchy_id": "8.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111500",
     "language": "it",
     "term": "Trasporto aereo passeggeri",
     "description": "Trasporto aereo passeggeri",
@@ -3578,14 +3974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111500"
+      ]
     }
   },
   {
     "term_id": "it-200",
     "concept_id": "CID-200",
     "hierarchy_id": "8.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111501",
     "language": "it",
     "term": "Servizi di elicottero",
     "description": "Servizi di elicottero",
@@ -3596,14 +3994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111501"
+      ]
     }
   },
   {
     "term_id": "it-201",
     "concept_id": "CID-201",
     "hierarchy_id": "8.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111502",
     "language": "it",
     "term": "Viaggio aereo commerciale",
     "description": "Viaggio aereo commerciale",
@@ -3614,14 +4014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111502"
+      ]
     }
   },
   {
     "term_id": "it-202",
     "concept_id": "CID-202",
     "hierarchy_id": "8.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111503",
     "language": "it",
     "term": "Viaggio in aereo charter",
     "description": "Viaggio in aereo charter",
@@ -3632,14 +4034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111503"
+      ]
     }
   },
   {
     "term_id": "it-203",
     "concept_id": "CID-203",
     "hierarchy_id": "8.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111504",
     "language": "it",
     "term": "Servizio di visita panoramica aerea",
     "description": "Servizio di visita panoramica aerea",
@@ -3650,14 +4054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111504"
+      ]
     }
   },
   {
     "term_id": "it-204",
     "concept_id": "CID-204",
     "hierarchy_id": "8.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111505",
     "language": "it",
     "term": "Servizio di noleggio o leasing di aeromobili passeggeri",
     "description": "Servizio di noleggio o leasing di aeromobili passeggeri",
@@ -3668,14 +4074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111505"
+      ]
     }
   },
   {
     "term_id": "it-205",
     "concept_id": "CID-205",
     "hierarchy_id": "8.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111506",
     "language": "it",
     "term": "Evacuazione medica con aeroambulanza",
     "description": "Evacuazione medica con aeroambulanza",
@@ -3686,14 +4094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111506"
+      ]
     }
   },
   {
     "term_id": "it-206",
     "concept_id": "CID-206",
     "hierarchy_id": "8.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111600",
     "language": "it",
     "term": "Trasporto ferroviario passeggeri",
     "description": "Trasporto ferroviario passeggeri",
@@ -3704,14 +4114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111600"
+      ]
     }
   },
   {
     "term_id": "it-207",
     "concept_id": "CID-207",
     "hierarchy_id": "8.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111601",
     "language": "it",
     "term": "Servizi di trasporto con metropolitana leggera",
     "description": "Servizi di trasporto con metropolitana leggera",
@@ -3722,14 +4134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111601"
+      ]
     }
   },
   {
     "term_id": "it-208",
     "concept_id": "CID-208",
     "hierarchy_id": "8.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111602",
     "language": "it",
     "term": "Trasporto metropolitano",
     "description": "Trasporto metropolitano",
@@ -3740,14 +4154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111602"
+      ]
     }
   },
   {
     "term_id": "it-209",
     "concept_id": "CID-209",
     "hierarchy_id": "8.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111603",
     "language": "it",
     "term": "Servizi ferroviari continentali / intercontinentali",
     "description": "Servizi ferroviari continentali / intercontinentali",
@@ -3758,14 +4174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111603"
+      ]
     }
   },
   {
     "term_id": "it-210",
     "concept_id": "CID-210",
     "hierarchy_id": "8.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111700",
     "language": "it",
     "term": "Trasporto marittimo passeggeri",
     "description": "Trasporto marittimo passeggeri",
@@ -3776,14 +4194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111700"
+      ]
     }
   },
   {
     "term_id": "it-211",
     "concept_id": "CID-211",
     "hierarchy_id": "8.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111701",
     "language": "it",
     "term": "Taxi acquei",
     "description": "Taxi acquei",
@@ -3794,14 +4214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111701"
+      ]
     }
   },
   {
     "term_id": "it-212",
     "concept_id": "CID-212",
     "hierarchy_id": "8.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111702",
     "language": "it",
     "term": "Crociere con pernottamento",
     "description": "Crociere con pernottamento",
@@ -3812,14 +4234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111702"
+      ]
     }
   },
   {
     "term_id": "it-213",
     "concept_id": "CID-213",
     "hierarchy_id": "8.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111703",
     "language": "it",
     "term": "Escursioni turistiche in barca",
     "description": "Escursioni turistiche in barca",
@@ -3830,14 +4254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111703"
+      ]
     }
   },
   {
     "term_id": "it-214",
     "concept_id": "CID-214",
     "hierarchy_id": "8.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111704",
     "language": "it",
     "term": "Servizio di noleggio o leasing di imbarcazioni",
     "description": "Servizio di noleggio o leasing di imbarcazioni",
@@ -3848,14 +4274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111704"
+      ]
     }
   },
   {
     "term_id": "it-215",
     "concept_id": "CID-215",
     "hierarchy_id": "8.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111705",
     "language": "it",
     "term": "Servizio di trasporto del personale verso piattaforme offshore",
     "description": "Servizio di trasporto del personale verso piattaforme offshore",
@@ -3866,14 +4294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111705"
+      ]
     }
   },
   {
     "term_id": "it-216",
     "concept_id": "CID-216",
     "hierarchy_id": "8.3.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111706",
     "language": "it",
     "term": "Traghetto passeggeri costiero e transoceanico",
     "description": "Traghetto passeggeri costiero e transoceanico",
@@ -3884,14 +4314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111706"
+      ]
     }
   },
   {
     "term_id": "it-217",
     "concept_id": "CID-217",
     "hierarchy_id": "8.3.7",
-    "unspsc_code": "",
+    "unspsc_code": "78111707",
     "language": "it",
     "term": "Traghetto passeggeri per vie d'acqua interne",
     "description": "Traghetto passeggeri per vie d'acqua interne",
@@ -3902,14 +4334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111707"
+      ]
     }
   },
   {
     "term_id": "it-218",
     "concept_id": "CID-218",
     "hierarchy_id": "8.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111800",
     "language": "it",
     "term": "Trasporto stradale passeggeri",
     "description": "Trasporto stradale passeggeri",
@@ -3920,14 +4354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111800"
+      ]
     }
   },
   {
     "term_id": "it-219",
     "concept_id": "CID-219",
     "hierarchy_id": "8.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111802",
     "language": "it",
     "term": "Servizi di autobus di linea",
     "description": "Servizi di autobus di linea",
@@ -3938,14 +4374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111802"
+      ]
     }
   },
   {
     "term_id": "it-220",
     "concept_id": "CID-220",
     "hierarchy_id": "8.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111803",
     "language": "it",
     "term": "Servizi di autobus charter",
     "description": "Servizi di autobus charter",
@@ -3956,14 +4394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111803"
+      ]
     }
   },
   {
     "term_id": "it-221",
     "concept_id": "CID-221",
     "hierarchy_id": "8.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111804",
     "language": "it",
     "term": "Servizi taxi",
     "description": "Servizi taxi",
@@ -3974,14 +4414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111804"
+      ]
     }
   },
   {
     "term_id": "it-222",
     "concept_id": "CID-222",
     "hierarchy_id": "8.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111807",
     "language": "it",
     "term": "Tariffe di parcheggio",
     "description": "Tariffe di parcheggio",
@@ -3992,14 +4434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111807"
+      ]
     }
   },
   {
     "term_id": "it-223",
     "concept_id": "CID-223",
     "hierarchy_id": "8.4.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111808",
     "language": "it",
     "term": "Noleggio veicoli",
     "description": "Noleggio veicoli",
@@ -4010,14 +4454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111808"
+      ]
     }
   },
   {
     "term_id": "it-224",
     "concept_id": "CID-224",
     "hierarchy_id": "8.4.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111809",
     "language": "it",
     "term": "Leasing di berline / coupé / station wagon",
     "description": "Leasing di berline / coupé / station wagon",
@@ -4028,14 +4474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111809"
+      ]
     }
   },
   {
     "term_id": "it-225",
     "concept_id": "CID-225",
     "hierarchy_id": "8.4.7",
-    "unspsc_code": "",
+    "unspsc_code": "78111810",
     "language": "it",
     "term": "Servizio limousine o auto con autista",
     "description": "Servizio limousine o auto con autista",
@@ -4046,14 +4494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111810"
+      ]
     }
   },
   {
     "term_id": "it-226",
     "concept_id": "CID-226",
     "hierarchy_id": "8.4.8",
-    "unspsc_code": "",
+    "unspsc_code": "78111811",
     "language": "it",
     "term": "Leasing di autocarri leggeri / SUV",
     "description": "Leasing di autocarri leggeri / SUV",
@@ -4064,14 +4514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111811"
+      ]
     }
   },
   {
     "term_id": "it-227",
     "concept_id": "CID-227",
     "hierarchy_id": "8.4.9",
-    "unspsc_code": "",
+    "unspsc_code": "78111812",
     "language": "it",
     "term": "Leasing di van passeggeri / minivan",
     "description": "Leasing di van passeggeri / minivan",
@@ -4082,14 +4534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111812"
+      ]
     }
   },
   {
     "term_id": "it-228",
     "concept_id": "CID-228",
     "hierarchy_id": "8.4.10",
-    "unspsc_code": "",
+    "unspsc_code": "78111813",
     "language": "it",
     "term": "Servizio di visita panoramica via terra",
     "description": "Servizio di visita panoramica via terra",
@@ -4100,14 +4554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111813"
+      ]
     }
   },
   {
     "term_id": "it-229",
     "concept_id": "CID-229",
     "hierarchy_id": "8.4.11",
-    "unspsc_code": "",
+    "unspsc_code": "78111815",
     "language": "it",
     "term": "Evacuazione medica in ambulanza",
     "description": "Evacuazione medica in ambulanza",
@@ -4118,14 +4574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111815"
+      ]
     }
   },
   {
     "term_id": "it-230",
     "concept_id": "CID-230",
     "hierarchy_id": "8.5",
-    "unspsc_code": "",
+    "unspsc_code": "78112000",
     "language": "it",
     "term": "Servizi di trasporto passeggeri intermodale",
     "description": "Servizi di trasporto passeggeri intermodale",
@@ -4136,14 +4594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78112000"
+      ]
     }
   },
   {
     "term_id": "it-231",
     "concept_id": "CID-231",
     "hierarchy_id": "8.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "78112001",
     "language": "it",
     "term": "Trasporto urbano e suburbano multimodale per passeggeri",
     "description": "Trasporto urbano e suburbano multimodale per passeggeri",
@@ -4154,14 +4614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78112001"
+      ]
     }
   },
   {
     "term_id": "it-232",
     "concept_id": "CID-232",
     "hierarchy_id": "8.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111900",
     "language": "it",
     "term": "Trasporto spaziale passeggeri",
     "description": "Trasporto spaziale passeggeri",
@@ -4172,14 +4634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111900"
+      ]
     }
   },
   {
     "term_id": "it-233",
     "concept_id": "CID-233",
     "hierarchy_id": "9",
-    "unspsc_code": "",
+    "unspsc_code": "25000000",
     "language": "it",
     "term": "Asset di trasporto, veicoli e mezzi",
     "description": "Asset di trasporto, veicoli e mezzi",
@@ -4190,14 +4654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25000000"
+      ]
     }
   },
   {
     "term_id": "it-234",
     "concept_id": "CID-234",
     "hierarchy_id": "9.1",
-    "unspsc_code": "",
+    "unspsc_code": "25100000",
     "language": "it",
     "term": "Veicoli a motore",
     "description": "Veicoli a motore",
@@ -4208,14 +4674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25100000"
+      ]
     }
   },
   {
     "term_id": "it-235",
     "concept_id": "CID-235",
     "hierarchy_id": "9.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25101500",
     "language": "it",
     "term": "Veicoli a motore per il trasporto passeggeri",
     "description": "Veicoli a motore per il trasporto passeggeri",
@@ -4226,14 +4694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101500"
+      ]
     }
   },
   {
     "term_id": "it-236",
     "concept_id": "CID-236",
     "hierarchy_id": "9.1.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25101501",
     "language": "it",
     "term": "Minibus",
     "description": "Minibus",
@@ -4244,14 +4714,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101501"
+      ]
     }
   },
   {
     "term_id": "it-237",
     "concept_id": "CID-237",
     "hierarchy_id": "9.1.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25101502",
     "language": "it",
     "term": "Autobus",
     "description": "Autobus",
@@ -4262,14 +4734,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101502"
+      ]
     }
   },
   {
     "term_id": "it-238",
     "concept_id": "CID-238",
     "hierarchy_id": "9.1.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "25101503",
     "language": "it",
     "term": "Automobili / Auto",
     "description": "Automobili / Auto",
@@ -4280,14 +4754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101503"
+      ]
     }
   },
   {
     "term_id": "it-239",
     "concept_id": "CID-239",
     "hierarchy_id": "9.1.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "25101504",
     "language": "it",
     "term": "Station wagon",
     "description": "Station wagon",
@@ -4298,14 +4774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101504"
+      ]
     }
   },
   {
     "term_id": "it-240",
     "concept_id": "CID-240",
     "hierarchy_id": "9.1.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "25101505",
     "language": "it",
     "term": "Minivan o van",
     "description": "Minivan o van",
@@ -4316,14 +4794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101505"
+      ]
     }
   },
   {
     "term_id": "it-241",
     "concept_id": "CID-241",
     "hierarchy_id": "9.1.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "25101506",
     "language": "it",
     "term": "Limousine",
     "description": "Limousine",
@@ -4334,14 +4814,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101506"
+      ]
     }
   },
   {
     "term_id": "it-242",
     "concept_id": "CID-242",
     "hierarchy_id": "9.1.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "25101507",
     "language": "it",
     "term": "Autocarri leggeri o SUV",
     "description": "Autocarri leggeri o SUV",
@@ -4352,14 +4834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101507"
+      ]
     }
   },
   {
     "term_id": "it-243",
     "concept_id": "CID-243",
     "hierarchy_id": "9.1.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "25101509",
     "language": "it",
     "term": "Veicoli a propulsione elettrica",
     "description": "Veicoli a propulsione elettrica",
@@ -4370,14 +4854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101509"
+      ]
     }
   },
   {
     "term_id": "it-244",
     "concept_id": "CID-244",
     "hierarchy_id": "9.1.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "25101510",
     "language": "it",
     "term": "Veicoli blindati",
     "description": "Veicoli blindati",
@@ -4388,14 +4874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101510"
+      ]
     }
   },
   {
     "term_id": "it-245",
     "concept_id": "CID-245",
     "hierarchy_id": "9.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25101800",
     "language": "it",
     "term": "Veicoli a due ruote motorizzati",
     "description": "Veicoli a due ruote motorizzati",
@@ -4406,14 +4894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101800"
+      ]
     }
   },
   {
     "term_id": "it-246",
     "concept_id": "CID-246",
     "hierarchy_id": "9.1.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25101801",
     "language": "it",
     "term": "Motocicli",
     "description": "Motocicli",
@@ -4424,14 +4914,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101801"
+      ]
     }
   },
   {
     "term_id": "it-247",
     "concept_id": "CID-247",
     "hierarchy_id": "9.1.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25101802",
     "language": "it",
     "term": "Scooter",
     "description": "Scooter",
@@ -4442,14 +4934,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101802"
+      ]
     }
   },
   {
     "term_id": "it-248",
     "concept_id": "CID-248",
     "hierarchy_id": "9.1.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "25101803",
     "language": "it",
     "term": "Ciclomotori",
     "description": "Ciclomotori",
@@ -4460,14 +4954,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101803"
+      ]
     }
   },
   {
     "term_id": "it-249",
     "concept_id": "CID-249",
     "hierarchy_id": "9.2",
-    "unspsc_code": "",
+    "unspsc_code": "25110000",
     "language": "it",
     "term": "imbarcazioni marittime",
     "description": "imbarcazioni marittime",
@@ -4478,14 +4974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25110000"
+      ]
     }
   },
   {
     "term_id": "it-250",
     "concept_id": "CID-250",
     "hierarchy_id": "9.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25111500",
     "language": "it",
     "term": "Imbarcazioni marittime commerciali",
     "description": "Imbarcazioni marittime commerciali",
@@ -4496,14 +4994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111500"
+      ]
     }
   },
   {
     "term_id": "it-251",
     "concept_id": "CID-251",
     "hierarchy_id": "9.2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25111503",
     "language": "it",
     "term": "Navi cargo o portacontainer",
     "description": "Navi cargo o portacontainer",
@@ -4514,14 +5014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111503"
+      ]
     }
   },
   {
     "term_id": "it-252",
     "concept_id": "CID-252",
     "hierarchy_id": "9.2.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25111505",
     "language": "it",
     "term": "Navi cisterna",
     "description": "Navi cisterna",
@@ -4532,14 +5034,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111505"
+      ]
     }
   },
   {
     "term_id": "it-253",
     "concept_id": "CID-253",
     "hierarchy_id": "9.2.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "25111506",
     "language": "it",
     "term": "Rimorchiatori",
     "description": "Rimorchiatori",
@@ -4550,14 +5054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111506"
+      ]
     }
   },
   {
     "term_id": "it-254",
     "concept_id": "CID-254",
     "hierarchy_id": "9.2.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "25111507",
     "language": "it",
     "term": "Chiatte",
     "description": "Chiatte",
@@ -4568,14 +5074,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111507"
+      ]
     }
   },
   {
     "term_id": "it-255",
     "concept_id": "CID-255",
     "hierarchy_id": "9.2.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "25111508",
     "language": "it",
     "term": "Traghetti passeggeri o per automobili",
     "description": "Traghetti passeggeri o per automobili",
@@ -4586,14 +5094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111508"
+      ]
     }
   },
   {
     "term_id": "it-256",
     "concept_id": "CID-256",
     "hierarchy_id": "9.2.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "25111509",
     "language": "it",
     "term": "Navi da crociera",
     "description": "Navi da crociera",
@@ -4604,14 +5114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111509"
+      ]
     }
   },
   {
     "term_id": "it-257",
     "concept_id": "CID-257",
     "hierarchy_id": "9.2.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "25111511",
     "language": "it",
     "term": "Imbarcazioni per equipaggio per petrolio o gas",
     "description": "Imbarcazioni per equipaggio per petrolio o gas",
@@ -4622,14 +5134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111511"
+      ]
     }
   },
   {
     "term_id": "it-258",
     "concept_id": "CID-258",
     "hierarchy_id": "9.2.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "25111512",
     "language": "it",
     "term": "Imbarcazioni di lavoro per petrolio o gas",
     "description": "Imbarcazioni di lavoro per petrolio o gas",
@@ -4640,14 +5154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111512"
+      ]
     }
   },
   {
     "term_id": "it-259",
     "concept_id": "CID-259",
     "hierarchy_id": "9.2.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "25111513",
     "language": "it",
     "term": "Navi sismiche",
     "description": "Navi sismiche",
@@ -4658,14 +5174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111513"
+      ]
     }
   },
   {
     "term_id": "it-260",
     "concept_id": "CID-260",
     "hierarchy_id": "9.2.1.10",
-    "unspsc_code": "",
+    "unspsc_code": "25111514",
     "language": "it",
     "term": "Rompighiaccio",
     "description": "Rompighiaccio",
@@ -4676,14 +5194,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111514"
+      ]
     }
   },
   {
     "term_id": "it-261",
     "concept_id": "CID-261",
     "hierarchy_id": "9.2.1.11",
-    "unspsc_code": "",
+    "unspsc_code": "25111515",
     "language": "it",
     "term": "Gasiere per gas liquefatto",
     "description": "Gasiere per gas liquefatto",
@@ -4694,14 +5214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111515"
+      ]
     }
   },
   {
     "term_id": "it-262",
     "concept_id": "CID-262",
     "hierarchy_id": "9.2.1.12",
-    "unspsc_code": "",
+    "unspsc_code": "25111522",
     "language": "it",
     "term": "Navi cisterna chimiche",
     "description": "Navi cisterna chimiche",
@@ -4712,14 +5234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111522"
+      ]
     }
   },
   {
     "term_id": "it-263",
     "concept_id": "CID-263",
     "hierarchy_id": "9.2.1.13",
-    "unspsc_code": "",
+    "unspsc_code": "25111524",
     "language": "it",
     "term": "Navi portarinfuse",
     "description": "Navi portarinfuse",
@@ -4730,14 +5254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111524"
+      ]
     }
   },
   {
     "term_id": "it-264",
     "concept_id": "CID-264",
     "hierarchy_id": "9.2.1.14",
-    "unspsc_code": "",
+    "unspsc_code": "25111525",
     "language": "it",
     "term": "Navi porta-auto / RoRo",
     "description": "Navi porta-auto / RoRo",
@@ -4748,14 +5274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111525"
+      ]
     }
   },
   {
     "term_id": "it-265",
     "concept_id": "CID-265",
     "hierarchy_id": "9.2.1.15",
-    "unspsc_code": "",
+    "unspsc_code": "25111530",
     "language": "it",
     "term": "Pilotine",
     "description": "Pilotine",
@@ -4766,14 +5294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111530"
+      ]
     }
   },
   {
     "term_id": "it-266",
     "concept_id": "CID-266",
     "hierarchy_id": "9.2.1.16",
-    "unspsc_code": "",
+    "unspsc_code": "25111534",
     "language": "it",
     "term": "Navi da ricerca",
     "description": "Navi da ricerca",
@@ -4784,14 +5314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111534"
+      ]
     }
   },
   {
     "term_id": "it-267",
     "concept_id": "CID-267",
     "hierarchy_id": "9.2.1.17",
-    "unspsc_code": "",
+    "unspsc_code": "25111535",
     "language": "it",
     "term": "Navi posacavi",
     "description": "Navi posacavi",
@@ -4802,14 +5334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111535"
+      ]
     }
   },
   {
     "term_id": "it-268",
     "concept_id": "CID-268",
     "hierarchy_id": "9.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25111800",
     "language": "it",
     "term": "Imbarcazioni da diporto",
     "description": "Imbarcazioni da diporto",
@@ -4820,14 +5354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111800"
+      ]
     }
   },
   {
     "term_id": "it-269",
     "concept_id": "CID-269",
     "hierarchy_id": "9.2.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25111807",
     "language": "it",
     "term": "Dinghy",
     "description": "Dinghy",
@@ -4838,14 +5374,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111807"
+      ]
     }
   },
   {
     "term_id": "it-270",
     "concept_id": "CID-270",
     "hierarchy_id": "9.2.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25111808",
     "language": "it",
     "term": "Yacht",
     "description": "Yacht",
@@ -4856,14 +5394,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111808"
+      ]
     }
   },
   {
     "term_id": "it-271",
     "concept_id": "CID-271",
     "hierarchy_id": "9.2.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "25111809",
     "language": "it",
     "term": "Skiff",
     "description": "Skiff",
@@ -4874,14 +5414,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111809"
+      ]
     }
   },
   {
     "term_id": "it-272",
     "concept_id": "CID-272",
     "hierarchy_id": "9.3",
-    "unspsc_code": "",
+    "unspsc_code": "25120000",
     "language": "it",
     "term": "Macchinari e attrezzature ferroviarie e tranviarie",
     "description": "Macchinari e attrezzature ferroviarie e tranviarie",
@@ -4892,14 +5434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25120000"
+      ]
     }
   },
   {
     "term_id": "it-273",
     "concept_id": "CID-273",
     "hierarchy_id": "9.4",
-    "unspsc_code": "",
+    "unspsc_code": "25130000",
     "language": "it",
     "term": "Aeromobili",
     "description": "Aeromobili",
@@ -4910,14 +5454,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25130000"
+      ]
     }
   },
   {
     "term_id": "it-274",
     "concept_id": "CID-274",
     "hierarchy_id": "9.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131500",
     "language": "it",
     "term": "Aeromobili ad ala fissa motorizzati",
     "description": "Aeromobili ad ala fissa motorizzati",
@@ -4928,14 +5474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131500"
+      ]
     }
   },
   {
     "term_id": "it-275",
     "concept_id": "CID-275",
     "hierarchy_id": "9.4.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131501",
     "language": "it",
     "term": "Aeromobili agricoli ad ala fissa",
     "description": "Aeromobili agricoli ad ala fissa",
@@ -4946,14 +5494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131501"
+      ]
     }
   },
   {
     "term_id": "it-276",
     "concept_id": "CID-276",
     "hierarchy_id": "9.4.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131502",
     "language": "it",
     "term": "Aerei cargo a elica",
     "description": "Aerei cargo a elica",
@@ -4964,14 +5514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131502"
+      ]
     }
   },
   {
     "term_id": "it-277",
     "concept_id": "CID-277",
     "hierarchy_id": "9.4.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "25131503",
     "language": "it",
     "term": "Idrovolanti",
     "description": "Idrovolanti",
@@ -4982,14 +5534,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131503"
+      ]
     }
   },
   {
     "term_id": "it-278",
     "concept_id": "CID-278",
     "hierarchy_id": "9.4.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "25131504",
     "language": "it",
     "term": "Aerei commerciali passeggeri a elica",
     "description": "Aerei commerciali passeggeri a elica",
@@ -5000,14 +5554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131504"
+      ]
     }
   },
   {
     "term_id": "it-279",
     "concept_id": "CID-279",
     "hierarchy_id": "9.4.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "25131505",
     "language": "it",
     "term": "Aerei cargo a reazione",
     "description": "Aerei cargo a reazione",
@@ -5018,14 +5574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131505"
+      ]
     }
   },
   {
     "term_id": "it-280",
     "concept_id": "CID-280",
     "hierarchy_id": "9.4.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "25131506",
     "language": "it",
     "term": "Aerei commerciali passeggeri a reazione",
     "description": "Aerei commerciali passeggeri a reazione",
@@ -5036,14 +5594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131506"
+      ]
     }
   },
   {
     "term_id": "it-281",
     "concept_id": "CID-281",
     "hierarchy_id": "9.4.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "25131507",
     "language": "it",
     "term": "Aerei privati o business a elica",
     "description": "Aerei privati o business a elica",
@@ -5054,14 +5614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131507"
+      ]
     }
   },
   {
     "term_id": "it-282",
     "concept_id": "CID-282",
     "hierarchy_id": "9.4.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "25131508",
     "language": "it",
     "term": "Jet privati o business",
     "description": "Jet privati o business",
@@ -5072,14 +5634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131508"
+      ]
     }
   },
   {
     "term_id": "it-283",
     "concept_id": "CID-283",
     "hierarchy_id": "9.4.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "25131513",
     "language": "it",
     "term": "Aerei per ispezione di volo",
     "description": "Aerei per ispezione di volo",
@@ -5090,14 +5654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131513"
+      ]
     }
   },
   {
     "term_id": "it-284",
     "concept_id": "CID-284",
     "hierarchy_id": "9.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131600",
     "language": "it",
     "term": "Aeromobili civili e commerciali ad ala rotante",
     "description": "Aeromobili civili e commerciali ad ala rotante",
@@ -5108,14 +5674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131600"
+      ]
     }
   },
   {
     "term_id": "it-285",
     "concept_id": "CID-285",
     "hierarchy_id": "9.4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131601",
     "language": "it",
     "term": "Elicotteri per trasporto passeggeri",
     "description": "Elicotteri per trasporto passeggeri",
@@ -5126,14 +5694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131601"
+      ]
     }
   },
   {
     "term_id": "it-286",
     "concept_id": "CID-286",
     "hierarchy_id": "9.4.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131602",
     "language": "it",
     "term": "Elicotteri per trasporto merci",
     "description": "Elicotteri per trasporto merci",
@@ -5144,14 +5714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131602"
+      ]
     }
   },
   {
     "term_id": "it-287",
     "concept_id": "CID-287",
     "hierarchy_id": "9.4.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "25131604",
     "language": "it",
     "term": "Elicotteri medici o di soccorso",
     "description": "Elicotteri medici o di soccorso",
@@ -5162,14 +5734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131604"
+      ]
     }
   },
   {
     "term_id": "it-288",
     "concept_id": "CID-288",
     "hierarchy_id": "9.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "25131800",
     "language": "it",
     "term": "Aeromobili speciali",
     "description": "Aeromobili speciali",
@@ -5180,14 +5754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131800"
+      ]
     }
   },
   {
     "term_id": "it-289",
     "concept_id": "CID-289",
     "hierarchy_id": "9.4.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131801",
     "language": "it",
     "term": "Dirigibili",
     "description": "Dirigibili",
@@ -5198,14 +5774,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131801"
+      ]
     }
   },
   {
     "term_id": "it-290",
     "concept_id": "CID-290",
     "hierarchy_id": "9.4.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131802",
     "language": "it",
     "term": "Aeromodelli",
     "description": "Aeromodelli",
@@ -5216,14 +5794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131802"
+      ]
     }
   },
   {
     "term_id": "it-291",
     "concept_id": "CID-291",
     "hierarchy_id": "9.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "25132000",
     "language": "it",
     "term": "Aeromobili ricreativi",
     "description": "Aeromobili ricreativi",
@@ -5234,14 +5814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25132000"
+      ]
     }
   },
   {
     "term_id": "it-292",
     "concept_id": "CID-292",
     "hierarchy_id": "9.5",
-    "unspsc_code": "",
+    "unspsc_code": "25150000",
     "language": "it",
     "term": "Veicoli spaziali",
     "description": "Veicoli spaziali",
@@ -5252,14 +5834,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25150000"
+      ]
     }
   },
   {
     "term_id": "it-293",
     "concept_id": "CID-293",
     "hierarchy_id": "9.6",
-    "unspsc_code": "",
+    "unspsc_code": "25190000",
     "language": "it",
     "term": "Attrezzature per servizi di trasporto",
     "description": "Attrezzature per servizi di trasporto",
@@ -5270,7 +5854,9 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25190000"
+      ]
     }
   },
   {
@@ -5439,7 +6025,7 @@
     "term_id": "it-303",
     "concept_id": "CID-303",
     "hierarchy_id": "10.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141900",
     "language": "it",
     "term": "Noleggio container",
     "description": "Noleggio container",
@@ -5450,14 +6036,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141900"
+      ]
     }
   },
   {
     "term_id": "it-304",
     "concept_id": "CID-304",
     "hierarchy_id": "10.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141903",
     "language": "it",
     "term": "Noleggio di container intermodali",
     "description": "Noleggio di container intermodali",
@@ -5468,14 +6056,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141903"
+      ]
     }
   },
   {
     "term_id": "it-305",
     "concept_id": "CID-305",
     "hierarchy_id": "10.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111808",
     "language": "it",
     "term": "servizi di Noleggio veicoli",
     "description": "servizi di Noleggio veicoli",
@@ -5486,14 +6076,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111808"
+      ]
     }
   },
   {
     "term_id": "it-306",
     "concept_id": "CID-306",
     "hierarchy_id": "10.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111704",
     "language": "it",
     "term": "Noleggio di imbarcazioni",
     "description": "Noleggio di imbarcazioni",
@@ -5504,14 +6096,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111704"
+      ]
     }
   },
   {
     "term_id": "it-307",
     "concept_id": "CID-307",
     "hierarchy_id": "10.2.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111505",
     "language": "it",
     "term": "Noleggio o leasing di aeromobili passeggeri",
     "description": "Noleggio o leasing di aeromobili passeggeri",
@@ -5522,14 +6116,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111505"
+      ]
     }
   },
   {
     "term_id": "it-308",
     "concept_id": "CID-308",
     "hierarchy_id": "10.2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78142001",
     "language": "it",
     "term": "servizi di Noleggio di aeromobili cargo con operatore",
     "description": "servizi di Noleggio di aeromobili cargo con operatore",
@@ -5540,14 +6136,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142001"
+      ]
     }
   },
   {
     "term_id": "it-309",
     "concept_id": "CID-309",
     "hierarchy_id": "10.2.7",
-    "unspsc_code": "",
+    "unspsc_code": "78142002",
     "language": "it",
     "term": "Noleggio di navi da carico con operatore",
     "description": "Noleggio di navi da carico con operatore",
@@ -5558,14 +6156,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142002"
+      ]
     }
   },
   {
     "term_id": "it-310",
     "concept_id": "CID-310",
     "hierarchy_id": "10.2.8",
-    "unspsc_code": "",
+    "unspsc_code": "78142003",
     "language": "it",
     "term": "Noleggio di navi da carico costiere / transoceaniche con operatore",
     "description": "Noleggio di navi da carico costiere / transoceaniche con operatore",
@@ -5576,14 +6176,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142003"
+      ]
     }
   },
   {
     "term_id": "it-311",
     "concept_id": "CID-311",
     "hierarchy_id": "10.2.9",
-    "unspsc_code": "",
+    "unspsc_code": "78142004",
     "language": "it",
     "term": "Noleggio camion con operatore",
     "description": "Noleggio camion con operatore",
@@ -5594,7 +6196,9 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142004"
+      ]
     }
   },
   {
@@ -5619,7 +6223,7 @@
     "term_id": "it-313",
     "concept_id": "CID-313",
     "hierarchy_id": "10.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111809",
     "language": "it",
     "term": "servizi di leasing per Leasing di berline / coupé / station wagon",
     "description": "servizi di leasing per Leasing di berline / coupé / station wagon",
@@ -5630,14 +6234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111809"
+      ]
     }
   },
   {
     "term_id": "it-314",
     "concept_id": "CID-314",
     "hierarchy_id": "10.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111811",
     "language": "it",
     "term": "Leasing di camion leggeri / SUV",
     "description": "Leasing di camion leggeri / SUV",
@@ -5648,14 +6254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111811"
+      ]
     }
   },
   {
     "term_id": "it-315",
     "concept_id": "CID-315",
     "hierarchy_id": "10.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111812",
     "language": "it",
     "term": "servizi di leasing per Leasing di van passeggeri / minivan",
     "description": "servizi di leasing per Leasing di van passeggeri / minivan",
@@ -5666,14 +6274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111812"
+      ]
     }
   },
   {
     "term_id": "it-316",
     "concept_id": "CID-316",
     "hierarchy_id": "10.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78142000",
     "language": "it",
     "term": "Leasing di mezzi di trasporto",
     "description": "Leasing di mezzi di trasporto",
@@ -5684,14 +6294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142000"
+      ]
     }
   },
   {
     "term_id": "it-317",
     "concept_id": "CID-317",
     "hierarchy_id": "11",
-    "unspsc_code": "",
+    "unspsc_code": "78180000",
     "language": "it",
     "term": "Manutenzione, rifornimento, stoccaggio e supporto",
     "description": "Manutenzione, rifornimento, stoccaggio e supporto",
@@ -5702,14 +6314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78180000"
+      ]
     }
   },
   {
     "term_id": "it-318",
     "concept_id": "CID-318",
     "hierarchy_id": "11.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181500",
     "language": "it",
     "term": "Manutenzione e riparazione veicoli",
     "description": "Manutenzione e riparazione veicoli",
@@ -5720,14 +6334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181500"
+      ]
     }
   },
   {
     "term_id": "it-319",
     "concept_id": "CID-319",
     "hierarchy_id": "11.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181501",
     "language": "it",
     "term": "Servizio di riparazione carrozzeria o verniciatura veicoli",
     "description": "Servizio di riparazione carrozzeria o verniciatura veicoli",
@@ -5738,14 +6354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181501"
+      ]
     }
   },
   {
     "term_id": "it-320",
     "concept_id": "CID-320",
     "hierarchy_id": "11.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78181505",
     "language": "it",
     "term": "Servizio di ispezione veicoli",
     "description": "Servizio di ispezione veicoli",
@@ -5756,14 +6374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181505"
+      ]
     }
   },
   {
     "term_id": "it-321",
     "concept_id": "CID-321",
     "hierarchy_id": "11.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78181506",
     "language": "it",
     "term": "Servizio di sostituzione vetri per veicoli",
     "description": "Servizio di sostituzione vetri per veicoli",
@@ -5774,14 +6394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181506"
+      ]
     }
   },
   {
     "term_id": "it-322",
     "concept_id": "CID-322",
     "hierarchy_id": "11.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78181507",
     "language": "it",
     "term": "Manutenzione e riparazione di autovetture e camion leggeri",
     "description": "Manutenzione e riparazione di autovetture e camion leggeri",
@@ -5792,14 +6414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181507"
+      ]
     }
   },
   {
     "term_id": "it-323",
     "concept_id": "CID-323",
     "hierarchy_id": "11.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78181508",
     "language": "it",
     "term": "Manutenzione e riparazione di camion pesanti",
     "description": "Manutenzione e riparazione di camion pesanti",
@@ -5810,14 +6434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181508"
+      ]
     }
   },
   {
     "term_id": "it-324",
     "concept_id": "CID-324",
     "hierarchy_id": "11.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78181509",
     "language": "it",
     "term": "Servizio di ispezione e manutenzione di carri ferroviari",
     "description": "Servizio di ispezione e manutenzione di carri ferroviari",
@@ -5828,14 +6454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181509"
+      ]
     }
   },
   {
     "term_id": "it-325",
     "concept_id": "CID-325",
     "hierarchy_id": "11.2",
-    "unspsc_code": "",
+    "unspsc_code": "78181600",
     "language": "it",
     "term": "Servizi di carrozzeria e verniciatura",
     "description": "Servizi di carrozzeria e verniciatura",
@@ -5846,14 +6474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181600"
+      ]
     }
   },
   {
     "term_id": "it-326",
     "concept_id": "CID-326",
     "hierarchy_id": "11.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181601",
     "language": "it",
     "term": "Servizio di lattoneria",
     "description": "Servizio di lattoneria",
@@ -5864,14 +6494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181601"
+      ]
     }
   },
   {
     "term_id": "it-327",
     "concept_id": "CID-327",
     "hierarchy_id": "11.3",
-    "unspsc_code": "",
+    "unspsc_code": "78181700",
     "language": "it",
     "term": "Rifornimento / stoccaggio / supporto operativo",
     "description": "Rifornimento / stoccaggio / supporto operativo",
@@ -5882,14 +6514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181700"
+      ]
     }
   },
   {
     "term_id": "it-328",
     "concept_id": "CID-328",
     "hierarchy_id": "11.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181701",
     "language": "it",
     "term": "Servizio di rifornimento veicoli",
     "description": "Servizio di rifornimento veicoli",
@@ -5900,14 +6534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181701"
+      ]
     }
   },
   {
     "term_id": "it-329",
     "concept_id": "CID-329",
     "hierarchy_id": "11.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78181702",
     "language": "it",
     "term": "Servizio di stoccaggio per il trasporto",
     "description": "Servizio di stoccaggio per il trasporto",
@@ -5918,14 +6554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181702"
+      ]
     }
   },
   {
     "term_id": "it-330",
     "concept_id": "CID-330",
     "hierarchy_id": "11.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78181703",
     "language": "it",
     "term": "Servizio di parcheggio veicoli",
     "description": "Servizio di parcheggio veicoli",
@@ -5936,14 +6574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181703"
+      ]
     }
   },
   {
     "term_id": "it-331",
     "concept_id": "CID-331",
     "hierarchy_id": "11.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78181704",
     "language": "it",
     "term": "Servizio carte carburante ricaricabili / prepagate",
     "description": "Servizio carte carburante ricaricabili / prepagate",
@@ -5954,14 +6594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181704"
+      ]
     }
   },
   {
     "term_id": "it-332",
     "concept_id": "CID-332",
     "hierarchy_id": "11.4",
-    "unspsc_code": "",
+    "unspsc_code": "78181800",
     "language": "it",
     "term": "Manutenzione e riparazione di aeromobili",
     "description": "Manutenzione e riparazione di aeromobili",
@@ -5972,14 +6614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181800"
+      ]
     }
   },
   {
     "term_id": "it-333",
     "concept_id": "CID-333",
     "hierarchy_id": "11.5",
-    "unspsc_code": "",
+    "unspsc_code": "78181900",
     "language": "it",
     "term": "Manutenzione e riparazione di apparecchiature di navigazione",
     "description": "Manutenzione e riparazione di apparecchiature di navigazione",
@@ -5990,14 +6634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181900"
+      ]
     }
   },
   {
     "term_id": "it-334",
     "concept_id": "CID-334",
     "hierarchy_id": "11.6",
-    "unspsc_code": "",
+    "unspsc_code": "78182000",
     "language": "it",
     "term": "Manutenzione e riparazione di imbarcazioni per trasporto acquatico",
     "description": "Manutenzione e riparazione di imbarcazioni per trasporto acquatico",
@@ -6008,14 +6654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78182000"
+      ]
     }
   },
   {
     "term_id": "it-335",
     "concept_id": "CID-335",
     "hierarchy_id": "11.7",
-    "unspsc_code": "",
+    "unspsc_code": "80161505",
     "language": "it",
     "term": "Supporto alla gestione flotte",
     "description": "Supporto alla gestione flotte",
@@ -6026,7 +6674,9 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161505"
+      ]
     }
   }
 ]

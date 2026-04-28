@@ -3,7 +3,7 @@
     "term_id": "hu-1",
     "concept_id": "CID-1",
     "hierarchy_id": "1",
-    "unspsc_code": "",
+    "unspsc_code": "78100000",
     "language": "hu",
     "term": "Szállítás és áruszállítás",
     "description": "Szállítás és áruszállítás",
@@ -14,14 +14,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78100000"
+      ]
     }
   },
   {
     "term_id": "hu-2",
     "concept_id": "CID-2",
     "hierarchy_id": "1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101800",
     "language": "hu",
     "term": "teherautós szállítás",
     "description": "közúti szállítás",
@@ -32,14 +34,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101800"
+      ]
     }
   },
   {
     "term_id": "hu-3",
     "concept_id": "CID-3",
     "hierarchy_id": "1.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "hu",
     "term": "Teljes kamionrakomány - FTL",
     "description": "Teljes kamionrakomány - FTL",
@@ -50,14 +54,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "hu-4",
     "concept_id": "CID-4",
     "hierarchy_id": "1.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "hu",
     "term": "Részrakomány - LTL",
     "description": "Részrakomány - LTL",
@@ -68,14 +74,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "hu-5",
     "concept_id": "CID-5",
     "hierarchy_id": "1.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101801",
     "language": "hu",
     "term": "Helyi disztribúció / városi teherfuvarozás",
     "description": "Helyi disztribúció / városi teherfuvarozás",
@@ -86,14 +94,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101801"
+      ]
     }
   },
   {
     "term_id": "hu-6",
     "concept_id": "CID-6",
     "hierarchy_id": "1.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "hu",
     "term": "Dedikált szerződéses fuvarozás",
     "description": "Dedikált szerződéses fuvarozás",
@@ -104,14 +114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "hu-7",
     "concept_id": "CID-7",
     "hierarchy_id": "1.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101806",
     "language": "hu",
     "term": "Nemzetközi közúti áruszállítás",
     "description": "Nemzetközi közúti áruszállítás",
@@ -122,14 +134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101806"
+      ]
     }
   },
   {
     "term_id": "hu-8",
     "concept_id": "CID-8",
     "hierarchy_id": "1.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78101809",
     "language": "hu",
     "term": "Közúti csomag- és last-mile szolgáltatások",
     "description": "Közúti csomag- és last-mile szolgáltatások",
@@ -140,14 +154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101809"
+      ]
     }
   },
   {
     "term_id": "hu-9",
     "concept_id": "CID-9",
     "hierarchy_id": "1.1.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101809",
     "language": "hu",
     "term": "Utolsó mérföldes kézbesítés",
     "description": "Utolsó mérföldes kézbesítés",
@@ -158,14 +174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101809"
+      ]
     }
   },
   {
     "term_id": "hu-10",
     "concept_id": "CID-10",
     "hierarchy_id": "1.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "78101804",
     "language": "hu",
     "term": "Lakossági költöztetés / költöztetési szolgáltatások",
     "description": "Lakossági költöztetés / költöztetési szolgáltatások",
@@ -176,14 +194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101804"
+      ]
     }
   },
   {
     "term_id": "hu-11",
     "concept_id": "CID-11",
     "hierarchy_id": "1.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "78101808",
     "language": "hu",
     "term": "Száraz ömlesztett áru közúti szállítása",
     "description": "Száraz ömlesztett áru közúti szállítása",
@@ -194,14 +214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101808"
+      ]
     }
   },
   {
     "term_id": "hu-12",
     "concept_id": "CID-12",
     "hierarchy_id": "1.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "78101807",
     "language": "hu",
     "term": "Tartányos szállítás",
     "description": "Tartányos szállítás",
@@ -212,14 +234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101807"
+      ]
     }
   },
   {
     "term_id": "hu-13",
     "concept_id": "CID-13",
     "hierarchy_id": "1.1.10",
-    "unspsc_code": "",
+    "unspsc_code": "78101802",
     "language": "hu",
     "term": "Nehézfuvar / túlméretes rakomány",
     "description": "Nehézfuvar / túlméretes rakomány",
@@ -230,14 +254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101802"
+      ]
     }
   },
   {
     "term_id": "hu-14",
     "concept_id": "CID-14",
     "hierarchy_id": "1.1.11",
-    "unspsc_code": "",
+    "unspsc_code": "78101803",
     "language": "hu",
     "term": "Járműszállítási szolgáltatások",
     "description": "Járműszállítási szolgáltatások",
@@ -248,14 +274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101803"
+      ]
     }
   },
   {
     "term_id": "hu-15",
     "concept_id": "CID-15",
     "hierarchy_id": "1.1.12",
-    "unspsc_code": "",
+    "unspsc_code": "78101810",
     "language": "hu",
     "term": "Élőállat-szállítás",
     "description": "Élőállat-szállítás",
@@ -266,14 +294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101810"
+      ]
     }
   },
   {
     "term_id": "hu-16",
     "concept_id": "CID-16",
     "hierarchy_id": "1.1.13",
-    "unspsc_code": "",
+    "unspsc_code": "78101807",
     "language": "hu",
     "term": "Veszélyes anyagok szállítása - Hazmat",
     "description": "Veszélyes anyagok szállítása - Hazmat",
@@ -284,14 +314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101807"
+      ]
     }
   },
   {
     "term_id": "hu-17",
     "concept_id": "CID-17",
     "hierarchy_id": "1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "hu",
     "term": "tengeri szállítás",
     "description": "tengeri szállítás",
@@ -302,14 +334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "hu-18",
     "concept_id": "CID-18",
     "hierarchy_id": "1.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "hu",
     "term": "Konténeres szállítás",
     "description": "Konténeres szállítás",
@@ -320,14 +354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "hu-19",
     "concept_id": "CID-19",
     "hierarchy_id": "1.2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "hu",
     "term": "Teljes konténerrakomány - FCL",
     "description": "Teljes konténerrakomány - FCL",
@@ -338,14 +374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "hu-20",
     "concept_id": "CID-20",
     "hierarchy_id": "1.2.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "hu",
     "term": "Részleges konténerrakomány - LCL",
     "description": "Részleges konténerrakomány - LCL",
@@ -356,14 +394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "hu-21",
     "concept_id": "CID-21",
     "hierarchy_id": "1.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "hu",
     "term": "Száraz ömlesztett áru tengeri szállítása",
     "description": "Száraz ömlesztett áru tengeri szállítása",
@@ -374,14 +414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "hu-22",
     "concept_id": "CID-22",
     "hierarchy_id": "1.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "hu",
     "term": "Folyékony ömlesztett áru tengeri szállítása",
     "description": "Folyékony ömlesztett áru tengeri szállítása",
@@ -392,14 +434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "hu-23",
     "concept_id": "CID-23",
     "hierarchy_id": "1.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "hu",
     "term": "Ro-Ro szállítás",
     "description": "Ro-Ro szállítás",
@@ -410,14 +454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "hu-24",
     "concept_id": "CID-24",
     "hierarchy_id": "1.2.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "hu",
     "term": "Menetrend szerinti hajózás",
     "description": "Menetrend szerinti hajózás",
@@ -428,14 +474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "hu-25",
     "concept_id": "CID-25",
     "hierarchy_id": "1.2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "hu",
     "term": "Tramp hajózás",
     "description": "Tramp hajózás",
@@ -446,14 +494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "hu-26",
     "concept_id": "CID-26",
     "hierarchy_id": "1.2.7",
-    "unspsc_code": "",
+    "unspsc_code": "78101700",
     "language": "hu",
     "term": "Rövid távú tengeri szállítás - SSS",
     "description": "Rövid távú tengeri szállítás - SSS",
@@ -464,14 +514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101700"
+      ]
     }
   },
   {
     "term_id": "hu-27",
     "concept_id": "CID-27",
     "hierarchy_id": "1.2.8",
-    "unspsc_code": "",
+    "unspsc_code": "78101706",
     "language": "hu",
     "term": "Offshore logisztika",
     "description": "Offshore logisztika",
@@ -482,14 +534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101706"
+      ]
     }
   },
   {
     "term_id": "hu-28",
     "concept_id": "CID-28",
     "hierarchy_id": "1.2.9",
-    "unspsc_code": "",
+    "unspsc_code": "78141700",
     "language": "hu",
     "term": "Navigációs és vontatási szolgáltatások",
     "description": "Navigációs és vontatási szolgáltatások",
@@ -500,14 +554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141700"
+      ]
     }
   },
   {
     "term_id": "hu-29",
     "concept_id": "CID-29",
     "hierarchy_id": "1.2.9.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141701",
     "language": "hu",
     "term": "Vontatóhajó-szolgáltatások",
     "description": "Vontatóhajó-szolgáltatások",
@@ -518,14 +574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141701"
+      ]
     }
   },
   {
     "term_id": "hu-30",
     "concept_id": "CID-30",
     "hierarchy_id": "1.2.9.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141702",
     "language": "hu",
     "term": "Nyitható híd üzemeltetése",
     "description": "Nyitható híd üzemeltetése",
@@ -536,14 +594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141702"
+      ]
     }
   },
   {
     "term_id": "hu-31",
     "concept_id": "CID-31",
     "hierarchy_id": "1.2.9.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141703",
     "language": "hu",
     "term": "Tengeri navigációs vagy kommunikációs szolgáltatások",
     "description": "Tengeri navigációs vagy kommunikációs szolgáltatások",
@@ -554,14 +614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141703"
+      ]
     }
   },
   {
     "term_id": "hu-32",
     "concept_id": "CID-32",
     "hierarchy_id": "1.2.9.4",
-    "unspsc_code": "",
+    "unspsc_code": "78141704",
     "language": "hu",
     "term": "Dead man anchor szolgáltatás",
     "description": "Dead man anchor szolgáltatás",
@@ -572,14 +634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141704"
+      ]
     }
   },
   {
     "term_id": "hu-33",
     "concept_id": "CID-33",
     "hierarchy_id": "1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "hu",
     "term": "Légi áruszállítás",
     "description": "Légi áruszállítás",
@@ -590,14 +654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "hu-34",
     "concept_id": "CID-34",
     "hierarchy_id": "1.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "hu",
     "term": "Légi árufuvarozási szolgáltatások",
     "description": "Légi árufuvarozási szolgáltatások",
@@ -608,14 +674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "hu-35",
     "concept_id": "CID-35",
     "hierarchy_id": "1.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "hu",
     "term": "Expressz légi árufuvarozás",
     "description": "Expressz légi árufuvarozás",
@@ -626,14 +694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "hu-36",
     "concept_id": "CID-36",
     "hierarchy_id": "1.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "hu",
     "term": "Háztól házig légi áru",
     "description": "Háztól házig légi áru",
@@ -644,14 +714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "hu-37",
     "concept_id": "CID-37",
     "hierarchy_id": "1.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78141501",
     "language": "hu",
     "term": "Légi áru konszolidáció",
     "description": "Légi áru konszolidáció",
@@ -662,14 +734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141501"
+      ]
     }
   },
   {
     "term_id": "hu-38",
     "concept_id": "CID-38",
     "hierarchy_id": "1.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101500",
     "language": "hu",
     "term": "Légi áru charter szolgáltatások",
     "description": "Légi áru charter szolgáltatások",
@@ -680,14 +754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101500"
+      ]
     }
   },
   {
     "term_id": "hu-39",
     "concept_id": "CID-39",
     "hierarchy_id": "1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "hu",
     "term": "Vasúti árufuvarozás",
     "description": "Vasúti árufuvarozás",
@@ -698,14 +774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "hu-40",
     "concept_id": "CID-40",
     "hierarchy_id": "1.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "hu",
     "term": "Vasúti kocsirakományos fuvarozás",
     "description": "Vasúti kocsirakományos fuvarozás",
@@ -716,14 +794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "hu-41",
     "concept_id": "CID-41",
     "hierarchy_id": "1.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101900",
     "language": "hu",
     "term": "Intermodális vasúti szállítás",
     "description": "Intermodális vasúti szállítás",
@@ -734,14 +814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101900"
+      ]
     }
   },
   {
     "term_id": "hu-42",
     "concept_id": "CID-42",
     "hierarchy_id": "1.4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101905",
     "language": "hu",
     "term": "Közút-vasút kombinált szállítás",
     "description": "Közút-vasút kombinált szállítás",
@@ -752,14 +834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101905"
+      ]
     }
   },
   {
     "term_id": "hu-43",
     "concept_id": "CID-43",
     "hierarchy_id": "1.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "hu",
     "term": "Nagysebességű vasúti árufuvarozás",
     "description": "Nagysebességű vasúti árufuvarozás",
@@ -770,14 +854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "hu-44",
     "concept_id": "CID-44",
     "hierarchy_id": "1.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101600",
     "language": "hu",
     "term": "Vasúti teherkocsi lízingszolgáltatások",
     "description": "Vasúti teherkocsi lízingszolgáltatások",
@@ -788,14 +874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101600"
+      ]
     }
   },
   {
     "term_id": "hu-45",
     "concept_id": "CID-45",
     "hierarchy_id": "1.4.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101606",
     "language": "hu",
     "term": "Vasúti teherkocsi bérlés",
     "description": "Vasúti teherkocsi bérlés",
@@ -806,14 +894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101606"
+      ]
     }
   },
   {
     "term_id": "hu-46",
     "concept_id": "CID-46",
     "hierarchy_id": "1.4.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101605",
     "language": "hu",
     "term": "Vasúti tartálykocsi bérlés",
     "description": "Vasúti tartálykocsi bérlés",
@@ -824,14 +914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101605"
+      ]
     }
   },
   {
     "term_id": "hu-47",
     "concept_id": "CID-47",
     "hierarchy_id": "1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78102100",
     "language": "hu",
     "term": "Csővezetékes szállítás",
     "description": "Csővezetékes szállítás",
@@ -842,14 +934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102100"
+      ]
     }
   },
   {
     "term_id": "hu-48",
     "concept_id": "CID-48",
     "hierarchy_id": "1.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "78102101",
     "language": "hu",
     "term": "Kőolajtermékek csővezetéken történő szállítása",
     "description": "Kőolajtermékek csővezetéken történő szállítása",
@@ -860,14 +954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102101"
+      ]
     }
   },
   {
     "term_id": "hu-49",
     "concept_id": "CID-49",
     "hierarchy_id": "1.5.2",
-    "unspsc_code": "",
+    "unspsc_code": "78102102",
     "language": "hu",
     "term": "Víz szállítása csővezetéken",
     "description": "Víz szállítása csővezetéken",
@@ -878,14 +974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102102"
+      ]
     }
   },
   {
     "term_id": "hu-50",
     "concept_id": "CID-50",
     "hierarchy_id": "1.5.3",
-    "unspsc_code": "",
+    "unspsc_code": "83101604",
     "language": "hu",
     "term": "Földgáz szállítása csővezetéken",
     "description": "Földgáz szállítása csővezetéken",
@@ -896,14 +994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:83101604"
+      ]
     }
   },
   {
     "term_id": "hu-51",
     "concept_id": "CID-51",
     "hierarchy_id": "1.5.4",
-    "unspsc_code": "",
+    "unspsc_code": "78102100",
     "language": "hu",
     "term": "Vegyi anyagok szállítása csővezetéken",
     "description": "Vegyi anyagok szállítása csővezetéken",
@@ -914,14 +1014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102100"
+      ]
     }
   },
   {
     "term_id": "hu-52",
     "concept_id": "CID-52",
     "hierarchy_id": "1.5.5",
-    "unspsc_code": "",
+    "unspsc_code": "78102103",
     "language": "hu",
     "term": "Csővezeték inline vizsgálat",
     "description": "Csővezeték inline vizsgálat",
@@ -932,14 +1034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102103"
+      ]
     }
   },
   {
     "term_id": "hu-53",
     "concept_id": "CID-53",
     "hierarchy_id": "1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78101900",
     "language": "hu",
     "term": "Intermodális és kombinált áruszállítás",
     "description": "Intermodális és kombinált áruszállítás",
@@ -950,14 +1054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101900"
+      ]
     }
   },
   {
     "term_id": "hu-54",
     "concept_id": "CID-54",
     "hierarchy_id": "1.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "78101900",
     "language": "hu",
     "term": "Konténeres intermodális szállítás",
     "description": "Konténeres intermodális szállítás",
@@ -968,14 +1074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101900"
+      ]
     }
   },
   {
     "term_id": "hu-55",
     "concept_id": "CID-55",
     "hierarchy_id": "1.6.2",
-    "unspsc_code": "",
+    "unspsc_code": "78101901",
     "language": "hu",
     "term": "Légi-tengeri szállítás",
     "description": "Légi-tengeri szállítás",
@@ -986,14 +1094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101901"
+      ]
     }
   },
   {
     "term_id": "hu-56",
     "concept_id": "CID-56",
     "hierarchy_id": "1.6.3",
-    "unspsc_code": "",
+    "unspsc_code": "78101902",
     "language": "hu",
     "term": "Tengeri-vasúti szállítás",
     "description": "Tengeri-vasúti szállítás",
@@ -1004,14 +1114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101902"
+      ]
     }
   },
   {
     "term_id": "hu-57",
     "concept_id": "CID-57",
     "hierarchy_id": "1.6.4",
-    "unspsc_code": "",
+    "unspsc_code": "78101903",
     "language": "hu",
     "term": "Tengeri-közúti szállítás",
     "description": "Tengeri-közúti szállítás",
@@ -1022,14 +1134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101903"
+      ]
     }
   },
   {
     "term_id": "hu-58",
     "concept_id": "CID-58",
     "hierarchy_id": "1.6.5",
-    "unspsc_code": "",
+    "unspsc_code": "78101904",
     "language": "hu",
     "term": "Légi-közúti szállítás",
     "description": "Légi-közúti szállítás",
@@ -1040,14 +1154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78101904"
+      ]
     }
   },
   {
     "term_id": "hu-59",
     "concept_id": "CID-59",
     "hierarchy_id": "1.7",
-    "unspsc_code": "",
+    "unspsc_code": "78102200",
     "language": "hu",
     "term": "Futár- / postai szolgáltatások",
     "description": "Futár- / postai szolgáltatások",
@@ -1058,14 +1174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102200"
+      ]
     }
   },
   {
     "term_id": "hu-60",
     "concept_id": "CID-60",
     "hierarchy_id": "1.7.1",
-    "unspsc_code": "",
+    "unspsc_code": "78102201",
     "language": "hu",
     "term": "Nemzeti postai kézbesítési szolgáltatások",
     "description": "Nemzeti postai kézbesítési szolgáltatások",
@@ -1076,14 +1194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102201"
+      ]
     }
   },
   {
     "term_id": "hu-61",
     "concept_id": "CID-61",
     "hierarchy_id": "1.7.2",
-    "unspsc_code": "",
+    "unspsc_code": "78102202",
     "language": "hu",
     "term": "Postafiók-szolgáltatások",
     "description": "Postafiók-szolgáltatások",
@@ -1094,14 +1214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102202"
+      ]
     }
   },
   {
     "term_id": "hu-62",
     "concept_id": "CID-62",
     "hierarchy_id": "1.7.3",
-    "unspsc_code": "",
+    "unspsc_code": "78102203",
     "language": "hu",
     "term": "Postai feladás / begyűjtés / kézbesítési szolgáltatások",
     "description": "Postai feladás / begyűjtés / kézbesítési szolgáltatások",
@@ -1112,14 +1234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102203"
+      ]
     }
   },
   {
     "term_id": "hu-63",
     "concept_id": "CID-63",
     "hierarchy_id": "1.7.4",
-    "unspsc_code": "",
+    "unspsc_code": "78102204",
     "language": "hu",
     "term": "Levelek vagy kiscsomagok világméretű kézbesítési szolgáltatásai",
     "description": "Levelek vagy kiscsomagok világméretű kézbesítési szolgáltatásai",
@@ -1130,14 +1254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102204"
+      ]
     }
   },
   {
     "term_id": "hu-64",
     "concept_id": "CID-64",
     "hierarchy_id": "1.7.5",
-    "unspsc_code": "",
+    "unspsc_code": "78102205",
     "language": "hu",
     "term": "Levelek vagy kiscsomagok helyi kézbesítési szolgáltatásai",
     "description": "Levelek vagy kiscsomagok helyi kézbesítési szolgáltatásai",
@@ -1148,14 +1274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102205"
+      ]
     }
   },
   {
     "term_id": "hu-65",
     "concept_id": "CID-65",
     "hierarchy_id": "1.7.6",
-    "unspsc_code": "",
+    "unspsc_code": "78102206",
     "language": "hu",
     "term": "Kerékpáros vagy robogós futárszolgáltatások",
     "description": "Kerékpáros vagy robogós futárszolgáltatások",
@@ -1166,14 +1294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78102206"
+      ]
     }
   },
   {
     "term_id": "hu-66",
     "concept_id": "CID-66",
     "hierarchy_id": "2",
-    "unspsc_code": "",
+    "unspsc_code": "78170000",
     "language": "hu",
     "term": "Ellátási lánc és logisztikai szolgáltatások",
     "description": "Ellátási lánc és logisztikai szolgáltatások",
@@ -1184,14 +1314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78170000"
+      ]
     }
   },
   {
     "term_id": "hu-67",
     "concept_id": "CID-67",
     "hierarchy_id": "2.1",
-    "unspsc_code": "",
+    "unspsc_code": "80100000",
     "language": "hu",
     "term": "Tervezés és tanácsadás",
     "description": "Tervezés és tanácsadás",
@@ -1202,14 +1334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80100000"
+      ]
     }
   },
   {
     "term_id": "hu-68",
     "concept_id": "CID-68",
     "hierarchy_id": "2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "hu",
     "term": "Ellátási lánc tanácsadás",
     "description": "Ellátási lánc tanácsadás",
@@ -1220,14 +1354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "hu-69",
     "concept_id": "CID-69",
     "hierarchy_id": "2.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "hu",
     "term": "Kereslet- és készlettervezés",
     "description": "Kereslet- és készlettervezés",
@@ -1238,14 +1374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "hu-70",
     "concept_id": "CID-70",
     "hierarchy_id": "2.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "hu",
     "term": "Hálózatoptimalizálás",
     "description": "Hálózatoptimalizálás",
@@ -1256,14 +1394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "hu-71",
     "concept_id": "CID-71",
     "hierarchy_id": "2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "hu",
     "term": "Szállításszervezési szolgáltatások",
     "description": "Szállításszervezési szolgáltatások",
@@ -1274,14 +1414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "hu-72",
     "concept_id": "CID-72",
     "hierarchy_id": "2.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141501",
     "language": "hu",
     "term": "Szállítmányozás",
     "description": "Szállítmányozás",
@@ -1292,14 +1434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141501"
+      ]
     }
   },
   {
     "term_id": "hu-73",
     "concept_id": "CID-73",
     "hierarchy_id": "2.2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141501",
     "language": "hu",
     "term": "Rakománykonszolidáció",
     "description": "Rakománykonszolidáció",
@@ -1310,14 +1454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141501"
+      ]
     }
   },
   {
     "term_id": "hu-74",
     "concept_id": "CID-74",
     "hierarchy_id": "2.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "hu",
     "term": "Határon átnyúló logisztika",
     "description": "Határon átnyúló logisztika",
@@ -1328,14 +1474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "hu-75",
     "concept_id": "CID-75",
     "hierarchy_id": "2.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141510",
     "language": "hu",
     "term": "Biztosítást is tartalmazó fuvarozási szolgáltatások",
     "description": "Biztosítást is tartalmazó fuvarozási szolgáltatások",
@@ -1346,14 +1494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141510"
+      ]
     }
   },
   {
     "term_id": "hu-76",
     "concept_id": "CID-76",
     "hierarchy_id": "2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78130000",
     "language": "hu",
     "term": "Raktározás és disztribúció",
     "description": "Raktározás és disztribúció",
@@ -1364,14 +1514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78130000"
+      ]
     }
   },
   {
     "term_id": "hu-77",
     "concept_id": "CID-77",
     "hierarchy_id": "2.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131600",
     "language": "hu",
     "term": "Közraktározás",
     "description": "Közraktározás",
@@ -1382,14 +1534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131600"
+      ]
     }
   },
   {
     "term_id": "hu-78",
     "concept_id": "CID-78",
     "hierarchy_id": "2.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78131600",
     "language": "hu",
     "term": "Szerződéses raktározás",
     "description": "Szerződéses raktározás",
@@ -1400,14 +1554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131600"
+      ]
     }
   },
   {
     "term_id": "hu-79",
     "concept_id": "CID-79",
     "hierarchy_id": "2.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78131600",
     "language": "hu",
     "term": "Elosztóközpont-menedzsment",
     "description": "Elosztóközpont-menedzsment",
@@ -1418,14 +1574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131600"
+      ]
     }
   },
   {
     "term_id": "hu-80",
     "concept_id": "CID-80",
     "hierarchy_id": "2.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "hu",
     "term": "Hőmérséklet-szabályozott tárolás",
     "description": "Hőmérséklet-szabályozott tárolás",
@@ -1436,14 +1594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "hu-81",
     "concept_id": "CID-81",
     "hierarchy_id": "2.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78131802",
     "language": "hu",
     "term": "Vámraktározás",
     "description": "Vámraktározás",
@@ -1454,14 +1614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131802"
+      ]
     }
   },
   {
     "term_id": "hu-82",
     "concept_id": "CID-82",
     "hierarchy_id": "2.3.6",
-    "unspsc_code": "",
+    "unspsc_code": "78131800",
     "language": "hu",
     "term": "E-kereskedelmi fulfillment központok",
     "description": "E-kereskedelmi fulfillment központok",
@@ -1472,14 +1634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131800"
+      ]
     }
   },
   {
     "term_id": "hu-83",
     "concept_id": "CID-83",
     "hierarchy_id": "2.3.7",
-    "unspsc_code": "",
+    "unspsc_code": "80161602",
     "language": "hu",
     "term": "Készletgazdálkodás",
     "description": "Készletgazdálkodás",
@@ -1490,14 +1654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161602"
+      ]
     }
   },
   {
     "term_id": "hu-84",
     "concept_id": "CID-84",
     "hierarchy_id": "2.3.8",
-    "unspsc_code": "",
+    "unspsc_code": "78121601",
     "language": "hu",
     "term": "Cross-docking",
     "description": "Cross-docking",
@@ -1508,14 +1674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121601"
+      ]
     }
   },
   {
     "term_id": "hu-85",
     "concept_id": "CID-85",
     "hierarchy_id": "2.3.9",
-    "unspsc_code": "",
+    "unspsc_code": "78131700",
     "language": "hu",
     "term": "Ömlesztettáru-tárolás",
     "description": "Ömlesztettáru-tárolás",
@@ -1526,14 +1694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131700"
+      ]
     }
   },
   {
     "term_id": "hu-86",
     "concept_id": "CID-86",
     "hierarchy_id": "2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "hu",
     "term": "Hozzáadott értékű logisztikai szolgáltatások",
     "description": "Hozzáadott értékű logisztikai szolgáltatások",
@@ -1544,14 +1714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "hu-87",
     "concept_id": "CID-87",
     "hierarchy_id": "2.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "hu",
     "term": "Komissiózás és csomagolás",
     "description": "Komissiózás és csomagolás",
@@ -1562,14 +1734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "hu-88",
     "concept_id": "CID-88",
     "hierarchy_id": "2.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "hu",
     "term": "Címkézés és árazás",
     "description": "Címkézés és árazás",
@@ -1580,14 +1754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "hu-89",
     "concept_id": "CID-89",
     "hierarchy_id": "2.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "hu",
     "term": "Kitting",
     "description": "Kitting",
@@ -1598,14 +1774,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "hu-90",
     "concept_id": "CID-90",
     "hierarchy_id": "2.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "hu",
     "term": "Szerializálás",
     "description": "Szerializálás",
@@ -1616,14 +1794,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "hu-91",
     "concept_id": "CID-91",
     "hierarchy_id": "2.4.5",
-    "unspsc_code": "",
+    "unspsc_code": "78121500",
     "language": "hu",
     "term": "Csomagolási szolgáltatások",
     "description": "Csomagolási szolgáltatások",
@@ -1634,14 +1814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121500"
+      ]
     }
   },
   {
     "term_id": "hu-92",
     "concept_id": "CID-92",
     "hierarchy_id": "2.4.6",
-    "unspsc_code": "",
+    "unspsc_code": "78121600",
     "language": "hu",
     "term": "Anyagmozgatási szolgáltatások",
     "description": "Anyagmozgatási szolgáltatások",
@@ -1652,14 +1834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78121600"
+      ]
     }
   },
   {
     "term_id": "hu-93",
     "concept_id": "CID-93",
     "hierarchy_id": "2.5",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "hu",
     "term": "Vámkezelés és külkereskedelmi megfelelés",
     "description": "Vámkezelés és külkereskedelmi megfelelés",
@@ -1670,14 +1854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "hu-94",
     "concept_id": "CID-94",
     "hierarchy_id": "2.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141502",
     "language": "hu",
     "term": "Vámügynöki szolgáltatás",
     "description": "Vámügynöki szolgáltatás",
@@ -1688,14 +1874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141502"
+      ]
     }
   },
   {
     "term_id": "hu-95",
     "concept_id": "CID-95",
     "hierarchy_id": "2.5.2",
-    "unspsc_code": "",
+    "unspsc_code": "80101514",
     "language": "hu",
     "term": "Külkereskedelmi megfelelés",
     "description": "Külkereskedelmi megfelelés",
@@ -1706,14 +1894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101514"
+      ]
     }
   },
   {
     "term_id": "hu-96",
     "concept_id": "CID-96",
     "hierarchy_id": "2.5.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "hu",
     "term": "Import-/exportdokumentáció",
     "description": "Import-/exportdokumentáció",
@@ -1724,14 +1914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "hu-97",
     "concept_id": "CID-97",
     "hierarchy_id": "2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Logisztikai szolgáltatói modellek",
     "description": "Logisztikai szolgáltatói modellek",
@@ -1742,14 +1934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-98",
     "concept_id": "CID-98",
     "hierarchy_id": "2.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Harmadik fél logisztika - 3PL",
     "description": "Harmadik fél logisztika - 3PL",
@@ -1760,14 +1954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-99",
     "concept_id": "CID-99",
     "hierarchy_id": "2.6.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Negyedik fél logisztika - 4PL",
     "description": "Negyedik fél logisztika - 4PL",
@@ -1778,14 +1974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-100",
     "concept_id": "CID-100",
     "hierarchy_id": "2.7",
-    "unspsc_code": "",
+    "unspsc_code": "78141600",
     "language": "hu",
     "term": "Ellenőrzési és survey szolgáltatások",
     "description": "Ellenőrzési és survey szolgáltatások",
@@ -1796,14 +1994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141600"
+      ]
     }
   },
   {
     "term_id": "hu-101",
     "concept_id": "CID-101",
     "hierarchy_id": "2.7.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141601",
     "language": "hu",
     "term": "Csomagolás-ellenőrzési szolgáltatások",
     "description": "Csomagolás-ellenőrzési szolgáltatások",
@@ -1814,14 +2014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141601"
+      ]
     }
   },
   {
     "term_id": "hu-102",
     "concept_id": "CID-102",
     "hierarchy_id": "2.7.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141602",
     "language": "hu",
     "term": "Rakományfelmérési szolgáltatások",
     "description": "Rakományfelmérési szolgáltatások",
@@ -1832,14 +2034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141602"
+      ]
     }
   },
   {
     "term_id": "hu-103",
     "concept_id": "CID-103",
     "hierarchy_id": "2.7.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141603",
     "language": "hu",
     "term": "Kártevőirtási ellenőrzések",
     "description": "Kártevőirtási ellenőrzések",
@@ -1850,14 +2054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141603"
+      ]
     }
   },
   {
     "term_id": "hu-104",
     "concept_id": "CID-104",
     "hierarchy_id": "3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Speciális logisztika",
     "description": "Speciális logisztika",
@@ -1868,14 +2074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-105",
     "concept_id": "CID-105",
     "hierarchy_id": "3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131800",
     "language": "hu",
     "term": "Hőmérséklet-szabályozott logisztika",
     "description": "Hőmérséklet-szabályozott logisztika",
@@ -1886,14 +2094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131800"
+      ]
     }
   },
   {
     "term_id": "hu-106",
     "concept_id": "CID-106",
     "hierarchy_id": "3.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "hu",
     "term": "Hűtőlánc-logisztika",
     "description": "Hűtőlánc-logisztika",
@@ -1904,14 +2114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "hu-107",
     "concept_id": "CID-107",
     "hierarchy_id": "3.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "hu",
     "term": "Gyógyszerlogisztika",
     "description": "Gyógyszerlogisztika",
@@ -1922,14 +2134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "hu-108",
     "concept_id": "CID-108",
     "hierarchy_id": "3.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78131801",
     "language": "hu",
     "term": "Romlandó áruk logisztikája",
     "description": "Romlandó áruk logisztikája",
@@ -1940,14 +2154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131801"
+      ]
     }
   },
   {
     "term_id": "hu-109",
     "concept_id": "CID-109",
     "hierarchy_id": "3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "hu",
     "term": "Nehézáru- és projektlogisztika",
     "description": "Nehézáru- és projektlogisztika",
@@ -1958,14 +2174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "hu-110",
     "concept_id": "CID-110",
     "hierarchy_id": "3.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "hu",
     "term": "Energetikai logisztika",
     "description": "Energetikai logisztika",
@@ -1976,14 +2194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "hu-111",
     "concept_id": "CID-111",
     "hierarchy_id": "3.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141500",
     "language": "hu",
     "term": "Építőipari logisztika",
     "description": "Építőipari logisztika",
@@ -1994,14 +2214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141500"
+      ]
     }
   },
   {
     "term_id": "hu-112",
     "concept_id": "CID-112",
     "hierarchy_id": "3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Iparág-specifikus logisztika",
     "description": "Iparág-specifikus logisztika",
@@ -2012,14 +2234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-113",
     "concept_id": "CID-113",
     "hierarchy_id": "3.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Autóipari logisztika",
     "description": "Autóipari logisztika",
@@ -2030,14 +2254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-114",
     "concept_id": "CID-114",
     "hierarchy_id": "3.3.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131807",
     "language": "hu",
     "term": "Alkatrészlogisztika",
     "description": "Alkatrészlogisztika",
@@ -2048,14 +2274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131807"
+      ]
     }
   },
   {
     "term_id": "hu-115",
     "concept_id": "CID-115",
     "hierarchy_id": "3.3.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Készjármű-logisztika",
     "description": "Készjármű-logisztika",
@@ -2066,14 +2294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-116",
     "concept_id": "CID-116",
     "hierarchy_id": "3.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Kiskereskedelmi logisztika",
     "description": "Kiskereskedelmi logisztika",
@@ -2084,14 +2314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-117",
     "concept_id": "CID-117",
     "hierarchy_id": "3.3.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Fast fashion logisztika",
     "description": "Fast fashion logisztika",
@@ -2102,14 +2334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-118",
     "concept_id": "CID-118",
     "hierarchy_id": "3.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Űr- és védelmi logisztika",
     "description": "Űr- és védelmi logisztika",
@@ -2120,14 +2354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-119",
     "concept_id": "CID-119",
     "hierarchy_id": "3.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "High-tech és elektronikai logisztika",
     "description": "High-tech és elektronikai logisztika",
@@ -2138,14 +2374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-120",
     "concept_id": "CID-120",
     "hierarchy_id": "3.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Vegyipari logisztika",
     "description": "Vegyipari logisztika",
@@ -2156,14 +2394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-121",
     "concept_id": "CID-121",
     "hierarchy_id": "3.3.6",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Olaj- és gázipari logisztika",
     "description": "Olaj- és gázipari logisztika",
@@ -2174,14 +2414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-122",
     "concept_id": "CID-122",
     "hierarchy_id": "3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Egyéb speciális logisztikai szolgáltatások",
     "description": "Egyéb speciális logisztikai szolgáltatások",
@@ -2192,14 +2434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-123",
     "concept_id": "CID-123",
     "hierarchy_id": "3.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78131803",
     "language": "hu",
     "term": "Veszélyes áruk logisztikája",
     "description": "Veszélyes áruk logisztikája",
@@ -2210,14 +2454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78131803"
+      ]
     }
   },
   {
     "term_id": "hu-124",
     "concept_id": "CID-124",
     "hierarchy_id": "3.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Élőállat-logisztika",
     "description": "Élőállat-logisztika",
@@ -2228,14 +2474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-125",
     "concept_id": "CID-125",
     "hierarchy_id": "3.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Nagy értékű és biztonsági logisztika",
     "description": "Nagy értékű és biztonsági logisztika",
@@ -2246,14 +2494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-126",
     "concept_id": "CID-126",
     "hierarchy_id": "3.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Művészeti és kiállítási logisztika",
     "description": "Művészeti és kiállítási logisztika",
@@ -2264,14 +2514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-127",
     "concept_id": "CID-127",
     "hierarchy_id": "3.4.5",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Városi logisztika",
     "description": "Városi logisztika",
@@ -2282,14 +2534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-128",
     "concept_id": "CID-128",
     "hierarchy_id": "3.4.6",
-    "unspsc_code": "",
+    "unspsc_code": "80161700",
     "language": "hu",
     "term": "Inverz logisztika",
     "description": "Inverz logisztika",
@@ -2300,14 +2554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161700"
+      ]
     }
   },
   {
     "term_id": "hu-129",
     "concept_id": "CID-129",
     "hierarchy_id": "3.4.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "80161700",
     "language": "hu",
     "term": "Visszáru-kezelés",
     "description": "Visszáru-kezelés",
@@ -2318,14 +2574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161700"
+      ]
     }
   },
   {
     "term_id": "hu-130",
     "concept_id": "CID-130",
     "hierarchy_id": "3.4.6.2",
-    "unspsc_code": "",
+    "unspsc_code": "80161700",
     "language": "hu",
     "term": "Javítás és felújítás",
     "description": "Javítás és felújítás",
@@ -2336,14 +2594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161700"
+      ]
     }
   },
   {
     "term_id": "hu-131",
     "concept_id": "CID-131",
     "hierarchy_id": "3.4.6.3",
-    "unspsc_code": "",
+    "unspsc_code": "80161703",
     "language": "hu",
     "term": "Újrahasznosítás és anyag-visszanyerés",
     "description": "Újrahasznosítás és anyag-visszanyerés",
@@ -2354,14 +2614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161703"
+      ]
     }
   },
   {
     "term_id": "hu-132",
     "concept_id": "CID-132",
     "hierarchy_id": "4",
-    "unspsc_code": "",
+    "unspsc_code": "78000000",
     "language": "hu",
     "term": "Logisztikai infrastruktúra és berendezések",
     "description": "Logisztikai infrastruktúra és berendezések",
@@ -2372,14 +2634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78000000"
+      ]
     }
   },
   {
     "term_id": "hu-133",
     "concept_id": "CID-133",
     "hierarchy_id": "4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141800",
     "language": "hu",
     "term": "Terminálok és kikötők",
     "description": "Terminálok és kikötők",
@@ -2390,14 +2654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141800"
+      ]
     }
   },
   {
     "term_id": "hu-134",
     "concept_id": "CID-134",
     "hierarchy_id": "4.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141800",
     "language": "hu",
     "term": "Kikötői műveletek",
     "description": "Kikötői műveletek",
@@ -2408,14 +2674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141800"
+      ]
     }
   },
   {
     "term_id": "hu-135",
     "concept_id": "CID-135",
     "hierarchy_id": "4.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141800",
     "language": "hu",
     "term": "Belvízi kikötői műveletek",
     "description": "Belvízi kikötői műveletek",
@@ -2426,14 +2694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141800"
+      ]
     }
   },
   {
     "term_id": "hu-136",
     "concept_id": "CID-136",
     "hierarchy_id": "4.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78141804",
     "language": "hu",
     "term": "Vasúti áruterminálok",
     "description": "Vasúti áruterminálok",
@@ -2444,14 +2714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141804"
+      ]
     }
   },
   {
     "term_id": "hu-137",
     "concept_id": "CID-137",
     "hierarchy_id": "4.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78141805",
     "language": "hu",
     "term": "Légiáru-terminálok",
     "description": "Légiáru-terminálok",
@@ -2462,14 +2734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141805"
+      ]
     }
   },
   {
     "term_id": "hu-138",
     "concept_id": "CID-138",
     "hierarchy_id": "4.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78141806",
     "language": "hu",
     "term": "Offshore támogató parti bázisszolgáltatások",
     "description": "Offshore támogató parti bázisszolgáltatások",
@@ -2480,14 +2754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141806"
+      ]
     }
   },
   {
     "term_id": "hu-139",
     "concept_id": "CID-139",
     "hierarchy_id": "4.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78141807",
     "language": "hu",
     "term": "Légiforgalmi irányítási szolgáltatások",
     "description": "Légiforgalmi irányítási szolgáltatások",
@@ -2498,14 +2774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141807"
+      ]
     }
   },
   {
     "term_id": "hu-140",
     "concept_id": "CID-140",
     "hierarchy_id": "4.2",
-    "unspsc_code": "",
+    "unspsc_code": "80131500",
     "language": "hu",
     "term": "Logisztikai ingatlanok",
     "description": "Logisztikai ingatlanok",
@@ -2516,14 +2794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80131500"
+      ]
     }
   },
   {
     "term_id": "hu-141",
     "concept_id": "CID-141",
     "hierarchy_id": "4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "80131502",
     "language": "hu",
     "term": "Logisztikai parkok és szabadövezetek",
     "description": "Logisztikai parkok és szabadövezetek",
@@ -2534,14 +2814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80131502"
+      ]
     }
   },
   {
     "term_id": "hu-142",
     "concept_id": "CID-142",
     "hierarchy_id": "4.3",
-    "unspsc_code": "",
+    "unspsc_code": "24000000",
     "language": "hu",
     "term": "Logisztikai berendezések",
     "description": "Logisztikai berendezések",
@@ -2552,14 +2834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24000000"
+      ]
     }
   },
   {
     "term_id": "hu-143",
     "concept_id": "CID-143",
     "hierarchy_id": "4.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "24112800",
     "language": "hu",
     "term": "Teherkonténerek",
     "description": "Teherkonténerek",
@@ -2570,14 +2854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24112800"
+      ]
     }
   },
   {
     "term_id": "hu-144",
     "concept_id": "CID-144",
     "hierarchy_id": "4.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "25181701",
     "language": "hu",
     "term": "Konténeralvázak",
     "description": "Konténeralvázak",
@@ -2588,14 +2874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25181701"
+      ]
     }
   },
   {
     "term_id": "hu-145",
     "concept_id": "CID-145",
     "hierarchy_id": "4.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "24101600",
     "language": "hu",
     "term": "Targoncák",
     "description": "Targoncák",
@@ -2606,14 +2894,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24101600"
+      ]
     }
   },
   {
     "term_id": "hu-146",
     "concept_id": "CID-146",
     "hierarchy_id": "4.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "24102100",
     "language": "hu",
     "term": "Raktári berendezések",
     "description": "Raktári berendezések",
@@ -2624,14 +2914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:24102100"
+      ]
     }
   },
   {
     "term_id": "hu-147",
     "concept_id": "CID-147",
     "hierarchy_id": "4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78140000",
     "language": "hu",
     "term": "Logisztikai eszközbérlet és lízing",
     "description": "Logisztikai eszközbérlet és lízing",
@@ -2642,14 +2934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78140000"
+      ]
     }
   },
   {
     "term_id": "hu-148",
     "concept_id": "CID-148",
     "hierarchy_id": "4.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141900",
     "language": "hu",
     "term": "Szállítási konténer bérleti szolgáltatások",
     "description": "Szállítási konténer bérleti szolgáltatások",
@@ -2660,14 +2954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141900"
+      ]
     }
   },
   {
     "term_id": "hu-149",
     "concept_id": "CID-149",
     "hierarchy_id": "4.4.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141903",
     "language": "hu",
     "term": "Intermodális rakománykonténer-bérleti szolgáltatás",
     "description": "Intermodális rakománykonténer-bérleti szolgáltatás",
@@ -2678,14 +2974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141903"
+      ]
     }
   },
   {
     "term_id": "hu-150",
     "concept_id": "CID-150",
     "hierarchy_id": "4.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78142000",
     "language": "hu",
     "term": "Szállítóeszköz-bérleti vagy lízingszolgáltatások",
     "description": "Szállítóeszköz-bérleti vagy lízingszolgáltatások",
@@ -2696,14 +2994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142000"
+      ]
     }
   },
   {
     "term_id": "hu-151",
     "concept_id": "CID-151",
     "hierarchy_id": "4.4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78142001",
     "language": "hu",
     "term": "Teherszállító repülőgép bérlése kezelővel",
     "description": "Teherszállító repülőgép bérlése kezelővel",
@@ -2714,14 +3014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142001"
+      ]
     }
   },
   {
     "term_id": "hu-152",
     "concept_id": "CID-152",
     "hierarchy_id": "4.4.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78142002",
     "language": "hu",
     "term": "Belvízi teherszállító hajó bérlése kezelővel",
     "description": "Belvízi teherszállító hajó bérlése kezelővel",
@@ -2732,14 +3034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142002"
+      ]
     }
   },
   {
     "term_id": "hu-153",
     "concept_id": "CID-153",
     "hierarchy_id": "4.4.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78142003",
     "language": "hu",
     "term": "Parti és transzóceáni teherszállító hajó bérlése kezelővel",
     "description": "Parti és transzóceáni teherszállító hajó bérlése kezelővel",
@@ -2750,14 +3054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142003"
+      ]
     }
   },
   {
     "term_id": "hu-154",
     "concept_id": "CID-154",
     "hierarchy_id": "4.4.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78142004",
     "language": "hu",
     "term": "Teherautó bérlése kezelővel",
     "description": "Teherautó bérlése kezelővel",
@@ -2768,14 +3074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142004"
+      ]
     }
   },
   {
     "term_id": "hu-155",
     "concept_id": "CID-155",
     "hierarchy_id": "5",
-    "unspsc_code": "",
+    "unspsc_code": "43000000",
     "language": "hu",
     "term": "Logisztikai technológia és digitalizáció",
     "description": "Logisztikai technológia és digitalizáció",
@@ -2786,14 +3094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43000000"
+      ]
     }
   },
   {
     "term_id": "hu-156",
     "concept_id": "CID-156",
     "hierarchy_id": "5.1",
-    "unspsc_code": "",
+    "unspsc_code": "43230000",
     "language": "hu",
     "term": "szoftvermegoldások",
     "description": "szoftvermegoldások",
@@ -2804,14 +3114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43230000"
+      ]
     }
   },
   {
     "term_id": "hu-157",
     "concept_id": "CID-157",
     "hierarchy_id": "5.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "43231506",
     "language": "hu",
     "term": "Szállításirányítási rendszer - TMS",
     "description": "Szállításirányítási rendszer - TMS",
@@ -2822,14 +3134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231506"
+      ]
     }
   },
   {
     "term_id": "hu-158",
     "concept_id": "CID-158",
     "hierarchy_id": "5.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "43231508",
     "language": "hu",
     "term": "Raktárirányítási rendszer - WMS",
     "description": "Raktárirányítási rendszer - WMS",
@@ -2840,14 +3154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231508"
+      ]
     }
   },
   {
     "term_id": "hu-159",
     "concept_id": "CID-159",
     "hierarchy_id": "5.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "43231506",
     "language": "hu",
     "term": "Ellátásilánc-kezelő szoftver",
     "description": "Ellátásilánc-kezelő szoftver",
@@ -2858,14 +3174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231506"
+      ]
     }
   },
   {
     "term_id": "hu-160",
     "concept_id": "CID-160",
     "hierarchy_id": "5.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "43232504",
     "language": "hu",
     "term": "Útvonaltervező és flottakezelő szoftver",
     "description": "Útvonaltervező és flottakezelő szoftver",
@@ -2876,14 +3194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232504"
+      ]
     }
   },
   {
     "term_id": "hu-161",
     "concept_id": "CID-161",
     "hierarchy_id": "5.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "43231515",
     "language": "hu",
     "term": "Nyomonkövető rendszerek",
     "description": "Nyomonkövető rendszerek",
@@ -2894,14 +3214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43231515"
+      ]
     }
   },
   {
     "term_id": "hu-162",
     "concept_id": "CID-162",
     "hierarchy_id": "5.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "43232603",
     "language": "hu",
     "term": "Yard menedzsment rendszer - YMS",
     "description": "Yard menedzsment rendszer - YMS",
@@ -2912,14 +3234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232603"
+      ]
     }
   },
   {
     "term_id": "hu-163",
     "concept_id": "CID-163",
     "hierarchy_id": "5.2",
-    "unspsc_code": "",
+    "unspsc_code": "43230000",
     "language": "hu",
     "term": "Digitális platformok és integráció",
     "description": "Digitális platformok és integráció",
@@ -2930,14 +3254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43230000"
+      ]
     }
   },
   {
     "term_id": "hu-164",
     "concept_id": "CID-164",
     "hierarchy_id": "5.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "43233513",
     "language": "hu",
     "term": "Digitális fuvarplatformok",
     "description": "Digitális fuvarplatformok",
@@ -2948,14 +3274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43233513"
+      ]
     }
   },
   {
     "term_id": "hu-165",
     "concept_id": "CID-165",
     "hierarchy_id": "5.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "43232403",
     "language": "hu",
     "term": "Logisztikai API- és integrációs megoldások",
     "description": "Logisztikai API- és integrációs megoldások",
@@ -2966,14 +3294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232403"
+      ]
     }
   },
   {
     "term_id": "hu-166",
     "concept_id": "CID-166",
     "hierarchy_id": "5.3",
-    "unspsc_code": "",
+    "unspsc_code": "43000000",
     "language": "hu",
     "term": "Feltörekvő technológiák",
     "description": "Feltörekvő technológiák",
@@ -2984,14 +3314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43000000"
+      ]
     }
   },
   {
     "term_id": "hu-167",
     "concept_id": "CID-167",
     "hierarchy_id": "5.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "43232314",
     "language": "hu",
     "term": "Mesterséges intelligencia és adatelemzés a logisztikában",
     "description": "Mesterséges intelligencia és adatelemzés a logisztikában",
@@ -3002,14 +3334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43232314"
+      ]
     }
   },
   {
     "term_id": "hu-168",
     "concept_id": "CID-168",
     "hierarchy_id": "5.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "43233513",
     "language": "hu",
     "term": "Blockchain a logisztikában",
     "description": "Blockchain a logisztikában",
@@ -3020,14 +3354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43233513"
+      ]
     }
   },
   {
     "term_id": "hu-169",
     "concept_id": "CID-169",
     "hierarchy_id": "5.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "43000000",
     "language": "hu",
     "term": "Autonóm járművek a logisztikában",
     "description": "Autonóm járművek a logisztikában",
@@ -3038,14 +3374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:43000000"
+      ]
     }
   },
   {
     "term_id": "hu-170",
     "concept_id": "CID-170",
     "hierarchy_id": "6",
-    "unspsc_code": "",
+    "unspsc_code": "80000000",
     "language": "hu",
     "term": "Támogató és üzleti szolgáltatások",
     "description": "Támogató és üzleti szolgáltatások",
@@ -3056,14 +3394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80000000"
+      ]
     }
   },
   {
     "term_id": "hu-171",
     "concept_id": "CID-171",
     "hierarchy_id": "6.1",
-    "unspsc_code": "",
+    "unspsc_code": "80000000",
     "language": "hu",
     "term": "Tanácsadás és képzés",
     "description": "Tanácsadás és képzés",
@@ -3074,14 +3414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80000000"
+      ]
     }
   },
   {
     "term_id": "hu-172",
     "concept_id": "CID-172",
     "hierarchy_id": "6.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "80101704",
     "language": "hu",
     "term": "Logisztikai folyamatfejlesztés",
     "description": "Logisztikai folyamatfejlesztés",
@@ -3092,14 +3434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80101704"
+      ]
     }
   },
   {
     "term_id": "hu-173",
     "concept_id": "CID-173",
     "hierarchy_id": "6.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "86101704",
     "language": "hu",
     "term": "Logisztikai képzés és tanúsítás",
     "description": "Logisztikai képzés és tanúsítás",
@@ -3110,14 +3454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:86101704"
+      ]
     }
   },
   {
     "term_id": "hu-174",
     "concept_id": "CID-174",
     "hierarchy_id": "6.2",
-    "unspsc_code": "",
+    "unspsc_code": "84000000",
     "language": "hu",
     "term": "Pénzügyi és biztosítási szolgáltatások",
     "description": "Pénzügyi és biztosítási szolgáltatások",
@@ -3128,14 +3474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84000000"
+      ]
     }
   },
   {
     "term_id": "hu-175",
     "concept_id": "CID-175",
     "hierarchy_id": "6.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "84131504",
     "language": "hu",
     "term": "Rakománybiztosítás",
     "description": "Rakománybiztosítás",
@@ -3146,14 +3494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84131504"
+      ]
     }
   },
   {
     "term_id": "hu-176",
     "concept_id": "CID-176",
     "hierarchy_id": "6.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "84131607",
     "language": "hu",
     "term": "Felelősségbiztosítás",
     "description": "Felelősségbiztosítás",
@@ -3164,14 +3514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84131607"
+      ]
     }
   },
   {
     "term_id": "hu-177",
     "concept_id": "CID-177",
     "hierarchy_id": "6.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "84131503",
     "language": "hu",
     "term": "Jármű- és flottabiztosítás",
     "description": "Jármű- és flottabiztosítás",
@@ -3182,14 +3534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84131503"
+      ]
     }
   },
   {
     "term_id": "hu-178",
     "concept_id": "CID-178",
     "hierarchy_id": "6.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "84121600",
     "language": "hu",
     "term": "Kereskedelemfinanszírozás",
     "description": "Kereskedelemfinanszírozás",
@@ -3200,14 +3554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84121600"
+      ]
     }
   },
   {
     "term_id": "hu-179",
     "concept_id": "CID-179",
     "hierarchy_id": "6.2.5",
-    "unspsc_code": "",
+    "unspsc_code": "84121600",
     "language": "hu",
     "term": "Faktoring",
     "description": "Faktoring",
@@ -3218,14 +3574,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:84121600"
+      ]
     }
   },
   {
     "term_id": "hu-180",
     "concept_id": "CID-180",
     "hierarchy_id": "6.2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78141503",
     "language": "hu",
     "term": "Fuvarfizetés és audit",
     "description": "Fuvarfizetés és audit",
@@ -3236,14 +3594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141503"
+      ]
     }
   },
   {
     "term_id": "hu-181",
     "concept_id": "CID-181",
     "hierarchy_id": "6.3",
-    "unspsc_code": "",
+    "unspsc_code": "80120000",
     "language": "hu",
     "term": "Jogi szolgáltatások",
     "description": "Jogi szolgáltatások",
@@ -3254,14 +3614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80120000"
+      ]
     }
   },
   {
     "term_id": "hu-182",
     "concept_id": "CID-182",
     "hierarchy_id": "6.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "80121704",
     "language": "hu",
     "term": "Szállítási szerződési jog",
     "description": "Szállítási szerződési jog",
@@ -3272,14 +3634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80121704"
+      ]
     }
   },
   {
     "term_id": "hu-183",
     "concept_id": "CID-183",
     "hierarchy_id": "6.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "80121601",
     "language": "hu",
     "term": "Vám- és külkereskedelmi jog",
     "description": "Vám- és külkereskedelmi jog",
@@ -3290,14 +3654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80121601"
+      ]
     }
   },
   {
     "term_id": "hu-184",
     "concept_id": "CID-184",
     "hierarchy_id": "7",
-    "unspsc_code": "",
+    "unspsc_code": "77100000",
     "language": "hu",
     "term": "Fenntarthatóság és zöld logisztika",
     "description": "Fenntarthatóság és zöld logisztika",
@@ -3308,14 +3674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77100000"
+      ]
     }
   },
   {
     "term_id": "hu-185",
     "concept_id": "CID-185",
     "hierarchy_id": "7.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101500",
     "language": "hu",
     "term": "Szén- és kibocsátásértékelés",
     "description": "Szén- és kibocsátásértékelés",
@@ -3326,14 +3694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101500"
+      ]
     }
   },
   {
     "term_id": "hu-186",
     "concept_id": "CID-186",
     "hierarchy_id": "7.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101503",
     "language": "hu",
     "term": "Karbonlábnyom-számítás",
     "description": "Karbonlábnyom-számítás",
@@ -3344,14 +3714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101503"
+      ]
     }
   },
   {
     "term_id": "hu-187",
     "concept_id": "CID-187",
     "hierarchy_id": "7.2",
-    "unspsc_code": "",
+    "unspsc_code": "77101700",
     "language": "hu",
     "term": "Zöld megoldások",
     "description": "Zöld megoldások",
@@ -3362,14 +3734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101700"
+      ]
     }
   },
   {
     "term_id": "hu-188",
     "concept_id": "CID-188",
     "hierarchy_id": "7.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101704",
     "language": "hu",
     "term": "Fenntartható üzemanyag-megoldások",
     "description": "Fenntartható üzemanyag-megoldások",
@@ -3380,14 +3754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101704"
+      ]
     }
   },
   {
     "term_id": "hu-189",
     "concept_id": "CID-189",
     "hierarchy_id": "7.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "77101705",
     "language": "hu",
     "term": "Zöld logisztikai tanácsadás",
     "description": "Zöld logisztikai tanácsadás",
@@ -3398,14 +3774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101705"
+      ]
     }
   },
   {
     "term_id": "hu-190",
     "concept_id": "CID-190",
     "hierarchy_id": "7.3",
-    "unspsc_code": "",
+    "unspsc_code": "77101700",
     "language": "hu",
     "term": "Fenntartható csomagolás és hulladékcsökkentés",
     "description": "Fenntartható csomagolás és hulladékcsökkentés",
@@ -3416,14 +3794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101700"
+      ]
     }
   },
   {
     "term_id": "hu-191",
     "concept_id": "CID-191",
     "hierarchy_id": "7.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101704",
     "language": "hu",
     "term": "Hulladék- és csomagolásoptimalizálás",
     "description": "Hulladék- és csomagolásoptimalizálás",
@@ -3434,14 +3814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101704"
+      ]
     }
   },
   {
     "term_id": "hu-192",
     "concept_id": "CID-192",
     "hierarchy_id": "7.4",
-    "unspsc_code": "",
+    "unspsc_code": "77101600",
     "language": "hu",
     "term": "Környezeti tervezés és dekarbonizáció",
     "description": "Környezeti tervezés és dekarbonizáció",
@@ -3452,14 +3834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101600"
+      ]
     }
   },
   {
     "term_id": "hu-193",
     "concept_id": "CID-193",
     "hierarchy_id": "7.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101600",
     "language": "hu",
     "term": "Fenntarthatósági ütemterv és átállási tervezés",
     "description": "Fenntarthatósági ütemterv és átállási tervezés",
@@ -3470,14 +3854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101600"
+      ]
     }
   },
   {
     "term_id": "hu-194",
     "concept_id": "CID-194",
     "hierarchy_id": "7.5",
-    "unspsc_code": "",
+    "unspsc_code": "77101800",
     "language": "hu",
     "term": "Környezeti audit",
     "description": "Környezeti audit",
@@ -3488,14 +3874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101800"
+      ]
     }
   },
   {
     "term_id": "hu-195",
     "concept_id": "CID-195",
     "hierarchy_id": "7.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "77101800",
     "language": "hu",
     "term": "Környezeti audit és megfelelőségi felülvizsgálat",
     "description": "Környezeti audit és megfelelőségi felülvizsgálat",
@@ -3506,14 +3894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77101800"
+      ]
     }
   },
   {
     "term_id": "hu-196",
     "concept_id": "CID-196",
     "hierarchy_id": "7.6",
-    "unspsc_code": "",
+    "unspsc_code": "77102000",
     "language": "hu",
     "term": "Környezeti jelentéskészítés és közzététel",
     "description": "Környezeti jelentéskészítés és közzététel",
@@ -3524,14 +3914,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77102000"
+      ]
     }
   },
   {
     "term_id": "hu-197",
     "concept_id": "CID-197",
     "hierarchy_id": "7.6.1",
-    "unspsc_code": "",
+    "unspsc_code": "77102000",
     "language": "hu",
     "term": "Kibocsátási / fenntarthatósági jelentéskészítés",
     "description": "Kibocsátási / fenntarthatósági jelentéskészítés",
@@ -3542,14 +3934,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:77102000"
+      ]
     }
   },
   {
     "term_id": "hu-198",
     "concept_id": "CID-198",
     "hierarchy_id": "8",
-    "unspsc_code": "",
+    "unspsc_code": "78110000",
     "language": "hu",
     "term": "Személyszállítási és mobilitási szolgáltatások",
     "description": "Személyszállítási és mobilitási szolgáltatások",
@@ -3560,14 +3954,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78110000"
+      ]
     }
   },
   {
     "term_id": "hu-199",
     "concept_id": "CID-199",
     "hierarchy_id": "8.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111500",
     "language": "hu",
     "term": "Légi személyszállítás",
     "description": "Légi személyszállítás",
@@ -3578,14 +3974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111500"
+      ]
     }
   },
   {
     "term_id": "hu-200",
     "concept_id": "CID-200",
     "hierarchy_id": "8.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111501",
     "language": "hu",
     "term": "Helikopteres szolgáltatások",
     "description": "Helikopteres szolgáltatások",
@@ -3596,14 +3994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111501"
+      ]
     }
   },
   {
     "term_id": "hu-201",
     "concept_id": "CID-201",
     "hierarchy_id": "8.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111502",
     "language": "hu",
     "term": "Kereskedelmi repülőút",
     "description": "Kereskedelmi repülőút",
@@ -3614,14 +4014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111502"
+      ]
     }
   },
   {
     "term_id": "hu-202",
     "concept_id": "CID-202",
     "hierarchy_id": "8.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111503",
     "language": "hu",
     "term": "Charter repülőút",
     "description": "Charter repülőút",
@@ -3632,14 +4034,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111503"
+      ]
     }
   },
   {
     "term_id": "hu-203",
     "concept_id": "CID-203",
     "hierarchy_id": "8.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111504",
     "language": "hu",
     "term": "Légi városnéző szolgáltatás",
     "description": "Légi városnéző szolgáltatás",
@@ -3650,14 +4054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111504"
+      ]
     }
   },
   {
     "term_id": "hu-204",
     "concept_id": "CID-204",
     "hierarchy_id": "8.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111505",
     "language": "hu",
     "term": "Utasszállító repülőgép bérleti vagy lízingszolgáltatás",
     "description": "Utasszállító repülőgép bérleti vagy lízingszolgáltatás",
@@ -3668,14 +4074,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111505"
+      ]
     }
   },
   {
     "term_id": "hu-205",
     "concept_id": "CID-205",
     "hierarchy_id": "8.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111506",
     "language": "hu",
     "term": "Egészségügyi evakuálás légimentővel",
     "description": "Egészségügyi evakuálás légimentővel",
@@ -3686,14 +4094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111506"
+      ]
     }
   },
   {
     "term_id": "hu-206",
     "concept_id": "CID-206",
     "hierarchy_id": "8.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111600",
     "language": "hu",
     "term": "Vasúti személyszállítás",
     "description": "Vasúti személyszállítás",
@@ -3704,14 +4114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111600"
+      ]
     }
   },
   {
     "term_id": "hu-207",
     "concept_id": "CID-207",
     "hierarchy_id": "8.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111601",
     "language": "hu",
     "term": "Könnyűvasúti közlekedési szolgáltatások",
     "description": "Könnyűvasúti közlekedési szolgáltatások",
@@ -3722,14 +4134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111601"
+      ]
     }
   },
   {
     "term_id": "hu-208",
     "concept_id": "CID-208",
     "hierarchy_id": "8.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111602",
     "language": "hu",
     "term": "Metróközlekedés",
     "description": "Metróközlekedés",
@@ -3740,14 +4154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111602"
+      ]
     }
   },
   {
     "term_id": "hu-209",
     "concept_id": "CID-209",
     "hierarchy_id": "8.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111603",
     "language": "hu",
     "term": "Kontinentális / interkontinentális vasúti szolgáltatások",
     "description": "Kontinentális / interkontinentális vasúti szolgáltatások",
@@ -3758,14 +4174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111603"
+      ]
     }
   },
   {
     "term_id": "hu-210",
     "concept_id": "CID-210",
     "hierarchy_id": "8.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111700",
     "language": "hu",
     "term": "Vízi személyszállítás",
     "description": "Vízi személyszállítás",
@@ -3776,14 +4194,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111700"
+      ]
     }
   },
   {
     "term_id": "hu-211",
     "concept_id": "CID-211",
     "hierarchy_id": "8.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111701",
     "language": "hu",
     "term": "Vízi taxik",
     "description": "Vízi taxik",
@@ -3794,14 +4214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111701"
+      ]
     }
   },
   {
     "term_id": "hu-212",
     "concept_id": "CID-212",
     "hierarchy_id": "8.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111702",
     "language": "hu",
     "term": "Többnapos hajóutak szállással",
     "description": "Többnapos hajóutak szállással",
@@ -3812,14 +4234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111702"
+      ]
     }
   },
   {
     "term_id": "hu-213",
     "concept_id": "CID-213",
     "hierarchy_id": "8.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111703",
     "language": "hu",
     "term": "Hajós városnéző kirándulások",
     "description": "Hajós városnéző kirándulások",
@@ -3830,14 +4254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111703"
+      ]
     }
   },
   {
     "term_id": "hu-214",
     "concept_id": "CID-214",
     "hierarchy_id": "8.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111704",
     "language": "hu",
     "term": "Vízi jármű bérleti vagy lízingszolgáltatás",
     "description": "Vízi jármű bérleti vagy lízingszolgáltatás",
@@ -3848,14 +4274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111704"
+      ]
     }
   },
   {
     "term_id": "hu-215",
     "concept_id": "CID-215",
     "hierarchy_id": "8.3.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111705",
     "language": "hu",
     "term": "Offshore platform személyszállítási szolgáltatás",
     "description": "Offshore platform személyszállítási szolgáltatás",
@@ -3866,14 +4294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111705"
+      ]
     }
   },
   {
     "term_id": "hu-216",
     "concept_id": "CID-216",
     "hierarchy_id": "8.3.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111706",
     "language": "hu",
     "term": "Part menti és transzóceáni személyszállító komp",
     "description": "Part menti és transzóceáni személyszállító komp",
@@ -3884,14 +4314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111706"
+      ]
     }
   },
   {
     "term_id": "hu-217",
     "concept_id": "CID-217",
     "hierarchy_id": "8.3.7",
-    "unspsc_code": "",
+    "unspsc_code": "78111707",
     "language": "hu",
     "term": "Belvízi személyszállító komp",
     "description": "Belvízi személyszállító komp",
@@ -3902,14 +4334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111707"
+      ]
     }
   },
   {
     "term_id": "hu-218",
     "concept_id": "CID-218",
     "hierarchy_id": "8.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111800",
     "language": "hu",
     "term": "Közúti személyszállítás",
     "description": "Közúti személyszállítás",
@@ -3920,14 +4354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111800"
+      ]
     }
   },
   {
     "term_id": "hu-219",
     "concept_id": "CID-219",
     "hierarchy_id": "8.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111802",
     "language": "hu",
     "term": "Menetrend szerinti buszjáratok",
     "description": "Menetrend szerinti buszjáratok",
@@ -3938,14 +4374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111802"
+      ]
     }
   },
   {
     "term_id": "hu-220",
     "concept_id": "CID-220",
     "hierarchy_id": "8.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111803",
     "language": "hu",
     "term": "Charter buszszolgáltatások",
     "description": "Charter buszszolgáltatások",
@@ -3956,14 +4394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111803"
+      ]
     }
   },
   {
     "term_id": "hu-221",
     "concept_id": "CID-221",
     "hierarchy_id": "8.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111804",
     "language": "hu",
     "term": "Taxiszolgáltatások",
     "description": "Taxiszolgáltatások",
@@ -3974,14 +4414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111804"
+      ]
     }
   },
   {
     "term_id": "hu-222",
     "concept_id": "CID-222",
     "hierarchy_id": "8.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111807",
     "language": "hu",
     "term": "Parkolási díjak",
     "description": "Parkolási díjak",
@@ -3992,14 +4434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111807"
+      ]
     }
   },
   {
     "term_id": "hu-223",
     "concept_id": "CID-223",
     "hierarchy_id": "8.4.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111808",
     "language": "hu",
     "term": "Járműbérlés",
     "description": "Járműbérlés",
@@ -4010,14 +4454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111808"
+      ]
     }
   },
   {
     "term_id": "hu-224",
     "concept_id": "CID-224",
     "hierarchy_id": "8.4.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111809",
     "language": "hu",
     "term": "Szedán / kupé / kombi gépjármű lízing",
     "description": "Szedán / kupé / kombi gépjármű lízing",
@@ -4028,14 +4474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111809"
+      ]
     }
   },
   {
     "term_id": "hu-225",
     "concept_id": "CID-225",
     "hierarchy_id": "8.4.7",
-    "unspsc_code": "",
+    "unspsc_code": "78111810",
     "language": "hu",
     "term": "Limuzin vagy reprezentatív autó szolgáltatás",
     "description": "Limuzin vagy reprezentatív autó szolgáltatás",
@@ -4046,14 +4494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111810"
+      ]
     }
   },
   {
     "term_id": "hu-226",
     "concept_id": "CID-226",
     "hierarchy_id": "8.4.8",
-    "unspsc_code": "",
+    "unspsc_code": "78111811",
     "language": "hu",
     "term": "Könnyű teherautó / SUV lízing",
     "description": "Könnyű teherautó / SUV lízing",
@@ -4064,14 +4514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111811"
+      ]
     }
   },
   {
     "term_id": "hu-227",
     "concept_id": "CID-227",
     "hierarchy_id": "8.4.9",
-    "unspsc_code": "",
+    "unspsc_code": "78111812",
     "language": "hu",
     "term": "Személyszállító furgon / minivan lízing",
     "description": "Személyszállító furgon / minivan lízing",
@@ -4082,14 +4534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111812"
+      ]
     }
   },
   {
     "term_id": "hu-228",
     "concept_id": "CID-228",
     "hierarchy_id": "8.4.10",
-    "unspsc_code": "",
+    "unspsc_code": "78111813",
     "language": "hu",
     "term": "Szárazföldi városnéző szolgáltatás",
     "description": "Szárazföldi városnéző szolgáltatás",
@@ -4100,14 +4554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111813"
+      ]
     }
   },
   {
     "term_id": "hu-229",
     "concept_id": "CID-229",
     "hierarchy_id": "8.4.11",
-    "unspsc_code": "",
+    "unspsc_code": "78111815",
     "language": "hu",
     "term": "Egészségügyi evakuálás mentőautóval",
     "description": "Egészségügyi evakuálás mentőautóval",
@@ -4118,14 +4574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111815"
+      ]
     }
   },
   {
     "term_id": "hu-230",
     "concept_id": "CID-230",
     "hierarchy_id": "8.5",
-    "unspsc_code": "",
+    "unspsc_code": "78112000",
     "language": "hu",
     "term": "Intermodális személyszállítási szolgáltatások",
     "description": "Intermodális személyszállítási szolgáltatások",
@@ -4136,14 +4594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78112000"
+      ]
     }
   },
   {
     "term_id": "hu-231",
     "concept_id": "CID-231",
     "hierarchy_id": "8.5.1",
-    "unspsc_code": "",
+    "unspsc_code": "78112001",
     "language": "hu",
     "term": "Vegyes módú városi és elővárosi személyszállítás",
     "description": "Vegyes módú városi és elővárosi személyszállítás",
@@ -4154,14 +4614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78112001"
+      ]
     }
   },
   {
     "term_id": "hu-232",
     "concept_id": "CID-232",
     "hierarchy_id": "8.6",
-    "unspsc_code": "",
+    "unspsc_code": "78111900",
     "language": "hu",
     "term": "Űrbeli személyszállítás",
     "description": "Űrbeli személyszállítás",
@@ -4172,14 +4634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111900"
+      ]
     }
   },
   {
     "term_id": "hu-233",
     "concept_id": "CID-233",
     "hierarchy_id": "9",
-    "unspsc_code": "",
+    "unspsc_code": "25000000",
     "language": "hu",
     "term": "Szállítási eszközök, járművek és vízi járművek",
     "description": "Szállítási eszközök, járművek és vízi járművek",
@@ -4190,14 +4654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25000000"
+      ]
     }
   },
   {
     "term_id": "hu-234",
     "concept_id": "CID-234",
     "hierarchy_id": "9.1",
-    "unspsc_code": "",
+    "unspsc_code": "25100000",
     "language": "hu",
     "term": "Gépjárművek",
     "description": "Gépjárművek",
@@ -4208,14 +4674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25100000"
+      ]
     }
   },
   {
     "term_id": "hu-235",
     "concept_id": "CID-235",
     "hierarchy_id": "9.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25101500",
     "language": "hu",
     "term": "Személyszállító gépjárművek",
     "description": "Személyszállító gépjárművek",
@@ -4226,14 +4694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101500"
+      ]
     }
   },
   {
     "term_id": "hu-236",
     "concept_id": "CID-236",
     "hierarchy_id": "9.1.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25101501",
     "language": "hu",
     "term": "Minibuszok",
     "description": "Minibuszok",
@@ -4244,14 +4714,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101501"
+      ]
     }
   },
   {
     "term_id": "hu-237",
     "concept_id": "CID-237",
     "hierarchy_id": "9.1.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25101502",
     "language": "hu",
     "term": "Buszok",
     "description": "Buszok",
@@ -4262,14 +4734,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101502"
+      ]
     }
   },
   {
     "term_id": "hu-238",
     "concept_id": "CID-238",
     "hierarchy_id": "9.1.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "25101503",
     "language": "hu",
     "term": "Személygépkocsik / autók",
     "description": "Személygépkocsik / autók",
@@ -4280,14 +4754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101503"
+      ]
     }
   },
   {
     "term_id": "hu-239",
     "concept_id": "CID-239",
     "hierarchy_id": "9.1.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "25101504",
     "language": "hu",
     "term": "Kombi személyautók",
     "description": "Kombi személyautók",
@@ -4298,14 +4774,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101504"
+      ]
     }
   },
   {
     "term_id": "hu-240",
     "concept_id": "CID-240",
     "hierarchy_id": "9.1.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "25101505",
     "language": "hu",
     "term": "Minivanok vagy furgonok",
     "description": "Minivanok vagy furgonok",
@@ -4316,14 +4794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101505"
+      ]
     }
   },
   {
     "term_id": "hu-241",
     "concept_id": "CID-241",
     "hierarchy_id": "9.1.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "25101506",
     "language": "hu",
     "term": "Limuzinok",
     "description": "Limuzinok",
@@ -4334,14 +4814,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101506"
+      ]
     }
   },
   {
     "term_id": "hu-242",
     "concept_id": "CID-242",
     "hierarchy_id": "9.1.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "25101507",
     "language": "hu",
     "term": "Könnyű teherautók vagy SUV-k",
     "description": "Könnyű teherautók vagy SUV-k",
@@ -4352,14 +4834,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101507"
+      ]
     }
   },
   {
     "term_id": "hu-243",
     "concept_id": "CID-243",
     "hierarchy_id": "9.1.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "25101509",
     "language": "hu",
     "term": "Elektromos meghajtású járművek",
     "description": "Elektromos meghajtású járművek",
@@ -4370,14 +4854,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101509"
+      ]
     }
   },
   {
     "term_id": "hu-244",
     "concept_id": "CID-244",
     "hierarchy_id": "9.1.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "25101510",
     "language": "hu",
     "term": "Páncélozott gépjárművek",
     "description": "Páncélozott gépjárművek",
@@ -4388,14 +4874,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101510"
+      ]
     }
   },
   {
     "term_id": "hu-245",
     "concept_id": "CID-245",
     "hierarchy_id": "9.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25101800",
     "language": "hu",
     "term": "Motoros kétkerekű járművek",
     "description": "Motoros kétkerekű járművek",
@@ -4406,14 +4894,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101800"
+      ]
     }
   },
   {
     "term_id": "hu-246",
     "concept_id": "CID-246",
     "hierarchy_id": "9.1.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25101801",
     "language": "hu",
     "term": "Motorkerékpárok",
     "description": "Motorkerékpárok",
@@ -4424,14 +4914,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101801"
+      ]
     }
   },
   {
     "term_id": "hu-247",
     "concept_id": "CID-247",
     "hierarchy_id": "9.1.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25101802",
     "language": "hu",
     "term": "Robogók",
     "description": "Robogók",
@@ -4442,14 +4934,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101802"
+      ]
     }
   },
   {
     "term_id": "hu-248",
     "concept_id": "CID-248",
     "hierarchy_id": "9.1.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "25101803",
     "language": "hu",
     "term": "Segédmotoros kerékpárok",
     "description": "Segédmotoros kerékpárok",
@@ -4460,14 +4954,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25101803"
+      ]
     }
   },
   {
     "term_id": "hu-249",
     "concept_id": "CID-249",
     "hierarchy_id": "9.2",
-    "unspsc_code": "",
+    "unspsc_code": "25110000",
     "language": "hu",
     "term": "tengeri hajók",
     "description": "tengeri hajók",
@@ -4478,14 +4974,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25110000"
+      ]
     }
   },
   {
     "term_id": "hu-250",
     "concept_id": "CID-250",
     "hierarchy_id": "9.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25111500",
     "language": "hu",
     "term": "Kereskedelmi hajók",
     "description": "Kereskedelmi hajók",
@@ -4496,14 +4994,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111500"
+      ]
     }
   },
   {
     "term_id": "hu-251",
     "concept_id": "CID-251",
     "hierarchy_id": "9.2.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25111503",
     "language": "hu",
     "term": "Teher- vagy konténerszállító hajók",
     "description": "Teher- vagy konténerszállító hajók",
@@ -4514,14 +5014,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111503"
+      ]
     }
   },
   {
     "term_id": "hu-252",
     "concept_id": "CID-252",
     "hierarchy_id": "9.2.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25111505",
     "language": "hu",
     "term": "Tankhajók",
     "description": "Tankhajók",
@@ -4532,14 +5034,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111505"
+      ]
     }
   },
   {
     "term_id": "hu-253",
     "concept_id": "CID-253",
     "hierarchy_id": "9.2.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "25111506",
     "language": "hu",
     "term": "Vontatóhajók",
     "description": "Vontatóhajók",
@@ -4550,14 +5054,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111506"
+      ]
     }
   },
   {
     "term_id": "hu-254",
     "concept_id": "CID-254",
     "hierarchy_id": "9.2.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "25111507",
     "language": "hu",
     "term": "Uszályok",
     "description": "Uszályok",
@@ -4568,14 +5074,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111507"
+      ]
     }
   },
   {
     "term_id": "hu-255",
     "concept_id": "CID-255",
     "hierarchy_id": "9.2.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "25111508",
     "language": "hu",
     "term": "Személy- vagy autós kompok",
     "description": "Személy- vagy autós kompok",
@@ -4586,14 +5094,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111508"
+      ]
     }
   },
   {
     "term_id": "hu-256",
     "concept_id": "CID-256",
     "hierarchy_id": "9.2.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "25111509",
     "language": "hu",
     "term": "Tengerjáró hajók",
     "description": "Tengerjáró hajók",
@@ -4604,14 +5114,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111509"
+      ]
     }
   },
   {
     "term_id": "hu-257",
     "concept_id": "CID-257",
     "hierarchy_id": "9.2.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "25111511",
     "language": "hu",
     "term": "Olaj- vagy gázipari személyzeti hajók",
     "description": "Olaj- vagy gázipari személyzeti hajók",
@@ -4622,14 +5134,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111511"
+      ]
     }
   },
   {
     "term_id": "hu-258",
     "concept_id": "CID-258",
     "hierarchy_id": "9.2.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "25111512",
     "language": "hu",
     "term": "Olaj- vagy gázipari munkahajók",
     "description": "Olaj- vagy gázipari munkahajók",
@@ -4640,14 +5154,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111512"
+      ]
     }
   },
   {
     "term_id": "hu-259",
     "concept_id": "CID-259",
     "hierarchy_id": "9.2.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "25111513",
     "language": "hu",
     "term": "Szeizmikus kutatóhajók",
     "description": "Szeizmikus kutatóhajók",
@@ -4658,14 +5174,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111513"
+      ]
     }
   },
   {
     "term_id": "hu-260",
     "concept_id": "CID-260",
     "hierarchy_id": "9.2.1.10",
-    "unspsc_code": "",
+    "unspsc_code": "25111514",
     "language": "hu",
     "term": "Jégtörők",
     "description": "Jégtörők",
@@ -4676,14 +5194,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111514"
+      ]
     }
   },
   {
     "term_id": "hu-261",
     "concept_id": "CID-261",
     "hierarchy_id": "9.2.1.11",
-    "unspsc_code": "",
+    "unspsc_code": "25111515",
     "language": "hu",
     "term": "Cseppfolyós gázszállító hajók",
     "description": "Cseppfolyós gázszállító hajók",
@@ -4694,14 +5214,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111515"
+      ]
     }
   },
   {
     "term_id": "hu-262",
     "concept_id": "CID-262",
     "hierarchy_id": "9.2.1.12",
-    "unspsc_code": "",
+    "unspsc_code": "25111522",
     "language": "hu",
     "term": "Vegyi anyag szállító tankerhajók",
     "description": "Vegyi anyag szállító tankerhajók",
@@ -4712,14 +5234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111522"
+      ]
     }
   },
   {
     "term_id": "hu-263",
     "concept_id": "CID-263",
     "hierarchy_id": "9.2.1.13",
-    "unspsc_code": "",
+    "unspsc_code": "25111524",
     "language": "hu",
     "term": "Ömlesztettáru-szállító hajók",
     "description": "Ömlesztettáru-szállító hajók",
@@ -4730,14 +5254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111524"
+      ]
     }
   },
   {
     "term_id": "hu-264",
     "concept_id": "CID-264",
     "hierarchy_id": "9.2.1.14",
-    "unspsc_code": "",
+    "unspsc_code": "25111525",
     "language": "hu",
     "term": "Autószállító / RoRo hajók",
     "description": "Autószállító / RoRo hajók",
@@ -4748,14 +5274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111525"
+      ]
     }
   },
   {
     "term_id": "hu-265",
     "concept_id": "CID-265",
     "hierarchy_id": "9.2.1.15",
-    "unspsc_code": "",
+    "unspsc_code": "25111530",
     "language": "hu",
     "term": "Kalauzhajók",
     "description": "Kalauzhajók",
@@ -4766,14 +5294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111530"
+      ]
     }
   },
   {
     "term_id": "hu-266",
     "concept_id": "CID-266",
     "hierarchy_id": "9.2.1.16",
-    "unspsc_code": "",
+    "unspsc_code": "25111534",
     "language": "hu",
     "term": "Kutatóhajók",
     "description": "Kutatóhajók",
@@ -4784,14 +5314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111534"
+      ]
     }
   },
   {
     "term_id": "hu-267",
     "concept_id": "CID-267",
     "hierarchy_id": "9.2.1.17",
-    "unspsc_code": "",
+    "unspsc_code": "25111535",
     "language": "hu",
     "term": "Kábel-fektető hajók",
     "description": "Kábel-fektető hajók",
@@ -4802,14 +5334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111535"
+      ]
     }
   },
   {
     "term_id": "hu-268",
     "concept_id": "CID-268",
     "hierarchy_id": "9.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25111800",
     "language": "hu",
     "term": "Szabadidős vízi járművek",
     "description": "Szabadidős vízi járművek",
@@ -4820,14 +5354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111800"
+      ]
     }
   },
   {
     "term_id": "hu-269",
     "concept_id": "CID-269",
     "hierarchy_id": "9.2.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25111807",
     "language": "hu",
     "term": "Dingik",
     "description": "Dingik",
@@ -4838,14 +5374,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111807"
+      ]
     }
   },
   {
     "term_id": "hu-270",
     "concept_id": "CID-270",
     "hierarchy_id": "9.2.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25111808",
     "language": "hu",
     "term": "Jachtok",
     "description": "Jachtok",
@@ -4856,14 +5394,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111808"
+      ]
     }
   },
   {
     "term_id": "hu-271",
     "concept_id": "CID-271",
     "hierarchy_id": "9.2.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "25111809",
     "language": "hu",
     "term": "Skiffek",
     "description": "Skiffek",
@@ -4874,14 +5414,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25111809"
+      ]
     }
   },
   {
     "term_id": "hu-272",
     "concept_id": "CID-272",
     "hierarchy_id": "9.3",
-    "unspsc_code": "",
+    "unspsc_code": "25120000",
     "language": "hu",
     "term": "Vasúti és villamosipari gépek és berendezések",
     "description": "Vasúti és villamosipari gépek és berendezések",
@@ -4892,14 +5434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25120000"
+      ]
     }
   },
   {
     "term_id": "hu-273",
     "concept_id": "CID-273",
     "hierarchy_id": "9.4",
-    "unspsc_code": "",
+    "unspsc_code": "25130000",
     "language": "hu",
     "term": "Légi járművek",
     "description": "Légi járművek",
@@ -4910,14 +5454,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25130000"
+      ]
     }
   },
   {
     "term_id": "hu-274",
     "concept_id": "CID-274",
     "hierarchy_id": "9.4.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131500",
     "language": "hu",
     "term": "Motoros merevszárnyú repülőgépek",
     "description": "Motoros merevszárnyú repülőgépek",
@@ -4928,14 +5474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131500"
+      ]
     }
   },
   {
     "term_id": "hu-275",
     "concept_id": "CID-275",
     "hierarchy_id": "9.4.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131501",
     "language": "hu",
     "term": "Merevszárnyú mezőgazdasági repülőgépek",
     "description": "Merevszárnyú mezőgazdasági repülőgépek",
@@ -4946,14 +5494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131501"
+      ]
     }
   },
   {
     "term_id": "hu-276",
     "concept_id": "CID-276",
     "hierarchy_id": "9.4.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131502",
     "language": "hu",
     "term": "Légcsavaros teherszállító repülőgépek",
     "description": "Légcsavaros teherszállító repülőgépek",
@@ -4964,14 +5514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131502"
+      ]
     }
   },
   {
     "term_id": "hu-277",
     "concept_id": "CID-277",
     "hierarchy_id": "9.4.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "25131503",
     "language": "hu",
     "term": "Vízirepülőgépek",
     "description": "Vízirepülőgépek",
@@ -4982,14 +5534,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131503"
+      ]
     }
   },
   {
     "term_id": "hu-278",
     "concept_id": "CID-278",
     "hierarchy_id": "9.4.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "25131504",
     "language": "hu",
     "term": "Kereskedelmi utasszállító légcsavaros repülőgépek",
     "description": "Kereskedelmi utasszállító légcsavaros repülőgépek",
@@ -5000,14 +5554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131504"
+      ]
     }
   },
   {
     "term_id": "hu-279",
     "concept_id": "CID-279",
     "hierarchy_id": "9.4.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "25131505",
     "language": "hu",
     "term": "Teherszállító sugárhajtású repülőgépek",
     "description": "Teherszállító sugárhajtású repülőgépek",
@@ -5018,14 +5574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131505"
+      ]
     }
   },
   {
     "term_id": "hu-280",
     "concept_id": "CID-280",
     "hierarchy_id": "9.4.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "25131506",
     "language": "hu",
     "term": "Kereskedelmi utasszállító sugárhajtású repülőgépek",
     "description": "Kereskedelmi utasszállító sugárhajtású repülőgépek",
@@ -5036,14 +5594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131506"
+      ]
     }
   },
   {
     "term_id": "hu-281",
     "concept_id": "CID-281",
     "hierarchy_id": "9.4.1.7",
-    "unspsc_code": "",
+    "unspsc_code": "25131507",
     "language": "hu",
     "term": "Magán- vagy üzleti célú légcsavaros repülőgépek",
     "description": "Magán- vagy üzleti célú légcsavaros repülőgépek",
@@ -5054,14 +5614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131507"
+      ]
     }
   },
   {
     "term_id": "hu-282",
     "concept_id": "CID-282",
     "hierarchy_id": "9.4.1.8",
-    "unspsc_code": "",
+    "unspsc_code": "25131508",
     "language": "hu",
     "term": "Magán- vagy üzleti célú sugárhajtású repülőgépek",
     "description": "Magán- vagy üzleti célú sugárhajtású repülőgépek",
@@ -5072,14 +5634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131508"
+      ]
     }
   },
   {
     "term_id": "hu-283",
     "concept_id": "CID-283",
     "hierarchy_id": "9.4.1.9",
-    "unspsc_code": "",
+    "unspsc_code": "25131513",
     "language": "hu",
     "term": "Repülésellenőrző repülőgépek",
     "description": "Repülésellenőrző repülőgépek",
@@ -5090,14 +5654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131513"
+      ]
     }
   },
   {
     "term_id": "hu-284",
     "concept_id": "CID-284",
     "hierarchy_id": "9.4.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131600",
     "language": "hu",
     "term": "Polgári és kereskedelmi forgószárnyas légijárművek",
     "description": "Polgári és kereskedelmi forgószárnyas légijárművek",
@@ -5108,14 +5674,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131600"
+      ]
     }
   },
   {
     "term_id": "hu-285",
     "concept_id": "CID-285",
     "hierarchy_id": "9.4.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131601",
     "language": "hu",
     "term": "Személyszállító helikopterek",
     "description": "Személyszállító helikopterek",
@@ -5126,14 +5694,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131601"
+      ]
     }
   },
   {
     "term_id": "hu-286",
     "concept_id": "CID-286",
     "hierarchy_id": "9.4.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131602",
     "language": "hu",
     "term": "Teherszállító helikopterek",
     "description": "Teherszállító helikopterek",
@@ -5144,14 +5714,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131602"
+      ]
     }
   },
   {
     "term_id": "hu-287",
     "concept_id": "CID-287",
     "hierarchy_id": "9.4.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "25131604",
     "language": "hu",
     "term": "Egészségügyi vagy mentőhelikopterek",
     "description": "Egészségügyi vagy mentőhelikopterek",
@@ -5162,14 +5734,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131604"
+      ]
     }
   },
   {
     "term_id": "hu-288",
     "concept_id": "CID-288",
     "hierarchy_id": "9.4.3",
-    "unspsc_code": "",
+    "unspsc_code": "25131800",
     "language": "hu",
     "term": "Speciális rendeltetésű repülőgépek",
     "description": "Speciális rendeltetésű repülőgépek",
@@ -5180,14 +5754,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131800"
+      ]
     }
   },
   {
     "term_id": "hu-289",
     "concept_id": "CID-289",
     "hierarchy_id": "9.4.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "25131801",
     "language": "hu",
     "term": "Léghajók",
     "description": "Léghajók",
@@ -5198,14 +5774,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131801"
+      ]
     }
   },
   {
     "term_id": "hu-290",
     "concept_id": "CID-290",
     "hierarchy_id": "9.4.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "25131802",
     "language": "hu",
     "term": "Modellrepülőgépek",
     "description": "Modellrepülőgépek",
@@ -5216,14 +5794,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25131802"
+      ]
     }
   },
   {
     "term_id": "hu-291",
     "concept_id": "CID-291",
     "hierarchy_id": "9.4.4",
-    "unspsc_code": "",
+    "unspsc_code": "25132000",
     "language": "hu",
     "term": "Szabadidős repülőgépek",
     "description": "Szabadidős repülőgépek",
@@ -5234,14 +5814,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25132000"
+      ]
     }
   },
   {
     "term_id": "hu-292",
     "concept_id": "CID-292",
     "hierarchy_id": "9.5",
-    "unspsc_code": "",
+    "unspsc_code": "25150000",
     "language": "hu",
     "term": "Űrhajók",
     "description": "Űrhajók",
@@ -5252,14 +5834,16 @@
       "is_compound": false,
       "morphology": "noun",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25150000"
+      ]
     }
   },
   {
     "term_id": "hu-293",
     "concept_id": "CID-293",
     "hierarchy_id": "9.6",
-    "unspsc_code": "",
+    "unspsc_code": "25190000",
     "language": "hu",
     "term": "Szállítási szolgáltatási berendezések",
     "description": "Szállítási szolgáltatási berendezések",
@@ -5270,7 +5854,9 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:25190000"
+      ]
     }
   },
   {
@@ -5439,7 +6025,7 @@
     "term_id": "hu-303",
     "concept_id": "CID-303",
     "hierarchy_id": "10.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78141900",
     "language": "hu",
     "term": "Konténerbérlés",
     "description": "Konténerbérlés",
@@ -5450,14 +6036,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141900"
+      ]
     }
   },
   {
     "term_id": "hu-304",
     "concept_id": "CID-304",
     "hierarchy_id": "10.2.2",
-    "unspsc_code": "",
+    "unspsc_code": "78141903",
     "language": "hu",
     "term": "Intermodális konténerbérlés",
     "description": "Intermodális konténerbérlés",
@@ -5468,14 +6056,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78141903"
+      ]
     }
   },
   {
     "term_id": "hu-305",
     "concept_id": "CID-305",
     "hierarchy_id": "10.2.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111808",
     "language": "hu",
     "term": "Járműbérlés szolgáltatások",
     "description": "Járműbérlés szolgáltatások",
@@ -5486,14 +6076,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111808"
+      ]
     }
   },
   {
     "term_id": "hu-306",
     "concept_id": "CID-306",
     "hierarchy_id": "10.2.4",
-    "unspsc_code": "",
+    "unspsc_code": "78111704",
     "language": "hu",
     "term": "Vízi jármű bérlés",
     "description": "Vízi jármű bérlés",
@@ -5504,14 +6096,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111704"
+      ]
     }
   },
   {
     "term_id": "hu-307",
     "concept_id": "CID-307",
     "hierarchy_id": "10.2.5",
-    "unspsc_code": "",
+    "unspsc_code": "78111505",
     "language": "hu",
     "term": "Utasszállító repülőgép bérlése vagy lízingje",
     "description": "Utasszállító repülőgép bérlése vagy lízingje",
@@ -5522,14 +6116,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111505"
+      ]
     }
   },
   {
     "term_id": "hu-308",
     "concept_id": "CID-308",
     "hierarchy_id": "10.2.6",
-    "unspsc_code": "",
+    "unspsc_code": "78142001",
     "language": "hu",
     "term": "Teherszállító repülőgép bérlése kezelővel szolgáltatások",
     "description": "Teherszállító repülőgép bérlése kezelővel szolgáltatások",
@@ -5540,14 +6136,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142001"
+      ]
     }
   },
   {
     "term_id": "hu-309",
     "concept_id": "CID-309",
     "hierarchy_id": "10.2.7",
-    "unspsc_code": "",
+    "unspsc_code": "78142002",
     "language": "hu",
     "term": "Teherszállító hajó bérlése kezelővel",
     "description": "Teherszállító hajó bérlése kezelővel",
@@ -5558,14 +6156,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142002"
+      ]
     }
   },
   {
     "term_id": "hu-310",
     "concept_id": "CID-310",
     "hierarchy_id": "10.2.8",
-    "unspsc_code": "",
+    "unspsc_code": "78142003",
     "language": "hu",
     "term": "Parti / óceánjáró teherszállító hajó bérlése kezelővel",
     "description": "Parti / óceánjáró teherszállító hajó bérlése kezelővel",
@@ -5576,14 +6176,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142003"
+      ]
     }
   },
   {
     "term_id": "hu-311",
     "concept_id": "CID-311",
     "hierarchy_id": "10.2.9",
-    "unspsc_code": "",
+    "unspsc_code": "78142004",
     "language": "hu",
     "term": "Teherautó bérlése kezelővel szolgáltatások",
     "description": "Teherautó bérlése kezelővel szolgáltatások",
@@ -5594,7 +6196,9 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142004"
+      ]
     }
   },
   {
@@ -5619,7 +6223,7 @@
     "term_id": "hu-313",
     "concept_id": "CID-313",
     "hierarchy_id": "10.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78111809",
     "language": "hu",
     "term": "Sedan / kupé / kombi lízing",
     "description": "Sedan / kupé / kombi lízing",
@@ -5630,14 +6234,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111809"
+      ]
     }
   },
   {
     "term_id": "hu-314",
     "concept_id": "CID-314",
     "hierarchy_id": "10.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78111811",
     "language": "hu",
     "term": "Könnyű teherautó / SUV lízing lízingszolgáltatások",
     "description": "Könnyű teherautó / SUV lízing lízingszolgáltatások",
@@ -5648,14 +6254,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111811"
+      ]
     }
   },
   {
     "term_id": "hu-315",
     "concept_id": "CID-315",
     "hierarchy_id": "10.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78111812",
     "language": "hu",
     "term": "Személyszállító furgon / minivan lízing lízingszolgáltatások",
     "description": "Személyszállító furgon / minivan lízing lízingszolgáltatások",
@@ -5666,14 +6274,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78111812"
+      ]
     }
   },
   {
     "term_id": "hu-316",
     "concept_id": "CID-316",
     "hierarchy_id": "10.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78142000",
     "language": "hu",
     "term": "Szállítóeszköz lízing",
     "description": "Szállítóeszköz lízing",
@@ -5684,14 +6294,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78142000"
+      ]
     }
   },
   {
     "term_id": "hu-317",
     "concept_id": "CID-317",
     "hierarchy_id": "11",
-    "unspsc_code": "",
+    "unspsc_code": "78180000",
     "language": "hu",
     "term": "Karbantartás, üzemanyag-feltöltés, tárolás és támogatás",
     "description": "Karbantartás, üzemanyag-feltöltés, tárolás és támogatás",
@@ -5702,14 +6314,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78180000"
+      ]
     }
   },
   {
     "term_id": "hu-318",
     "concept_id": "CID-318",
     "hierarchy_id": "11.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181500",
     "language": "hu",
     "term": "Járműkarbantartás és javítás",
     "description": "Járműkarbantartás és javítás",
@@ -5720,14 +6334,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181500"
+      ]
     }
   },
   {
     "term_id": "hu-319",
     "concept_id": "CID-319",
     "hierarchy_id": "11.1.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181501",
     "language": "hu",
     "term": "Karosszériajavítási vagy fényezési szolgáltatás",
     "description": "Karosszériajavítási vagy fényezési szolgáltatás",
@@ -5738,14 +6354,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181501"
+      ]
     }
   },
   {
     "term_id": "hu-320",
     "concept_id": "CID-320",
     "hierarchy_id": "11.1.2",
-    "unspsc_code": "",
+    "unspsc_code": "78181505",
     "language": "hu",
     "term": "Járművizsgálati szolgáltatás",
     "description": "Járművizsgálati szolgáltatás",
@@ -5756,14 +6374,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181505"
+      ]
     }
   },
   {
     "term_id": "hu-321",
     "concept_id": "CID-321",
     "hierarchy_id": "11.1.3",
-    "unspsc_code": "",
+    "unspsc_code": "78181506",
     "language": "hu",
     "term": "Járműüveg-csere szolgáltatás",
     "description": "Járműüveg-csere szolgáltatás",
@@ -5774,14 +6394,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181506"
+      ]
     }
   },
   {
     "term_id": "hu-322",
     "concept_id": "CID-322",
     "hierarchy_id": "11.1.4",
-    "unspsc_code": "",
+    "unspsc_code": "78181507",
     "language": "hu",
     "term": "Személyautók és könnyű teherautók karbantartása és javítása",
     "description": "Személyautók és könnyű teherautók karbantartása és javítása",
@@ -5792,14 +6414,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181507"
+      ]
     }
   },
   {
     "term_id": "hu-323",
     "concept_id": "CID-323",
     "hierarchy_id": "11.1.5",
-    "unspsc_code": "",
+    "unspsc_code": "78181508",
     "language": "hu",
     "term": "Nehéz teherautók karbantartása és javítása",
     "description": "Nehéz teherautók karbantartása és javítása",
@@ -5810,14 +6434,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181508"
+      ]
     }
   },
   {
     "term_id": "hu-324",
     "concept_id": "CID-324",
     "hierarchy_id": "11.1.6",
-    "unspsc_code": "",
+    "unspsc_code": "78181509",
     "language": "hu",
     "term": "Vasúti kocsi ellenőrzési és karbantartási szolgáltatás",
     "description": "Vasúti kocsi ellenőrzési és karbantartási szolgáltatás",
@@ -5828,14 +6454,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181509"
+      ]
     }
   },
   {
     "term_id": "hu-325",
     "concept_id": "CID-325",
     "hierarchy_id": "11.2",
-    "unspsc_code": "",
+    "unspsc_code": "78181600",
     "language": "hu",
     "term": "Karosszéria- és fényezési szolgáltatások",
     "description": "Karosszéria- és fényezési szolgáltatások",
@@ -5846,14 +6474,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181600"
+      ]
     }
   },
   {
     "term_id": "hu-326",
     "concept_id": "CID-326",
     "hierarchy_id": "11.2.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181601",
     "language": "hu",
     "term": "Karosszérialakatos szolgáltatás",
     "description": "Karosszérialakatos szolgáltatás",
@@ -5864,14 +6494,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181601"
+      ]
     }
   },
   {
     "term_id": "hu-327",
     "concept_id": "CID-327",
     "hierarchy_id": "11.3",
-    "unspsc_code": "",
+    "unspsc_code": "78181700",
     "language": "hu",
     "term": "Üzemanyag-feltöltés / tárolás / operatív támogatás",
     "description": "Üzemanyag-feltöltés / tárolás / operatív támogatás",
@@ -5882,14 +6514,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181700"
+      ]
     }
   },
   {
     "term_id": "hu-328",
     "concept_id": "CID-328",
     "hierarchy_id": "11.3.1",
-    "unspsc_code": "",
+    "unspsc_code": "78181701",
     "language": "hu",
     "term": "Jármű üzemanyag-feltöltési szolgáltatás",
     "description": "Jármű üzemanyag-feltöltési szolgáltatás",
@@ -5900,14 +6534,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181701"
+      ]
     }
   },
   {
     "term_id": "hu-329",
     "concept_id": "CID-329",
     "hierarchy_id": "11.3.2",
-    "unspsc_code": "",
+    "unspsc_code": "78181702",
     "language": "hu",
     "term": "Szállítási tárolási szolgáltatás",
     "description": "Szállítási tárolási szolgáltatás",
@@ -5918,14 +6554,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181702"
+      ]
     }
   },
   {
     "term_id": "hu-330",
     "concept_id": "CID-330",
     "hierarchy_id": "11.3.3",
-    "unspsc_code": "",
+    "unspsc_code": "78181703",
     "language": "hu",
     "term": "Járműparkolási szolgáltatás",
     "description": "Járműparkolási szolgáltatás",
@@ -5936,14 +6574,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181703"
+      ]
     }
   },
   {
     "term_id": "hu-331",
     "concept_id": "CID-331",
     "hierarchy_id": "11.3.4",
-    "unspsc_code": "",
+    "unspsc_code": "78181704",
     "language": "hu",
     "term": "Üzemanyag-feltöltő kártya / előre fizetett üzemanyagkártya szolgáltatás",
     "description": "Üzemanyag-feltöltő kártya / előre fizetett üzemanyagkártya szolgáltatás",
@@ -5954,14 +6594,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181704"
+      ]
     }
   },
   {
     "term_id": "hu-332",
     "concept_id": "CID-332",
     "hierarchy_id": "11.4",
-    "unspsc_code": "",
+    "unspsc_code": "78181800",
     "language": "hu",
     "term": "Légi járművek karbantartása és javítása",
     "description": "Légi járművek karbantartása és javítása",
@@ -5972,14 +6614,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181800"
+      ]
     }
   },
   {
     "term_id": "hu-333",
     "concept_id": "CID-333",
     "hierarchy_id": "11.5",
-    "unspsc_code": "",
+    "unspsc_code": "78181900",
     "language": "hu",
     "term": "Navigációs berendezések karbantartása és javítása",
     "description": "Navigációs berendezések karbantartása és javítása",
@@ -5990,14 +6634,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78181900"
+      ]
     }
   },
   {
     "term_id": "hu-334",
     "concept_id": "CID-334",
     "hierarchy_id": "11.6",
-    "unspsc_code": "",
+    "unspsc_code": "78182000",
     "language": "hu",
     "term": "Vízi közlekedési hajók karbantartása és javítása",
     "description": "Vízi közlekedési hajók karbantartása és javítása",
@@ -6008,14 +6654,16 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:78182000"
+      ]
     }
   },
   {
     "term_id": "hu-335",
     "concept_id": "CID-335",
     "hierarchy_id": "11.7",
-    "unspsc_code": "",
+    "unspsc_code": "80161505",
     "language": "hu",
     "term": "Flottakezelési támogatás",
     "description": "Flottakezelési támogatás",
@@ -6026,7 +6674,9 @@
       "is_compound": true,
       "morphology": "noun_phrase",
       "priority": "high",
-      "industry_standards": []
+      "industry_standards": [
+        "UNSPSC:80161505"
+      ]
     }
   }
 ]
