@@ -412,7 +412,7 @@ def execute_db_write(plan: ImportPlan, *, target_db: str | None, db_dsn: str | N
 
                 for file_plan in plan.language_files:
                     metadata = {
-                        "importer": "load_canonical_json_to_taxonomy_bridge_staging.py",
+                        "importer": "logisticsearch1_2_1_1_taxonomy_json_bridge_staging_importer.py",
                         "mode": "json_first_bridge",
                         "crawler_loop_direct_json_read": "disallowed",
                     }
