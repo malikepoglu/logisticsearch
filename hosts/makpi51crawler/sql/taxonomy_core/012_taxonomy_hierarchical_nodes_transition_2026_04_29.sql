@@ -508,7 +508,7 @@ BEGIN
     GET DIAGNOSTICS v_rowcount = ROW_COUNT;
     RETURN v_rowcount;
 END;
-$function$
+$function$;
 
 CREATE OR REPLACE FUNCTION logistics.refresh_taxonomy_runtime_from_staging()
  RETURNS jsonb
@@ -769,7 +769,7 @@ BEGIN
             v_overlay_closure_count
     );
 END;
-$function$
+$function$;
 
 CREATE OR REPLACE VIEW logistics.taxonomy_search_documents AS
  SELECT n.id AS node_id,
