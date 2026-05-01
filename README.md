@@ -106,49 +106,59 @@ This repository is under active architectural and operational refinement. Paths,
 ## Durum Notu
 
 Bu repository aktif mimari ve operasyon iyileştirmesi altındadır. Yollar, modül sınırları ve destek yüzeyleri sistem temizlenip olgunlaştıkça evrilebilir. Buna rağmen yön stabildir: önce disiplinli bir lojistik veri altyapısı kurmak, sonra bunun üzerine cilalı uygulama katmanları inşa etmek.
+
 ## Current repository structure rule
-## Güncel repository yapı kuralı
 
 The current canonical repository rule is simple:
 
-- repository-global entry and governance surfaces such as `README.md`, `docs/`, and `.gitignore` remain at repository root
-- the active crawler-host tracked work surfaces now live under `hosts/makpi51crawler/`
-- `hosts/` therefore acts as both a host-operations family and, where explicitly validated, the home of host-scoped tracked work surfaces
+  * repository-global entry and governance surfaces such as `README.md`, `docs/`, and `.gitignore` remain at repository root
+  * the active crawler-host tracked work surfaces now live under `hosts/makpi51crawler/`
+  * `hosts/` therefore acts as both a host-operations family and, where explicitly validated, the home of host-scoped tracked work surfaces
 
 In the current repository point, the main active crawler-host work surfaces are:
 
-- `hosts/makpi51crawler/python/README.md`
-- `hosts/makpi51crawler/sql/README.md`
-- `hosts/makpi51crawler/crawler_exports/README.md`
-- `hosts/README.md`
+  * `hosts/makpi51crawler/python/README.md`
+  * `hosts/makpi51crawler/sql/README.md`
+  * `hosts/makpi51crawler/crawler_exports/README.md`
+  * `hosts/README.md`
+
+## Güncel repository yapı kuralı
 
 Güncel kanonik repository kuralı basittir:
 
-- `README.md`, `docs/` ve `.gitignore` gibi repository-geneli giriş ve yönetişim yüzeyleri repository kökünde kalır
-- aktif crawler-host izlenen çalışma yüzeyleri artık `hosts/makpi51crawler/` altında yaşar
-- bu nedenle `hosts/`, hem host-operasyon ailesi hem de açıkça doğrulanmış durumlarda host-kapsamlı izlenen çalışma yüzeylerinin evi olarak görev yapar
+  * `README.md`, `docs/` ve `.gitignore` gibi repository-geneli giriş ve yönetişim yüzeyleri repository kökünde kalır
+  * aktif crawler-host izlenen çalışma yüzeyleri artık `hosts/makpi51crawler/` altında yaşar
+  * bu nedenle `hosts/`, hem host-operasyon ailesi hem de açıkça doğrulanmış durumlarda host-kapsamlı izlenen çalışma yüzeylerinin evi olarak görev yapar
 
 Mevcut repository noktasında ana aktif crawler-host çalışma yüzeyleri şunlardır:
 
-- `hosts/makpi51crawler/python/README.md`
-- `hosts/makpi51crawler/sql/README.md`
-- `hosts/makpi51crawler/crawler_exports/README.md`
-- `hosts/README.md`
+  * `hosts/makpi51crawler/python/README.md`
+  * `hosts/makpi51crawler/sql/README.md`
+  * `hosts/makpi51crawler/crawler_exports/README.md`
+  * `hosts/README.md`
 
 ## Future deferred note: Pi51 semi-automatic sync model
-## Geleceğe ertelenmiş not: Pi51 yarı otomatik senkron modeli
 
 This is only a short reminder note for later. It is not active now.
 
-Bu bölüm şimdilik yalnızca kısa bir hatırlatma notudur. Şu anda aktif değildir.
-
 Planned later direction:
-Gelecekte düşünülmesi planlanan yön:
 
-- Ubuntu Desktop tarafında ilgili klasörden kontrollü push komutu.
-- pi51c repo tarafında GitHub'dan kontrollü veya yarı otomatik fast-forward pull.
-- pi51c runtime tarafında repo ağacından canlı runtime ağacına kontrollü senkron.
-- Bu model daha sonra ayrıca ayrıntılı rehber ve runbook olarak yazılacaktır.
+  * controlled push from the relevant Ubuntu Desktop working surface
+  * controlled or semi-automatic fast-forward pull from GitHub into the pi51c repository
+  * controlled synchronization from the pi51c repository tree into the live runtime tree
+  * this model will later be documented separately as a detailed guide and runbook
 
 Current priority remains bringing up webcrawler and crawler_core first.
+
+## Geleceğe ertelenmiş not: Pi51 yarı otomatik senkron modeli
+
+Bu bölüm şimdilik yalnızca kısa bir hatırlatma notudur. Şu anda aktif değildir.
+
+Gelecekte düşünülmesi planlanan yön:
+
+  * Ubuntu Desktop tarafında ilgili klasörden kontrollü push komutu
+  * pi51c repo tarafında GitHub'dan kontrollü veya yarı otomatik fast-forward pull
+  * pi51c runtime tarafında repo ağacından canlı runtime ağacına kontrollü senkron
+  * bu model daha sonra ayrıca ayrıntılı rehber ve runbook olarak yazılacaktır
+
 Mevcut öncelik önce webcrawler ve crawler_core'u ayağa kaldırmaktır.

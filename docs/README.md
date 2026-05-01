@@ -553,8 +553,14 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 - [Stage5 Bulgarian taxonomy patch/review/sync/live-swap seal](TOPIC_TAXONOMY_STAGE5_BULGARIAN_PATCH_REVIEW_SYNC_SEAL_2026_04_25.md)
 
 <!-- TAXONOMY_JSON_ALL_25_COMPLETION_SEAL_LINK_START -->
+- [Taxonomy aircraft description and hi/bn/ur term repair seal - 2026-05-02](TOPIC_TAXONOMY_AIRCRAFT_DESCRIPTION_AND_HI_BN_UR_TERM_REPAIR_SEAL_2026_05_02.md)
+
 ## Taxonomy JSON all-25-language completion seal / 25 dil taxonomy JSON tamamlama mührü
 
 - [Taxonomy JSON all-25-language completion seal — 2026-05-01](TOPIC_TAXONOMY_JSON_ALL_25_LANGUAGES_COMPLETION_SEAL_2026_05_01.md)
 <!-- TAXONOMY_JSON_ALL_25_COMPLETION_SEAL_LINK_END -->
+## 2026-05-02 taxonomy aircraft repair seal / 2026-05-02 taxonomy aircraft repair mührü
+
+- [`docs/TOPIC_TAXONOMY_AIRCRAFT_DESCRIPTION_AND_HI_BN_UR_TERM_REPAIR_SEAL_2026_05_02.md`](TOPIC_TAXONOMY_AIRCRAFT_DESCRIPTION_AND_HI_BN_UR_TERM_REPAIR_SEAL_2026_05_02.md) — [EN] Seal document for the all-25 taxonomy aircraft description repair and the exact Hindi/Bengali/Urdu term repair cycle. It records commit `5ec833d937059a15dafe9f161861f939b2e38737`, 25 loaded language files, 8,375 records, 450 patched-description guards, 54 hi/bn/ur term guards, and confirms that Pi51c, DB, SQL, runtime, systemd, and node expansion were not touched.
+- [`docs/TOPIC_TAXONOMY_AIRCRAFT_DESCRIPTION_AND_HI_BN_UR_TERM_REPAIR_SEAL_2026_05_02.md`](TOPIC_TAXONOMY_AIRCRAFT_DESCRIPTION_AND_HI_BN_UR_TERM_REPAIR_SEAL_2026_05_02.md) — [TR] All-25 taxonomy aircraft description repair ve Hindi/Bengali/Urdu exact term repair döngüsünü mühürleyen dokümandır. Commit `5ec833d937059a15dafe9f161861f939b2e38737`, 25 yüklü dil dosyası, 8.375 kayıt, 450 patched-description guard, 54 hi/bn/ur term guard bilgisini kaydeder ve Pi51c, DB, SQL, runtime, systemd ile node expansion yüzeylerine dokunulmadığını doğrular.
 
