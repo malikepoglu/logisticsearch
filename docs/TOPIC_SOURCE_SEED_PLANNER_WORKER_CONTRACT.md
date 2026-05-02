@@ -231,3 +231,46 @@ Bu contract şunlara izin vermez:
 Kanonik tasarım kararları önce GitHub dokümantasyonuna yazılmalıdır.
 
 Implementation başladıkça, her execution yüzeyi gerçek runtime çalıştırma öncesi runbook almalıdır.
+
+
+## Strict Python variable/comment standard / Katı Python değişken-yorum standardı
+
+<!-- STRICT_PYTHON_VARIABLE_COMMENT_STANDARD_EN_TR -->
+
+### English
+
+Every LogisticSearch Python file must be written for a first-time reader.
+
+For every important variable, function, parameter, dataclass field, path constant, mode flag, count, status value, and safety guard, the code must include detailed bilingual comments immediately above the relevant line or block.
+
+Each comment must explain:
+
+- what the variable/function/parameter is,
+- why it exists,
+- how it is used,
+- which values are expected,
+- which values are invalid or dangerous,
+- which failure mode should happen for invalid values.
+
+This rule is mandatory for source/startpoint/seed planner and worker code, crawler_core runtime code, taxonomy importer code, parse code, and future Python files.
+
+A Python file that hides important variable meaning or safety assumptions is not ready for commit.
+
+### Türkçe
+
+Her LogisticSearch Python dosyası, ilk kez okuyacak bir kişinin anlayacağı şekilde yazılmalıdır.
+
+Her önemli değişken, fonksiyon, parametre, dataclass alanı, path sabiti, mode flag, sayaç, status değeri ve güvenlik guard'ı için ilgili satırın veya bloğun hemen üstünde detaylı iki dilli yorum bulunmalıdır.
+
+Her yorum şunları açıklamalıdır:
+
+- değişkenin/fonksiyonun/parametrenin ne olduğu,
+- neden var olduğu,
+- nasıl kullanıldığı,
+- hangi değerlerin beklendiği,
+- hangi değerlerin hatalı veya tehlikeli olduğu,
+- hatalı değerlerde hangi failure davranışının beklenmesi gerektiği.
+
+Bu kural source/startpoint/seed planner ve worker kodları, crawler_core runtime kodları, taxonomy importer kodları, parse kodları ve gelecekteki Python dosyaları için zorunludur.
+
+Önemli değişken anlamını veya güvenlik varsayımını gizleyen Python dosyası commit için hazır değildir.

@@ -1,3 +1,140 @@
+# =============================================================================
+# STRICT_STARTPOINT_RUNTIME_VARIABLE_CONTRACT_EN_TR
+# =============================================================================
+# EN: This block is a beginner-first variable contract for this startpoint runtime
+# EN: module. It explains the important variable names, what values they are
+# EN: expected to carry, and which values must raise errors or be rejected.
+# TR: Bu blok, bu startpoint runtime modülü için başlangıç seviyesine uygun bir
+# TR: değişken sözleşmesidir. Önemli değişken adlarını, hangi değerleri taşımaları
+# TR: gerektiğini ve hangi değerlerin hata veya red üretmesi gerektiğini açıklar.
+#
+# EN: catalog_path
+# EN:   Meaning: filesystem path of one canonical startpoint catalog JSON file.
+# EN:   Expected good values: str or pathlib.Path pointing to an existing UTF-8 JSON file.
+# EN:   Error values: empty string, missing file, directory path, non-JSON file,
+# EN:   unreadable file, or JSON that does not match the catalog schema.
+# TR: catalog_path
+# TR:   Anlamı: tek bir canonical startpoint catalog JSON dosyasının dosya yolu.
+# TR:   Beklenen doğru değerler: mevcut bir UTF-8 JSON dosyasını gösteren str veya
+# TR:   pathlib.Path.
+# TR:   Hata değerleri: boş string, var olmayan dosya, klasör yolu, JSON olmayan
+# TR:   dosya, okunamayan dosya veya catalog şemasına uymayan JSON.
+#
+# EN: catalog
+# EN:   Meaning: decoded Python dictionary loaded from catalog_path.
+# EN:   Expected good values: dict with catalog_version, catalog_status,
+# EN:   catalog_scope, seed_contract_basis, and source_families keys.
+# EN:   Error values: list/string/null root, missing required keys, wrong key types,
+# EN:   duplicate source family codes, or empty source_families.
+# TR: catalog
+# TR:   Anlamı: catalog_path içinden okunmuş Python dict nesnesi.
+# TR:   Beklenen doğru değerler: catalog_version, catalog_status, catalog_scope,
+# TR:   seed_contract_basis ve source_families alanlarını içeren dict.
+# TR:   Hata değerleri: kökte liste/string/null, eksik zorunlu alan, yanlış tip,
+# TR:   tekrar eden source family kodu veya boş source_families.
+#
+# EN: source_families
+# EN:   Meaning: top-level source families such as associations, directories, or
+# EN:   logistics networks. A source family is not a single random URL; it is a
+# EN:   coherent source ecosystem/host family.
+# EN:   Expected good values: non-empty list of dict objects.
+# EN:   Error values: non-list value, empty list, non-dict entries, duplicate
+# EN:   source_family_code values, missing source_root_url, or missing source_host.
+# TR: source_families
+# TR:   Anlamı: dernek, dizin veya lojistik ağ gibi üst seviye kaynak aileleri.
+# TR:   Source family rastgele tek URL değildir; tutarlı bir kaynak ekosistemi /
+# TR:   host ailesidir.
+# TR:   Beklenen doğru değerler: dict nesnelerinden oluşan boş olmayan liste.
+# TR:   Hata değerleri: liste olmayan değer, boş liste, dict olmayan eleman,
+# TR:   tekrar eden source_family_code, eksik source_root_url veya eksik source_host.
+#
+# EN: family
+# EN:   Meaning: one source family entry inside source_families.
+# EN:   Expected good values: dict with source_family_code, source_family_name,
+# EN:   source_status, source_root_url, source_host, source_category, family_metadata,
+# EN:   and seed_surfaces.
+# EN:   Error values: missing identity fields, blank strings, invalid metadata type,
+# EN:   or seed_surfaces that is not a list.
+# TR: family
+# TR:   Anlamı: source_families içindeki tek bir kaynak ailesi kaydı.
+# TR:   Beklenen doğru değerler: source_family_code, source_family_name,
+# TR:   source_status, source_root_url, source_host, source_category,
+# TR:   family_metadata ve seed_surfaces alanlarını içeren dict.
+# TR:   Hata değerleri: eksik kimlik alanları, boş stringler, yanlış metadata tipi
+# TR:   veya liste olmayan seed_surfaces.
+#
+# EN: seed_surfaces
+# EN:   Meaning: reviewed discovery surfaces under one source family. A surface can
+# EN:   be a directory page, member search page, country/language section, or
+# EN:   structured startpoint group.
+# EN:   Expected good values: non-empty list of dict objects with stable surface codes.
+# EN:   Error values: non-list value, empty list, missing surface_code, duplicate
+# EN:   surface_code, or missing seed_urls.
+# TR: seed_surfaces
+# TR:   Anlamı: bir source family altındaki incelenmiş keşif yüzeyleri. Bir surface
+# TR:   dizin sayfası, üye arama sayfası, ülke/dil bölümü veya yapılandırılmış
+# TR:   startpoint grubu olabilir.
+# TR:   Beklenen doğru değerler: kararlı surface_code içeren dict nesnelerinden
+# TR:   oluşan boş olmayan liste.
+# TR:   Hata değerleri: liste olmayan değer, boş liste, eksik surface_code, tekrar
+# TR:   eden surface_code veya eksik seed_urls.
+#
+# EN: seed_urls
+# EN:   Meaning: exact canonical URLs that can later become reviewed seeds.
+# EN:   Expected good values: non-empty list of dict objects; each seed URL should
+# EN:   be absolute HTTP/HTTPS, stable, relevant to logistics discovery, and not a
+# EN:   login-only or blocked page unless explicitly marked for review.
+# EN:   Error values: non-list value, empty list, relative URL, non-HTTP scheme,
+# EN:   duplicate URL, blank URL, or URL that belongs to a different source host
+# EN:   without an explicit cross-host policy.
+# TR: seed_urls
+# TR:   Anlamı: daha sonra incelenmiş seed olabilecek tam canonical URL'ler.
+# TR:   Beklenen doğru değerler: dict nesnelerinden oluşan boş olmayan liste; her
+# TR:   seed URL mutlak HTTP/HTTPS olmalı, kararlı olmalı, lojistik keşif ile
+# TR:   ilgili olmalı ve özel review işareti yoksa login-only / blocked olmamalıdır.
+# TR:   Hata değerleri: liste olmayan değer, boş liste, relative URL, HTTP dışı
+# TR:   şema, tekrar eden URL, boş URL veya açık cross-host policy olmadan başka
+# TR:   host'a ait URL.
+#
+# EN: priority
+# EN:   Meaning: numeric review/execution priority used for ordering candidate seeds.
+# EN:   Expected good values: integer or numeric value where lower/higher meaning is
+# EN:   defined by the catalog contract and used consistently.
+# EN:   Error values: missing priority when required, non-numeric text, negative value
+# EN:   if forbidden by catalog policy, or inconsistent priority scale.
+# TR: priority
+# TR:   Anlamı: candidate seed sıralaması için kullanılan sayısal inceleme/çalıştırma
+# TR:   önceliği.
+# TR:   Beklenen doğru değerler: catalog contract içinde anlamı tanımlanmış ve
+# TR:   tutarlı kullanılan integer veya numeric değer.
+# TR:   Hata değerleri: zorunlu yerde eksik priority, sayısal olmayan metin, policy
+# TR:   yasaklıyorsa negatif değer veya tutarsız priority ölçeği.
+#
+# EN: lang_code
+# EN:   Meaning: language code associated with a source/seed surface.
+# EN:   Expected good values: one of the canonical 25 language codes when the field
+# EN:   identifies taxonomy/search language coverage; for English startpoints this
+# EN:   is usually "en".
+# EN:   Error values: unknown code, blank code, mixed locale string without mapping,
+# EN:   or language code that is used to fake equal source counts across languages.
+# TR: lang_code
+# TR:   Anlamı: source/seed surface ile ilişkili dil kodu.
+# TR:   Beklenen doğru değerler: alan taxonomy/search dil kapsamını gösteriyorsa
+# TR:   canonical 25 dil kodundan biri; İngilizce startpoint için genellikle "en".
+# TR:   Hata değerleri: bilinmeyen kod, boş kod, eşlemesi olmayan karma locale
+# TR:   string veya diller arasında sahte eşit source sayısı üretmek için kullanılan
+# TR:   dil kodu.
+#
+# EN: Important design rule
+# EN:   Source and seed counts do not need to be equal across all 25 languages.
+# EN:   English may be richer. The all-25 equality rule applies to taxonomy nodes,
+# EN:   not to startpoint/source/seed counts.
+# TR: Önemli tasarım kuralı
+# TR:   Source ve seed sayıları 25 dilde eşit olmak zorunda değildir. İngilizce daha
+# TR:   zengin olabilir. 25 dil eşitliği taxonomy node'ları için geçerlidir;
+# TR:   startpoint/source/seed sayıları için geçerli değildir.
+# =============================================================================
+
 # EN: This module is the first canonical runtime bridge for the source-family startpoint
 # EN: model. It makes the model executable on pi51c instead of leaving it as documentation
 # EN: only.

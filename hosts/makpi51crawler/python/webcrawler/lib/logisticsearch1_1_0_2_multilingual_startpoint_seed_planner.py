@@ -1,5 +1,123 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# =============================================================================
+# STRICT_SOURCE_SEED_PLANNER_VARIABLE_CONTRACT_EN_TR
+# =============================================================================
+# EN: This block is a beginner-first variable contract for the multilingual
+# EN: source_seed planner. The planner is allowed to read catalogs and produce
+# EN: evidence, but it must not crawl, fetch, claim URLs, write frontier rows,
+# EN: create DB objects, touch Pi51c, or start runtime/systemd services.
+# TR: Bu blok, çok dilli source_seed planner için başlangıç seviyesine uygun
+# TR: değişken sözleşmesidir. Planner catalog okuyabilir ve evidence üretebilir;
+# TR: fakat crawl/fetch yapamaz, URL claim edemez, frontier satırı yazamaz, DB
+# TR: objesi yaratamaz, Pi51c'ye dokunamaz veya runtime/systemd başlatamaz.
+#
+# EN: repo_root
+# EN:   Meaning: root folder of the LogisticSearch Git repository.
+# EN:   Expected good values: existing directory containing .git and the expected
+# EN:   hosts/makpi51crawler project tree.
+# EN:   Error values: missing path, path outside repo, dirty/unexpected repo when
+# EN:   the command requires clean state, or path that points to runtime copy.
+# TR: repo_root
+# TR:   Anlamı: LogisticSearch Git deposunun kök klasörü.
+# TR:   Beklenen doğru değerler: .git ve beklenen hosts/makpi51crawler proje
+# TR:   ağacını içeren mevcut klasör.
+# TR:   Hata değerleri: eksik yol, repo dışı yol, clean state gereken komutta dirty
+# TR:   repo veya runtime kopyasına işaret eden yol.
+#
+# EN: catalog_dir
+# EN:   Meaning: directory that contains language-specific startpoint catalogs.
+# EN:   Expected good values: existing directory such as webcrawler/catalog/startpoints
+# EN:   with reviewed language subfolders.
+# EN:   Error values: missing directory, directory with Python runtime files, or
+# EN:   unreviewed generated catalog files mixed into canonical inputs.
+# TR: catalog_dir
+# TR:   Anlamı: dil bazlı startpoint catalog dosyalarını içeren klasör.
+# TR:   Beklenen doğru değerler: webcrawler/catalog/startpoints gibi incelenmiş dil
+# TR:   alt klasörleri olan mevcut klasör.
+# TR:   Hata değerleri: eksik klasör, Python runtime dosyası içeren catalog klasörü
+# TR:   veya canonical input içine karışmış incelenmemiş generated catalog dosyaları.
+#
+# EN: taxonomy_language_dir
+# EN:   Meaning: directory containing the 25 canonical taxonomy language JSON files.
+# EN:   Expected good values: existing directory with exactly 25 language JSON files
+# EN:   and the current sealed total record count.
+# EN:   Error values: missing language file, partial language set, invalid JSON,
+# EN:   wrong record count, or English-only taxonomy expansion treated as complete.
+# TR: taxonomy_language_dir
+# TR:   Anlamı: 25 canonical taxonomy language JSON dosyasını içeren klasör.
+# TR:   Beklenen doğru değerler: tam 25 dil JSON dosyası ve mevcut mühürlü toplam
+# TR:   kayıt sayısını içeren mevcut klasör.
+# TR:   Hata değerleri: eksik dil dosyası, kısmi dil seti, bozuk JSON, yanlış kayıt
+# TR:   sayısı veya English-only taxonomy genişlemesini tamamlanmış saymak.
+#
+# EN: output_dir
+# EN:   Meaning: evidence output directory for validate-only planner results.
+# EN:   Expected good values: /tmp or explicitly approved evidence directory.
+# EN:   Error values: canonical repo source directory, runtime directory, DB path,
+# EN:   or any location that would silently become tracked project content.
+# TR: output_dir
+# TR:   Anlamı: validate-only planner sonuçları için evidence çıktı klasörü.
+# TR:   Beklenen doğru değerler: /tmp veya açıkça onaylanmış evidence klasörü.
+# TR:   Hata değerleri: canonical repo source klasörü, runtime klasörü, DB yolu
+# TR:   veya sessizce tracked proje içeriğine dönüşecek konum.
+#
+# EN: validate_only
+# EN:   Meaning: safety switch that keeps the planner in dry-run mode.
+# EN:   Expected good values: True by default.
+# EN:   Error values: False before runbook approval, or any implicit write mode.
+# TR: validate_only
+# TR:   Anlamı: planner'ı dry-run modda tutan güvenlik anahtarı.
+# TR:   Beklenen doğru değerler: varsayılan olarak True.
+# TR:   Hata değerleri: runbook onayı öncesi False veya örtük write mode.
+#
+# EN: source_seed_candidate
+# EN:   Meaning: one candidate seed row produced by planner evidence.
+# EN:   Expected good values: reviewed source_family_code, source_host, surface_code,
+# EN:   canonical_url, language, priority, and reason fields.
+# EN:   Error values: missing URL, duplicate URL, blocked/login-only URL without
+# EN:   review status, wrong host, missing language, or unsafe generated seed.
+# TR: source_seed_candidate
+# TR:   Anlamı: planner evidence tarafından üretilen tek bir candidate seed satırı.
+# TR:   Beklenen doğru değerler: incelenmiş source_family_code, source_host,
+# TR:   surface_code, canonical_url, language, priority ve reason alanları.
+# TR:   Hata değerleri: eksik URL, tekrar eden URL, review status olmadan blocked /
+# TR:   login-only URL, yanlış host, eksik dil veya güvensiz generated seed.
+#
+# EN: source_seed_plan
+# EN:   Meaning: JSONL evidence that may later become worker input after approval.
+# EN:   Expected good values: evidence-only plan file; not runtime state.
+# EN:   Error values: plan that is automatically executed, plan that writes DB rows,
+# EN:   or plan that bypasses human review.
+# TR: source_seed_plan
+# TR:   Anlamı: onay sonrası ileride worker input olabilecek JSONL evidence.
+# TR:   Beklenen doğru değerler: sadece evidence olan plan dosyası; runtime state değil.
+# TR:   Hata değerleri: otomatik çalıştırılan plan, DB satırı yazan plan veya insan
+# TR:   incelemesini bypass eden plan.
+#
+# EN: warning_count / hard_error_count
+# EN:   Meaning: planner quality gates.
+# EN:   Expected good values: warning_count may be > 0 for known gaps; hard_error_count
+# EN:   must be 0 before commit or follow-up execution.
+# EN:   Error values: ignored hard errors, warnings treated as PASS without review,
+# EN:   or missing evidence files.
+# TR: warning_count / hard_error_count
+# TR:   Anlamı: planner kalite kapıları.
+# TR:   Beklenen doğru değerler: bilinen boşluklar için warning_count > 0 olabilir;
+# TR:   commit veya sonraki execution öncesi hard_error_count 0 olmalıdır.
+# TR:   Hata değerleri: yok sayılan hard error, review olmadan PASS sayılan warning
+# TR:   veya eksik evidence dosyaları.
+#
+# EN: Important design rule
+# EN:   English source discovery can have 20+ high-quality source families before
+# EN:   other languages reach the same count. This is allowed. The planner must
+# EN:   document language-specific gaps instead of forcing fake symmetry.
+# TR: Önemli tasarım kuralı
+# TR:   İngilizce source discovery, diğer diller aynı sayıya ulaşmadan önce 20+
+# TR:   yüksek kaliteli source family içerebilir. Bu izinlidir. Planner sahte
+# TR:   simetri zorlamak yerine dil bazlı boşlukları belgelemelidir.
+# =============================================================================
+
 """
 EN: LogisticSearch multilingual source_seed planner.
 TR: LogisticSearch çok dilli source_seed planlayıcı modülü.
