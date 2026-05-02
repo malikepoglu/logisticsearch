@@ -837,6 +837,79 @@
           ]
         }
       ]
+    },
+    {
+      "source_family_code": "ncbfaa_org",
+      "source_family_name": "NCBFAA",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.ncbfaa.org/",
+      "source_host": "www.ncbfaa.org",
+      "source_category": "freight_forwarder_and_customs_broker_association",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_max_depth": 1,
+      "default_priority": 86,
+      "default_recrawl_interval": "14 days",
+      "family_metadata": {
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "source_seed_policy": "single_source_catalog_patch_first",
+        "crawler_core_test_policy": "do_not_write_frontier_until_catalog_and_planner_evidence_pass",
+        "human_review_required_before_frontier": true,
+        "lang_code": "en",
+        "trust_tier": "A_MINUS",
+        "manual_review_priority": 1,
+        "live_check_required": true,
+        "noise_risk": "LOW",
+        "discovery_value": "US customs broker and freight forwarder membership search candidate.",
+        "family_review_state": "LIVE_PROBED_READY_FOR_SINGLE_SOURCE_PATCH",
+        "host_budget_group": "english_association_directory"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "ncbfaa_membership_search",
+          "surface_name": "NCBFAA Search Our Membership",
+          "surface_status": "candidate_reviewed_for_catalog",
+          "surface_type": "association_member_search",
+          "seed_urls": [
+            {
+              "submitted_url": "https://www.ncbfaa.org/search-our-membership",
+              "canonical_url": "https://www.ncbfaa.org/search-our-membership",
+              "is_enabled": true,
+              "priority": 86,
+              "max_depth": 1,
+              "recrawl_interval": "14 days",
+              "seed_metadata": {
+                "source_seed_code": "source_seed_en_ncbfaa_org_membership_search_001",
+                "trust_tier": "A_MINUS",
+                "probe_cycle": "SOURCE_SEED_ENGLISH_STARTPOINT_R1B_EN_A_FIRST8_LIVE_PROBE_READONLY",
+                "patch_cycle": "SOURCE_SEED_ENGLISH_STARTPOINT_R2B_NCBFAA_SCHEMA_REPAIR_LOCAL_ONLY"
+              },
+              "notes": "Initial NCBFAA English source seed. Added one-at-a-time after probe and schema repair.",
+              "seed_url": "https://www.ncbfaa.org/search-our-membership",
+              "seed_type": "member_search_page",
+              "seed_language": "en",
+              "seed_priority": 80,
+              "seed_status": "candidate_reviewed_for_catalog",
+              "seed_review_note": "R1B probe: HTTP 200 seed page, HTTP 200 robots.txt. Do not crawl broadly until reviewed seed-to-frontier bridge step."
+            }
+          ],
+          "surface_metadata": {
+            "probe_decision": "CANDIDATE_CAN_MOVE_TO_SINGLE_SOURCE_CATALOG_PATCH_AFTER_HUMAN_REVIEW",
+            "robots_http_code": 200,
+            "seed_http_code": 200,
+            "selection_reason": "US customs broker and freight forwarder membership search candidate."
+          },
+          "surface_language": "en",
+          "surface_priority": 80
+        }
+      ],
+      "notes": "NCBFAA membership search added as a single-source English startpoint after live robots and HTTP probe.",
+      "source_language": "en",
+      "source_country_scope": "US",
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "US customs broker and freight forwarder membership search. R1B lightweight probe returned HTTP 200 for seed and robots.txt."
     }
   ]
 }
