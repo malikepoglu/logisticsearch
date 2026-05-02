@@ -6698,5 +6698,45 @@
         "UNSPSC:80161505"
       ]
     }
+  },
+  {
+    "term_id": "ur-336",
+    "concept_id": "CID-336",
+    "hierarchy_id": "1.6.6",
+    "unspsc_code": "78101900",
+    "language": "ur",
+    "term": "بندرگاہ سے مختصر فاصلے کی مال برداری خدمات",
+    "description": "Freight service for short-distance movement of containers or cargo between ports, marine terminals, rail ramps, yards, warehouses, and nearby inland facilities.",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "entity_family": "logistics_service",
+      "parent_hierarchy_id": "1.6",
+      "parent_term_id": "en-53",
+      "parent_term": "Intermodal & Combined Cargo Transport",
+      "expansion_cycle": "taxonomy_english_expansion_freight_micro_batch_r12_plan",
+      "source_policy": "english_reference_all25_coherent_expansion"
+    }
+  },
+  {
+    "term_id": "ur-337",
+    "concept_id": "CID-337",
+    "hierarchy_id": "3.2.3",
+    "unspsc_code": "78141500",
+    "language": "ur",
+    "term": "غیر کنٹینری کارگو خدمات",
+    "description": "Freight service for non-containerized cargo handled as individual pieces, units, bundles, crates, machinery, project cargo, heavy-lift cargo, or oversized cargo.",
+    "role": "primary",
+    "synonyms": [],
+    "is_searchable": true,
+    "attributes": {
+      "entity_family": "logistics_service",
+      "parent_hierarchy_id": "3.2",
+      "parent_term_id": "en-109",
+      "parent_term": "Heavy & Project Logistics",
+      "expansion_cycle": "taxonomy_english_expansion_freight_micro_batch_r12_plan",
+      "source_policy": "english_reference_all25_coherent_expansion"
+    }
   }
 ]
