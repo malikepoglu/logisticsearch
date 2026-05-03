@@ -291,7 +291,7 @@ def require_psycopg_runtime() -> None:
 # TR: DEFAULT_ENV_FILE operatör --env-file ile override etmediğinde CLI'nin
 # TR: kullandığı kanonik canlı-runtime env dosya yoludur. Import anında her zaman
 # TR: string değil Path nesnesidir.
-DEFAULT_ENV_FILE = Path("/logisticsearch/webcrawler/config/webcrawler.env")
+DEFAULT_ENV_FILE = Path("/logisticsearch/makpi51crawler/config/webcrawler.env")
 
 
 # EN: This dataclass holds the exact frontier-ready decomposition of one

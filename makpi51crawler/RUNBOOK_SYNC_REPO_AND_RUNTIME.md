@@ -112,21 +112,23 @@ Gelecekteki daha geniş runtime ailelerini henüz kapsamaz.
 
 - machine: `pi51c`
 - tracked repository root: `/logisticsearch/repo`
-- live runtime root: `/logisticsearch/webcrawler`
-- live runtime Python surface: `/logisticsearch/webcrawler/python_live_runtime`
+- live runtime root: `/logisticsearch/makpi51crawler`
+- live runtime Python surface: `/logisticsearch/makpi51crawler/python_live_runtime`
+- live runtime environment file: `/logisticsearch/makpi51crawler/config/webcrawler.env`
 - sync commands:
-  - `/logisticsearch/bin/sync-repo`
-  - `/logisticsearch/bin/sync-runtime`
+  - `/logisticsearch/bin/sync repo`
+  - `/logisticsearch/bin/sync runtime`
 
 ## Yürütme hedefi / makine bağlamı
 
 - makine: `pi51c`
 - tracked repository kökü: `/logisticsearch/repo`
-- canlı runtime kökü: `/logisticsearch/webcrawler`
-- canlı runtime Python yüzeyi: `/logisticsearch/webcrawler/python_live_runtime`
+- canlı runtime kökü: `/logisticsearch/makpi51crawler`
+- canlı runtime Python yüzeyi: `/logisticsearch/makpi51crawler/python_live_runtime`
+- canlı runtime environment dosyası: `/logisticsearch/makpi51crawler/config/webcrawler.env`
 - sync komutları:
-  - `/logisticsearch/bin/sync-repo`
-  - `/logisticsearch/bin/sync-runtime`
+  - `/logisticsearch/bin/sync repo`
+  - `/logisticsearch/bin/sync runtime`
 
 ## Preconditions
 
@@ -134,12 +136,12 @@ Before running this runbook, confirm all of the following:
 
 1. you are on `pi51c`
 2. `/logisticsearch/repo` exists and is a Git checkout
-3. `/logisticsearch/webcrawler/.venv/bin/python` exists
-4. `/logisticsearch/bin/sync-repo` exists
-5. `/logisticsearch/bin/sync-runtime` exists
+3. `/logisticsearch/makpi51crawler/.venv/bin/python` exists
+4. `/logisticsearch/bin/sync` exists
+5. `/logisticsearch/bin/sync repo --help` and `/logisticsearch/bin/sync runtime --help` pass
 6. the crawler runtime is quiesced
-7. you understand that `sync-repo` can discard local repo drift under `/logisticsearch/repo`
-8. you understand that `sync-runtime` updates the live Python runtime surface from tracked repository truth
+7. you understand that `/logisticsearch/bin/sync repo` can discard local repo drift under `/logisticsearch/repo`
+8. you understand that `/logisticsearch/bin/sync runtime` updates the live Python runtime surface from tracked repository truth
 
 ## Önkoşullar
 
@@ -147,12 +149,12 @@ Bu runbook çalıştırılmadan önce şunları doğrula:
 
 1. `pi51c` üzerindesin
 2. `/logisticsearch/repo` mevcut ve bir Git checkout yüzeyi
-3. `/logisticsearch/webcrawler/.venv/bin/python` mevcut
-4. `/logisticsearch/bin/sync-repo` mevcut
-5. `/logisticsearch/bin/sync-runtime` mevcut
+3. `/logisticsearch/makpi51crawler/.venv/bin/python` mevcut
+4. `/logisticsearch/bin/sync` mevcut
+5. `/logisticsearch/bin/sync repo --help` ve `/logisticsearch/bin/sync runtime --help` geçer
 6. crawler runtime quiesced durumda
-7. `sync-repo` komutunun `/logisticsearch/repo` altındaki drift içeriği silebileceğini anlıyorsun
-8. `sync-runtime` komutunun canlı Python runtime yüzeyini tracked repository doğrusundan güncellediğini anlıyorsun
+7. `/logisticsearch/bin/sync repo` komutunun `/logisticsearch/repo` altındaki drift içeriği silebileceğini anlıyorsun
+8. `/logisticsearch/bin/sync runtime` komutunun canlı Python runtime yüzeyini tracked repository doğrusundan güncellediğini anlıyorsun
 
 ## Step-by-step operator path
 
@@ -163,9 +165,10 @@ Bu runbook çalıştırılmadan önce şunları doğrula:
 cd /home/makpi51 && /usr/bin/env bash <<'BASH'
 set -Eeuo pipefail
 
-ls -l /logisticsearch/bin/sync-repo
-ls -l /logisticsearch/bin/sync-runtime
-ls -l /logisticsearch/webcrawler/.venv/bin/python
+ls -l /logisticsearch/bin/sync
+ls -l /logisticsearch/makpi51crawler/.venv/bin/python
+/logisticsearch/bin/sync repo --help >/dev/null
+/logisticsearch/bin/sync runtime --help >/dev/null
 BASH
 ```
 
@@ -177,7 +180,7 @@ cd /home/makpi51 && /usr/bin/env bash <<'BASH'
 set -Eeuo pipefail
 
 systemctl --user status logisticsearch-webcrawler.service --no-pager || true
-pgrep -af '/logisticsearch/webcrawler' || true
+pgrep -af '/logisticsearch/makpi51crawler' || true
 BASH
 ```
 
@@ -188,7 +191,7 @@ BASH
 cd /home/makpi51 && /usr/bin/env bash <<'BASH'
 set -Eeuo pipefail
 
-/logisticsearch/bin/sync-repo
+/logisticsearch/bin/sync repo
 BASH
 ```
 
@@ -199,7 +202,7 @@ BASH
 cd /home/makpi51 && /usr/bin/env bash <<'BASH'
 set -Eeuo pipefail
 
-/logisticsearch/bin/sync-runtime
+/logisticsearch/bin/sync runtime
 BASH
 ```
 
@@ -215,17 +218,17 @@ git -C /logisticsearch/repo rev-parse origin/main
 git -C /logisticsearch/repo status -sb
 
 find /logisticsearch/repo/makpi51crawler/python_live_runtime -type f -name '*.py' | LC_ALL=C sort | sed 's#^/logisticsearch/repo/makpi51crawler/python_live_runtime/##' > /tmp/pi51_repo_py_rel.txt
-find /logisticsearch/webcrawler/python_live_runtime -type f -name '*.py' | LC_ALL=C sort | sed 's#^/logisticsearch/webcrawler/python_live_runtime/##' > /tmp/pi51_live_py_rel.txt
+find /logisticsearch/makpi51crawler/python_live_runtime -type f -name '*.py' | LC_ALL=C sort | sed 's#^/logisticsearch/makpi51crawler/python_live_runtime/##' > /tmp/pi51_live_py_rel.txt
 
 diff -u /tmp/pi51_repo_py_rel.txt /tmp/pi51_live_py_rel.txt
-/logisticsearch/webcrawler/.venv/bin/python -m py_compile $(find /logisticsearch/webcrawler/python_live_runtime -type f -name '*.py' | LC_ALL=C sort)
+/logisticsearch/makpi51crawler/.venv/bin/python -m py_compile $(find /logisticsearch/makpi51crawler/python_live_runtime -type f -name '*.py' | LC_ALL=C sort)
 BASH
 ```
 
 ## Success criteria
 
 - `/logisticsearch/repo` is aligned with GitHub `main`
-- `/logisticsearch/webcrawler/python_live_runtime` reflects the tracked repository Python runtime surface
+- `/logisticsearch/makpi51crawler/python_live_runtime` reflects the tracked repository Python runtime surface
 - relative repo/live Python file lists match
 - live `py_compile` passes
 - runtime remains quiesced unless intentionally started later
@@ -233,7 +236,7 @@ BASH
 ## Başarı ölçütleri
 
 - `/logisticsearch/repo`, GitHub `main` ile hizalıdır
-- `/logisticsearch/webcrawler/python_live_runtime`, tracked repository Python runtime yüzeyini yansıtır
+- `/logisticsearch/makpi51crawler/python_live_runtime`, tracked repository Python runtime yüzeyini yansıtır
 - relative repo/live Python dosya listeleri eşleşir
 - canlı `py_compile` geçer
 - daha sonra bilinçli olarak başlatılmadıkça runtime quiesced durumda kalır
