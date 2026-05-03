@@ -1,5 +1,67 @@
 # Runbook: Sync Pi51 Repo and Live Runtime
 
+<!-- TASK11_SYNC_COMMAND_LAYER_ANTI_DRIFT_BEGIN -->
+## Current sync command layer and anti-drift rule
+
+EN:
+The current canonical synchronization direction is:
+
+    Ubuntu Desktop /home/mak/dev/logisticsearch
+      -> GitHub origin/main
+      -> pi51c /logisticsearch/repo
+      -> pi51c /logisticsearch/makpi51crawler
+
+Ubuntu Desktop is the guide workspace. Do not invert this direction when deciding repository truth.
+
+The current explicit pi51c sync command layer is:
+
+    /logisticsearch/bin/sync repo --help
+    /logisticsearch/bin/sync runtime --help
+    /logisticsearch/bin/sync makpi51crawler --help
+
+The project wrapper lives at /logisticsearch/bin/sync, but bare sync must still resolve to /usr/bin/sync unless a separate PATH policy is explicitly approved later.
+
+The project wrapper delegates to the live tracked dispatcher:
+
+    /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py
+
+Unknown, empty, or coreutils-style calls are passed through by the Python dispatcher to /usr/bin/sync.
+
+Side-effect controls are not part of sync smoke tests. Fan, Wi-Fi, play, pause, poweroff, reboot, reset, systemd mutation, DB mutation, crawler execution, and cleanup require separate small runbooks before live execution.
+
+Cleanup is still blocked. Do not delete legacy /logisticsearch/webcrawler, legacy /logisticsearch/bin/sync-repo, legacy /logisticsearch/bin/sync-runtime, or backups from this sync-command line.
+
+TR:
+Güncel kanonik senkronizasyon yönü şudur:
+
+    Ubuntu Desktop /home/mak/dev/logisticsearch
+      -> GitHub origin/main
+      -> pi51c /logisticsearch/repo
+      -> pi51c /logisticsearch/makpi51crawler
+
+Ubuntu Desktop kılavuz çalışma alanıdır. Repository doğrusu belirlenirken bu yön tersine çevrilmemelidir.
+
+Güncel açık pi51c sync komut katmanı şudur:
+
+    /logisticsearch/bin/sync repo --help
+    /logisticsearch/bin/sync runtime --help
+    /logisticsearch/bin/sync makpi51crawler --help
+
+Proje wrapper dosyası /logisticsearch/bin/sync konumundadır; fakat ayrı bir PATH politikası açıkça onaylanmadıkça yalın sync komutu hâlâ /usr/bin/sync olarak kalmalıdır.
+
+Proje wrapper'ı canlı tracked dispatcher'a delege eder:
+
+    /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py
+
+Bilinmeyen, boş veya coreutils tarzı çağrılar Python dispatcher tarafından /usr/bin/sync komutuna aktarılır.
+
+Yan etkili kontroller sync smoke testlerinin parçası değildir. Fan, Wi-Fi, play, pause, poweroff, reboot, reset, systemd mutation, DB mutation, crawler çalıştırma ve cleanup işlemleri canlı çalıştırılmadan önce ayrı küçük runbook ister.
+
+Cleanup hâlâ blokludur. Bu sync-command hattından legacy /logisticsearch/webcrawler, legacy /logisticsearch/bin/sync-repo, legacy /logisticsearch/bin/sync-runtime veya backup dosyaları silinmemelidir.
+<!-- TASK11_SYNC_COMMAND_LAYER_ANTI_DRIFT_END -->
+
+
+
 ## What this runbook is
 
 This runbook gives the single controlled operator path for synchronizing:
