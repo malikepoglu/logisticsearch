@@ -30,7 +30,18 @@ from pathlib import Path
 try:
     from .sync_repo import DEFAULT_BRANCH, DEFAULT_REMOTE_URL, DEFAULT_REPO, sync_repo
     from .sync_runtime import DEFAULT_LIVE_ROOT, DEFAULT_REPO_SOURCE, DEFAULT_SERVICE, sync_runtime
-except ImportError:  # pragma: no cover - direct script execution fallback
+except ImportError:  # pragma: no cover - direct script/importlib fallback
+    # EN: When this file is loaded directly with importlib.spec_from_file_location,
+    # the sibling-module directory is not guaranteed to be present on sys.path.
+    # Add the current file's directory before falling back to sibling imports.
+    #
+    # TR: Bu dosya importlib.spec_from_file_location ile doğrudan yüklendiğinde,
+    # kardeş modül klasörünün sys.path içinde olması garanti değildir. Kardeş
+    # import fallback öncesinde mevcut dosyanın klasörünü açıkça ekle.
+    current_dir = Path(__file__).resolve().parent
+    if str(current_dir) not in sys.path:
+        sys.path.insert(0, str(current_dir))
+
     from sync_repo import DEFAULT_BRANCH, DEFAULT_REMOTE_URL, DEFAULT_REPO, sync_repo
     from sync_runtime import DEFAULT_LIVE_ROOT, DEFAULT_REPO_SOURCE, DEFAULT_SERVICE, sync_runtime
 
