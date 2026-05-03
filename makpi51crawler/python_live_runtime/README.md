@@ -125,7 +125,7 @@ At the current repository point, this runtime-family surface now lives at `makpi
 
 It is intentionally located under the active crawler-host Python surface.
 
-The `hosts/` family documents host-specific operational truth, and this `lib/` folder is now the live runtime-family surface for `makpi51crawler` inside the repository.
+Host-specific crawler runtime truth is now documented under `makpi51crawler/`, and this `python_live_runtime/` folder is the live runtime-family source surface for `makpi51crawler` inside the repository.
 
 For host-side boundary reading, also see:
 
@@ -136,7 +136,7 @@ Mevcut repository noktasında bu runtime-aile yüzeyi artık `makpi51crawler/pyt
 
 Bu yüzey aktif crawler-host Python yüzeyi altında bilinçli olarak konumlandırılmıştır.
 
-`hosts/` ailesi host-özel operasyon doğrusunu belgeler; bu `lib/` klasörü ise artık repository içinde `makpi51crawler` için canlı runtime-aile yüzeyidir.
+`makpi51crawler/` host-özel crawler runtime doğrusunu belgeler; bu `python_live_runtime/` klasörü ise repository içinde `makpi51crawler` için canlı runtime-aile kaynak yüzeyidir.
 
 Host-tarafı sınır okuması için ayrıca şunlara bak:
 

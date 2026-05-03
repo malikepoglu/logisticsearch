@@ -76,8 +76,53 @@ OpenStreetMap, uzun vadeli sistem tasarımında zorunlu bir bileşendir. Coğraf
 Harita gösterim kütüphanesi seçimi, doğrudan webcrawler sözleşmesi olarak değil, ayrı bir uygulama-yüzeyi kararı olarak ele alınır. Crawler tarafının sorumluluğu coğrafi veri edinimi, normalizasyon ve zenginleştirme doğrusudur. Gelecekteki harita-yığını karar yüzeyi ayrı olarak `docs/SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md` dosyasında dokümante edilir.
 ## Current Repository Focus
 
+The current repository focus is the new `makpi51crawler/` topology.
+
+The active repository-tracked crawler-host surfaces are now:
+
+  * `makpi51crawler/README.md` — crawler-host root explanation and navigation
+  * `makpi51crawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md` — controlled GitHub-to-pi51c repo/runtime synchronization model
+  * `makpi51crawler/python_live_runtime/` — Python runtime-family source surface for the crawler loop, controls, catalog loader, taxonomy bridge, acquisition, parsing, storage routing, and diagnostics
+  * `makpi51crawler/catalog/` — reviewed source-family and startpoint catalog surface; English currently has 27 source families and 43 English-owned seed URLs
+  * `makpi51crawler/taxonomy/` — canonical JSON taxonomy language files and taxonomy schema
+  * `docs/` — project contracts, continuity documents, runbooks, and decision records
+
+The current English catalog is intentionally a reviewed candidate catalog, not an automatic crawler_core insertion list. Every source and seed still requires pi51c live probing before DB/frontier insertion.
+
+The immediate repository focus is:
+
+  1. keep the new `makpi51crawler/` root clean and beginner-readable
+  2. keep Ubuntu Desktop <> GitHub <> pi51c repository synchronization explicit
+  3. verify pi51c `/logisticsearch/repo` as a GitHub mirror before any pi51c runtime/taxonomy/catalog sync
+  4. test catalog sources/seeds one by one on pi51c before durable crawler_core insertion
+  5. continue crawler_core/webcrawler hardening from the current raw-fetch → parse → taxonomy/catalog boundary
+
+Old repository layouts are not active working surfaces now. Do not plan new work under the removed host-specific legacy tree, old `makpi51crawler/python`, old `makpi51crawler/sql`, old `makpi51crawler/crawler_exports`, or old `makpi51crawler/webcrawler` paths.
 
 ## Mevcut Repository Odağı
+
+Güncel repository odağı yeni `makpi51crawler/` topolojisidir.
+
+Aktif repository'de izlenen crawler-host yüzeyleri artık şunlardır:
+
+  * `makpi51crawler/README.md` — crawler-host kök açıklaması ve navigasyon
+  * `makpi51crawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md` — kontrollü GitHub'dan pi51c repo/runtime senkronizasyon modeli
+  * `makpi51crawler/python_live_runtime/` — crawler döngüsü, kontroller, catalog loader, taxonomy bridge, acquisition, parse, storage routing ve diagnostik için Python runtime-aile kaynak yüzeyi
+  * `makpi51crawler/catalog/` — incelenmiş source-family ve startpoint catalog yüzeyi; İngilizce şu anda 27 source family ve 43 İngilizceye ait seed URL içerir
+  * `makpi51crawler/taxonomy/` — kanonik JSON taxonomy dil dosyaları ve taxonomy schema
+  * `docs/` — proje sözleşmeleri, süreklilik dokümanları, runbook'lar ve karar kayıtları
+
+Güncel English catalog bilinçli olarak incelenmiş aday catalog'dur; otomatik crawler_core insert listesi değildir. Her source ve seed, DB/frontier insert öncesinde yine pi51c canlı probe ile doğrulanmalıdır.
+
+Yakın repository odağı:
+
+  1. yeni `makpi51crawler/` kökünü temiz ve başlangıç seviyesinde okunabilir tutmak
+  2. Ubuntu Desktop <> GitHub <> pi51c repository senkronizasyonunu açık tutmak
+  3. pi51c üzerinde herhangi runtime/taxonomy/catalog sync öncesinde `/logisticsearch/repo` klasörünü GitHub aynası olarak doğrulamak
+  4. catalog source/seed kayıtlarını kalıcı crawler_core insert öncesinde pi51c üzerinde tek tek test etmek
+  5. crawler_core/webcrawler hardening hattına mevcut raw-fetch → parse → taxonomy/catalog sınırından devam etmek
+
+Eski repository yerleşimleri artık aktif çalışma yüzeyi değildir. Yeni işi kaldırılmış host-özel legacy tree, eski `makpi51crawler/python`, eski `makpi51crawler/sql`, eski `makpi51crawler/crawler_exports` veya eski `makpi51crawler/webcrawler` yolları altında planlama.
 
 ## Engineering Principles
 
@@ -103,29 +148,49 @@ Bu repository aktif mimari ve operasyon iyileştirmesi altındadır. Yollar, mod
 
 ## Current repository structure rule
 
-The current canonical repository rule is simple:
+The current canonical repository structure rule is simple:
 
   * repository-global entry and governance surfaces such as `README.md`, `docs/`, and `.gitignore` remain at repository root
-  * the active crawler-host tracked work surfaces now live under `makpi51crawler/`
-  * `hosts/` therefore acts as both a host-operations family and, where explicitly validated, the home of host-scoped tracked work surfaces
+  * the active crawler-host tracked work surfaces live under `makpi51crawler/`
+  * Python runtime-family code lives under `makpi51crawler/python_live_runtime/`
+  * source/startpoint catalog JSON lives under `makpi51crawler/catalog/`
+  * taxonomy JSON lives under `makpi51crawler/taxonomy/`
+  * pi51c runtime synchronization must start from a verified GitHub mirror at `/logisticsearch/repo`
+  * live runtime, DB, systemd, and data directories on pi51c are separate operational surfaces and must not be silently confused with the repository tree
 
-In the current repository point, the main active crawler-host work surfaces are:
+The main active crawler-host repository surfaces are:
 
   * `makpi51crawler/README.md`
-  * `makpi51crawler/README.md`
+  * `makpi51crawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md`
+  * `makpi51crawler/python_live_runtime/README.md`
+  * `makpi51crawler/catalog/schema/startpoint_catalog_v2.schema.json`
+  * `makpi51crawler/catalog/startpoints/en/english_source_families_v2.json`
+  * `makpi51crawler/taxonomy/README.md`
+  * `makpi51crawler/taxonomy/schema/logisticsearch_taxonomy_language_schema_v1.json`
+  * `makpi51crawler/taxonomy/languages/`
 
 ## Güncel repository yapı kuralı
 
-Güncel kanonik repository kuralı basittir:
+Güncel kanonik repository yapı kuralı basittir:
 
   * `README.md`, `docs/` ve `.gitignore` gibi repository-geneli giriş ve yönetişim yüzeyleri repository kökünde kalır
-  * aktif crawler-host izlenen çalışma yüzeyleri artık `makpi51crawler/` altında yaşar
-  * bu nedenle `hosts/`, hem host-operasyon ailesi hem de açıkça doğrulanmış durumlarda host-kapsamlı izlenen çalışma yüzeylerinin evi olarak görev yapar
+  * aktif crawler-host izlenen çalışma yüzeyleri `makpi51crawler/` altında yaşar
+  * Python runtime-aile kodu `makpi51crawler/python_live_runtime/` altında yaşar
+  * source/startpoint catalog JSON `makpi51crawler/catalog/` altında yaşar
+  * taxonomy JSON `makpi51crawler/taxonomy/` altında yaşar
+  * pi51c runtime senkronizasyonu, önce `/logisticsearch/repo` klasörünün GitHub aynası olarak doğrulanmasıyla başlamalıdır
+  * pi51c üzerindeki live runtime, DB, systemd ve data klasörleri ayrı operasyon yüzeyleridir; repository ağacıyla sessizce karıştırılmamalıdır
 
-Mevcut repository noktasında ana aktif crawler-host çalışma yüzeyleri şunlardır:
+Ana aktif crawler-host repository yüzeyleri şunlardır:
 
   * `makpi51crawler/README.md`
-  * `makpi51crawler/README.md`
+  * `makpi51crawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md`
+  * `makpi51crawler/python_live_runtime/README.md`
+  * `makpi51crawler/catalog/schema/startpoint_catalog_v2.schema.json`
+  * `makpi51crawler/catalog/startpoints/en/english_source_families_v2.json`
+  * `makpi51crawler/taxonomy/README.md`
+  * `makpi51crawler/taxonomy/schema/logisticsearch_taxonomy_language_schema_v1.json`
+  * `makpi51crawler/taxonomy/languages/`
 
 ## Future deferred note: Pi51 semi-automatic sync model
 
