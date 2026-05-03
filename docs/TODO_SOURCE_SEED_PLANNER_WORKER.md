@@ -16,7 +16,7 @@ The next strategic direction is multilingual startpoint/source/seed planning for
 |---:|---|---|
 | 1 | Seal `source_seed_` naming rule in canonical documentation. | DONE_BY_THIS_DOC_SET |
 | 2 | Seal `_planner` and `_worker` separation rule. | DONE_BY_THIS_DOC_SET |
-| 3 | Keep all webcrawler phase-1 Python modules under hierarchical `webcrawler/lib`. | ACTIVE_RULE |
+| 3 | Keep all webcrawler phase-1 Python modules under hierarchical `python_live_runtime`. | ACTIVE_RULE |
 | 4 | Define 25-language source/startpoint/seed matrix contract. | PLANNED |
 | 5 | Define planner dry-run output files. | PLANNED |
 | 6 | Create `logisticsearch1_1_0_2_multilingual_startpoint_seed_planner.py`. | PLANNED |
@@ -58,7 +58,7 @@ Sıradaki stratejik yön crawler_core için çok dilli startpoint/source/seed pl
 |---:|---|---|
 | 1 | `source_seed_` isimlendirme kuralını canonical dokümana yaz. | DONE_BY_THIS_DOC_SET |
 | 2 | `_planner` ve `_worker` ayrımını mühürle. | DONE_BY_THIS_DOC_SET |
-| 3 | Tüm webcrawler faz-1 Python modüllerini hiyerarşik `webcrawler/lib` altında tut. | ACTIVE_RULE |
+| 3 | Tüm webcrawler faz-1 Python modüllerini hiyerarşik `python_live_runtime` altında tut. | ACTIVE_RULE |
 | 4 | 25 dilli source/startpoint/seed matrix contract tanımla. | PLANNED |
 | 5 | Planner dry-run çıktı dosyalarını tanımla. | PLANNED |
 | 6 | `logisticsearch1_1_0_2_multilingual_startpoint_seed_planner.py` oluştur. | PLANNED |

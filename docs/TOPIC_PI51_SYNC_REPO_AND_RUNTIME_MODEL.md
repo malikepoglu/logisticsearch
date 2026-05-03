@@ -10,7 +10,7 @@ It is not the action runbook.
 
 The paired action-layer document for this surface is:
 
-- `hosts/makpi51crawler/python/webcrawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md`
+- `makpi51crawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md`
 
 ## Genel Bakış
 
@@ -22,25 +22,25 @@ Bu belge action runbook değildir.
 
 Bu yüzeyin eşlenik action-layer belgesi şudur:
 
-- `hosts/makpi51crawler/python/webcrawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md`
+- `makpi51crawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md`
 
 ## Documentation hub
 
 - `README.md`
 - `docs/README.md`
-- `hosts/README.md`
-- `hosts/makpi51crawler/README.md`
-- `hosts/makpi51crawler/python/README.md`
-- `hosts/makpi51crawler/python/webcrawler/README.md`
+- `makpi51crawler/README.md`
+- `makpi51crawler/README.md`
+- `makpi51crawler/README.md`
+- `makpi51crawler/README.md`
 
 ## Dokümantasyon merkezi
 
 - `README.md`
 - `docs/README.md`
-- `hosts/README.md`
-- `hosts/makpi51crawler/README.md`
-- `hosts/makpi51crawler/python/README.md`
-- `hosts/makpi51crawler/python/webcrawler/README.md`
+- `makpi51crawler/README.md`
+- `makpi51crawler/README.md`
+- `makpi51crawler/README.md`
+- `makpi51crawler/README.md`
 
 ## Canonical machine-to-machine flow
 
@@ -59,7 +59,7 @@ The currently relevant code-and-runtime synchronization flow is:
    `/logisticsearch/webcrawler`
 
 5. Pi51 live runtime Python module surface  
-   `/logisticsearch/webcrawler/lib`
+   `/logisticsearch/webcrawler/python_live_runtime`
 
 ## Kanonik makineden makineye akış
 
@@ -78,7 +78,7 @@ The currently relevant code-and-runtime synchronization flow is:
    `/logisticsearch/webcrawler`
 
 5. Pi51 canlı runtime Python modül yüzeyi  
-   `/logisticsearch/webcrawler/lib`
+   `/logisticsearch/webcrawler/python_live_runtime`
 
 ## What each layer means
 
@@ -117,7 +117,7 @@ That separation is deliberate so repository truth and execution truth do not col
 
 ### 5. Pi51 live runtime Python module surface
 
-`/logisticsearch/webcrawler/lib` is the current live runtime Python module surface.
+`/logisticsearch/webcrawler/python_live_runtime` is the current live runtime Python module surface.
 
 At the current implementation point, `sync-runtime` populates this surface from the tracked repository Python runtime family.
 
@@ -158,7 +158,7 @@ Bu ayrım kasıtlıdır; böylece repository doğrusu ile execution doğrusu kon
 
 ### 5. Pi51 canlı runtime Python modül yüzeyi
 
-`/logisticsearch/webcrawler/lib`, güncel canlı runtime Python modül yüzeyidir.
+`/logisticsearch/webcrawler/python_live_runtime`, güncel canlı runtime Python modül yüzeyidir.
 
 Mevcut implementasyon noktasında `sync-runtime`, bu yüzeyi tracked repository Python runtime ailesinden doldurur.
 
@@ -442,10 +442,10 @@ At the current point:
 
 The action-layer runbook for operating this model is:
 
-- `hosts/makpi51crawler/python/webcrawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md`
+- `makpi51crawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md`
 
 ## Eşlenik runbook
 
 Bu modeli işletmek için action-layer runbook şudur:
 
-- `hosts/makpi51crawler/python/webcrawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md`
+- `makpi51crawler/RUNBOOK_SYNC_REPO_AND_RUNTIME.md`

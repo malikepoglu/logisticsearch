@@ -48,13 +48,13 @@ No runtime code should be treated as canonical under `/srv/`. `/srv/` is the can
 Canonical runtime code must live under:
 
 - `/logisticsearch/webcrawler/`
-- `/logisticsearch/webcrawler/lib/`
+- `/logisticsearch/webcrawler/python_live_runtime/`
 - `/logisticsearch/webcrawler/.venv/`
 
 The meaning of these paths is fixed:
 
 - `/logisticsearch/webcrawler/` is the canonical runtime root.
-- `/logisticsearch/webcrawler/lib/` stores the runtime Python module surface used by the live crawler runtime.
+- `/logisticsearch/webcrawler/python_live_runtime/` stores the runtime Python module surface used by the live crawler runtime.
 - `/logisticsearch/webcrawler/.venv/` stores the canonical Python virtual environment for this runtime surface.
 
 The `.venv` directory is the isolated Python package environment for the canonical webcrawler runtime. It is part of the runtime execution surface, not the tracked repository source surface.
@@ -73,11 +73,11 @@ Secret-bearing values must still be handled carefully and intentionally. This do
 
 Public operator control wrappers must live under:
 
-- `/logisticsearch/webcrawler/lib/controls/playwc.py`
-- `/logisticsearch/webcrawler/lib/controls/pausewc.py`
-- `/logisticsearch/webcrawler/lib/controls/resetwc.py`
-- `/logisticsearch/webcrawler/lib/controls/poweroffwc.py`
-- `/logisticsearch/webcrawler/lib/controls/rebootwc.py`
+- `/logisticsearch/webcrawler/python_live_runtime/controls/playwc.py`
+- `/logisticsearch/webcrawler/python_live_runtime/controls/pausewc.py`
+- `/logisticsearch/webcrawler/python_live_runtime/controls/resetwc.py`
+- `/logisticsearch/webcrawler/python_live_runtime/controls/poweroffwc.py`
+- `/logisticsearch/webcrawler/python_live_runtime/controls/rebootwc.py`
 
 The public meanings are:
 
@@ -101,8 +101,7 @@ This is the canonical short-path tracked repository surface.
 
 Tracked host-scoped crawler code remains under the repository tree, for example:
 
-- `/logisticsearch/repo/hosts/makpi51crawler/python/webcrawler/`
-- `/logisticsearch/repo/hosts/makpi51crawler/sql/crawler_core/`
+- `/logisticsearch/repo/makpi51crawler/`
 
 The repository is the tracked source-of-truth surface. The live runtime surface under `/logisticsearch/webcrawler/` is the canonical execution surface populated from controlled tracked code.
 
@@ -174,13 +173,13 @@ Bu yolların anlamı sabittir:
 Kanonik runtime kodu şu yollar altında yaşamalıdır:
 
 - `/logisticsearch/webcrawler/`
-- `/logisticsearch/webcrawler/lib/`
+- `/logisticsearch/webcrawler/python_live_runtime/`
 - `/logisticsearch/webcrawler/.venv/`
 
 Bu yolların anlamı sabittir:
 
 - `/logisticsearch/webcrawler/` kanonik runtime köküdür.
-- `/logisticsearch/webcrawler/lib/` canlı crawler runtime'ının kullandığı Python modül yüzeyini tutar.
+- `/logisticsearch/webcrawler/python_live_runtime/` canlı crawler runtime'ının kullandığı Python modül yüzeyini tutar.
 - `/logisticsearch/webcrawler/.venv/` bu runtime yüzeyi için kanonik Python virtual environment'ı tutar.
 
 `.venv` dizini, kanonik webcrawler runtime'ının izole Python paket ortamıdır. İzlenen repository kaynak yüzeyinin değil, runtime çalışma yüzeyinin parçasıdır.
@@ -199,11 +198,11 @@ Secret taşıyan değerler yine dikkatli ve bilinçli biçimde ele alınmalıdı
 
 Açık operatör kontrol sarmalayıcıları şu yollar altında yaşamalıdır:
 
-- `/logisticsearch/webcrawler/lib/controls/playwc.py`
-- `/logisticsearch/webcrawler/lib/controls/pausewc.py`
-- `/logisticsearch/webcrawler/lib/controls/resetwc.py`
-- `/logisticsearch/webcrawler/lib/controls/poweroffwc.py`
-- `/logisticsearch/webcrawler/lib/controls/rebootwc.py`
+- `/logisticsearch/webcrawler/python_live_runtime/controls/playwc.py`
+- `/logisticsearch/webcrawler/python_live_runtime/controls/pausewc.py`
+- `/logisticsearch/webcrawler/python_live_runtime/controls/resetwc.py`
+- `/logisticsearch/webcrawler/python_live_runtime/controls/poweroffwc.py`
+- `/logisticsearch/webcrawler/python_live_runtime/controls/rebootwc.py`
 
 Açık anlamlar şunlardır:
 
@@ -227,8 +226,7 @@ Bu yol, kanonik kısa-yol izlenen repository yüzeyidir.
 
 İzlenen host-scoped crawler kodu repository ağacı altında kalmaya devam eder; örneğin:
 
-- `/logisticsearch/repo/hosts/makpi51crawler/python/webcrawler/`
-- `/logisticsearch/repo/hosts/makpi51crawler/sql/crawler_core/`
+- `/logisticsearch/repo/makpi51crawler/`
 
 Repository, izlenen source-of-truth yüzeyidir. `/logisticsearch/webcrawler/` altındaki canlı runtime yüzeyi ise kontrollü izlenen koddan doldurulan kanonik execution yüzeyidir.
 

@@ -1,0 +1,2382 @@
+{
+  "catalog_version": "english_source_families_v2",
+  "catalog_status": "candidate_review_only",
+  "catalog_scope": {
+    "lang_code": "en",
+    "lang_name": "English",
+    "variable_capacity_model": true,
+    "fixed_target_count": null,
+    "review_rule": "each_seed_checked_individually_before_db_insert",
+    "cross_seed_traversal_enabled": true,
+    "cross_language_traversal_enabled": true
+  },
+  "seed_contract_basis": {
+    "source_table": "seed.source",
+    "seed_url_table": "seed.seed_url",
+    "source_unique_key": "source_code",
+    "seed_unique_key": [
+      "source_id",
+      "canonical_url_sha256"
+    ]
+  },
+  "crawl_review_policy": {
+    "policy_version": "en_review_policy_v1",
+    "goal": "avoid_alarm_patterns_and_unnecessary_resource_consumption",
+    "review_mode_before_insert": "lightweight_live_check_only",
+    "host_level_budgeting_required": true,
+    "cross_host_round_robin_required": true,
+    "same_host_back_to_back_checks_avoided": true,
+    "browser_use_policy": "browser_only_if_http_path_is_insufficient",
+    "robots_first": true,
+    "etag_last_modified_preferred_when_available": true,
+    "suggested_review_order": [
+      "robots_check",
+      "lightweight_http_check",
+      "html_surface_check",
+      "only_if_needed_browser_check"
+    ],
+    "minimum_spacing_guidance": {
+      "same_host_review_spacing_seconds": 120,
+      "same_source_review_spacing_seconds": 30
+    }
+  },
+  "source_families": [
+    {
+      "source_family_code": "fiata_org",
+      "source_family_name": "FIATA",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://fiata.org/",
+      "source_host": "fiata.org",
+      "source_category": "association_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 230,
+      "default_recrawl_interval": "14 days",
+      "default_max_depth": 2,
+      "notes": "Single source family for FIATA ecosystem. Country directory paths stay below this family.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "A_PLUS",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 10,
+        "live_check_required": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:fiata.org",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "quality_model_version": "six_tier_v1",
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "directory_root",
+          "surface_type": "directory",
+          "surface_name": "FIATA Directory Root",
+          "surface_metadata": {
+            "surface_scope": "global",
+            "country_code": null
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://fiata.org/directory/",
+              "canonical_url": "https://fiata.org/directory/",
+              "is_enabled": true,
+              "priority": 230,
+              "max_depth": 2,
+              "recrawl_interval": "14 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Global FIATA directory root entrypoint."
+            }
+          ]
+        },
+        {
+          "surface_code": "directory_country_gb",
+          "surface_type": "country_member_directory",
+          "surface_name": "FIATA Directory United Kingdom",
+          "surface_metadata": {
+            "surface_scope": "country",
+            "country_code": "GB"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://fiata.org/directory/gb/",
+              "canonical_url": "https://fiata.org/directory/gb/",
+              "is_enabled": true,
+              "priority": 225,
+              "max_depth": 2,
+              "recrawl_interval": "14 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "FIATA directory page for United Kingdom."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "A_PLUS",
+      "source_selection_reason": "Global freight forwarding association directory and country member directory entrypoints for logistics company discovery."
+    },
+    {
+      "source_family_code": "bifa_org",
+      "source_family_name": "BIFA",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://bifa.org/",
+      "source_host": "bifa.org",
+      "source_category": "association_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 220,
+      "default_recrawl_interval": "14 days",
+      "default_max_depth": 2,
+      "notes": "Single source family for BIFA membership ecosystem.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "A",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 10,
+        "live_check_required": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:bifa.org",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "quality_model_version": "six_tier_v1",
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "members_directory",
+          "surface_type": "member_directory",
+          "surface_name": "BIFA Members Directory",
+          "surface_metadata": {
+            "surface_scope": "directory"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://bifa.org/members/",
+              "canonical_url": "https://bifa.org/members/",
+              "is_enabled": true,
+              "priority": 220,
+              "max_depth": 2,
+              "recrawl_interval": "14 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "BIFA members directory."
+            }
+          ]
+        },
+        {
+          "surface_code": "member_search_results",
+          "surface_type": "member_search",
+          "surface_name": "BIFA Member Search Results Surface",
+          "surface_metadata": {
+            "surface_scope": "search_surface"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "search_surface",
+              "submitted_url": "https://bifa.org/membership/member-search/search-results/",
+              "canonical_url": "https://bifa.org/membership/member-search/search-results/",
+              "is_enabled": true,
+              "priority": 210,
+              "max_depth": 2,
+              "recrawl_interval": "14 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "BIFA member search results surface."
+            }
+          ]
+        },
+        {
+          "surface_code": "recent_new_members",
+          "surface_type": "listing_index",
+          "surface_name": "BIFA Recent New Members",
+          "surface_metadata": {
+            "surface_scope": "recent_members"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "listing_index",
+              "submitted_url": "https://bifa.org/membership/recent-new-members/",
+              "canonical_url": "https://bifa.org/membership/recent-new-members/",
+              "is_enabled": true,
+              "priority": 200,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "BIFA recent new members discovery surface."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "GB",
+      "source_language": "en",
+      "source_quality_tier": "A",
+      "source_selection_reason": "UK freight forwarding association member directory and member search surfaces for logistics company discovery."
+    },
+    {
+      "source_family_code": "iela_org",
+      "source_family_name": "IELA",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.iela.org/",
+      "source_host": "www.iela.org",
+      "source_category": "association_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 215,
+      "default_recrawl_interval": "21 days",
+      "default_max_depth": 2,
+      "notes": "IELA global exhibition logistics membership surface.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "A_MINUS",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 10,
+        "live_check_required": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.iela.org",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "quality_model_version": "six_tier_v1",
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "member_finder",
+          "surface_type": "member_directory",
+          "surface_name": "IELA Member Finder",
+          "surface_metadata": {
+            "surface_scope": "global_member_finder"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.iela.org/members/find-an-iela-member.html",
+              "canonical_url": "https://www.iela.org/members/find-an-iela-member.html",
+              "is_enabled": true,
+              "priority": 215,
+              "max_depth": 2,
+              "recrawl_interval": "21 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "IELA member finder."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "Exhibition logistics association member finder for specialized logistics company discovery."
+    },
+    {
+      "source_family_code": "freightnet_com",
+      "source_family_name": "Freightnet",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.freightnet.com/",
+      "source_host": "www.freightnet.com",
+      "source_category": "commercial_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 175,
+      "default_recrawl_interval": "21 days",
+      "default_max_depth": 2,
+      "notes": "Commercial directory family for forwarders and logistics companies.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B",
+        "discovery_value": "high",
+        "noise_risk": "medium",
+        "manual_review_priority": 20,
+        "live_check_required": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.freightnet.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "quality_model_version": "six_tier_v1",
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "global_forwarders",
+          "surface_type": "directory",
+          "surface_name": "Freightnet Global Freight Forwarders",
+          "surface_metadata": {
+            "surface_scope": "global_forwarders"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.freightnet.com/directory/p1/cAA/s30.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p1/cAA/s30.htm",
+              "is_enabled": true,
+              "priority": 175,
+              "max_depth": 2,
+              "recrawl_interval": "21 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Freightnet global freight forwarders directory."
+            }
+          ]
+        },
+        {
+          "surface_code": "uk_forwarders",
+          "surface_type": "country_directory",
+          "surface_name": "Freightnet UK Freight Forwarders",
+          "surface_metadata": {
+            "surface_scope": "country",
+            "country_code": "GB"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.freightnet.com/directory/p1/cGB/s30.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p1/cGB/s30.htm",
+              "is_enabled": true,
+              "priority": 170,
+              "max_depth": 2,
+              "recrawl_interval": "21 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Freightnet UK freight forwarders directory."
+            }
+          ]
+        },
+        {
+          "surface_code": "usa_forwarders",
+          "surface_type": "country_directory",
+          "surface_name": "Freightnet USA Freight Forwarders",
+          "surface_metadata": {
+            "surface_scope": "country",
+            "country_code": "US"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.freightnet.com/directory/p1/cUS/s30.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p1/cUS/s30.htm",
+              "is_enabled": true,
+              "priority": 170,
+              "max_depth": 2,
+              "recrawl_interval": "21 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Freightnet USA freight forwarders directory."
+            }
+          ]
+        },
+        {
+          "surface_code": "germany_forwarders",
+          "surface_type": "country_directory",
+          "surface_name": "Freightnet Germany Freight Forwarders",
+          "surface_metadata": {
+            "surface_scope": "country",
+            "country_code": "DE"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.freightnet.com/directory/p1/cDE/s30.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p1/cDE/s30.htm",
+              "is_enabled": true,
+              "priority": 168,
+              "max_depth": 2,
+              "recrawl_interval": "21 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Freightnet Germany freight forwarders directory."
+            }
+          ]
+        },
+        {
+          "surface_code": "germany_logistics",
+          "surface_type": "country_directory",
+          "surface_name": "Freightnet Germany Logistics Companies",
+          "surface_metadata": {
+            "surface_scope": "country",
+            "country_code": "DE"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.freightnet.com/directory/p9/cDE/s99.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p9/cDE/s99.htm",
+              "is_enabled": true,
+              "priority": 162,
+              "max_depth": 2,
+              "recrawl_interval": "21 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Freightnet Germany logistics companies directory."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B",
+      "source_selection_reason": "Commercial freight forwarder directory with global and country-specific logistics company listings."
+    },
+    {
+      "source_family_code": "thomasnet_com",
+      "source_family_name": "Thomasnet",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.thomasnet.com/",
+      "source_host": "www.thomasnet.com",
+      "source_category": "b2b_supplier_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 150,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "B2B supplier-family source for transportation and shipping categories.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_PLUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "medium_high",
+        "manual_review_priority": 25,
+        "live_check_required": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.thomasnet.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "quality_model_version": "six_tier_v1",
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "shipping_transport_categories",
+          "surface_type": "category_page",
+          "surface_name": "Thomasnet Shipping and Transportation Categories",
+          "surface_metadata": {
+            "surface_scope": "category_index"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.thomasnet.com/browse/services/shipping-transportation-services-1.html",
+              "canonical_url": "https://www.thomasnet.com/browse/services/shipping-transportation-services-1.html",
+              "is_enabled": true,
+              "priority": 150,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Thomasnet shipping and transportation category index."
+            }
+          ]
+        },
+        {
+          "surface_code": "transportation_brokers",
+          "surface_type": "category_page",
+          "surface_name": "Thomasnet Transportation Brokers",
+          "surface_metadata": {
+            "surface_scope": "category_page"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.thomasnet.com/suppliers/usa/transportation-brokers-87443032",
+              "canonical_url": "https://www.thomasnet.com/suppliers/usa/transportation-brokers-87443032",
+              "is_enabled": true,
+              "priority": 145,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Thomasnet transportation brokers category page."
+            }
+          ]
+        },
+        {
+          "surface_code": "transportation_services",
+          "surface_type": "category_page",
+          "surface_name": "Thomasnet Transportation Services",
+          "surface_metadata": {
+            "surface_scope": "category_page"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.thomasnet.com/suppliers/usa/transportation-services-87443313",
+              "canonical_url": "https://www.thomasnet.com/suppliers/usa/transportation-services-87443313",
+              "is_enabled": true,
+              "priority": 145,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Thomasnet transportation services category page."
+            }
+          ]
+        },
+        {
+          "surface_code": "shipping_services",
+          "surface_type": "category_page",
+          "surface_name": "Thomasnet Shipping Services",
+          "surface_metadata": {
+            "surface_scope": "category_page"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.thomasnet.com/suppliers/usa/shipping-services-74980905",
+              "canonical_url": "https://www.thomasnet.com/suppliers/usa/shipping-services-74980905",
+              "is_enabled": true,
+              "priority": 142,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Thomasnet shipping services category page."
+            }
+          ]
+        },
+        {
+          "surface_code": "delivery_services",
+          "surface_type": "category_page",
+          "surface_name": "Thomasnet Delivery Services",
+          "surface_metadata": {
+            "surface_scope": "category_page"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.thomasnet.com/suppliers/usa/delivery-services-1496",
+              "canonical_url": "https://www.thomasnet.com/suppliers/usa/delivery-services-1496",
+              "is_enabled": true,
+              "priority": 138,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Thomasnet delivery services category page."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "US",
+      "source_language": "en",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "US B2B supplier directory surfaces for shipping, transportation, broker, and delivery service discovery."
+    },
+    {
+      "source_family_code": "wcaworld_com",
+      "source_family_name": "WCAworld",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.wcaworld.com/",
+      "source_host": "wcaworld.com",
+      "source_category": "network_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 210,
+      "default_recrawl_interval": "21 days",
+      "default_max_depth": 2,
+      "notes": "WCAworld network and directory ecosystem.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_PLUS",
+        "discovery_value": "high",
+        "noise_risk": "low_medium",
+        "manual_review_priority": 15,
+        "live_check_required": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "family:wcaworld.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "quality_model_version": "six_tier_v1",
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "directory_root",
+          "surface_type": "directory",
+          "surface_name": "WCAworld Directory",
+          "surface_metadata": {
+            "surface_scope": "global_directory"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.wcaworld.com/directory",
+              "canonical_url": "https://www.wcaworld.com/directory",
+              "is_enabled": true,
+              "priority": 210,
+              "max_depth": 2,
+              "recrawl_interval": "21 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "WCAworld directory root."
+            }
+          ]
+        },
+        {
+          "surface_code": "general_networks",
+          "surface_type": "network_overview",
+          "surface_name": "WCAworld General Networks",
+          "surface_metadata": {
+            "surface_scope": "network_overview"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.wcaworld.com/networks/generalnetworks",
+              "canonical_url": "https://www.wcaworld.com/networks/generalnetworks",
+              "is_enabled": true,
+              "priority": 205,
+              "max_depth": 1,
+              "recrawl_interval": "21 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "WCAworld general networks overview."
+            }
+          ]
+        },
+        {
+          "surface_code": "ecommerce_networks",
+          "surface_type": "network_overview",
+          "surface_name": "WCAworld eCommerce Networks",
+          "surface_metadata": {
+            "surface_scope": "network_overview"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.wcaworld.com/networks/ecommercenetworks",
+              "canonical_url": "https://www.wcaworld.com/networks/ecommercenetworks",
+              "is_enabled": true,
+              "priority": 195,
+              "max_depth": 1,
+              "recrawl_interval": "21 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "WCAworld eCommerce network overview."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Freight forwarding network directory and network overview surfaces for logistics company discovery."
+    },
+    {
+      "source_family_code": "kompass_com",
+      "source_family_name": "Kompass",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.kompass.com/",
+      "source_host": "kompass.com",
+      "source_category": "b2b_supplier_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 148,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "Kompass transportation and logistics ecosystem across regional subdomains.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_PLUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "medium_high",
+        "manual_review_priority": 25,
+        "live_check_required": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "family:kompass.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "quality_model_version": "six_tier_v1",
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "germany_transport_logistics",
+          "surface_type": "regional_directory",
+          "surface_name": "Kompass Germany Transportation and Logistics Services",
+          "surface_metadata": {
+            "surface_scope": "country",
+            "country_code": "DE"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.kompass.com/z/de/a/transportation-and-logistics-services/75/",
+              "canonical_url": "https://www.kompass.com/z/de/a/transportation-and-logistics-services/75/",
+              "is_enabled": true,
+              "priority": 148,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Kompass Germany transportation and logistics services."
+            }
+          ]
+        },
+        {
+          "surface_code": "north_rhine_westphalia_transport_logistics",
+          "surface_type": "regional_directory",
+          "surface_name": "Kompass North Rhine-Westphalia Transport and Logistics",
+          "surface_metadata": {
+            "surface_scope": "region",
+            "region_code": "DE-NW"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://us.kompass.com/z/de/s/transport-logistics/10/r/north-rhine-westphalia/de_05/",
+              "canonical_url": "https://us.kompass.com/z/de/s/transport-logistics/10/r/north-rhine-westphalia/de_05/",
+              "is_enabled": true,
+              "priority": 144,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Kompass NRW transport and logistics directory."
+            }
+          ]
+        },
+        {
+          "surface_code": "duesseldorf_transport_logistics",
+          "surface_type": "regional_directory",
+          "surface_name": "Kompass Düsseldorf Transport and Logistics",
+          "surface_metadata": {
+            "surface_scope": "city",
+            "region_code": "DE-NW-DUS"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://sg.kompass.com/z/de/s/transport-logistics/10/d/dusseldorf/de_05_05111/",
+              "canonical_url": "https://sg.kompass.com/z/de/s/transport-logistics/10/d/dusseldorf/de_05_05111/",
+              "is_enabled": true,
+              "priority": 140,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "Kompass Düsseldorf transport and logistics directory."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "B2B company directory surfaces focused on transportation and logistics services, including Germany regional entrypoints."
+    },
+    {
+      "source_family_code": "ncbfaa_org",
+      "source_family_name": "NCBFAA",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.ncbfaa.org/",
+      "source_host": "www.ncbfaa.org",
+      "source_category": "freight_forwarder_and_customs_broker_association",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_max_depth": 1,
+      "default_priority": 86,
+      "default_recrawl_interval": "14 days",
+      "family_metadata": {
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "source_seed_policy": "single_source_catalog_patch_first",
+        "crawler_core_test_policy": "do_not_write_frontier_until_catalog_and_planner_evidence_pass",
+        "human_review_required_before_frontier": true,
+        "lang_code": "en",
+        "trust_tier": "A_MINUS",
+        "manual_review_priority": 1,
+        "live_check_required": true,
+        "noise_risk": "LOW",
+        "discovery_value": "US customs broker and freight forwarder membership search candidate.",
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "english_association_directory",
+        "quality_model_version": "six_tier_v1",
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "ncbfaa_membership_search",
+          "surface_name": "NCBFAA Search Our Membership",
+          "surface_status": "candidate_reviewed_for_catalog",
+          "surface_type": "association_member_search",
+          "seed_urls": [
+            {
+              "submitted_url": "https://www.ncbfaa.org/search-our-membership",
+              "canonical_url": "https://www.ncbfaa.org/search-our-membership",
+              "is_enabled": true,
+              "priority": 86,
+              "max_depth": 1,
+              "recrawl_interval": "14 days",
+              "seed_metadata": {
+                "source_seed_code": "source_seed_en_ncbfaa_org_membership_search_001",
+                "trust_tier": "A_MINUS",
+                "probe_cycle": "SOURCE_SEED_ENGLISH_STARTPOINT_R1B_EN_A_FIRST8_LIVE_PROBE_READONLY",
+                "patch_cycle": "SOURCE_SEED_ENGLISH_STARTPOINT_R2B_NCBFAA_SCHEMA_REPAIR_LOCAL_ONLY",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true,
+                "review_state": "needs_live_check",
+                "lang_code": "en"
+              },
+              "notes": "Initial NCBFAA English source seed. Added one-at-a-time after probe and schema repair.",
+              "seed_type": "member_search_page",
+              "seed_language": "en",
+              "seed_priority": 80,
+              "seed_status": "candidate_reviewed_for_catalog",
+              "seed_review_note": "R1B probe: HTTP 200 seed page, HTTP 200 robots.txt. Do not crawl broadly until reviewed seed-to-frontier bridge step."
+            }
+          ],
+          "surface_metadata": {
+            "probe_decision": "CANDIDATE_CAN_MOVE_TO_SINGLE_SOURCE_CATALOG_PATCH_AFTER_HUMAN_REVIEW",
+            "robots_http_code": 200,
+            "seed_http_code": 200,
+            "selection_reason": "US customs broker and freight forwarder membership search candidate."
+          },
+          "surface_language": "en",
+          "surface_priority": 80
+        }
+      ],
+      "notes": "NCBFAA membership search added as a single-source English startpoint after live robots and HTTP probe.",
+      "source_language": "en",
+      "source_country_scope": "US",
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "US customs broker and freight forwarder membership search. R1B lightweight probe returned HTTP 200 for seed and robots.txt."
+    },
+    {
+      "source_family_code": "ciffa_com",
+      "source_family_name": "CIFFA",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.ciffa.com/",
+      "source_host": "www.ciffa.com",
+      "source_category": "association_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 218,
+      "default_recrawl_interval": "14 days",
+      "default_max_depth": 2,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "A",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 10,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.ciffa.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "member_directory",
+          "surface_type": "member_directory",
+          "surface_name": "Member Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "A",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.ciffa.com/member-directory/",
+              "canonical_url": "https://www.ciffa.com/member-directory/",
+              "is_enabled": true,
+              "priority": 218,
+              "max_depth": 2,
+              "recrawl_interval": "14 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "A",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "ciffa_com",
+                "source_host": "www.ciffa.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "CA",
+      "source_language": "en",
+      "source_quality_tier": "A",
+      "source_selection_reason": "Canadian International Freight Forwarders Association member directory candidate for freight forwarder discovery."
+    },
+    {
+      "source_family_code": "iata_cargolink",
+      "source_family_name": "IATA CargoLink",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.iata.org/",
+      "source_host": "www.iata.org",
+      "source_category": "air_cargo_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 216,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "A_PLUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 10,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.iata.org",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "cargolink_overview",
+          "surface_type": "directory_overview",
+          "surface_name": "Cargolink Overview",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "A_PLUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.iata.org/en/publications/directories/cargolink/",
+              "canonical_url": "https://www.iata.org/en/publications/directories/cargolink/",
+              "is_enabled": true,
+              "priority": 216,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "A_PLUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "iata_cargolink",
+                "source_host": "www.iata.org",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        },
+        {
+          "surface_code": "cargolink_directory_search",
+          "surface_type": "directory_search",
+          "surface_name": "Cargolink Directory Search",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "A_PLUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.iata.org/en/publications/directories/cargolink/directory/",
+              "canonical_url": "https://www.iata.org/en/publications/directories/cargolink/directory/",
+              "is_enabled": true,
+              "priority": 214,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "A_PLUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "iata_cargolink",
+                "source_host": "www.iata.org",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "A_PLUS",
+      "source_selection_reason": "IATA CargoLink directory candidate for air cargo supply-chain participants."
+    },
+    {
+      "source_family_code": "iffcbano_org",
+      "source_family_name": "IFFCBANO",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://iffcbano.org/",
+      "source_host": "iffcbano.org",
+      "source_category": "association_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 188,
+      "default_recrawl_interval": "21 days",
+      "default_max_depth": 2,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "A_MINUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "medium",
+        "noise_risk": "low",
+        "manual_review_priority": 12,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:iffcbano.org",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "members_directory",
+          "surface_type": "member_directory",
+          "surface_name": "Members Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "A_MINUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://iffcbano.org/members/",
+              "canonical_url": "https://iffcbano.org/members/",
+              "is_enabled": true,
+              "priority": 188,
+              "max_depth": 2,
+              "recrawl_interval": "21 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "A_MINUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "iffcbano_org",
+                "source_host": "iffcbano.org",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "US",
+      "source_language": "en",
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "Regional customs broker and freight forwarder association member directory candidate."
+    },
+    {
+      "source_family_code": "df_alliance_com",
+      "source_family_name": "DF Alliance",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.df-alliance.com/",
+      "source_host": "www.df-alliance.com",
+      "source_category": "network_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 166,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_PLUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "high",
+        "noise_risk": "medium",
+        "manual_review_priority": 18,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.df-alliance.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "member_directory",
+          "surface_type": "member_directory",
+          "surface_name": "Member Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B_PLUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.df-alliance.com/benefits/member-directory",
+              "canonical_url": "https://www.df-alliance.com/benefits/member-directory",
+              "is_enabled": true,
+              "priority": 166,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B_PLUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "df_alliance_com",
+                "source_host": "www.df-alliance.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Global logistics member directory candidate; commercial-network source requires careful live review."
+    },
+    {
+      "source_family_code": "all_forward_com",
+      "source_family_name": "All Forward",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.all-forward.com/",
+      "source_host": "www.all-forward.com",
+      "source_category": "network_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 164,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_PLUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "high",
+        "noise_risk": "medium",
+        "manual_review_priority": 18,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.all-forward.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "members_directory",
+          "surface_type": "member_directory",
+          "surface_name": "Members Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B_PLUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.all-forward.com/MembersDirectory",
+              "canonical_url": "https://www.all-forward.com/MembersDirectory",
+              "is_enabled": true,
+              "priority": 164,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B_PLUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "all_forward_com",
+                "source_host": "www.all-forward.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Forwarder network member directory candidate."
+    },
+    {
+      "source_family_code": "wnaweb_com",
+      "source_family_name": "World Net Associates",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://wnaweb.com/",
+      "source_host": "wnaweb.com",
+      "source_category": "network_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 160,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_PLUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "high",
+        "noise_risk": "medium",
+        "manual_review_priority": 20,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:wnaweb.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "member_directory",
+          "surface_type": "member_directory",
+          "surface_name": "Member Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B_PLUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://wnaweb.com/member-s-directory",
+              "canonical_url": "https://wnaweb.com/member-s-directory",
+              "is_enabled": true,
+              "priority": 160,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B_PLUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "wnaweb_com",
+                "source_host": "wnaweb.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Freight forwarder, customs broker and logistics specialist member directory candidate."
+    },
+    {
+      "source_family_code": "gffdirectory_com",
+      "source_family_name": "Global Freight Forwarders Directory",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://gffdirectory.com/",
+      "source_host": "gffdirectory.com",
+      "source_category": "commercial_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 142,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "medium",
+        "noise_risk": "medium",
+        "manual_review_priority": 24,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:gffdirectory.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "directory_root",
+          "surface_type": "directory",
+          "surface_name": "Directory Root",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://gffdirectory.com/",
+              "canonical_url": "https://gffdirectory.com/",
+              "is_enabled": true,
+              "priority": 142,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "gffdirectory_com",
+                "source_host": "gffdirectory.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B",
+      "source_selection_reason": "Global freight forwarder directory candidate; commercial visibility source requires cautious scoring."
+    },
+    {
+      "source_family_code": "freighthub_co",
+      "source_family_name": "FreightHub",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://freighthub.co/",
+      "source_host": "freighthub.co",
+      "source_category": "commercial_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 140,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "medium",
+        "noise_risk": "medium",
+        "manual_review_priority": 24,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:freighthub.co",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "directory_root",
+          "surface_type": "directory",
+          "surface_name": "Directory Root",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://freighthub.co/",
+              "canonical_url": "https://freighthub.co/",
+              "is_enabled": true,
+              "priority": 140,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "freighthub_co",
+                "source_host": "freighthub.co",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B",
+      "source_selection_reason": "Logistics business listing directory candidate."
+    },
+    {
+      "source_family_code": "freightmidpoint_com",
+      "source_family_name": "Freight Midpoint",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://freightmidpoint.com/",
+      "source_host": "freightmidpoint.com",
+      "source_category": "network_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 158,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_PLUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "high",
+        "noise_risk": "medium",
+        "manual_review_priority": 18,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:freightmidpoint.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "members_directory",
+          "surface_type": "member_directory",
+          "surface_name": "Members Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B_PLUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://freightmidpoint.com/Directory/",
+              "canonical_url": "https://freightmidpoint.com/Directory/",
+              "is_enabled": true,
+              "priority": 158,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B_PLUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "freightmidpoint_com",
+                "source_host": "freightmidpoint.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Freight Midpoint members directory candidate for forwarder network discovery."
+    },
+    {
+      "source_family_code": "fncnetwork_com",
+      "source_family_name": "FNC Network",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://fncnetwork.com/",
+      "source_host": "fncnetwork.com",
+      "source_category": "network_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 156,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_PLUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "high",
+        "noise_risk": "medium",
+        "manual_review_priority": 18,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:fncnetwork.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "directory",
+          "surface_type": "member_directory",
+          "surface_name": "Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B_PLUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://fncnetwork.com/directory",
+              "canonical_url": "https://fncnetwork.com/directory",
+              "is_enabled": true,
+              "priority": 156,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B_PLUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "fncnetwork_com",
+                "source_host": "fncnetwork.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Verified freight forwarder network directory candidate."
+    },
+    {
+      "source_family_code": "overseasprojectcargo_com",
+      "source_family_name": "Overseas Project Cargo Association",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://overseasprojectcargo.com/",
+      "source_host": "overseasprojectcargo.com",
+      "source_category": "project_cargo_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 154,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_PLUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "medium",
+        "noise_risk": "medium",
+        "manual_review_priority": 20,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:overseasprojectcargo.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "members_directory",
+          "surface_type": "member_directory",
+          "surface_name": "Members Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B_PLUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://overseasprojectcargo.com/Directory/",
+              "canonical_url": "https://overseasprojectcargo.com/Directory/",
+              "is_enabled": true,
+              "priority": 154,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B_PLUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "overseasprojectcargo_com",
+                "source_host": "overseasprojectcargo.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Project cargo freight forwarder directory candidate."
+    },
+    {
+      "source_family_code": "olofamily_com",
+      "source_family_name": "OLO Family",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.olofamily.com/",
+      "source_host": "www.olofamily.com",
+      "source_category": "network_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 138,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "medium",
+        "noise_risk": "medium",
+        "manual_review_priority": 24,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.olofamily.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "company_directory",
+          "surface_type": "member_directory",
+          "surface_name": "Company Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.olofamily.com/Member/Company_1.html",
+              "canonical_url": "https://www.olofamily.com/Member/Company_1.html",
+              "is_enabled": true,
+              "priority": 138,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "olofamily_com",
+                "source_host": "www.olofamily.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B",
+      "source_selection_reason": "Freight forwarding company directory candidate."
+    },
+    {
+      "source_family_code": "gocomet_forwarders",
+      "source_family_name": "GoComet Forwarders Directory",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://forwarders.gocomet.com/",
+      "source_host": "forwarders.gocomet.com",
+      "source_category": "commercial_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 136,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "medium",
+        "noise_risk": "medium",
+        "manual_review_priority": 24,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:forwarders.gocomet.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "directory_root",
+          "surface_type": "directory",
+          "surface_name": "Directory Root",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://forwarders.gocomet.com/",
+              "canonical_url": "https://forwarders.gocomet.com/",
+              "is_enabled": true,
+              "priority": 136,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "gocomet_forwarders",
+                "source_host": "forwarders.gocomet.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B",
+      "source_selection_reason": "Commercial freight forwarder directory candidate; requires review for ranking and advertising noise."
+    },
+    {
+      "source_family_code": "logisticscompaniesdirectory_com",
+      "source_family_name": "Logistics Companies Directory",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://logisticscompaniesdirectory.com/",
+      "source_host": "logisticscompaniesdirectory.com",
+      "source_category": "commercial_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 126,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_MINUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "medium",
+        "noise_risk": "medium_high",
+        "manual_review_priority": 28,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:logisticscompaniesdirectory.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "directory_root",
+          "surface_type": "directory",
+          "surface_name": "Directory Root",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B_MINUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://logisticscompaniesdirectory.com/",
+              "canonical_url": "https://logisticscompaniesdirectory.com/",
+              "is_enabled": true,
+              "priority": 126,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B_MINUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "logisticscompaniesdirectory_com",
+                "source_host": "logisticscompaniesdirectory.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_MINUS",
+      "source_selection_reason": "Broad logistics companies directory candidate; keep lower priority until live quality is proven."
+    },
+    {
+      "source_family_code": "cargoyellowpages_com",
+      "source_family_name": "Cargo Yellow Pages",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.cargoyellowpages.com/",
+      "source_host": "www.cargoyellowpages.com",
+      "source_category": "commercial_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 132,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "high",
+        "noise_risk": "medium",
+        "manual_review_priority": 24,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.cargoyellowpages.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "directory_root",
+          "surface_type": "directory",
+          "surface_name": "Directory Root",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.cargoyellowpages.com/en/directory.html",
+              "canonical_url": "https://www.cargoyellowpages.com/en/directory.html",
+              "is_enabled": true,
+              "priority": 132,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "cargoyellowpages_com",
+                "source_host": "www.cargoyellowpages.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B",
+      "source_selection_reason": "Large cargo, forwarder and logistics directory candidate; requires controlled crawl budget."
+    },
+    {
+      "source_family_code": "jctrans_com",
+      "source_family_name": "JCtrans",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.jctrans.com/",
+      "source_host": "www.jctrans.com",
+      "source_category": "commercial_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 130,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_MINUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "high",
+        "noise_risk": "medium_high",
+        "manual_review_priority": 28,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.jctrans.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "company_list",
+          "surface_type": "directory",
+          "surface_name": "Company List",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B_MINUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.jctrans.com/en/company/list",
+              "canonical_url": "https://www.jctrans.com/en/company/list",
+              "is_enabled": true,
+              "priority": 130,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B_MINUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "jctrans_com",
+                "source_host": "www.jctrans.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_MINUS",
+      "source_selection_reason": "Global logistics connections company-list candidate; requires careful anti-noise review."
+    },
+    {
+      "source_family_code": "aircargogroup_com",
+      "source_family_name": "AirCargoGroup Network",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://aircargogroup.com/",
+      "source_host": "aircargogroup.com",
+      "source_category": "air_cargo_network_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 150,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "B_PLUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "medium",
+        "noise_risk": "medium",
+        "manual_review_priority": 22,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:aircargogroup.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "network_directory",
+          "surface_type": "member_directory",
+          "surface_name": "Network Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "B_PLUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://aircargogroup.com/network/",
+              "canonical_url": "https://aircargogroup.com/network/",
+              "is_enabled": true,
+              "priority": 150,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "B_PLUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "aircargogroup_com",
+                "source_host": "aircargogroup.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "global",
+      "source_language": "en",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Air cargo global partners and members network candidate."
+    },
+    {
+      "source_family_code": "clecat_org",
+      "source_family_name": "CLECAT",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.clecat.org/",
+      "source_host": "www.clecat.org",
+      "source_category": "association_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 172,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "A_MINUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "medium",
+        "noise_risk": "low",
+        "manual_review_priority": 16,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.clecat.org",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "full_members",
+          "surface_type": "association_members",
+          "surface_name": "Full Members",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "A_MINUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.clecat.org/members/full-members",
+              "canonical_url": "https://www.clecat.org/members/full-members",
+              "is_enabled": true,
+              "priority": 172,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "A_MINUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "clecat_org",
+                "source_host": "www.clecat.org",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "EU",
+      "source_language": "en",
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "European association members page candidate; useful as association-of-associations discovery source."
+    },
+    {
+      "source_family_code": "ibs_ev_com",
+      "source_family_name": "IBS e.V.",
+      "source_status": "candidate_reviewed_for_catalog",
+      "source_root_url": "https://www.ibs-ev.com/",
+      "source_host": "www.ibs-ev.com",
+      "source_category": "association_directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 170,
+      "default_recrawl_interval": "30 days",
+      "default_max_depth": 1,
+      "notes": "R7 English catalog candidate source. Pi51c live probe required before DB/frontier insertion.",
+      "family_metadata": {
+        "lang_code": "en",
+        "trust_tier": "A_MINUS",
+        "quality_model_version": "six_tier_v1",
+        "discovery_value": "medium",
+        "noise_risk": "low",
+        "manual_review_priority": 16,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "family_review_state": "needs_pi51c_live_probe",
+        "host_budget_group": "host:www.ibs-ev.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "member_directory",
+          "surface_type": "member_directory",
+          "surface_name": "Member Directory",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "source_quality_tier": "A_MINUS",
+            "quality_model_version": "six_tier_v1",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.ibs-ev.com/en/members/member-directory/",
+              "canonical_url": "https://www.ibs-ev.com/en/members/member-directory/",
+              "is_enabled": true,
+              "priority": 170,
+              "max_depth": 1,
+              "recrawl_interval": "30 days",
+              "seed_metadata": {
+                "lang_code": "en",
+                "review_state": "needs_live_check",
+                "source_quality_tier": "A_MINUS",
+                "quality_model_version": "six_tier_v1",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "source_family_code": "ibs_ev_com",
+                "source_host": "www.ibs-ev.com",
+                "live_check_required": true,
+                "human_review_required_before_frontier": true
+              },
+              "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
+            }
+          ]
+        }
+      ],
+      "source_country_scope": "EU",
+      "source_language": "en",
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "Member-directory candidate with downloadable/searchable member list surface."
+    }
+  ]
+}

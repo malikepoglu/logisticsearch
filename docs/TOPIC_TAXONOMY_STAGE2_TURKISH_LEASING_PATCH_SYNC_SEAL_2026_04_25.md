@@ -19,7 +19,6 @@ The complete chain is:
 
 Patch SQL:
 
-`hosts/makpi51crawler/sql/taxonomy_core/008_taxonomy_turkish_leasing_phrase_repair_2026_04_25.sql`
 
 Patch SQL SHA256:
 
@@ -206,7 +205,6 @@ Tam zincir:
 
 Patch SQL:
 
-`hosts/makpi51crawler/sql/taxonomy_core/008_taxonomy_turkish_leasing_phrase_repair_2026_04_25.sql`
 
 Patch SQL SHA256:
 

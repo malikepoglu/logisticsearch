@@ -38,9 +38,7 @@ Read these first, in this exact order:
 2. `docs/STATUS_STAGE21_PROJECT_CONTINUITY_AND_NEXT_ACTIONS.md` — current project position, continuity truth, and immediate next-action frame
 3. `docs/TODO_STAGE21_TIMESTAMPED_EXECUTION_QUEUE.md` — living timestamped execution queue; this file must keep moving as work moves
 4. `docs/README.md` — documentation hub and the safest general beginner entry point
-5. `hosts/makpi51crawler/python/README.md` — Python surface map
-6. `hosts/makpi51crawler/sql/README.md` — SQL surface map
-7. `hosts/makpi51crawler/crawler_exports/README.md` — export and data-flow surface map
+5. `makpi51crawler/README.md` — Python surface map
 
 Only after the continuity and hub-level meaning is clear should you continue into lower-level README files and technical source files.
 
@@ -54,9 +52,7 @@ Sıfırdan başlıyorsan repository’yi rastgele okuma.
 2. `docs/STATUS_STAGE21_PROJECT_CONTINUITY_AND_NEXT_ACTIONS.md` — güncel proje konumu, süreklilik doğrusu ve yakın sonraki adım çerçevesi
 3. `docs/TODO_STAGE21_TIMESTAMPED_EXECUTION_QUEUE.md` — yaşayan zaman damgalı execution queue; iş ilerledikçe bu dosya da ilerlemelidir
 4. `docs/README.md` — dokümantasyon merkezi ve genel başlangıç için en güvenli giriş noktası
-5. `hosts/makpi51crawler/python/README.md` — Python yüzey haritası
-6. `hosts/makpi51crawler/sql/README.md` — SQL yüzey haritası
-7. `hosts/makpi51crawler/crawler_exports/README.md` — export ve veri akışı yüzey haritası
+5. `makpi51crawler/README.md` — Python yüzey haritası
 
 Süreklilik ve hub-seviyesi anlam netleşmeden alt README dosyalarına ve teknik kaynak dosyalarına geçme.
 
@@ -80,11 +76,9 @@ OpenStreetMap, uzun vadeli sistem tasarımında zorunlu bir bileşendir. Coğraf
 Harita gösterim kütüphanesi seçimi, doğrudan webcrawler sözleşmesi olarak değil, ayrı bir uygulama-yüzeyi kararı olarak ele alınır. Crawler tarafının sorumluluğu coğrafi veri edinimi, normalizasyon ve zenginleştirme doğrusudur. Gelecekteki harita-yığını karar yüzeyi ayrı olarak `docs/SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md` dosyasında dokümante edilir.
 ## Current Repository Focus
 
-At the current stage, the project has already established repository synchronization and crawler-side operational surfaces across Ubuntu Desktop, GitHub, and Pi51crawler. A repository-visible GitHub batch export path also exists as a controlled transport/audit surface, but it is no longer the canonical primary path for moving Pi51 database payload into Ubuntu Desktop. The present focus is to keep the working model explicit: Ubuntu Desktop <> GitHub <> Pi51crawler for code/docs/system truth, while removable-media transfer from Pi51 `/srv/data` into Ubuntu Desktop is the current primary path for physical crawler data movement. In concrete terms, the next standardization work is centered on `hosts/makpi51crawler/crawler_exports/`, `hosts/makpi51crawler/sql/`, `hosts/makpi51crawler/python/`, and the policy decisions for machine-local surfaces such as `_imports/` and `_build/`.
 
 ## Mevcut Repository Odağı
 
-Mevcut aşamada proje, Ubuntu Desktop, GitHub ve Pi51crawler arasında repository senkronizasyonunu ve crawler tarafı operasyon yüzeylerini zaten kurmuş durumdadır. Repository’de görünür bir GitHub batch export yolu da kontrollü bir taşıma/audit yüzeyi olarak vardır; ancak Pi51 veritabanı payload’ını Ubuntu Desktop’a taşımak için artık kanonik birincil yol değildir. Şu anki odak; kod/doküman/sistem doğrusu için Ubuntu Desktop <> GitHub <> Pi51crawler modelini açık tutmak ve fiziksel crawler veri hareketi için Pi51 `/srv/data` -> çıkarılabilir medya -> Ubuntu Desktop yolunu birincil operasyon doğrusu olarak netleştirmektir. Somut olarak sıradaki standardizasyon çalışması `hosts/makpi51crawler/crawler_exports/`, `hosts/makpi51crawler/sql/`, `hosts/makpi51crawler/python/` ve `_imports/` ile `_build/` gibi makineye özel yüzeyler için politika kararları etrafında şekillenmektedir.
 ## Engineering Principles
 
 The project is developed with a strong preference for explicitness, auditability, reversibility, and clean standardization. Large blind cleanups are avoided. Instead, the system is improved step by step, with each meaningful change expected to be understandable, reviewable, and operationally justified. Repository hygiene is treated as part of the engineering work itself rather than as an afterthought.
@@ -112,30 +106,26 @@ Bu repository aktif mimari ve operasyon iyileştirmesi altındadır. Yollar, mod
 The current canonical repository rule is simple:
 
   * repository-global entry and governance surfaces such as `README.md`, `docs/`, and `.gitignore` remain at repository root
-  * the active crawler-host tracked work surfaces now live under `hosts/makpi51crawler/`
+  * the active crawler-host tracked work surfaces now live under `makpi51crawler/`
   * `hosts/` therefore acts as both a host-operations family and, where explicitly validated, the home of host-scoped tracked work surfaces
 
 In the current repository point, the main active crawler-host work surfaces are:
 
-  * `hosts/makpi51crawler/python/README.md`
-  * `hosts/makpi51crawler/sql/README.md`
-  * `hosts/makpi51crawler/crawler_exports/README.md`
-  * `hosts/README.md`
+  * `makpi51crawler/README.md`
+  * `makpi51crawler/README.md`
 
 ## Güncel repository yapı kuralı
 
 Güncel kanonik repository kuralı basittir:
 
   * `README.md`, `docs/` ve `.gitignore` gibi repository-geneli giriş ve yönetişim yüzeyleri repository kökünde kalır
-  * aktif crawler-host izlenen çalışma yüzeyleri artık `hosts/makpi51crawler/` altında yaşar
+  * aktif crawler-host izlenen çalışma yüzeyleri artık `makpi51crawler/` altında yaşar
   * bu nedenle `hosts/`, hem host-operasyon ailesi hem de açıkça doğrulanmış durumlarda host-kapsamlı izlenen çalışma yüzeylerinin evi olarak görev yapar
 
 Mevcut repository noktasında ana aktif crawler-host çalışma yüzeyleri şunlardır:
 
-  * `hosts/makpi51crawler/python/README.md`
-  * `hosts/makpi51crawler/sql/README.md`
-  * `hosts/makpi51crawler/crawler_exports/README.md`
-  * `hosts/README.md`
+  * `makpi51crawler/README.md`
+  * `makpi51crawler/README.md`
 
 ## Future deferred note: Pi51 semi-automatic sync model
 

@@ -49,10 +49,8 @@ Mevcut backup cleanup policy: **DELETE_NONE_NOW**.
 - Final repo commit after Arabic patch SQL: `6aee8953e6e2b1db4fb2247cd6b49d19d5880f53`
 - Commit message: `feat(taxonomy): repair Arabic leasing labels`
 - Arabic patch SQL:
-  - `hosts/makpi51crawler/sql/taxonomy_core/009_taxonomy_arabic_leasing_phrase_repair_2026_04_25.sql`
   - sha256: `1d2ef009c712a39fda77abe67ea905f5a6a57ea28ae0881164fb105bb85d978a`
 - Turkish patch SQL remains unchanged:
-  - `hosts/makpi51crawler/sql/taxonomy_core/008_taxonomy_turkish_leasing_phrase_repair_2026_04_25.sql`
   - sha256: `5a66b8d844c199503ce9f923e83927b06b57257aa989cdd8700825a0e8728a83`
 
 ---

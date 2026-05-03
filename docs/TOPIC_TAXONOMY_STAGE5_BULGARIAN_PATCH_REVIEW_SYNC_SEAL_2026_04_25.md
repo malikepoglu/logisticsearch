@@ -160,7 +160,6 @@ A future cleanup decision must be a separate explicit command.
 
 Patch SQL:
 
-`hosts/makpi51crawler/sql/taxonomy_core/010_taxonomy_bulgarian_capitalization_style_repair_2026_04_25.sql`
 
 Patch SQL sha256:
 

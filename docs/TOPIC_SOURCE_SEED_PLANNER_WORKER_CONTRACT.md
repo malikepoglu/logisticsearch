@@ -29,7 +29,7 @@ This naming keeps source discovery separate from generic URL discovery and makes
 
 Webcrawler phase-1 Python modules must live under:
 
-`hosts/makpi51crawler/python/webcrawler/lib/`
+`makpi51crawler/python_live_runtime/`
 
 The current planned hierarchy is:
 
@@ -145,7 +145,7 @@ Bu isimlendirme, source keşfini genel URL keşfinden ayırır ve crawler davran
 
 Webcrawler faz-1 Python modülleri şu klasör altında olmalıdır:
 
-`hosts/makpi51crawler/python/webcrawler/lib/`
+`makpi51crawler/python_live_runtime/`
 
 Mevcut planlanan hiyerarşi:
 

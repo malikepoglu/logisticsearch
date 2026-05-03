@@ -70,9 +70,9 @@ Current blockers also include:
 - continuity docs not yet fully surfaced in the main reading path.
 
 ### Current blocker trio needing surgical repair
-1. `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_1_1_gateway_support.py`
-2. `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_2_3_worker_robots_runtime.py`
-3. `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_2_worker_runtime.py`
+1. `makpi51crawler/python_live_runtime/logisticsearch1_1_1_1_gateway_support.py`
+2. `makpi51crawler/python_live_runtime/logisticsearch1_1_2_3_worker_robots_runtime.py`
+3. `makpi51crawler/python_live_runtime/logisticsearch1_1_2_worker_runtime.py`
 
 ### Current working discipline
 - Do not treat repeated density-lift work as progress if repository recoverability does not improve.
@@ -162,9 +162,9 @@ Mevcut blockerlar sadece “düşük EN/TR sayı” değildir.
 - süreklilik dokümanlarının ana okuma yolunda henüz yeterince görünür olmaması.
 
 ### Cerrahi onarım gerektiren güncel blocker üçlüsü
-1. `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_1_1_gateway_support.py`
-2. `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_2_3_worker_robots_runtime.py`
-3. `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_2_worker_runtime.py`
+1. `makpi51crawler/python_live_runtime/logisticsearch1_1_1_1_gateway_support.py`
+2. `makpi51crawler/python_live_runtime/logisticsearch1_1_2_3_worker_robots_runtime.py`
+3. `makpi51crawler/python_live_runtime/logisticsearch1_1_2_worker_runtime.py`
 
 ### Güncel çalışma disiplini
 - Repository recoverability artmıyorsa tekrarlanan density-lift işini ilerleme sanma.
@@ -188,13 +188,13 @@ Mevcut blockerlar sadece “düşük EN/TR sayı” değildir.
 
 ### EN
 - Ultra-strict lib audit changed the real blocker order.
-- The top blocker is now `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_0_seed_frontier_bridge_runtime.py`.
+- The top blocker is now `makpi51crawler/python_live_runtime/logisticsearch1_1_0_seed_frontier_bridge_runtime.py`.
 - Main missing areas are: immediate EN/TR class-def blocks, explicit parameter mentions inside those blocks, and immediate EN/TR comments above important local assignments.
 - `__pycache__` creation during audit is now treated as a required cleanup step, not as a mystery failure.
 
 ### TR
 - Ultra-strict lib audit gerçek blocker sırasını değiştirdi.
-- Yeni en büyük blocker artık `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_0_seed_frontier_bridge_runtime.py` dosyasıdır.
+- Yeni en büyük blocker artık `makpi51crawler/python_live_runtime/logisticsearch1_1_0_seed_frontier_bridge_runtime.py` dosyasıdır.
 - Ana eksikler şunlardır: class-def üstünde hemen bulunan EN/TR blokları, bu blokların içinde parametre adlarının açıkça geçmesi ve önemli local atamaların hemen üstündeki EN/TR açıklamalar.
 - Audit sırasında oluşan `__pycache__` artık gizemli hata değil, zorunlu temizlik adımı olarak ele alınacaktır.
 
@@ -203,7 +203,7 @@ Mevcut blockerlar sadece “düşük EN/TR sayı” değildir.
 ## 2026-04-22 17:58:41 CEST / Stage21 top-blocker real-rule repair
 
 ### EN
-- Repaired the current top blocker file: `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_0_seed_frontier_bridge_runtime.py`.
+- Repaired the current top blocker file: `makpi51crawler/python_live_runtime/logisticsearch1_1_0_seed_frontier_bridge_runtime.py`.
 - This step targeted the real rule instead of count-only rescue logic.
 - Added immediate EN/TR class-boundary blocks for the three missing bridge dataclasses.
 - Added immediate EN/TR parameter-visibility blocks for the missing function boundaries.
@@ -211,7 +211,7 @@ Mevcut blockerlar sadece “düşük EN/TR sayı” değildir.
 - The practical purpose of this repair is project recoverability from GitHub alone.
 
 ### TR
-- Mevcut en büyük blocker dosya onarıldı: `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_0_seed_frontier_bridge_runtime.py`.
+- Mevcut en büyük blocker dosya onarıldı: `makpi51crawler/python_live_runtime/logisticsearch1_1_0_seed_frontier_bridge_runtime.py`.
 - Bu adım sayı-tamamlama mantığını değil gerçek kuralı hedefledi.
 - Eksik üç bridge dataclass için immediate EN/TR class-boundary blokları eklendi.
 - Eksik fonksiyon sınırları için immediate EN/TR parametre-görünürlük blokları eklendi.
@@ -226,13 +226,13 @@ Mevcut blockerlar sadece “düşük EN/TR sayı” değildir.
 - The previous failure after the real-rule repair was a validator bug, not a repair failure.
 - Root cause 1: class-boundary scan checked the `class` line instead of the first decorator line.
 - Root cause 2: parameter regex used double-escaped word boundaries and therefore missed parameters that were actually present.
-- Result: the repair on `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_0_seed_frontier_bridge_runtime.py` remained in place and now validates correctly under the corrected validator.
+- Result: the repair on `makpi51crawler/python_live_runtime/logisticsearch1_1_0_seed_frontier_bridge_runtime.py` remained in place and now validates correctly under the corrected validator.
 
 ### TR
 - Gerçek-kural onarımından sonraki önceki fail, onarım hatası değil validator hatasıydı.
 - Kök neden 1: class-boundary taraması `class` satırını kontrol etti; ilk decorator satırını kontrol etmedi.
 - Kök neden 2: parametre regex'i word-boundary ifadesini çift escape ettiği için aslında mevcut olan parametreleri kaçırdı.
-- Sonuç: `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_0_seed_frontier_bridge_runtime.py` üzerindeki onarım yerinde kaldı ve düzeltilmiş validator ile artık doğru doğrulanıyor.
+- Sonuç: `makpi51crawler/python_live_runtime/logisticsearch1_1_0_seed_frontier_bridge_runtime.py` üzerindeki onarım yerinde kaldı ve düzeltilmiş validator ile artık doğru doğrulanıyor.
 
 ## 2026-04-22T19:32:13+02:00 / STAGE21 / parse-runtime local assignment real-rule repair
 

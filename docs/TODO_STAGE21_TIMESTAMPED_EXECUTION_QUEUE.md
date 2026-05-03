@@ -246,13 +246,13 @@ Anlamlı her işten sonra tarih ve saat işlenerek güncellenmelidir.
 
 ### EN
 1. Re-run the ultra-strict lib audit after this repair.
-2. Confirm that `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_0_seed_frontier_bridge_runtime.py` leaves the worst-blocker position.
+2. Confirm that `makpi51crawler/python_live_runtime/logisticsearch1_1_0_seed_frontier_bridge_runtime.py` leaves the worst-blocker position.
 3. Move to the next highest-quality blocker according to the refreshed audit, not by memory.
 4. Keep `__pycache__` cleanup mandatory at the end of every Python audit.
 
 ### TR
 1. Bu onarım sonrası ultra-strict lib audit'i tekrar çalıştır.
-2. `hosts/makpi51crawler/python/webcrawler/lib/logisticsearch1_1_0_seed_frontier_bridge_runtime.py` dosyasının en ağır blocker konumundan çıktığını doğrula.
+2. `makpi51crawler/python_live_runtime/logisticsearch1_1_0_seed_frontier_bridge_runtime.py` dosyasının en ağır blocker konumundan çıktığını doğrula.
 3. Hafızaya göre değil, yenilenmiş audit sırasına göre bir sonraki kalite blocker'ına geç.
 4. Her Python audit'inin sonunda `__pycache__` temizliğini zorunlu tut.
 

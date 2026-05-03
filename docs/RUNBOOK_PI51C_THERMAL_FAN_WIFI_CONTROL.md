@@ -241,7 +241,7 @@ Run on Pi51c after `/logisticsearch/repo` is synced:
 
 ```bash
 # Makine: pi51c
-SRC="/logisticsearch/repo/hosts/makpi51crawler/python/host_control/pi51c_fan_control/live_runtime"
+SRC="/logisticsearch/repo/makpi51crawler/python_live_runtime/controls/makpi51_controls/fan_control"
 
 sudo install -m 0755 "$SRC/pi51c_gpio_fan_controller.py" /usr/local/sbin/pi51c_gpio_fan_controller.py
 sudo install -m 0755 "$SRC/fan" /usr/local/bin/fan
@@ -522,7 +522,7 @@ Ethernet kablosu çıkarıldıktan sonra beklenen:
 
 ```bash
 # Makine: pi51c
-SRC="/logisticsearch/repo/hosts/makpi51crawler/python/host_control/pi51c_fan_control/live_runtime"
+SRC="/logisticsearch/repo/makpi51crawler/python_live_runtime/controls/makpi51_controls/fan_control"
 
 sudo install -m 0755 "$SRC/pi51c_gpio_fan_controller.py" /usr/local/sbin/pi51c_gpio_fan_controller.py
 sudo install -m 0755 "$SRC/fan" /usr/local/bin/fan

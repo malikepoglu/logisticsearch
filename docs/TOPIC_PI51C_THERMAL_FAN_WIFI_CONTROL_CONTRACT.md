@@ -36,7 +36,7 @@ Current Pi51c runtime surfaces:
 
 Git-tracked runtime snapshot:
 
-- `hosts/makpi51crawler/python/host_control/pi51c_fan_control/live_runtime/`
+- `makpi51crawler/python_live_runtime/controls/makpi51_controls/fan_control/`
 
 This snapshot contains helper scripts only. It must not contain Wi-Fi credential files.
 
@@ -299,7 +299,7 @@ Mevcut Pi51c runtime yüzeyleri:
 
 Git altında izlenen runtime snapshot:
 
-- `hosts/makpi51crawler/python/host_control/pi51c_fan_control/live_runtime/`
+- `makpi51crawler/python_live_runtime/controls/makpi51_controls/fan_control/`
 
 Bu snapshot yalnızca yardımcı scriptleri içerir. Wi-Fi credential dosyaları içeremez.
 

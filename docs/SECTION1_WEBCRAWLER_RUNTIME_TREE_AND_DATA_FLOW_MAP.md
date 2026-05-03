@@ -522,6 +522,6 @@ Read in this order:
 2. `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md`
 3. `docs/TOPIC_WEBCRAWLER_RAW_FETCH_PARSE_TAXONOMY_AND_SELECTION_BOUNDARY.md`
 4. `docs/SECTION1_WEBCRAWLER_DIRECTORIES_FILES_MAP.md`
-5. `hosts/makpi51crawler/python/webcrawler/README.md`
-6. `hosts/makpi51crawler/python/webcrawler/lib/README.md`
+5. `makpi51crawler/README.md`
+6. `makpi51crawler/python_live_runtime/README.md`
 

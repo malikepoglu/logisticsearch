@@ -24,21 +24,21 @@ Crawler runtime, gelişmeye devam ederken yalın, açık, sürdürülebilir ve y
 
 All live Python runtime surfaces of the webcrawler should live under:
 
-- `hosts/makpi51crawler/python/webcrawler/lib/`
+- `makpi51crawler/python_live_runtime/`
 
 This includes the thin worker/operator CLI surface and the repo-local smoke tools.
 
-The parent directory `hosts/makpi51crawler/python/webcrawler/` should remain the broader surface root, but the active Python runtime family itself should be grouped inside `lib/` so the numbered hierarchy can be seen in one place.
+The parent directory `makpi51crawler/` should remain the broader surface root, but the active Python runtime family itself should be grouped inside `lib/` so the numbered hierarchy can be seen in one place.
 
 ## Kanonik yerleşim kuralı
 
 Webcrawler'ın tüm canlı Python runtime yüzeyleri şu klasör altında yaşamalıdır:
 
-- `hosts/makpi51crawler/python/webcrawler/lib/`
+- `makpi51crawler/python_live_runtime/`
 
 Buna ince worker/operator CLI yüzeyi ve repo-local smoke araçları da dahildir.
 
-Üst klasör olan `hosts/makpi51crawler/python/webcrawler/` geniş yüzey kökü olarak kalmalıdır; ancak aktif Python runtime ailesinin kendisi, numaralı hiyerarşi tek yerde görülebilsin diye `lib/` içinde gruplanmalıdır.
+Üst klasör olan `makpi51crawler/` geniş yüzey kökü olarak kalmalıdır; ancak aktif Python runtime ailesinin kendisi, numaralı hiyerarşi tek yerde görülebilsin diye `lib/` içinde gruplanmalıdır.
 
 ## Canonical target filename family
 

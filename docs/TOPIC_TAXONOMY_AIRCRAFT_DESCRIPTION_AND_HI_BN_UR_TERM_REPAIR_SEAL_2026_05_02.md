@@ -15,9 +15,9 @@
 
 ## Scope
 
-[EN] The repair changed exactly the canonical taxonomy language JSON surface under `hosts/makpi51crawler/taxonomy/languages/`.
+[EN] The repair changed exactly the canonical taxonomy language JSON surface under `makpi51crawler/taxonomy/languages/`.
 
-[TR] Onarım yalnızca `hosts/makpi51crawler/taxonomy/languages/` altındaki canonical taxonomy language JSON yüzeyini değiştirdi.
+[TR] Onarım yalnızca `makpi51crawler/taxonomy/languages/` altındaki canonical taxonomy language JSON yüzeyini değiştirdi.
 
 Changed surface:
 

@@ -26,7 +26,7 @@ canonical JSON
 
 ### Canonical JSON surface
 
-hosts/makpi51crawler/taxonomy/languages/*.json
+makpi51crawler/taxonomy/languages/*.json
 
 SQL, staging rows, runtime lookup rows, crawler output, parser output, and import evidence are not taxonomy authoring surfaces.
 
@@ -85,7 +85,7 @@ canonical JSON
 
 ### Canonical JSON yüzeyi
 
-hosts/makpi51crawler/taxonomy/languages/*.json
+makpi51crawler/taxonomy/languages/*.json
 
 SQL, staging kayıtları, runtime lookup kayıtları, crawler çıktısı, parser çıktısı ve import kanıtları taxonomy yazım kaynağı değildir.
 

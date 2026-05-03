@@ -1,0 +1,8 @@
+# EN: Ignore local virtual environments if an operator creates one manually.
+# TR: Operatör elle sanal ortam oluşturursa yerel virtual environment dosyalarını yok say.
+.venv/
+
+# EN: Ignore Python bytecode/cache artifacts generated during local validation.
+# TR: Yerel doğrulama sırasında oluşan Python bytecode/cache artıklarını yok say.
+__pycache__/
+*.py[cod]
