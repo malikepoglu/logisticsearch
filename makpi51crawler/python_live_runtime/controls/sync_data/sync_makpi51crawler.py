@@ -47,7 +47,7 @@ except ImportError:  # pragma: no cover - direct script/importlib fallback
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(description="Run safe repo + runtime sync sequence.")
+    parser = argparse.ArgumentParser(description="Run safe repo + runtime sync sequence for makpi51crawler.")
     parser.add_argument("--repo", type=Path, default=DEFAULT_REPO)
     parser.add_argument("--repo-source", type=Path, default=DEFAULT_REPO_SOURCE)
     parser.add_argument("--live-root", type=Path, default=DEFAULT_LIVE_ROOT)
@@ -64,7 +64,7 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
 
-    print("== sync_all ==")
+    print("== sync_makpi51crawler ==")
     print(f"repo={args.repo}")
     print(f"repo_source={args.repo_source}")
     print(f"live_root={args.live_root}")
@@ -100,7 +100,7 @@ def main(argv: list[str] | None = None) -> int:
         print("SKIP: runtime sync")
 
     print()
-    print("OK: sync_all completed")
+    print("OK: sync_makpi51crawler completed")
     print("SERVICE_STARTED=false")
     print("DB_TOUCHED=false")
     print("CRAWLER_RUN=false")
