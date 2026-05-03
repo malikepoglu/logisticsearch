@@ -223,9 +223,54 @@ def _project_catalog(live_root: Path) -> tuple[int, int]:
     catalog = json.loads(catalog_file.read_text(encoding="utf-8"))
     projected = project_catalog_to_seed_rows(catalog)
 
-    source_codes = {row.source_code for row in projected.sources}
-    seed_count = len(projected.seed_urls)
-    return len(source_codes), seed_count
+    def read_row_value(row: object, key: str) -> object:
+        """Return one projected row field from dict or object-shaped rows.
+
+        EN: The catalog runtime currently returns dictionaries, but this sync
+        control should also tolerate object/dataclass-like rows if the runtime
+        projection contract later becomes stricter again.
+
+        TR: Catalog runtime şu anda dictionary döndürüyor; ancak bu sync kontrolü,
+        ileride runtime projection sözleşmesi tekrar object/dataclass benzeri hale
+        gelirse onu da güvenli şekilde tolere etmelidir.
+        """
+
+        if isinstance(row, dict):
+            return row.get(key)
+        return getattr(row, key, None)
+
+    if isinstance(projected, dict):
+        projected_sources = projected.get("projected_sources")
+        projected_seed_urls = projected.get("projected_seed_urls")
+
+        if not isinstance(projected_sources, list):
+            raise SystemExit("FAIL: projected_sources missing or not list")
+        if not isinstance(projected_seed_urls, list):
+            raise SystemExit("FAIL: projected_seed_urls missing or not list")
+
+        source_codes = {
+            str(source_code)
+            for row in projected_sources
+            for source_code in [read_row_value(row, "source_code")]
+            if source_code
+        }
+        seed_count = len(projected_seed_urls)
+        return len(source_codes), seed_count
+
+    if hasattr(projected, "sources") and hasattr(projected, "seed_urls"):
+        source_codes = {
+            str(source_code)
+            for row in projected.sources
+            for source_code in [read_row_value(row, "source_code")]
+            if source_code
+        }
+        seed_count = len(projected.seed_urls)
+        return len(source_codes), seed_count
+
+    raise SystemExit(
+        "FAIL: unsupported project_catalog_to_seed_rows return shape: "
+        f"{type(projected).__name__}"
+    )
 
 
 def _relative_files(root: Path) -> list[Path]:
