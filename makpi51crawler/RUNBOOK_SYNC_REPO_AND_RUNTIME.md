@@ -29,7 +29,7 @@ Unknown, empty, or coreutils-style calls are passed through by the Python dispat
 
 Side-effect controls are not part of sync smoke tests. Fan, Wi-Fi, play, pause, poweroff, reboot, reset, systemd mutation, DB mutation, crawler execution, and cleanup require separate small runbooks before live execution.
 
-Cleanup is still blocked. Do not delete legacy /logisticsearch/webcrawler, legacy legacy live-only sync-repo wrapper, legacy legacy live-only sync-runtime wrapper, or backups from this sync-command line.
+Cleanup status is sealed. The retired runtime root, retired live-only sync wrappers, and transient backup directory have already been removed after explicit audited gates; do not recreate those legacy surfaces from this sync-command line.
 
 TR:
 Güncel kanonik senkronizasyon yönü şudur:
@@ -57,7 +57,7 @@ Bilinmeyen, boş veya coreutils tarzı çağrılar Python dispatcher tarafından
 
 Yan etkili kontroller sync smoke testlerinin parçası değildir. Fan, Wi-Fi, play, pause, poweroff, reboot, reset, systemd mutation, DB mutation, crawler çalıştırma ve cleanup işlemleri canlı çalıştırılmadan önce ayrı küçük runbook ister.
 
-Cleanup hâlâ blokludur. Bu sync-command hattından legacy /logisticsearch/webcrawler, legacy legacy live-only sync-repo wrapper, legacy legacy live-only sync-runtime wrapper veya backup dosyaları silinmemelidir.
+Cleanup durumu mühürlüdür. Emekli runtime kökü, emekli live-only sync wrapperları ve geçici backup dizini açık audit gate'lerinden sonra zaten kaldırılmıştır; bu sync-command hattından bu legacy yüzeyler yeniden oluşturulmamalıdır.
 <!-- TASK11_SYNC_COMMAND_LAYER_ANTI_DRIFT_END -->
 
 
