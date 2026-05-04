@@ -564,3 +564,10 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 - [`docs/TOPIC_TAXONOMY_AIRCRAFT_DESCRIPTION_AND_HI_BN_UR_TERM_REPAIR_SEAL_2026_05_02.md`](TOPIC_TAXONOMY_AIRCRAFT_DESCRIPTION_AND_HI_BN_UR_TERM_REPAIR_SEAL_2026_05_02.md) — [EN] Seal document for the all-25 taxonomy aircraft description repair and the exact Hindi/Bengali/Urdu term repair cycle. It records commit `5ec833d937059a15dafe9f161861f939b2e38737`, 25 loaded language files, 8,375 records, 450 patched-description guards, 54 hi/bn/ur term guards, and confirms that Pi51c, DB, SQL, runtime, systemd, and node expansion were not touched.
 - [`docs/TOPIC_TAXONOMY_AIRCRAFT_DESCRIPTION_AND_HI_BN_UR_TERM_REPAIR_SEAL_2026_05_02.md`](TOPIC_TAXONOMY_AIRCRAFT_DESCRIPTION_AND_HI_BN_UR_TERM_REPAIR_SEAL_2026_05_02.md) — [TR] All-25 taxonomy aircraft description repair ve Hindi/Bengali/Urdu exact term repair döngüsünü mühürleyen dokümandır. Commit `5ec833d937059a15dafe9f161861f939b2e38737`, 25 yüklü dil dosyası, 8.375 kayıt, 450 patched-description guard, 54 hi/bn/ur term guard bilgisini kaydeder ve Pi51c, DB, SQL, runtime, systemd ile node expansion yüzeylerine dokunulmadığını doğrular.
 
+<!-- TASK11_RUNTIME_CLEANUP_CRAWLER_CORE_RETURN_LINKS_BEGIN -->
+## Task11 runtime cleanup and crawler_core return
+
+- [Task11 runtime cleanup, boot/shutdown decision, and crawler_core return seal](TOPIC_TASK11_RUNTIME_CLEANUP_BOOT_DECISION_AND_CRAWLER_CORE_RETURN_2026_05_04.md)
+- [TODO - Crawler core return after Task11](TODO_CRAWLER_CORE_RETURN_AFTER_TASK11_2026_05_04.md)
+<!-- TASK11_RUNTIME_CLEANUP_CRAWLER_CORE_RETURN_LINKS_END -->
+
