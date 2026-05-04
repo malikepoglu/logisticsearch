@@ -2,14 +2,14 @@
 """Synchronize tracked makpi51crawler surfaces into the new live root.
 
 EN:
-This is the new-topology Python replacement for legacy /logisticsearch/bin/sync-runtime.
+This is the new-topology Python replacement for legacy legacy live-only sync-runtime wrapper.
 It syncs /logisticsearch/repo/makpi51crawler into /logisticsearch/makpi51crawler
 while preserving runtime-local .venv and config. It verifies JSON parse, Python
 ast.parse, English catalog projection, and repo/live tracked-surface hashes.
 It does not start/restart the service and does not touch PostgreSQL.
 
 TR:
-Bu dosya legacy /logisticsearch/bin/sync-runtime komutunun yeni topolojiye göre
+Bu dosya legacy legacy live-only sync-runtime wrapper komutunun yeni topolojiye göre
 Python karşılığıdır. /logisticsearch/repo/makpi51crawler yüzeyini
 /logisticsearch/makpi51crawler canlı köküne senkronlar; runtime-local .venv ve
 config korunur. JSON parse, Python ast.parse, English catalog projection ve

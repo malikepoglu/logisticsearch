@@ -15,11 +15,11 @@ Ubuntu Desktop is the guide workspace. Do not invert this direction when decidin
 
 The current explicit pi51c sync command layer is:
 
-    /logisticsearch/bin/sync repo --help
-    /logisticsearch/bin/sync runtime --help
-    /logisticsearch/bin/sync makpi51crawler --help
+    /logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo --help
+    /logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime --help
+    /logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py makpi51crawler --help
 
-The project wrapper lives at /logisticsearch/bin/sync, but bare sync must still resolve to /usr/bin/sync unless a separate PATH policy is explicitly approved later.
+The project wrapper lives at /logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py, but bare sync must still resolve to /usr/bin/sync unless a separate PATH policy is explicitly approved later.
 
 The project wrapper delegates to the live tracked dispatcher:
 
@@ -29,7 +29,7 @@ Unknown, empty, or coreutils-style calls are passed through by the Python dispat
 
 Side-effect controls are not part of sync smoke tests. Fan, Wi-Fi, play, pause, poweroff, reboot, reset, systemd mutation, DB mutation, crawler execution, and cleanup require separate small runbooks before live execution.
 
-Cleanup is still blocked. Do not delete legacy /logisticsearch/webcrawler, legacy /logisticsearch/bin/sync-repo, legacy /logisticsearch/bin/sync-runtime, or backups from this sync-command line.
+Cleanup is still blocked. Do not delete legacy /logisticsearch/webcrawler, legacy legacy live-only sync-repo wrapper, legacy legacy live-only sync-runtime wrapper, or backups from this sync-command line.
 
 TR:
 Güncel kanonik senkronizasyon yönü şudur:
@@ -43,11 +43,11 @@ Ubuntu Desktop kılavuz çalışma alanıdır. Repository doğrusu belirlenirken
 
 Güncel açık pi51c sync komut katmanı şudur:
 
-    /logisticsearch/bin/sync repo --help
-    /logisticsearch/bin/sync runtime --help
-    /logisticsearch/bin/sync makpi51crawler --help
+    /logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo --help
+    /logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime --help
+    /logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py makpi51crawler --help
 
-Proje wrapper dosyası /logisticsearch/bin/sync konumundadır; fakat ayrı bir PATH politikası açıkça onaylanmadıkça yalın sync komutu hâlâ /usr/bin/sync olarak kalmalıdır.
+Proje wrapper dosyası /logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py konumundadır; fakat ayrı bir PATH politikası açıkça onaylanmadıkça yalın sync komutu hâlâ /usr/bin/sync olarak kalmalıdır.
 
 Proje wrapper'ı canlı tracked dispatcher'a delege eder:
 
@@ -57,7 +57,7 @@ Bilinmeyen, boş veya coreutils tarzı çağrılar Python dispatcher tarafından
 
 Yan etkili kontroller sync smoke testlerinin parçası değildir. Fan, Wi-Fi, play, pause, poweroff, reboot, reset, systemd mutation, DB mutation, crawler çalıştırma ve cleanup işlemleri canlı çalıştırılmadan önce ayrı küçük runbook ister.
 
-Cleanup hâlâ blokludur. Bu sync-command hattından legacy /logisticsearch/webcrawler, legacy /logisticsearch/bin/sync-repo, legacy /logisticsearch/bin/sync-runtime veya backup dosyaları silinmemelidir.
+Cleanup hâlâ blokludur. Bu sync-command hattından legacy /logisticsearch/webcrawler, legacy legacy live-only sync-repo wrapper, legacy legacy live-only sync-runtime wrapper veya backup dosyaları silinmemelidir.
 <!-- TASK11_SYNC_COMMAND_LAYER_ANTI_DRIFT_END -->
 
 
@@ -116,8 +116,8 @@ Gelecekteki daha geniş runtime ailelerini henüz kapsamaz.
 - live runtime Python surface: `/logisticsearch/makpi51crawler/python_live_runtime`
 - live runtime environment file: `/logisticsearch/makpi51crawler/config/webcrawler.env`
 - sync commands:
-  - `/logisticsearch/bin/sync repo`
-  - `/logisticsearch/bin/sync runtime`
+  - `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo`
+  - `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime`
 
 ## Yürütme hedefi / makine bağlamı
 
@@ -127,8 +127,8 @@ Gelecekteki daha geniş runtime ailelerini henüz kapsamaz.
 - canlı runtime Python yüzeyi: `/logisticsearch/makpi51crawler/python_live_runtime`
 - canlı runtime environment dosyası: `/logisticsearch/makpi51crawler/config/webcrawler.env`
 - sync komutları:
-  - `/logisticsearch/bin/sync repo`
-  - `/logisticsearch/bin/sync runtime`
+  - `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo`
+  - `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime`
 
 ## Preconditions
 
@@ -137,11 +137,11 @@ Before running this runbook, confirm all of the following:
 1. you are on `pi51c`
 2. `/logisticsearch/repo` exists and is a Git checkout
 3. `/logisticsearch/makpi51crawler/.venv/bin/python` exists
-4. `/logisticsearch/bin/sync` exists
-5. `/logisticsearch/bin/sync repo --help` and `/logisticsearch/bin/sync runtime --help` pass
+4. `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py` exists
+5. `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo --help` and `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime --help` pass
 6. the crawler runtime is quiesced
-7. you understand that `/logisticsearch/bin/sync repo` can discard local repo drift under `/logisticsearch/repo`
-8. you understand that `/logisticsearch/bin/sync runtime` updates the live Python runtime surface from tracked repository truth
+7. you understand that `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo` can discard local repo drift under `/logisticsearch/repo`
+8. you understand that `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime` updates the live Python runtime surface from tracked repository truth
 
 ## Önkoşullar
 
@@ -150,11 +150,11 @@ Bu runbook çalıştırılmadan önce şunları doğrula:
 1. `pi51c` üzerindesin
 2. `/logisticsearch/repo` mevcut ve bir Git checkout yüzeyi
 3. `/logisticsearch/makpi51crawler/.venv/bin/python` mevcut
-4. `/logisticsearch/bin/sync` mevcut
-5. `/logisticsearch/bin/sync repo --help` ve `/logisticsearch/bin/sync runtime --help` geçer
+4. `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py` mevcut
+5. `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo --help` ve `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime --help` geçer
 6. crawler runtime quiesced durumda
-7. `/logisticsearch/bin/sync repo` komutunun `/logisticsearch/repo` altındaki drift içeriği silebileceğini anlıyorsun
-8. `/logisticsearch/bin/sync runtime` komutunun canlı Python runtime yüzeyini tracked repository doğrusundan güncellediğini anlıyorsun
+7. `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo` komutunun `/logisticsearch/repo` altındaki drift içeriği silebileceğini anlıyorsun
+8. `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime` komutunun canlı Python runtime yüzeyini tracked repository doğrusundan güncellediğini anlıyorsun
 
 ## Step-by-step operator path
 
@@ -165,10 +165,10 @@ Bu runbook çalıştırılmadan önce şunları doğrula:
 cd /home/makpi51 && /usr/bin/env bash <<'BASH'
 set -Eeuo pipefail
 
-ls -l /logisticsearch/bin/sync
+ls -l /logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py
 ls -l /logisticsearch/makpi51crawler/.venv/bin/python
-/logisticsearch/bin/sync repo --help >/dev/null
-/logisticsearch/bin/sync runtime --help >/dev/null
+/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo --help >/dev/null
+/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime --help >/dev/null
 BASH
 ```
 
@@ -191,7 +191,7 @@ BASH
 cd /home/makpi51 && /usr/bin/env bash <<'BASH'
 set -Eeuo pipefail
 
-/logisticsearch/bin/sync repo
+/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo
 BASH
 ```
 
@@ -202,7 +202,7 @@ BASH
 cd /home/makpi51 && /usr/bin/env bash <<'BASH'
 set -Eeuo pipefail
 
-/logisticsearch/bin/sync runtime
+/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime
 BASH
 ```
 

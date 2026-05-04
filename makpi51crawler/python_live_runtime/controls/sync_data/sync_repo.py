@@ -2,13 +2,13 @@
 """Synchronize /logisticsearch/repo with GitHub origin/main.
 
 EN:
-This is the tracked Python replacement for legacy /logisticsearch/bin/sync-repo.
+This is the tracked Python replacement for legacy legacy live-only sync-repo wrapper.
 It intentionally preserves the existing operational behavior: validate the repo,
 fetch origin, hard-reset to origin/main, clean untracked files, and verify a clean
 mirror. This command can discard local drift inside /logisticsearch/repo.
 
 TR:
-Bu dosya legacy /logisticsearch/bin/sync-repo komutunun tracked Python
+Bu dosya legacy legacy live-only sync-repo wrapper komutunun tracked Python
 karşılığıdır. Mevcut operasyon davranışını bilinçli olarak korur: repo'yu doğrula,
 origin'i fetch et, origin/main'e hard reset yap, untracked dosyaları temizle ve
 temiz mirror doğrula. Bu komut /logisticsearch/repo altındaki local drift'i
