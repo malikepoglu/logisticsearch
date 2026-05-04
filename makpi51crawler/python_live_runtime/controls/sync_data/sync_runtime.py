@@ -170,7 +170,7 @@ def _validate_repo_alignment(repo: Path) -> None:
 def _validate_local_runtime_surfaces(live_root: Path) -> None:
     required = [
         live_root / ".venv/bin/python",
-        live_root / "config/webcrawler.env",
+        Path.home() / ".config" / "logisticsearch" / "secrets" / "webcrawler.env",
         live_root / "python_live_runtime/logisticsearch1_main_entry.py",
         live_root / "catalog/startpoints/en/english_source_families_v2.json",
         live_root / "taxonomy/schema/logisticsearch_taxonomy_language_schema_v1.json",

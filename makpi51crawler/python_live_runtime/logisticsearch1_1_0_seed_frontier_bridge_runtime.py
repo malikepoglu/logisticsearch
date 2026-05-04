@@ -285,13 +285,13 @@ def require_psycopg_runtime() -> None:
 
 # EN: This default path matches the current live runtime env surface on pi51c.
 # TR: Bu varsayılan yol, pi51c üzerindeki mevcut live runtime env yüzeyi ile eşleşir.
-# EN: DEFAULT_ENV_FILE is the canonical live-runtime env file path used by the
+# EN: DEFAULT_ENV_FILE is the secure untracked user env file path used by the
 # EN: CLI when the operator does not override --env-file. It is always a Path
 # EN: object at import time, not a string.
 # TR: DEFAULT_ENV_FILE operatör --env-file ile override etmediğinde CLI'nin
 # TR: kullandığı kanonik canlı-runtime env dosya yoludur. Import anında her zaman
 # TR: string değil Path nesnesidir.
-DEFAULT_ENV_FILE = Path("/logisticsearch/makpi51crawler/config/webcrawler.env")
+DEFAULT_ENV_FILE = Path("/home/makpi51/.config/logisticsearch/secrets/webcrawler.env")
 
 
 # EN: This dataclass holds the exact frontier-ready decomposition of one
@@ -2246,7 +2246,7 @@ def main() -> int:
     parser.add_argument(
         "--env-file",
         default=str(DEFAULT_ENV_FILE),
-        help="Path to the live webcrawler env file that contains LOGISTICSEARCH_CRAWLER_DSN.",
+        help="Path to the secure untracked webcrawler env file that contains LOGISTICSEARCH_CRAWLER_DSN.",
     )
     parser.add_argument(
         "--limit",

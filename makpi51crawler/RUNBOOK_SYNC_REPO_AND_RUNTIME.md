@@ -114,7 +114,7 @@ Gelecekteki daha geniş runtime ailelerini henüz kapsamaz.
 - tracked repository root: `/logisticsearch/repo`
 - live runtime root: `/logisticsearch/makpi51crawler`
 - live runtime Python surface: `/logisticsearch/makpi51crawler/python_live_runtime`
-- live runtime environment file: `/logisticsearch/makpi51crawler/config/webcrawler.env`
+- secure untracked runtime environment file: `/home/makpi51/.config/logisticsearch/secrets/webcrawler.env`
 - sync commands:
   - `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo`
   - `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime`
@@ -125,7 +125,7 @@ Gelecekteki daha geniş runtime ailelerini henüz kapsamaz.
 - tracked repository kökü: `/logisticsearch/repo`
 - canlı runtime kökü: `/logisticsearch/makpi51crawler`
 - canlı runtime Python yüzeyi: `/logisticsearch/makpi51crawler/python_live_runtime`
-- canlı runtime environment dosyası: `/logisticsearch/makpi51crawler/config/webcrawler.env`
+- güvenli untracked runtime environment dosyası: `/home/makpi51/.config/logisticsearch/secrets/webcrawler.env`
 - sync komutları:
   - `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py repo`
   - `/logisticsearch/makpi51crawler/.venv/bin/python /logisticsearch/makpi51crawler/python_live_runtime/controls/sync_data/sync.py runtime`

@@ -381,9 +381,9 @@ def webcrawler_root() -> Path:
 # TR: - giris yuzeyinin ne oldugunu aciklayamadigi sessiz belirsizlik
 
 def env_file_path() -> Path:
-    # EN: Runtime env truth currently lives under webcrawler/config/webcrawler.env.
-    # TR: Runtime env doğrusu şu anda webcrawler/config/webcrawler.env altında yaşar.
-    return webcrawler_root() / "config" / "webcrawler.env"
+    # EN: Runtime env truth lives in a secure untracked user env file outside the live runtime root.
+    # TR: Runtime env doğrusu live runtime kökü dışında güvenli untracked kullanıcı env dosyasında yaşar.
+    return Path.home() / ".config" / "logisticsearch" / "secrets" / "webcrawler.env"
 
 
 # EN: This helper enforces the same user policy the old shell wrappers used.
@@ -433,10 +433,10 @@ def ensure_expected_user() -> None:
 
 
 # EN: This helper reads a very small .env-like file format in a conservative way.
-# EN: We support the current webcrawler.env style without trying to implement a
+# EN: We support the secure env-file style without trying to implement a
 # EN: full shell parser.
 # TR: Bu yardımcı çok küçük bir .env-benzeri formatı muhafazakâr biçimde okur.
-# TR: Tam bir shell parser yazmaya çalışmadan mevcut webcrawler.env stilini
+# TR: Tam bir shell parser yazmaya çalışmadan güvenli env-file stilini
 # TR: destekliyoruz.
 # EN: RUNTIME CONTROL COMMON FUNCTION CONTRACT BLOCK V9 / read_simple_env_file
 # EN:
