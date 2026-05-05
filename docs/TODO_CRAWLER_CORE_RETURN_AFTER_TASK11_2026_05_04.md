@@ -323,3 +323,12 @@ Sıradaki iş:
 - R106B read-only final seal passed: service remained inactive/disabled, crawler process count stayed 0, help smoke passed, no DB mutation occurred.
 - Documentation file: `docs/TOPIC_CRAWLER_CORE_SYSTEMD_SERVICE_INVOCATION_PATCH_SEAL_2026_05_05.md`.
 - Next safe technical path: controls safety review, then main-loop state-machine read-only trace.
+
+## R108 Sync Runtime Process Guard False-Positive Fix Seal
+
+- R108 patched `sync_runtime.py` so crawler process detection counts real Python crawler processes only.
+- The false-positive from bash/ssh/audit command lines containing crawler words is resolved.
+- pi51c final seal passed at `0ec0a7ea841d0bd379eb8284d6872d38dae5fe92`.
+- Repo/live surfaces matched: `python_live_runtime`, `catalog`, and `taxonomy`.
+- Service remained inactive/disabled and real Python crawler process count stayed 0.
+- Documentation file: `docs/TOPIC_SYNC_RUNTIME_PROCESS_GUARD_FALSE_POSITIVE_FIX_SEAL_2026_05_05.md`.

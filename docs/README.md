@@ -579,3 +579,7 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 ### Crawler core systemd service invocation patch seal — 2026-05-05
 
 - [Crawler Core Systemd Service Invocation Patch Seal — 2026-05-05](TOPIC_CRAWLER_CORE_SYSTEMD_SERVICE_INVOCATION_PATCH_SEAL_2026_05_05.md)
+
+### Sync runtime process guard false-positive fix seal — 2026-05-05
+
+- [Sync Runtime Process Guard False-Positive Fix Seal — 2026-05-05](TOPIC_SYNC_RUNTIME_PROCESS_GUARD_FALSE_POSITIVE_FIX_SEAL_2026_05_05.md)
