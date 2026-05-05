@@ -88,20 +88,43 @@ def _service_state(service: str) -> str:
 
 
 def _process_count() -> int:
+    """Count real crawler Python processes only.
+
+    EN: This deliberately ignores shell, ssh, grep, and audit command
+    lines that merely contain crawler words in their arguments.
+
+    TR: Bu kontrol sadece gerçek Python crawler process satırlarını sayar;
+    shell, ssh, grep ve audit komut satırlarında geçen crawler kelimelerini
+    false-positive olarak saymaz.
+    """
     completed = subprocess.run(
-        ["ps", "-eo", "args="],
+        ["ps", "-eo", "comm=,args="],
         text=True,
         stdout=subprocess.PIPE,
         stderr=subprocess.DEVNULL,
         check=True,
     )
     count = 0
-    for line in completed.stdout.splitlines():
-        if "logisticsearch1_main_entry" in line or "--durable-claim" in line:
-            if "sync_runtime.py" not in line and "sync_all.py" not in line:
-                count += 1
+    for raw_line in completed.stdout.splitlines():
+        line = raw_line.strip()
+        if not line:
+            continue
+        parts = line.split(maxsplit=1)
+        if len(parts) != 2:
+            continue
+        command_name, args = parts
+        if not Path(command_name).name.startswith("python"):
+            continue
+        if "sync_data/sync" in args or "sync_runtime.py" in args or "sync_makpi51crawler.py" in args:
+            continue
+        if (
+            "python_live_runtime.logisticsearch1_main_entry" in args
+            or " -m logisticsearch1_main_entry" in f" {args}"
+            or "logisticsearch1_1_main_loop" in args
+            or "--durable-claim" in args
+        ):
+            count += 1
     return count
-
 
 def _remove_python_caches(root: Path) -> int:
     removed = 0
