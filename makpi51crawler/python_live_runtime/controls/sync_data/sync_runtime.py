@@ -312,12 +312,35 @@ def _hash_surface(root: Path) -> tuple[int, str]:
 
 
 def _surface_hash(repo_source: Path, live_root: Path, name: str) -> SurfaceHash:
+    def collect(root: Path) -> tuple[int, str]:
+        """Hash tracked runtime surface files while ignoring Python caches.
+
+        EN: Runtime validation imports modules and can create __pycache__/*.pyc
+        files after cache cleanup. These generated files must not make repo/live
+        tracked-surface comparison fail.
+
+        TR: Runtime doğrulaması modül import ettiği için cache cleanup sonrası
+        __pycache__/*.pyc dosyaları oluşabilir. Bu üretilmiş dosyalar repo/live
+        tracked-surface karşılaştırmasını bozmamalıdır.
+        """
+        digest = hashlib.sha256()
+        count = 0
+        for path in sorted(candidate for candidate in root.rglob("*") if candidate.is_file()):
+            if "__pycache__" in path.parts or path.suffix == ".pyc":
+                continue
+            rel = path.relative_to(root).as_posix()
+            digest.update(rel.encode("utf-8"))
+            digest.update(b"\\0")
+            digest.update(hashlib.sha256(path.read_bytes()).hexdigest().encode("ascii"))
+            digest.update(b"\\0")
+            count += 1
+        return count, digest.hexdigest()
+
     repo_path = repo_source / name
     live_path = live_root / name
-    repo_count, repo_hash = _hash_surface(repo_path)
-    live_count, live_hash = _hash_surface(live_path)
+    repo_count, repo_hash = collect(repo_path)
+    live_count, live_hash = collect(live_path)
     return SurfaceHash(name=name, repo_count=repo_count, live_count=live_count, repo_hash=repo_hash, live_hash=live_hash)
-
 
 def sync_runtime(
     repo: Path = DEFAULT_REPO,
