@@ -315,3 +315,11 @@ Sıradaki iş:
 - Status: created locally after R103B; commit/push/sync still pending.
 - Safety boundary: no crawler start, no DB mutation, no systemd mutation, no pi51c sync under STEP1/STEP2.
 - Next gate after local validation: commit/push only after dirty scope and secret guards pass.
+
+## R106/R106B Service Invocation Patch Seal
+
+- R106 patched the pi51c user service invocation from top-level corridor to package-context corridor.
+- Correct service contract: `PYTHONPATH=/logisticsearch/makpi51crawler` and `-m python_live_runtime.logisticsearch1_main_entry`.
+- R106B read-only final seal passed: service remained inactive/disabled, crawler process count stayed 0, help smoke passed, no DB mutation occurred.
+- Documentation file: `docs/TOPIC_CRAWLER_CORE_SYSTEMD_SERVICE_INVOCATION_PATCH_SEAL_2026_05_05.md`.
+- Next safe technical path: controls safety review, then main-loop state-machine read-only trace.

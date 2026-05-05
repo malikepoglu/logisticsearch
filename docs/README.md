@@ -575,3 +575,7 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 ### Crawler core entrypoint invocation contract — 2026-05-05
 
 - [Crawler Core EntryPoint Invocation Contract — 2026-05-05](TOPIC_CRAWLER_CORE_ENTRYPOINT_INVOCATION_CONTRACT_2026_05_05.md)
+
+### Crawler core systemd service invocation patch seal — 2026-05-05
+
+- [Crawler Core Systemd Service Invocation Patch Seal — 2026-05-05](TOPIC_CRAWLER_CORE_SYSTEMD_SERVICE_INVOCATION_PATCH_SEAL_2026_05_05.md)
