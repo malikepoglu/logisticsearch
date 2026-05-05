@@ -308,3 +308,10 @@ Sıradaki iş:
 - Sadece strict gate sonrası kontrollü seed/frontier apply ve main while-loop crawling aşamasına geç.
 - Her başarılı adım dokümante edilmeli, GitHub'a commit edilmeli ve uygun olduğunda pi51c'ye sync edilmeli.
 ~~~
+
+## R104B EntryPoint Invocation Contract Link
+
+- Contract doc: `docs/TOPIC_CRAWLER_CORE_ENTRYPOINT_INVOCATION_CONTRACT_2026_05_05.md`
+- Status: created locally after R103B; commit/push/sync still pending.
+- Safety boundary: no crawler start, no DB mutation, no systemd mutation, no pi51c sync under STEP1/STEP2.
+- Next gate after local validation: commit/push only after dirty scope and secret guards pass.

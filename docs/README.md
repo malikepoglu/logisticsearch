@@ -571,3 +571,7 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 - [TODO - Crawler core return after Task11](TODO_CRAWLER_CORE_RETURN_AFTER_TASK11_2026_05_04.md)
 <!-- TASK11_RUNTIME_CLEANUP_CRAWLER_CORE_RETURN_LINKS_END -->
 
+
+### Crawler core entrypoint invocation contract — 2026-05-05
+
+- [Crawler Core EntryPoint Invocation Contract — 2026-05-05](TOPIC_CRAWLER_CORE_ENTRYPOINT_INVOCATION_CONTRACT_2026_05_05.md)
