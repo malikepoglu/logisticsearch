@@ -798,6 +798,17 @@ Required qualitative rules for this hub are:
 - A conversion must be understandable by a beginner and audit-ready for an operator.
 - A conversion must not pass just because it satisfies a string counter.
 
+
+## EN 14. Readability and how-to style for this hub
+
+This hub must not become a raw link list. It is the first map for a reader who does not know the LogisticSearch project.
+The reading experience should feel like a careful how-to book: clear headings, useful bold points, short explanation blocks, and enough context to continue the work safely.
+
+- **Current truth first.** The hub must describe the current GitHub, Ubuntu Desktop, pi51c, crawler_core, parse_core, desktop_import, taxonomy, runtime, systemd, and sync truth before old history.
+- **Bold points carry meaning.** Bullets should start with a real point in bold, not with placeholder labels.
+- **No artificial detail labels.** Do not use `Detail 1`, `Detail 2`, `Detay 1`, or `Detay 2` as structure.
+- **Quality stays above formatting.** Formatting is only valid when it preserves or improves understanding, safety, and continuation value.
+- **GitHub alone must be enough.** If private memory disappeared, this repository should still let a careful reader recover the project state and next work direction.
 ## TR 1. Amaç
 
 Bu dokümantasyon merkezi LogisticSearch repository’sinin rastgele notlar toplamı değil, disiplinli bir mühendislik sistemi olarak nasıl okunacağını açıklar.
@@ -1603,3 +1614,14 @@ Bu hub için zorunlu nitelik kuralları şunlardır:
 - Conversion commit context, path context, current truth, historical truth ve next-action truth bilgilerini korumalıdır.
 - Conversion hem beginner tarafından anlaşılabilir hem de operator için audit-ready olmalıdır.
 - Conversion yalnızca string counter geçti diye başarılı sayılmamalıdır.
+
+## TR 14. Bu hub için okunabilirlik ve how-to stil kuralı
+
+Bu hub ham bir link listesine dönüşmemelidir. LogisticSearch projesini hiç bilmeyen okuyucu için ilk haritadır.
+Okuma deneyimi dikkatli bir how-to kitabı gibi olmalıdır: açık başlıklar, işe yarayan kalın noktalar, kısa açıklama blokları ve işi güvenle sürdürecek kadar bağlam.
+
+- **Önce güncel doğruluk.** Hub eski tarihten önce güncel GitHub, Ubuntu Desktop, pi51c, crawler_core, parse_core, desktop_import, taxonomy, runtime, systemd ve sync doğruluğunu anlatmalıdır.
+- **Kalın noktalar anlam taşır.** Maddeler placeholder etiketlerle değil, gerçek noktayı taşıyan kalın ifadeyle başlamalıdır.
+- **Yapay detay etiketi yok.** Yapı olarak `Detail 1`, `Detail 2`, `Detay 1` veya `Detay 2` kullanılmaz.
+- **Kalite formatın üstündedir.** Format yalnızca anlayışı, güvenliği ve devam değerini koruduğunda veya artırdığında geçerlidir.
+- **GitHub tek başına yeterli olmalıdır.** Özel hafıza kaybolsa bile bu repository dikkatli okuyucuya proje durumunu ve sonraki iş yönünü geri kurdurabilmelidir.
