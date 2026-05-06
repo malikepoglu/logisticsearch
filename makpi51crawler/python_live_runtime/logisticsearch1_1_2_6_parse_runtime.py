@@ -2699,6 +2699,26 @@ def enqueue_minimal_discovered_links(
         # TR: Degrade enqueue sonuçlarını başarılı enqueue satırı gibi saymak
         # TR: yerine görünür biçimde ayrı tutuyoruz.
         if enqueue_row is None:
+            # EN: A missing enqueue receipt should remain visible as degraded discovery truth.
+            # TR: Eksik enqueue makbuzu görünmez kalmamalı, degrade discovery doğrusu olarak görünür kalmalıdır.
+            degraded_rows.append(
+                {
+                    "parent_url_id": int(url_id),
+                    "canonical_url": discovered_url,
+                    "discovery_degraded": True,
+                    "discovery_degraded_reason": "enqueue_discovered_url_returned_none",
+                    "error_class": "discovery_enqueue_returned_none",
+                    "error_message": "enqueue_discovered_url(...) returned None",
+                    "depth": int(parent_context["depth"]) + 1,
+                    "priority": max(int(parent_context["priority"]) - 5, 1),
+                    "scheme": scheme,
+                    "host": host,
+                    "port": port,
+                    "authority_key": authority_key,
+                    "url_path": url_path,
+                    "url_query": url_query,
+                }
+            )
             continue
 
         # EN: enqueue_row is converted into a plain mutable dict before branch classification continues.
@@ -2927,14 +2947,21 @@ def apply_minimal_parse_entry(
     # TR: candidate'ler alır.
     payload = dict(parse_result.payload)
     payload["candidates"] = persistable_taxonomy_candidates
-    payload["metadata"] = {
-        "taxonomy_package_version": minimal_taxonomy_package_version(),
-        "taxonomy_candidate_count": len(persistable_taxonomy_candidates),
-        "taxonomy_candidate_input_count": len(raw_taxonomy_candidates),
-        "taxonomy_candidate_rejected_count": len(rejected_taxonomy_candidates),
-        "taxonomy_candidate_rejected_sample": rejected_taxonomy_candidates[:10],
-        "taxonomy_bridge": "repo_helper_v1",
-    }
+
+    # EN: We preserve parse metadata produced earlier before adding taxonomy bridge metadata.
+    # TR: Taxonomy bridge metadata'sını eklemeden önce daha önce üretilen parse metadata'sını koruyoruz.
+    existing_metadata = dict(payload.get("metadata") or {})
+    existing_metadata.update(
+        {
+            "taxonomy_package_version": minimal_taxonomy_package_version(),
+            "taxonomy_candidate_count": len(persistable_taxonomy_candidates),
+            "taxonomy_candidate_input_count": len(raw_taxonomy_candidates),
+            "taxonomy_candidate_rejected_count": len(rejected_taxonomy_candidates),
+            "taxonomy_candidate_rejected_sample": rejected_taxonomy_candidates[:10],
+            "taxonomy_bridge": "repo_helper_v1",
+        }
+    )
+    payload["metadata"] = existing_metadata
 
     # EN: We persist evidence and candidate rows through the existing canonical
     # EN: payload helper.
