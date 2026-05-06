@@ -2895,15 +2895,37 @@ def apply_minimal_parse_entry(
     # EN: taxonomy helper and its second database connection.
     # TR: Minimal taxonomy candidate'lerini, zaten kanıtlanmış runtime taxonomy
     # TR: helper'ı ve onun ikinci veritabanı bağlantısı üzerinden kuruyoruz.
-    # EN: raw_taxonomy_candidates stores the unfiltered taxonomy candidates returned by runtime taxonomy search.
-    # EN: Expected values are candidate dict rows before SQL-contract filtering.
-    # TR: raw_taxonomy_candidates, runtime taxonomy aramasının döndürdüğü filtrelenmemiş taxonomy adaylarını taşır.
-    # TR: Beklenen değerler SQL sözleşme filtresinden önceki candidate dict satırlarıdır.
-    raw_taxonomy_candidates = build_minimal_taxonomy_candidates(
-        parse_result=parse_result,
-        source_run_id=source_run_id,
-        source_note=source_note,
-    )
+    # EN: taxonomy_lookup_degraded keeps taxonomy-runtime unavailability visible
+    # EN: without rolling back crawler-core fetch/discovery evidence.
+    # TR: taxonomy_lookup_degraded, taxonomy-runtime erişilemezliğini görünür tutar;
+    # TR: crawler-core fetch/discovery kanıtını rollback ettirmez.
+    taxonomy_lookup_degraded = False
+    taxonomy_lookup_degraded_reason = None
+    taxonomy_lookup_error_class = None
+    taxonomy_lookup_error_message = None
+
+    try:
+        # EN: raw_taxonomy_candidates stores the unfiltered taxonomy candidates returned by runtime taxonomy search.
+        # EN: Expected values are candidate dict rows before SQL-contract filtering.
+        # TR: raw_taxonomy_candidates, runtime taxonomy aramasının döndürdüğü filtrelenmemiş taxonomy adaylarını taşır.
+        # TR: Beklenen değerler SQL sözleşme filtresinden önceki candidate dict satırlarıdır.
+        raw_taxonomy_candidates = build_minimal_taxonomy_candidates(
+            parse_result=parse_result,
+            source_run_id=source_run_id,
+            source_note=source_note,
+        )
+    except Exception as exc:
+        # EN: Taxonomy lookup is intentionally non-fatal for crawler-core validation.
+        # EN: Fetch, parse metadata, and discovery truth must remain durable even
+        # EN: when the taxonomy DB privilege/runtime seam is not ready yet.
+        # TR: Taxonomy lookup crawler-core doğrulaması için bilinçli olarak fatal değildir.
+        # TR: Taxonomy DB privilege/runtime sınırı henüz hazır değilse bile fetch,
+        # TR: parse metadata ve discovery doğrusu kalıcı kalmalıdır.
+        taxonomy_lookup_degraded = True
+        taxonomy_lookup_degraded_reason = "taxonomy_runtime_unavailable"
+        taxonomy_lookup_error_class = type(exc).__name__
+        taxonomy_lookup_error_message = f"{type(exc).__name__}: {str(exc).replace(chr(10), ' ')[:500]}"
+        raw_taxonomy_candidates = []
 
     # EN: We reject candidates that are known-invalid for the current SQL contract
     # EN: before they can abort the surrounding transaction.
@@ -2959,6 +2981,10 @@ def apply_minimal_parse_entry(
             "taxonomy_candidate_rejected_count": len(rejected_taxonomy_candidates),
             "taxonomy_candidate_rejected_sample": rejected_taxonomy_candidates[:10],
             "taxonomy_bridge": "repo_helper_v1",
+            "taxonomy_lookup_degraded": taxonomy_lookup_degraded,
+            "taxonomy_lookup_degraded_reason": taxonomy_lookup_degraded_reason,
+            "taxonomy_lookup_error_class": taxonomy_lookup_error_class,
+            "taxonomy_lookup_error_message": taxonomy_lookup_error_message,
         }
     )
     payload["metadata"] = existing_metadata
@@ -3034,6 +3060,17 @@ def apply_minimal_parse_entry(
             # TR: effective_workflow_state_reason burada pre_ranked durumunun neden geçerli kaldığını kesin biçimde kaydeder.
             # TR: Beklenen değer aşağıda görülen repo-helper persistence reason tokenıdır.
             effective_workflow_state_reason = "taxonomy_candidates_persisted_via_repo_helper"
+        elif taxonomy_lookup_degraded:
+            # EN: effective_workflow_state is forced to review_hold because taxonomy lookup degraded.
+            # EN: Expected value in this branch is review_hold; crawler-core discovery may still be valid.
+            # TR: effective_workflow_state taxonomy lookup degrade olduğu için review_holda zorlanır.
+            # TR: Bu dalda beklenen değer review_holddur; crawler-core discovery yine geçerli olabilir.
+            effective_workflow_state = "review_hold"
+            # EN: effective_workflow_state_reason records that review_hold came from taxonomy-runtime unavailability.
+            # EN: Expected value is the explicit taxonomy-unavailable manual-review token shown below.
+            # TR: effective_workflow_state_reason review_hold sonucunun taxonomy-runtime erişilemezliğinden geldiğini kaydeder.
+            # TR: Beklenen değer aşağıda görülen açık taxonomy-unavailable manual-review tokenıdır.
+            effective_workflow_state_reason = "taxonomy_lookup_unavailable_manual_review_required"
         elif rejected_taxonomy_candidates:
             # EN: effective_workflow_state is forced to review_hold because the candidate set contains SQL-contract rejections.
             # EN: Expected value in this branch is review_hold, not silent pre_ranked drift.
@@ -3078,6 +3115,10 @@ def apply_minimal_parse_entry(
             "persisted_candidate_count": persisted_candidate_count,
             "persist_result_degraded": persist_result_degraded,
             "taxonomy_bridge": "repo_helper_v1",
+            "taxonomy_lookup_degraded": taxonomy_lookup_degraded,
+            "taxonomy_lookup_degraded_reason": taxonomy_lookup_degraded_reason,
+            "taxonomy_lookup_error_class": taxonomy_lookup_error_class,
+            "taxonomy_lookup_error_message": taxonomy_lookup_error_message,
         },
         source_run_id=source_run_id,
         source_note=source_note,
