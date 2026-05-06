@@ -228,7 +228,7 @@ Bu yol, kanonik kısa-yol izlenen repository yüzeyidir.
 
 - `/logisticsearch/repo/makpi51crawler/`
 
-Repository, izlenen source-of-truth yüzeyidir. `/logisticsearch/webcrawler/` altındaki canlı runtime yüzeyi ise kontrollü izlenen koddan doldurulan kanonik execution yüzeyidir.
+Repository, izlenen source-of-truth yüzeyidir. `/logisticsearch/makpi51crawler/` altındaki canlı runtime yüzeyi ise kontrollü izlenen koddan doldurulan kanonik execution yüzeyidir.
 
 ### Eski Yol Kuralı
 

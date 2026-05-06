@@ -1,5 +1,4 @@
 # SECTION1_WEBCRAWLER_RUNTIME_TOPOLOGY_AND_NAMING_LOCK
-# SECTION1_WEBCRAWLER_RUNTIME_TOPOLOGY_AND_NAMING_LOCK
 
 ## Purpose
 ## Amaç
@@ -12,10 +11,10 @@ The previous draft mixed two different concepts:
 
 Önceki taslak iki farklı kavramı birbirine karıştırıyordu:
 
-1. hierarchical target numbering  
+1. hierarchical target numbering
 2. temporary engineering/test order
 
-1. hiyerarşik hedef numaralandırma  
+1. hiyerarşik hedef numaralandırma
 2. geçici mühendislik/test sırası
 
 From this point onward, these two concepts must stay separate.
@@ -29,12 +28,12 @@ We now separate three things very strictly:
 
 Artık üç şeyi çok katı biçimde ayırıyoruz:
 
-1. current physical file identity  
-2. future target rename topology  
+1. current physical file identity
+2. future target rename topology
 3. current controlled test order
 
-1. mevcut fiziksel dosya kimliği  
-2. gelecekteki hedef rename topolojisi  
+1. mevcut fiziksel dosya kimliği
+2. gelecekteki hedef rename topolojisi
 3. mevcut kontrollü test sırası
 
 ## Important restriction
@@ -220,20 +219,20 @@ The current practical order is:
 
 Mevcut pratik sıra şudur:
 
-1. verify/support root surfaces  
-2. verify gateway family  
-3. verify worker family children one by one  
-4. verify worker parent again  
-5. verify main loop again  
-6. verify root entry again  
+1. verify/support root surfaces
+2. verify gateway family
+3. verify worker family children one by one
+4. verify worker parent again
+5. verify main loop again
+6. verify root entry again
 7. only then consider controlled rename work
 
-1. support/kök yüzeylerini doğrula  
-2. gateway ailesini doğrula  
-3. worker ailesi çocuklarını tek tek doğrula  
-4. sonra worker ebeveynini yeniden doğrula  
-5. sonra main loop’u yeniden doğrula  
-6. sonra root entry’yi yeniden doğrula  
+1. support/kök yüzeylerini doğrula
+2. gateway ailesini doğrula
+3. worker ailesi çocuklarını tek tek doğrula
+4. sonra worker ebeveynini yeniden doğrula
+5. sonra main loop’u yeniden doğrula
+6. sonra root entry’yi yeniden doğrula
 7. ancak ondan sonra controlled rename işini düşün
 
 ## Controlled rename discipline
@@ -243,20 +242,20 @@ When controlled rename begins later, the discipline must be:
 
 Controlled rename daha sonra başladığında disiplin şu olmalıdır:
 
-1. rename only one surface or one tightly related mini-family at a time  
-2. repair imports immediately  
-3. run syntax + import + isolated function tests immediately  
-4. commit and push immediately if the step is clean  
-5. fast-forward pi51 repo mirror  
-6. controlled sync repo → live runtime  
+1. rename only one surface or one tightly related mini-family at a time
+2. repair imports immediately
+3. run syntax + import + isolated function tests immediately
+4. commit and push immediately if the step is clean
+5. fast-forward pi51 repo mirror
+6. controlled sync repo → live runtime
 7. live retest immediately
 
-1. aynı anda yalnızca tek yüzeyi veya tek küçük ilişkili aileyi rename et  
-2. import bağlarını hemen onar  
-3. syntax + import + isolated function testlerini hemen çalıştır  
-4. adım temizse hemen commit ve push et  
-5. pi51 repo mirror’u fast-forward et  
-6. repo → live runtime kontrollü senkron yap  
+1. aynı anda yalnızca tek yüzeyi veya tek küçük ilişkili aileyi rename et
+2. import bağlarını hemen onar
+3. syntax + import + isolated function testlerini hemen çalıştır
+4. adım temizse hemen commit ve push et
+5. pi51 repo mirror’u fast-forward et
+6. repo → live runtime kontrollü senkron yap
 7. canlı tarafta hemen yeniden test et
 
 ## Runtime start truth
@@ -274,9 +273,18 @@ Bu import metni tek başına kalıcı bir sistem ayarı değildir.
 
 The current permanent live-start truth is written in the live launcher file:
 
-Mevcut kalıcı canlı başlatma doğrusu şu launcher dosyasına yazılmıştır:
+Mevcut kalıcı canlı başlatma doğrusu artık emekli edilmiş bir `bin/start_webcrawler_runtime.sh` launcher dosyası değildir.
 
-- `/logisticsearch/webcrawler/bin/start_webcrawler_runtime.sh`
+Güncel runtime invocation doğrusu şu sözleşme ile okunmalıdır:
+
+- `docs/TOPIC_CRAWLER_CORE_ENTRYPOINT_INVOCATION_CONTRACT_2026_05_05.md`
+
+Güncel operational sınır:
+
+- Canonical live runtime root: `/logisticsearch/makpi51crawler`
+- Package-context entrypoint: `python_live_runtime.logisticsearch1_main_entry`
+- Documentation, inventory, topology, and path-audit work must not start the crawler.
+- Documentation, inventory, topology, and path-audit work must not execute control scripts.
 
 ## Current focus
 ## Mevcut odak
