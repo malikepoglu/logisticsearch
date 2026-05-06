@@ -249,8 +249,99 @@ Güncel yön şudur:
 5. eski karışık uzun-yol yerleşiminden kontrollü biçimde çıkılsın
 
 ## Runtime tree and data-flow map
-## Runtime ağacı ve veri akış haritası
 
-Use `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` as the canonical beginner-first map for the active runtime tree, the role of each Python file, and the real boundary between raw evidence, processed output, and export handoff.
+### EN
 
-Aktif runtime ağacı, her Python dosyasının rolü ve ham kanıt, işlenmiş çıktı ile export handoff arasındaki gerçek sınır için kanonik beginner-first harita olarak `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` dokümanını kullan.
+The directory map and the runtime-tree map answer different questions and must be read together.
+
+This document answers the layout question:
+
+- where crawler data lives,
+- where live runtime code lives,
+- where controls live,
+- where runtime configuration lives,
+- where the tracked repository lives,
+- which old path families are legacy or transition-only surfaces.
+
+The runtime-tree document answers the execution question:
+
+- which Python file owns root entry,
+- which file owns the main loop,
+- which file owns worker orchestration,
+- which file owns database access,
+- which file owns static/public acquisition,
+- which file owns dynamic browser acquisition,
+- which file owns parse behavior,
+- which file owns taxonomy lookup,
+- which boundary separates raw evidence, processed output, and export handoff.
+
+The mandatory companion document is:
+
+- `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md`
+
+Use this file first when checking filesystem placement. Use the runtime-tree map immediately after it when checking behavior ownership.
+
+A path being canonical does not automatically mean that every file under that path is allowed to run during an audit.
+
+Execution-safety policy is not owned by this directory map. For the control-class and no-execution rule, read `docs/TOPIC_CONTROLS_RUN_POLICY_AND_SAFETY_CLASSIFICATION_2026_05_06.md`.
+
+During documentation, inventory, or path-audit work, this means `NO_CONTROL_SCRIPT_EXECUTION` remains mandatory even when a path is canonical.. Runtime location, execution permission, operator control policy, and crawler start permission are separate safety gates.
+
+For documentation and inventory work, the safe rule is:
+
+- read files;
+- compare paths;
+- compare hashes;
+- compare line counts;
+- parse Python syntax when explicitly allowed;
+- do not execute crawler controls;
+- do not start the crawler;
+- do not mutate DB, systemd, live runtime, or pi51c unless a later step explicitly authorizes that mutation.
+
+### TR
+
+Dizin haritası ile runtime-tree haritası farklı sorulara cevap verir ve birlikte okunmalıdır.
+
+Bu doküman yerleşim sorusuna cevap verir:
+
+- crawler verisinin nerede durduğu,
+- canlı runtime kodunun nerede durduğu,
+- control yüzeyinin nerede durduğu,
+- runtime konfigürasyonunun nerede durduğu,
+- izlenen repository'nin nerede durduğu,
+- hangi eski yol ailelerinin legacy veya yalnızca geçiş yüzeyi olduğu.
+
+Runtime-tree dokümanı execution sorusuna cevap verir:
+
+- hangi Python dosyasının root entry sahibi olduğu,
+- hangi dosyanın main loop sahibi olduğu,
+- hangi dosyanın worker orchestration sahibi olduğu,
+- hangi dosyanın database access sahibi olduğu,
+- hangi dosyanın static/public acquisition sahibi olduğu,
+- hangi dosyanın dynamic browser acquisition sahibi olduğu,
+- hangi dosyanın parse davranışı sahibi olduğu,
+- hangi dosyanın taxonomy lookup sahibi olduğu,
+- raw evidence, processed output ve export handoff sınırının nerede olduğu.
+
+Zorunlu yardımcı doküman şudur:
+
+- `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md`
+
+Filesystem yerleşimini kontrol ederken önce bu dosyayı oku. Davranış sahipliğini kontrol ederken hemen ardından runtime-tree haritasını oku.
+
+Bir yolun kanonik olması, o yol altındaki her dosyanın audit sırasında çalıştırılabileceği anlamına gelmez.
+
+Execution-güvenliği politikası bu dizin haritasının sahibi olduğu konu değildir. Control-class ve çalıştırmama kuralı için `docs/TOPIC_CONTROLS_RUN_POLICY_AND_SAFETY_CLASSIFICATION_2026_05_06.md` okunmalıdır.
+
+Dokümantasyon, envanter veya path-audit işlerinde bu, yol kanonik olsa bile `NO_CONTROL_SCRIPT_EXECUTION` kuralının zorunlu kaldığı anlamına gelir.. Runtime konumu, execution permission, operator control policy ve crawler start izni ayrı güvenlik kapılarıdır.
+
+Dokümantasyon ve envanter çalışmaları için güvenli kural şudur:
+
+- dosyaları oku;
+- path karşılaştır;
+- hash karşılaştır;
+- satır sayısı karşılaştır;
+- açıkça izin verildiyse Python syntax parse et;
+- crawler control scriptleri çalıştırma;
+- crawler başlatma;
+- sonraki bir adım açıkça yetki vermedikçe DB, systemd, live runtime veya pi51c üzerinde mutasyon yapma.

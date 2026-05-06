@@ -241,8 +241,85 @@ Kanonik açık operatör yüzeyi şu beş komuta odaklı kalmalıdır:
 Bu daha küçük yüzey tercih edilir; çünkü operatör açıklığını ve uzun vadeli yönetilebilirliği artırır.
 
 ## Runtime-tree control reading path
-## Runtime-ağacı kontrol okuma yolu
 
-When you need to understand which file owns root entry, main loop, worker orchestration, DB truth, acquisition, dynamic browser acquisition, parse, and taxonomy roles, read `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` before making control-surface changes.
+### EN
 
-Hangi dosyanın root entry, main loop, worker orchestration, DB doğrusu, acquisition, dinamik browser acquisition, parse ve taxonomy rollerine sahip olduğunu anlaman gerektiğinde, control-surface değişikliği yapmadan önce `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md` dokümanını oku.
+Before any future change to the public crawler-control surface, the runtime tree must be read first.
+
+This document defines the public operator control surface. It does not, by itself, prove which Python file owns startup, loop execution, worker orchestration, durable state, database truth, acquisition, parsing, taxonomy lookup, or shutdown behavior.
+
+The mandatory companion document for that ownership map is:
+
+- `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md`
+
+Use the runtime-tree map to identify the current owner of each runtime responsibility:
+
+- root entry and package-context invocation,
+- main loop and loop boundary behavior,
+- worker orchestration and phase ordering,
+- durable crawler-control state,
+- database gateway and durable DB truth,
+- static/public HTTP acquisition,
+- dynamic browser acquisition,
+- raw-fetch to parse boundary,
+- taxonomy lookup and taxonomy authority boundary,
+- crawler output and processed-data routing boundaries.
+
+The safe reading order is:
+
+1. Read this controls document to understand the allowed public operator commands.
+2. Read the runtime-tree and data-flow map to understand which runtime file owns each execution role.
+3. Read the controls run-policy classification document before running, testing, or changing any control script.
+4. Only after those checks should a patch touch control wrappers, runtime entrypoints, worker loop behavior, or systemd-facing launch behavior.
+
+The important boundary is simple:
+
+- control wrappers express operator intent;
+- runtime-tree files own execution behavior;
+- database/runtime state stores durable truth;
+- documentation or inventory audits must not execute control scripts
+For the operator-run safety classification of each control script, read `docs/TOPIC_CONTROLS_RUN_POLICY_AND_SAFETY_CLASSIFICATION_2026_05_06.md` together with this document. That policy document is the canonical source for A0/B1/C2/D3/E4/F5 run classes and for the `NO_CONTROL_SCRIPT_EXECUTION` audit rule.
+.
+
+Do not infer runtime ownership from wrapper names alone. A wrapper name may be public and operator-friendly, while the real state transition, loop behavior, lease handling, or shutdown behavior is owned by another runtime module.
+
+### TR
+
+Açık crawler kontrol yüzeyinde gelecekte yapılacak her değişiklikten önce runtime ağacı okunmalıdır.
+
+Bu doküman açık operatör kontrol yüzeyini tanımlar. Tek başına hangi Python dosyasının başlangıç, döngü çalışması, worker orkestrasyonu, kalıcı durum, veritabanı doğrusu, acquisition, parse, taxonomy lookup veya kapanış davranışını sahiplendiğini kanıtlamaz.
+
+Bu sahiplik haritası için zorunlu yardımcı doküman şudur:
+
+- `docs/SECTION1_WEBCRAWLER_RUNTIME_TREE_AND_DATA_FLOW_MAP.md`
+
+Runtime-tree haritası şu runtime sorumluluklarının güncel sahibini bulmak için okunmalıdır:
+
+- root entry ve package-context invocation,
+- main loop ve döngü sınırı davranışı,
+- worker orkestrasyonu ve phase sırası,
+- kalıcı crawler-control state,
+- database gateway ve kalıcı DB doğrusu,
+- statik/açık HTTP acquisition,
+- dinamik browser acquisition,
+- raw-fetch ile parse arasındaki sınır,
+- taxonomy lookup ve taxonomy authority sınırı,
+- crawler çıktısı ve processed-data routing sınırları.
+
+Güvenli okuma sırası şudur:
+
+1. İzin verilen açık operatör komutlarını anlamak için önce bu controls dokümanını oku.
+2. Her runtime rolünün hangi dosyaya ait olduğunu anlamak için runtime-tree ve data-flow map dokümanını oku.
+3. Herhangi bir control script çalıştırmadan, test etmeden veya değiştirmeden önce controls run-policy classification dokümanını oku.
+4. Ancak bu kontrollerden sonra control wrapper, runtime entrypoint, worker loop davranışı veya systemd-facing launch davranışı patch kapsamına alınabilir.
+
+Önemli sınır yalındır:
+
+- control wrapper'lar operatör niyetini ifade eder;
+- runtime-tree dosyaları execution davranışını sahiplenir;
+- database/runtime state kalıcı doğruyu tutar;
+- dokümantasyon veya envanter audit adımları control script çalıştırmamalıdır
+Her control script için operatör çalıştırma güvenlik sınıfını anlamak gerektiğinde, bu doküman `docs/TOPIC_CONTROLS_RUN_POLICY_AND_SAFETY_CLASSIFICATION_2026_05_06.md` ile birlikte okunmalıdır. O policy dokümanı A0/B1/C2/D3/E4/F5 run sınıfları ve `NO_CONTROL_SCRIPT_EXECUTION` audit kuralı için kanonik kaynaktır.
+.
+
+Runtime sahipliği yalnızca wrapper isimlerinden çıkarılmamalıdır. Bir wrapper adı açık ve operatör-dostu olabilir; fakat gerçek state transition, loop davranışı, lease handling veya shutdown davranışı başka bir runtime modülüne ait olabilir.
