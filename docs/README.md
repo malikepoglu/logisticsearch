@@ -583,3 +583,9 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 ### Sync runtime process guard false-positive fix seal — 2026-05-05
 
 - [Sync Runtime Process Guard False-Positive Fix Seal — 2026-05-05](TOPIC_SYNC_RUNTIME_PROCESS_GUARD_FALSE_POSITIVE_FIX_SEAL_2026_05_05.md)
+
+<!-- LS:R112-CONTROLS-RUN-POLICY-LINK:BEGIN -->
+### Controls run policy and safety classification
+
+- [Controls Run Policy and Safety Classification — 2026-05-06](TOPIC_CONTROLS_RUN_POLICY_AND_SAFETY_CLASSIFICATION_2026_05_06.md) — canonical R112 controls safety-classification seal for A0/B1/C2/D3/E4/F5 control classes, including the rule that inventory and crawler-core trace work must not execute control scripts.
+<!-- LS:R112-CONTROLS-RUN-POLICY-LINK:END -->

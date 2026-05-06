@@ -332,3 +332,17 @@ Sıradaki iş:
 - Repo/live surfaces matched: `python_live_runtime`, `catalog`, and `taxonomy`.
 - Service remained inactive/disabled and real Python crawler process count stayed 0.
 - Documentation file: `docs/TOPIC_SYNC_RUNTIME_PROCESS_GUARD_FALSE_POSITIVE_FIX_SEAL_2026_05_05.md`.
+
+<!-- LS:R112-CONTROLS-RUN-POLICY-TODO-LINK:BEGIN -->
+## R112 Controls run-policy seal
+
+Canonical policy document:
+
+- [Controls Run Policy and Safety Classification — 2026-05-06](TOPIC_CONTROLS_RUN_POLICY_AND_SAFETY_CLASSIFICATION_2026_05_06.md)
+
+Operational consequence:
+
+- Future crawler-core trace, documentation inventory, DB audit, frontier/lease review, robots/fetch preflight, and read-only planning steps must treat control scripts according to A0/B1/C2/D3/E4/F5 classification.
+- Inventory/classification/documentation steps must not execute control scripts.
+- C2 crawler-control actions, D3 fan hardware actions, E4 Wi-Fi/network actions, and F5 sync actions each require their own explicit gate.
+<!-- LS:R112-CONTROLS-RUN-POLICY-TODO-LINK:END -->
