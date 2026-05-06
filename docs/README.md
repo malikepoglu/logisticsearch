@@ -777,7 +777,7 @@ This section exists because a raw line-count threshold is not enough. A Markdown
 
 The quality gate therefore has two layers. The first layer is structural: one H1 beginning with `# 0.`, all English content first, all Turkish content second, and identical EN/TR numbering. The second layer is semantic: the content must explain what the system is, why the current state exists, what must not be touched, how a future operator should read the repository, and how a future assistant can continue from GitHub without private chat memory.
 
-Minimum line count remains a useful floor, but it is not a success definition. `600+ nonblank English lines` and `600+ nonblank Turkish lines` mean only that a README/hub document is large enough to carry full context. The text still has to cover project direction, crawler_core, parse_core, desktop_import, taxonomy, source seed planning, frontier state, robots boundaries, lease discipline, runtime roots, sync commands, systemd boundaries, and the next safe action.
+Minimum line count remains a useful floor, but it is not a success definition. `preferably preferably 600+ nonblank English lines when the document scope justifies that depth when the document scope justifies that depth` and `preferably preferably 600+ nonblank Turkish lines when the document scope justifies that depth when the document scope justifies that depth` mean only that a README/hub document is large enough to carry full context. The text still has to cover project direction, crawler_core, parse_core, desktop_import, taxonomy, source seed planning, frontier state, robots boundaries, lease discipline, runtime roots, sync commands, systemd boundaries, and the next safe action.
 
 Required explicit safety needles for this hub are:
 
@@ -799,16 +799,37 @@ Required qualitative rules for this hub are:
 - A conversion must not pass just because it satisfies a string counter.
 
 
-## EN 14. Readability and how-to style for this hub
+## EN 14. Book-style readability rule
 
-This hub must not become a raw link list. It is the first map for a reader who does not know the LogisticSearch project.
-The reading experience should feel like a careful how-to book: clear headings, useful bold points, short explanation blocks, and enough context to continue the work safely.
+Book-style documentation is the target.
 
-- **Current truth first.** The hub must describe the current GitHub, Ubuntu Desktop, pi51c, crawler_core, parse_core, desktop_import, taxonomy, runtime, systemd, and sync truth before old history.
-- **Bold points carry meaning.** Bullets should start with a real point in bold, not with placeholder labels.
-- **No artificial detail labels.** Do not use `Detail 1`, `Detail 2`, `Detay 1`, or `Detay 2` as structure.
-- **Quality stays above formatting.** Formatting is only valid when it preserves or improves understanding, safety, and continuation value.
-- **GitHub alone must be enough.** If private memory disappeared, this repository should still let a careful reader recover the project state and next work direction.
+The `600+` line target is a preferred depth target for large README, hub, canonical architecture, and broad runbook documents. It is not a blind universal minimum for every Markdown file. Smaller focused subjects, such as a narrow `playwc`, `pausewc`, or single-control explanation, may be shorter when the subject is genuinely small. The non-negotiable rule is not raw length; the non-negotiable rule is complete scope coverage, beginner-first clarity, operator safety, exact current truth, exact historical truth, and enough detail for a future maintainer to continue from GitHub alone without private chat memory.
+
+
+Numbering must carry the structure directly.
+
+Artificial labels are not the standard.
+
+Do not rely on repeated bold lead phrases as a substitute for real heading structure.
+
+Use direct headings when a point deserves a numbered place.
+
+Correct English format:
+
+    EN 12. Immediate next action
+    EN 12.1 Preserve beginner-first explanations around every major contract.
+    EN 12.2 Preserve operator-first safety language around every mutating action.
+    EN 12.3 Keep GitHub sufficient for continuity without private chat memory.
+
+The Turkish side must use the same numbering, the same order, and the same book-style clarity.
+
+A section becomes readable when the heading is meaningful, the paragraph is clear, and the safety boundary is visible.
+
+A document can have perfect numbering and still be weak if the content is thin.
+
+GitHub alone must be enough.
+
+The goal is that a future operator can read the repository and continue the project without relying on private chat memory.
 ## TR 1. Amaç
 
 Bu dokümantasyon merkezi LogisticSearch repository’sinin rastgele notlar toplamı değil, disiplinli bir mühendislik sistemi olarak nasıl okunacağını açıklar.
@@ -1585,7 +1606,7 @@ Bu bölümün nedeni şudur: ham satır sayısı tek başına kalite değildir. 
 
 Bu yüzden kalite gate iki katmanlıdır. Birinci katman yapısaldır: `# 0.` ile başlayan tek H1, önce tüm English içerik, sonra tüm Turkish içerik ve birebir aynı EN/TR numaralandırması. İkinci katman semantiktir: içerik sistemin ne olduğunu, mevcut state’in neden oluştuğunu, neye dokunulmaması gerektiğini, gelecekteki operator’ın repository’yi nasıl okuyacağını ve gelecekteki assistant’ın private chat memory olmadan GitHub’dan nasıl devam edeceğini açıklamalıdır.
 
-Minimum satır sayısı hâlâ faydalı bir taban eşiğidir; fakat başarı tanımı değildir. `600+ nonblank English lines` ve `600+ nonblank Turkish lines`, bir README/hub dokümanının full context taşıyabilecek büyüklükte olduğunu gösterir. Metin yine de project direction, crawler_core, parse_core, desktop_import, taxonomy, source seed planning, frontier state, robots boundaries, lease discipline, runtime roots, sync commands, systemd boundaries ve next safe action konularını kapsamalıdır.
+Minimum satır sayısı hâlâ faydalı bir taban eşiğidir; fakat başarı tanımı değildir. `preferably 600+ nonblank English lines when the document scope justifies that depth` ve `preferably 600+ nonblank Turkish lines when the document scope justifies that depth`, bir README/hub dokümanının full context taşıyabilecek büyüklükte olduğunu gösterir. Metin yine de project direction, crawler_core, parse_core, desktop_import, taxonomy, source seed planning, frontier state, robots boundaries, lease discipline, runtime roots, sync commands, systemd boundaries ve next safe action konularını kapsamalıdır.
 
 Bu hub için zorunlu açık güvenlik ifadeleri şunlardır:
 
@@ -1615,13 +1636,34 @@ Bu hub için zorunlu nitelik kuralları şunlardır:
 - Conversion hem beginner tarafından anlaşılabilir hem de operator için audit-ready olmalıdır.
 - Conversion yalnızca string counter geçti diye başarılı sayılmamalıdır.
 
-## TR 14. Bu hub için okunabilirlik ve how-to stil kuralı
+## TR 14. Kitap tarzı okunabilirlik kuralı
 
-Bu hub ham bir link listesine dönüşmemelidir. LogisticSearch projesini hiç bilmeyen okuyucu için ilk haritadır.
-Okuma deneyimi dikkatli bir how-to kitabı gibi olmalıdır: açık başlıklar, işe yarayan kalın noktalar, kısa açıklama blokları ve işi güvenle sürdürecek kadar bağlam.
+Hedef kitap tarzı dokümantasyondur.
 
-- **Önce güncel doğruluk.** Hub eski tarihten önce güncel GitHub, Ubuntu Desktop, pi51c, crawler_core, parse_core, desktop_import, taxonomy, runtime, systemd ve sync doğruluğunu anlatmalıdır.
-- **Kalın noktalar anlam taşır.** Maddeler placeholder etiketlerle değil, gerçek noktayı taşıyan kalın ifadeyle başlamalıdır.
-- **Yapay detay etiketi yok.** Yapı olarak `Detail 1`, `Detail 2`, `Detay 1` veya `Detay 2` kullanılmaz.
-- **Kalite formatın üstündedir.** Format yalnızca anlayışı, güvenliği ve devam değerini koruduğunda veya artırdığında geçerlidir.
-- **GitHub tek başına yeterli olmalıdır.** Özel hafıza kaybolsa bile bu repository dikkatli okuyucuya proje durumunu ve sonraki iş yönünü geri kurdurabilmelidir.
+`600+` satır hedefi büyük README, hub, kanonik mimari ve geniş kapsamlı runbook dokümanları için tercih edilen derinlik hedefidir. Her Markdown dosyası için kör ve evrensel minimum değildir. `playwc`, `pausewc` veya tek bir kontrol açıklaması gibi dar kapsamlı konular, konu gerçekten küçükse daha kısa olabilir. Vazgeçilmez kural ham uzunluk değildir; vazgeçilmez kural kapsamın tam karşılanması, başlangıç-seviyesi dostu açıklık, operatör güvenliği, güncel doğrunun netliği, tarihsel doğrunun netliği ve gelecekteki bir bakımcının özel sohbet hafızası olmadan yalnızca GitHub üzerinden devam edebilmesine yetecek detaydır.
+
+
+Numaralandırma yapıyı doğrudan taşımalıdır.
+
+Yapay etiketler standart değildir.
+
+Gerçek başlık yapısı yerine tekrar eden kalın giriş ifadelerine güvenme.
+
+Bir nokta numaralı bir yere layıksa doğrudan başlık kullan.
+
+Doğru Türkçe format:
+
+    TR 12. Hemen sonraki aksiyon
+    TR 12.1 Her büyük sözleşme etrafında başlangıç-seviyesi dostu açıklamaları koru.
+    TR 12.2 Her mutating action etrafında operatör-öncelikli güvenlik dilini koru.
+    TR 12.3 Private chat memory olmadan GitHub'ın süreklilik için yeterli kalmasını sağla.
+
+İngilizce taraf da aynı numaralandırma, aynı sıra ve aynı kitap tarzı açıklık ile yazılmalıdır.
+
+Bir bölüm; başlık anlamlı, paragraf açık ve güvenlik sınırı görünür olduğunda okunabilir olur.
+
+Bir dokümanda numaralandırma kusursuz olabilir ama içerik inceyse doküman zayıftır.
+
+GitHub tek başına yeterli olmalıdır.
+
+Hedef, gelecekteki bir operatörün private chat memory olmadan repository okuyarak projeye devam edebilmesidir.
