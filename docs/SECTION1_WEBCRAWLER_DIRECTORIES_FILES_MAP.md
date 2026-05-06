@@ -13,7 +13,7 @@ This document is not a runbook. It does not authorize blind moves, deletes, or s
 ### Hard Rules
 
 1. Public crawler data must live under `/srv/`.
-2. Canonical runtime code must live under `/logisticsearch/webcrawler/`.
+2. Canonical runtime code must live under `/logisticsearch/makpi51crawler/`.
 3. Canonical tracked repository must live under `/logisticsearch/repo/`.
 4. Public operator control wrappers must be limited to the small fixed surface defined in this document.
 5. `stopwc` must not exist as a public operator wrapper.
@@ -47,15 +47,15 @@ No runtime code should be treated as canonical under `/srv/`. `/srv/` is the can
 
 Canonical runtime code must live under:
 
-- `/logisticsearch/webcrawler/`
-- `/logisticsearch/webcrawler/python_live_runtime/`
-- `/logisticsearch/webcrawler/.venv/`
+- `/logisticsearch/makpi51crawler/`
+- `/logisticsearch/makpi51crawler/python_live_runtime/`
+- `/logisticsearch/makpi51crawler/.venv/`
 
 The meaning of these paths is fixed:
 
-- `/logisticsearch/webcrawler/` is the canonical runtime root.
-- `/logisticsearch/webcrawler/python_live_runtime/` stores the runtime Python module surface used by the live crawler runtime.
-- `/logisticsearch/webcrawler/.venv/` stores the canonical Python virtual environment for this runtime surface.
+- `/logisticsearch/makpi51crawler/` is the canonical runtime root.
+- `/logisticsearch/makpi51crawler/python_live_runtime/` stores the runtime Python module surface used by the live crawler runtime.
+- `/logisticsearch/makpi51crawler/.venv/` stores the canonical Python virtual environment for this runtime surface.
 
 The `.venv` directory is the isolated Python package environment for the canonical webcrawler runtime. It is part of the runtime execution surface, not the tracked repository source surface.
 
@@ -63,7 +63,7 @@ The `.venv` directory is the isolated Python package environment for the canonic
 
 Canonical runtime configuration must live under:
 
-- `/logisticsearch/webcrawler/config/webcrawler.env`
+- `/home/makpi51/.config/logisticsearch/secrets/webcrawler.env`
 
 This file is the canonical runtime environment file for the live webcrawler surface.
 
@@ -73,11 +73,11 @@ Secret-bearing values must still be handled carefully and intentionally. This do
 
 Public operator control wrappers must live under:
 
-- `/logisticsearch/webcrawler/python_live_runtime/controls/playwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/pausewc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/resetwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/poweroffwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/rebootwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/playwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/pausewc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/resetwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/poweroffwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/rebootwc.py`
 
 The public meanings are:
 
@@ -103,7 +103,7 @@ Tracked host-scoped crawler code remains under the repository tree, for example:
 
 - `/logisticsearch/repo/makpi51crawler/`
 
-The repository is the tracked source-of-truth surface. The live runtime surface under `/logisticsearch/webcrawler/` is the canonical execution surface populated from controlled tracked code.
+The repository is the tracked source-of-truth surface. The live runtime surface under `/logisticsearch/makpi51crawler/` is the canonical execution surface populated from controlled tracked code.
 
 ### Legacy Path Rule
 
@@ -118,7 +118,7 @@ If old surfaces still exist during migration, they must be treated as controlled
 The current direction is:
 
 1. keep tracked repository truth under `/logisticsearch/repo/`
-2. keep live runtime code under `/logisticsearch/webcrawler/`
+2. keep live runtime code under `/logisticsearch/makpi51crawler/`
 3. keep crawler data under `/srv/...`
 4. keep the public operator surface small and explicit
 5. continue controlled migration away from old mixed long-path layout
@@ -138,7 +138,7 @@ Bu doküman bir runbook değildir. Kör taşıma, silme veya symlink kısayolu y
 ### Kesin Kurallar
 
 1. Açık crawler veri yüzeyi `/srv/` altında yaşamalıdır.
-2. Kanonik runtime kodu `/logisticsearch/webcrawler/` altında yaşamalıdır.
+2. Kanonik runtime kodu `/logisticsearch/makpi51crawler/` altında yaşamalıdır.
 3. Kanonik izlenen repository `/logisticsearch/repo/` altında yaşamalıdır.
 4. Açık operatör kontrol sarmalayıcıları bu dokümanda tanımlanan küçük ve sabit yüzeyle sınırlı kalmalıdır.
 5. `stopwc` açık operatör sarmalayıcısı olarak bulunmamalıdır.
@@ -172,15 +172,15 @@ Bu yolların anlamı sabittir:
 
 Kanonik runtime kodu şu yollar altında yaşamalıdır:
 
-- `/logisticsearch/webcrawler/`
-- `/logisticsearch/webcrawler/python_live_runtime/`
-- `/logisticsearch/webcrawler/.venv/`
+- `/logisticsearch/makpi51crawler/`
+- `/logisticsearch/makpi51crawler/python_live_runtime/`
+- `/logisticsearch/makpi51crawler/.venv/`
 
 Bu yolların anlamı sabittir:
 
-- `/logisticsearch/webcrawler/` kanonik runtime köküdür.
-- `/logisticsearch/webcrawler/python_live_runtime/` canlı crawler runtime'ının kullandığı Python modül yüzeyini tutar.
-- `/logisticsearch/webcrawler/.venv/` bu runtime yüzeyi için kanonik Python virtual environment'ı tutar.
+- `/logisticsearch/makpi51crawler/` kanonik runtime köküdür.
+- `/logisticsearch/makpi51crawler/python_live_runtime/` canlı crawler runtime'ının kullandığı Python modül yüzeyini tutar.
+- `/logisticsearch/makpi51crawler/.venv/` bu runtime yüzeyi için kanonik Python virtual environment'ı tutar.
 
 `.venv` dizini, kanonik webcrawler runtime'ının izole Python paket ortamıdır. İzlenen repository kaynak yüzeyinin değil, runtime çalışma yüzeyinin parçasıdır.
 
@@ -188,7 +188,7 @@ Bu yolların anlamı sabittir:
 
 Kanonik runtime konfigürasyonu şu dosyada yaşamalıdır:
 
-- `/logisticsearch/webcrawler/config/webcrawler.env`
+- `/home/makpi51/.config/logisticsearch/secrets/webcrawler.env`
 
 Bu dosya, canlı webcrawler yüzeyi için kanonik runtime environment dosyasıdır.
 
@@ -198,11 +198,11 @@ Secret taşıyan değerler yine dikkatli ve bilinçli biçimde ele alınmalıdı
 
 Açık operatör kontrol sarmalayıcıları şu yollar altında yaşamalıdır:
 
-- `/logisticsearch/webcrawler/python_live_runtime/controls/playwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/pausewc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/resetwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/poweroffwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/rebootwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/playwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/pausewc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/resetwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/poweroffwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/rebootwc.py`
 
 Açık anlamlar şunlardır:
 
@@ -243,7 +243,7 @@ Geçiş sırasında eski yüzeyler hâlâ bulunuyorsa, bunlar yalnızca kontroll
 Güncel yön şudur:
 
 1. izlenen repository doğrusu `/logisticsearch/repo/` altında kalsın
-2. canlı runtime kodu `/logisticsearch/webcrawler/` altında kalsın
+2. canlı runtime kodu `/logisticsearch/makpi51crawler/` altında kalsın
 3. crawler verisi `/srv/...` altında kalsın
 4. açık operatör yüzeyi küçük ve açık kalsın
 5. eski karışık uzun-yol yerleşiminden kontrollü biçimde çıkılsın

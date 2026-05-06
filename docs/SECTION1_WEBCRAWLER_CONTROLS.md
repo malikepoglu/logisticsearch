@@ -14,11 +14,11 @@ This document is not a migration runbook. It does not authorize blind deletion, 
 
 The canonical public operator control surface must be limited to exactly these wrappers:
 
-- `/logisticsearch/webcrawler/python_live_runtime/controls/playwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/pausewc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/resetwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/poweroffwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/rebootwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/playwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/pausewc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/resetwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/poweroffwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/rebootwc.py`
 
 No additional public wrapper should be treated as canonical unless a later controlled documentation decision explicitly changes this contract.
 
@@ -135,11 +135,11 @@ Bu doküman bir geçiş runbook'u değildir. Canlı runtime yüzeylerinde kör s
 
 Kanonik açık operatör kontrol yüzeyi tam olarak şu sarmalayıcılarla sınırlı kalmalıdır:
 
-- `/logisticsearch/webcrawler/python_live_runtime/controls/playwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/pausewc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/resetwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/poweroffwc.py`
-- `/logisticsearch/webcrawler/python_live_runtime/controls/rebootwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/playwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/pausewc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/resetwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/poweroffwc.py`
+- `/logisticsearch/makpi51crawler/python_live_runtime/controls/rebootwc.py`
 
 Daha sonra kontrollü bir dokümantasyon kararı bu sözleşmeyi açıkça değiştirmedikçe, başka hiçbir açık sarmalayıcı kanonik kabul edilmemelidir.
 
