@@ -87,3 +87,27 @@ TR: `http_raw_capture.v1.json` ve `frontier_queue.v1.json` manifesttir; veritaba
 EN: Before any future runtime mutation, verify HEAD/origin alignment, exact dirty scope, zero tracked `.sql` files, forbidden paths absent, service inactive/disabled, and crawler process count zero.
 
 TR: Gelecekteki her runtime mutation öncesinde HEAD/origin hizası, tam dirty scope, sıfır tracked `.sql` dosyası, yasak path yokluğu, servisin inactive/disabled olması ve crawler process count sıfır doğrulanmalıdır.
+
+
+## 9. EN: R115 enqueue conflict preservation decision / TR: R115 enqueue conflict koruma kararı
+
+EN: R115_R5C selected `frontier.enqueue_discovered_url` as the first patch target for URL queue correctness.
+
+TR: R115_R5C, URL kuyruğu doğruluğu için ilk patch hedefi olarak `frontier.enqueue_discovered_url` fonksiyonunu seçti.
+
+EN: The current conflict branch can rewrite `next_fetch_at` to `now()` for rediscovered successful queued URLs. This can make already-successful URLs immediately due again.
+
+TR: Mevcut conflict branch, yeniden keşfedilen başarılı queued URL’lerde `next_fetch_at` değerini `now()` yapabilir. Bu, daha önce başarıyla fetch edilmiş URL’leri hemen tekrar due hale getirebilir.
+
+EN: Required patch invariants: keep `leased` and `parse_pending` protected, preserve `retry_wait` backoff, preserve future schedules for successful queued URLs, and keep new URL inserts immediately crawlable.
+
+TR: Zorunlu patch invariantları: `leased` ve `parse_pending` korunsun, `retry_wait` backoff korunsun, başarılı queued URL’lerin gelecek schedule’ı korunsun ve yeni URL insert’leri hemen crawl edilebilir kalsın.
+
+EN: This runbook entry is not a live DB patch. The live PostgreSQL apply step requires a separate explicit DB mutation gate.
+
+TR: Bu runbook kaydı canlı DB patch’i değildir. Canlı PostgreSQL apply adımı ayrı ve açık bir DB mutation gate gerektirir.
+
+
+EN: Exact R115 patch invariant wording: Do not overwrite future next_fetch_at for successful queued rows. New URL inserts must remain immediately crawlable.
+
+TR: R115 exact patch invariant ifadesi: başarılı queued URL satırlarında gelecekteki `next_fetch_at` ezilmez. Yeni URL insert’leri hemen crawl edilebilir kalır.

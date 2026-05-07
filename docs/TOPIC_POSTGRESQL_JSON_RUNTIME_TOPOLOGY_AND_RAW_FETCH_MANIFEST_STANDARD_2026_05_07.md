@@ -255,3 +255,23 @@ EN: `http_raw_capture.v1.json` is a manifest, not a database name. The live Post
 
 TR: `http_raw_capture.v1.json` bir manifesttir, veritabanı adı değildir. Canlı PostgreSQL mantıksal veritabanı adı `logisticsearch_crawler`; repo topoloji anahtarı `crawler_core` olarak kalır.
 
+
+
+### EN: R115 first queue patch target / TR: R115 ilk queue patch hedefi
+
+EN: Read-only DB audits R115_R5A through R115_R5C identified `frontier.enqueue_discovered_url` as the first queue correctness patch target.
+
+TR: R115_R5A ile R115_R5C arasındaki read-only DB auditleri, ilk queue doğruluk patch hedefi olarak `frontier.enqueue_discovered_url` fonksiyonunu belirledi.
+
+EN: The patch must prevent rediscovery from forcing already-successful queued URLs back to immediate due status by rewriting `next_fetch_at` to `now()`.
+
+TR: Patch, rediscovery sırasında daha önce başarılı olmuş queued URL’lerin `next_fetch_at` değeri `now()` yapılarak hemen due hale zorlanmasını engellemelidir.
+
+EN: No `sql/`, `makpi51crawler/sql/`, `patch_manifests/`, or `runtime_changes/` surface is introduced by this decision. The live DB patch remains a separate controlled apply gate.
+
+TR: Bu karar `sql/`, `makpi51crawler/sql/`, `patch_manifests/` veya `runtime_changes/` yüzeyi oluşturmaz. Canlı DB patch’i ayrı kontrollü apply gate olarak kalır.
+
+
+EN: Exact queue safety invariant: Do not overwrite future next_fetch_at for successful queued rows. New URL inserts must remain immediately crawlable.
+
+TR: Exact queue güvenlik invariantı: başarılı queued URL satırlarında gelecekteki `next_fetch_at` ezilmez. Yeni URL insert’leri hemen crawl edilebilir kalır.

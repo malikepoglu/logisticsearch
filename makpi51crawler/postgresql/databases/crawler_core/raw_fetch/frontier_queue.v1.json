@@ -247,5 +247,43 @@
       "retry_wait": "Retry/backoff schedule must be preserved until next_fetch_at is due."
     },
     "schema_version": "crawler_url_metadata.v1"
+  },
+  "enqueue_discovered_url_conflict_preservation_standard": {
+    "schema_version": "crawler_frontier_enqueue_conflict_policy.v1",
+    "status": "planned_not_applied_to_live_db",
+    "decision_source": "R115_R5C_DECIDE_FIRST_PATCH_TARGET_READONLY",
+    "target_function": "frontier.enqueue_discovered_url",
+    "target_function_fingerprint_md5_before_patch": "d6b028788dff6ebb1dc4b2cf5ec6a052",
+    "observed_problem": "ON CONFLICT (canonical_url_sha256) currently allows queued successful rediscovered URLs to have next_fetch_at rewritten to now().",
+    "observed_impact": {
+      "queued_count": 45,
+      "due_queued_count": 44,
+      "successful_queued_count": 9,
+      "successful_due_queued_count": 8,
+      "successful_seen_equals_next_fetch_count": 7,
+      "successful_enqueued_equals_next_fetch_count": 7
+    },
+    "must_preserve": [
+      "leased rows keep existing next_fetch_at, last_enqueued_at, and state",
+      "parse_pending rows keep existing next_fetch_at, last_enqueued_at, and state",
+      "retry_wait rows keep existing retry/backoff next_fetch_at and state",
+      "successful queued rows keep future next_fetch_at and are not forced due by rediscovery",
+      "new URL inserts remain immediately crawlable",
+      "Do not overwrite future next_fetch_at for successful queued rows",
+      "New URL inserts must remain immediately crawlable"
+    ],
+    "allowed_conflict_updates": [
+      "last_seen_at may update to record rediscovery observation",
+      "depth may become LEAST(existing depth, excluded depth)",
+      "priority may become GREATEST(existing priority, excluded priority)",
+      "parent/source/seed may fill missing values without replacing existing truth"
+    ],
+    "forbidden_conflict_updates": [
+      "do not set next_fetch_at = now() for successful queued rows with a future schedule",
+      "do not collapse retry_wait to queued merely because a link was rediscovered",
+      "do not overwrite lease-protected work",
+      "do not store raw body bytes in JSON or GitHub"
+    ],
+    "next_live_db_apply_gate": "R115_DB_ENQUEUE_DISCOVERED_URL_PATCH_GATE_NOT_YET_RUN"
   }
 }
