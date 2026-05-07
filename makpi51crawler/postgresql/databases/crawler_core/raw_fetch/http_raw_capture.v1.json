@@ -1,0 +1,23 @@
+{
+  "manifest_version": "postgresql_runtime_manifest_v1",
+  "repo_database_key": "crawler_core",
+  "live_postgresql_database_name": "logisticsearch_crawler",
+  "surface": "raw_fetch.http_raw_capture",
+  "purpose": "First durable raw HTTP capture produced by crawler_core.",
+  "runtime_authority": "PostgreSQL",
+  "representation_layer": "JSON and JSONB",
+  "raw_file_root": "/srv/webcrawler/raw_fetch",
+  "first_raw_data_manifest_for_crawler_core": true,
+  "expected_capture_fields": [
+    "url_id",
+    "fetch_attempt_id",
+    "requested_url",
+    "final_url",
+    "http_status",
+    "content_type",
+    "body_bytes",
+    "body_sha256",
+    "body_storage_path",
+    "fetched_at"
+  ]
+}

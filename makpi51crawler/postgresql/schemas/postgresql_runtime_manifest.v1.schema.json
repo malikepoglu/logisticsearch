@@ -1,0 +1,11 @@
+{
+  "schema_name": "postgresql_runtime_manifest.v1.schema.json",
+  "manifest_version": "postgresql_runtime_manifest_v1",
+  "architecture_rule": {
+    "postgresql_is_runtime_authority": true,
+    "json_jsonb_is_controlled_representation_layer": true,
+    "top_level_sql_directory_allowed": false,
+    "makpi51crawler_sql_directory_allowed": false,
+    "loose_sql_file_ownership_allowed": false
+  }
+}

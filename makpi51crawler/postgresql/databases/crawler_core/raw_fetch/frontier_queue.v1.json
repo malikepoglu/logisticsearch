@@ -1,0 +1,16 @@
+{
+  "manifest_version": "postgresql_runtime_manifest_v1",
+  "repo_database_key": "crawler_core",
+  "live_postgresql_database_name": "logisticsearch_crawler",
+  "surface": "raw_fetch.frontier_queue",
+  "purpose": "Durable URL queue, claim, revisit, retry, and rediscovery rules.",
+  "runtime_authority": "PostgreSQL",
+  "representation_layer": "JSON and JSONB",
+  "r114_rule": {
+    "existing_successful_future_next_fetch_at_must_be_preserved": true,
+    "retry_wait_schedule_must_be_preserved": true,
+    "leased_and_parse_pending_schedule_must_be_preserved": true,
+    "new_urls_may_be_due_immediately": true,
+    "live_db_apply_status": "not_applied_in_this_step"
+  }
+}
