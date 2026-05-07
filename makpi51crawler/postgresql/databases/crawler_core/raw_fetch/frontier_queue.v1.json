@@ -1,16 +1,144 @@
 {
-  "manifest_version": "postgresql_runtime_manifest_v1",
-  "repo_database_key": "crawler_core",
+  "area": "raw_fetch",
+  "beginner_summary": {
+    "en": "Think of this file as the queue dictionary. PostgreSQL is the real queue. This JSON explains the meaning of the queue fields and safety rules.",
+    "tr": "Bu dosyayı kuyruk sözlüğü gibi düşün. Gerçek kuyruk PostgreSQL içindedir. Bu JSON, kuyruk alanlarının ve güvenlik kurallarının anlamını açıklar."
+  },
+  "controlled_representation_layer": "JSON/JSONB",
+  "core_flow": [
+    {
+      "en": "A URL exists in PostgreSQL frontier state.",
+      "step": 1,
+      "tr": "Bir URL PostgreSQL frontier durumunda bulunur."
+    },
+    {
+      "en": "crawler_core claims one due URL with a lease.",
+      "step": 2,
+      "tr": "crawler_core due olan bir URL'yi lease ile claim eder."
+    },
+    {
+      "en": "crawler_core fetches the URL and records the fetch attempt.",
+      "step": 3,
+      "tr": "crawler_core URL'yi fetch eder ve fetch attempt kaydını oluşturur."
+    },
+    {
+      "en": "raw HTTP body bytes are stored under /srv/webcrawler/raw_fetch.",
+      "step": 4,
+      "tr": "ham HTTP body byte'ları /srv/webcrawler/raw_fetch altında saklanır."
+    },
+    {
+      "en": "PostgreSQL stores queue, scheduling, raw path, and integrity metadata.",
+      "step": 5,
+      "tr": "PostgreSQL kuyruk, zamanlama, raw path ve bütünlük metadata değerlerini saklar."
+    }
+  ],
+  "field_intent": {
+    "canonical_url": {
+      "en": "Normalized URL identity used for deduplication and queue decisions.",
+      "tr": "Tekilleştirme ve kuyruk kararları için kullanılan normalize URL kimliğidir."
+    },
+    "canonical_url_sha256": {
+      "en": "Stable hash of canonical_url used to prevent duplicate URL rows.",
+      "tr": "Duplicate URL satırlarını engellemek için kullanılan canonical_url kararlı hash değeridir."
+    },
+    "depth": {
+      "en": "Distance from seed or startpoint in discovery traversal.",
+      "tr": "Discovery dolaşımında seed veya startpoint noktasına uzaklıktır."
+    },
+    "discovery_type": {
+      "en": "How the URL entered the queue, for example seed or html_link.",
+      "tr": "URL'nin kuyruğa nasıl girdiğini açıklar; örneğin seed veya html_link."
+    },
+    "last_enqueued_at": {
+      "en": "Most recent time an enqueue operation touched this URL.",
+      "tr": "Bir enqueue işleminin bu URL'ye en son dokunduğu zamandır."
+    },
+    "last_seen_at": {
+      "en": "Most recent time this URL was observed by source seed or rediscovery.",
+      "tr": "Bu URL'nin source seed veya rediscovery ile en son görüldüğü zamandır."
+    },
+    "last_success_at": {
+      "en": "Most recent successful fetch time.",
+      "tr": "En son başarılı fetch zamanıdır."
+    },
+    "lease_expires_at": {
+      "en": "Time when the current claim lease expires.",
+      "tr": "Mevcut claim lease süresinin dolacağı zamandır."
+    },
+    "lease_token": {
+      "en": "Temporary claim token owned by a worker during active work.",
+      "tr": "Aktif iş sırasında worker tarafından sahiplenilen geçici claim token değeridir."
+    },
+    "next_fetch_at": {
+      "en": "Next allowed fetch time. Rediscovery must not blindly reset a successful future revisit time to now.",
+      "tr": "Bir sonraki izinli fetch zamanıdır. Rediscovery, başarılı olmuş gelecekteki revisit zamanını kör şekilde now değerine çekmemelidir."
+    },
+    "parent_url_id": {
+      "en": "URL row that discovered this URL, when known.",
+      "tr": "Biliniyorsa bu URL'yi keşfeden URL satırıdır."
+    },
+    "priority": {
+      "en": "Queue ordering signal; higher priority should be considered earlier.",
+      "tr": "Kuyruk sıralama sinyalidir; daha yüksek priority daha erken değerlendirilmelidir."
+    },
+    "state": {
+      "en": "Current queue state such as queued, leased, parse_pending, retry_wait, done, or error.",
+      "tr": "queued, leased, parse_pending, retry_wait, done veya error gibi mevcut kuyruk durumudur."
+    },
+    "url_id": {
+      "en": "Durable PostgreSQL identity of the URL row.",
+      "tr": "URL satırının kalıcı PostgreSQL kimliğidir."
+    }
+  },
+  "forbidden_topology": [
+    "top-level sql/",
+    "makpi51crawler/sql/",
+    "makpi51crawler/postgresql/patch_manifests/",
+    "makpi51crawler/postgresql/databases/logisticsearch_crawler/",
+    "makpi51crawler/postgresql/databases/crawler_core/runtime_changes/",
+    "makpi51crawler/postgresql/databases/crawler_core/raw_fetch/frontier/"
+  ],
+  "is_database_name": false,
+  "is_live_table": false,
+  "is_sql_file": false,
+  "layer": "crawler_core",
   "live_postgresql_database_name": "logisticsearch_crawler",
-  "surface": "raw_fetch.frontier_queue",
-  "purpose": "Durable URL queue, claim, revisit, retry, and rediscovery rules.",
+  "manifest_file": "frontier_queue.v1.json",
+  "manifest_version": "postgresql_runtime_manifest.v1",
+  "not_the_runtime_queue": {
+    "en": "This JSON file is not the live queue table. The live truth belongs in PostgreSQL.",
+    "tr": "Bu JSON dosyası canlı kuyruk tablosu değildir. Canlı doğruluk PostgreSQL içindedir."
+  },
+  "purpose": {
+    "en": "Describe the durable URL queue, claim, lease, priority, retry, discovery, and revisit scheduling intent used by crawler_core.",
+    "tr": "crawler_core tarafından kullanılan kalıcı URL kuyruğu, claim, lease, priority, retry, discovery ve revisit zamanlama niyetini açıklar."
+  },
+  "r114_revisit_schedule_rule": {
+    "en": "Rediscovery may update visibility metadata such as last_seen_at, but it must not blindly move an already successful queued URL's future next_fetch_at back to now.",
+    "tr": "Rediscovery last_seen_at gibi görünürlük metadata değerlerini güncelleyebilir; fakat başarılı olmuş queued URL'nin gelecekteki next_fetch_at değerini kör şekilde tekrar now değerine çekmemelidir."
+  },
+  "related_runtime_paths": {
+    "processed_output_root": "/srv/data",
+    "raw_http_body_root": "/srv/webcrawler/raw_fetch"
+  },
+  "repo_database_key": "crawler_core",
   "runtime_authority": "PostgreSQL",
-  "representation_layer": "JSON and JSONB",
-  "r114_rule": {
-    "existing_successful_future_next_fetch_at_must_be_preserved": true,
-    "retry_wait_schedule_must_be_preserved": true,
-    "leased_and_parse_pending_schedule_must_be_preserved": true,
-    "new_urls_may_be_due_immediately": true,
-    "live_db_apply_status": "not_applied_in_this_step"
+  "state_intent": {
+    "leased": {
+      "en": "A worker has claimed the URL and is actively working on it.",
+      "tr": "Bir worker URL'yi claim etmiştir ve üzerinde aktif çalışıyordur."
+    },
+    "parse_pending": {
+      "en": "Fetch finished and parse/workflow processing is pending.",
+      "tr": "Fetch bitmiştir ve parse/workflow işlemi bekliyordur."
+    },
+    "queued": {
+      "en": "URL is eligible for future claim when next_fetch_at and host rules allow it.",
+      "tr": "next_fetch_at ve host kuralları izin verdiğinde URL claim için uygundur."
+    },
+    "retry_wait": {
+      "en": "URL is waiting for retry/backoff scheduling after a retryable error.",
+      "tr": "Retryable hata sonrası URL retry/backoff zamanlamasını bekliyordur."
+    }
   }
 }

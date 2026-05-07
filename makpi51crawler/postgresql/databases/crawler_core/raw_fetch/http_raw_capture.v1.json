@@ -1,23 +1,154 @@
 {
-  "manifest_version": "postgresql_runtime_manifest_v1",
-  "repo_database_key": "crawler_core",
+  "area": "raw_fetch",
+  "beginner_summary": {
+    "en": "Think of this file as the dictionary for the raw HTTP receipt. PostgreSQL stores the receipt metadata. The raw body file is stored separately under /srv/webcrawler/raw_fetch.",
+    "tr": "Bu dosyayı ham HTTP makbuzu için sözlük gibi düşün. PostgreSQL makbuz metadata değerlerini saklar. Ham body dosyası ayrı olarak /srv/webcrawler/raw_fetch altında saklanır."
+  },
+  "controlled_representation_layer": "JSON/JSONB",
+  "core_flow": [
+    {
+      "en": "crawler_core receives a leased URL from PostgreSQL.",
+      "step": 1,
+      "tr": "crawler_core PostgreSQL üzerinden lease edilmiş bir URL alır."
+    },
+    {
+      "en": "crawler_core performs the HTTP request.",
+      "step": 2,
+      "tr": "crawler_core HTTP isteğini gerçekleştirir."
+    },
+    {
+      "en": "crawler_core writes raw response body bytes to /srv/webcrawler/raw_fetch.",
+      "step": 3,
+      "tr": "crawler_core ham response body byte'larını /srv/webcrawler/raw_fetch altına yazar."
+    },
+    {
+      "en": "crawler_core records fetch metadata, body path, and body hash in PostgreSQL.",
+      "step": 4,
+      "tr": "crawler_core fetch metadata, body path ve body hash bilgilerini PostgreSQL içine kaydeder."
+    },
+    {
+      "en": "parse/runtime later reads the raw body through the recorded raw_storage_path.",
+      "step": 5,
+      "tr": "parse/runtime daha sonra raw_storage_path üzerinden ham body içeriğini okur."
+    }
+  ],
+  "current_design_status": {
+    "en": "This manifest is an initial raw_fetch contract and may evolve as crawler_core fetch, parse, discovery, and storage routing become more complete.",
+    "tr": "Bu manifest ilk raw_fetch sözleşmesidir ve crawler_core fetch, parse, discovery ve storage routing tamamlandıkça gelişebilir."
+  },
+  "example_runtime_path_shape": {
+    "en": "/srv/webcrawler/raw_fetch/YYYY/MM/DD/url_<url_id>_<timestamp>.body.bin",
+    "tr": "/srv/webcrawler/raw_fetch/YYYY/MM/DD/url_<url_id>_<timestamp>.body.bin"
+  },
+  "field_intent": {
+    "body_bytes": {
+      "en": "Number of raw response body bytes written to runtime storage.",
+      "tr": "Runtime storage içine yazılan ham response body byte sayısıdır."
+    },
+    "body_sha256": {
+      "en": "SHA-256 integrity hash of the raw body file.",
+      "tr": "Ham body dosyasının SHA-256 bütünlük hash değeridir."
+    },
+    "canonical_url": {
+      "en": "Normalized durable URL identity.",
+      "tr": "Normalize edilmiş kalıcı URL kimliğidir."
+    },
+    "content_type": {
+      "en": "HTTP content type returned by the server.",
+      "tr": "Sunucu tarafından döndürülen HTTP content type değeridir."
+    },
+    "error_class": {
+      "en": "Machine-readable error class when the fetch did not succeed.",
+      "tr": "Fetch başarılı olmadığında makine tarafından okunabilir hata sınıfıdır."
+    },
+    "error_message": {
+      "en": "Human-readable error message when available.",
+      "tr": "Varsa insan tarafından okunabilir hata mesajıdır."
+    },
+    "fetch_attempt_id": {
+      "en": "Durable PostgreSQL identity of one HTTP fetch attempt.",
+      "tr": "Tek bir HTTP fetch attempt kaydının kalıcı PostgreSQL kimliğidir."
+    },
+    "final_url": {
+      "en": "Final URL after redirects, when available.",
+      "tr": "Varsa redirect sonrası son URL'dir."
+    },
+    "finished_at": {
+      "en": "Time when the fetch attempt finished.",
+      "tr": "Fetch attempt işleminin bittiği zamandır."
+    },
+    "http_status": {
+      "en": "HTTP status code such as 200, 301, 404, or 500.",
+      "tr": "200, 301, 404 veya 500 gibi HTTP status code değeridir."
+    },
+    "outcome": {
+      "en": "Terminal result such as success, retryable_error, permanent_error, or degraded.",
+      "tr": "success, retryable_error, permanent_error veya degraded gibi terminal sonuçtur."
+    },
+    "raw_storage_path": {
+      "en": "Runtime path to the stored raw body artefact under /srv/webcrawler/raw_fetch.",
+      "tr": "/srv/webcrawler/raw_fetch altındaki ham body artefact dosyasının runtime path değeridir."
+    },
+    "requested_url": {
+      "en": "URL that crawler_core attempted to request.",
+      "tr": "crawler_core'un istemeye çalıştığı URL'dir."
+    },
+    "response_headers_jsonb": {
+      "en": "Optional structured PostgreSQL JSONB representation of selected response headers.",
+      "tr": "Seçilmiş response header değerlerinin isteğe bağlı yapılı PostgreSQL JSONB temsilidir."
+    },
+    "started_at": {
+      "en": "Time when the fetch attempt started.",
+      "tr": "Fetch attempt işleminin başladığı zamandır."
+    },
+    "url_id": {
+      "en": "Durable PostgreSQL identity of the URL row that was fetched.",
+      "tr": "Fetch edilen URL satırının kalıcı PostgreSQL kimliğidir."
+    }
+  },
+  "forbidden_topology": [
+    "top-level sql/",
+    "makpi51crawler/sql/",
+    "makpi51crawler/postgresql/patch_manifests/",
+    "makpi51crawler/postgresql/databases/logisticsearch_crawler/",
+    "makpi51crawler/postgresql/databases/crawler_core/runtime_changes/",
+    "makpi51crawler/postgresql/databases/crawler_core/raw_fetch/frontier/"
+  ],
+  "integrity_rule": {
+    "en": "If raw_storage_path is present, body_sha256 should match the actual raw body file bytes.",
+    "tr": "raw_storage_path varsa body_sha256 gerçek ham body dosyası byte'ları ile eşleşmelidir."
+  },
+  "is_database_name": false,
+  "is_live_table": false,
+  "is_raw_body_file": false,
+  "is_sql_file": false,
+  "layer": "crawler_core",
   "live_postgresql_database_name": "logisticsearch_crawler",
-  "surface": "raw_fetch.http_raw_capture",
-  "purpose": "First durable raw HTTP capture produced by crawler_core.",
+  "manifest_file": "http_raw_capture.v1.json",
+  "manifest_version": "postgresql_runtime_manifest.v1",
+  "not_the_database": {
+    "en": "This JSON file is not the PostgreSQL database. The live PostgreSQL logical database name is logisticsearch_crawler.",
+    "tr": "Bu JSON dosyası PostgreSQL database değildir. Canlı PostgreSQL mantıksal database adı logisticsearch_crawler değeridir."
+  },
+  "not_the_raw_body": {
+    "en": "This JSON file is not the raw HTTP body. The body bytes live as runtime artefact files under /srv/webcrawler/raw_fetch.",
+    "tr": "Bu JSON dosyası ham HTTP body değildir. Body byte'ları runtime artefact dosyaları olarak /srv/webcrawler/raw_fetch altında durur."
+  },
+  "purpose": {
+    "en": "Describe the raw HTTP capture metadata produced by crawler_core after fetching a URL.",
+    "tr": "crawler_core bir URL fetch ettikten sonra üretilen ham HTTP capture metadata şeklini açıklar."
+  },
+  "related_runtime_paths": {
+    "processed_output_root": "/srv/data",
+    "raw_http_body_root": "/srv/webcrawler/raw_fetch"
+  },
+  "repo_database_key": "crawler_core",
   "runtime_authority": "PostgreSQL",
-  "representation_layer": "JSON and JSONB",
-  "raw_file_root": "/srv/webcrawler/raw_fetch",
-  "first_raw_data_manifest_for_crawler_core": true,
-  "expected_capture_fields": [
-    "url_id",
-    "fetch_attempt_id",
-    "requested_url",
-    "final_url",
-    "http_status",
-    "content_type",
-    "body_bytes",
-    "body_sha256",
-    "body_storage_path",
-    "fetched_at"
-  ]
+  "storage_policy": {
+    "postgresql_remains_runtime_authority": true,
+    "postgresql_stores_raw_body_hash": true,
+    "postgresql_stores_raw_body_path": true,
+    "raw_body_bytes_in_github": false,
+    "raw_body_bytes_in_manifest": false
+  }
 }
