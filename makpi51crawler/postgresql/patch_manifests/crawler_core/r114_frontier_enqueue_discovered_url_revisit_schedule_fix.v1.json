@@ -1,0 +1,75 @@
+{
+  "architecture_rule": {
+    "json_jsonb_is_controlled_representation_layer": true,
+    "live_db_apply_requires_separate_gate": true,
+    "loose_sql_file_ownership_allowed": false,
+    "postgresql_is_runtime_authority": true,
+    "top_level_sql_directory_allowed": false
+  },
+  "created_at_utc": "2026-05-06T23:49:28.198730+00:00",
+  "expected_existing_function": {
+    "line_count": 177,
+    "must_not_mention_tokens_before_patch": [
+      "u.last_success_at IS NOT NULL",
+      "COALESCE(u.success_count, 0) > 0",
+      "u.state = 'retry_wait'::frontier.url_state_enum"
+    ],
+    "sha256": "0e2ca9efb9ab7dd50c2e1830a21bc8e80007b6511bd720d0e0971f4c4fb3b2c3",
+    "source": "pi51c live PostgreSQL pg_get_functiondef"
+  },
+  "invariants": [
+    "New URL inserts may still become immediately crawlable.",
+    "Existing successful queued URLs with a future next_fetch_at must preserve that schedule.",
+    "retry_wait rows must preserve retry/backoff scheduling.",
+    "leased and parse_pending rows must preserve in-flight scheduling.",
+    "Existing parent/source/depth/priority protections must not be weakened."
+  ],
+  "manifest_version": "postgres_json_patch_manifest_v1",
+  "patch_id": "R114_frontier_enqueue_discovered_url_revisit_schedule_fix_v1",
+  "problem": {
+    "classification": "DISCOVERY_REQUEUE_OVERWRITES_REVISIT_SCHEDULE",
+    "observed_existing_success_history": true,
+    "observed_requeued_by_parent_url_id": 590,
+    "observed_url_id": 64,
+    "summary": "Rediscovery can move an existing successfully fetched queued URL's future next_fetch_at back to now()."
+  },
+  "replacement_function": {
+    "apply_sql_text": "CREATE OR REPLACE FUNCTION frontier.enqueue_discovered_url(p_parent_url_id bigint, p_canonical_url text, p_canonical_url_sha256 text, p_port integer, p_scheme text, p_host text, p_authority_key text, p_registrable_domain text, p_url_path text, p_url_query text, p_discovery_type frontier.discovery_type_enum, p_depth integer, p_priority integer DEFAULT NULL::integer, p_enqueue_reason text DEFAULT NULL::text)\n RETURNS TABLE(url_id bigint, host_id bigint, canonical_url text, state frontier.url_state_enum, discovery_type frontier.discovery_type_enum, depth integer, priority integer)\n LANGUAGE plpgsql\nAS $function$\nDECLARE\n    v_parent_url frontier.url%ROWTYPE;\n    v_parent_host frontier.host%ROWTYPE;\n    v_host_id bigint;\n    v_effective_priority integer;\nBEGIN\n    IF p_parent_url_id IS NULL OR p_parent_url_id <= 0 THEN\n        RAISE EXCEPTION 'p_parent_url_id must be > 0';\n    END IF;\n\n    IF p_canonical_url IS NULL OR btrim(p_canonical_url) = '' THEN\n        RAISE EXCEPTION 'p_canonical_url must be non-empty';\n    END IF;\n\n    IF p_scheme IS NULL OR btrim(p_scheme) = '' THEN\n        RAISE EXCEPTION 'p_scheme must be non-empty';\n    END IF;\n\n    IF p_host IS NULL OR btrim(p_host) = '' THEN\n        RAISE EXCEPTION 'p_host must be non-empty';\n    END IF;\n\n    IF p_port IS NULL OR p_port <= 0 THEN\n        RAISE EXCEPTION 'p_port must be > 0';\n    END IF;\n\n    IF p_url_path IS NULL OR btrim(p_url_path) = '' THEN\n        RAISE EXCEPTION 'p_url_path must be non-empty';\n    END IF;\n\n    IF p_discovery_type IS NULL THEN\n        RAISE EXCEPTION 'p_discovery_type must not be null';\n    END IF;\n\n    IF p_depth IS NULL OR p_depth < 0 THEN\n        RAISE EXCEPTION 'p_depth must be >= 0';\n    END IF;\n\n    -- EN: The caller still passes these values for compatibility with the\n    -- EN: current narrow Python bridge, but generated columns remain the real truth.\n    -- TR: Çağıran taraf mevcut dar Python köprüsüyle uyumluluk için bu değerleri\n    -- TR: hâlâ geçirir; ancak gerçek doğruluk generated sütunlardadır.\n    PERFORM p_canonical_url_sha256;\n    PERFORM p_authority_key;\n\n    SELECT parent_u.*\n    INTO v_parent_url\n    FROM frontier.url AS parent_u\n    WHERE parent_u.url_id = p_parent_url_id;\n\n    IF NOT FOUND THEN\n        RAISE EXCEPTION 'parent frontier.url row not found for url_id=%', p_parent_url_id;\n    END IF;\n\n    SELECT parent_h.*\n    INTO v_parent_host\n    FROM frontier.host AS parent_h\n    WHERE parent_h.host_id = v_parent_url.host_id;\n\n    IF NOT FOUND THEN\n        RAISE EXCEPTION 'parent frontier.host row not found for host_id=%', v_parent_url.host_id;\n    END IF;\n\n    v_effective_priority := COALESCE(p_priority, v_parent_url.priority, 0);\n\n    INSERT INTO frontier.host AS h (\n        scheme,\n        host,\n        port,\n        registrable_domain,\n        user_agent_token\n    )\n    VALUES (\n        lower(p_scheme),\n        lower(p_host),\n        p_port,\n        lower(COALESCE(NULLIF(p_registrable_domain, ''), p_host)),\n        COALESCE(v_parent_host.user_agent_token, 'LogisticSearchBot')\n    )\n    ON CONFLICT (authority_key)\n    DO UPDATE\n       SET registrable_domain = EXCLUDED.registrable_domain,\n           updated_at = now()\n    RETURNING h.host_id\n    INTO v_host_id;\n\n    RETURN QUERY\n    WITH upserted AS (\n        INSERT INTO frontier.url AS u (\n            host_id,\n            canonical_url,\n            url_path,\n            url_query,\n            source_id,\n            seed_id,\n            discovery_type,\n            parent_url_id,\n            depth,\n            is_seed,\n            state,\n            priority,\n            score,\n            enqueue_reason,\n            first_seen_at,\n            last_seen_at,\n            last_enqueued_at,\n            next_fetch_at\n        )\n        VALUES (\n            v_host_id,\n            p_canonical_url,\n            p_url_path,\n            p_url_query,\n            v_parent_url.source_id,\n            v_parent_url.seed_id,\n            p_discovery_type,\n            p_parent_url_id,\n            p_depth,\n            false,\n            'queued'::frontier.url_state_enum,\n            v_effective_priority,\n            0,\n            p_enqueue_reason,\n            now(),\n            now(),\n            now(),\n            now()\n        )\n        ON CONFLICT (canonical_url_sha256)\n        DO UPDATE\n           SET host_id = EXCLUDED.host_id,\n               parent_url_id = COALESCE(u.parent_url_id, EXCLUDED.parent_url_id),\n               source_id = COALESCE(u.source_id, EXCLUDED.source_id),\n               seed_id = COALESCE(u.seed_id, EXCLUDED.seed_id),\n               depth = LEAST(u.depth, EXCLUDED.depth),\n               priority = GREATEST(u.priority, EXCLUDED.priority),\n               enqueue_reason = EXCLUDED.enqueue_reason,\n               last_seen_at = now(),\n               last_enqueued_at = CASE\n                   WHEN u.state IN ('leased'::frontier.url_state_enum, 'parse_pending'::frontier.url_state_enum)\n                       THEN u.last_enqueued_at\n                   ELSE now()\n               END,\n               next_fetch_at = CASE\n                    -- EN: R114 keeps active lease / parse-pending rows stable because discovery must not change in-flight work scheduling.\n                    -- TR: R114 aktif lease / parse-pending satırlarını sabit tutar; çünkü discovery devam eden işin zamanlamasını değiştirmemelidir.\n                    WHEN u.state IN ('leased'::frontier.url_state_enum, 'parse_pending'::frontier.url_state_enum)\n                        THEN u.next_fetch_at\n\n                    -- EN: R114 protects an already successful queued URL with a future revisit schedule from being made immediately due by rediscovery.\n                    -- TR: R114 daha önce başarılı olmuş ve geleceğe ayarlı revisit zamanı olan queued URL'nin rediscovery yüzünden hemen due yapılmasını engeller.\n                    WHEN u.state = 'queued'::frontier.url_state_enum\n                         AND (u.last_success_at IS NOT NULL OR COALESCE(u.success_count, 0) > 0)\n                         AND u.next_fetch_at IS NOT NULL\n                         AND u.next_fetch_at > now()\n                        THEN u.next_fetch_at\n\n                    -- EN: R114 keeps retry_wait scheduling under retry/backoff policy instead of overwriting it through discovery.\n                    -- TR: R114 retry_wait zamanlamasını discovery ile ezmek yerine retry/backoff politikasının kontrolünde bırakır.\n                    WHEN u.state = 'retry_wait'::frontier.url_state_enum\n                         AND u.next_fetch_at IS NOT NULL\n                        THEN u.next_fetch_at\n\n                    -- EN: New or unscheduled existing URLs may still become crawlable immediately.\n                    -- TR: Yeni veya zamanlaması olmayan mevcut URL'ler hâlâ hemen crawl edilebilir hale gelebilir.\n                    ELSE now()\n                END,\n               state = CASE\n                    -- EN: R114 preserves active, parse-pending, and retry-wait state instead of forcing every rediscovered row back to queued.\n                    -- TR: R114 aktif, parse-pending ve retry-wait durumlarını korur; rediscovery her satırı zorla queued durumuna döndürmemelidir.\n                    WHEN u.state IN (\n                        'leased'::frontier.url_state_enum,\n                        'parse_pending'::frontier.url_state_enum,\n                        'retry_wait'::frontier.url_state_enum\n                    )\n                        THEN u.state\n                    ELSE 'queued'::frontier.url_state_enum\n                END,\n               updated_at = now()\n        RETURNING\n            u.url_id,\n            u.canonical_url,\n            u.state,\n            u.discovery_type,\n            u.depth,\n            u.priority\n    )\n    SELECT\n        upserted.url_id,\n        v_host_id,\n        upserted.canonical_url,\n        upserted.state,\n        upserted.discovery_type,\n        upserted.depth,\n        upserted.priority\n    FROM upserted;\nEND;\n$function$",
+    "line_count": 202,
+    "sha256": "0ec6ee729ba72e5e9213c98ba23cd554f72f374717d072eb08f3c0628f4b491d"
+  },
+  "rollback_strategy": {
+    "expected_existing_function_sha256": "0e2ca9efb9ab7dd50c2e1830a21bc8e80007b6511bd720d0e0971f4c4fb3b2c3",
+    "requires_explicit_gate": true,
+    "type": "replace_function_from_expected_existing_function"
+  },
+  "safety": {
+    "apply_allowed_default": false,
+    "crawler_loop_start_allowed": false,
+    "crawler_service_start_allowed": false,
+    "created_by_step": "R114_R4E_CREATE_POSTGRES_JSON_PATCH_MANIFEST_LOCAL_ONLY_NO_DB_APPLY",
+    "db_apply_allowed_in_this_step": false,
+    "git_add_allowed_in_this_step": false,
+    "git_commit_allowed_in_this_step": false,
+    "git_push_allowed_in_this_step": false
+  },
+  "target": {
+    "database_logical_name": "logisticsearch_crawler",
+    "function_identity": "p_parent_url_id bigint, p_canonical_url text, p_canonical_url_sha256 text, p_port integer, p_scheme text, p_host text, p_authority_key text, p_registrable_domain text, p_url_path text, p_url_query text, p_discovery_type frontier.discovery_type_enum, p_depth integer, p_priority integer, p_enqueue_reason text",
+    "function_name": "enqueue_discovered_url",
+    "language": "plpgsql",
+    "project": "logisticsearch",
+    "schema": "frontier"
+  },
+  "validation_plan": {
+    "later_apply_gate": "explicit controlled PostgreSQL DB apply gate only after manifest validation, commit, push, and pi51c repo sync",
+    "next_static_step": "R114_R4F_STATIC_JSON_MANIFEST_VALIDATION_NO_DB_APPLY",
+    "post_apply_checks": [
+      "pg_get_functiondef sha256 equals replacement_function.sha256",
+      "function text mentions last_success_at success_count retry_wait guards",
+      "url_id=64 future revisit schedule is not reset by rediscovery",
+      "no service start",
+      "no crawler loop start"
+    ]
+  }
+}
