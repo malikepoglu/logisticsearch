@@ -199,3 +199,59 @@ The next design step should move toward the topology defined in this document.
 TR:
 R114 SQL dizinlerini geri getirmeden devam etmelidir.
 Sonraki tasarım adımı bu belgede tanımlanan topolojiye doğru ilerlemelidir.
+
+---
+
+## R115 — Crawl Map / Resume JSONB Standard
+
+EN: This section defines the lean JSONB context standard for `frontier.url.url_metadata`. PostgreSQL columns remain the durable runtime authority; JSONB only carries lightweight crawl-map, discovery, resume, and policy context.
+
+TR: Bu bölüm `frontier.url.url_metadata` için yalın JSONB bağlam standardını tanımlar. Dayanıklı runtime otoritesi PostgreSQL kolonlarıdır; JSONB yalnızca hafif crawl-map, keşif, resume ve policy bağlamını taşır.
+
+### EN: Runtime authority / TR: Runtime otoritesi
+
+EN: The following PostgreSQL columns remain the source of truth: `parent_url_id`, `depth`, `discovery_type`, `host_id`, `state`, `next_fetch_at`, `lease_token`, `lease_expires_at`, `last_success_at`, and `success_count`.
+
+TR: Aşağıdaki PostgreSQL kolonları gerçek kaynak olarak kalır: `parent_url_id`, `depth`, `discovery_type`, `host_id`, `state`, `next_fetch_at`, `lease_token`, `lease_expires_at`, `last_success_at` ve `success_count`.
+
+### EN: JSONB schema / TR: JSONB şeması
+
+EN: The approved schema marker is `crawler_url_metadata.v1`.
+
+TR: Onaylı şema işareti `crawler_url_metadata.v1` değeridir.
+
+Allowed JSONB sections:
+
+- `crawl_map`: `root_url_id`, `branch_role`, `branch_label`, `crawl_path_hint`
+- `discovered_from`: `surface`, `source_url_id`, `link_text_normalized`, `selector_hint`, `source_content_type`
+- `resume`: `last_checkpoint_phase`, `last_checkpoint_at`, `last_worker_id`, `last_safe_resume_action`
+- `policy`: `crawl_reason`, `robots_allowed`, `nofollow_seen`, `noindex_seen`, `politeness_bucket`
+
+### EN: Resume state interpretation / TR: Resume state yorumu
+
+EN: `queued` is a durable waiting point. The crawler may claim it only when `next_fetch_at` is due.
+
+TR: `queued` dayanıklı bekleme noktasıdır. Crawler bunu yalnızca `next_fetch_at` zamanı geldiğinde claim edebilir.
+
+EN: `leased` is in-flight work. The crawler must not duplicate it while the lease is valid; expired leases may be reclaimed by the controlled claim path.
+
+TR: `leased` devam eden iştir. Lease geçerliyken duplicate iş yapılmaz; süresi dolmuş lease yalnızca kontrollü claim yolu ile geri alınabilir.
+
+EN: `parse_pending` means fetch finished and parse_core should process the raw capture or release the URL through a controlled path.
+
+TR: `parse_pending` fetch’in bittiğini ve parse_core’un raw capture verisini işlemesi ya da URL’yi kontrollü yolla bırakması gerektiğini gösterir.
+
+EN: `retry_wait` is an error/backoff state. `next_fetch_at` must be preserved until retry time is due.
+
+TR: `retry_wait` hata/backoff durumudur. Retry zamanı gelene kadar `next_fetch_at` korunmalıdır.
+
+### EN: Forbidden topology / TR: Yasak topoloji
+
+EN: Do not resurrect `sql/`, `makpi51crawler/sql/`, `patch_manifests/`, or `runtime_changes/`.
+
+TR: `sql/`, `makpi51crawler/sql/`, `patch_manifests/` veya `runtime_changes/` geri getirilmez.
+
+EN: `http_raw_capture.v1.json` is a manifest, not a database name. The live PostgreSQL logical database name remains `logisticsearch_crawler`; the repository topology key remains `crawler_core`.
+
+TR: `http_raw_capture.v1.json` bir manifesttir, veritabanı adı değildir. Canlı PostgreSQL mantıksal veritabanı adı `logisticsearch_crawler`; repo topoloji anahtarı `crawler_core` olarak kalır.
+

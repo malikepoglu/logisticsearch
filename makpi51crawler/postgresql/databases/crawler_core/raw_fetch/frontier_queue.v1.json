@@ -140,5 +140,112 @@
       "en": "URL is waiting for retry/backoff scheduling after a retryable error.",
       "tr": "Retryable hata sonrası URL retry/backoff zamanlamasını bekliyordur."
     }
+  },
+  "url_metadata_jsonb_standard": {
+    "allowed_sections": {
+      "crawl_map": {
+        "en": "Explains where this URL sits in the crawl graph.",
+        "fields": {
+          "branch_label": "Short human-readable branch label, for example country code or directory section.",
+          "branch_role": "seed | listing | country | pagination | detail | document | unknown",
+          "crawl_path_hint": "Optional lightweight breadcrumb such as seed > country > page.",
+          "root_url_id": "Root/seed URL id when known; helper only, parent_url_id remains the durable edge."
+        },
+        "tr": "Bu URL'nin crawl grafiğinde nerede durduğunu açıklar."
+      },
+      "discovered_from": {
+        "en": "Explains how this URL was discovered without replacing parent_url_id.",
+        "fields": {
+          "link_text_normalized": "Normalized link text when available.",
+          "selector_hint": "Small selector/source hint such as a[href], canonical, sitemap_url.",
+          "source_content_type": "Content type of the page/document that produced the URL.",
+          "source_url_id": "Optional helper copy for readability; parent_url_id remains the durable edge.",
+          "surface": "html_link | sitemap | canonical | redirect | manual_seed | api_hint | unknown"
+        },
+        "tr": "parent_url_id alanının yerine geçmeden URL'nin nasıl keşfedildiğini açıklar."
+      },
+      "policy": {
+        "en": "Stores lightweight crawl-policy context gathered during crawl.",
+        "fields": {
+          "crawl_reason": "seed | discovered | revisit | retry | manual",
+          "nofollow_seen": "true | false | unknown",
+          "noindex_seen": "true | false | unknown",
+          "politeness_bucket": "Optional host/site politeness grouping hint.",
+          "robots_allowed": "true | false | unknown"
+        },
+        "tr": "Crawl sırasında öğrenilen hafif crawl-policy bağlamını saklar."
+      },
+      "resume": {
+        "en": "Explains the last logical checkpoint so reboot/restart reasoning stays transparent.",
+        "fields": {
+          "last_checkpoint_at": "ISO-8601 timestamp when the checkpoint was recorded.",
+          "last_checkpoint_phase": "queued | leased | fetch_started | fetch_stored | fetch_finalized | parse_pending | released_to_queue | retry_wait",
+          "last_safe_resume_action": "claim | wait_for_lease_expiry | parse | retry_later | no_action",
+          "last_worker_id": "Worker id when known."
+        },
+        "tr": "Reboot/restart sonrası mantık şeffaf kalsın diye son mantıksal checkpoint'i açıklar."
+      }
+    },
+    "forbidden_topology": [
+      "new SQL file for metadata standard",
+      "new runtime_changes directory",
+      "new frontier subdirectory under raw_fetch",
+      "new table for this lightweight map before proven necessary"
+    ],
+    "jsonb_column": "frontier.url.url_metadata",
+    "lean_design_rule": {
+      "en": "Do not duplicate durable PostgreSQL truth columns inside url_metadata.",
+      "tr": "Kalıcı PostgreSQL gerçeklik kolonlarını url_metadata içine ikinci kez kopyalama."
+    },
+    "minimal_example": {
+      "crawl_map": {
+        "branch_label": "DE",
+        "branch_role": "country",
+        "crawl_path_hint": "fiata-directory > country",
+        "root_url_id": 64
+      },
+      "discovered_from": {
+        "link_text_normalized": "Germany",
+        "selector_hint": "a[href]",
+        "source_url_id": 64,
+        "surface": "html_link"
+      },
+      "policy": {
+        "crawl_reason": "discovered",
+        "nofollow_seen": "unknown",
+        "noindex_seen": "unknown",
+        "robots_allowed": "unknown"
+      },
+      "resume": {
+        "last_checkpoint_at": "2026-05-07T21:00:00+02:00",
+        "last_checkpoint_phase": "queued",
+        "last_safe_resume_action": "claim",
+        "last_worker_id": null
+      },
+      "schema_version": "crawler_url_metadata.v1"
+    },
+    "must_not_duplicate_columns": [
+      "parent_url_id",
+      "depth",
+      "discovery_type",
+      "host_id",
+      "state",
+      "next_fetch_at",
+      "lease_token",
+      "lease_expires_at",
+      "last_success_at",
+      "success_count"
+    ],
+    "purpose": {
+      "en": "Store lightweight crawl-map, discovery-context, resume-checkpoint, and policy-context details that do not deserve separate durable columns.",
+      "tr": "Ayrı kalıcı kolon gerektirmeyen hafif crawl-map, discovery-context, resume-checkpoint ve policy-context detaylarını saklar."
+    },
+    "reboot_resume_interpretation": {
+      "leased": "In-flight work; if lease_expires_at is expired, claim_next_url may reap and reclaim.",
+      "parse_pending": "Fetch is finished; parse_core should process or release according to parse result.",
+      "queued": "Durable waiting point; worker may claim when next_fetch_at is due.",
+      "retry_wait": "Retry/backoff schedule must be preserved until next_fetch_at is due."
+    },
+    "schema_version": "crawler_url_metadata.v1"
   }
 }
