@@ -589,3 +589,9 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 
 - [Controls Run Policy and Safety Classification — 2026-05-06](TOPIC_CONTROLS_RUN_POLICY_AND_SAFETY_CLASSIFICATION_2026_05_06.md) — canonical R112 controls safety-classification seal for A0/B1/C2/D3/E4/F5 control classes, including the rule that inventory and crawler-core trace work must not execute control scripts.
 <!-- LS:R112-CONTROLS-RUN-POLICY-LINK:END -->
+
+## PostgreSQL JSON Runtime Topology / PostgreSQL JSON Runtime Topolojisi
+
+- [PostgreSQL JSON Runtime Topology and Raw Fetch Manifest Standard — 2026-05-07](TOPIC_POSTGRESQL_JSON_RUNTIME_TOPOLOGY_AND_RAW_FETCH_MANIFEST_STANDARD_2026_05_07.md)
+  - EN: Defines the lean PostgreSQL runtime authority plus JSON/JSONB controlled representation rule for crawler_core raw fetch manifests.
+  - TR: crawler_core ham veri manifestleri için yalın PostgreSQL runtime otoritesi ve JSON/JSONB kontrollü temsil kuralını tanımlar.
