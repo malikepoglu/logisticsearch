@@ -1261,6 +1261,10 @@ def update_url_crawl_map_metadata(
     `crawl_map` keys are refreshed. Durable PostgreSQL truth columns are not
     duplicated into JSONB.
 
+    Parent-conflict guard failures are classified as safe metadata skips, not as
+    hard degraded helper failures. This keeps rediscovered pre-existing rows from
+    receiving misleading crawl_map context.
+
     TR:
     Yalnızca frontier.url.url_metadata alanını onaylı crawler_url_metadata.v1
     crawl_map bağlamıyla günceller.
@@ -1268,6 +1272,10 @@ def update_url_crawl_map_metadata(
     İlgisiz mevcut metadata anahtarları korunur. Yönetilen `schema_version` ve
     `crawl_map` anahtarları yenilenir. Kalıcı PostgreSQL gerçeklik kolonları
     JSONB içine kopyalanmaz.
+
+    Parent-conflict guard başarısızlıkları sert degraded helper hatası değil,
+    güvenli metadata skip olarak sınıflandırılır. Böylece yeniden keşfedilmiş
+    mevcut satırlara yanıltıcı crawl_map bağlamı yazılmaz.
     """
     metadata_patch = build_crawler_url_metadata_v1_crawl_map(
         root_url_id=root_url_id,
@@ -1283,6 +1291,7 @@ def update_url_crawl_map_metadata(
             "url_id": int(url_id),
             "metadata_updated": False,
             "metadata_degraded": True,
+            "metadata_skipped": False,
             "error_class": "empty_crawl_map_patch",
             "error_message": "crawler_url_metadata.v1 crawl_map patch was empty",
         }
@@ -1292,6 +1301,59 @@ def update_url_crawl_map_metadata(
         sort_keys=True,
         separators=(",", ":"),
     )
+    target_url_id = int(url_id)
+    root_url_id_int = int(root_url_id) if root_url_id is not None else None
+
+    with conn.cursor(row_factory=dict_row) as cur:
+        cur.execute(
+            """
+            SELECT
+                u.url_id,
+                u.parent_url_id
+            FROM frontier.url AS u
+            WHERE u.url_id = %(url_id)s
+            """,
+            {
+                "url_id": target_url_id,
+            },
+        )
+        guard_row = cur.fetchone()
+
+    if guard_row is None:
+        return {
+            "action": "update_url_crawl_map_metadata",
+            "url_id": target_url_id,
+            "metadata_updated": False,
+            "metadata_degraded": True,
+            "metadata_skipped": False,
+            "error_class": "url_metadata_target_missing",
+            "error_message": "frontier.url target row was not found for metadata update",
+        }
+
+    target_parent_url_id = guard_row.get("parent_url_id")
+    parent_guard_allows_update = (
+        root_url_id_int is None
+        or target_url_id == root_url_id_int
+        or (
+            target_parent_url_id is not None
+            and int(target_parent_url_id) == root_url_id_int
+        )
+    )
+
+    if not parent_guard_allows_update:
+        return {
+            "action": "update_url_crawl_map_metadata",
+            "url_id": target_url_id,
+            "parent_url_id": (
+                int(target_parent_url_id) if target_parent_url_id is not None else None
+            ),
+            "root_url_id": root_url_id_int,
+            "metadata_updated": False,
+            "metadata_degraded": False,
+            "metadata_skipped": True,
+            "skip_class": "parent_conflict_guard_skipped",
+            "skip_message": "frontier.url metadata update skipped because target row parent does not match requested root_url_id",
+        }
 
     with conn.cursor(row_factory=dict_row) as cur:
         cur.execute(
@@ -1325,8 +1387,8 @@ def update_url_crawl_map_metadata(
                    u.url_metadata
             """,
             {
-                "url_id": int(url_id),
-                "root_url_id": int(root_url_id) if root_url_id is not None else None,
+                "url_id": target_url_id,
+                "root_url_id": root_url_id_int,
                 "metadata_patch": metadata_patch_json,
             },
         )
@@ -1335,15 +1397,21 @@ def update_url_crawl_map_metadata(
     if row is None:
         return {
             "action": "update_url_crawl_map_metadata",
-            "url_id": int(url_id),
+            "url_id": target_url_id,
+            "parent_url_id": (
+                int(target_parent_url_id) if target_parent_url_id is not None else None
+            ),
+            "root_url_id": root_url_id_int,
             "metadata_updated": False,
             "metadata_degraded": True,
-            "error_class": "url_metadata_update_no_row",
-            "error_message": "frontier.url metadata update returned no row or parent-conflict guard skipped the row",
+            "metadata_skipped": False,
+            "error_class": "url_metadata_update_no_row_after_guard_pass",
+            "error_message": "frontier.url metadata update returned no row after parent guard precheck passed",
         }
 
     payload = dict(row)
     payload["action"] = "update_url_crawl_map_metadata"
     payload["metadata_updated"] = True
     payload["metadata_degraded"] = False
+    payload["metadata_skipped"] = False
     return payload

@@ -2732,6 +2732,7 @@ def enqueue_minimal_discovered_links(
             "action": "update_url_crawl_map_metadata",
             "metadata_updated": False,
             "metadata_degraded": True,
+            "metadata_skipped": False,
             "error_class": "metadata_target_url_id_missing",
             "error_message": "enqueue row did not include url_id for crawl_map metadata update",
         }
@@ -2782,6 +2783,12 @@ def enqueue_minimal_discovered_links(
             for row in enqueued_rows
             if isinstance(row.get("metadata_update_result"), dict)
             and bool(row["metadata_update_result"].get("metadata_degraded"))
+        ),
+        "metadata_skipped_count": sum(
+            1
+            for row in enqueued_rows
+            if isinstance(row.get("metadata_update_result"), dict)
+            and bool(row["metadata_update_result"].get("metadata_skipped"))
         ),
         "enqueued_rows": enqueued_rows,
         "degraded_rows": degraded_rows,
