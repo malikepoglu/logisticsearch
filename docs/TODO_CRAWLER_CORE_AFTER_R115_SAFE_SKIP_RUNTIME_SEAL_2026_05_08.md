@@ -93,3 +93,14 @@ TR: `SAFE_SKIP_PATCH_RUNTIME_STABILITY`, iki kontrollü tek-seferlik crawler_cor
 
 EN: OSM/location clues may be collected during raw crawling for later Parse_Core use, but heavy geocoding and location normalization must stay in Desktop_Import.
 TR: OSM/location clues ham crawl sırasında Parse_Core'un daha sonra kullanması için toplanabilir; heavy geocoding ve lokasyon normalizasyonu Desktop_Import tarafında kalmalıdır.
+
+## R115_R31A / Doc-seal post-push needle repair
+
+- EN: R30 documentation seal commit is `6ddaceef3dd189e27559748d803fdf64d0bf4c73`.
+- TR: R30 dokümantasyon mühür commit'i `6ddaceef3dd189e27559748d803fdf64d0bf4c73`.
+
+- EN: This note repairs the R31 post-push final seal needle only. It does not change runtime, DB, service, crawler loop, sync state, or safe-skip behavior.
+- TR: Bu not yalnızca R31 post-push final seal needle kontrolünü onarır. Runtime, DB, servis, crawler loop, sync durumu veya safe-skip davranışını değiştirmez.
+
+- EN: Main route remains crawler_core playwc readiness: repair documentation seal first, then continue with the controlled list toward bounded loop and site-to-site data collection.
+- TR: Ana rota crawler_core playwc hazırlığıdır: önce dokümantasyon mühürünü temizle, sonra kontrollü listeyle bounded loop ve siteden siteye veri toplamaya ilerle.
