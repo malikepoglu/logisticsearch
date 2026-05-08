@@ -595,3 +595,7 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 - [PostgreSQL JSON Runtime Topology and Raw Fetch Manifest Standard — 2026-05-07](TOPIC_POSTGRESQL_JSON_RUNTIME_TOPOLOGY_AND_RAW_FETCH_MANIFEST_STANDARD_2026_05_07.md)
   - EN: Defines the lean PostgreSQL runtime authority plus JSON/JSONB controlled representation rule for crawler_core raw fetch manifests.
   - TR: crawler_core ham veri manifestleri için yalın PostgreSQL runtime otoritesi ve JSON/JSONB kontrollü temsil kuralını tanımlar.
+
+## Crawler core / Runtime seals
+
+- [R115 enqueue conflict patch and runtime impact seal](TOPIC_CRAWLER_CORE_R115_ENQUEUE_CONFLICT_PATCH_AND_RUNTIME_IMPACT_SEAL_2026_05_08.md)
