@@ -153,6 +153,8 @@ TR:
 
 from __future__ import annotations
 
+from .logisticsearch1_1_1_3_frontier_gateway import update_url_crawl_map_metadata
+
 # EN: We import dataclass because small structured parse result objects are
 # EN: easier to inspect when every field is explicit and named.
 # TR: Küçük yapılı parse sonuç nesneleri her alan açık ve isimli olduğunda
@@ -2726,6 +2728,27 @@ def enqueue_minimal_discovered_links(
         # TR: enqueue_row dal sınıflandırması sürmeden önce düz ve değiştirilebilir dict haline çevrilir.
         # TR: Beklenen değerler daha sonraki okuma erişimini ve liste eklemeyi güvenle taşıyabilen dict-benzeri makbuzlardır.
         enqueue_row = dict(enqueue_row)
+        metadata_update_result: dict = {
+            "action": "update_url_crawl_map_metadata",
+            "metadata_updated": False,
+            "metadata_degraded": True,
+            "error_class": "metadata_target_url_id_missing",
+            "error_message": "enqueue row did not include url_id for crawl_map metadata update",
+        }
+
+        metadata_update_target_url_id = enqueue_row.get("url_id")
+        if metadata_update_target_url_id is not None:
+            metadata_update_result = update_url_crawl_map_metadata(
+                conn,
+                url_id=int(metadata_update_target_url_id),
+                root_url_id=int(url_id),
+                branch_role="discovered_child",
+                branch_label=str(enqueue_row.get("discovery_type") or "html_link"),
+                crawl_path_hint="minimal_html_link_discovery_from_parse_runtime",
+            )
+
+        enqueue_row["metadata_update_result"] = metadata_update_result
+
 
         if bool(enqueue_row.get("discovery_degraded")):
             degraded_rows.append(enqueue_row)
@@ -2748,6 +2771,18 @@ def enqueue_minimal_discovered_links(
         "enqueued_url_count": len(enqueued_rows),
         "skipped_url_count": len(extract_candidate_hrefs_from_html(html_text)) - len(discovery_targets),
         "degraded_enqueue_count": len(degraded_rows),
+        "metadata_updated_count": sum(
+            1
+            for row in enqueued_rows
+            if isinstance(row.get("metadata_update_result"), dict)
+            and bool(row["metadata_update_result"].get("metadata_updated"))
+        ),
+        "metadata_degraded_count": sum(
+            1
+            for row in enqueued_rows
+            if isinstance(row.get("metadata_update_result"), dict)
+            and bool(row["metadata_update_result"].get("metadata_degraded"))
+        ),
         "enqueued_rows": enqueued_rows,
         "degraded_rows": degraded_rows,
     }

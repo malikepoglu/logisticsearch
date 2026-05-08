@@ -119,6 +119,10 @@ from __future__ import annotations
 # TR: için typing yardımcılarını muhafazakâr biçimde içe aktarıyoruz.
 from typing import Any
 
+# EN: We import json because frontier.url.url_metadata is updated through explicit JSONB patches.
+# TR: frontier.url.url_metadata açık JSONB patch'leriyle güncellendiği için json içe aktarıyoruz.
+import json
+
 # EN: We import psycopg because these functions are thin wrappers around SQL calls.
 # TR: Bu fonksiyonlar SQL çağrılarının ince wrapper'ları olduğu için psycopg içe aktarıyoruz.
 import psycopg
@@ -1173,3 +1177,173 @@ def finish_fetch_permanent_error(
     # EN: We return the structured finalize result.
     # TR: Yapılı finalize sonucunu döndürüyoruz.
     return row
+
+# EN: Approved lightweight metadata schema for frontier.url.url_metadata.
+# EN: PostgreSQL durable columns remain authoritative; this JSONB only carries crawl-map context.
+# TR: frontier.url.url_metadata için onaylı hafif metadata şeması.
+# TR: PostgreSQL kalıcı kolonları otorite kalır; bu JSONB yalnızca crawl-map bağlamı taşır.
+CRAWLER_URL_METADATA_SCHEMA_VERSION = "crawler_url_metadata.v1"
+CRAWLER_URL_METADATA_CRAWL_MAP_KEY = "crawl_map"
+
+
+def _clean_url_metadata_text(value: object) -> str | None:
+    """Return a stripped text value for JSONB metadata, or None for empty values."""
+    if value is None:
+        return None
+
+    text = str(value).strip()
+    if not text:
+        return None
+
+    return text
+
+
+def build_crawler_url_metadata_v1_crawl_map(
+    *,
+    root_url_id: int | None,
+    branch_role: str | None,
+    branch_label: str | None,
+    crawl_path_hint: str | None,
+) -> dict[str, Any]:
+    """
+    EN:
+    Build the approved crawler_url_metadata.v1 crawl_map patch.
+
+    This helper intentionally does not duplicate durable PostgreSQL truth columns
+    such as canonical_url, state, success_count, last_success_at, next_fetch_at,
+    lease fields, or HTTP status.
+
+    TR:
+    Onaylı crawler_url_metadata.v1 crawl_map patch'ini üretir.
+
+    Bu yardımcı canonical_url, state, success_count, last_success_at,
+    next_fetch_at, lease alanları veya HTTP status gibi kalıcı PostgreSQL
+    gerçeklik kolonlarını özellikle kopyalamaz.
+    """
+    crawl_map: dict[str, Any] = {}
+
+    if root_url_id is not None:
+        crawl_map["root_url_id"] = int(root_url_id)
+
+    clean_branch_role = _clean_url_metadata_text(branch_role)
+    if clean_branch_role is not None:
+        crawl_map["branch_role"] = clean_branch_role
+
+    clean_branch_label = _clean_url_metadata_text(branch_label)
+    if clean_branch_label is not None:
+        crawl_map["branch_label"] = clean_branch_label
+
+    clean_crawl_path_hint = _clean_url_metadata_text(crawl_path_hint)
+    if clean_crawl_path_hint is not None:
+        crawl_map["crawl_path_hint"] = clean_crawl_path_hint
+
+    return {
+        "schema_version": CRAWLER_URL_METADATA_SCHEMA_VERSION,
+        CRAWLER_URL_METADATA_CRAWL_MAP_KEY: crawl_map,
+    }
+
+
+def update_url_crawl_map_metadata(
+    conn: psycopg.Connection[Any],
+    *,
+    url_id: int,
+    root_url_id: int | None,
+    branch_role: str | None,
+    branch_label: str | None,
+    crawl_path_hint: str | None,
+) -> dict[str, Any]:
+    """
+    EN:
+    Update only frontier.url.url_metadata with the approved crawler_url_metadata.v1
+    crawl_map context.
+
+    Existing unrelated metadata keys are preserved. Managed `schema_version` and
+    `crawl_map` keys are refreshed. Durable PostgreSQL truth columns are not
+    duplicated into JSONB.
+
+    TR:
+    Yalnızca frontier.url.url_metadata alanını onaylı crawler_url_metadata.v1
+    crawl_map bağlamıyla günceller.
+
+    İlgisiz mevcut metadata anahtarları korunur. Yönetilen `schema_version` ve
+    `crawl_map` anahtarları yenilenir. Kalıcı PostgreSQL gerçeklik kolonları
+    JSONB içine kopyalanmaz.
+    """
+    metadata_patch = build_crawler_url_metadata_v1_crawl_map(
+        root_url_id=root_url_id,
+        branch_role=branch_role,
+        branch_label=branch_label,
+        crawl_path_hint=crawl_path_hint,
+    )
+
+    crawl_map = metadata_patch.get(CRAWLER_URL_METADATA_CRAWL_MAP_KEY)
+    if not isinstance(crawl_map, dict) or not crawl_map:
+        return {
+            "action": "update_url_crawl_map_metadata",
+            "url_id": int(url_id),
+            "metadata_updated": False,
+            "metadata_degraded": True,
+            "error_class": "empty_crawl_map_patch",
+            "error_message": "crawler_url_metadata.v1 crawl_map patch was empty",
+        }
+
+    metadata_patch_json = json.dumps(
+        metadata_patch,
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+
+    with conn.cursor(row_factory=dict_row) as cur:
+        cur.execute(
+            """
+            WITH metadata_patch AS (
+                SELECT %(metadata_patch)s::jsonb AS patch
+            )
+            UPDATE frontier.url AS u
+               SET url_metadata =
+                   (
+                       (COALESCE(u.url_metadata, '{}'::jsonb) - 'schema_version' - 'crawl_map')
+                       || jsonb_build_object('schema_version', 'crawler_url_metadata.v1')
+                       || jsonb_build_object(
+                            'crawl_map',
+                            COALESCE(u.url_metadata -> 'crawl_map', '{}'::jsonb)
+                            || COALESCE(
+                                (SELECT patch -> 'crawl_map' FROM metadata_patch),
+                                '{}'::jsonb
+                            )
+                          )
+                   )
+             WHERE u.url_id = %(url_id)s
+               AND (
+                   %(root_url_id)s IS NULL
+                   OR u.url_id = %(root_url_id)s
+                   OR u.parent_url_id = %(root_url_id)s
+               )
+             RETURNING
+                   u.url_id,
+                   u.parent_url_id,
+                   u.url_metadata
+            """,
+            {
+                "url_id": int(url_id),
+                "root_url_id": int(root_url_id) if root_url_id is not None else None,
+                "metadata_patch": metadata_patch_json,
+            },
+        )
+        row = cur.fetchone()
+
+    if row is None:
+        return {
+            "action": "update_url_crawl_map_metadata",
+            "url_id": int(url_id),
+            "metadata_updated": False,
+            "metadata_degraded": True,
+            "error_class": "url_metadata_update_no_row",
+            "error_message": "frontier.url metadata update returned no row or parent-conflict guard skipped the row",
+        }
+
+    payload = dict(row)
+    payload["action"] = "update_url_crawl_map_metadata"
+    payload["metadata_updated"] = True
+    payload["metadata_degraded"] = False
+    return payload
