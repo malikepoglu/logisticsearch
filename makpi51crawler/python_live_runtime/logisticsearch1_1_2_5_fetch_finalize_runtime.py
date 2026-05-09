@@ -529,18 +529,53 @@ def log_fetch_attempt_terminal_from_worker(
 # TR: classify_http_status_failure acik bir fetch-finalize runtime/helper sozlesmesidir.
 # TR: Burada acik tutulan parametreler: http_status.
 def classify_http_status_failure(http_status: int) -> tuple[str, bool]:
-    # EN: These status codes are usually transient overload/timeout/upstream
-    # EN: failures, so the minimal layer treats them as retryable.
-    # TR: Bu durum kodları genelde geçici aşırı yük/timeout/upstream hatalarıdır;
-    # TR: bu yüzden minimal katman onları retryable kabul eder.
-    if http_status in {408, 425, 429, 500, 502, 503, 504}:
-        return ("http_retryable_status", True)
+    # EN: Only HTTP 2xx belongs to the success corridor. This helper classifies
+    # EN: all non-2xx statuses before the worker can enter parse/discovery.
+    # TR: Yalnızca HTTP 2xx başarı koridoruna aittir. Bu yardımcı, worker
+    # TR: parse/discovery aşamasına girmeden önce tüm 2xx dışı durumları sınıflandırır.
+    if 200 <= http_status <= 299:
+        return ("http_success_status_unexpected_error_path", False)
 
-    # EN: All remaining HTTP failures are treated as permanent by this first
-    # EN: narrow worker layer.
-    # TR: Kalan tüm HTTP hataları bu ilk dar worker katmanı tarafından permanent
-    # TR: kabul edilir.
-    return ("http_permanent_status", False)
+    # EN: Redirects should normally be resolved by the HTTP client. If a final
+    # EN: unresolved 3xx reaches this layer, do not parse it; retry/inspect later.
+    # TR: Redirect normalde HTTP client tarafından çözülmelidir. Final çözülmemiş
+    # TR: 3xx bu katmana ulaşırsa parse edilmez; retry/inceleme yoluna gider.
+    if 300 <= http_status <= 399:
+        return ("http_3xx_unresolved_redirect", True)
+
+    # EN: 304 needs a future conditional-fetch/not-modified path; current worker
+    # EN: must not treat it as a normal parseable success page.
+    # TR: 304 için ileride conditional-fetch/not-modified yolu gerekir; mevcut
+    # TR: worker bunu normal parse edilebilir başarı saymamalıdır.
+    if http_status == 304:
+        return ("http_304_not_modified_unhandled", True)
+
+    permanent_client_statuses = {
+        400: "http_400_bad_request",
+        401: "http_401_access_denied",
+        403: "http_403_forbidden",
+        404: "http_404",
+        410: "http_410_gone",
+        451: "http_451_legal_block",
+    }
+    if http_status in permanent_client_statuses:
+        return (permanent_client_statuses[http_status], False)
+
+    retryable_client_statuses = {
+        408: "http_408_timeout",
+        425: "http_425_too_early",
+        429: "http_429_rate_limited",
+    }
+    if http_status in retryable_client_statuses:
+        return (retryable_client_statuses[http_status], True)
+
+    if 400 <= http_status <= 499:
+        return (f"http_{http_status}_client_error", False)
+
+    if 500 <= http_status <= 599:
+        return (f"http_{http_status}_server_error", True)
+
+    return ("http_invalid_or_unknown_status", True)
 
 
 # EN: This helper converts a frontier finalize no-row failure into an operator-visible
@@ -1039,6 +1074,7 @@ def finalize_http_error(
     http_status: int,
     error_message: str,
     worker_id: str,
+    fetched_page: FetchedPageResult | None = None,
 ) -> dict[str, object]:
     # EN: We classify the HTTP status first so the branch stays explicit.
     # TR: Branch açık kalsın diye önce HTTP durumunu sınıflandırıyoruz.
@@ -1089,9 +1125,9 @@ def finalize_http_error(
         claimed_url=claimed_url,
         worker_id=worker_id,
         outcome="retryable_error" if is_retryable else "permanent_error",
-        note="worker runtime HTTPError finalize path",
+        note="worker runtime HTTP status error finalize path",
         acquisition_method=None,
-        fetched_page=None,
+        fetched_page=fetched_page,
         error_class=error_class,
         error_message=error_message,
     )

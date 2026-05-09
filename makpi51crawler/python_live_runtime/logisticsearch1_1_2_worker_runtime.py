@@ -1284,6 +1284,46 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                         runtime_control=runtime_control,
                     )
 
+                # EN: HTTP_STATUS_POLICY_GATE / run_claim_probe / non_2xx_fetched_page
+                # EN: Only a fetched HTTP 2xx page may enter parse/discovery and the
+                # EN: durable success corridor. Non-2xx responses may keep raw-body
+                # EN: evidence, but they must be finalized as HTTP errors before parse.
+                # TR: Yalnızca HTTP 2xx ile alınmış sayfa parse/discovery ve kalıcı
+                # TR: success koridoruna girebilir. 2xx dışı yanıtlar raw-body kanıtını
+                # TR: tutabilir; fakat parse öncesi HTTP hata olarak finalize edilmelidir.
+                http_status_value = (
+                    None
+                    if fetched_page.http_status is None
+                    else int(fetched_page.http_status)
+                )
+                if http_status_value is None or not (200 <= http_status_value <= 299):
+                    http_status_for_finalize = 0 if http_status_value is None else http_status_value
+                    http_status_finalize_result = finalize_http_error(
+                        conn,
+                        claimed_url=claimed_url,
+                        http_status=http_status_for_finalize,
+                        error_message=(
+                            "HTTP status missing; fetched page is not a parseable success"
+                            if http_status_value is None
+                            else f"HTTP status {http_status_value} is not a parseable success"
+                        ),
+                        worker_id=config.worker_id,
+                        fetched_page=fetched_page,
+                    )
+                    commit(conn)
+                    return ClaimProbeResult(
+                        run_id=run_id,
+                        claimed=True,
+                        claimed_url=claimed_url,
+                        robots_allow_decision=robots_allow_decision,
+                        storage_plan=storage_plan,
+                        fetched_page=fetched_page,
+                        finalize_result=http_status_finalize_result,
+                        parse_apply_result=parse_apply_result,
+                        observed_at=utc_now_iso(),
+                        runtime_control=runtime_control,
+                    )
+
                 # EN: LOCAL VALUE EXPLANATION / run_claim_probe / parse_apply_result
                 # EN: This local exists because the worker-runtime corridor should keep
                 # EN: intermediate phase truth named, visible, and reviewable instead of hiding `apply_minimal_parse_entry( conn=conn, url_id=int(get_claimed_url_value(claimed_url, "url_id")), raw_storage_path=fetched_page.raw_storage_pa` inline.
