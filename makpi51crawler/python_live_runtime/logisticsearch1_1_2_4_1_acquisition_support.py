@@ -2460,20 +2460,20 @@ __all__ = [
 # EN: The default is enabled for the short 15-minute validation test so we can
 # EN: compare plain JSON size/content against Zstandard-compressed JSON.
 # EN: For the future 24-hour system-limit test, set
-# EN: LOGISTICSEARCH_RAW_FETCH_PLAIN_JSON_COMPARE_MODE=0 so only .fetch.json.zst
+# EN: LOGISTICSEARCH_RAW_FETCH_PLAIN_JSON_COMPARE_MODE=1 so .fetch.json is written only for compare tests
 # EN: is kept as raw evidence.
 # TR: Bu helper, sıkıştırılmış .fetch.json.zst envelope yanında plain JSON
 # TR: sidecar yazılıp yazılmayacağını kontrol eder.
-# TR: Varsayılan açık tutulur; çünkü 15 dakikalık doğrulama testinde plain JSON
+# TR: Varsayılan kapalı tutulur; uzun/system-limit testlerde yalnız sıkıştırılmış JSON
 # TR: boyutu/içeriği ile Zstandard sıkıştırılmış JSON karşılaştırılacaktır.
 # TR: Gelecekteki 24 saatlik sistem-limit testinde yalnız .fetch.json.zst
-# TR: tutulması için LOGISTICSEARCH_RAW_FETCH_PLAIN_JSON_COMPARE_MODE=0 verilir.
+# TR: tutulması için LOGISTICSEARCH_RAW_FETCH_PLAIN_JSON_COMPARE_MODE=1 yalnız karşılaştırma testlerinde verilir.
 def raw_fetch_plain_json_compare_mode_enabled() -> bool:
     import os as _os
 
     value = _os.environ.get(
         "LOGISTICSEARCH_RAW_FETCH_PLAIN_JSON_COMPARE_MODE",
-        "1",
+        "0",
     ).strip().lower()
     return value not in {"0", "false", "no", "off"}
 
