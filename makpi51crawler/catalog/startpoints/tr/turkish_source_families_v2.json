@@ -1,0 +1,1920 @@
+{
+  "catalog_scope": {
+    "lang_code": "tr",
+    "lang_name": "Turkish",
+    "catalog_scope": "crawler_core_startpoint_source_families",
+    "catalog_owner": "logisticsearch",
+    "source_model": "source_family_seed_surface_seed_url",
+    "queue_model": "25_language_logical_queue_shared_source_seed_json",
+    "activation_boundary": "pi51c_live_probe_required_before_db_or_frontier_insert"
+  },
+  "catalog_status": "candidate_manifest_not_live",
+  "catalog_version": "source_families_v2",
+  "crawl_review_policy": {
+    "policy_version": "tr_source_seed_decision_2026_05_10",
+    "goal": "Prepare Turkish source families and seed URLs for later controlled crawler_core live review.",
+    "review_mode_before_insert": "manual_review_and_pi51c_live_probe_required",
+    "host_level_budgeting_required": true,
+    "cross_host_round_robin_required": true,
+    "same_host_back_to_back_checks_avoided": true,
+    "browser_use_policy": "not_decided_here",
+    "robots_first": true,
+    "etag_last_modified_preferred_when_available": true,
+    "same_host_review_spacing_seconds": 5,
+    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+  },
+  "seed_contract_basis": {
+    "source_table": "future_postgresql_jsonb_source_table",
+    "seed_url_table": "future_postgresql_jsonb_seed_url_table",
+    "source_unique_key": "source_family_code",
+    "seed_unique_key": "canonical_url"
+  },
+  "source_families": [
+    {
+      "source_family_code": "ticaret_gov_tr_gmbs",
+      "source_family_name": "ticaret_gov_tr_gmbs",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://uygulama.gtb.gov.tr/GMBS/MusavirBilgileri.aspx",
+      "source_category": [
+        "customs_broker_directory",
+        "public_registry_or_chamber"
+      ],
+      "source_host": "uygulama.gtb.gov.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "GMBS ana entity extraction source; GGM ayrı source değil, official reference seed surface.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 10,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A_PLUS",
+      "notes": "GMBS ana entity extraction source; GGM ayrı source değil, official reference seed surface.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A_PLUS",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 10,
+        "host_budget_group": "host:uygulama.gtb.gov.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "GMBS ana entity extraction source; GGM ayrı source değil, official reference seed surface."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_gmbs_search_form",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "gmbs_search_form",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "customs_broker_directory",
+              "public_registry_or_chamber"
+            ],
+            "decision_doc_seed_surfaces": [
+              "gmbs_search_form",
+              "gmbs_region_filter",
+              "gmbs_result_rows",
+              "ggm_authority_reference_page"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 2
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://uygulama.gtb.gov.tr/GMBS/MusavirBilgileri.aspx",
+              "canonical_url": "https://uygulama.gtb.gov.tr/GMBS/MusavirBilgileri.aspx",
+              "is_enabled": false,
+              "priority": 10,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "ticaret_gov_tr_gmbs",
+                "source_host": "uygulama.gtb.gov.tr",
+                "source_quality_tier": "A_PLUS",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            },
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://ggm.ticaret.gov.tr/uygulamalar/gumruk-musavirleri-iletisim-bilgileri",
+              "canonical_url": "https://ggm.ticaret.gov.tr/uygulamalar/gumruk-musavirleri-iletisim-bilgileri",
+              "is_enabled": false,
+              "priority": 10,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "ticaret_gov_tr_gmbs",
+                "source_host": "ggm.ticaret.gov.tr",
+                "source_quality_tier": "A_PLUS",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "shgm_hava_kargo_kuruluslari",
+      "source_family_name": "shgm_hava_kargo_kuruluslari",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri/2060-hava-kargo-kuruluslari",
+      "source_category": [
+        "air_cargo_directory",
+        "public_registry_or_chamber"
+      ],
+      "source_host": "web.shgm.gov.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "PDF/link extraction gerektirebilir; seed_urls later live/probe ile netleşmeli.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 10,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A_PLUS",
+      "notes": "PDF/link extraction gerektirebilir; seed_urls later live/probe ile netleşmeli.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A_PLUS",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 10,
+        "host_budget_group": "host:web.shgm.gov.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT_REVIEW",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "PDF/link extraction gerektirebilir; seed_urls later live/probe ile netleşmeli."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_hava_kargo_kuruluslari_page",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "hava_kargo_kuruluslari_page",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "air_cargo_directory",
+              "public_registry_or_chamber"
+            ],
+            "decision_doc_seed_surfaces": [
+              "hava_kargo_kuruluslari_page",
+              "a_grubu_yetkili_acente_pdf",
+              "b_grubu_yetkili_acente_pdf",
+              "known_consignor_or_authorized_agent_context"
+            ],
+            "decision_status": "ACCEPT_REVIEW",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri/2060-hava-kargo-kuruluslari",
+              "canonical_url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri/2060-hava-kargo-kuruluslari",
+              "is_enabled": false,
+              "priority": 10,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "shgm_hava_kargo_kuruluslari",
+                "source_host": "web.shgm.gov.tr",
+                "source_quality_tier": "A_PLUS",
+                "decision_status": "ACCEPT_REVIEW",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "utikad_org_tr",
+      "source_family_name": "utikad_org_tr",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi",
+      "source_category": [
+        "official_association_directory",
+        "freight_forwarder_directory"
+      ],
+      "source_host": "www.utikad.org.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "TR freight forwarding/logistics official association directory.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 20,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A",
+      "notes": "TR freight forwarding/logistics official association directory.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 20,
+        "host_budget_group": "host:www.utikad.org.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "TR freight forwarding/logistics official association directory."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_utikad_member_list",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "utikad_member_list",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "official_association_directory",
+              "freight_forwarder_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "utikad_member_list",
+              "utikad_city_filter",
+              "utikad_download_member_list",
+              "utikad_member_rows"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi",
+              "canonical_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi",
+              "is_enabled": false,
+              "priority": 20,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "utikad_org_tr",
+                "source_host": "www.utikad.org.tr",
+                "source_quality_tier": "A",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "turklim_org_tr",
+      "source_family_name": "turklim_org_tr",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.turklim.org/uye-limanlar/",
+      "source_category": [
+        "port_authority_or_port_directory",
+        "port_operator_directory"
+      ],
+      "source_host": "www.turklim.org",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "TR port/operator member directory.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 20,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A",
+      "notes": "TR port/operator member directory.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 20,
+        "host_budget_group": "host:www.turklim.org",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "TR port/operator member directory."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_turklim_member_ports",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "turklim_member_ports",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "port_authority_or_port_directory",
+              "port_operator_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "turklim_member_ports",
+              "region_filter",
+              "cargo_type_filter",
+              "port_operator_cards"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.turklim.org/uye-limanlar/",
+              "canonical_url": "https://www.turklim.org/uye-limanlar/",
+              "is_enabled": false,
+              "priority": 20,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "turklim_org_tr",
+                "source_host": "www.turklim.org",
+                "source_quality_tier": "A",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "und_org_tr",
+      "source_family_name": "und_org_tr",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.und.org.tr/uyelerimiz",
+      "source_category": [
+        "road_freight_directory",
+        "official_association_directory"
+      ],
+      "source_host": "www.und.org.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "TR road freight member directory.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 20,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A",
+      "notes": "TR road freight member directory.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 20,
+        "host_budget_group": "host:www.und.org.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "TR road freight member directory."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_und_members_current",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "und_members_current",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "road_freight_directory",
+              "official_association_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "und_members_current",
+              "und_search_by_company",
+              "und_company_detail_pages",
+              "road_freight_member_rows"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.und.org.tr/uyelerimiz",
+              "canonical_url": "https://www.und.org.tr/uyelerimiz",
+              "is_enabled": false,
+              "priority": 20,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "und_org_tr",
+                "source_host": "www.und.org.tr",
+                "source_quality_tier": "A",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "ito_lojistik_hizmetler",
+      "source_family_name": "ito_lojistik_hizmetler",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://ito.org.tr/tr/meslek-komiteleri/uye-firmalar/lojistik-hizmetler",
+      "source_category": [
+        "public_registry_or_chamber",
+        "commercial_logistics_directory"
+      ],
+      "source_host": "ito.org.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Chamber-backed logistics member firm pages; pagination likely.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 20,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A",
+      "notes": "Chamber-backed logistics member firm pages; pagination likely.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 20,
+        "host_budget_group": "host:ito.org.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Chamber-backed logistics member firm pages; pagination likely."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_ito_logistics_services_member_firms",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "ito_logistics_services_member_firms",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "public_registry_or_chamber",
+              "commercial_logistics_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "ito_logistics_services_member_firms",
+              "ito_paginated_member_pages",
+              "ito_status_fields",
+              "ito_nace_fields"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://ito.org.tr/tr/meslek-komiteleri/uye-firmalar/lojistik-hizmetler",
+              "canonical_url": "https://ito.org.tr/tr/meslek-komiteleri/uye-firmalar/lojistik-hizmetler",
+              "is_enabled": false,
+              "priority": 20,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "ito_lojistik_hizmetler",
+                "source_host": "ito.org.tr",
+                "source_quality_tier": "A",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "igmd_org_tr",
+      "source_family_name": "igmd_org_tr",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.igmd.org.tr/uye-bul",
+      "source_category": [
+        "customs_broker_directory",
+        "official_association_directory"
+      ],
+      "source_host": "www.igmd.org.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Regional customs broker association with member/company find surfaces.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 20,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A",
+      "notes": "Regional customs broker association with member/company find surfaces.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A",
+        "discovery_value": "high",
+        "noise_risk": "low",
+        "manual_review_priority": 20,
+        "host_budget_group": "host:www.igmd.org.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Regional customs broker association with member/company find surfaces."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_igmd_uye_bul",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "igmd_uye_bul",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "customs_broker_directory",
+              "official_association_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "igmd_uye_bul",
+              "igmd_firma_bul",
+              "member_type_filters",
+              "customs_broker_firm_pages"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 2
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.igmd.org.tr/uye-bul",
+              "canonical_url": "https://www.igmd.org.tr/uye-bul",
+              "is_enabled": false,
+              "priority": 20,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "igmd_org_tr",
+                "source_host": "www.igmd.org.tr",
+                "source_quality_tier": "A",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            },
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.igmd.org.tr/firma-bul",
+              "canonical_url": "https://www.igmd.org.tr/firma-bul",
+              "is_enabled": false,
+              "priority": 20,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "igmd_org_tr",
+                "source_host": "www.igmd.org.tr",
+                "source_quality_tier": "A",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 2
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "izmgmd_org_tr",
+      "source_family_name": "izmgmd_org_tr",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.izmgmd.org.tr/?go=uyeler",
+      "source_category": [
+        "customs_broker_directory",
+        "official_association_directory"
+      ],
+      "source_host": "www.izmgmd.org.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Regional customs broker member directory.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 30,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A_MINUS",
+      "notes": "Regional customs broker member directory.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A_MINUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "low_medium",
+        "manual_review_priority": 30,
+        "host_budget_group": "host:www.izmgmd.org.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Regional customs broker member directory."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_izmir_gmd_members",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "izmir_gmd_members",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "customs_broker_directory",
+              "official_association_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "izmir_gmd_members",
+              "member_role_filter",
+              "registered_member_rows",
+              "member_detail_surface"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.izmgmd.org.tr/?go=uyeler",
+              "canonical_url": "https://www.izmgmd.org.tr/?go=uyeler",
+              "is_enabled": false,
+              "priority": 30,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "izmgmd_org_tr",
+                "source_host": "www.izmgmd.org.tr",
+                "source_quality_tier": "A_MINUS",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "denizticaretodasi_org_tr",
+      "source_family_name": "denizticaretodasi_org_tr",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.denizticaretodasi.org.tr/tr/uyeler/tumu",
+      "source_category": [
+        "sea_freight_directory",
+        "public_registry_or_chamber",
+        "maritime_directory"
+      ],
+      "source_host": "www.denizticaretodasi.org.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Maritime chamber source; searchable member/ship surfaces need live review.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 30,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A_MINUS",
+      "notes": "Maritime chamber source; searchable member/ship surfaces need live review.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A_MINUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "low_medium",
+        "manual_review_priority": 30,
+        "host_budget_group": "host:www.denizticaretodasi.org.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT_REVIEW",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Maritime chamber source; searchable member/ship surfaces need live review."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_dto_uyeler_tumu",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "dto_uyeler_tumu",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "sea_freight_directory",
+              "public_registry_or_chamber",
+              "maritime_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "dto_uyeler_tumu",
+              "dto_branch_member_pages",
+              "dto_uye_sorgulama",
+              "gemi_sorgulama",
+              "meslek_gruplari"
+            ],
+            "decision_status": "ACCEPT_REVIEW",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.denizticaretodasi.org.tr/tr/uyeler/tumu",
+              "canonical_url": "https://www.denizticaretodasi.org.tr/tr/uyeler/tumu",
+              "is_enabled": false,
+              "priority": 30,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "denizticaretodasi_org_tr",
+                "source_host": "www.denizticaretodasi.org.tr",
+                "source_quality_tier": "A_MINUS",
+                "decision_status": "ACCEPT_REVIEW",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "tcdd_lojistik_merkezler",
+      "source_family_name": "tcdd_lojistik_merkezler",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.tcdd.gov.tr/",
+      "source_category": [
+        "rail_logistics_infrastructure",
+        "public_infrastructure_reference"
+      ],
+      "source_host": "www.tcdd.gov.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Exact logistics centers URL requires later live/link review; source family retained as infrastructure reference.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 30,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A_MINUS",
+      "notes": "Exact logistics centers URL requires later live/link review; source family retained as infrastructure reference.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A_MINUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "low_medium",
+        "manual_review_priority": 30,
+        "host_budget_group": "host:www.tcdd.gov.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT_REVIEW",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Exact logistics centers URL requires later live/link review; source family retained as infrastructure reference."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_lojistik_merkezler",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "lojistik_merkezler",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "rail_logistics_infrastructure",
+              "public_infrastructure_reference"
+            ],
+            "decision_doc_seed_surfaces": [
+              "lojistik_merkezler",
+              "rail_logistics_center_context",
+              "location_based_logistics_infrastructure"
+            ],
+            "decision_status": "ACCEPT_REVIEW",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.tcdd.gov.tr/",
+              "canonical_url": "https://www.tcdd.gov.tr/",
+              "is_enabled": false,
+              "priority": 30,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "tcdd_lojistik_merkezler",
+                "source_host": "www.tcdd.gov.tr",
+                "source_quality_tier": "A_MINUS",
+                "decision_status": "ACCEPT_REVIEW",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "turkishcargo_authorized_agents",
+      "source_family_name": "turkishcargo_authorized_agents",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.turkishcargo.com/en/authorized-agents",
+      "source_category": [
+        "air_cargo_directory",
+        "freight_forwarder_directory"
+      ],
+      "source_host": "www.turkishcargo.com",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Authorized air cargo agent surface; likely dynamic/search form.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 30,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A_MINUS",
+      "notes": "Authorized air cargo agent surface; likely dynamic/search form.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A_MINUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "low_medium",
+        "manual_review_priority": 30,
+        "host_budget_group": "host:www.turkishcargo.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Authorized air cargo agent surface; likely dynamic/search form."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_authorized_agents_search",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "authorized_agents_search",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "air_cargo_directory",
+              "freight_forwarder_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "authorized_agents_search",
+              "nearest_cargo_agents",
+              "freight_forwarder_agent_results",
+              "station_qualification_context"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.turkishcargo.com/en/authorized-agents",
+              "canonical_url": "https://www.turkishcargo.com/en/authorized-agents",
+              "is_enabled": false,
+              "priority": 30,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "turkishcargo_authorized_agents",
+                "source_host": "www.turkishcargo.com",
+                "source_quality_tier": "A_MINUS",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "iga_istanbul_airport_cargo",
+      "source_family_name": "iga_istanbul_airport_cargo",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.igairport.aero/en/aviation/cargo-and-logistics-center/cargo-and-lojistics/",
+      "source_category": [
+        "airport_cargo_authority_or_directory",
+        "air_cargo_directory"
+      ],
+      "source_host": "www.igairport.aero",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Airport cargo context source; company directory status requires review.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 30,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A_MINUS",
+      "notes": "Airport cargo context source; company directory status requires review.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A_MINUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "low_medium",
+        "manual_review_priority": 30,
+        "host_budget_group": "host:www.igairport.aero",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT_REVIEW",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Airport cargo context source; company directory status requires review."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_cargo_and_logistics_center",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "cargo_and_logistics_center",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "airport_cargo_authority_or_directory",
+              "air_cargo_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "cargo_and_logistics_center",
+              "cargo_hub_logistics_center",
+              "airport_cargo_context_pages",
+              "cargo_city_company_context"
+            ],
+            "decision_status": "ACCEPT_REVIEW",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.igairport.aero/en/aviation/cargo-and-logistics-center/cargo-and-lojistics/",
+              "canonical_url": "https://www.igairport.aero/en/aviation/cargo-and-logistics-center/cargo-and-lojistics/",
+              "is_enabled": false,
+              "priority": 30,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "iga_istanbul_airport_cargo",
+                "source_host": "www.igairport.aero",
+                "source_quality_tier": "A_MINUS",
+                "decision_status": "ACCEPT_REVIEW",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "karid_org_tr",
+      "source_family_name": "karid_org_tr",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://karid.org.tr/portfolio_category/uye-sirketler/",
+      "source_category": [
+        "courier_express_parcel_directory",
+        "official_association_directory"
+      ],
+      "source_host": "karid.org.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Courier/cargo/post member company directory.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 30,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "A_MINUS",
+      "notes": "Courier/cargo/post member company directory.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "A_MINUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "low_medium",
+        "manual_review_priority": 30,
+        "host_budget_group": "host:karid.org.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Courier/cargo/post member company directory."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_karid_member_companies",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "karid_member_companies",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "courier_express_parcel_directory",
+              "official_association_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "karid_member_companies",
+              "cargo_courier_post_member_cards",
+              "member_company_profile_pages"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://karid.org.tr/portfolio_category/uye-sirketler/",
+              "canonical_url": "https://karid.org.tr/portfolio_category/uye-sirketler/",
+              "is_enabled": false,
+              "priority": 30,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "karid_org_tr",
+                "source_host": "karid.org.tr",
+                "source_quality_tier": "A_MINUS",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "logitrans_istanbul",
+      "source_family_name": "logitrans_istanbul",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.logitrans.istanbul/en-US/exhibitor-database",
+      "source_category": [
+        "trade_fair_exhibitor_directory",
+        "commercial_logistics_directory"
+      ],
+      "source_host": "www.logitrans.istanbul",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Trade fair exhibitor discovery.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 40,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "B_PLUS",
+      "notes": "Trade fair exhibitor discovery.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "B_PLUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "medium",
+        "manual_review_priority": 40,
+        "host_budget_group": "host:www.logitrans.istanbul",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Trade fair exhibitor discovery."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_exhibitor_database",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "exhibitor_database",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "trade_fair_exhibitor_directory",
+              "commercial_logistics_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "exhibitor_database",
+              "year_filter_surfaces",
+              "product_service_group_filters",
+              "exhibitor_company_rows"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.logitrans.istanbul/en-US/exhibitor-database",
+              "canonical_url": "https://www.logitrans.istanbul/en-US/exhibitor-database",
+              "is_enabled": false,
+              "priority": 40,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "logitrans_istanbul",
+                "source_host": "www.logitrans.istanbul",
+                "source_quality_tier": "B_PLUS",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "lojider_org_tr",
+      "source_family_name": "lojider_org_tr",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.lojider.org.tr/Uye-Listesi",
+      "source_category": [
+        "third_party_logistics_3pl_directory",
+        "official_association_directory"
+      ],
+      "source_host": "www.lojider.org.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Private/newer logistics association member list.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 40,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "B_PLUS",
+      "notes": "Private/newer logistics association member list.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "B_PLUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "medium",
+        "manual_review_priority": 40,
+        "host_budget_group": "host:www.lojider.org.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Private/newer logistics association member list."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_lojider_member_list",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "lojider_member_list",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "third_party_logistics_3pl_directory",
+              "official_association_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "lojider_member_list",
+              "member_rows",
+              "member_contact_fields",
+              "member_website_links"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.lojider.org.tr/Uye-Listesi",
+              "canonical_url": "https://www.lojider.org.tr/Uye-Listesi",
+              "is_enabled": false,
+              "priority": 40,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "lojider_org_tr",
+                "source_host": "www.lojider.org.tr",
+                "source_quality_tier": "B_PLUS",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "find_com_tr_lojistik_tasimacilik",
+      "source_family_name": "find_com_tr_lojistik_tasimacilik",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.find.com.tr/List/lojistik-ve-tasimacilik?Sorting=3",
+      "source_category": [
+        "commercial_logistics_directory",
+        "courier_express_parcel_directory",
+        "road_freight_directory"
+      ],
+      "source_host": "www.find.com.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Commercial directory; good discovery but live/noise review required.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 40,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "B_PLUS",
+      "notes": "Commercial directory; good discovery but live/noise review required.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "B_PLUS",
+        "discovery_value": "medium_high",
+        "noise_risk": "medium",
+        "manual_review_priority": 40,
+        "host_budget_group": "host:www.find.com.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT_REVIEW",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Commercial directory; good discovery but live/noise review required."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_lojistik_ve_tasimacilik_category",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "lojistik_ve_tasimacilik_category",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "commercial_logistics_directory",
+              "courier_express_parcel_directory",
+              "road_freight_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "lojistik_ve_tasimacilik_category",
+              "company_detail_pages",
+              "subcategory_filters",
+              "city_filters"
+            ],
+            "decision_status": "ACCEPT_REVIEW",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.find.com.tr/List/lojistik-ve-tasimacilik?Sorting=3",
+              "canonical_url": "https://www.find.com.tr/List/lojistik-ve-tasimacilik?Sorting=3",
+              "is_enabled": false,
+              "priority": 40,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "find_com_tr_lojistik_tasimacilik",
+                "source_host": "www.find.com.tr",
+                "source_quality_tier": "B_PLUS",
+                "decision_status": "ACCEPT_REVIEW",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "nakliyerehberim_com",
+      "source_family_name": "nakliyerehberim_com",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.nakliyerehberim.com/",
+      "source_category": [
+        "commercial_logistics_directory",
+        "road_freight_directory"
+      ],
+      "source_host": "www.nakliyerehberim.com",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "User-approved B-tier Turkish commercial/road freight discovery source.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 50,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "B",
+      "notes": "User-approved B-tier Turkish commercial/road freight discovery source.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "B",
+        "discovery_value": "medium",
+        "noise_risk": "medium",
+        "manual_review_priority": 50,
+        "host_budget_group": "host:www.nakliyerehberim.com",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "User-approved B-tier Turkish commercial/road freight discovery source."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_directory_root",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "directory_root",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "commercial_logistics_directory",
+              "road_freight_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "directory_root",
+              "ulkelere_gore_lojistikci_uyeler",
+              "calistigi_ulkelere_gore_nakliyeciler",
+              "harita_detay_country_pages",
+              "karayolu_nakliye_country_pages",
+              "parsiyel_tasima_country_pages"
+            ],
+            "decision_status": "ACCEPT",
+            "seed_url_count": 3
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.nakliyerehberim.com/",
+              "canonical_url": "https://www.nakliyerehberim.com/",
+              "is_enabled": false,
+              "priority": 50,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "nakliyerehberim_com",
+                "source_host": "www.nakliyerehberim.com",
+                "source_quality_tier": "B",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            },
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.nakliyerehberim.com/lojistik.aspx",
+              "canonical_url": "https://www.nakliyerehberim.com/lojistik.aspx",
+              "is_enabled": false,
+              "priority": 50,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "nakliyerehberim_com",
+                "source_host": "www.nakliyerehberim.com",
+                "source_quality_tier": "B",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 2
+              }
+            },
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.nakliyerehberim.com/calistiklari-ulkelere-gore-nakliyeci-uyelerimiz-liste.aspx?sayfasi=5&ulke=Almanya",
+              "canonical_url": "https://www.nakliyerehberim.com/calistiklari-ulkelere-gore-nakliyeci-uyelerimiz-liste.aspx?sayfasi=5&ulke=Almanya",
+              "is_enabled": false,
+              "priority": 50,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "nakliyerehberim_com",
+                "source_host": "www.nakliyerehberim.com",
+                "source_quality_tier": "B",
+                "decision_status": "ACCEPT",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_code": "tnd_org_tr_firmalar",
+      "source_family_name": "tnd_org_tr_firmalar",
+      "source_status": "candidate_accepted_not_live",
+      "source_root_url": "https://www.tnd.org.tr/firmalar-tumu-1.html",
+      "source_category": [
+        "road_freight_directory",
+        "commercial_logistics_directory"
+      ],
+      "source_host": "www.tnd.org.tr",
+      "source_country_scope": [
+        "TR"
+      ],
+      "source_language": [
+        "tr"
+      ],
+      "source_selection_reason": "Company rows exist; data hygiene/live review required.",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 50,
+      "default_recrawl_interval": "manual_review_required",
+      "default_max_depth": 1,
+      "source_quality_tier": "B",
+      "notes": "Company rows exist; data hygiene/live review required.",
+      "family_metadata": {
+        "lang_code": "tr",
+        "quality_model_version": "six_tier_v1",
+        "trust_tier": "B",
+        "discovery_value": "medium",
+        "noise_risk": "medium",
+        "manual_review_priority": 50,
+        "host_budget_group": "host:www.tnd.org.tr",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": false,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "human_review_required_before_frontier": true,
+        "live_check_required": true,
+        "robots_review_required": true,
+        "family_review_state": "needs_live_check",
+        "decision_status": "ACCEPT_REVIEW",
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+        "decision_doc_notes": "Company rows exist; data hygiene/live review required."
+      },
+      "seed_surfaces": [
+        {
+          "surface_code": "primary_firmalar_tumu",
+          "surface_type": "directory_or_entrypoint",
+          "surface_name": "firmalar_tumu",
+          "surface_metadata": {
+            "surface_scope": "candidate",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "robots_review_required": true,
+            "quality_model_version": "six_tier_v1",
+            "source_category": [
+              "road_freight_directory",
+              "commercial_logistics_directory"
+            ],
+            "decision_doc_seed_surfaces": [
+              "firmalar_tumu",
+              "firma_name_rows",
+              "firm_detail_pages_if_available"
+            ],
+            "decision_status": "ACCEPT_REVIEW",
+            "seed_url_count": 1
+          },
+          "seed_urls": [
+            {
+              "seed_type": "entrypoint",
+              "submitted_url": "https://www.tnd.org.tr/firmalar-tumu-1.html",
+              "canonical_url": "https://www.tnd.org.tr/firmalar-tumu-1.html",
+              "is_enabled": false,
+              "priority": 50,
+              "max_depth": 1,
+              "recrawl_interval": "manual_review_required",
+              "notes": "Created from the Turkish decision document; live probe is required before any frontier activation.",
+              "seed_metadata": {
+                "lang_code": "tr",
+                "review_state": "needs_live_check",
+                "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+                "human_review_required_before_frontier": true,
+                "live_check_required": true,
+                "robots_review_required": true,
+                "quality_model_version": "six_tier_v1",
+                "source_family_code": "tnd_org_tr_firmalar",
+                "source_host": "www.tnd.org.tr",
+                "source_quality_tier": "B",
+                "decision_status": "ACCEPT_REVIEW",
+                "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
+                "decision_doc_seed_index": 1
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
