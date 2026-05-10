@@ -77,7 +77,11 @@
           "surface_name": "FIATA Directory Root",
           "surface_metadata": {
             "surface_scope": "global",
-            "country_code": null
+            "country_code": null,
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -93,7 +97,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Global FIATA directory root entrypoint."
             }
@@ -105,7 +110,11 @@
           "surface_name": "FIATA Directory United Kingdom",
           "surface_metadata": {
             "surface_scope": "country",
-            "country_code": "GB"
+            "country_code": "GB",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -121,7 +130,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "FIATA directory page for United Kingdom."
             }
@@ -168,7 +178,11 @@
           "surface_type": "member_directory",
           "surface_name": "BIFA Members Directory",
           "surface_metadata": {
-            "surface_scope": "directory"
+            "surface_scope": "directory",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -184,7 +198,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "BIFA members directory."
             }
@@ -195,7 +210,11 @@
           "surface_type": "member_search",
           "surface_name": "BIFA Member Search Results Surface",
           "surface_metadata": {
-            "surface_scope": "search_surface"
+            "surface_scope": "search_surface",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -211,7 +230,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "BIFA member search results surface."
             }
@@ -222,7 +242,11 @@
           "surface_type": "listing_index",
           "surface_name": "BIFA Recent New Members",
           "surface_metadata": {
-            "surface_scope": "recent_members"
+            "surface_scope": "recent_members",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -238,7 +262,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "BIFA recent new members discovery surface."
             }
@@ -285,7 +310,11 @@
           "surface_type": "member_directory",
           "surface_name": "IELA Member Finder",
           "surface_metadata": {
-            "surface_scope": "global_member_finder"
+            "surface_scope": "global_member_finder",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -301,7 +330,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "IELA member finder."
             }
@@ -348,7 +378,11 @@
           "surface_type": "directory",
           "surface_name": "Freightnet Global Freight Forwarders",
           "surface_metadata": {
-            "surface_scope": "global_forwarders"
+            "surface_scope": "global_forwarders",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -364,7 +398,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Freightnet global freight forwarders directory."
             }
@@ -376,7 +411,11 @@
           "surface_name": "Freightnet UK Freight Forwarders",
           "surface_metadata": {
             "surface_scope": "country",
-            "country_code": "GB"
+            "country_code": "GB",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -392,7 +431,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Freightnet UK freight forwarders directory."
             }
@@ -404,7 +444,11 @@
           "surface_name": "Freightnet USA Freight Forwarders",
           "surface_metadata": {
             "surface_scope": "country",
-            "country_code": "US"
+            "country_code": "US",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -420,7 +464,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Freightnet USA freight forwarders directory."
             }
@@ -432,7 +477,11 @@
           "surface_name": "Freightnet Germany Freight Forwarders",
           "surface_metadata": {
             "surface_scope": "country",
-            "country_code": "DE"
+            "country_code": "DE",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -448,7 +497,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Freightnet Germany freight forwarders directory."
             }
@@ -460,7 +510,11 @@
           "surface_name": "Freightnet Germany Logistics Companies",
           "surface_metadata": {
             "surface_scope": "country",
-            "country_code": "DE"
+            "country_code": "DE",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -476,7 +530,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Freightnet Germany logistics companies directory."
             }
@@ -523,7 +578,11 @@
           "surface_type": "category_page",
           "surface_name": "Thomasnet Shipping and Transportation Categories",
           "surface_metadata": {
-            "surface_scope": "category_index"
+            "surface_scope": "category_index",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -539,7 +598,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Thomasnet shipping and transportation category index."
             }
@@ -550,7 +610,11 @@
           "surface_type": "category_page",
           "surface_name": "Thomasnet Transportation Brokers",
           "surface_metadata": {
-            "surface_scope": "category_page"
+            "surface_scope": "category_page",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -566,7 +630,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Thomasnet transportation brokers category page."
             }
@@ -577,7 +642,11 @@
           "surface_type": "category_page",
           "surface_name": "Thomasnet Transportation Services",
           "surface_metadata": {
-            "surface_scope": "category_page"
+            "surface_scope": "category_page",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -593,7 +662,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Thomasnet transportation services category page."
             }
@@ -604,7 +674,11 @@
           "surface_type": "category_page",
           "surface_name": "Thomasnet Shipping Services",
           "surface_metadata": {
-            "surface_scope": "category_page"
+            "surface_scope": "category_page",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -620,7 +694,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Thomasnet shipping services category page."
             }
@@ -631,7 +706,11 @@
           "surface_type": "category_page",
           "surface_name": "Thomasnet Delivery Services",
           "surface_metadata": {
-            "surface_scope": "category_page"
+            "surface_scope": "category_page",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -647,7 +726,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Thomasnet delivery services category page."
             }
@@ -694,7 +774,11 @@
           "surface_type": "directory",
           "surface_name": "WCAworld Directory",
           "surface_metadata": {
-            "surface_scope": "global_directory"
+            "surface_scope": "global_directory",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -710,7 +794,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "WCAworld directory root."
             }
@@ -721,7 +806,11 @@
           "surface_type": "network_overview",
           "surface_name": "WCAworld General Networks",
           "surface_metadata": {
-            "surface_scope": "network_overview"
+            "surface_scope": "network_overview",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -737,7 +826,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "WCAworld general networks overview."
             }
@@ -748,7 +838,11 @@
           "surface_type": "network_overview",
           "surface_name": "WCAworld eCommerce Networks",
           "surface_metadata": {
-            "surface_scope": "network_overview"
+            "surface_scope": "network_overview",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -764,7 +858,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "WCAworld eCommerce network overview."
             }
@@ -812,7 +907,11 @@
           "surface_name": "Kompass Germany Transportation and Logistics Services",
           "surface_metadata": {
             "surface_scope": "country",
-            "country_code": "DE"
+            "country_code": "DE",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -828,7 +927,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Kompass Germany transportation and logistics services."
             }
@@ -840,7 +940,11 @@
           "surface_name": "Kompass North Rhine-Westphalia Transport and Logistics",
           "surface_metadata": {
             "surface_scope": "region",
-            "region_code": "DE-NW"
+            "region_code": "DE-NW",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -856,7 +960,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Kompass NRW transport and logistics directory."
             }
@@ -868,7 +973,11 @@
           "surface_name": "Kompass Düsseldorf Transport and Logistics",
           "surface_metadata": {
             "surface_scope": "city",
-            "region_code": "DE-NW-DUS"
+            "region_code": "DE-NW-DUS",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "seed_urls": [
             {
@@ -884,7 +993,8 @@
                 "review_state": "needs_live_check",
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Kompass Düsseldorf transport and logistics directory."
             }
@@ -949,7 +1059,8 @@
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
                 "review_state": "needs_live_check",
-                "lang_code": "en"
+                "lang_code": "en",
+                "quality_model_version": "six_tier_v1"
               },
               "notes": "Initial NCBFAA English source seed. Added one-at-a-time after probe and schema repair.",
               "seed_type": "member_search_page",
@@ -963,7 +1074,12 @@
             "probe_decision": "CANDIDATE_CAN_MOVE_TO_SINGLE_SOURCE_CATALOG_PATCH_AFTER_HUMAN_REVIEW",
             "robots_http_code": 200,
             "seed_http_code": 200,
-            "selection_reason": "US customs broker and freight forwarder membership search candidate."
+            "selection_reason": "US customs broker and freight forwarder membership search candidate.",
+            "surface_scope": "search_surface",
+            "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true,
+            "quality_model_version": "six_tier_v1"
           },
           "surface_language": "en",
           "surface_priority": 80
@@ -1015,7 +1131,9 @@
             "source_quality_tier": "A",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1087,7 +1205,9 @@
             "source_quality_tier": "A_PLUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1122,7 +1242,9 @@
             "source_quality_tier": "A_PLUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1194,7 +1316,9 @@
             "source_quality_tier": "A_MINUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1266,7 +1390,9 @@
             "source_quality_tier": "B_PLUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1338,7 +1464,9 @@
             "source_quality_tier": "B_PLUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1410,7 +1538,9 @@
             "source_quality_tier": "B_PLUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1482,7 +1612,9 @@
             "source_quality_tier": "B",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1554,7 +1686,9 @@
             "source_quality_tier": "B",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1626,7 +1760,9 @@
             "source_quality_tier": "B_PLUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1698,7 +1834,9 @@
             "source_quality_tier": "B_PLUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1770,7 +1908,9 @@
             "source_quality_tier": "B_PLUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1842,7 +1982,9 @@
             "source_quality_tier": "B",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1914,7 +2056,9 @@
             "source_quality_tier": "B",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -1986,7 +2130,9 @@
             "source_quality_tier": "B_MINUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -2058,7 +2204,9 @@
             "source_quality_tier": "B",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -2130,7 +2278,9 @@
             "source_quality_tier": "B_MINUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -2202,7 +2352,9 @@
             "source_quality_tier": "B_PLUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -2274,7 +2426,9 @@
             "source_quality_tier": "A_MINUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
@@ -2346,7 +2500,9 @@
             "source_quality_tier": "A_MINUS",
             "quality_model_version": "six_tier_v1",
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+            "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+            "human_review_required_before_frontier": true,
+            "live_check_required": true
           },
           "seed_urls": [
             {
