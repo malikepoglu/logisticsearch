@@ -201,6 +201,7 @@ from __future__ import annotations
 # TR: Bu alt yüzey açık fonksiyon imzasında yapılandırılabilir raw_root yolu
 # TR: sunduğu için Path içe aktarıyoruz.
 from pathlib import Path
+from .logisticsearch1_1_2_4_1_acquisition_support import write_raw_fetch_json_zstd_envelope
 
 # EN: We import the shared acquisition support surface so this child reuses the
 # EN: same stable artefact/result contract as the rest of the acquisition family.
@@ -540,6 +541,31 @@ def fetch_page_with_browser_to_raw_storage(
 # TR: inferred_http_status, açık bir document status mevcutsa browser_result içinden çıkarılan en iyi çabalı sayfa durum kodudur.
     inferred_http_status = infer_browser_document_status(browser_result)
 
+    # EN: final_url keeps the browser-reported final navigation target named so
+    # EN: both the JSON sidecar and FetchedPageResult use the same value.
+    # TR: final_url, browser'ın bildirdiği nihai gezinme hedefini isimli tutar;
+    # TR: böylece JSON sidecar ve FetchedPageResult aynı değeri kullanır.
+    final_url = str(getattr(browser_result, "final_url", requested_url) or requested_url)
+
+    # EN: We write a compressed JSON sidecar beside the existing rendered HTML
+    # EN: artefact while preserving the canonical raw evidence path.
+    # TR: Kanonik ham kanıt yolunu korurken mevcut rendered HTML artefact'ının
+    # TR: yanına sıkıştırılmış JSON sidecar yazıyoruz.
+    write_raw_fetch_json_zstd_envelope(
+        url_id=url_id,
+        host_id=int(get_claimed_url_value(claimed_url, "host_id")),
+        requested_url=requested_url,
+        final_url=final_url,
+        http_status=inferred_http_status,
+        content_type="text/html; charset=utf-8",
+        content_encoding=None,
+        raw_body_path=html_output_path,
+        raw_body_bytes=rendered_html_bytes,
+        raw_sha256=rendered_html_sha256,
+        fetched_at=fetched_at.isoformat(),
+        acquisition_method="browser",
+    )
+
     # EN: We return the same FetchedPageResult contract shape already used by the
     # EN: direct HTTP path so later layers can stay narrow.
     # TR: Sonraki katmanlar dar kalabilsin diye, direct HTTP yolunun zaten kullandığı
@@ -547,7 +573,7 @@ def fetch_page_with_browser_to_raw_storage(
     return FetchedPageResult(
         url_id=url_id,
         requested_url=requested_url,
-        final_url=str(getattr(browser_result, "final_url", requested_url) or requested_url),
+        final_url=final_url,
         http_status=inferred_http_status,
         content_type="text/html; charset=utf-8",
         etag=None,

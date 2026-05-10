@@ -170,6 +170,8 @@ from datetime import datetime, timezone
 # TR: Ham artefact'ların tüm acquisition dallarında deterministik SHA256 parmak
 # TR: izine ihtiyacı olduğu için hashlib içe aktarıyoruz.
 import hashlib
+import json
+import subprocess
 
 # EN: We import Path because filesystem path work is clearer and safer with
 # EN: pathlib objects than with loose raw strings.
@@ -1982,6 +1984,195 @@ def build_browser_rendered_storage_path(
     # TR: Nihai tam Path nesnesini döndürüyoruz.
     return day_root / filename
 
+
+RAW_FETCH_JSON_ZSTD_SCHEMA_VERSION = "logisticsearch.raw_fetch.envelope.v1"
+RAW_FETCH_JSON_ZSTD_EXTENSION = ".fetch.json.zst"
+RAW_FETCH_JSON_ZSTD_CLI = Path("/usr/bin/zstd")
+
+
+def build_raw_fetch_json_zstd_sidecar_path(raw_body_path: Path | str) -> Path:
+    # EN: This helper derives the compressed JSON sidecar path from the existing
+    # EN: raw body evidence path without changing the original evidence file.
+    # TR: Bu helper mevcut ham body kanıt dosyasını değiştirmeden sıkıştırılmış
+    # TR: JSON sidecar yolunu türetir.
+    path = Path(raw_body_path)
+    name = path.name
+    for raw_suffix in (".body.bin", ".rendered.html"):
+        if name.endswith(raw_suffix):
+            return path.with_name(name[: -len(raw_suffix)] + RAW_FETCH_JSON_ZSTD_EXTENSION)
+    return path.with_name(name + RAW_FETCH_JSON_ZSTD_EXTENSION)
+
+
+def decode_raw_fetch_body_as_html_text(
+    raw_body_bytes: bytes,
+    *,
+    content_type: str | None,
+) -> tuple[str, str]:
+    # EN: We prefer the declared charset when present, then fall back safely to
+    # EN: UTF-8 replacement decoding so the JSON envelope remains inspectable.
+    # TR: Varsa bildirilen charset'i tercih ediyoruz; yoksa JSON zarfı
+    # TR: incelenebilir kalsın diye güvenli UTF-8 replacement decode kullanıyoruz.
+    declared_encoding = "utf-8"
+    if content_type:
+        for content_type_part in str(content_type).split(";"):
+            if "charset" in content_type_part.lower() and "=" in content_type_part:
+                declared_encoding = content_type_part.split("=", 1)[1].strip().strip("\"'") or "utf-8"
+                break
+
+    try:
+        return raw_body_bytes.decode(declared_encoding), f"declared_charset:{declared_encoding}"
+    except (LookupError, UnicodeDecodeError):
+        return raw_body_bytes.decode("utf-8", errors="replace"), f"utf8_replace_after_failed:{declared_encoding}"
+
+
+def build_raw_fetch_json_zstd_envelope(
+    *,
+    url_id: int,
+    host_id: int | None,
+    requested_url: str,
+    final_url: str,
+    http_status: int | None,
+    content_type: str | None,
+    content_encoding: str | None,
+    raw_body_path: Path | str,
+    raw_body_bytes: bytes,
+    raw_sha256: str,
+    fetched_at: str,
+    acquisition_method: str,
+) -> tuple[dict[str, object], bytes]:
+    # EN: The envelope keeps decoded HTML with tags for inspection while the raw
+    # EN: body artefact remains the durable byte-for-byte source of truth.
+    # TR: Zarf inceleme için tag'leriyle decode edilmiş HTML tutar; ham body
+    # TR: artefact'ı byte-for-byte kalıcı doğruluk kaynağı olarak kalır.
+    computed_sha256 = sha256_hex(raw_body_bytes)
+    if computed_sha256 != raw_sha256:
+        raise RuntimeError(
+            "raw fetch JSON envelope SHA mismatch: "
+            f"expected={raw_sha256} actual={computed_sha256}"
+        )
+
+    html_text, html_decode_strategy = decode_raw_fetch_body_as_html_text(
+        raw_body_bytes,
+        content_type=content_type,
+    )
+
+    envelope: dict[str, object] = {
+        "schema_version": RAW_FETCH_JSON_ZSTD_SCHEMA_VERSION,
+        "compression": "zstd",
+        "url_id": int(url_id),
+        "host_id": None if host_id is None else int(host_id),
+        "requested_url": str(requested_url),
+        "final_url": str(final_url),
+        "http_status": http_status,
+        "content_type": content_type,
+        "content_encoding": content_encoding,
+        "body_bytes": len(raw_body_bytes),
+        "body_sha256": raw_sha256,
+        "raw_body_path": str(raw_body_path),
+        "raw_json_uncompressed_bytes": None,
+        "fetched_at": str(fetched_at),
+        "html": html_text,
+        "html_decode_strategy": html_decode_strategy,
+        "storage_policy": {
+            "raw_fetch_root": str(RAW_FETCH_ROOT),
+            "parse_core_primary": "/srv/data",
+            "parse_core_fallback": "/srv/buffer",
+            "pause_rule": (
+                "pause_if_raw_fetch_unusable_or_full_or_both_data_and_buffer_unusable_or_full"
+            ),
+        },
+        "crawler_metadata": {
+            "runtime_surface": "crawler_core",
+            "acquisition_method": acquisition_method,
+            "secrets_redacted": True,
+            "contains_lease_token": False,
+            "contains_user_agent_token": False,
+            "contains_dsn": False,
+        },
+    }
+
+    raw_json_bytes = json.dumps(
+        envelope,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    envelope["raw_json_uncompressed_bytes"] = len(raw_json_bytes)
+    raw_json_bytes = json.dumps(
+        envelope,
+        ensure_ascii=False,
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+    return envelope, raw_json_bytes
+
+
+def _write_raw_fetch_json_zstd_envelope_compressed_only_v1(
+    *,
+    url_id: int,
+    host_id: int | None,
+    requested_url: str,
+    final_url: str,
+    http_status: int | None,
+    content_type: str | None,
+    content_encoding: str | None = None,
+    raw_body_path: Path | str,
+    raw_body_bytes: bytes,
+    raw_sha256: str,
+    fetched_at: str,
+    acquisition_method: str,
+) -> str:
+    # EN: This function writes a compressed JSON sidecar beside the existing raw
+    # EN: evidence file. The original raw evidence path remains unchanged.
+    # TR: Bu fonksiyon mevcut ham kanıt dosyasının yanına sıkıştırılmış JSON
+    # TR: sidecar yazar. Özgün ham kanıt yolu değişmeden kalır.
+    if not RAW_FETCH_JSON_ZSTD_CLI.is_file():
+        raise RuntimeError(f"zstd CLI is missing: {RAW_FETCH_JSON_ZSTD_CLI}")
+
+    sidecar_path = build_raw_fetch_json_zstd_sidecar_path(raw_body_path)
+    sidecar_path.parent.mkdir(parents=True, exist_ok=True)
+
+    _, raw_json_bytes = build_raw_fetch_json_zstd_envelope(
+        url_id=url_id,
+        host_id=host_id,
+        requested_url=requested_url,
+        final_url=final_url,
+        http_status=http_status,
+        content_type=content_type,
+        content_encoding=content_encoding,
+        raw_body_path=raw_body_path,
+        raw_body_bytes=raw_body_bytes,
+        raw_sha256=raw_sha256,
+        fetched_at=fetched_at,
+        acquisition_method=acquisition_method,
+    )
+
+    temp_sidecar_path = sidecar_path.with_name(sidecar_path.name + ".tmp")
+    completed_process = subprocess.run(
+        [
+            str(RAW_FETCH_JSON_ZSTD_CLI),
+            "-q",
+            "-f",
+            "-o",
+            str(temp_sidecar_path),
+            "-",
+        ],
+        input=raw_json_bytes,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if completed_process.returncode != 0:
+        stderr_text = completed_process.stderr.decode("utf-8", errors="replace")
+        raise RuntimeError(
+            "zstd JSON envelope compression failed: "
+            f"rc={completed_process.returncode} stderr={stderr_text}"
+        )
+
+    temp_sidecar_path.replace(sidecar_path)
+    return str(sidecar_path)
+
+
 # EN: This helper builds the screenshot evidence path that belongs to the same browser fetch.
 # EN: We keep screenshot and rendered HTML as sibling artefacts with the same timestamp stem.
 # TR: Bu yardımcı, aynı browser fetch'e ait screenshot kanıt yolunu üretir.
@@ -2262,3 +2453,149 @@ __all__ = [
     "ensure_parent_directory",
     "sha256_hex",
 ]
+
+
+# EN: This helper controls whether the crawler also writes a plain JSON sidecar
+# EN: beside the compressed .fetch.json.zst envelope.
+# EN: The default is enabled for the short 15-minute validation test so we can
+# EN: compare plain JSON size/content against Zstandard-compressed JSON.
+# EN: For the future 24-hour system-limit test, set
+# EN: LOGISTICSEARCH_RAW_FETCH_PLAIN_JSON_COMPARE_MODE=0 so only .fetch.json.zst
+# EN: is kept as raw evidence.
+# TR: Bu helper, sıkıştırılmış .fetch.json.zst envelope yanında plain JSON
+# TR: sidecar yazılıp yazılmayacağını kontrol eder.
+# TR: Varsayılan açık tutulur; çünkü 15 dakikalık doğrulama testinde plain JSON
+# TR: boyutu/içeriği ile Zstandard sıkıştırılmış JSON karşılaştırılacaktır.
+# TR: Gelecekteki 24 saatlik sistem-limit testinde yalnız .fetch.json.zst
+# TR: tutulması için LOGISTICSEARCH_RAW_FETCH_PLAIN_JSON_COMPARE_MODE=0 verilir.
+def raw_fetch_plain_json_compare_mode_enabled() -> bool:
+    import os as _os
+
+    value = _os.environ.get(
+        "LOGISTICSEARCH_RAW_FETCH_PLAIN_JSON_COMPARE_MODE",
+        "1",
+    ).strip().lower()
+    return value not in {"0", "false", "no", "off"}
+
+
+# EN: This helper maps a compressed JSON envelope path to its plain comparison
+# EN: JSON path by removing the final .zst suffix.
+# TR: Bu helper, sıkıştırılmış JSON envelope yolunu, son .zst uzantısını
+# TR: kaldırarak plain karşılaştırma JSON yoluna çevirir.
+def build_raw_fetch_plain_json_compare_path_from_zstd_path(json_zstd_path):
+    from pathlib import Path as _Path
+
+    zstd_path = _Path(json_zstd_path)
+    if zstd_path.name.endswith(".zst"):
+        return zstd_path.with_name(zstd_path.name[:-4])
+    return zstd_path.with_suffix(zstd_path.suffix + ".plain.json")
+
+
+# EN: This helper infers the .fetch.json.zst path produced by the compressed
+# EN: writer, without changing the writer's return contract.
+# TR: Bu helper, compressed writer'ın dönüş sözleşmesini değiştirmeden üretilen
+# TR: .fetch.json.zst yolunu çıkarır.
+def infer_raw_fetch_json_zstd_path_from_writer_result(
+    writer_result,
+    bound_arguments: dict,
+):
+    from pathlib import Path as _Path
+
+    if isinstance(writer_result, _Path):
+        return writer_result
+
+    if isinstance(writer_result, str):
+        return _Path(writer_result)
+
+    if isinstance(writer_result, dict):
+        for key in (
+            "json_zstd_path",
+            "json_zst_path",
+            "zstd_path",
+            "compressed_json_path",
+            "raw_fetch_json_zstd_path",
+            "sidecar_path",
+        ):
+            value = writer_result.get(key)
+            if value:
+                return _Path(str(value))
+
+    for key in (
+        "raw_storage_path",
+        "raw_body_path",
+        "body_storage_path",
+    ):
+        value = bound_arguments.get(key)
+        if value:
+            return build_raw_fetch_json_zstd_sidecar_path(value)
+
+    return None
+
+
+# EN: This wrapper preserves the existing compressed JSON writer but adds the
+# EN: short-test comparison behavior: when enabled, it decompresses the just-written
+# EN: .fetch.json.zst into a sibling .fetch.json file.
+# EN: The canonical runtime JSONL log remains unchanged.
+# EN: No HTML is printed to the terminal.
+# TR: Bu wrapper mevcut compressed JSON writer'ı korur fakat kısa-test
+# TR: karşılaştırma davranışını ekler: açık olduğunda yeni yazılan
+# TR: .fetch.json.zst dosyasını kardeş .fetch.json dosyasına açar.
+# TR: Kanonik runtime JSONL log değişmeden kalır.
+# TR: Terminale HTML basılmaz.
+def write_raw_fetch_json_zstd_envelope(*args, **kwargs):
+    import inspect as _inspect
+    import subprocess as _subprocess
+
+    compressed_result = _write_raw_fetch_json_zstd_envelope_compressed_only_v1(
+        *args,
+        **kwargs,
+    )
+
+    if not raw_fetch_plain_json_compare_mode_enabled():
+        return compressed_result
+
+    signature = _inspect.signature(
+        _write_raw_fetch_json_zstd_envelope_compressed_only_v1
+    )
+    bound = signature.bind_partial(*args, **kwargs)
+    bound_arguments = dict(bound.arguments)
+
+    json_zstd_path = infer_raw_fetch_json_zstd_path_from_writer_result(
+        compressed_result,
+        bound_arguments,
+    )
+
+    if json_zstd_path is None:
+        raise RuntimeError(
+            "raw_fetch_json_zstd_plain_compare_path_unresolved"
+        )
+
+    json_zstd_path = Path(json_zstd_path)
+    if not json_zstd_path.is_file():
+        raise RuntimeError(
+            f"raw_fetch_json_zstd_missing_for_plain_compare: {json_zstd_path}"
+        )
+
+    plain_json_path = build_raw_fetch_plain_json_compare_path_from_zstd_path(
+        json_zstd_path
+    )
+    plain_json_tmp_path = plain_json_path.with_name(
+        plain_json_path.name + ".tmp"
+    )
+
+    completed = _subprocess.run(
+        [
+            str(RAW_FETCH_JSON_ZSTD_CLI),
+            "-d",
+            "-c",
+            str(json_zstd_path),
+        ],
+        check=True,
+        stdout=_subprocess.PIPE,
+        stderr=_subprocess.PIPE,
+    )
+
+    plain_json_tmp_path.write_bytes(completed.stdout)
+    plain_json_tmp_path.replace(plain_json_path)
+
+    return compressed_result

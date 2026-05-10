@@ -236,6 +236,7 @@ from __future__ import annotations
 # TR: STAGE21-AUTO-COMMENT :: Importlar değişirse istek anlamının, zaman aşımı yönetiminin veya yük şekillendirmenin de değişip değişmediği incelenmelidir.
 # TR: STAGE21-AUTO-COMMENT :: Bu işaret importları sessiz şablon değil mimari ipucu olarak ele alır.
 from pathlib import Path
+from .logisticsearch1_1_2_4_1_acquisition_support import write_raw_fetch_json_zstd_envelope
 
 # EN: We import Request and urlopen from the standard library so this direct HTTP
 # EN: child stays dependency-light and fully explicit.
@@ -589,6 +590,27 @@ def fetch_page_to_raw_storage(
     # TR: STAGE21-AUTO-COMMENT :: Bu değer değiştiğinde çağıranların ve aşağı akış finalize mantığının onu hâlâ doğru yorumladığı doğrulanmalıdır.
     # TR: STAGE21-AUTO-COMMENT :: Bu işaret fetch durumunun somutlaştığı yeri vurgular.
     raw_sha256 = sha256_hex(body)
+
+    # EN: We write a compressed JSON sidecar beside the existing raw body artefact
+    # EN: so duration tests can inspect decoded HTML without changing the raw body
+    # EN: evidence or the canonical JSONL runtime log.
+    # TR: Süre testlerinde ham body kanıtını veya kanonik JSONL runtime log'unu
+    # TR: değiştirmeden decode edilmiş HTML incelenebilsin diye mevcut ham body
+    # TR: artefact'ının yanına sıkıştırılmış JSON sidecar yazıyoruz.
+    write_raw_fetch_json_zstd_envelope(
+        url_id=url_id,
+        host_id=int(get_claimed_url_value(claimed_url, "host_id")),
+        requested_url=requested_url,
+        final_url=final_url,
+        http_status=http_status,
+        content_type=content_type,
+        content_encoding=None,
+        raw_body_path=raw_storage_path,
+        raw_body_bytes=body,
+        raw_sha256=raw_sha256,
+        fetched_at=fetched_at.isoformat(),
+        acquisition_method="http",
+    )
 
     # EN: We return one explicit structured fetch result.
     # TR: Tek bir açık yapılı fetch sonucu döndürüyoruz.
