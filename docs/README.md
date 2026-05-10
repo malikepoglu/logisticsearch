@@ -599,3 +599,16 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 ## Crawler core / Runtime seals
 
 - [R115 enqueue conflict patch and runtime impact seal](TOPIC_CRAWLER_CORE_R115_ENQUEUE_CONFLICT_PATCH_AND_RUNTIME_IMPACT_SEAL_2026_05_08.md)
+
+## Crawler Core Source/Seed Strategy
+
+- [Crawler Core 25 Language Source/Seed Strategy](TOPIC_CRAWLER_CORE_25_LANGUAGE_SOURCE_SEED_STRATEGY_2026_05_10.md)
+<!-- SOURCE_SEED_R5B_README_INDEX_START -->
+
+## Crawler Core 25 Language Source/Seed Strategy
+
+- Canonical strategy doc: `docs/TOPIC_CRAWLER_CORE_25_LANGUAGE_SOURCE_SEED_STRATEGY_2026_05_10.md`
+- Scope: all 25 languages under `makpi51crawler/catalog/startpoints/<lang>/`.
+- Boundary: Ubuntu Desktop + GitHub only until a later explicit pi51c sync gate; no runtime, DB, crawler, or systemd mutation from this documentation step.
+
+<!-- SOURCE_SEED_R5B_README_INDEX_END -->
