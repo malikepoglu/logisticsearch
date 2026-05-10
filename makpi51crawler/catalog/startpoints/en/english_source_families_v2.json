@@ -47,7 +47,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://fiata.org/",
       "source_host": "fiata.org",
-      "source_category": "association_directory",
+      "source_category": [
+        "association_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -149,7 +151,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://bifa.org/",
       "source_host": "bifa.org",
-      "source_category": "association_directory",
+      "source_category": [
+        "association_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -281,7 +285,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.iela.org/",
       "source_host": "www.iela.org",
-      "source_category": "association_directory",
+      "source_category": [
+        "association_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -349,7 +355,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.freightnet.com/",
       "source_host": "www.freightnet.com",
-      "source_category": "commercial_directory",
+      "source_category": [
+        "commercial_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -549,7 +557,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.thomasnet.com/",
       "source_host": "www.thomasnet.com",
-      "source_category": "b2b_supplier_directory",
+      "source_category": [
+        "b2b_supplier_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -745,7 +755,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.wcaworld.com/",
       "source_host": "wcaworld.com",
-      "source_category": "network_directory",
+      "source_category": [
+        "network_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -877,7 +889,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.kompass.com/",
       "source_host": "kompass.com",
-      "source_category": "b2b_supplier_directory",
+      "source_category": [
+        "b2b_supplier_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1012,7 +1026,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.ncbfaa.org/",
       "source_host": "www.ncbfaa.org",
-      "source_category": "freight_forwarder_and_customs_broker_association",
+      "source_category": [
+        "freight_forwarder_and_customs_broker_association"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1097,7 +1113,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.ciffa.com/",
       "source_host": "www.ciffa.com",
-      "source_category": "association_directory",
+      "source_category": [
+        "association_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1171,7 +1189,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.iata.org/",
       "source_host": "www.iata.org",
-      "source_category": "air_cargo_directory",
+      "source_category": [
+        "air_cargo_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1282,7 +1302,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://iffcbano.org/",
       "source_host": "iffcbano.org",
-      "source_category": "association_directory",
+      "source_category": [
+        "association_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1356,7 +1378,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.df-alliance.com/",
       "source_host": "www.df-alliance.com",
-      "source_category": "network_directory",
+      "source_category": [
+        "network_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1430,7 +1454,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.all-forward.com/",
       "source_host": "www.all-forward.com",
-      "source_category": "network_directory",
+      "source_category": [
+        "network_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1504,7 +1530,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://wnaweb.com/",
       "source_host": "wnaweb.com",
-      "source_category": "network_directory",
+      "source_category": [
+        "network_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1578,7 +1606,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://gffdirectory.com/",
       "source_host": "gffdirectory.com",
-      "source_category": "commercial_directory",
+      "source_category": [
+        "commercial_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1652,7 +1682,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://freighthub.co/",
       "source_host": "freighthub.co",
-      "source_category": "commercial_directory",
+      "source_category": [
+        "commercial_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1726,7 +1758,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://freightmidpoint.com/",
       "source_host": "freightmidpoint.com",
-      "source_category": "network_directory",
+      "source_category": [
+        "network_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1800,7 +1834,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://fncnetwork.com/",
       "source_host": "fncnetwork.com",
-      "source_category": "network_directory",
+      "source_category": [
+        "network_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1874,7 +1910,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://overseasprojectcargo.com/",
       "source_host": "overseasprojectcargo.com",
-      "source_category": "project_cargo_directory",
+      "source_category": [
+        "project_cargo_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -1948,7 +1986,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.olofamily.com/",
       "source_host": "www.olofamily.com",
-      "source_category": "network_directory",
+      "source_category": [
+        "network_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -2022,7 +2062,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://forwarders.gocomet.com/",
       "source_host": "forwarders.gocomet.com",
-      "source_category": "commercial_directory",
+      "source_category": [
+        "commercial_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -2096,7 +2138,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://logisticscompaniesdirectory.com/",
       "source_host": "logisticscompaniesdirectory.com",
-      "source_category": "commercial_directory",
+      "source_category": [
+        "commercial_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -2170,7 +2214,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.cargoyellowpages.com/",
       "source_host": "www.cargoyellowpages.com",
-      "source_category": "commercial_directory",
+      "source_category": [
+        "commercial_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -2244,7 +2290,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.jctrans.com/",
       "source_host": "www.jctrans.com",
-      "source_category": "commercial_directory",
+      "source_category": [
+        "commercial_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -2318,7 +2366,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://aircargogroup.com/",
       "source_host": "aircargogroup.com",
-      "source_category": "air_cargo_network_directory",
+      "source_category": [
+        "air_cargo_network_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -2392,7 +2442,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.clecat.org/",
       "source_host": "www.clecat.org",
-      "source_category": "association_directory",
+      "source_category": [
+        "association_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
@@ -2466,7 +2518,9 @@
       "source_status": "candidate_reviewed_for_catalog",
       "source_root_url": "https://www.ibs-ev.com/",
       "source_host": "www.ibs-ev.com",
-      "source_category": "association_directory",
+      "source_category": [
+        "association_directory"
+      ],
       "allowed_schemes": [
         "https"
       ],
