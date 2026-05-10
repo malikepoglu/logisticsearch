@@ -178,7 +178,7 @@
       "default_recrawl_interval": "manual_review_required",
       "default_max_depth": 1,
       "source_quality_tier": "A_PLUS",
-      "notes": "PDF/link extraction gerektirebilir; seed_urls later live/probe ile netleşmeli.",
+      "notes": "PDF/link extraction gerektirebilir; seed_urls later live/probe ile netleşmeli. R41 refinement: remains ACCEPT_REVIEW because PDF/link extraction may be required before durable seed activation.",
       "family_metadata": {
         "lang_code": "tr",
         "quality_model_version": "six_tier_v1",
@@ -196,7 +196,9 @@
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT_REVIEW",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "PDF/link extraction gerektirebilir; seed_urls later live/probe ile netleşmeli."
+        "decision_doc_notes": "PDF/link extraction gerektirebilir; seed_urls later live/probe ile netleşmeli.",
+        "pdf_or_link_extraction_review_required": true,
+        "manifest_refinement_cycle": "R41"
       },
       "seed_surfaces": [
         {
@@ -998,7 +1000,7 @@
       "default_recrawl_interval": "manual_review_required",
       "default_max_depth": 1,
       "source_quality_tier": "A_MINUS",
-      "notes": "Exact logistics centers URL requires later live/link review; source family retained as infrastructure reference.",
+      "notes": "Exact logistics centers URL requires later live/link review; source family retained as infrastructure reference. R41 refinement: current root seed is accepted only as review placeholder; exact logistics centers/freight infrastructure seed must be found before live activation.",
       "family_metadata": {
         "lang_code": "tr",
         "quality_model_version": "six_tier_v1",
@@ -1016,7 +1018,10 @@
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT_REVIEW",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Exact logistics centers URL requires later live/link review; source family retained as infrastructure reference."
+        "decision_doc_notes": "Exact logistics centers URL requires later live/link review; source family retained as infrastructure reference.",
+        "seed_replacement_required": true,
+        "seed_replacement_reason": "current seed is TCDD root site; exact logistics centers or rail logistics infrastructure page must be identified before live activation",
+        "manifest_refinement_cycle": "R41"
       },
       "seed_surfaces": [
         {
@@ -1177,8 +1182,9 @@
       "source_status": "candidate_accepted_not_live",
       "source_root_url": "https://www.igairport.aero/en/aviation/cargo-and-logistics-center/cargo-and-lojistics/",
       "source_category": [
-        "airport_cargo_authority_or_directory",
-        "air_cargo_directory"
+        "company_entity",
+        "airport_cargo_context_source",
+        "logistics_operator"
       ],
       "source_host": "www.igairport.aero",
       "source_country_scope": [
@@ -1195,7 +1201,7 @@
       "default_recrawl_interval": "manual_review_required",
       "default_max_depth": 1,
       "source_quality_tier": "A_MINUS",
-      "notes": "Airport cargo context source; company directory status requires review.",
+      "notes": "Airport cargo context source; company directory status requires review. R41 refinement: İGA is retained as a company/entity seed, not as a multi-company directory; link may still be used as a discovery/spreading seed.",
       "family_metadata": {
         "lang_code": "tr",
         "quality_model_version": "six_tier_v1",
@@ -1213,7 +1219,12 @@
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT_REVIEW",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Airport cargo context source; company directory status requires review."
+        "decision_doc_notes": "Airport cargo context source; company directory status requires review.",
+        "entity_source": true,
+        "directory_like": false,
+        "source_role": "single_company_entity_seed",
+        "entity_handling_policy": "record_as_company_entity_not_multi_company_directory",
+        "manifest_refinement_cycle": "R41"
       },
       "seed_surfaces": [
         {
@@ -1228,8 +1239,9 @@
             "robots_review_required": true,
             "quality_model_version": "six_tier_v1",
             "source_category": [
-              "airport_cargo_authority_or_directory",
-              "air_cargo_directory"
+              "company_entity",
+              "airport_cargo_context_source",
+              "logistics_operator"
             ],
             "decision_doc_seed_surfaces": [
               "cargo_and_logistics_center",
@@ -1238,7 +1250,11 @@
               "cargo_city_company_context"
             ],
             "decision_status": "ACCEPT_REVIEW",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "entity_source": true,
+            "directory_like": false,
+            "source_role": "single_company_entity_seed",
+            "entity_handling_policy": "record_as_company_entity_not_multi_company_directory"
           },
           "seed_urls": [
             {
@@ -1263,7 +1279,10 @@
                 "source_quality_tier": "A_MINUS",
                 "decision_status": "ACCEPT_REVIEW",
                 "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-                "decision_doc_seed_index": 1
+                "decision_doc_seed_index": 1,
+                "entity_source": true,
+                "directory_like": false,
+                "source_role": "single_company_entity_seed"
               }
             }
           ]
@@ -1590,12 +1609,12 @@
       "default_priority": 40,
       "default_recrawl_interval": "manual_review_required",
       "default_max_depth": 1,
-      "source_quality_tier": "B_PLUS",
-      "notes": "Commercial directory; good discovery but live/noise review required.",
+      "source_quality_tier": "B",
+      "notes": "Commercial directory; good discovery but live/noise review required. R41 refinement: commercial discovery directory quality downgraded from B_PLUS to B; ACCEPT_REVIEW remains required.",
       "family_metadata": {
         "lang_code": "tr",
         "quality_model_version": "six_tier_v1",
-        "trust_tier": "B_PLUS",
+        "trust_tier": "B",
         "discovery_value": "medium_high",
         "noise_risk": "medium",
         "manual_review_priority": 40,
@@ -1609,7 +1628,8 @@
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT_REVIEW",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Commercial directory; good discovery but live/noise review required."
+        "decision_doc_notes": "Commercial directory; good discovery but live/noise review required.",
+        "manifest_refinement_cycle": "R41"
       },
       "seed_surfaces": [
         {
@@ -1635,7 +1655,8 @@
               "city_filters"
             ],
             "decision_status": "ACCEPT_REVIEW",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "source_quality_tier": "B"
           },
           "seed_urls": [
             {
@@ -1657,7 +1678,7 @@
                 "quality_model_version": "six_tier_v1",
                 "source_family_code": "find_com_tr_lojistik_tasimacilik",
                 "source_host": "www.find.com.tr",
-                "source_quality_tier": "B_PLUS",
+                "source_quality_tier": "B",
                 "decision_status": "ACCEPT_REVIEW",
                 "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
                 "decision_doc_seed_index": 1
@@ -1842,7 +1863,7 @@
       "default_recrawl_interval": "manual_review_required",
       "default_max_depth": 1,
       "source_quality_tier": "B",
-      "notes": "Company rows exist; data hygiene/live review required.",
+      "notes": "Company rows exist; data hygiene/live review required. R41 refinement: source reportedly contains 34 companies; crawl once for extraction evidence, then disable/remove this seed after audit if complete.",
       "family_metadata": {
         "lang_code": "tr",
         "quality_model_version": "six_tier_v1",
@@ -1860,7 +1881,12 @@
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT_REVIEW",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Company rows exist; data hygiene/live review required."
+        "decision_doc_notes": "Company rows exist; data hygiene/live review required.",
+        "expected_company_count": 34,
+        "one_time_extraction_policy": "extract_34_companies_once_then_disable_or_remove_seed_after_evidence_audit",
+        "seed_retention_policy": "temporary_one_time_extraction_seed",
+        "manifest_followup_required": true,
+        "manifest_refinement_cycle": "R41"
       },
       "seed_surfaces": [
         {
@@ -1884,7 +1910,10 @@
               "firm_detail_pages_if_available"
             ],
             "decision_status": "ACCEPT_REVIEW",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "expected_company_count": 34,
+            "one_time_extraction_policy": "extract_34_companies_once_then_disable_or_remove_seed_after_evidence_audit",
+            "seed_retention_policy": "temporary_one_time_extraction_seed"
           },
           "seed_urls": [
             {
@@ -1909,7 +1938,10 @@
                 "source_quality_tier": "B",
                 "decision_status": "ACCEPT_REVIEW",
                 "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-                "decision_doc_seed_index": 1
+                "decision_doc_seed_index": 1,
+                "expected_company_count": 34,
+                "one_time_extraction_policy": "extract_34_companies_once_then_disable_or_remove_seed_after_evidence_audit",
+                "seed_retention_policy": "temporary_one_time_extraction_seed"
               }
             }
           ]
