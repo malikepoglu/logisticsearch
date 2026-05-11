@@ -1,0 +1,1362 @@
+{
+  "lang_code": "de",
+  "lang_name": "German",
+  "catalog_scope": {
+    "catalog_scope": "crawler_core_startpoint_source_families",
+    "catalog_status": "candidate_manifest_not_live",
+    "activation_boundary": "pi51c_live_probe_required_before_db_or_frontier_insert",
+    "source_table": "future_postgresql_jsonb_source_table",
+    "seed_url_table": "future_postgresql_jsonb_seed_url_table",
+    "review_rule": "each_seed_checked_individually_before_db_insert",
+    "cross_language_traversal_enabled": true,
+    "cross_seed_traversal_enabled": true,
+    "variable_capacity_model": true,
+    "fixed_target_count": null
+  },
+  "crawl_review_policy": {
+    "policy_version": "de_review_policy_v1",
+    "initial_seed_enabled": false,
+    "review_state": "needs_live_check",
+    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+    "human_review_required_before_frontier": true,
+    "live_check_required": true,
+    "robots_review_required": true,
+    "robots_first": true,
+    "etag_last_modified_preferred_when_available": true,
+    "host_level_budgeting_required": true,
+    "cross_host_round_robin_required": true,
+    "same_host_back_to_back_checks_avoided": true,
+    "browser_use_policy": "browser_only_if_http_path_is_insufficient",
+    "minimum_spacing_guidance": {
+      "same_host_review_spacing_seconds": 120,
+      "same_source_review_spacing_seconds": 30
+    },
+    "suggested_review_order": [
+      "robots_check",
+      "lightweight_http_check",
+      "html_surface_check",
+      "only_if_needed_browser_check"
+    ],
+    "goal": "avoid_alarm_patterns_and_unnecessary_resource_consumption"
+  },
+  "added_seeds_lifecycle": {
+    "crawler_core_role": "collect_raw_links_and_raw_evidence_without_blind_promotion",
+    "parse_core_role": "pre_rank_discovered_added_seeds",
+    "desktop_import_role": "manual_review_rating_and_possible_promotion",
+    "auto_frontier_promotion": false
+  },
+  "source_families": [
+    {
+      "source_family_code": "dslv_org",
+      "source_family_name": "Dslv Org",
+      "source_host": "www.dslv.org",
+      "source_root_url": "https://www.dslv.org/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "official_association_directory",
+        "freight_forwarder_directory"
+      ],
+      "source_quality_tier": "A_PLUS",
+      "source_selection_reason": "German federal freight forwarding/logistics association. Strong authority; direct member/company extraction surface must be verified.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "medium",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "P14D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_dslv_org",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "official_association_directory",
+            "freight_forwarder_directory"
+          ],
+          "seed_surface_notes": "German federal freight forwarding/logistics association. Strong authority; direct member/company extraction surface must be verified.",
+          "seed_urls": [
+            {
+              "seed_url_code": "dslv_org_seed_01",
+              "url": "https://www.dslv.org/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "association_discovery_surface",
+        "directory_confidence": "medium",
+        "catalog_activation_class": "accepted_disabled_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.dslv.org",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "bgl_ev",
+      "source_family_name": "Bgl Ev",
+      "source_host": "www.bgl-ev.de",
+      "source_root_url": "https://www.bgl-ev.de/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "road_freight_directory",
+        "official_association_directory"
+      ],
+      "source_quality_tier": "A",
+      "source_selection_reason": "German road freight/logistics association. Useful for association structure and outgoing links; direct company list must be verified.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "medium",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "P14D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_bgl_ev",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "road_freight_directory",
+            "official_association_directory"
+          ],
+          "seed_surface_notes": "German road freight/logistics association. Useful for association structure and outgoing links; direct company list must be verified.",
+          "seed_urls": [
+            {
+              "seed_url_code": "bgl_ev_seed_01",
+              "url": "https://www.bgl-ev.de/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            },
+            {
+              "seed_url_code": "bgl_ev_seed_02",
+              "url": "https://www.bgl-ev.de/unsere-verbandsstruktur/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 2
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "association_structure_discovery_surface",
+        "directory_confidence": "medium",
+        "catalog_activation_class": "accepted_disabled_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.bgl-ev.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "hafen_hamburg_branchenbuch",
+      "source_family_name": "Hafen Hamburg Branchenbuch",
+      "source_host": "www.hafen-hamburg.de",
+      "source_root_url": "https://www.hafen-hamburg.de/de/hafenbranchenbuch/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "port_authority_or_port_directory",
+        "commercial_logistics_directory",
+        "sea_freight_directory"
+      ],
+      "source_quality_tier": "A",
+      "source_selection_reason": "Strong Hamburg port logistics directory candidate.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "high",
+      "default_max_depth": 2,
+      "default_recrawl_interval": "P14D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_hafen_hamburg_branchenbuch",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "port_authority_or_port_directory",
+            "commercial_logistics_directory",
+            "sea_freight_directory"
+          ],
+          "seed_surface_notes": "Strong Hamburg port logistics directory candidate.",
+          "seed_urls": [
+            {
+              "seed_url_code": "hafen_hamburg_branchenbuch_seed_01",
+              "url": "https://www.hafen-hamburg.de/de/hafenbranchenbuch/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT",
+        "source_role": "directory_candidate",
+        "directory_confidence": "high",
+        "catalog_activation_class": "accepted_disabled_directory_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.hafen-hamburg.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "frankfurt_cargohub",
+      "source_family_name": "Frankfurt Cargohub",
+      "source_host": "www.frankfurt-cargohub.com",
+      "source_root_url": "https://www.frankfurt-cargohub.com/en.html",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "airport_cargo_authority_or_directory",
+        "air_cargo_directory"
+      ],
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "Frankfurt air cargo hub/context source. Useful for link discovery; company listing surface must be checked before extraction claims.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "medium",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "P30D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_frankfurt_cargohub",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "airport_cargo_authority_or_directory",
+            "air_cargo_directory"
+          ],
+          "seed_surface_notes": "Frankfurt air cargo hub/context source. Useful for link discovery; company listing surface must be checked before extraction claims.",
+          "seed_urls": [
+            {
+              "seed_url_code": "frankfurt_cargohub_seed_01",
+              "url": "https://www.frankfurt-cargohub.com/en.html",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "airport_context_discovery_surface",
+        "directory_confidence": "low",
+        "catalog_activation_class": "accepted_disabled_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.frankfurt-cargohub.com",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "aircargo_community_frankfurt",
+      "source_family_name": "Aircargo Community Frankfurt",
+      "source_host": "www.aircargocommunity.com",
+      "source_root_url": "https://www.aircargocommunity.com/en/standort/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "airport_cargo_authority_or_directory",
+        "air_cargo_directory",
+        "network_directory"
+      ],
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "Frankfurt cargo community/location context. Useful for outgoing link discovery; member/company extraction needs review.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "medium",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "P30D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_aircargo_community_frankfurt",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "airport_cargo_authority_or_directory",
+            "air_cargo_directory",
+            "network_directory"
+          ],
+          "seed_surface_notes": "Frankfurt cargo community/location context. Useful for outgoing link discovery; member/company extraction needs review.",
+          "seed_urls": [
+            {
+              "seed_url_code": "aircargo_community_frankfurt_seed_01",
+              "url": "https://www.aircargocommunity.com/en/standort/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "community_context_discovery_surface",
+        "directory_confidence": "low",
+        "catalog_activation_class": "accepted_disabled_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.aircargocommunity.com",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "die_gueterbahnen",
+      "source_family_name": "Die Gueterbahnen",
+      "source_host": "die-gueterbahnen.com",
+      "source_root_url": "https://die-gueterbahnen.com/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "rail_freight_directory",
+        "official_association_directory"
+      ],
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "Rail freight association/network candidate. Member/list surface must be validated.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "medium",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "P30D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_die_gueterbahnen",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "rail_freight_directory",
+            "official_association_directory"
+          ],
+          "seed_surface_notes": "Rail freight association/network candidate. Member/list surface must be validated.",
+          "seed_urls": [
+            {
+              "seed_url_code": "die_gueterbahnen_seed_01",
+              "url": "https://die-gueterbahnen.com/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "association_discovery_surface",
+        "directory_confidence": "medium",
+        "catalog_activation_class": "accepted_disabled_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "die-gueterbahnen.com",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "vdv_de",
+      "source_family_name": "Vdv De",
+      "source_host": "www.vdv.de",
+      "source_root_url": "https://www.vdv.de/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "rail_freight_directory",
+        "official_association_directory",
+        "public_transport_logistics_reference"
+      ],
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "German transport association. Use only if a freight/logistics member surface is found; otherwise downgrade to hold.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "medium",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "P30D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_vdv_de",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "rail_freight_directory",
+            "official_association_directory",
+            "public_transport_logistics_reference"
+          ],
+          "seed_surface_notes": "German transport association. Use only if a freight/logistics member surface is found; otherwise downgrade to hold.",
+          "seed_urls": [
+            {
+              "seed_url_code": "vdv_de_seed_01",
+              "url": "https://www.vdv.de/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "association_context_discovery_surface",
+        "directory_confidence": "low",
+        "catalog_activation_class": "accepted_disabled_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.vdv.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "bsk_kran_schwertransport",
+      "source_family_name": "Bsk Kran Schwertransport",
+      "source_host": "www.bsk-ffm.de",
+      "source_root_url": "https://www.bsk-ffm.de/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "project_cargo_directory",
+        "heavy_lift_directory",
+        "official_association_directory"
+      ],
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Heavy transport/crane association candidate. Member directory surface requires review.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "medium",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "P30D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_bsk_kran_schwertransport",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "project_cargo_directory",
+            "heavy_lift_directory",
+            "official_association_directory"
+          ],
+          "seed_surface_notes": "Heavy transport/crane association candidate. Member directory surface requires review.",
+          "seed_urls": [
+            {
+              "seed_url_code": "bsk_kran_schwertransport_seed_01",
+              "url": "https://www.bsk-ffm.de/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "association_discovery_surface",
+        "directory_confidence": "medium",
+        "catalog_activation_class": "accepted_disabled_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.bsk-ffm.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "transport_logistic_exhibitor_directory",
+      "source_family_name": "Transport Logistic Exhibitor Directory",
+      "source_host": "transportlogistic.de",
+      "source_root_url": "https://transportlogistic.de/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "trade_fair_exhibitor_directory",
+        "commercial_logistics_directory"
+      ],
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "German logistics trade fair source. Exact exhibitor directory URL must be verified before catalog activation.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "medium",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "P30D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_transport_logistic_exhibitor_directory",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "trade_fair_exhibitor_directory",
+            "commercial_logistics_directory"
+          ],
+          "seed_surface_notes": "German logistics trade fair source. Exact exhibitor directory URL must be verified before catalog activation.",
+          "seed_urls": [
+            {
+              "seed_url_code": "transport_logistic_exhibitor_directory_seed_01",
+              "url": "https://transportlogistic.de/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "trade_fair_discovery_surface",
+        "directory_confidence": "medium",
+        "catalog_activation_class": "accepted_disabled_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "transportlogistic.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "wlw_de",
+      "source_family_name": "Wlw De",
+      "source_host": "www.wlw.de",
+      "source_root_url": "https://www.wlw.de/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "commercial_logistics_directory",
+        "b2b_supplier_directory",
+        "road_freight_directory"
+      ],
+      "source_quality_tier": "B",
+      "source_selection_reason": "Commercial B2B discovery source. Combines logistics and spedition search surfaces under one source family to avoid duplicate host/source-family identity.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "low",
+      "default_max_depth": 2,
+      "default_recrawl_interval": "P60D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_wlw_de",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "commercial_logistics_directory",
+            "b2b_supplier_directory",
+            "road_freight_directory"
+          ],
+          "seed_surface_notes": "Commercial B2B discovery source. Combines logistics and spedition search surfaces under one source family to avoid duplicate host/source-family identity.",
+          "seed_urls": [
+            {
+              "seed_url_code": "wlw_de_seed_01",
+              "url": "https://www.wlw.de/de/suche/logistik/deutschland",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            },
+            {
+              "seed_url_code": "wlw_de_seed_02",
+              "url": "https://www.wlw.de/de/suche/speditionen/deutschland",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 2
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "commercial_directory_candidate",
+        "directory_confidence": "medium",
+        "catalog_activation_class": "accepted_disabled_commercial_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.wlw.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "kompass_de_transport_logistics",
+      "source_family_name": "Kompass De Transport Logistics",
+      "source_host": "www.kompass.com",
+      "source_root_url": "https://www.kompass.com/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "commercial_logistics_directory",
+        "b2b_supplier_directory"
+      ],
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Commercial directory already used in English seed family. Later decide whether German catalog owns local surface or references shared commercial source.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "medium",
+      "default_max_depth": 2,
+      "default_recrawl_interval": "P30D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_kompass_de_transport_logistics",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "commercial_logistics_directory",
+            "b2b_supplier_directory"
+          ],
+          "seed_surface_notes": "Commercial directory already used in English seed family. Later decide whether German catalog owns local surface or references shared commercial source.",
+          "seed_urls": [
+            {
+              "seed_url_code": "kompass_de_transport_logistics_seed_01",
+              "url": "https://www.kompass.com/z/de/a/transportation-and-logistics-services/75/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "commercial_directory_candidate",
+        "directory_confidence": "medium",
+        "catalog_activation_class": "accepted_disabled_commercial_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.kompass.com",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "freightnet_de",
+      "source_family_name": "Freightnet De",
+      "source_host": "www.freightnet.com",
+      "source_root_url": "https://www.freightnet.com/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "commercial_logistics_directory",
+        "freight_forwarder_directory",
+        "air_cargo_directory"
+      ],
+      "source_quality_tier": "B",
+      "source_selection_reason": "Commercial freight directory Germany pages. Useful discovery, not authority; apply low budget and diversity penalty.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "low",
+      "default_max_depth": 2,
+      "default_recrawl_interval": "P60D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_freightnet_de",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "commercial_logistics_directory",
+            "freight_forwarder_directory",
+            "air_cargo_directory"
+          ],
+          "seed_surface_notes": "Commercial freight directory Germany pages. Useful discovery, not authority; apply low budget and diversity penalty.",
+          "seed_urls": [
+            {
+              "seed_url_code": "freightnet_de_seed_01",
+              "url": "https://www.freightnet.com/directory/p1/cDE/s30.htm",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            },
+            {
+              "seed_url_code": "freightnet_de_seed_02",
+              "url": "https://www.freightnet.com/directory/p1/cDE/s4.htm",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 2
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "commercial_directory_candidate",
+        "directory_confidence": "medium",
+        "catalog_activation_class": "accepted_disabled_commercial_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.freightnet.com",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "cargoyellowpages_de",
+      "source_family_name": "Cargoyellowpages De",
+      "source_host": "www.cargoyellowpages.com",
+      "source_root_url": "https://www.cargoyellowpages.com/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "commercial_logistics_directory",
+        "air_cargo_directory"
+      ],
+      "source_quality_tier": "B",
+      "source_selection_reason": "Commercial cargo directory. Germany root is better than only Frankfurt airport page because it exposes city/airport route fan-out.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "low",
+      "default_max_depth": 2,
+      "default_recrawl_interval": "P60D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_cargoyellowpages_de",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "commercial_logistics_directory",
+            "air_cargo_directory"
+          ],
+          "seed_surface_notes": "Commercial cargo directory. Germany root is better than only Frankfurt airport page because it exposes city/airport route fan-out.",
+          "seed_urls": [
+            {
+              "seed_url_code": "cargoyellowpages_de_seed_01",
+              "url": "https://mobile.cargoyellowpages.com/germany/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            },
+            {
+              "seed_url_code": "cargoyellowpages_de_seed_02",
+              "url": "https://mobile.cargoyellowpages.com/germany/frankfurt-am-main-airport.html",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 2
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "commercial_directory_candidate",
+        "directory_confidence": "medium",
+        "catalog_activation_class": "accepted_disabled_commercial_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.cargoyellowpages.com",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "gelbe_seiten_spedition",
+      "source_family_name": "Gelbe Seiten Spedition",
+      "source_host": "www.gelbeseiten.de",
+      "source_root_url": "https://www.gelbeseiten.de/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "commercial_logistics_directory",
+        "road_freight_directory"
+      ],
+      "source_quality_tier": "B_MINUS",
+      "source_selection_reason": "Commercial local directory. Root is broad; exact query URL must be found before strong activation.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "P60D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_gelbe_seiten_spedition",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "commercial_logistics_directory",
+            "road_freight_directory"
+          ],
+          "seed_surface_notes": "Commercial local directory. Root is broad; exact query URL must be found before strong activation.",
+          "seed_urls": [
+            {
+              "seed_url_code": "gelbe_seiten_spedition_seed_01",
+              "url": "https://www.gelbeseiten.de/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "commercial_discovery_surface",
+        "directory_confidence": "low",
+        "catalog_activation_class": "accepted_disabled_low_priority_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.gelbeseiten.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "europages_de_transport_logistik",
+      "source_family_name": "Europages De Transport Logistik",
+      "source_host": "www.europages.de",
+      "source_root_url": "https://www.europages.de/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "commercial_logistics_directory",
+        "b2b_supplier_directory"
+      ],
+      "source_quality_tier": "B",
+      "source_selection_reason": "Commercial B2B discovery. Root is broad; exact category/query URL must be verified.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "P60D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_europages_de_transport_logistik",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "commercial_logistics_directory",
+            "b2b_supplier_directory"
+          ],
+          "seed_surface_notes": "Commercial B2B discovery. Root is broad; exact category/query URL must be verified.",
+          "seed_urls": [
+            {
+              "seed_url_code": "europages_de_transport_logistik_seed_01",
+              "url": "https://www.europages.de/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "commercial_discovery_surface",
+        "directory_confidence": "low",
+        "catalog_activation_class": "accepted_disabled_low_priority_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.europages.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "hamburg_de_logistik_branchenbuch",
+      "source_family_name": "Hamburg De Logistik Branchenbuch",
+      "source_host": "www.hamburg.de",
+      "source_root_url": "https://www.hamburg.de/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "commercial_logistics_directory",
+        "city_business_directory"
+      ],
+      "source_quality_tier": "B",
+      "source_selection_reason": "City/business directory discovery. Keep separate from Hafen Hamburg authority directory.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "low",
+      "default_max_depth": 2,
+      "default_recrawl_interval": "P60D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_hamburg_de_logistik_branchenbuch",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "commercial_logistics_directory",
+            "city_business_directory"
+          ],
+          "seed_surface_notes": "City/business directory discovery. Keep separate from Hafen Hamburg authority directory.",
+          "seed_urls": [
+            {
+              "seed_url_code": "hamburg_de_logistik_branchenbuch_seed_01",
+              "url": "https://www.hamburg.de/branchenbuch/hamburg/hafencity/10239793/n0/",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "commercial_directory_candidate",
+        "directory_confidence": "medium",
+        "catalog_activation_class": "accepted_disabled_commercial_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.hamburg.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "railmarket_de_logistics_companies",
+      "source_family_name": "Railmarket De Logistics Companies",
+      "source_host": "de.railmarket.com",
+      "source_root_url": "https://de.railmarket.com/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "rail_freight_directory",
+        "commercial_logistics_directory",
+        "b2b_supplier_directory"
+      ],
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "German RailMarket logistics-company listing. Direct company rows exist; rail/logistics scope is valuable but commercial and rail-biased.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "medium",
+      "default_max_depth": 2,
+      "default_recrawl_interval": "P30D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_railmarket_de_logistics_companies",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "rail_freight_directory",
+            "commercial_logistics_directory",
+            "b2b_supplier_directory"
+          ],
+          "seed_surface_notes": "German RailMarket logistics-company listing. Direct company rows exist; rail/logistics scope is valuable but commercial and rail-biased.",
+          "seed_urls": [
+            {
+              "seed_url_code": "railmarket_de_logistics_companies_seed_01",
+              "url": "https://de.railmarket.com/eu/germany/logistics-companies",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "commercial_rail_logistics_directory_candidate",
+        "directory_confidence": "high",
+        "catalog_activation_class": "accepted_disabled_commercial_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "de.railmarket.com",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "bvl_firmenmitglieder",
+      "source_family_name": "Bvl Firmenmitglieder",
+      "source_host": "www.bvl.de",
+      "source_root_url": "https://www.bvl.de/firmenmitglieder",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "official_association_directory",
+        "logistics_network_directory",
+        "company_member_directory"
+      ],
+      "source_quality_tier": "A",
+      "source_selection_reason": "BVL company-member profile directory. Strong association/member source; includes companies, universities, and research institutions, so extraction must classify entity type carefully.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "high",
+      "default_max_depth": 2,
+      "default_recrawl_interval": "P14D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_bvl_firmenmitglieder",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "official_association_directory",
+            "logistics_network_directory",
+            "company_member_directory"
+          ],
+          "seed_surface_notes": "BVL company-member profile directory. Strong association/member source; includes companies, universities, and research institutions, so extraction must classify entity type carefully.",
+          "seed_urls": [
+            {
+              "seed_url_code": "bvl_firmenmitglieder_seed_01",
+              "url": "https://www.bvl.de/firmenmitglieder",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "association_member_directory_candidate",
+        "directory_confidence": "high",
+        "catalog_activation_class": "accepted_disabled_directory_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.bvl.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    },
+    {
+      "source_family_code": "firmendatenbanken_logistik_unternehmen",
+      "source_family_name": "Firmendatenbanken Logistik Unternehmen",
+      "source_host": "www.firmendatenbanken.de",
+      "source_root_url": "https://www.firmendatenbanken.de/",
+      "source_language": "de",
+      "source_country_scope": [
+        "DE"
+      ],
+      "source_category": [
+        "commercial_logistics_directory",
+        "company_directory",
+        "b2b_supplier_directory"
+      ],
+      "source_quality_tier": "B",
+      "source_selection_reason": "Direct logistics-company list with firm detail links and pagination. Some data freshness indicators are older than one year, so keep B quality and review before activation.",
+      "source_status": "candidate_manifest_not_live",
+      "default_priority": "low",
+      "default_max_depth": 2,
+      "default_recrawl_interval": "P60D",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "primary_firmendatenbanken_logistik_unternehmen",
+          "seed_surface_type": "directory_or_discovery_entrypoint",
+          "seed_surface_category": [
+            "commercial_logistics_directory",
+            "company_directory",
+            "b2b_supplier_directory"
+          ],
+          "seed_surface_notes": "Direct logistics-company list with firm detail links and pagination. Some data freshness indicators are older than one year, so keep B quality and review before activation.",
+          "seed_urls": [
+            {
+              "seed_url_code": "firmendatenbanken_logistik_unternehmen_seed_01",
+              "url": "https://www.firmendatenbanken.de/firmen/liste/logistik-unternehmen/1.html",
+              "is_enabled": false,
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "live_check_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "seed_order": 1
+            }
+          ],
+          "robots_review_required": true,
+          "live_check_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        }
+      ],
+      "family_metadata": {
+        "decision_status": "ACCEPT_REVIEW",
+        "source_role": "commercial_directory_candidate",
+        "directory_confidence": "high",
+        "catalog_activation_class": "accepted_disabled_commercial_discovery_seed",
+        "family_review_state": "needs_live_check",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "host_budget_group": "www.firmendatenbanken.de",
+        "source_family_daily_visit_cap": 1,
+        "source_family_visit_policy": "manual_review_required_before_frontier",
+        "daily_family_budget_required": true,
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "added_seeds_lifecycle": "new links discovered by crawler_core remain raw candidates; parse_core pre-ranks; desktop_import reviews before promotion"
+      }
+    }
+  ]
+}
