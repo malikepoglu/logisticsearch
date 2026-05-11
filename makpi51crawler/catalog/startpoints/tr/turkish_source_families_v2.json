@@ -21,7 +21,9 @@
     "robots_first": true,
     "etag_last_modified_preferred_when_available": true,
     "same_host_review_spacing_seconds": 5,
-    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+    "source_family_daily_budget_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+    "turkish_policy_alignment_gate": "R105_TURKISH_POLICY_ALIGNMENT_PATCH"
   },
   "seed_contract_basis": {
     "source_table": "future_postgresql_jsonb_source_table",
@@ -57,7 +59,7 @@
       "notes": "GMBS ana entity extraction source; GGM ayrı source değil, official reference seed surface.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A_PLUS",
         "discovery_value": "high",
         "noise_risk": "low",
@@ -65,14 +67,20 @@
         "host_budget_group": "host:uygulama.gtb.gov.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "GMBS ana entity extraction source; GGM ayrı source değil, official reference seed surface."
+        "decision_doc_notes": "GMBS ana entity extraction source; GGM ayrı source değil, official reference seed surface.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -97,7 +105,9 @@
               "ggm_authority_reference_page"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 2
+            "seed_url_count": 2,
+            "daily_family_budget_required": true,
+            "source_family_code": "ticaret_gov_tr_gmbs"
           },
           "seed_urls": [
             {
@@ -181,7 +191,7 @@
       "notes": "PDF/link extraction gerektirebilir; seed_urls later live/probe ile netleşmeli. R41 refinement: remains ACCEPT_REVIEW because PDF/link extraction may be required before durable seed activation.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A_PLUS",
         "discovery_value": "high",
         "noise_risk": "low",
@@ -189,7 +199,7 @@
         "host_budget_group": "host:web.shgm.gov.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
@@ -198,7 +208,13 @@
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
         "decision_doc_notes": "PDF/link extraction gerektirebilir; seed_urls later live/probe ile netleşmeli.",
         "pdf_or_link_extraction_review_required": true,
-        "manifest_refinement_cycle": "R41"
+        "manifest_refinement_cycle": "R41",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -223,7 +239,9 @@
               "known_consignor_or_authorized_agent_context"
             ],
             "decision_status": "ACCEPT_REVIEW",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "shgm_hava_kargo_kuruluslari"
           },
           "seed_urls": [
             {
@@ -282,7 +300,7 @@
       "notes": "TR freight forwarding/logistics official association directory.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A",
         "discovery_value": "high",
         "noise_risk": "low",
@@ -290,14 +308,20 @@
         "host_budget_group": "host:www.utikad.org.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "TR freight forwarding/logistics official association directory."
+        "decision_doc_notes": "TR freight forwarding/logistics official association directory.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -322,7 +346,9 @@
               "utikad_member_rows"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "utikad_org_tr"
           },
           "seed_urls": [
             {
@@ -381,7 +407,7 @@
       "notes": "TR port/operator member directory.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A",
         "discovery_value": "high",
         "noise_risk": "low",
@@ -389,14 +415,20 @@
         "host_budget_group": "host:www.turklim.org",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "TR port/operator member directory."
+        "decision_doc_notes": "TR port/operator member directory.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -421,7 +453,9 @@
               "port_operator_cards"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "turklim_org_tr"
           },
           "seed_urls": [
             {
@@ -480,7 +514,7 @@
       "notes": "TR road freight member directory.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A",
         "discovery_value": "high",
         "noise_risk": "low",
@@ -488,14 +522,20 @@
         "host_budget_group": "host:www.und.org.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "TR road freight member directory."
+        "decision_doc_notes": "TR road freight member directory.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -520,7 +560,9 @@
               "road_freight_member_rows"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "und_org_tr"
           },
           "seed_urls": [
             {
@@ -579,7 +621,7 @@
       "notes": "Chamber-backed logistics member firm pages; pagination likely.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A",
         "discovery_value": "high",
         "noise_risk": "low",
@@ -587,14 +629,20 @@
         "host_budget_group": "host:ito.org.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Chamber-backed logistics member firm pages; pagination likely."
+        "decision_doc_notes": "Chamber-backed logistics member firm pages; pagination likely.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -619,7 +667,9 @@
               "ito_nace_fields"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "ito_lojistik_hizmetler"
           },
           "seed_urls": [
             {
@@ -678,7 +728,7 @@
       "notes": "Regional customs broker association with member/company find surfaces.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A",
         "discovery_value": "high",
         "noise_risk": "low",
@@ -686,14 +736,20 @@
         "host_budget_group": "host:www.igmd.org.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Regional customs broker association with member/company find surfaces."
+        "decision_doc_notes": "Regional customs broker association with member/company find surfaces.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -718,7 +774,9 @@
               "customs_broker_firm_pages"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 2
+            "seed_url_count": 2,
+            "daily_family_budget_required": true,
+            "source_family_code": "igmd_org_tr"
           },
           "seed_urls": [
             {
@@ -802,7 +860,7 @@
       "notes": "Regional customs broker member directory.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A_MINUS",
         "discovery_value": "medium_high",
         "noise_risk": "low_medium",
@@ -810,14 +868,20 @@
         "host_budget_group": "host:www.izmgmd.org.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Regional customs broker member directory."
+        "decision_doc_notes": "Regional customs broker member directory.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -842,7 +906,9 @@
               "member_detail_surface"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "izmgmd_org_tr"
           },
           "seed_urls": [
             {
@@ -902,7 +968,7 @@
       "notes": "Maritime chamber source; searchable member/ship surfaces need live review.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A_MINUS",
         "discovery_value": "medium_high",
         "noise_risk": "low_medium",
@@ -910,14 +976,20 @@
         "host_budget_group": "host:www.denizticaretodasi.org.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT_REVIEW",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Maritime chamber source; searchable member/ship surfaces need live review."
+        "decision_doc_notes": "Maritime chamber source; searchable member/ship surfaces need live review.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -944,7 +1016,9 @@
               "meslek_gruplari"
             ],
             "decision_status": "ACCEPT_REVIEW",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "denizticaretodasi_org_tr"
           },
           "seed_urls": [
             {
@@ -1003,7 +1077,7 @@
       "notes": "Exact logistics centers URL requires later live/link review; source family retained as infrastructure reference. R41 refinement: current root seed is accepted only as review placeholder; exact logistics centers/freight infrastructure seed must be found before live activation.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A_MINUS",
         "discovery_value": "medium_high",
         "noise_risk": "low_medium",
@@ -1011,7 +1085,7 @@
         "host_budget_group": "host:www.tcdd.gov.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
@@ -1021,7 +1095,13 @@
         "decision_doc_notes": "Exact logistics centers URL requires later live/link review; source family retained as infrastructure reference.",
         "seed_replacement_required": true,
         "seed_replacement_reason": "current seed is TCDD root site; exact logistics centers or rail logistics infrastructure page must be identified before live activation",
-        "manifest_refinement_cycle": "R41"
+        "manifest_refinement_cycle": "R41",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -1045,7 +1125,9 @@
               "location_based_logistics_infrastructure"
             ],
             "decision_status": "ACCEPT_REVIEW",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "tcdd_lojistik_merkezler"
           },
           "seed_urls": [
             {
@@ -1104,7 +1186,7 @@
       "notes": "Authorized air cargo agent surface; likely dynamic/search form.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A_MINUS",
         "discovery_value": "medium_high",
         "noise_risk": "low_medium",
@@ -1112,14 +1194,20 @@
         "host_budget_group": "host:www.turkishcargo.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Authorized air cargo agent surface; likely dynamic/search form."
+        "decision_doc_notes": "Authorized air cargo agent surface; likely dynamic/search form.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -1144,7 +1232,9 @@
               "station_qualification_context"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "turkishcargo_authorized_agents"
           },
           "seed_urls": [
             {
@@ -1204,7 +1294,7 @@
       "notes": "Airport cargo context source; company directory status requires review. R41 refinement: İGA is retained as a company/entity seed, not as a multi-company directory; link may still be used as a discovery/spreading seed.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A_MINUS",
         "discovery_value": "medium_high",
         "noise_risk": "low_medium",
@@ -1212,7 +1302,7 @@
         "host_budget_group": "host:www.igairport.aero",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
@@ -1224,7 +1314,13 @@
         "directory_like": false,
         "source_role": "single_company_entity_seed",
         "entity_handling_policy": "record_as_company_entity_not_multi_company_directory",
-        "manifest_refinement_cycle": "R41"
+        "manifest_refinement_cycle": "R41",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -1254,7 +1350,9 @@
             "entity_source": true,
             "directory_like": false,
             "source_role": "single_company_entity_seed",
-            "entity_handling_policy": "record_as_company_entity_not_multi_company_directory"
+            "entity_handling_policy": "record_as_company_entity_not_multi_company_directory",
+            "daily_family_budget_required": true,
+            "source_family_code": "iga_istanbul_airport_cargo"
           },
           "seed_urls": [
             {
@@ -1316,7 +1414,7 @@
       "notes": "Courier/cargo/post member company directory.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "A_MINUS",
         "discovery_value": "medium_high",
         "noise_risk": "low_medium",
@@ -1324,14 +1422,20 @@
         "host_budget_group": "host:karid.org.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Courier/cargo/post member company directory."
+        "decision_doc_notes": "Courier/cargo/post member company directory.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -1355,7 +1459,9 @@
               "member_company_profile_pages"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "karid_org_tr"
           },
           "seed_urls": [
             {
@@ -1414,7 +1520,7 @@
       "notes": "Trade fair exhibitor discovery.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "B_PLUS",
         "discovery_value": "medium_high",
         "noise_risk": "medium",
@@ -1422,14 +1528,22 @@
         "host_budget_group": "host:www.logitrans.istanbul",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Trade fair exhibitor discovery."
+        "decision_doc_notes": "Trade fair exhibitor discovery.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate",
+        "dynamic_review_required": true,
+        "plain_http_activation_allowed": false
       },
       "seed_surfaces": [
         {
@@ -1454,7 +1568,9 @@
               "exhibitor_company_rows"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "logitrans_istanbul"
           },
           "seed_urls": [
             {
@@ -1513,7 +1629,7 @@
       "notes": "Private/newer logistics association member list.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "B_PLUS",
         "discovery_value": "medium_high",
         "noise_risk": "medium",
@@ -1521,14 +1637,20 @@
         "host_budget_group": "host:www.lojider.org.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "Private/newer logistics association member list."
+        "decision_doc_notes": "Private/newer logistics association member list.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -1553,7 +1675,9 @@
               "member_website_links"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 1
+            "seed_url_count": 1,
+            "daily_family_budget_required": true,
+            "source_family_code": "lojider_org_tr"
           },
           "seed_urls": [
             {
@@ -1613,7 +1737,7 @@
       "notes": "Commercial directory; good discovery but live/noise review required. R41 refinement: commercial discovery directory quality downgraded from B_PLUS to B; ACCEPT_REVIEW remains required.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "B",
         "discovery_value": "medium_high",
         "noise_risk": "medium",
@@ -1621,7 +1745,7 @@
         "host_budget_group": "host:www.find.com.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
@@ -1629,7 +1753,13 @@
         "decision_status": "ACCEPT_REVIEW",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
         "decision_doc_notes": "Commercial directory; good discovery but live/noise review required.",
-        "manifest_refinement_cycle": "R41"
+        "manifest_refinement_cycle": "R41",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -1656,7 +1786,9 @@
             ],
             "decision_status": "ACCEPT_REVIEW",
             "seed_url_count": 1,
-            "source_quality_tier": "B"
+            "source_quality_tier": "B",
+            "daily_family_budget_required": true,
+            "source_family_code": "find_com_tr_lojistik_tasimacilik"
           },
           "seed_urls": [
             {
@@ -1715,7 +1847,7 @@
       "notes": "User-approved B-tier Turkish commercial/road freight discovery source.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "B",
         "discovery_value": "medium",
         "noise_risk": "medium",
@@ -1723,14 +1855,20 @@
         "host_budget_group": "host:www.nakliyerehberim.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
         "family_review_state": "needs_live_check",
         "decision_status": "ACCEPT",
         "decision_doc": "docs/TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_URLS_DECISION_2026_05_10.md",
-        "decision_doc_notes": "User-approved B-tier Turkish commercial/road freight discovery source."
+        "decision_doc_notes": "User-approved B-tier Turkish commercial/road freight discovery source.",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -1757,7 +1895,9 @@
               "parsiyel_tasima_country_pages"
             ],
             "decision_status": "ACCEPT",
-            "seed_url_count": 3
+            "seed_url_count": 3,
+            "daily_family_budget_required": true,
+            "source_family_code": "nakliyerehberim_com"
           },
           "seed_urls": [
             {
@@ -1866,7 +2006,7 @@
       "notes": "Company rows exist; data hygiene/live review required. R41 refinement: source reportedly contains 34 companies; crawl once for extraction evidence, then disable/remove this seed after audit if complete.",
       "family_metadata": {
         "lang_code": "tr",
-        "quality_model_version": "six_tier_v1",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
         "trust_tier": "B",
         "discovery_value": "medium",
         "noise_risk": "medium",
@@ -1874,7 +2014,7 @@
         "host_budget_group": "host:www.tnd.org.tr",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "runtime_activation_policy": "manual_review_required_before_frontier",
         "human_review_required_before_frontier": true,
         "live_check_required": true,
         "robots_review_required": true,
@@ -1886,7 +2026,13 @@
         "one_time_extraction_policy": "extract_34_companies_once_then_disable_or_remove_seed_after_evidence_audit",
         "seed_retention_policy": "temporary_one_time_extraction_seed",
         "manifest_followup_required": true,
-        "manifest_refinement_cycle": "R41"
+        "manifest_refinement_cycle": "R41",
+        "source_family_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "daily_family_budget_required": true,
+        "scheduler_diversity_policy": "eligible_but_do_not_dominate"
       },
       "seed_surfaces": [
         {
@@ -1913,7 +2059,9 @@
             "seed_url_count": 1,
             "expected_company_count": 34,
             "one_time_extraction_policy": "extract_34_companies_once_then_disable_or_remove_seed_after_evidence_audit",
-            "seed_retention_policy": "temporary_one_time_extraction_seed"
+            "seed_retention_policy": "temporary_one_time_extraction_seed",
+            "daily_family_budget_required": true,
+            "source_family_code": "tnd_org_tr_firmalar"
           },
           "seed_urls": [
             {
