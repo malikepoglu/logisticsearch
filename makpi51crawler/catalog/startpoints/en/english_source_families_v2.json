@@ -1,6 +1,6 @@
 {
   "catalog_version": "english_source_families_v2",
-  "catalog_status": "candidate_review_only",
+  "catalog_status": "candidate_manifest_not_live",
   "catalog_scope": {
     "lang_code": "en",
     "lang_name": "English",
@@ -8,7 +8,11 @@
     "fixed_target_count": null,
     "review_rule": "each_seed_checked_individually_before_db_insert",
     "cross_seed_traversal_enabled": true,
-    "cross_language_traversal_enabled": true
+    "cross_language_traversal_enabled": true,
+    "catalog_scope": "crawler_core_startpoint_source_families",
+    "source_table": "future_postgresql_jsonb_source_table",
+    "seed_url_table": "future_postgresql_jsonb_seed_url_table",
+    "activation_boundary": "pi51c_live_probe_required_before_db_or_frontier_insert"
   },
   "seed_contract_basis": {
     "source_table": "seed.source",
@@ -38,7 +42,13 @@
     "minimum_spacing_guidance": {
       "same_host_review_spacing_seconds": 120,
       "same_source_review_spacing_seconds": 30
-    }
+    },
+    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+    "human_review_required_before_frontier": true,
+    "live_check_required": true,
+    "robots_review_required": true,
+    "initial_seed_enabled": false,
+    "review_state": "needs_live_check"
   },
   "source_families": [
     {
@@ -64,13 +74,15 @@
         "noise_risk": "low",
         "manual_review_priority": 10,
         "live_check_required": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:fiata.org",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "quality_model_version": "six_tier_v1",
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "human_review_required_before_frontier": true
+        "human_review_required_before_frontier": true,
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -83,14 +95,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://fiata.org/directory/",
               "canonical_url": "https://fiata.org/directory/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 230,
               "max_depth": 2,
               "recrawl_interval": "14 days",
@@ -100,7 +113,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Global FIATA directory root entrypoint."
             }
@@ -116,14 +130,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://fiata.org/directory/gb/",
               "canonical_url": "https://fiata.org/directory/gb/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 225,
               "max_depth": 2,
               "recrawl_interval": "14 days",
@@ -133,7 +148,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "FIATA directory page for United Kingdom."
             }
@@ -168,13 +184,15 @@
         "noise_risk": "low",
         "manual_review_priority": 10,
         "live_check_required": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:bifa.org",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "quality_model_version": "six_tier_v1",
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "human_review_required_before_frontier": true
+        "human_review_required_before_frontier": true,
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -186,14 +204,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://bifa.org/members/",
               "canonical_url": "https://bifa.org/members/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 220,
               "max_depth": 2,
               "recrawl_interval": "14 days",
@@ -203,7 +222,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "BIFA members directory."
             }
@@ -218,14 +238,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "search_surface",
               "submitted_url": "https://bifa.org/membership/member-search/search-results/",
               "canonical_url": "https://bifa.org/membership/member-search/search-results/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 210,
               "max_depth": 2,
               "recrawl_interval": "14 days",
@@ -235,7 +256,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "BIFA member search results surface."
             }
@@ -250,14 +272,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "listing_index",
               "submitted_url": "https://bifa.org/membership/recent-new-members/",
               "canonical_url": "https://bifa.org/membership/recent-new-members/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 200,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -267,7 +290,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "BIFA recent new members discovery surface."
             }
@@ -302,13 +326,15 @@
         "noise_risk": "low",
         "manual_review_priority": 10,
         "live_check_required": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.iela.org",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "quality_model_version": "six_tier_v1",
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "human_review_required_before_frontier": true
+        "human_review_required_before_frontier": true,
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -320,14 +346,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.iela.org/members/find-an-iela-member.html",
               "canonical_url": "https://www.iela.org/members/find-an-iela-member.html",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 215,
               "max_depth": 2,
               "recrawl_interval": "21 days",
@@ -337,7 +364,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "IELA member finder."
             }
@@ -372,13 +400,15 @@
         "noise_risk": "medium",
         "manual_review_priority": 20,
         "live_check_required": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.freightnet.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
         "quality_model_version": "six_tier_v1",
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "human_review_required_before_frontier": true
+        "human_review_required_before_frontier": true,
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -390,14 +420,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.freightnet.com/directory/p1/cAA/s30.htm",
               "canonical_url": "https://www.freightnet.com/directory/p1/cAA/s30.htm",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 175,
               "max_depth": 2,
               "recrawl_interval": "21 days",
@@ -407,7 +438,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Freightnet global freight forwarders directory."
             }
@@ -423,14 +455,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.freightnet.com/directory/p1/cGB/s30.htm",
               "canonical_url": "https://www.freightnet.com/directory/p1/cGB/s30.htm",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 170,
               "max_depth": 2,
               "recrawl_interval": "21 days",
@@ -440,7 +473,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Freightnet UK freight forwarders directory."
             }
@@ -456,14 +490,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.freightnet.com/directory/p1/cUS/s30.htm",
               "canonical_url": "https://www.freightnet.com/directory/p1/cUS/s30.htm",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 170,
               "max_depth": 2,
               "recrawl_interval": "21 days",
@@ -473,7 +508,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Freightnet USA freight forwarders directory."
             }
@@ -489,14 +525,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.freightnet.com/directory/p1/cDE/s30.htm",
               "canonical_url": "https://www.freightnet.com/directory/p1/cDE/s30.htm",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 168,
               "max_depth": 2,
               "recrawl_interval": "21 days",
@@ -506,7 +543,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Freightnet Germany freight forwarders directory."
             }
@@ -522,14 +560,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.freightnet.com/directory/p9/cDE/s99.htm",
               "canonical_url": "https://www.freightnet.com/directory/p9/cDE/s99.htm",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 162,
               "max_depth": 2,
               "recrawl_interval": "21 days",
@@ -539,7 +578,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Freightnet Germany logistics companies directory."
             }
@@ -574,13 +614,15 @@
         "noise_risk": "medium_high",
         "manual_review_priority": 25,
         "live_check_required": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.thomasnet.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": false,
         "quality_model_version": "six_tier_v1",
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "human_review_required_before_frontier": true
+        "human_review_required_before_frontier": true,
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -592,14 +634,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.thomasnet.com/browse/services/shipping-transportation-services-1.html",
               "canonical_url": "https://www.thomasnet.com/browse/services/shipping-transportation-services-1.html",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 150,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -609,7 +652,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Thomasnet shipping and transportation category index."
             }
@@ -624,14 +668,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.thomasnet.com/suppliers/usa/transportation-brokers-87443032",
               "canonical_url": "https://www.thomasnet.com/suppliers/usa/transportation-brokers-87443032",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 145,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -641,7 +686,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Thomasnet transportation brokers category page."
             }
@@ -656,14 +702,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.thomasnet.com/suppliers/usa/transportation-services-87443313",
               "canonical_url": "https://www.thomasnet.com/suppliers/usa/transportation-services-87443313",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 145,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -673,7 +720,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Thomasnet transportation services category page."
             }
@@ -688,14 +736,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.thomasnet.com/suppliers/usa/shipping-services-74980905",
               "canonical_url": "https://www.thomasnet.com/suppliers/usa/shipping-services-74980905",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 142,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -705,7 +754,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Thomasnet shipping services category page."
             }
@@ -720,14 +770,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.thomasnet.com/suppliers/usa/delivery-services-1496",
               "canonical_url": "https://www.thomasnet.com/suppliers/usa/delivery-services-1496",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 138,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -737,7 +788,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Thomasnet delivery services category page."
             }
@@ -772,13 +824,15 @@
         "noise_risk": "low_medium",
         "manual_review_priority": 15,
         "live_check_required": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "family:wcaworld.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "quality_model_version": "six_tier_v1",
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "human_review_required_before_frontier": true
+        "human_review_required_before_frontier": true,
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -790,14 +844,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.wcaworld.com/directory",
               "canonical_url": "https://www.wcaworld.com/directory",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 210,
               "max_depth": 2,
               "recrawl_interval": "21 days",
@@ -807,7 +862,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "WCAworld directory root."
             }
@@ -822,14 +878,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.wcaworld.com/networks/generalnetworks",
               "canonical_url": "https://www.wcaworld.com/networks/generalnetworks",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 205,
               "max_depth": 1,
               "recrawl_interval": "21 days",
@@ -839,7 +896,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "WCAworld general networks overview."
             }
@@ -854,14 +912,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.wcaworld.com/networks/ecommercenetworks",
               "canonical_url": "https://www.wcaworld.com/networks/ecommercenetworks",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 195,
               "max_depth": 1,
               "recrawl_interval": "21 days",
@@ -871,7 +930,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "WCAworld eCommerce network overview."
             }
@@ -906,13 +966,15 @@
         "noise_risk": "medium_high",
         "manual_review_priority": 25,
         "live_check_required": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "family:kompass.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "quality_model_version": "six_tier_v1",
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "human_review_required_before_frontier": true
+        "human_review_required_before_frontier": true,
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -925,14 +987,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.kompass.com/z/de/a/transportation-and-logistics-services/75/",
               "canonical_url": "https://www.kompass.com/z/de/a/transportation-and-logistics-services/75/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 148,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -942,7 +1005,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Kompass Germany transportation and logistics services."
             }
@@ -958,14 +1022,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://us.kompass.com/z/de/s/transport-logistics/10/r/north-rhine-westphalia/de_05/",
               "canonical_url": "https://us.kompass.com/z/de/s/transport-logistics/10/r/north-rhine-westphalia/de_05/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 144,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -975,7 +1040,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Kompass NRW transport and logistics directory."
             }
@@ -991,14 +1057,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://sg.kompass.com/z/de/s/transport-logistics/10/d/dusseldorf/de_05_05111/",
               "canonical_url": "https://sg.kompass.com/z/de/s/transport-logistics/10/d/dusseldorf/de_05_05111/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 140,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1008,7 +1075,8 @@
                 "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
                 "live_check_required": true,
                 "human_review_required_before_frontier": true,
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Kompass Düsseldorf transport and logistics directory."
             }
@@ -1047,10 +1115,12 @@
         "live_check_required": true,
         "noise_risk": "LOW",
         "discovery_value": "US customs broker and freight forwarder membership search candidate.",
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "english_association_directory",
         "quality_model_version": "six_tier_v1",
-        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+        "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1062,7 +1132,7 @@
             {
               "submitted_url": "https://www.ncbfaa.org/search-our-membership",
               "canonical_url": "https://www.ncbfaa.org/search-our-membership",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 86,
               "max_depth": 1,
               "recrawl_interval": "14 days",
@@ -1076,7 +1146,8 @@
                 "human_review_required_before_frontier": true,
                 "review_state": "needs_live_check",
                 "lang_code": "en",
-                "quality_model_version": "six_tier_v1"
+                "quality_model_version": "six_tier_v1",
+                "robots_review_required": true
               },
               "notes": "Initial NCBFAA English source seed. Added one-at-a-time after probe and schema repair.",
               "seed_type": "member_search_page",
@@ -1095,7 +1166,8 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "human_review_required_before_frontier": true,
             "live_check_required": true,
-            "quality_model_version": "six_tier_v1"
+            "quality_model_version": "six_tier_v1",
+            "robots_review_required": true
           },
           "surface_language": "en",
           "surface_priority": 80
@@ -1132,12 +1204,14 @@
         "manual_review_priority": 10,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.ciffa.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1151,14 +1225,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.ciffa.com/member-directory/",
               "canonical_url": "https://www.ciffa.com/member-directory/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 218,
               "max_depth": 2,
               "recrawl_interval": "14 days",
@@ -1171,7 +1246,8 @@
                 "source_family_code": "ciffa_com",
                 "source_host": "www.ciffa.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1208,12 +1284,14 @@
         "manual_review_priority": 10,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.iata.org",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1227,14 +1305,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.iata.org/en/publications/directories/cargolink/",
               "canonical_url": "https://www.iata.org/en/publications/directories/cargolink/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 216,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1247,7 +1326,8 @@
                 "source_family_code": "iata_cargolink",
                 "source_host": "www.iata.org",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1264,14 +1344,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.iata.org/en/publications/directories/cargolink/directory/",
               "canonical_url": "https://www.iata.org/en/publications/directories/cargolink/directory/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 214,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1284,7 +1365,8 @@
                 "source_family_code": "iata_cargolink",
                 "source_host": "www.iata.org",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1321,12 +1403,14 @@
         "manual_review_priority": 12,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:iffcbano.org",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1340,14 +1424,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://iffcbano.org/members/",
               "canonical_url": "https://iffcbano.org/members/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 188,
               "max_depth": 2,
               "recrawl_interval": "21 days",
@@ -1360,7 +1445,8 @@
                 "source_family_code": "iffcbano_org",
                 "source_host": "iffcbano.org",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1397,12 +1483,14 @@
         "manual_review_priority": 18,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.df-alliance.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1416,14 +1504,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.df-alliance.com/benefits/member-directory",
               "canonical_url": "https://www.df-alliance.com/benefits/member-directory",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 166,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1436,7 +1525,8 @@
                 "source_family_code": "df_alliance_com",
                 "source_host": "www.df-alliance.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1473,12 +1563,14 @@
         "manual_review_priority": 18,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.all-forward.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1492,14 +1584,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.all-forward.com/MembersDirectory",
               "canonical_url": "https://www.all-forward.com/MembersDirectory",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 164,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1512,7 +1605,8 @@
                 "source_family_code": "all_forward_com",
                 "source_host": "www.all-forward.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1549,12 +1643,14 @@
         "manual_review_priority": 20,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:wnaweb.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1568,14 +1664,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://wnaweb.com/member-s-directory",
               "canonical_url": "https://wnaweb.com/member-s-directory",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 160,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1588,7 +1685,8 @@
                 "source_family_code": "wnaweb_com",
                 "source_host": "wnaweb.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1625,12 +1723,14 @@
         "manual_review_priority": 24,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:gffdirectory.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1644,14 +1744,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://gffdirectory.com/",
               "canonical_url": "https://gffdirectory.com/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 142,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1664,7 +1765,8 @@
                 "source_family_code": "gffdirectory_com",
                 "source_host": "gffdirectory.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1701,12 +1803,14 @@
         "manual_review_priority": 24,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:freighthub.co",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1720,14 +1824,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://freighthub.co/",
               "canonical_url": "https://freighthub.co/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 140,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1740,7 +1845,8 @@
                 "source_family_code": "freighthub_co",
                 "source_host": "freighthub.co",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1777,12 +1883,14 @@
         "manual_review_priority": 18,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:freightmidpoint.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1796,14 +1904,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://freightmidpoint.com/Directory/",
               "canonical_url": "https://freightmidpoint.com/Directory/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 158,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1816,7 +1925,8 @@
                 "source_family_code": "freightmidpoint_com",
                 "source_host": "freightmidpoint.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1853,12 +1963,14 @@
         "manual_review_priority": 18,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:fncnetwork.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1872,14 +1984,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://fncnetwork.com/directory",
               "canonical_url": "https://fncnetwork.com/directory",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 156,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1892,7 +2005,8 @@
                 "source_family_code": "fncnetwork_com",
                 "source_host": "fncnetwork.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -1929,12 +2043,14 @@
         "manual_review_priority": 20,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:overseasprojectcargo.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -1948,14 +2064,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://overseasprojectcargo.com/Directory/",
               "canonical_url": "https://overseasprojectcargo.com/Directory/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 154,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -1968,7 +2085,8 @@
                 "source_family_code": "overseasprojectcargo_com",
                 "source_host": "overseasprojectcargo.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -2005,12 +2123,14 @@
         "manual_review_priority": 24,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.olofamily.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -2024,14 +2144,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.olofamily.com/Member/Company_1.html",
               "canonical_url": "https://www.olofamily.com/Member/Company_1.html",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 138,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -2044,7 +2165,8 @@
                 "source_family_code": "olofamily_com",
                 "source_host": "www.olofamily.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -2081,12 +2203,14 @@
         "manual_review_priority": 24,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:forwarders.gocomet.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -2100,14 +2224,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://forwarders.gocomet.com/",
               "canonical_url": "https://forwarders.gocomet.com/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 136,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -2120,7 +2245,8 @@
                 "source_family_code": "gocomet_forwarders",
                 "source_host": "forwarders.gocomet.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -2157,12 +2283,14 @@
         "manual_review_priority": 28,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:logisticscompaniesdirectory.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -2176,14 +2304,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://logisticscompaniesdirectory.com/",
               "canonical_url": "https://logisticscompaniesdirectory.com/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 126,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -2196,7 +2325,8 @@
                 "source_family_code": "logisticscompaniesdirectory_com",
                 "source_host": "logisticscompaniesdirectory.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -2233,12 +2363,14 @@
         "manual_review_priority": 24,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.cargoyellowpages.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -2252,14 +2384,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.cargoyellowpages.com/en/directory.html",
               "canonical_url": "https://www.cargoyellowpages.com/en/directory.html",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 132,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -2272,7 +2405,8 @@
                 "source_family_code": "cargoyellowpages_com",
                 "source_host": "www.cargoyellowpages.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -2309,12 +2443,14 @@
         "manual_review_priority": 28,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.jctrans.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -2328,14 +2464,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.jctrans.com/en/company/list",
               "canonical_url": "https://www.jctrans.com/en/company/list",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 130,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -2348,7 +2485,8 @@
                 "source_family_code": "jctrans_com",
                 "source_host": "www.jctrans.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -2385,12 +2523,14 @@
         "manual_review_priority": 22,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:aircargogroup.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -2404,14 +2544,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://aircargogroup.com/network/",
               "canonical_url": "https://aircargogroup.com/network/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 150,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -2424,7 +2565,8 @@
                 "source_family_code": "aircargogroup_com",
                 "source_host": "aircargogroup.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -2461,12 +2603,14 @@
         "manual_review_priority": 16,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.clecat.org",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -2480,14 +2624,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.clecat.org/members/full-members",
               "canonical_url": "https://www.clecat.org/members/full-members",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 172,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -2500,7 +2645,8 @@
                 "source_family_code": "clecat_org",
                 "source_host": "www.clecat.org",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
@@ -2537,12 +2683,14 @@
         "manual_review_priority": 16,
         "live_check_required": true,
         "human_review_required_before_frontier": true,
-        "family_review_state": "needs_pi51c_live_probe",
+        "family_review_state": "needs_live_check",
         "host_budget_group": "host:www.ibs-ev.com",
         "cross_seed_traversal_allowed": true,
         "cross_language_traversal_allowed": true,
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH"
+        "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
+        "decision_status": "ACCEPT_REVIEW",
+        "robots_review_required": true
       },
       "seed_surfaces": [
         {
@@ -2556,14 +2704,15 @@
             "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
             "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
             "human_review_required_before_frontier": true,
-            "live_check_required": true
+            "live_check_required": true,
+            "robots_review_required": true
           },
           "seed_urls": [
             {
               "seed_type": "entrypoint",
               "submitted_url": "https://www.ibs-ev.com/en/members/member-directory/",
               "canonical_url": "https://www.ibs-ev.com/en/members/member-directory/",
-              "is_enabled": true,
+              "is_enabled": false,
               "priority": 170,
               "max_depth": 1,
               "recrawl_interval": "30 days",
@@ -2576,7 +2725,8 @@
                 "source_family_code": "ibs_ev_com",
                 "source_host": "www.ibs-ev.com",
                 "live_check_required": true,
-                "human_review_required_before_frontier": true
+                "human_review_required_before_frontier": true,
+                "robots_review_required": true
               },
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
