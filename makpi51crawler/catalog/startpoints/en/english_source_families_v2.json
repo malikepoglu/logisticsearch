@@ -48,7 +48,9 @@
     "live_check_required": true,
     "robots_review_required": true,
     "initial_seed_enabled": false,
-    "review_state": "needs_live_check"
+    "review_state": "needs_live_check",
+    "source_family_daily_budget_policy_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md",
+    "english_expansion_gate": "R103_R3_ENGLISH_SOURCE_FAMILY_EXPANSION_PATCH_FIXED"
   },
   "source_families": [
     {
@@ -408,7 +410,10 @@
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
         "human_review_required_before_frontier": true,
         "decision_status": "ACCEPT_REVIEW",
-        "robots_review_required": true
+        "robots_review_required": true,
+        "domain_dominance_limit_required": true,
+        "scheduler_diversity_penalty_required": true,
+        "source_family_visit_policy": "domain_dominance_limited_cross_seed_rotation"
       },
       "seed_surfaces": [
         {
@@ -584,6 +589,19 @@
               "notes": "Freightnet Germany logistics companies directory."
             }
           ]
+        },
+        {
+          "surface_code": "freightnet_country_category_aa_s99",
+          "surface_name": "Freightnet country/category AA s99",
+          "surface_type": "country_category_directory",
+          "seed_urls": [
+            "https://www.freightnet.com/directory/p1/cAA/s99.htm"
+          ],
+          "surface_metadata": {
+            "site_internal_code_review_required": true,
+            "domain_dominance_limit_required": true,
+            "robots_review_required": true
+          }
         }
       ],
       "source_country_scope": "global",
@@ -832,7 +850,14 @@
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
         "human_review_required_before_frontier": true,
         "decision_status": "ACCEPT_REVIEW",
-        "robots_review_required": true
+        "robots_review_required": true,
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "country_rotation_enabled": true,
+        "country_rotation_value_kind": "ISO_3166_ALPHA2",
+        "rate_limit_observed_by_operator": true,
+        "rate_limit_risk": "high"
       },
       "seed_surfaces": [
         {
@@ -936,6 +961,25 @@
               "notes": "WCAworld eCommerce network overview."
             }
           ]
+        },
+        {
+          "surface_code": "wcaworld_country_directory_nl_sample",
+          "surface_name": "WCAworld country directory NL sample",
+          "surface_type": "country_parameterized_directory",
+          "seed_urls": [
+            "https://www.wcaworld.com/Directory?siteID=24&au=&pageIndex=1&pageSize=50&searchby=CountryCode&country=NL&city=&keyword=&orderby=CountryCity&networkIds=1&networkIds=2&networkIds=3&networkIds=4&networkIds=61&networkIds=98&networkIds=108&networkIds=118&networkIds=5&networkIds=22&networkIds=13&networkIds=18&networkIds=15&networkIds=16&networkIds=38&networkIds=107&networkIds=124&layout=v1&submitted=search"
+          ],
+          "surface_metadata": {
+            "template_variables": [
+              "country_code",
+              "pageIndex"
+            ],
+            "country_code_value_kind": "ISO_3166_ALPHA2",
+            "sample_country_code": "NL",
+            "daily_family_budget_required": true,
+            "rate_limit_observed_by_operator": true,
+            "robots_review_required": true
+          }
         }
       ],
       "source_country_scope": "global",
@@ -2450,7 +2494,10 @@
         "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
         "r6c_decision": "ACCEPT_TO_R7_CATALOG_CANDIDATE_PATCH",
         "decision_status": "ACCEPT_REVIEW",
-        "robots_review_required": true
+        "robots_review_required": true,
+        "strict_robots_review_required": true,
+        "country_or_slug_template_discovery_required": true,
+        "source_family_visit_policy": "strict_robots_review_then_template_discovery"
       },
       "seed_surfaces": [
         {
@@ -2491,6 +2538,18 @@
               "notes": "R7 English catalog candidate seed. Pi51c live probe required before DB/frontier insertion."
             }
           ]
+        },
+        {
+          "surface_code": "jctrans_en_company_directory",
+          "surface_name": "JCTrans English company directory",
+          "surface_type": "company_directory",
+          "seed_urls": [
+            "https://www.jctrans.com/en/company/"
+          ],
+          "surface_metadata": {
+            "country_or_slug_template_discovery_required": true,
+            "robots_review_required": true
+          }
         }
       ],
       "source_country_scope": "global",
@@ -2737,6 +2796,739 @@
       "source_language": "en",
       "source_quality_tier": "A_MINUS",
       "source_selection_reason": "Member-directory candidate with downloadable/searchable member list surface."
+    },
+    {
+      "source_family_code": "zendeq_com",
+      "source_family_name": "ZENDEQ Company Directory",
+      "source_host": "zendeq.com",
+      "source_root_url": "https://www.zendeq.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "structured_company_directory",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Structured company directory with country, service, transport mode, industry, and cargo-condition filters.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "medium",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "45 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "zendeq_company_directory",
+          "surface_name": "ZENDEQ company directory",
+          "surface_type": "company_directory",
+          "seed_urls": [
+            "https://www.zendeq.com/company-directory/"
+          ],
+          "surface_metadata": {
+            "robots_review_required": true,
+            "filter_surface_available": true,
+            "live_check_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "zendeq_com",
+        "trust_tier": "candidate_structured_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "high_filter_value",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "medium",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
+    },
+    {
+      "source_family_code": "logisticslist_com",
+      "source_family_name": "Logistics List",
+      "source_host": "logisticslist.com",
+      "source_root_url": "https://www.logisticslist.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "regional_or_service_directory",
+      "source_quality_tier": "B",
+      "source_selection_reason": "Logistics and 3PL directory candidate with state/service-oriented discovery value.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "60 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "logisticslist_root",
+          "surface_name": "Logistics List root",
+          "surface_type": "directory_root",
+          "seed_urls": [
+            "https://www.logisticslist.com/"
+          ],
+          "surface_metadata": {
+            "robots_review_required": true,
+            "manual_quality_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "logisticslist_com",
+        "trust_tier": "candidate",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "candidate_source_expansion",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
+    },
+    {
+      "source_family_code": "ruzave_com",
+      "source_family_name": "Ruzave",
+      "source_host": "ruzave.com",
+      "source_root_url": "https://ruzave.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "shipping_freight_marketplace_directory",
+      "source_quality_tier": "B_MINUS",
+      "source_selection_reason": "Shipping and freight directory/marketplace candidate; dynamic and noise risk requires manual review.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "90 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "ruzave_root",
+          "surface_name": "Ruzave root",
+          "surface_type": "marketplace_or_directory_root",
+          "seed_urls": [
+            "https://ruzave.com/"
+          ],
+          "surface_metadata": {
+            "robots_review_required": true,
+            "dynamic_review_required": true,
+            "manual_quality_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "ruzave_com",
+        "trust_tier": "candidate_dynamic_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "shipping_marketplace_candidate",
+        "noise_risk": "high",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
+    },
+    {
+      "source_family_code": "transportlogistic_exhibitors",
+      "source_family_name": "Transport Logistic Exhibitors",
+      "source_host": "exhibitors.transportlogistic.de",
+      "source_root_url": "https://exhibitors.transportlogistic.de/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "event_exhibitor_directory",
+      "source_quality_tier": "B_PLUS",
+      "source_selection_reason": "Transport Logistic exhibitor directory; high industry relevance, but JS/robot gate means not plain-HTTP live until separately reviewed.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "90 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "transportlogistic_exhibitors_en",
+          "surface_name": "Transport Logistic exhibitors English",
+          "surface_type": "event_exhibitor_directory",
+          "seed_urls": [
+            "https://exhibitors.transportlogistic.de/en/"
+          ],
+          "surface_metadata": {
+            "plain_http_activation_allowed": false,
+            "browser_or_snapshot_review_required": true,
+            "robots_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "transportlogistic_exhibitors",
+        "trust_tier": "candidate_event_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "trade_fair_exhibitor_discovery",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
+    },
+    {
+      "source_family_code": "lognetglobal_com",
+      "source_family_name": "Lognet Global Directory",
+      "source_host": "lognetglobal.com",
+      "source_root_url": "https://www.lognetglobal.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "global_network_directory_rate_limited",
+      "source_quality_tier": "A_MINUS",
+      "source_selection_reason": "Country-parameterized global network directory; valuable but should use strict low-frequency family budget.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "medium",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "30 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "lognetglobal_country_directory_tr_sample",
+          "surface_name": "Lognet Global country directory TR sample",
+          "surface_type": "country_parameterized_directory",
+          "seed_urls": [
+            "https://www.lognetglobal.com/directory?siteID=61&au=&pageIndex=1&pageSize=50&networkIds=61&networkIds=97&searchby=CountryCode&country=TR&city=&keyword=&orderby=CountryCity&submitted=search"
+          ],
+          "surface_metadata": {
+            "template_variables": [
+              "country_code",
+              "pageIndex"
+            ],
+            "country_code_value_kind": "ISO_3166_ALPHA2",
+            "sample_country_code": "TR",
+            "daily_family_budget_required": true,
+            "robots_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "lognetglobal_com",
+        "trust_tier": "candidate_global_network_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "country_parameterized_network_directory",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "medium",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "source_family_daily_visit_cap": 1,
+        "source_family_daily_visit_cap_unit": "seed_surface",
+        "source_family_visit_policy": "max_one_seed_surface_per_day_until_rate_limit_policy_is_known",
+        "country_rotation_enabled": true,
+        "country_rotation_value_kind": "ISO_3166_ALPHA2",
+        "rate_limit_risk": "high"
+      }
+    },
+    {
+      "source_family_code": "trademo_com",
+      "source_family_name": "Trademo Logistics Companies",
+      "source_host": "trademo.com",
+      "source_root_url": "https://www.trademo.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "commercial_logistics_company_directory",
+      "source_quality_tier": "B",
+      "source_selection_reason": "Alphabet/page-parameterized logistics company directory candidate.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "60 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "trademo_all_logistics_companies_a_1",
+          "surface_name": "Trademo all logistics companies A page 1",
+          "surface_type": "alphabet_page_directory",
+          "seed_urls": [
+            "https://www.trademo.com/all-logistics-companies/a/1"
+          ],
+          "surface_metadata": {
+            "template_variables": [
+              "letter",
+              "page"
+            ],
+            "low_frequency_rotation_required": true,
+            "robots_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "trademo_com",
+        "trust_tier": "candidate_commercial_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "alphabet_page_directory",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "alphabet_page_rotation_required": true,
+        "template_variables": [
+          "letter",
+          "page"
+        ]
+      }
+    },
+    {
+      "source_family_code": "indianlogisticsinfo_com",
+      "source_family_name": "Indian Logistics Info",
+      "source_host": "indianlogisticsinfo.com",
+      "source_root_url": "https://www.indianlogisticsinfo.com/",
+      "source_language": "en",
+      "source_country_scope": "IN",
+      "source_category": "india_regional_directory",
+      "source_quality_tier": "B",
+      "source_selection_reason": "India-focused logistics directory with regional/category discovery value.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "60 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "indianlogisticsinfo_root",
+          "surface_name": "Indian Logistics Info root",
+          "surface_type": "regional_directory_root",
+          "seed_urls": [
+            "https://www.indianlogisticsinfo.com/"
+          ],
+          "surface_metadata": {
+            "region_focus": "IN",
+            "robots_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "indianlogisticsinfo_com",
+        "trust_tier": "candidate_regional_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "india_regional_directory",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
+    },
+    {
+      "source_family_code": "freightvaluation_com",
+      "source_family_name": "Freight Valuation",
+      "source_host": "freightvaluation.com",
+      "source_root_url": "https://www.freightvaluation.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "freight_directory_with_india_bias",
+      "source_quality_tier": "B",
+      "source_selection_reason": "Freight/logistics directory candidate; requires content and country-bias review.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "60 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "freightvaluation_root",
+          "surface_name": "Freight Valuation root",
+          "surface_type": "directory_root",
+          "seed_urls": [
+            "https://www.freightvaluation.com/"
+          ],
+          "surface_metadata": {
+            "manual_quality_review_required": true,
+            "robots_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "freightvaluation_com",
+        "trust_tier": "candidate_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "freight_directory_candidate",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
+    },
+    {
+      "source_family_code": "searates_com",
+      "source_family_name": "SeaRates Carrier Directory",
+      "source_host": "searates.com",
+      "source_root_url": "https://www.searates.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "carrier_directory",
+      "source_quality_tier": "B_MINUS",
+      "source_selection_reason": "Carrier directory candidate; provided path is /de/ so language and dynamic behavior require review before English activation.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "90 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "searates_carrier_directory_de_path_review",
+          "surface_name": "SeaRates carrier directory path review",
+          "surface_type": "carrier_directory",
+          "seed_urls": [
+            "https://www.searates.com/de/carrier-directory/"
+          ],
+          "surface_metadata": {
+            "language_path": "de",
+            "english_catalog_review_required": true,
+            "dynamic_review_required": true,
+            "robots_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "searates_com",
+        "trust_tier": "candidate_carrier_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "carrier_directory_candidate",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
+    },
+    {
+      "source_family_code": "fleetdirectory_com",
+      "source_family_name": "Fleet Directory",
+      "source_host": "fleetdirectory.com",
+      "source_root_url": "https://www.fleetdirectory.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "fleet_directory",
+      "source_quality_tier": "B_MINUS",
+      "source_selection_reason": "Fleet directory candidate; relevance to freight/logistics entities requires manual review.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "90 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "fleetdirectory_root",
+          "surface_name": "Fleet Directory root",
+          "surface_type": "fleet_directory_root",
+          "seed_urls": [
+            "https://www.fleetdirectory.com/"
+          ],
+          "surface_metadata": {
+            "manual_quality_review_required": true,
+            "robots_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "fleetdirectory_com",
+        "trust_tier": "candidate_uncertain_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "fleet_directory_candidate",
+        "noise_risk": "high",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
+    },
+    {
+      "source_family_code": "ttnews_com",
+      "source_family_name": "Transport Topics",
+      "source_host": "ttnews.com",
+      "source_root_url": "https://www.ttnews.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "sector_news_discovery",
+      "source_quality_tier": "B_MINUS",
+      "source_selection_reason": "Sector news/discovery source, not primary company directory; useful for later discovery and context.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "90 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "ttnews_root",
+          "surface_name": "Transport Topics root",
+          "surface_type": "sector_news_root",
+          "seed_urls": [
+            "https://www.ttnews.com/"
+          ],
+          "surface_metadata": {
+            "not_primary_company_directory": true,
+            "manual_quality_review_required": true,
+            "robots_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "ttnews_com",
+        "trust_tier": "candidate_news_source",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "sector_news_context",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
+    },
+    {
+      "source_family_code": "big_picture_logistics",
+      "source_family_name": "Big Picture Logistics Companies Directory",
+      "source_host": "big-picture.com",
+      "source_root_url": "https://big-picture.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "logtech_discovery",
+      "source_quality_tier": "B_MINUS",
+      "source_selection_reason": "Logtech/startup discovery list, not a primary freight-forwarder directory.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "90 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "big_picture_logistics_companies_directory",
+          "surface_name": "Big Picture logistics companies directory",
+          "surface_type": "logtech_directory_page",
+          "seed_urls": [
+            "https://big-picture.com/logistics-companies-directory.html"
+          ],
+          "surface_metadata": {
+            "not_primary_freight_directory": true,
+            "manual_quality_review_required": true,
+            "robots_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "big_picture_logistics",
+        "trust_tier": "candidate_logtech_discovery",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "logtech_context_source",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
+    },
+    {
+      "source_family_code": "lane_list_com",
+      "source_family_name": "LaneList",
+      "source_host": "lane-list.com",
+      "source_root_url": "https://www.lane-list.com/",
+      "source_language": "en",
+      "source_country_scope": "global",
+      "source_category": "lane_carrier_directory",
+      "source_quality_tier": "B",
+      "source_selection_reason": "European carrier/lane discovery source with origin/destination country and transport-type filter potential.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "60 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "lane_list_en",
+          "surface_name": "LaneList English carrier/lane surface",
+          "surface_type": "lane_carrier_directory",
+          "seed_urls": [
+            "https://www.lane-list.com/en/"
+          ],
+          "surface_metadata": {
+            "origin_country_filter_candidate": true,
+            "destination_country_filter_candidate": true,
+            "transport_type_filter_candidate": true,
+            "robots_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "lane_list_com",
+        "trust_tier": "candidate_lane_carrier_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "lane_carrier_discovery",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true,
+        "lane_filter_discovery_required": true,
+        "origin_destination_country_template_candidate": true
+      }
+    },
+    {
+      "source_family_code": "nationallogisticsdirectory_com",
+      "source_family_name": "National Logistics Directory",
+      "source_host": "nationallogisticsdirectory.com",
+      "source_root_url": "https://nationallogisticsdirectory.com/",
+      "source_language": "en",
+      "source_country_scope": "US",
+      "source_category": "us_logistics_directory",
+      "source_quality_tier": "B",
+      "source_selection_reason": "US-focused logistics directory candidate covering 3PL, freight forwarders, warehousing, and logistics partners.",
+      "source_status": "candidate_pending_live_check",
+      "default_priority": "low",
+      "default_max_depth": 1,
+      "default_recrawl_interval": "60 days",
+      "allowed_schemes": [
+        "https"
+      ],
+      "seed_surfaces": [
+        {
+          "surface_code": "nationallogisticsdirectory_root",
+          "surface_name": "National Logistics Directory root",
+          "surface_type": "us_logistics_directory_root",
+          "seed_urls": [
+            "https://nationallogisticsdirectory.com/"
+          ],
+          "surface_metadata": {
+            "region_focus": "US",
+            "robots_review_required": true,
+            "manual_quality_review_required": true
+          }
+        }
+      ],
+      "notes": [],
+      "family_metadata": {
+        "lang_code": "en",
+        "host_budget_group": "nationallogisticsdirectory_com",
+        "trust_tier": "candidate_us_directory",
+        "quality_model_version": "source_family_budget_policy_2026_05_11",
+        "discovery_value": "us_logistics_directory",
+        "noise_risk": "medium",
+        "robots_review_required": true,
+        "live_check_required": true,
+        "human_review_required_before_frontier": true,
+        "runtime_activation_policy": "manual_review_required_before_frontier",
+        "family_review_state": "candidate_pending_live_check",
+        "decision_status": "candidate_added_to_catalog_not_live",
+        "manual_review_priority": "low",
+        "cross_seed_traversal_allowed": true,
+        "cross_language_traversal_allowed": true
+      }
     }
   ]
 }
