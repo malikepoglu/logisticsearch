@@ -11,7 +11,12 @@
     "cross_language_traversal_enabled": true,
     "cross_seed_traversal_enabled": true,
     "variable_capacity_model": true,
-    "fixed_target_count": null
+    "fixed_target_count": null,
+    "raw_link_lifecycle_policy": "crawler_core_raw_links_are_not_added_seeds_parse_core_creates_added_seeds_after_pre_ranking_desktop_import_final_ranks",
+    "crawler_core_added_seeds_generation_allowed": false,
+    "added_seeds_owner": "parse_core_after_pre_ranking",
+    "raw_link_lifecycle_note": "Crawler_Core stores discovered links only as raw links/raw evidence. Raw links are not added_seeds. Parse_Core creates added_seeds after pre-ranking raw links as seed candidates. Desktop_Import on Ubuntu Desktop converts pre-ranking into real ranking/final rank and review. Crawler_Core, Parse_Core, and Desktop_Import will remain continuously improved and updated.",
+    "ranking_owner": "desktop_import_on_ubuntu_desktop"
   },
   "crawl_review_policy": {
     "policy_version": "de_review_policy_v1",

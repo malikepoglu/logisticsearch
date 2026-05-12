@@ -1045,3 +1045,17 @@ crawler_core tarafından toplanan yeni ana linkler körlemesine aktif edilmez. B
   }
 ]
 ```
+
+## Crawler raw links vs added_seeds lifecycle
+
+Crawler_Core stores discovered links only as raw links/raw evidence.
+
+Raw links are not added_seeds.
+
+Raw links may be unrelated to logistics and must not be auto-promoted by Crawler_Core.
+
+Parse_Core creates added_seeds after pre-ranking raw links as seed candidates.
+
+Desktop_Import on Ubuntu Desktop converts pre-ranking into real ranking/final rank and review.
+
+The Crawler_Core, Parse_Core, and Desktop_Import pipeline will remain continuously improved and updated as the system matures.
