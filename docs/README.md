@@ -112,38 +112,38 @@ Use this reading order.
 
 ### Reading path A — beginner path for crawler lifecycle understanding
 
-1. `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`  
+1. `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`
    Start here to understand the big picture of URL lifecycle, ownership, retry, revisit, recovery, and current known gaps.
 
-2. `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`  
+2. `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
    Read this second to understand what a crawler worker is expected to do in practice.
 
-3. `SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`  
+3. `SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`
    Read this third to understand the lease-renewal SQL surface and why it was added.
 
-4. `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`  
+4. `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
    Read this fourth to understand the strict worker-side rule around lease renewal.
 
-5. `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`  
+5. `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
    Read this fifth to understand deliberate stop behavior, drain mode, bounded shutdown, and recovery expectations.
-6. `SECTION1_WEBCRAWLER_CONTROLS.md`  
+6. `SECTION1_WEBCRAWLER_CONTROLS.md`
    Read this sixth to understand the full top-level control family and its boundary against shutdown-class commands.
 
 ### Reading path B — repo governance / documentation discipline
 
-1. `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`  
+1. `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
    Read this to understand how repository artifacts and controlled work surfaces are named and kept disciplined.
 2. `TOPIC_RUNBOOK_AUTHORING_AND_EXECUTION_DISCIPLINE.md`
    Read this next to understand how real runbooks must be authored, audited, and kept aligned with the repository explanation surfaces.
 
 ### Reading path C — specific historical operational seal
 
-1. `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`  
+1. `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`
    Read this only when you specifically need the recorded truth of that PostgreSQL major-upgrade seal point.
 
 ### Reading path D — geospatial application surface boundary
 
-1. `SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`  
+1. `SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`
    Read this when you need the current boundary between crawler-side geospatial acquisition/enrichment and later application-side map rendering, live tracking, and operator-facing geospatial screens.
 
 ---
@@ -156,38 +156,38 @@ Dosyaları rastgele açma.
 
 ### Okuma yolu A — crawler yaşam döngüsünü anlamak için başlangıç yolu
 
-1. `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`  
+1. `SECTION1_WEBCRAWLER_LIFECYCLE_CONTRACT.md`
    Büyük resmi anlamak için buradan başla: URL yaşam döngüsü, sahiplik, retry, revisit, recovery ve mevcut bilinen boşluklar.
 
-2. `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`  
+2. `SECTION1_WEBCRAWLER_WORKER_OPERATIONAL_CONTRACT.md`
    Crawler worker’ın pratikte ne yapmasının beklendiğini anlamak için bunu ikinci sırada oku.
 
-3. `SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`  
+3. `SECTION1_WEBCRAWLER_LEASE_RENEWAL_CONTRACT.md`
    Lease-renewal SQL yüzeyini ve neden eklendiğini anlamak için bunu üçüncü sırada oku.
 
-4. `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`  
+4. `SECTION1_WEBCRAWLER_WORKER_HEARTBEAT_OPERATING_RULE.md`
    Lease renewal etrafındaki katı worker-tarafı kuralı anlamak için bunu dördüncü sırada oku.
 
-5. `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`  
+5. `SECTION1_WEBCRAWLER_DRAIN_AND_GRACEFUL_SHUTDOWN_CONTRACT.md`
    Bilinçli durdurma davranışını, drain mode’u, bounded shutdown’ı ve recovery beklentilerini anlamak için bunu beşinci sırada oku.
-6. `SECTION1_WEBCRAWLER_CONTROLS.md`  
+6. `SECTION1_WEBCRAWLER_CONTROLS.md`
    Tüm üst-seviye kontrol ailesini ve bunun shutdown-sınıfı komutlardan sınırını anlamak için bunu altıncı sırada oku.
 
 ### Okuma yolu B — repo yönetişimi / dokümantasyon disiplini
 
-1. `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`  
+1. `TOPIC_REPOSITORY_ARTIFACT_NUMBERING_STANDARD.md`
    Repository artefact’larının ve kontrollü çalışma yüzeylerinin nasıl adlandırıldığını ve disiplinli tutulduğunu anlamak için bunu oku.
 2. `TOPIC_RUNBOOK_AUTHORING_AND_EXECUTION_DISCIPLINE.md`
    Gerçek runbook’ların nasıl yazılması, audit edilmesi ve repository açıklama yüzeyleriyle hizalı tutulması gerektiğini anlamak için bunu ardından oku.
 
 ### Okuma yolu C — belirli tarihsel operasyon mührü
 
-1. `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`  
+1. `TOPIC_PI51_POSTGRESQL_18_MAJOR_UPGRADE_SEAL_2026-04-06.md`
    Bunu yalnızca o PostgreSQL major-upgrade mühür noktasının kaydedilmiş doğrusuna özel olarak ihtiyaç duyduğunda oku.
 
 ### Okuma yolu D — coğrafi uygulama yüzeyi sınırı
 
-1. `SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`  
+1. `SECTIONX_MAP_STACK_AND_GEOSPATIAL_APPLICATION_SURFACE.md`
    Bunu, crawler tarafındaki coğrafi veri edinimi/zenginleştirmesi ile daha sonraki uygulama tarafı harita gösterimi, canlı takip ve operatör-yüzlü coğrafi ekranlar arasındaki güncel sınırı anlaman gerektiğinde oku.
 
 ---
@@ -626,11 +626,13 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | English (`en`) | [`english_source_families_v2.json`](../makpi51crawler/catalog/startpoints/en/english_source_families_v2.json) | sealed candidate manifest, not live | 41 | 60 | 60 |
 | Turkish (`tr`) | [`turkish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/tr/turkish_source_families_v2.json) | sealed candidate manifest, not live | 18 | 18 | 22 |
 | German (`de`) | [`german_source_families_v2.json`](../makpi51crawler/catalog/startpoints/de/german_source_families_v2.json) | sealed candidate manifest, not live | 19 | 19 | 23 |
+| Arabic (`ar`) | [`arabic_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ar/arabic_source_families_v2.json) | sealed candidate manifest, not live | 18 | 30 | 30 |
 
 ### Source-seed policy and decision records
 
 - [`TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md`](TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md)
 - [`TOPIC_CRAWLER_CORE_GERMAN_SOURCE_SEED_URLS_DECISION_2026_05_11.md`](TOPIC_CRAWLER_CORE_GERMAN_SOURCE_SEED_URLS_DECISION_2026_05_11.md)
+- [`TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_URLS_DECISION_2026_05_12.md`](TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_URLS_DECISION_2026_05_12.md)
 
 ### Boundary rule
 
