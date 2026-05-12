@@ -92,6 +92,7 @@ Every future Arabic catalog seed must start with:
 | ACCEPT | A_PLUS | `eg_eiffa_members_directory` | EIFFA Members Directory | `https://eiffa.com/members-directory/` | Egyptian International Freight Forwarding Association member directory. Direct Egypt freight-forwarding company coverage. |
 | ACCEPT | A_PLUS | `sa_zatca_fasah_customs_brokers_directory` | Saudi ZATCA / Fasah customs brokers directory surface | `https://zatca.gov.sa/en/eServices/Pages/eServices_272.aspx` and `https://www.fasah.sa/trade/home/en/` | Official Saudi customs broker / customs license surface. Customs broker data is high-value logistics evidence. Needs live-probe because workflow may be form/search based. |
 | ACCEPT | A_PLUS | `bh_customs_clearing_agencies_directory` | Bahrain eGov / Customs Affairs clearing agencies directory | `https://services.bahrain.bh/wps/portal/CCAS_en` | Official Bahrain customs clearing agencies directory. High authority and directly relevant. |
+| ACCEPT | A_PLUS | `om_customs_clearance_companies_directory` | Oman Customs clearance companies directory | `https://www.customs.gov.om/ar/clearance-companies/` | Official Oman customs clearance-company directory. High-value customs/logistics signal. Arabic surface; needs live-probe for exact crawl path and subcategory behavior. |
 | ACCEPT | A_PLUS | `om_fiata_country_member_directory` | FIATA Oman country member directory | `https://fiata.org/directory/om/` | Direct individual freight/logistics members for Oman. Useful because official Oman Customs company surface may be harder to crawl reliably. |
 
 ### ACCEPT / A or A_MINUS — strong directories with controlled scope
@@ -173,7 +174,7 @@ For the future catalog JSON, do not include every candidate as a separate source
 
 Recommended initial catalog shape:
 
-- Approximate source families / grouped surfaces: 18–22
+- Approximate source families / grouped surfaces: 19–22
 - Direct association/customs directories: 7–9
 - FIATA grouped source-family: 1 family with multiple country seed surfaces
 - Commercial directories: 3–5, all low-depth and manual-review
@@ -185,20 +186,21 @@ Suggested first catalog group list:
 2. `eg_eiffa_members_directory`
 3. `sa_zatca_fasah_customs_brokers_directory`
 4. `bh_customs_clearing_agencies_directory`
-5. `jo_jla_general_assembly_members`
-6. `ae_fta_clearing_companies`
-7. `ae_tamm_clearing_agent_directory`
-8. `ae_dubai_south_company_directory_logistics_filter`
-9. `ae_emirates_shipping_association_members`
-10. `fiata_mena_arabic_region_member_directory_shared`
-11. `freightnet_arabic_region_country_pages`
-12. `cargoyellowpages_arabic_region_country_pages`
-13. `yellowpages_uae_logistics_freight_forwarders`
-14. `iata_cargolink_directory`
-15. `wcaworld_directory_shared`
-16. `jctrans_country_surfaces`
-17. `qa_qafl_authority_reference`
-18. `ma_affm_authority_reference`
+5. `om_customs_clearance_companies_directory`
+6. `jo_jla_general_assembly_members`
+7. `ae_fta_clearing_companies`
+8. `ae_tamm_clearing_agent_directory`
+9. `ae_dubai_south_company_directory_logistics_filter`
+10. `ae_emirates_shipping_association_members`
+11. `fiata_mena_arabic_region_member_directory_shared`
+12. `freightnet_arabic_region_country_pages`
+13. `cargoyellowpages_arabic_region_country_pages`
+14. `yellowpages_uae_logistics_freight_forwarders`
+15. `iata_cargolink_directory`
+16. `wcaworld_directory_shared`
+17. `jctrans_country_surfaces`
+18. `qa_qafl_authority_reference`
+19. `ma_affm_authority_reference`
 
 ## Arabic-specific crawl policy notes
 
