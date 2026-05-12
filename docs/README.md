@@ -628,7 +628,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | German (`de`) | [`german_source_families_v2.json`](../makpi51crawler/catalog/startpoints/de/german_source_families_v2.json) | sealed candidate manifest, not live | 19 | 19 | 23 |
 | Arabic (`ar`) | [`arabic_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ar/arabic_source_families_v2.json) | sealed candidate manifest, not live | 18 | 30 | 30 |
 | Chinese (`zh`) | [`chinese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/zh/chinese_source_families_v2.json) | sealed candidate manifest, not live | 105 | 106 | 106 |
-| French (`fr`) | [`french_source_families_v2.json`](../makpi51crawler/catalog/startpoints/fr/french_source_families_v2.json) | sealed candidate manifest, not live | 49 | 88 | 88 |
+| French (`fr`) | [`french_source_families_v2.json`](../makpi51crawler/catalog/startpoints/fr/french_source_families_v2.json) | sealed candidate manifest, not live | 37 | 72 | 72 |
 
 ### Source-seed policy and decision records
 
