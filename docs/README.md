@@ -612,3 +612,28 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 - Boundary: Ubuntu Desktop + GitHub only until a later explicit pi51c sync gate; no runtime, DB, crawler, or systemd mutation from this documentation step.
 
 <!-- SOURCE_SEED_R5B_README_INDEX_END -->
+
+<!-- SOURCE_SEED_STARTPOINTS_INDEX_2026_05_12_BEGIN -->
+
+## Crawler Core source-seed / startpoints index
+
+This index anchors the current crawler_core source/seed catalog work so the 25-language rollout does not drift.
+
+### Current sealed startpoint catalogs
+
+| Language | Catalog | Status | Source families | Seed surfaces | Seed URLs |
+|---|---|---:|---:|---:|---:|
+| English (`en`) | [`english_source_families_v2.json`](../makpi51crawler/catalog/startpoints/en/english_source_families_v2.json) | sealed candidate manifest, not live | 41 | 60 | 60 |
+| Turkish (`tr`) | [`turkish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/tr/turkish_source_families_v2.json) | sealed candidate manifest, not live | 18 | 18 | 22 |
+| German (`de`) | [`german_source_families_v2.json`](../makpi51crawler/catalog/startpoints/de/german_source_families_v2.json) | sealed candidate manifest, not live | 19 | 19 | 23 |
+
+### Source-seed policy and decision records
+
+- [`TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md`](TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md)
+- [`TOPIC_CRAWLER_CORE_GERMAN_SOURCE_SEED_URLS_DECISION_2026_05_11.md`](TOPIC_CRAWLER_CORE_GERMAN_SOURCE_SEED_URLS_DECISION_2026_05_11.md)
+
+### Boundary rule
+
+Crawler_Core stores discovered page links only as raw link evidence. Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-ranking. Desktop_Import on Ubuntu Desktop converts pre-ranking into real ranking/final rank.
+
+<!-- SOURCE_SEED_STARTPOINTS_INDEX_2026_05_12_END -->
