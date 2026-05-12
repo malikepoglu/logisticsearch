@@ -627,12 +627,14 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Turkish (`tr`) | [`turkish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/tr/turkish_source_families_v2.json) | sealed candidate manifest, not live | 18 | 18 | 22 |
 | German (`de`) | [`german_source_families_v2.json`](../makpi51crawler/catalog/startpoints/de/german_source_families_v2.json) | sealed candidate manifest, not live | 19 | 19 | 23 |
 | Arabic (`ar`) | [`arabic_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ar/arabic_source_families_v2.json) | sealed candidate manifest, not live | 18 | 30 | 30 |
+| Chinese (`zh`) | [`chinese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/zh/chinese_source_families_v2.json) | sealed candidate manifest, not live | 105 | 106 | 106 |
 
 ### Source-seed policy and decision records
 
 - [`TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md`](TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md)
 - [`TOPIC_CRAWLER_CORE_GERMAN_SOURCE_SEED_URLS_DECISION_2026_05_11.md`](TOPIC_CRAWLER_CORE_GERMAN_SOURCE_SEED_URLS_DECISION_2026_05_11.md)
 - [`TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_URLS_DECISION_2026_05_12.md`](TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_URLS_DECISION_2026_05_12.md)
+- [`TOPIC_CRAWLER_CORE_CHINESE_SOURCE_SEED_URLS_DECISION_2026_05_12.md`](TOPIC_CRAWLER_CORE_CHINESE_SOURCE_SEED_URLS_DECISION_2026_05_12.md)
 
 ### Boundary rule
 
