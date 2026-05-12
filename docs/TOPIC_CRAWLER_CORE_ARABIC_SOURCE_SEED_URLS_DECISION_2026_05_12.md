@@ -107,6 +107,8 @@ Every future Arabic catalog seed must start with:
 
 ### FIATA shared MENA / Arabic-region source-family
 
+Modeling note: Morocco / AFFM remains only as the `https://fiata.org/directory/ma/` HOLD surface inside `fiata_mena_arabic_region_member_directory_shared`; it must not be created as a standalone top-level source family from the same FIATA host. Do not split FIATA country pages into separate top-level source families.
+
 FIATA is a strong source, but it is a single host. To prevent domain dominance, FIATA country pages must not be modeled as many independent source families.
 
 Recommended future catalog model:
@@ -154,7 +156,6 @@ Recommended future catalog model:
 | Decision | Proposed source_code | Source | URL | Why |
 |---|---|---|---|---|
 | HOLD | `qa_qafl_authority_reference` | Qatar Association for Freight Forwarding and Logistics / Qatar Chamber | `https://www.qatarchamber.com/qafl/` | Strong authority context; direct operational company directory not confirmed as a stable crawl surface in this pass. |
-| HOLD | `ma_affm_authority_reference` | Moroccan freight forwarders association / FIATA Morocco reference | `https://fiata.org/directory/ma/` | Association context; direct company directory not confirmed enough for core startpoint. |
 | HOLD | `jo_jla_authority_context` | Jordanian Logistics Association general association page | `https://www.jla.jo/` | Authority context; actual directory candidate is the `/en/companies.php` surface. |
 | HOLD | `ae_jafza_logistics_context` | JAFZA logistics/free-zone context | `https://www.jafza.ae/` | Important logistics ecosystem context, but not a direct firm directory startpoint by itself. |
 
@@ -174,7 +175,7 @@ For the future catalog JSON, do not include every candidate as a separate source
 
 Recommended initial catalog shape:
 
-- Approximate source families / grouped surfaces: 19–22
+- Approximate source families / grouped surfaces: 18–22
 - Direct association/customs directories: 7–9
 - FIATA grouped source-family: 1 family with multiple country seed surfaces
 - Commercial directories: 3–5, all low-depth and manual-review
@@ -200,7 +201,6 @@ Suggested first catalog group list:
 16. `wcaworld_directory_shared`
 17. `jctrans_country_surfaces`
 18. `qa_qafl_authority_reference`
-19. `ma_affm_authority_reference`
 
 ## Arabic-specific crawl policy notes
 
