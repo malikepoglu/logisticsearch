@@ -623,7 +623,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 
 | Language | Catalog | Status | Source families | Seed surfaces | Seed URLs |
 |---|---|---:|---:|---:|---:|
-| English (`en`) | [`english_source_families_v2.json`](../makpi51crawler/catalog/startpoints/en/english_source_families_v2.json) | sealed candidate manifest, not live | 41 | 60 | 60 |
+| English (`en`) | [`english_source_families_v2.json`](../makpi51crawler/catalog/startpoints/en/english_source_families_v2.json) | sealed candidate manifest, not live | 171 | 450 | 450 |
 | Turkish (`tr`) | [`turkish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/tr/turkish_source_families_v2.json) | sealed candidate manifest, not live | 18 | 18 | 22 |
 | German (`de`) | [`german_source_families_v2.json`](../makpi51crawler/catalog/startpoints/de/german_source_families_v2.json) | sealed candidate manifest, not live | 19 | 19 | 23 |
 | Arabic (`ar`) | [`arabic_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ar/arabic_source_families_v2.json) | sealed candidate manifest, not live | 18 | 30 | 30 |
