@@ -626,7 +626,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | English (`en`) | [`english_source_families_v2.json`](../makpi51crawler/catalog/startpoints/en/english_source_families_v2.json) | sealed candidate manifest, not live | 171 | 450 | 450 |
 | Turkish (`tr`) | [`turkish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/tr/turkish_source_families_v2.json) | sealed candidate manifest, not live | 40 | 80 | 77 |
 | German (`de`) | [`german_source_families_v2.json`](../makpi51crawler/catalog/startpoints/de/german_source_families_v2.json) | sealed candidate manifest, not live | 41 | 80 | 81 |
-| Arabic (`ar`) | [`arabic_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ar/arabic_source_families_v2.json) | sealed candidate manifest, not live | 18 | 30 | 30 |
+| Arabic (`ar`) | [`arabic_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ar/arabic_source_families_v2.json) | sealed candidate manifest, not live | 40 | 80 | 80 |
 | Chinese (`zh`) | [`chinese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/zh/chinese_source_families_v2.json) | sealed candidate manifest, not live | 105 | 106 | 106 |
 | French (`fr`) | [`french_source_families_v2.json`](../makpi51crawler/catalog/startpoints/fr/french_source_families_v2.json) | sealed candidate manifest, not live | 37 | 72 | 72 |
 
@@ -637,6 +637,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_ENGLISH_SOURCE_SEED_SUPER_EXPANSION_DECISION_2026_05_13.md`](TOPIC_CRAWLER_CORE_ENGLISH_SOURCE_SEED_SUPER_EXPANSION_DECISION_2026_05_13.md)
 - [`TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_BACKFILL_DECISION_2026_05_13.md`](TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_BACKFILL_DECISION_2026_05_13.md)
 - [`TOPIC_CRAWLER_CORE_GERMAN_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md`](TOPIC_CRAWLER_CORE_GERMAN_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md)
+- [`TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md`](TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md)
 - [`TOPIC_CRAWLER_CORE_GERMAN_SOURCE_SEED_URLS_DECISION_2026_05_11.md`](TOPIC_CRAWLER_CORE_GERMAN_SOURCE_SEED_URLS_DECISION_2026_05_11.md)
 - [`TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_URLS_DECISION_2026_05_12.md`](TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_URLS_DECISION_2026_05_12.md)
 - [`TOPIC_CRAWLER_CORE_CHINESE_SOURCE_SEED_URLS_DECISION_2026_05_12.md`](TOPIC_CRAWLER_CORE_CHINESE_SOURCE_SEED_URLS_DECISION_2026_05_12.md)
