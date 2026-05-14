@@ -1,1367 +1,3222 @@
 {
-  "canonical_head_at_creation": "8395bc3602c1a437271035d7d518bcba033f9a8b",
-  "catalog_status": "candidate_manifest_not_live",
-  "catalog_version": "arabic_source_families_v2",
-  "crawler_start_allowed_in_catalog_gate": false,
-  "created_at": "2026-05-12T02:53:21Z",
-  "created_by_gate": "SOURCE_SEED_R135_ARABIC_CATALOG_MANIFEST_PATCH_LOCAL_ONLY",
-  "db_insert_allowed": false,
-  "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_URLS_DECISION_2026_05_12.md",
-  "decision_doc_sha256": "4e248cd26066f38e355285167d37808e4415d4761e8889e11047c263ed57c0bf",
-  "decision_status_counts": {
-    "ACCEPT": 5,
-    "ACCEPT_REVIEW": 9,
-    "HOLD": 4
-  },
-  "global_policy": {
-    "all_seed_surfaces_is_enabled": false,
-    "all_seed_surfaces_need_live_check": true,
-    "all_source_families_is_enabled": false,
-    "all_source_families_need_live_check": true,
-    "desktop_import_converts_preranking_to_final_rank": true,
-    "do_not_split_fiata_country_pages_into_separate_top_level_source_families": true,
-    "manual_review_required": true,
-    "max_initial_depth_default": 0,
-    "no_aggressive_pagination": true,
-    "no_db_insert": true,
-    "no_live_frontier_activation": true,
-    "no_url_fetch": true,
-    "parse_core_creates_added_seeds_after_preranking": true,
-    "raw_links_are_not_added_seeds": true,
-    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-    "same_day_full_country_expansion": false
-  },
-  "host_surface_counts": {
-    "7emirates.com": 1,
-    "dubaisouth.my.salesforce-sites.com": 1,
-    "eiffa.com": 1,
-    "fiata.org": 12,
-    "nafl.ae": 1,
-    "services.bahrain.bh": 1,
-    "tax.gov.ae": 1,
-    "www.cargoyellowpages.com": 1,
-    "www.customs.gov.om": 1,
-    "www.fasah.sa": 1,
-    "www.freightnet.com": 1,
-    "www.iata.org": 1,
-    "www.jctrans.com": 1,
-    "www.jla.jo": 1,
-    "www.qatarchamber.com": 1,
-    "www.tamm.abudhabi": 1,
-    "www.wcaworld.com": 1,
-    "www.yellowpages-uae.com": 1,
-    "zatca.gov.sa": 1
-  },
-  "is_enabled": false,
-  "language_code": "ar",
-  "language_name": "Arabic",
-  "live_frontier_activation": false,
-  "needs_live_check": true,
-  "pi51c_sync_allowed_in_catalog_gate": false,
-  "quality_tier_counts": {
-    "A": 2,
-    "A_MINUS": 3,
-    "A_PLUS": 5,
-    "B": 3,
-    "B_MINUS": 1,
-    "B_PLUS": 4
-  },
-  "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+  "schema": "source_families_v2",
   "schema_version": "source_families_v2",
-  "seed_surface_count": 30,
-  "seed_url_count": 30,
+  "catalog_version": "arabic_source_families_v2",
+  "language_code": "ar",
+  "language_alias": "ar",
+  "language_name": "Arabic",
+  "candidate_manifest": true,
+  "is_live": false,
+  "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+  "runtime_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+  "live_frontier_activation": false,
+  "db_insert_allowed": false,
+  "url_fetch_allowed_in_catalog_gate": false,
+  "crawler_start_allowed_in_catalog_gate": false,
+  "pi51c_sync_allowed_in_catalog_gate": false,
+  "source_seed_standard": {
+    "standard_doc_path": "docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_LATEST_SCHEMA_AND_LANGUAGE_ROLLOUT_STANDARD_2026_05_13.md",
+    "standard_doc_sha256": "986b76d80694296019f1392811a2fb9e7fb4fa360d36577af69458a2069bcf90",
+    "decision_doc_path": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+    "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+    "catalog_role": "priority_backfill_language",
+    "last_rewritten_by_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+    "minimum_source_families_after_rewrite": 40,
+    "minimum_seed_surfaces_after_rewrite": 80,
+    "required_unique_seed_url_range": "70..95",
+    "candidate_manifest_only": true,
+    "crawler_core_raw_links_not_added_seeds": true,
+    "parse_core_required_before_added_seeds": true,
+    "desktop_import_required_before_final_rank": true
+  },
+  "metrics": {
+    "source_family_count": 40,
+    "seed_surface_count": 80,
+    "seed_url_count": 80,
+    "unique_seed_url_count": 80,
+    "minimum_source_family_count_after_rewrite": 40,
+    "minimum_seed_surface_count_after_rewrite": 80,
+    "planned_raw_seed_url_count_before_existing_exact_dedupe": 80,
+    "required_unique_seed_url_range": "70..95",
+    "legacy_source_family_count": 18,
+    "backfill_source_family_count": 22,
+    "legacy_seed_surface_count": 30,
+    "backfill_seed_surface_count": 50
+  },
   "source_families": [
     {
-      "country_scope": [
-        "AE"
-      ],
-      "db_insert_allowed": false,
-      "decision_status": "ACCEPT",
-      "directory_confidence": "very_high",
-      "host_budget_group": "nafl.ae",
-      "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "ar",
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 1,
-      "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "A_PLUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
-      "seed_surfaces": [
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "nafl.ae",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://nafl.ae/member-list/",
-          "surface_code": "ae_nafl_member_list",
-          "surface_name": "NAFL member list",
-          "surface_order": 1,
-          "surface_type": "member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        }
-      ],
-      "seed_urls": [
-        "https://nafl.ae/member-list/"
-      ],
-      "source_category": [
-        "freight_forwarder_association",
-        "member_directory",
-        "logistics_company_directory"
-      ],
-      "source_code": "ae_nafl_member_directory",
+      "source_family_code": "ae_nafl_member_directory",
+      "source_family_name": "UAE NAFL Member List",
+      "source_root_url": "https://nafl.ae/member-list/",
       "source_host": "nafl.ae",
-      "source_name": "UAE NAFL Member List",
-      "source_role": "association_member_directory",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
-        "EG"
+      "source_country_scope": [
+        "ARABIC_REGION"
       ],
-      "db_insert_allowed": false,
-      "decision_status": "ACCEPT",
-      "directory_confidence": "very_high",
-      "host_budget_group": "eiffa.com",
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "ar",
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 1,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "A_PLUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 1,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "eiffa.com",
+          "seed_surface_code": "ae_nafl_member_directory_surface_01",
+          "seed_surface_name": "UAE NAFL Member List seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://nafl.ae/member-list/"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://eiffa.com/members-directory/",
-          "surface_code": "eg_eiffa_members",
-          "surface_name": "EIFFA members directory",
-          "surface_order": 1,
-          "surface_type": "member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
         }
-      ],
-      "seed_urls": [
-        "https://eiffa.com/members-directory/"
-      ],
-      "source_category": [
-        "freight_forwarder_association",
-        "member_directory",
-        "logistics_company_directory"
-      ],
-      "source_code": "eg_eiffa_members_directory",
+      ]
+    },
+    {
+      "source_family_code": "eg_eiffa_members_directory",
+      "source_family_name": "Egypt EIFFA Members Directory",
+      "source_root_url": "https://eiffa.com/members-directory/",
       "source_host": "eiffa.com",
-      "source_name": "Egypt EIFFA Members Directory",
-      "source_role": "association_member_directory",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
-        "SA"
+      "source_country_scope": [
+        "ARABIC_REGION"
       ],
-      "db_insert_allowed": false,
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
       "decision_status": "ACCEPT_REVIEW",
-      "directory_confidence": "very_high",
-      "host_budget_group": "zatca.gov.sa|fasah.sa",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "ar",
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "A_PLUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 2,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "zatca.gov.sa",
+          "seed_surface_code": "eg_eiffa_members_directory_surface_01",
+          "seed_surface_name": "Egypt EIFFA Members Directory seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://eiffa.com/members-directory/"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://zatca.gov.sa/en/eServices/Pages/eServices_272.aspx",
-          "surface_code": "sa_zatca_customs_brokers_service_reference",
-          "surface_name": "ZATCA customs brokers service reference",
-          "surface_order": 1,
-          "surface_type": "official_service_reference",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
           "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "www.fasah.sa",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.fasah.sa/trade/home/en/",
-          "surface_code": "sa_fasah_trade_portal",
-          "surface_name": "Fasah trade portal",
-          "surface_order": 2,
-          "surface_type": "official_customs_portal",
-          "url_fetch_allowed_in_catalog_gate": false
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
         }
-      ],
-      "seed_urls": [
-        "https://zatca.gov.sa/en/eServices/Pages/eServices_272.aspx",
-        "https://www.fasah.sa/trade/home/en/"
-      ],
-      "source_category": [
-        "official_customs_directory",
-        "customs_broker_directory",
-        "government_portal"
-      ],
-      "source_code": "sa_zatca_fasah_customs_brokers_directory",
+      ]
+    },
+    {
+      "source_family_code": "sa_zatca_fasah_customs_brokers_directory",
+      "source_family_name": "Saudi ZATCA / Fasah Customs Brokers Directory",
+      "source_root_url": "https://zatca.gov.sa/en/eServices/Pages/eServices_272.aspx",
       "source_host": "zatca.gov.sa",
-      "source_name": "Saudi ZATCA / Fasah Customs Brokers Directory",
-      "source_role": "official_customs_broker_directory",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
-        "BH"
+      "source_country_scope": [
+        "ARABIC_REGION"
       ],
-      "db_insert_allowed": false,
-      "decision_status": "ACCEPT",
-      "directory_confidence": "very_high",
-      "host_budget_group": "services.bahrain.bh",
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "ar",
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "A_PLUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 3,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "services.bahrain.bh",
+          "seed_surface_code": "sa_zatca_fasah_customs_brokers_directory_surface_01",
+          "seed_surface_name": "Saudi ZATCA / Fasah Customs Brokers Directory seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://zatca.gov.sa/en/eServices/Pages/eServices_272.aspx"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://services.bahrain.bh/wps/portal/CCAS_en",
-          "surface_code": "bh_customs_clearing_agencies",
-          "surface_name": "Bahrain clearing agencies directory",
-          "surface_order": 1,
-          "surface_type": "official_clearing_agencies_directory",
-          "url_fetch_allowed_in_catalog_gate": false
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "sa_zatca_fasah_customs_brokers_directory_surface_02",
+          "seed_surface_name": "Saudi ZATCA / Fasah Customs Brokers Directory seed surface 02",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.fasah.sa/trade/home/en/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
         }
-      ],
-      "seed_urls": [
-        "https://services.bahrain.bh/wps/portal/CCAS_en"
-      ],
-      "source_category": [
-        "official_customs_directory",
-        "clearing_agent_directory",
-        "government_portal"
-      ],
-      "source_code": "bh_customs_clearing_agencies_directory",
+      ]
+    },
+    {
+      "source_family_code": "bh_customs_clearing_agencies_directory",
+      "source_family_name": "Bahrain Customs Clearing Agencies Directory",
+      "source_root_url": "https://services.bahrain.bh/wps/portal/CCAS_en",
       "source_host": "services.bahrain.bh",
-      "source_name": "Bahrain Customs Clearing Agencies Directory",
-      "source_role": "official_customs_clearing_directory",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
-        "OM"
+      "source_country_scope": [
+        "ARABIC_REGION"
       ],
-      "db_insert_allowed": false,
-      "decision_status": "ACCEPT",
-      "directory_confidence": "very_high",
-      "host_budget_group": "customs.gov.om",
-      "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "ar"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
-      "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "A_PLUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
-      "seed_surfaces": [
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "www.customs.gov.om",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.customs.gov.om/ar/clearance-companies/",
-          "surface_code": "om_customs_clearance_companies_ar",
-          "surface_name": "Oman Arabic clearance companies directory",
-          "surface_order": 1,
-          "surface_type": "official_arabic_clearance_company_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        }
-      ],
-      "seed_urls": [
-        "https://www.customs.gov.om/ar/clearance-companies/"
-      ],
-      "source_category": [
-        "official_customs_directory",
-        "customs_clearance_company_directory",
-        "government_portal"
-      ],
-      "source_code": "om_customs_clearance_companies_directory",
-      "source_host": "customs.gov.om",
-      "source_name": "Oman Customs Clearance Companies Directory",
-      "source_role": "official_customs_clearance_company_directory",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
-        "JO"
-      ],
-      "db_insert_allowed": false,
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
       "decision_status": "ACCEPT_REVIEW",
-      "directory_confidence": "high",
-      "host_budget_group": "jla.jo",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "ar",
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 1,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "A",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 4,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "www.jla.jo",
+          "seed_surface_code": "bh_customs_clearing_agencies_directory_surface_01",
+          "seed_surface_name": "Bahrain Customs Clearing Agencies Directory seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://services.bahrain.bh/wps/portal/CCAS_en"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.jla.jo/en/companies.php",
-          "surface_code": "jo_jla_companies",
-          "surface_name": "JLA companies / general assembly members",
-          "surface_order": 1,
-          "surface_type": "member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
         }
-      ],
-      "seed_urls": [
-        "https://www.jla.jo/en/companies.php"
-      ],
-      "source_category": [
-        "logistics_association",
-        "member_directory",
-        "freight_forwarder_directory"
-      ],
-      "source_code": "jo_jla_general_assembly_members",
-      "source_host": "jla.jo",
-      "source_name": "Jordanian Logistics Association Members",
-      "source_role": "association_member_directory",
-      "url_fetch_allowed_in_catalog_gate": false
+      ]
     },
     {
-      "country_scope": [
-        "AE"
+      "source_family_code": "om_customs_clearance_companies_directory",
+      "source_family_name": "Oman Customs Clearance Companies Directory",
+      "source_root_url": "https://www.customs.gov.om/ar/clearance-companies/",
+      "source_host": "www.customs.gov.om",
+      "source_country_scope": [
+        "ARABIC_REGION"
       ],
-      "db_insert_allowed": false,
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
       "decision_status": "ACCEPT_REVIEW",
-      "directory_confidence": "high",
-      "host_budget_group": "tax.gov.ae",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "ar",
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "A_MINUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 5,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "tax.gov.ae",
+          "seed_surface_code": "om_customs_clearance_companies_directory_surface_01",
+          "seed_surface_name": "Oman Customs Clearance Companies Directory seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.customs.gov.om/ar/clearance-companies/"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_MINUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://tax.gov.ae/en/tax.support/clearing.companies.aspx",
-          "surface_code": "ae_fta_clearing_companies",
-          "surface_name": "UAE FTA clearing companies",
-          "surface_order": 1,
-          "surface_type": "official_clearing_companies_list",
-          "url_fetch_allowed_in_catalog_gate": false
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
         }
+      ]
+    },
+    {
+      "source_family_code": "jo_jla_general_assembly_members",
+      "source_family_name": "Jordanian Logistics Association Members",
+      "source_root_url": "https://www.jla.jo/en/companies.php",
+      "source_host": "www.jla.jo",
+      "source_country_scope": [
+        "ARABIC_REGION"
       ],
-      "seed_urls": [
-        "https://tax.gov.ae/en/tax.support/clearing.companies.aspx"
-      ],
-      "source_category": [
-        "official_clearing_company_directory",
-        "customs_clearance",
-        "government_portal"
-      ],
-      "source_code": "ae_fta_clearing_companies",
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 6,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "jo_jla_general_assembly_members_surface_01",
+          "seed_surface_name": "Jordanian Logistics Association Members seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.jla.jo/en/companies.php"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ae_fta_clearing_companies",
+      "source_family_name": "UAE Federal Tax Authority Clearing Companies",
+      "source_root_url": "https://tax.gov.ae/en/tax.support/clearing.companies.aspx",
       "source_host": "tax.gov.ae",
-      "source_name": "UAE Federal Tax Authority Clearing Companies",
-      "source_role": "official_clearing_company_directory",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
-        "AE"
+      "source_country_scope": [
+        "ARABIC_REGION"
       ],
-      "db_insert_allowed": false,
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
       "decision_status": "ACCEPT_REVIEW",
-      "directory_confidence": "high",
-      "host_budget_group": "tamm.abudhabi",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "ar"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "A_MINUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 7,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "www.tamm.abudhabi",
+          "seed_surface_code": "ae_fta_clearing_companies_surface_01",
+          "seed_surface_name": "UAE Federal Tax Authority Clearing Companies seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://tax.gov.ae/en/tax.support/clearing.companies.aspx"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_MINUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.tamm.abudhabi/wb/adc/delegate-clearing-agent/directory?lang=ar",
-          "surface_code": "ae_tamm_delegate_clearing_agent_directory_ar",
-          "surface_name": "TAMM delegate clearing agent directory Arabic surface",
-          "surface_order": 1,
-          "surface_type": "official_arabic_clearing_agent_directory",
-          "url_fetch_allowed_in_catalog_gate": false
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
         }
-      ],
-      "seed_urls": [
-        "https://www.tamm.abudhabi/wb/adc/delegate-clearing-agent/directory?lang=ar"
-      ],
-      "source_category": [
-        "official_clearing_agent_directory",
-        "customs_clearance",
-        "government_portal"
-      ],
-      "source_code": "ae_tamm_clearing_agent_directory",
-      "source_host": "tamm.abudhabi",
-      "source_name": "Abu Dhabi TAMM Clearing Agent Directory",
-      "source_role": "official_clearing_agent_directory",
-      "url_fetch_allowed_in_catalog_gate": false
+      ]
     },
     {
-      "country_scope": [
-        "AE"
+      "source_family_code": "ae_tamm_clearing_agent_directory",
+      "source_family_name": "Abu Dhabi TAMM Clearing Agent Directory",
+      "source_root_url": "https://www.tamm.abudhabi/wb/adc/delegate-clearing-agent/directory?lang=ar",
+      "source_host": "www.tamm.abudhabi",
+      "source_country_scope": [
+        "ARABIC_REGION"
       ],
-      "db_insert_allowed": false,
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
       "decision_status": "ACCEPT_REVIEW",
-      "directory_confidence": "medium_high",
-      "host_budget_group": "dubaisouth.my.salesforce-sites.com",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "B_PLUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 8,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "dubaisouth.my.salesforce-sites.com",
+          "seed_surface_code": "ae_tamm_clearing_agent_directory_surface_01",
+          "seed_surface_name": "Abu Dhabi TAMM Clearing Agent Directory seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.tamm.abudhabi/wb/adc/delegate-clearing-agent/directory?lang=ar"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://dubaisouth.my.salesforce-sites.com/CompanyDirectory",
-          "surface_code": "ae_dubai_south_company_directory",
-          "surface_name": "Dubai South company directory logistics/cargo/customs filters",
-          "surface_order": 1,
-          "surface_type": "company_directory_filtered_logistics_customs_cargo",
-          "url_fetch_allowed_in_catalog_gate": false
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
         }
-      ],
-      "seed_urls": [
-        "https://dubaisouth.my.salesforce-sites.com/CompanyDirectory"
-      ],
-      "source_category": [
-        "free_zone_company_directory",
-        "logistics_filter",
-        "customs_broker_filter",
-        "cargo_filter"
-      ],
-      "source_code": "ae_dubai_south_company_directory_logistics_filter",
+      ]
+    },
+    {
+      "source_family_code": "ae_dubai_south_company_directory_logistics_filter",
+      "source_family_name": "Dubai South Company Directory Logistics Filter",
+      "source_root_url": "https://dubaisouth.my.salesforce-sites.com/CompanyDirectory",
       "source_host": "dubaisouth.my.salesforce-sites.com",
-      "source_name": "Dubai South Company Directory Logistics Filter",
-      "source_role": "free_zone_company_directory_filtered",
-      "url_fetch_allowed_in_catalog_gate": false
+      "source_country_scope": [
+        "ARABIC_REGION"
+      ],
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 9,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ae_dubai_south_company_directory_logistics_filter_surface_01",
+          "seed_surface_name": "Dubai South Company Directory Logistics Filter seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://dubaisouth.my.salesforce-sites.com/CompanyDirectory"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
     },
     {
-      "country_scope": [
+      "source_family_code": "ae_emirates_shipping_association_members",
+      "source_family_name": "Emirates Shipping Association Members",
+      "source_root_url": "https://7emirates.com/members/",
+      "source_host": "7emirates.com",
+      "source_country_scope": [
+        "ARABIC_REGION"
+      ],
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 10,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ae_emirates_shipping_association_members_surface_01",
+          "seed_surface_name": "Emirates Shipping Association Members seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://7emirates.com/members/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "fiata_mena_arabic_region_member_directory_shared",
+      "source_family_name": "FIATA MENA / Arabic Region Member Directory Shared",
+      "source_root_url": "https://fiata.org/directory/ae/",
+      "source_host": "fiata.org",
+      "source_country_scope": [
+        "ARABIC_REGION"
+      ],
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 11,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_01",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/ae/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_02",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 02",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/sa/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_03",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 03",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/eg/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_04",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 04",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/om/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_05",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 05",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/qa/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_06",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 06",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/jo/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_07",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 07",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/bh/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_08",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 08",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/kw/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_09",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 09",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/tn/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_10",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 10",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/dz/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_11",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 11",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/lb/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        },
+        {
+          "seed_surface_code": "fiata_mena_arabic_region_member_directory_shared_surface_12",
+          "seed_surface_name": "FIATA MENA / Arabic Region Member Directory Shared seed surface 12",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/ma/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "freightnet_arabic_region_country_pages",
+      "source_family_name": "Freightnet Arabic Region Country Pages",
+      "source_root_url": "https://www.freightnet.com/directory/",
+      "source_host": "www.freightnet.com",
+      "source_country_scope": [
+        "ARABIC_REGION"
+      ],
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 12,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "freightnet_arabic_region_country_pages_surface_01",
+          "seed_surface_name": "Freightnet Arabic Region Country Pages seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.freightnet.com/directory/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "cargoyellowpages_arabic_region_country_pages",
+      "source_family_name": "CargoYellowPages Arabic Region Country Pages",
+      "source_root_url": "https://www.cargoyellowpages.com/",
+      "source_host": "www.cargoyellowpages.com",
+      "source_country_scope": [
+        "ARABIC_REGION"
+      ],
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 13,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "cargoyellowpages_arabic_region_country_pages_surface_01",
+          "seed_surface_name": "CargoYellowPages Arabic Region Country Pages seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.cargoyellowpages.com/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "yellowpages_uae_logistics_freight_forwarders",
+      "source_family_name": "UAE YellowPages Logistics and Freight Forwarders",
+      "source_root_url": "https://www.yellowpages-uae.com/uae/jebel-ali/logistics-and-distribution",
+      "source_host": "www.yellowpages-uae.com",
+      "source_country_scope": [
+        "ARABIC_REGION"
+      ],
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 14,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "yellowpages_uae_logistics_freight_forwarders_surface_01",
+          "seed_surface_name": "UAE YellowPages Logistics and Freight Forwarders seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.yellowpages-uae.com/uae/jebel-ali/logistics-and-distribution"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "iata_cargolink_directory",
+      "source_family_name": "IATA CargoLink Directory",
+      "source_root_url": "https://www.iata.org/en/publications/directories/cargolink/",
+      "source_host": "www.iata.org",
+      "source_country_scope": [
+        "ARABIC_REGION"
+      ],
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 15,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "iata_cargolink_directory_surface_01",
+          "seed_surface_name": "IATA CargoLink Directory seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.iata.org/en/publications/directories/cargolink/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "wcaworld_directory_shared",
+      "source_family_name": "WCAworld Directory Shared Reference",
+      "source_root_url": "https://www.wcaworld.com/directory",
+      "source_host": "www.wcaworld.com",
+      "source_country_scope": [
+        "ARABIC_REGION"
+      ],
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 16,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "wcaworld_directory_shared_surface_01",
+          "seed_surface_name": "WCAworld Directory Shared Reference seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.wcaworld.com/directory"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "jctrans_country_surfaces",
+      "source_family_name": "JCtrans Country Surfaces",
+      "source_root_url": "https://www.jctrans.com/en/company/list",
+      "source_host": "www.jctrans.com",
+      "source_country_scope": [
+        "ARABIC_REGION"
+      ],
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 17,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "jctrans_country_surfaces_surface_01",
+          "seed_surface_name": "JCtrans Country Surfaces seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.jctrans.com/en/company/list"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "qa_qafl_authority_reference",
+      "source_family_name": "Qatar QAFL Authority Reference",
+      "source_root_url": "https://www.qatarchamber.com/qafl/",
+      "source_host": "www.qatarchamber.com",
+      "source_country_scope": [
+        "ARABIC_REGION"
+      ],
+      "source_language": "ar",
+      "source_category": "legacy_arabic_source_seed_catalog_migrated",
+      "source_quality_tier": "ACCEPT_REVIEW_LEGACY",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "legacy_arabic_catalog_migrated_by_R239C",
+      "family_metadata": {
+        "legacy_index": 18,
+        "legacy_migration_gate": "SOURCE_SEED_R239C_ARABIC_CATALOG_SCHEMA_BACKFILL_LOCAL_ONLY",
+        "legacy_original_schema": null,
+        "candidate_manifest_only": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "qa_qafl_authority_reference_surface_01",
+          "seed_surface_name": "Qatar QAFL Authority Reference seed surface 01",
+          "surface_type": "legacy_migrated_seed_surface",
+          "seed_urls": [
+            "https://www.qatarchamber.com/qafl/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "legacy_arabic_catalog_migrated_by_R239C",
+          "surface_metadata": {
+            "legacy_migration_note": "Migrated from the pre-R239 Arabic catalog into latest source_families_v2 candidate-manifest schema.",
+            "requires_live_probe_before_frontier": true
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_fiata_arab_country_directories",
+      "source_family_name": "FIATA Arab country directory seed surfaces",
+      "source_root_url": "https://fiata.org/directory/",
+      "source_host": "fiata.org",
+      "source_country_scope": [
+        "IQ",
+        "LY",
+        "SD",
+        "YE",
+        "MR",
+        "SO",
+        "DJ",
+        "KM"
+      ],
+      "source_language": "ar",
+      "source_category": "international_association_country_directory",
+      "source_quality_tier": "A_PLUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": true,
+        "fiata_policy": "FIATA remains one source family; Arab country pages under fiata.org are subordinate seed surfaces.",
+        "r239b_safe_replacement_source": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_fiata_arab_country_directories_fiata_iq",
+          "seed_surface_name": "FIATA Iraq directory",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/iq/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_fiata_arab_country_directories_fiata_ly",
+          "seed_surface_name": "FIATA Libya directory",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/ly/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_fiata_arab_country_directories_fiata_sd",
+          "seed_surface_name": "FIATA Sudan directory",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/sd/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_fiata_arab_country_directories_fiata_ye",
+          "seed_surface_name": "FIATA Yemen directory",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/ye/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_fiata_arab_country_directories_fiata_mr",
+          "seed_surface_name": "FIATA Mauritania directory",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/mr/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_fiata_arab_country_directories_fiata_so",
+          "seed_surface_name": "FIATA Somalia directory",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/so/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_fiata_arab_country_directories_fiata_dj",
+          "seed_surface_name": "FIATA Djibouti directory",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/dj/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_fiata_arab_country_directories_fiata_km",
+          "seed_surface_name": "FIATA Comoros directory",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://fiata.org/directory/km/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_nafl_uae_member_list",
+      "source_family_name": "NAFL UAE membership and association surfaces",
+      "source_root_url": "https://nafl.ae/",
+      "source_host": "nafl.ae",
+      "source_country_scope": [
         "AE"
       ],
-      "db_insert_allowed": false,
+      "source_language": "ar",
+      "source_category": "official_association_member_directory",
+      "source_quality_tier": "A_PLUS",
       "decision_status": "ACCEPT_REVIEW",
-      "directory_confidence": "medium_high",
-      "host_budget_group": "7emirates.com",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 1,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "B_PLUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
-      "seed_surfaces": [
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "7emirates.com",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://7emirates.com/members/",
-          "surface_code": "ae_emirates_shipping_members",
-          "surface_name": "Emirates Shipping Association members",
-          "surface_order": 1,
-          "surface_type": "shipping_association_members",
-          "url_fetch_allowed_in_catalog_gate": false
-        }
-      ],
-      "seed_urls": [
-        "https://7emirates.com/members/"
-      ],
-      "source_category": [
-        "shipping_association",
-        "maritime_member_directory",
-        "logistics_company_directory"
-      ],
-      "source_code": "ae_emirates_shipping_association_members",
-      "source_host": "7emirates.com",
-      "source_name": "Emirates Shipping Association Members",
-      "source_role": "maritime_association_member_directory",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
-        "AE",
-        "SA",
-        "EG",
-        "OM",
-        "QA",
-        "JO",
-        "BH",
-        "KW",
-        "TN",
-        "DZ",
-        "LB",
-        "MA"
-      ],
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
       "db_insert_allowed": false,
-      "decision_status": "ACCEPT",
-      "directory_confidence": "high",
-      "domain_dominance_control": "single_shared_family_multi_country_surfaces",
-      "host_budget_group": "fiata.org",
-      "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 1,
-      "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "notes": [
-        "Do not split FIATA country pages into separate top-level source families.",
-        "Morocco / AFFM remains only as the FIATA Morocco HOLD surface inside this shared family."
-      ],
-      "quality_tier": "A",
-      "recommended_rotation": "1-2_country_surfaces_per_day_after_live_probe",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": true
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "fiata.org",
+          "seed_surface_code": "ar_nafl_uae_member_list_membership",
+          "seed_surface_name": "NAFL membership surface",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://nafl.ae/membership/"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/ae/",
-          "surface_code": "fiata_ae",
-          "surface_name": "FIATA UAE directory",
-          "surface_order": 1,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
         },
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "fiata.org",
+          "seed_surface_code": "ar_nafl_uae_member_list_home",
+          "seed_surface_name": "NAFL association home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://nafl.ae/"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/sa/",
-          "surface_code": "fiata_sa",
-          "surface_name": "FIATA Saudi Arabia directory",
-          "surface_order": 2,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
           "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "fiata.org",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/eg/",
-          "surface_code": "fiata_eg",
-          "surface_name": "FIATA Egypt directory",
-          "surface_order": 3,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "fiata.org",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/om/",
-          "surface_code": "fiata_om",
-          "surface_name": "FIATA Oman directory",
-          "surface_order": 4,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "fiata.org",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/qa/",
-          "surface_code": "fiata_qa",
-          "surface_name": "FIATA Qatar directory",
-          "surface_order": 5,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "fiata.org",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/jo/",
-          "surface_code": "fiata_jo",
-          "surface_name": "FIATA Jordan directory",
-          "surface_order": 6,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "fiata.org",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_MINUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/bh/",
-          "surface_code": "fiata_bh",
-          "surface_name": "FIATA Bahrain directory",
-          "surface_order": 7,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "fiata.org",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/kw/",
-          "surface_code": "fiata_kw",
-          "surface_name": "FIATA Kuwait directory",
-          "surface_order": 8,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT",
-          "host": "fiata.org",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_MINUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/tn/",
-          "surface_code": "fiata_tn",
-          "surface_name": "FIATA Tunisia directory",
-          "surface_order": 9,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "fiata.org",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/dz/",
-          "surface_code": "fiata_dz",
-          "surface_name": "FIATA Algeria directory",
-          "surface_order": 10,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "fiata.org",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/lb/",
-          "surface_code": "fiata_lb",
-          "surface_name": "FIATA Lebanon directory",
-          "surface_order": 11,
-          "surface_type": "country_member_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        },
-        {
-          "db_insert_allowed": false,
-          "decision_status": "HOLD",
-          "host": "fiata.org",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 1,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "REFERENCE",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://fiata.org/directory/ma/",
-          "surface_code": "fiata_ma",
-          "surface_name": "FIATA Morocco / AFFM authority reference",
-          "surface_order": 12,
-          "surface_type": "authority_reference",
-          "url_fetch_allowed_in_catalog_gate": false
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
         }
-      ],
-      "seed_urls": [
-        "https://fiata.org/directory/ae/",
-        "https://fiata.org/directory/sa/",
-        "https://fiata.org/directory/eg/",
-        "https://fiata.org/directory/om/",
-        "https://fiata.org/directory/qa/",
-        "https://fiata.org/directory/jo/",
-        "https://fiata.org/directory/bh/",
-        "https://fiata.org/directory/kw/",
-        "https://fiata.org/directory/tn/",
-        "https://fiata.org/directory/dz/",
-        "https://fiata.org/directory/lb/",
-        "https://fiata.org/directory/ma/"
-      ],
-      "source_category": [
-        "freight_forwarder_association",
-        "country_member_directory",
-        "shared_reference"
-      ],
-      "source_code": "fiata_mena_arabic_region_member_directory_shared",
-      "source_host": "fiata.org",
-      "source_name": "FIATA MENA / Arabic Region Member Directory Shared",
-      "source_role": "shared_association_country_member_directory",
-      "url_fetch_allowed_in_catalog_gate": false
+      ]
     },
     {
-      "country_scope": [
-        "SA",
-        "QA",
-        "JO",
-        "MA",
-        "AE",
+      "source_family_code": "ar_eiffa_egypt_members_directory",
+      "source_family_name": "EIFFA Egypt membership and association surfaces",
+      "source_root_url": "https://eiffa.com/",
+      "source_host": "eiffa.com",
+      "source_country_scope": [
         "EG"
       ],
-      "db_insert_allowed": false,
+      "source_language": "ar",
+      "source_category": "official_association_member_directory",
+      "source_quality_tier": "A_PLUS",
       "decision_status": "ACCEPT_REVIEW",
-      "directory_confidence": "medium",
-      "host_budget_group": "freightnet.com",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "B",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": true
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "www.freightnet.com",
+          "seed_surface_code": "ar_eiffa_egypt_members_directory_membership",
+          "seed_surface_name": "EIFFA membership surface",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://eiffa.com/membership/"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.freightnet.com/directory/",
-          "surface_code": "freightnet_directory_root",
-          "surface_name": "Freightnet directory root for controlled country/category discovery",
-          "surface_order": 1,
-          "surface_type": "commercial_country_directory_root",
-          "url_fetch_allowed_in_catalog_gate": false
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_eiffa_egypt_members_directory_home",
+          "seed_surface_name": "EIFFA association home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://eiffa.com/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
         }
-      ],
-      "seed_urls": [
-        "https://www.freightnet.com/directory/"
-      ],
-      "source_category": [
-        "commercial_freight_directory",
-        "country_pages",
-        "manual_review"
-      ],
-      "source_code": "freightnet_arabic_region_country_pages",
-      "source_host": "freightnet.com",
-      "source_name": "Freightnet Arabic Region Country Pages",
-      "source_role": "commercial_freight_directory_country_pages",
-      "url_fetch_allowed_in_catalog_gate": false
+      ]
     },
     {
-      "country_scope": [
-        "SA",
-        "EG",
-        "AE"
+      "source_family_code": "ar_lfs_lebanon_forwarders_syndicate",
+      "source_family_name": "Lebanese Forwarders Syndicate surfaces",
+      "source_root_url": "https://www.lfs-lb.org/",
+      "source_host": "www.lfs-lb.org",
+      "source_country_scope": [
+        "LB"
       ],
-      "db_insert_allowed": false,
+      "source_language": "ar",
+      "source_category": "official_association_member_directory",
+      "source_quality_tier": "A",
       "decision_status": "ACCEPT_REVIEW",
-      "directory_confidence": "medium_low",
-      "host_budget_group": "cargoyellowpages.com",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "B_MINUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
-      "seed_surfaces": [
-        {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "www.cargoyellowpages.com",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B_MINUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.cargoyellowpages.com/",
-          "surface_code": "cargoyellowpages_directory_root",
-          "surface_name": "CargoYellowPages directory root for controlled country/category discovery",
-          "surface_order": 1,
-          "surface_type": "commercial_cargo_directory_root",
-          "url_fetch_allowed_in_catalog_gate": false
-        }
-      ],
-      "seed_urls": [
-        "https://www.cargoyellowpages.com/"
-      ],
-      "source_category": [
-        "commercial_cargo_directory",
-        "country_pages",
-        "manual_review"
-      ],
-      "source_code": "cargoyellowpages_arabic_region_country_pages",
-      "source_host": "cargoyellowpages.com",
-      "source_name": "CargoYellowPages Arabic Region Country Pages",
-      "source_role": "commercial_cargo_directory_country_pages",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
-        "AE"
-      ],
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
       "db_insert_allowed": false,
-      "decision_status": "ACCEPT_REVIEW",
-      "directory_confidence": "medium",
-      "host_budget_group": "yellowpages-uae.com",
-      "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
-      "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "B",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "ACCEPT_REVIEW",
-          "host": "www.yellowpages-uae.com",
+          "seed_surface_code": "ar_lfs_lebanon_forwarders_syndicate_home",
+          "seed_surface_name": "Lebanese Forwarders Syndicate home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.lfs-lb.org/"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.yellowpages-uae.com/uae/jebel-ali/logistics-and-distribution",
-          "surface_code": "yellowpages_uae_jebel_ali_logistics_distribution",
-          "surface_name": "UAE YellowPages Jebel Ali logistics and distribution category",
-          "surface_order": 1,
-          "surface_type": "commercial_logistics_category_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        }
-      ],
-      "seed_urls": [
-        "https://www.yellowpages-uae.com/uae/jebel-ali/logistics-and-distribution"
-      ],
-      "source_category": [
-        "commercial_business_directory",
-        "logistics_category",
-        "manual_review"
-      ],
-      "source_code": "yellowpages_uae_logistics_freight_forwarders",
-      "source_host": "yellowpages-uae.com",
-      "source_name": "UAE YellowPages Logistics and Freight Forwarders",
-      "source_role": "commercial_business_directory_logistics_category",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
-        "GLOBAL",
-        "MENA"
-      ],
-      "db_insert_allowed": false,
-      "decision_status": "HOLD",
-      "directory_confidence": "high_authority_but_probe_required",
-      "host_budget_group": "iata.org",
-      "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
-      "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "B_PLUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
-      "seed_surfaces": [
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
         {
-          "db_insert_allowed": false,
-          "decision_status": "HOLD",
-          "host": "www.iata.org",
+          "seed_surface_code": "ar_lfs_lebanon_forwarders_syndicate_directory",
+          "seed_surface_name": "Lebanese Forwarders Syndicate directory candidate",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.lfs-lb.org/directory-f/"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.iata.org/en/publications/directories/cargolink/",
-          "surface_code": "iata_cargolink",
-          "surface_name": "IATA CargoLink directory",
-          "surface_order": 1,
-          "surface_type": "global_air_cargo_directory",
-          "url_fetch_allowed_in_catalog_gate": false
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
         }
-      ],
-      "seed_urls": [
-        "https://www.iata.org/en/publications/directories/cargolink/"
-      ],
-      "source_category": [
-        "global_air_cargo_directory",
-        "authority_reference",
-        "live_probe_required"
-      ],
-      "source_code": "iata_cargolink_directory",
-      "source_host": "iata.org",
-      "source_name": "IATA CargoLink Directory",
-      "source_role": "global_air_cargo_directory_reference",
-      "url_fetch_allowed_in_catalog_gate": false
+      ]
     },
     {
-      "country_scope": [
-        "GLOBAL",
-        "MENA"
-      ],
-      "db_insert_allowed": false,
-      "decision_status": "HOLD",
-      "directory_confidence": "high_but_global_shared_reference",
-      "host_budget_group": "wcaworld.com",
-      "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
-      "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "B_PLUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
-      "seed_surfaces": [
-        {
-          "db_insert_allowed": false,
-          "decision_status": "HOLD",
-          "host": "www.wcaworld.com",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B_PLUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.wcaworld.com/directory",
-          "surface_code": "wcaworld_directory",
-          "surface_name": "WCAworld global directory",
-          "surface_order": 1,
-          "surface_type": "global_forwarder_network_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        }
-      ],
-      "seed_urls": [
-        "https://www.wcaworld.com/directory"
-      ],
-      "source_category": [
-        "global_forwarder_network",
-        "shared_reference",
-        "live_probe_required"
-      ],
-      "source_code": "wcaworld_directory_shared",
-      "source_host": "wcaworld.com",
-      "source_name": "WCAworld Directory Shared Reference",
-      "source_role": "global_forwarder_network_directory_reference",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
-        "GLOBAL",
-        "MENA"
-      ],
-      "db_insert_allowed": false,
-      "decision_status": "HOLD",
-      "directory_confidence": "medium",
-      "host_budget_group": "jctrans.com",
-      "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
-      "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "B",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
-      "seed_surfaces": [
-        {
-          "db_insert_allowed": false,
-          "decision_status": "HOLD",
-          "host": "www.jctrans.com",
-          "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
-          "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "B",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.jctrans.com/en/company/list",
-          "surface_code": "jctrans_company_list",
-          "surface_name": "JCtrans company list",
-          "surface_order": 1,
-          "surface_type": "global_commercial_forwarder_directory",
-          "url_fetch_allowed_in_catalog_gate": false
-        }
-      ],
-      "seed_urls": [
-        "https://www.jctrans.com/en/company/list"
-      ],
-      "source_category": [
-        "global_commercial_forwarder_directory",
-        "shared_reference",
-        "live_probe_required"
-      ],
-      "source_code": "jctrans_country_surfaces",
-      "source_host": "jctrans.com",
-      "source_name": "JCtrans Country Surfaces",
-      "source_role": "global_commercial_forwarder_directory_reference",
-      "url_fetch_allowed_in_catalog_gate": false
-    },
-    {
-      "country_scope": [
+      "source_family_code": "ar_qafl_qatar_chamber_logistics",
+      "source_family_name": "Qatar Chamber logistics and business directory surfaces",
+      "source_root_url": "https://www.qatarchamber.com/",
+      "source_host": "www.qatarchamber.com",
+      "source_country_scope": [
         "QA"
       ],
-      "db_insert_allowed": false,
-      "decision_status": "HOLD",
-      "directory_confidence": "authority_context_not_direct_directory",
-      "host_budget_group": "qatarchamber.com",
+      "source_language": "ar",
+      "source_category": "official_chamber_logistics_reference",
+      "source_quality_tier": "A",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
       "is_enabled": false,
-      "language_code": "ar",
-      "language_scope": [
-        "ar",
-        "en"
-      ],
-      "live_frontier_activation": false,
-      "manual_review_required": true,
-      "max_initial_depth": 0,
       "needs_live_check": true,
-      "no_aggressive_pagination": true,
-      "quality_tier": "A_MINUS",
-      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-      "same_day_full_country_expansion": false,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": true
+      },
       "seed_surfaces": [
         {
-          "db_insert_allowed": false,
-          "decision_status": "HOLD",
-          "host": "www.qatarchamber.com",
+          "seed_surface_code": "ar_qafl_qatar_chamber_logistics_business_directory",
+          "seed_surface_name": "Qatar Chamber business directory",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.qatarchamber.com/services/business-directory/"
+          ],
           "is_enabled": false,
-          "live_frontier_activation": false,
-          "manual_review_required": true,
-          "max_initial_depth": 0,
           "needs_live_check": true,
-          "no_aggressive_pagination": true,
-          "quality_tier": "A_MINUS",
-          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-          "seed_url": "https://www.qatarchamber.com/qafl/",
-          "surface_code": "qa_qafl_reference",
-          "surface_name": "Qatar QAFL authority reference",
-          "surface_order": 1,
-          "surface_type": "authority_reference",
-          "url_fetch_allowed_in_catalog_gate": false
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_qafl_qatar_chamber_logistics_home",
+          "seed_surface_name": "Qatar Chamber home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.qatarchamber.com/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
         }
+      ]
+    },
+    {
+      "source_family_code": "ar_mawani_saudi_ports_logistics_reference",
+      "source_family_name": "Saudi Ports Authority logistics reference surfaces",
+      "source_root_url": "https://mawani.gov.sa/",
+      "source_host": "mawani.gov.sa",
+      "source_country_scope": [
+        "SA"
       ],
-      "seed_urls": [
-        "https://www.qatarchamber.com/qafl/"
+      "source_language": "ar",
+      "source_category": "official_port_authority_reference",
+      "source_quality_tier": "A",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_mawani_saudi_ports_logistics_reference_home",
+          "seed_surface_name": "Mawani home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://mawani.gov.sa/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_mawani_saudi_ports_logistics_reference_english",
+          "seed_surface_name": "Mawani English surface",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://mawani.gov.sa/en-us/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_saudi_logistics_hub_reference",
+      "source_family_name": "Saudi Logistics Hub reference surfaces",
+      "source_root_url": "https://www.logisti.sa/",
+      "source_host": "www.logisti.sa",
+      "source_country_scope": [
+        "SA"
       ],
-      "source_category": [
-        "association_authority_reference",
-        "qatar_logistics_context",
-        "hold"
+      "source_language": "ar",
+      "source_category": "official_logistics_ecosystem_reference",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_saudi_logistics_hub_reference_home",
+          "seed_surface_name": "Saudi Logistics Hub home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.logisti.sa/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_saudi_logistics_hub_reference_english",
+          "seed_surface_name": "Saudi Logistics Hub English surface",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.logisti.sa/en/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_jafza_logistics_business_reference",
+      "source_family_name": "JAFZA logistics business reference surfaces",
+      "source_root_url": "https://www.jafza.ae/",
+      "source_host": "www.jafza.ae",
+      "source_country_scope": [
+        "AE"
       ],
-      "source_code": "qa_qafl_authority_reference",
-      "source_host": "qatarchamber.com",
-      "source_name": "Qatar QAFL Authority Reference",
-      "source_role": "association_authority_reference",
-      "url_fetch_allowed_in_catalog_gate": false
+      "source_language": "ar",
+      "source_category": "free_zone_logistics_reference",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_jafza_logistics_business_reference_home",
+          "seed_surface_name": "JAFZA home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.jafza.ae/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_jafza_logistics_business_reference_logistics",
+          "seed_surface_name": "JAFZA logistics industry surface",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.jafza.ae/industries/logistics/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_dubai_south_logistics_district_reference",
+      "source_family_name": "Dubai South logistics district reference surfaces",
+      "source_root_url": "https://www.dubaisouth.ae/",
+      "source_host": "www.dubaisouth.ae",
+      "source_country_scope": [
+        "AE"
+      ],
+      "source_language": "ar",
+      "source_category": "logistics_district_reference",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_dubai_south_logistics_district_reference_home",
+          "seed_surface_name": "Dubai South home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.dubaisouth.ae/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_dubai_south_logistics_district_reference_logistics_district",
+          "seed_surface_name": "Dubai South logistics district",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.dubaisouth.ae/logistics-district"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_ad_ports_kizad_logistics_reference",
+      "source_family_name": "AD Ports trade and logistics reference surfaces",
+      "source_root_url": "https://www.adportsgroup.com/",
+      "source_host": "www.adportsgroup.com",
+      "source_country_scope": [
+        "AE"
+      ],
+      "source_language": "ar",
+      "source_category": "port_trade_logistics_reference",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_ad_ports_kizad_logistics_reference_home",
+          "seed_surface_name": "AD Ports Group home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.adportsgroup.com/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_ad_ports_kizad_logistics_reference_trade_logistics",
+          "seed_surface_name": "AD Ports trade and logistics surface",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.adportsgroup.com/en/trade-and-logistics"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_asyad_oman_logistics_reference",
+      "source_family_name": "ASYAD Oman logistics reference surfaces",
+      "source_root_url": "https://asyad.om/",
+      "source_host": "asyad.om",
+      "source_country_scope": [
+        "OM"
+      ],
+      "source_language": "ar",
+      "source_category": "official_logistics_ecosystem_reference",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_asyad_oman_logistics_reference_home",
+          "seed_surface_name": "ASYAD home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://asyad.om/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_asyad_oman_logistics_reference_services",
+          "seed_surface_name": "ASYAD services surface",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://asyad.om/services"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_salalah_port_logistics_reference",
+      "source_family_name": "Salalah Port logistics reference surfaces",
+      "source_root_url": "https://salalahport.com/",
+      "source_host": "salalahport.com",
+      "source_country_scope": [
+        "OM"
+      ],
+      "source_language": "ar",
+      "source_category": "port_logistics_reference",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_salalah_port_logistics_reference_home",
+          "seed_surface_name": "Salalah Port home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://salalahport.com/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_salalah_port_logistics_reference_services",
+          "seed_surface_name": "Salalah Port services surface",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://salalahport.com/services/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_aqaba_logistics_port_reference",
+      "source_family_name": "Aqaba logistics and port reference surfaces",
+      "source_root_url": "https://www.adc.jo/",
+      "source_host": "www.adc.jo",
+      "source_country_scope": [
+        "JO"
+      ],
+      "source_language": "ar",
+      "source_category": "port_logistics_reference",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_aqaba_logistics_port_reference_home",
+          "seed_surface_name": "Aqaba Development Corporation home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.adc.jo/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_aqaba_logistics_port_reference_english",
+          "seed_surface_name": "Aqaba Development Corporation English surface",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.adc.jo/en-us"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_suez_canal_economic_zone_logistics",
+      "source_family_name": "Suez Canal Economic Zone logistics surfaces",
+      "source_root_url": "https://sczone.eg/",
+      "source_host": "sczone.eg",
+      "source_country_scope": [
+        "EG"
+      ],
+      "source_language": "ar",
+      "source_category": "economic_zone_logistics_reference",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_suez_canal_economic_zone_logistics_home",
+          "seed_surface_name": "SCZone home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://sczone.eg/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_suez_canal_economic_zone_logistics_investment",
+          "seed_surface_name": "SCZone investment opportunities",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://sczone.eg/investment-opportunities/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_alexandria_port_authority_reference",
+      "source_family_name": "Alexandria Port Authority reference surfaces",
+      "source_root_url": "https://apa.gov.eg/",
+      "source_host": "apa.gov.eg",
+      "source_country_scope": [
+        "EG"
+      ],
+      "source_language": "ar",
+      "source_category": "official_port_authority_reference",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_alexandria_port_authority_reference_home",
+          "seed_surface_name": "Alexandria Port Authority home",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://apa.gov.eg/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_alexandria_port_authority_reference_english",
+          "seed_surface_name": "Alexandria Port Authority English surface",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://apa.gov.eg/en/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_freightnet_gulf_levant_forwarders",
+      "source_family_name": "Freightnet Gulf and Levant forwarder fallback surfaces",
+      "source_root_url": "https://www.freightnet.com/",
+      "source_host": "www.freightnet.com",
+      "source_country_scope": [
+        "SA",
+        "AE"
+      ],
+      "source_language": "ar",
+      "source_category": "commercial_directory_fallback",
+      "source_quality_tier": "B_PLUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_freightnet_gulf_levant_forwarders_sa_forwarders",
+          "seed_surface_name": "Freightnet Saudi forwarders",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.freightnet.com/directory/p1/cSA/s30.htm"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_freightnet_gulf_levant_forwarders_ae_forwarders",
+          "seed_surface_name": "Freightnet UAE forwarders",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.freightnet.com/directory/p12/cAE/s30.htm"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_freightnet_egypt_qatar_oman",
+      "source_family_name": "Freightnet Egypt Qatar Oman fallback surfaces",
+      "source_root_url": "https://www.freightnet.com/",
+      "source_host": "www.freightnet.com",
+      "source_country_scope": [
+        "EG",
+        "QA"
+      ],
+      "source_language": "ar",
+      "source_category": "commercial_directory_fallback",
+      "source_quality_tier": "B_PLUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_freightnet_egypt_qatar_oman_eg_logistics",
+          "seed_surface_name": "Freightnet Egypt logistics",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.freightnet.com/directory/p1/cEG/s99.htm"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_freightnet_egypt_qatar_oman_qa_forwarders",
+          "seed_surface_name": "Freightnet Qatar forwarders",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.freightnet.com/directory/p1/cQA/s30.htm"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_freightnet_oman_jordan_lebanon",
+      "source_family_name": "Freightnet Oman Jordan Lebanon fallback surfaces",
+      "source_root_url": "https://www.freightnet.com/",
+      "source_host": "www.freightnet.com",
+      "source_country_scope": [
+        "OM",
+        "JO"
+      ],
+      "source_language": "ar",
+      "source_category": "commercial_directory_fallback",
+      "source_quality_tier": "B_PLUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_freightnet_oman_jordan_lebanon_om_forwarders",
+          "seed_surface_name": "Freightnet Oman forwarders",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.freightnet.com/directory/p4/cOM/s30.htm"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_freightnet_oman_jordan_lebanon_jo_forwarders",
+          "seed_surface_name": "Freightnet Jordan forwarders",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.freightnet.com/directory/p5/cJO/s30.htm"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_azfreight_arab_forwarders",
+      "source_family_name": "AZFreight Arab airfreight fallback surfaces",
+      "source_root_url": "https://azfreight.com/",
+      "source_host": "azfreight.com",
+      "source_country_scope": [
+        "SA",
+        "LB"
+      ],
+      "source_language": "ar",
+      "source_category": "commercial_airfreight_directory_fallback",
+      "source_quality_tier": "B",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_azfreight_arab_forwarders_sa_forwarders",
+          "seed_surface_name": "AZFreight Saudi Arabia forwarders",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://azfreight.com/country-facility/freight-forwarders-in-saudi-arabia/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_azfreight_arab_forwarders_lfs_association",
+          "seed_surface_name": "AZFreight LFS association page",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://azfreight.com/association/lfs-lebanese-forwarders-syndicate/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_opca_arab_project_cargo_forwarders",
+      "source_family_name": "OPCA Arab project cargo forwarder fallback surfaces",
+      "source_root_url": "https://overseasprojectcargo.com/",
+      "source_host": "overseasprojectcargo.com",
+      "source_country_scope": [
+        "SA",
+        "JO",
+        "OM",
+        "LB"
+      ],
+      "source_language": "ar",
+      "source_category": "project_cargo_directory_fallback",
+      "source_quality_tier": "B_PLUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_opca_arab_project_cargo_forwarders_sa",
+          "seed_surface_name": "OPCA Saudi Arabia freight forwarders",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://overseasprojectcargo.com/InternationalFreightForwarders/saudi-arabia-freight-forwarders/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_opca_arab_project_cargo_forwarders_jo",
+          "seed_surface_name": "OPCA Jordan freight forwarders",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://overseasprojectcargo.com/InternationalFreightForwarders/jordan-freight-forwarders/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_opca_arab_project_cargo_forwarders_om",
+          "seed_surface_name": "OPCA Oman freight forwarders",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://overseasprojectcargo.com/InternationalFreightForwarders/oman-freight-forwarders/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        },
+        {
+          "seed_surface_code": "ar_opca_arab_project_cargo_forwarders_lb",
+          "seed_surface_name": "OPCA Lebanon freight forwarders",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://overseasprojectcargo.com/InternationalFreightForwarders/lebanon-freight-forwarders/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_iata_cargolink_mena_air_cargo_directory",
+      "source_family_name": "IATA CargoLink MENA air cargo directory surface",
+      "source_root_url": "https://www.iata.org/en/publications/directories/cargolink/directory/",
+      "source_host": "www.iata.org",
+      "source_country_scope": [
+        "MENA"
+      ],
+      "source_language": "ar",
+      "source_category": "air_cargo_directory_reference",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_iata_cargolink_mena_air_cargo_directory_directory",
+          "seed_surface_name": "IATA CargoLink directory",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.iata.org/en/publications/directories/cargolink/directory/"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
+    },
+    {
+      "source_family_code": "ar_iela_middle_east_africa_exhibition_logistics",
+      "source_family_name": "IELA Middle East Africa exhibition logistics directory surface",
+      "source_root_url": "https://www.iela.org/members/find-an-iela-member.html",
+      "source_host": "www.iela.org",
+      "source_country_scope": [
+        "MENA"
+      ],
+      "source_language": "ar",
+      "source_category": "specialist_exhibition_logistics_directory",
+      "source_quality_tier": "A_MINUS",
+      "decision_status": "ACCEPT_REVIEW",
+      "source_status": "candidate_review",
+      "is_enabled": false,
+      "needs_live_check": true,
+      "manual_review_required": true,
+      "parse_core_required": true,
+      "direct_company_import": false,
+      "live_frontier_activation": false,
+      "db_insert_allowed": false,
+      "url_fetch_allowed_in_catalog_gate": false,
+      "crawler_start_allowed_in_catalog_gate": false,
+      "default_priority": 50,
+      "default_max_depth": 1,
+      "default_recrawl_interval": "manual_review_only",
+      "family_origin": "arabic_backfill_R235_decision_doc",
+      "family_metadata": {
+        "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+        "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+        "r239b_safe_dedupe_replacement_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_code": "ar_iela_middle_east_africa_exhibition_logistics_member_finder",
+          "seed_surface_name": "IELA member finder",
+          "surface_type": "backfill_candidate_seed_surface",
+          "seed_urls": [
+            "https://www.iela.org/members/find-an-iela-member.html"
+          ],
+          "is_enabled": false,
+          "needs_live_check": true,
+          "manual_review_required": true,
+          "parse_core_required": true,
+          "direct_company_import": false,
+          "db_insert_allowed": false,
+          "url_fetch_allowed_in_catalog_gate": false,
+          "crawler_start_allowed_in_catalog_gate": false,
+          "surface_origin": "arabic_backfill_R235_decision_doc",
+          "surface_metadata": {
+            "decision_doc": "docs/TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_BACKFILL_DECISION_2026_05_14.md",
+            "decision_doc_sha256": "97b78fda656beb9096b6b3fce9c5c228200103efc2cb18e5caa6d8b1e0b78bf3",
+            "requires_live_probe_before_frontier": true,
+            "direct_company_import": false
+          }
+        }
+      ]
     }
-  ],
-  "source_family_count": 18,
-  "surface_decision_status_counts": {
-    "ACCEPT": 12,
-    "ACCEPT_REVIEW": 13,
-    "HOLD": 5
-  },
-  "unique_host_count": 19,
-  "unique_seed_url_count": 30,
-  "url_fetch_allowed_in_catalog_gate": false
+  ]
 }
