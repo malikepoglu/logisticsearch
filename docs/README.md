@@ -623,8 +623,8 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 
 | Language | Catalog | Status | Source families | Seed surfaces | Seed URLs |
 |---|---|---:|---:|---:|---:|
-| English (`en`) | [`english_source_families_v2.json`](../makpi51crawler/catalog/startpoints/en/english_source_families_v2.json) | sealed candidate manifest, not live | 171 | 450 | 450 |
-| Turkish (`tr`) | [`turkish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/tr/turkish_source_families_v2.json) | sealed candidate manifest, not live | 40 | 80 | 77 |
+| English (`en`) | [`english_source_families_v2.json`](../makpi51crawler/catalog/startpoints/en/english_source_families_v2.json) | sealed candidate manifest, not live | 171 | 450 | 381 |
+| Turkish (`tr`) | [`turkish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/tr/turkish_source_families_v2.json) | sealed candidate manifest, not live | 40 | 80 | 73 |
 | German (`de`) | [`german_source_families_v2.json`](../makpi51crawler/catalog/startpoints/de/german_source_families_v2.json) | sealed candidate manifest, not live | 41 | 80 | 81 |
 | Arabic (`ar`) | [`arabic_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ar/arabic_source_families_v2.json) | sealed candidate manifest, not live | 40 | 80 | 80 |
 | Chinese (`zh`) | [`chinese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/zh/chinese_source_families_v2.json) | sealed candidate manifest, not live | 105 | 106 | 106 |
