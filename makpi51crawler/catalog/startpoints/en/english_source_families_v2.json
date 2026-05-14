@@ -8,7 +8,7 @@
   "candidate_manifest": true,
   "is_live": false,
   "created_by_gate": "SOURCE_SEED_R195C_ENGLISH_SUPER_EXPANSION_CATALOG_REWRITE_LOCAL_ONLY",
-  "last_rewritten_by_gate": "SOURCE_SEED_R195C_ENGLISH_SUPER_EXPANSION_CATALOG_REWRITE_LOCAL_ONLY",
+  "last_rewritten_by_gate": "SOURCE_SEED_R246H3_EN_ONLY_LOGICAL_DEDUPE_PATCH_LOCAL_ONLY",
   "decision_doc_path": "docs/TOPIC_CRAWLER_CORE_ENGLISH_SOURCE_SEED_SUPER_EXPANSION_DECISION_2026_05_13.md",
   "decision_doc_sha256": "686f9e182bc6f1451b0d8c487f3d4f4dd7a4fad007b77d56b64aff4440fefd50",
   "decision_doc_commit": "356ac99afdd845844200ec4048a207163b36706f",
@@ -49,8 +49,8 @@
   "metrics": {
     "source_family_count": 171,
     "seed_surface_count": 450,
-    "seed_url_count": 450,
-    "unique_seed_url_count": 450,
+    "seed_url_count": 381,
+    "unique_seed_url_count": 381,
     "unique_host_count": 150,
     "decision_status_counts": {
       "ACCEPT": 10,
@@ -3336,14 +3336,7 @@
           "source_family_code": "en_fiata_members_directory",
           "sequence": 2,
           "submitted_url": "https://fiata.org/directory/gb/?ls_unique_surface=en_fiata_members_directory_002",
-          "canonical_url": "https://fiata.org/directory/gb/?ls_unique_surface=en_fiata_members_directory_002",
-          "seed_url": "https://fiata.org/directory/gb/?ls_unique_surface=en_fiata_members_directory_002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://fiata.org/directory/gb/?ls_unique_surface=en_fiata_members_directory_002",
-              "canonical_url": "https://fiata.org/directory/gb/?ls_unique_surface=en_fiata_members_directory_002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_global_association_members_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -6562,14 +6555,7 @@
           "source_family_code": "en_ncbfaa_membership_directory",
           "sequence": 2,
           "submitted_url": "https://members.ncbfaa.org/directory/Member/index.html?ls_planned_surface=002",
-          "canonical_url": "https://members.ncbfaa.org/directory/Member/index.html?ls_planned_surface=002",
-          "seed_url": "https://members.ncbfaa.org/directory/Member/index.html?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://members.ncbfaa.org/directory/Member/index.html?ls_planned_surface=002",
-              "canonical_url": "https://members.ncbfaa.org/directory/Member/index.html?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "national_association_member_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -6706,14 +6692,7 @@
           "source_family_code": "en_cbp_permitted_customs_brokers",
           "sequence": 2,
           "submitted_url": "https://www.cbp.gov/about/contact/brokers-listing?ls_planned_surface=002",
-          "canonical_url": "https://www.cbp.gov/about/contact/brokers-listing?ls_planned_surface=002",
-          "seed_url": "https://www.cbp.gov/about/contact/brokers-listing?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.cbp.gov/about/contact/brokers-listing?ls_planned_surface=002",
-              "canonical_url": "https://www.cbp.gov/about/contact/brokers-listing?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_customs_broker_listing",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -6734,14 +6713,7 @@
           "source_family_code": "en_cbp_permitted_customs_brokers",
           "sequence": 3,
           "submitted_url": "https://www.cbp.gov/about/contact/brokers-listing?ls_planned_surface=003",
-          "canonical_url": "https://www.cbp.gov/about/contact/brokers-listing?ls_planned_surface=003",
-          "seed_url": "https://www.cbp.gov/about/contact/brokers-listing?ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.cbp.gov/about/contact/brokers-listing?ls_planned_surface=003",
-              "canonical_url": "https://www.cbp.gov/about/contact/brokers-listing?ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_customs_broker_listing",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -6820,14 +6792,7 @@
           "source_family_code": "en_fmc_oti_nvoccs",
           "sequence": 2,
           "submitted_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=002",
-          "canonical_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=002",
-          "seed_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=002",
-              "canonical_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_ocean_transport_intermediary_listing",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -6848,14 +6813,7 @@
           "source_family_code": "en_fmc_oti_nvoccs",
           "sequence": 3,
           "submitted_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=003",
-          "canonical_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=003",
-          "seed_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=003",
-              "canonical_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_ocean_transport_intermediary_listing",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -6876,14 +6834,7 @@
           "source_family_code": "en_fmc_oti_nvoccs",
           "sequence": 4,
           "submitted_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=004",
-          "canonical_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=004",
-          "seed_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=004",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=004",
-              "canonical_url": "https://www2.fmc.gov/oti/NVOCC.aspx?ls_planned_surface=004"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_ocean_transport_intermediary_listing",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -6962,14 +6913,7 @@
           "source_family_code": "en_govuk_customs_agents_register",
           "sequence": 2,
           "submitted_url": "https://www.gov.uk/guidance/list-of-customs-agents-and-fast-parcel-operators?ls_planned_surface=002",
-          "canonical_url": "https://www.gov.uk/guidance/list-of-customs-agents-and-fast-parcel-operators?ls_planned_surface=002",
-          "seed_url": "https://www.gov.uk/guidance/list-of-customs-agents-and-fast-parcel-operators?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.gov.uk/guidance/list-of-customs-agents-and-fast-parcel-operators?ls_planned_surface=002",
-              "canonical_url": "https://www.gov.uk/guidance/list-of-customs-agents-and-fast-parcel-operators?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_customs_agent_register",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -7020,14 +6964,7 @@
           "source_family_code": "en_bifa_members_directory",
           "sequence": 1,
           "submitted_url": "https://bifa.org/members/?ls_unique_surface=en_bifa_members_directory_001",
-          "canonical_url": "https://bifa.org/members/?ls_unique_surface=en_bifa_members_directory_001",
-          "seed_url": "https://bifa.org/members/?ls_unique_surface=en_bifa_members_directory_001",
-          "seed_urls": [
-            {
-              "submitted_url": "https://bifa.org/members/?ls_unique_surface=en_bifa_members_directory_001",
-              "canonical_url": "https://bifa.org/members/?ls_unique_surface=en_bifa_members_directory_001"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "national_association_member_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -7048,14 +6985,7 @@
           "source_family_code": "en_bifa_members_directory",
           "sequence": 2,
           "submitted_url": "https://bifa.org/members/?ls_planned_surface=002",
-          "canonical_url": "https://bifa.org/members/?ls_planned_surface=002",
-          "seed_url": "https://bifa.org/members/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://bifa.org/members/?ls_planned_surface=002",
-              "canonical_url": "https://bifa.org/members/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "national_association_member_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -7106,14 +7036,7 @@
           "source_family_code": "en_ciffa_members_directory",
           "sequence": 1,
           "submitted_url": "https://www.ciffa.com/member-directory/?ls_unique_surface=en_ciffa_members_directory_001",
-          "canonical_url": "https://www.ciffa.com/member-directory/?ls_unique_surface=en_ciffa_members_directory_001",
-          "seed_url": "https://www.ciffa.com/member-directory/?ls_unique_surface=en_ciffa_members_directory_001",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.ciffa.com/member-directory/?ls_unique_surface=en_ciffa_members_directory_001",
-              "canonical_url": "https://www.ciffa.com/member-directory/?ls_unique_surface=en_ciffa_members_directory_001"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "national_association_member_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -7134,14 +7057,7 @@
           "source_family_code": "en_ciffa_members_directory",
           "sequence": 2,
           "submitted_url": "https://www.ciffa.com/member-directory/?ls_planned_surface=002",
-          "canonical_url": "https://www.ciffa.com/member-directory/?ls_planned_surface=002",
-          "seed_url": "https://www.ciffa.com/member-directory/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.ciffa.com/member-directory/?ls_planned_surface=002",
-              "canonical_url": "https://www.ciffa.com/member-directory/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "national_association_member_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -7278,14 +7194,7 @@
           "source_family_code": "en_ifcbaa_member_directory",
           "sequence": 2,
           "submitted_url": "https://www.ifcbaa.com/IFCBAA/IFCBAA/About/Member_Directory.aspx?ls_planned_surface=002",
-          "canonical_url": "https://www.ifcbaa.com/IFCBAA/IFCBAA/About/Member_Directory.aspx?ls_planned_surface=002",
-          "seed_url": "https://www.ifcbaa.com/IFCBAA/IFCBAA/About/Member_Directory.aspx?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.ifcbaa.com/IFCBAA/IFCBAA/About/Member_Directory.aspx?ls_planned_surface=002",
-              "canonical_url": "https://www.ifcbaa.com/IFCBAA/IFCBAA/About/Member_Directory.aspx?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "national_association_member_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -7364,14 +7273,7 @@
           "source_family_code": "en_cbaff_business_directory",
           "sequence": 2,
           "submitted_url": "https://www.cbaff.org.nz/business-directory?ls_planned_surface=002",
-          "canonical_url": "https://www.cbaff.org.nz/business-directory?ls_planned_surface=002",
-          "seed_url": "https://www.cbaff.org.nz/business-directory?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.cbaff.org.nz/business-directory?ls_planned_surface=002",
-              "canonical_url": "https://www.cbaff.org.nz/business-directory?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "national_association_business_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT",
@@ -7566,14 +7468,7 @@
           "source_family_code": "en_tia_member_directory",
           "sequence": 2,
           "submitted_url": "https://tianet.org/TIA/TIAnetOrg/TIA-Member-Directory.aspx?ls_planned_surface=002",
-          "canonical_url": "https://tianet.org/TIA/TIAnetOrg/TIA-Member-Directory.aspx?ls_planned_surface=002",
-          "seed_url": "https://tianet.org/TIA/TIAnetOrg/TIA-Member-Directory.aspx?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://tianet.org/TIA/TIAnetOrg/TIA-Member-Directory.aspx?ls_planned_surface=002",
-              "canonical_url": "https://tianet.org/TIA/TIAnetOrg/TIA-Member-Directory.aspx?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "third_party_logistics_member_directory",
           "quality_tier": "A",
           "decision_status": "ACCEPT_REVIEW",
@@ -7652,14 +7547,7 @@
           "source_family_code": "en_airforwarders_member_marketplace",
           "sequence": 2,
           "submitted_url": "https://airforwarders.org/member-marketplace/?ls_planned_surface=002",
-          "canonical_url": "https://airforwarders.org/member-marketplace/?ls_planned_surface=002",
-          "seed_url": "https://airforwarders.org/member-marketplace/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://airforwarders.org/member-marketplace/?ls_planned_surface=002",
-              "canonical_url": "https://airforwarders.org/member-marketplace/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "air_forwarder_association_marketplace",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -7738,14 +7626,7 @@
           "source_family_code": "en_sla_member_directory",
           "sequence": 2,
           "submitted_url": "https://www.sla.org.sg/memberDirectory?ls_planned_surface=002",
-          "canonical_url": "https://www.sla.org.sg/memberDirectory?ls_planned_surface=002",
-          "seed_url": "https://www.sla.org.sg/memberDirectory?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.sla.org.sg/memberDirectory?ls_planned_surface=002",
-              "canonical_url": "https://www.sla.org.sg/memberDirectory?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "national_logistics_association_member_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -7824,14 +7705,7 @@
           "source_family_code": "en_saaa_members",
           "sequence": 2,
           "submitted_url": "https://www.saaa.org.sg/listing-of-saaa-members/?ls_planned_surface=002",
-          "canonical_url": "https://www.saaa.org.sg/listing-of-saaa-members/?ls_planned_surface=002",
-          "seed_url": "https://www.saaa.org.sg/listing-of-saaa-members/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.saaa.org.sg/listing-of-saaa-members/?ls_planned_surface=002",
-              "canonical_url": "https://www.saaa.org.sg/listing-of-saaa-members/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "aircargo_agents_member_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -7910,14 +7784,7 @@
           "source_family_code": "en_fffai_membership_search",
           "sequence": 2,
           "submitted_url": "https://fffai.org/user/membership/membership-search?ls_planned_surface=002",
-          "canonical_url": "https://fffai.org/user/membership/membership-search?ls_planned_surface=002",
-          "seed_url": "https://fffai.org/user/membership/membership-search?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://fffai.org/user/membership/membership-search?ls_planned_surface=002",
-              "canonical_url": "https://fffai.org/user/membership/membership-search?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "national_forwarder_association_member_search",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8576,14 +8443,7 @@
           "source_family_code": "en_iwla_find_warehouse",
           "sequence": 2,
           "submitted_url": "https://iwla.com/?ls_planned_surface=002",
-          "canonical_url": "https://iwla.com/?ls_planned_surface=002",
-          "seed_url": "https://iwla.com/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://iwla.com/?ls_planned_surface=002",
-              "canonical_url": "https://iwla.com/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8604,14 +8464,7 @@
           "source_family_code": "en_iwla_find_warehouse",
           "sequence": 3,
           "submitted_url": "https://iwla.com/?ls_planned_surface=003",
-          "canonical_url": "https://iwla.com/?ls_planned_surface=003",
-          "seed_url": "https://iwla.com/?ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://iwla.com/?ls_planned_surface=003",
-              "canonical_url": "https://iwla.com/?ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8632,14 +8485,7 @@
           "source_family_code": "en_iwla_find_warehouse",
           "sequence": 4,
           "submitted_url": "https://iwla.com/?ls_planned_surface=004",
-          "canonical_url": "https://iwla.com/?ls_planned_surface=004",
-          "seed_url": "https://iwla.com/?ls_planned_surface=004",
-          "seed_urls": [
-            {
-              "submitted_url": "https://iwla.com/?ls_planned_surface=004",
-              "canonical_url": "https://iwla.com/?ls_planned_surface=004"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8660,14 +8506,7 @@
           "source_family_code": "en_iwla_find_warehouse",
           "sequence": 5,
           "submitted_url": "https://iwla.com/?ls_planned_surface=005",
-          "canonical_url": "https://iwla.com/?ls_planned_surface=005",
-          "seed_url": "https://iwla.com/?ls_planned_surface=005",
-          "seed_urls": [
-            {
-              "submitted_url": "https://iwla.com/?ls_planned_surface=005",
-              "canonical_url": "https://iwla.com/?ls_planned_surface=005"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8688,14 +8527,7 @@
           "source_family_code": "en_iwla_find_warehouse",
           "sequence": 6,
           "submitted_url": "https://iwla.com/?ls_planned_surface=006",
-          "canonical_url": "https://iwla.com/?ls_planned_surface=006",
-          "seed_url": "https://iwla.com/?ls_planned_surface=006",
-          "seed_urls": [
-            {
-              "submitted_url": "https://iwla.com/?ls_planned_surface=006",
-              "canonical_url": "https://iwla.com/?ls_planned_surface=006"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8716,14 +8548,7 @@
           "source_family_code": "en_iwla_find_warehouse",
           "sequence": 7,
           "submitted_url": "https://iwla.com/?ls_planned_surface=007",
-          "canonical_url": "https://iwla.com/?ls_planned_surface=007",
-          "seed_url": "https://iwla.com/?ls_planned_surface=007",
-          "seed_urls": [
-            {
-              "submitted_url": "https://iwla.com/?ls_planned_surface=007",
-              "canonical_url": "https://iwla.com/?ls_planned_surface=007"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8744,14 +8569,7 @@
           "source_family_code": "en_iwla_find_warehouse",
           "sequence": 8,
           "submitted_url": "https://iwla.com/?ls_planned_surface=008",
-          "canonical_url": "https://iwla.com/?ls_planned_surface=008",
-          "seed_url": "https://iwla.com/?ls_planned_surface=008",
-          "seed_urls": [
-            {
-              "submitted_url": "https://iwla.com/?ls_planned_surface=008",
-              "canonical_url": "https://iwla.com/?ls_planned_surface=008"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8830,14 +8648,7 @@
           "source_family_code": "en_findawarehouse_iwla",
           "sequence": 2,
           "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=002",
-          "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=002",
-          "seed_url": "https://www.findawarehouse.org/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=002",
-              "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8858,14 +8669,7 @@
           "source_family_code": "en_findawarehouse_iwla",
           "sequence": 3,
           "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=003",
-          "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=003",
-          "seed_url": "https://www.findawarehouse.org/?ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=003",
-              "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8886,14 +8690,7 @@
           "source_family_code": "en_findawarehouse_iwla",
           "sequence": 4,
           "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=004",
-          "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=004",
-          "seed_url": "https://www.findawarehouse.org/?ls_planned_surface=004",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=004",
-              "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=004"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8914,14 +8711,7 @@
           "source_family_code": "en_findawarehouse_iwla",
           "sequence": 5,
           "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=005",
-          "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=005",
-          "seed_url": "https://www.findawarehouse.org/?ls_planned_surface=005",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=005",
-              "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=005"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8942,14 +8732,7 @@
           "source_family_code": "en_findawarehouse_iwla",
           "sequence": 6,
           "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=006",
-          "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=006",
-          "seed_url": "https://www.findawarehouse.org/?ls_planned_surface=006",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=006",
-              "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=006"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8970,14 +8753,7 @@
           "source_family_code": "en_findawarehouse_iwla",
           "sequence": 7,
           "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=007",
-          "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=007",
-          "seed_url": "https://www.findawarehouse.org/?ls_planned_surface=007",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=007",
-              "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=007"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -8998,14 +8774,7 @@
           "source_family_code": "en_findawarehouse_iwla",
           "sequence": 8,
           "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=008",
-          "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=008",
-          "seed_url": "https://www.findawarehouse.org/?ls_planned_surface=008",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.findawarehouse.org/?ls_planned_surface=008",
-              "canonical_url": "https://www.findawarehouse.org/?ls_planned_surface=008"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "warehouse_logistics_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -9084,14 +8853,7 @@
           "source_family_code": "en_gcca_global_directory",
           "sequence": 2,
           "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=002",
-          "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=002",
-          "seed_url": "https://www.gcca.org/directory/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=002",
-              "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "cold_chain_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -9112,14 +8874,7 @@
           "source_family_code": "en_gcca_global_directory",
           "sequence": 3,
           "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=003",
-          "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=003",
-          "seed_url": "https://www.gcca.org/directory/?ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=003",
-              "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "cold_chain_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -9140,14 +8895,7 @@
           "source_family_code": "en_gcca_global_directory",
           "sequence": 4,
           "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=004",
-          "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=004",
-          "seed_url": "https://www.gcca.org/directory/?ls_planned_surface=004",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=004",
-              "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=004"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "cold_chain_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -9168,14 +8916,7 @@
           "source_family_code": "en_gcca_global_directory",
           "sequence": 5,
           "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=005",
-          "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=005",
-          "seed_url": "https://www.gcca.org/directory/?ls_planned_surface=005",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=005",
-              "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=005"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "cold_chain_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -9196,14 +8937,7 @@
           "source_family_code": "en_gcca_global_directory",
           "sequence": 6,
           "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=006",
-          "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=006",
-          "seed_url": "https://www.gcca.org/directory/?ls_planned_surface=006",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=006",
-              "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=006"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "cold_chain_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -9224,14 +8958,7 @@
           "source_family_code": "en_gcca_global_directory",
           "sequence": 7,
           "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=007",
-          "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=007",
-          "seed_url": "https://www.gcca.org/directory/?ls_planned_surface=007",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=007",
-              "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=007"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "cold_chain_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -9252,14 +8979,7 @@
           "source_family_code": "en_gcca_global_directory",
           "sequence": 8,
           "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=008",
-          "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=008",
-          "seed_url": "https://www.gcca.org/directory/?ls_planned_surface=008",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.gcca.org/directory/?ls_planned_surface=008",
-              "canonical_url": "https://www.gcca.org/directory/?ls_planned_surface=008"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "cold_chain_directory",
           "quality_tier": "A_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -9396,14 +9116,7 @@
           "source_family_code": "en_cold_chain_federation_operators",
           "sequence": 2,
           "submitted_url": "https://www.coldchainfederation.org.uk/members/operators-members/?ls_planned_surface=002",
-          "canonical_url": "https://www.coldchainfederation.org.uk/members/operators-members/?ls_planned_surface=002",
-          "seed_url": "https://www.coldchainfederation.org.uk/members/operators-members/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.coldchainfederation.org.uk/members/operators-members/?ls_planned_surface=002",
-              "canonical_url": "https://www.coldchainfederation.org.uk/members/operators-members/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "cold_chain_operator_directory",
           "quality_tier": "A",
           "decision_status": "ACCEPT_REVIEW",
@@ -9946,14 +9659,7 @@
           "source_family_code": "en_georgia_ports_services_directory",
           "sequence": 2,
           "submitted_url": "https://gaports.com/port-services-directory/?ls_planned_surface=002",
-          "canonical_url": "https://gaports.com/port-services-directory/?ls_planned_surface=002",
-          "seed_url": "https://gaports.com/port-services-directory/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://gaports.com/port-services-directory/?ls_planned_surface=002",
-              "canonical_url": "https://gaports.com/port-services-directory/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_port_services_directory",
           "quality_tier": "A",
           "decision_status": "ACCEPT_REVIEW",
@@ -9974,14 +9680,7 @@
           "source_family_code": "en_georgia_ports_services_directory",
           "sequence": 3,
           "submitted_url": "https://gaports.com/port-services-directory/?ls_planned_surface=003",
-          "canonical_url": "https://gaports.com/port-services-directory/?ls_planned_surface=003",
-          "seed_url": "https://gaports.com/port-services-directory/?ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://gaports.com/port-services-directory/?ls_planned_surface=003",
-              "canonical_url": "https://gaports.com/port-services-directory/?ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_port_services_directory",
           "quality_tier": "A",
           "decision_status": "ACCEPT_REVIEW",
@@ -10060,14 +9759,7 @@
           "source_family_code": "en_georgia_ports_logistics_companies",
           "sequence": 2,
           "submitted_url": "https://gaports.com/logistics-companies/?ls_planned_surface=002",
-          "canonical_url": "https://gaports.com/logistics-companies/?ls_planned_surface=002",
-          "seed_url": "https://gaports.com/logistics-companies/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://gaports.com/logistics-companies/?ls_planned_surface=002",
-              "canonical_url": "https://gaports.com/logistics-companies/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_port_logistics_company_directory",
           "quality_tier": "A",
           "decision_status": "ACCEPT_REVIEW",
@@ -10900,14 +10592,7 @@
           "source_family_code": "en_loadmatch_us_3pl_directory",
           "sequence": 2,
           "submitted_url": "https://www.loadmatch.com/directory/results.cfm?category=3rd-party&state_code=ca&ls_planned_surface=002",
-          "canonical_url": "https://www.loadmatch.com/directory/results.cfm?category=3rd-party&state_code=ca&ls_planned_surface=002",
-          "seed_url": "https://www.loadmatch.com/directory/results.cfm?category=3rd-party&state_code=ca&ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.loadmatch.com/directory/results.cfm?category=3rd-party&state_code=ca&ls_planned_surface=002",
-              "canonical_url": "https://www.loadmatch.com/directory/results.cfm?category=3rd-party&state_code=ca&ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "commercial_3pl_directory",
           "quality_tier": "B_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -10928,14 +10613,7 @@
           "source_family_code": "en_loadmatch_us_3pl_directory",
           "sequence": 3,
           "submitted_url": "https://www.loadmatch.com/directory/results.cfm?category=3rd-party&state_code=ca&ls_planned_surface=003",
-          "canonical_url": "https://www.loadmatch.com/directory/results.cfm?category=3rd-party&state_code=ca&ls_planned_surface=003",
-          "seed_url": "https://www.loadmatch.com/directory/results.cfm?category=3rd-party&state_code=ca&ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.loadmatch.com/directory/results.cfm?category=3rd-party&state_code=ca&ls_planned_surface=003",
-              "canonical_url": "https://www.loadmatch.com/directory/results.cfm?category=3rd-party&state_code=ca&ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "commercial_3pl_directory",
           "quality_tier": "B_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -11014,14 +10692,7 @@
           "source_family_code": "en_mgn_maritime_directory",
           "sequence": 2,
           "submitted_url": "https://www.mgn.com/directory?ls_planned_surface=002",
-          "canonical_url": "https://www.mgn.com/directory?ls_planned_surface=002",
-          "seed_url": "https://www.mgn.com/directory?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.mgn.com/directory?ls_planned_surface=002",
-              "canonical_url": "https://www.mgn.com/directory?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "commercial_maritime_directory",
           "quality_tier": "B",
           "decision_status": "ACCEPT_REVIEW",
@@ -11100,14 +10771,7 @@
           "source_family_code": "en_ports_agents_network",
           "sequence": 2,
           "submitted_url": "https://port-agents.com/network?ls_planned_surface=002",
-          "canonical_url": "https://port-agents.com/network?ls_planned_surface=002",
-          "seed_url": "https://port-agents.com/network?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://port-agents.com/network?ls_planned_surface=002",
-              "canonical_url": "https://port-agents.com/network?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "commercial_port_agents_network",
           "quality_tier": "B",
           "decision_status": "ACCEPT_REVIEW",
@@ -11302,14 +10966,7 @@
           "source_family_code": "en_transport_logistic_exhibitor_directory",
           "sequence": 2,
           "submitted_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/?ls_planned_surface=002",
-          "canonical_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/?ls_planned_surface=002",
-          "seed_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/?ls_planned_surface=002",
-              "canonical_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "trade_fair_exhibitor_directory",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -11330,14 +10987,7 @@
           "source_family_code": "en_transport_logistic_exhibitor_directory",
           "sequence": 3,
           "submitted_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/?ls_planned_surface=003",
-          "canonical_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/?ls_planned_surface=003",
-          "seed_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/?ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/?ls_planned_surface=003",
-              "canonical_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/?ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "trade_fair_exhibitor_directory",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -11416,14 +11066,7 @@
           "source_family_code": "en_air_cargo_europe_exhibitor_directory",
           "sequence": 2,
           "submitted_url": "https://transportlogistic.de/en/aircargoeurope/exhibitor-directory/exhibitors-sectors/?ls_planned_surface=002",
-          "canonical_url": "https://transportlogistic.de/en/aircargoeurope/exhibitor-directory/exhibitors-sectors/?ls_planned_surface=002",
-          "seed_url": "https://transportlogistic.de/en/aircargoeurope/exhibitor-directory/exhibitors-sectors/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://transportlogistic.de/en/aircargoeurope/exhibitor-directory/exhibitors-sectors/?ls_planned_surface=002",
-              "canonical_url": "https://transportlogistic.de/en/aircargoeurope/exhibitor-directory/exhibitors-sectors/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "air_cargo_trade_fair_directory",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -11502,14 +11145,7 @@
           "source_family_code": "en_breakbulk_americas_exhibitors",
           "sequence": 2,
           "submitted_url": "https://americas.breakbulk.com/exhibitors?ls_planned_surface=002",
-          "canonical_url": "https://americas.breakbulk.com/exhibitors?ls_planned_surface=002",
-          "seed_url": "https://americas.breakbulk.com/exhibitors?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://americas.breakbulk.com/exhibitors?ls_planned_surface=002",
-              "canonical_url": "https://americas.breakbulk.com/exhibitors?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "breakbulk_project_cargo_exhibitor_directory",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -12024,14 +11660,7 @@
           "source_family_code": "en_opca_project_cargo_directory",
           "sequence": 1,
           "submitted_url": "https://overseasprojectcargo.com/Directory/?ls_unique_surface=en_opca_project_cargo_directory_001",
-          "canonical_url": "https://overseasprojectcargo.com/Directory/?ls_unique_surface=en_opca_project_cargo_directory_001",
-          "seed_url": "https://overseasprojectcargo.com/Directory/?ls_unique_surface=en_opca_project_cargo_directory_001",
-          "seed_urls": [
-            {
-              "submitted_url": "https://overseasprojectcargo.com/Directory/?ls_unique_surface=en_opca_project_cargo_directory_001",
-              "canonical_url": "https://overseasprojectcargo.com/Directory/?ls_unique_surface=en_opca_project_cargo_directory_001"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "project_cargo_commercial_directory",
           "quality_tier": "B_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -12198,14 +11827,7 @@
           "source_family_code": "en_fnc_network_directory",
           "sequence": 1,
           "submitted_url": "https://fncnetwork.com/directory?ls_unique_surface=en_fnc_network_directory_001",
-          "canonical_url": "https://fncnetwork.com/directory?ls_unique_surface=en_fnc_network_directory_001",
-          "seed_url": "https://fncnetwork.com/directory?ls_unique_surface=en_fnc_network_directory_001",
-          "seed_urls": [
-            {
-              "submitted_url": "https://fncnetwork.com/directory?ls_unique_surface=en_fnc_network_directory_001",
-              "canonical_url": "https://fncnetwork.com/directory?ls_unique_surface=en_fnc_network_directory_001"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "global_freight_network_directory",
           "quality_tier": "B_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -12256,14 +11878,7 @@
           "source_family_code": "en_df_alliance_member_directory",
           "sequence": 1,
           "submitted_url": "https://www.df-alliance.com/benefits/member-directory?ls_unique_surface=en_df_alliance_member_directory_001",
-          "canonical_url": "https://www.df-alliance.com/benefits/member-directory?ls_unique_surface=en_df_alliance_member_directory_001",
-          "seed_url": "https://www.df-alliance.com/benefits/member-directory?ls_unique_surface=en_df_alliance_member_directory_001",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.df-alliance.com/benefits/member-directory?ls_unique_surface=en_df_alliance_member_directory_001",
-              "canonical_url": "https://www.df-alliance.com/benefits/member-directory?ls_unique_surface=en_df_alliance_member_directory_001"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "digital_freight_network_directory",
           "quality_tier": "B_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -12314,14 +11929,7 @@
           "source_family_code": "en_all_forward_members_directory",
           "sequence": 1,
           "submitted_url": "https://www.all-forward.com/MembersDirectory?ls_unique_surface=en_all_forward_members_directory_001",
-          "canonical_url": "https://www.all-forward.com/MembersDirectory?ls_unique_surface=en_all_forward_members_directory_001",
-          "seed_url": "https://www.all-forward.com/MembersDirectory?ls_unique_surface=en_all_forward_members_directory_001",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.all-forward.com/MembersDirectory?ls_unique_surface=en_all_forward_members_directory_001",
-              "canonical_url": "https://www.all-forward.com/MembersDirectory?ls_unique_surface=en_all_forward_members_directory_001"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "global_freight_network_directory",
           "quality_tier": "B_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -12430,14 +12038,7 @@
           "source_family_code": "en_freight_midpoint_directory",
           "sequence": 1,
           "submitted_url": "https://freightmidpoint.com/Directory/?ls_unique_surface=en_freight_midpoint_directory_001",
-          "canonical_url": "https://freightmidpoint.com/Directory/?ls_unique_surface=en_freight_midpoint_directory_001",
-          "seed_url": "https://freightmidpoint.com/Directory/?ls_unique_surface=en_freight_midpoint_directory_001",
-          "seed_urls": [
-            {
-              "submitted_url": "https://freightmidpoint.com/Directory/?ls_unique_surface=en_freight_midpoint_directory_001",
-              "canonical_url": "https://freightmidpoint.com/Directory/?ls_unique_surface=en_freight_midpoint_directory_001"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "freight_network_directory",
           "quality_tier": "B_PLUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -15220,14 +14821,7 @@
           "source_family_code": "en_freighthub_directory",
           "sequence": 1,
           "submitted_url": "https://freighthub.co/?ls_unique_surface=en_freighthub_directory_001",
-          "canonical_url": "https://freighthub.co/?ls_unique_surface=en_freighthub_directory_001",
-          "seed_url": "https://freighthub.co/?ls_unique_surface=en_freighthub_directory_001",
-          "seed_urls": [
-            {
-              "submitted_url": "https://freighthub.co/?ls_unique_surface=en_freighthub_directory_001",
-              "canonical_url": "https://freighthub.co/?ls_unique_surface=en_freighthub_directory_001"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "commercial_logistics_directory",
           "quality_tier": "B_MINUS",
           "decision_status": "HOLD",
@@ -15644,14 +15238,7 @@
           "source_family_code": "en_clecat_members",
           "sequence": 1,
           "submitted_url": "https://www.clecat.org/members/full-members?ls_unique_surface=en_clecat_members_001",
-          "canonical_url": "https://www.clecat.org/members/full-members?ls_unique_surface=en_clecat_members_001",
-          "seed_url": "https://www.clecat.org/members/full-members?ls_unique_surface=en_clecat_members_001",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.clecat.org/members/full-members?ls_unique_surface=en_clecat_members_001",
-              "canonical_url": "https://www.clecat.org/members/full-members?ls_unique_surface=en_clecat_members_001"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "european_association_member_reference",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -16310,14 +15897,7 @@
           "source_family_code": "en_hafen_hamburg_directory",
           "sequence": 2,
           "submitted_url": "https://www.hafen-hamburg.de/en/?ls_planned_surface=002",
-          "canonical_url": "https://www.hafen-hamburg.de/en/?ls_planned_surface=002",
-          "seed_url": "https://www.hafen-hamburg.de/en/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.hafen-hamburg.de/en/?ls_planned_surface=002",
-              "canonical_url": "https://www.hafen-hamburg.de/en/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "port_logistics_directory",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -16976,14 +16556,7 @@
           "source_family_code": "en_port_boulogne_calais_rde",
           "sequence": 2,
           "submitted_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/?ls_planned_surface=002",
-          "canonical_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/?ls_planned_surface=002",
-          "seed_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/?ls_planned_surface=002",
-              "canonical_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_port_customs_representative_directory",
           "quality_tier": "A",
           "decision_status": "ACCEPT_REVIEW",
@@ -17004,14 +16577,7 @@
           "source_family_code": "en_port_boulogne_calais_rde",
           "sequence": 3,
           "submitted_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/?ls_planned_surface=003",
-          "canonical_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/?ls_planned_surface=003",
-          "seed_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/?ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/?ls_planned_surface=003",
-              "canonical_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/?ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_port_customs_representative_directory",
           "quality_tier": "A",
           "decision_status": "ACCEPT_REVIEW",
@@ -17090,14 +16656,7 @@
           "source_family_code": "en_union_ports_france_members",
           "sequence": 2,
           "submitted_url": "https://www.port.fr/liste-des-membres?ls_planned_surface=002",
-          "canonical_url": "https://www.port.fr/liste-des-membres?ls_planned_surface=002",
-          "seed_url": "https://www.port.fr/liste-des-membres?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.port.fr/liste-des-membres?ls_planned_surface=002",
-              "canonical_url": "https://www.port.fr/liste-des-membres?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_port_association_member_directory",
           "quality_tier": "A",
           "decision_status": "ACCEPT_REVIEW",
@@ -17292,14 +16851,7 @@
           "source_family_code": "en_paris_aeroport_cargo",
           "sequence": 2,
           "submitted_url": "https://www.parisaeroport.fr/en/professionals/cargo?ls_planned_surface=002",
-          "canonical_url": "https://www.parisaeroport.fr/en/professionals/cargo?ls_planned_surface=002",
-          "seed_url": "https://www.parisaeroport.fr/en/professionals/cargo?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.parisaeroport.fr/en/professionals/cargo?ls_planned_surface=002",
-              "canonical_url": "https://www.parisaeroport.fr/en/professionals/cargo?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_airport_cargo_surface",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -17320,14 +16872,7 @@
           "source_family_code": "en_paris_aeroport_cargo",
           "sequence": 3,
           "submitted_url": "https://www.parisaeroport.fr/en/professionals/cargo?ls_planned_surface=003",
-          "canonical_url": "https://www.parisaeroport.fr/en/professionals/cargo?ls_planned_surface=003",
-          "seed_url": "https://www.parisaeroport.fr/en/professionals/cargo?ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.parisaeroport.fr/en/professionals/cargo?ls_planned_surface=003",
-              "canonical_url": "https://www.parisaeroport.fr/en/professionals/cargo?ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "official_airport_cargo_surface",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -17812,14 +17357,7 @@
           "source_family_code": "en_eu_aeo_directory",
           "sequence": 2,
           "submitted_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=002",
-          "canonical_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=002",
-          "seed_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=002",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=002",
-              "canonical_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=002"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "aeo_operator_directory",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -17840,14 +17378,7 @@
           "source_family_code": "en_eu_aeo_directory",
           "sequence": 3,
           "submitted_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=003",
-          "canonical_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=003",
-          "seed_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=003",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=003",
-              "canonical_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=003"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "aeo_operator_directory",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -17868,14 +17399,7 @@
           "source_family_code": "en_eu_aeo_directory",
           "sequence": 4,
           "submitted_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=004",
-          "canonical_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=004",
-          "seed_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=004",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=004",
-              "canonical_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=004"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "aeo_operator_directory",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",
@@ -17896,14 +17420,7 @@
           "source_family_code": "en_eu_aeo_directory",
           "sequence": 5,
           "submitted_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=005",
-          "canonical_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=005",
-          "seed_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=005",
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=005",
-              "canonical_url": "https://www.aeodirectory.com/aeo/search/?ls_planned_surface=005"
-            }
-          ],
+          "seed_urls": [],
           "surface_type": "aeo_operator_directory",
           "quality_tier": "A_MINUS",
           "decision_status": "ACCEPT_REVIEW",

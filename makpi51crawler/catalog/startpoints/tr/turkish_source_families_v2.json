@@ -35,8 +35,8 @@
   "metrics": {
     "source_family_count": 40,
     "seed_surface_count": 80,
-    "seed_url_count": 77,
-    "unique_seed_url_count": 77,
+    "seed_url_count": 73,
+    "unique_seed_url_count": 73,
     "unique_host_count": 38,
     "folded_duplicate_reference_surface_count": 7,
     "planned_raw_seed_url_count_before_existing_exact_dedupe": 84,
@@ -566,17 +566,7 @@
           "manual_review_required": true,
           "parse_core_required": true,
           "direct_company_import": false,
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi?Sehir=İSTANBUL",
-              "canonical_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi?Sehir=İSTANBUL",
-              "url_role": "seed",
-              "url_origin": "turkish_existing_source_enhancement_R210_decision_doc",
-              "requires_live_check": true,
-              "db_insert_allowed": false,
-              "url_fetch_allowed_in_catalog_gate": false
-            }
-          ],
+          "seed_urls": [],
           "surface_metadata": {
             "rationale": "R210 existing source enhancement for utikad_org_tr",
             "dedupe_status": "active_unique_seed_url"
@@ -595,17 +585,7 @@
           "manual_review_required": true,
           "parse_core_required": true,
           "direct_company_import": false,
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi?Sehir=İZMİR",
-              "canonical_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi?Sehir=İZMİR",
-              "url_role": "seed",
-              "url_origin": "turkish_existing_source_enhancement_R210_decision_doc",
-              "requires_live_check": true,
-              "db_insert_allowed": false,
-              "url_fetch_allowed_in_catalog_gate": false
-            }
-          ],
+          "seed_urls": [],
           "surface_metadata": {
             "rationale": "R210 existing source enhancement for utikad_org_tr",
             "dedupe_status": "active_unique_seed_url"
@@ -624,17 +604,7 @@
           "manual_review_required": true,
           "parse_core_required": true,
           "direct_company_import": false,
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi?Sehir=MERSİN",
-              "canonical_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi?Sehir=MERSİN",
-              "url_role": "seed",
-              "url_origin": "turkish_existing_source_enhancement_R210_decision_doc",
-              "requires_live_check": true,
-              "db_insert_allowed": false,
-              "url_fetch_allowed_in_catalog_gate": false
-            }
-          ],
+          "seed_urls": [],
           "surface_metadata": {
             "rationale": "R210 existing source enhancement for utikad_org_tr",
             "dedupe_status": "active_unique_seed_url"
@@ -3584,17 +3554,7 @@
           "manual_review_required": true,
           "parse_core_required": true,
           "direct_company_import": false,
-          "seed_urls": [
-            {
-              "submitted_url": "https://www.btso.org.tr/?page=databank%2Fsectoralreport.asp",
-              "canonical_url": "https://www.btso.org.tr/?page=databank%2Fsectoralreport.asp",
-              "url_role": "seed",
-              "url_origin": "turkish_backfill_R210_decision_doc",
-              "requires_live_check": true,
-              "db_insert_allowed": false,
-              "url_fetch_allowed_in_catalog_gate": false
-            }
-          ],
+          "seed_urls": [],
           "surface_metadata": {
             "rationale": "BTSO registered-member/query and logistics project surfaces.",
             "dedupe_status": "active_unique_seed_url"
