@@ -6488,5 +6488,9 @@
   ],
   "source_family_count": 105,
   "taxonomy_language_additions_allowed": false,
-  "url_fetch_allowed_in_catalog_gate": false
+  "url_fetch_allowed_in_catalog_gate": false,
+  "schema": "source_families_v2",
+  "candidate_manifest": true,
+  "is_live": false,
+  "last_rewritten_by_gate": "SOURCE_SEED_R253_ZH_SCHEMA_NORMALIZATION_PATCH_LOCAL_ONLY"
 }
