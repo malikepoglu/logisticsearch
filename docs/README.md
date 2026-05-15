@@ -571,7 +571,6 @@ Raw fetch, parse, taxonomy, sonraki selection sırası ve lojistik dışı sayfa
 - [TODO - Crawler core return after Task11](TODO_CRAWLER_CORE_RETURN_AFTER_TASK11_2026_05_04.md)
 <!-- TASK11_RUNTIME_CLEANUP_CRAWLER_CORE_RETURN_LINKS_END -->
 
-
 ### Crawler core entrypoint invocation contract — 2026-05-05
 
 - [Crawler Core EntryPoint Invocation Contract — 2026-05-05](TOPIC_CRAWLER_CORE_ENTRYPOINT_INVOCATION_CONTRACT_2026_05_05.md)
@@ -643,29 +642,13 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_URLS_DECISION_2026_05_12.md`](TOPIC_CRAWLER_CORE_ARABIC_SOURCE_SEED_URLS_DECISION_2026_05_12.md)
 - [`TOPIC_CRAWLER_CORE_CHINESE_SOURCE_SEED_URLS_DECISION_2026_05_12.md`](TOPIC_CRAWLER_CORE_CHINESE_SOURCE_SEED_URLS_DECISION_2026_05_12.md)
 - [`TOPIC_CRAWLER_CORE_FRENCH_SOURCE_SEED_URLS_DECISION_2026_05_12.md`](TOPIC_CRAWLER_CORE_FRENCH_SOURCE_SEED_URLS_DECISION_2026_05_12.md)
+- [`TOPIC_CRAWLER_CORE_SPANISH_SOURCE_SEED_URLS_DECISION_2026_05_15.md`](TOPIC_CRAWLER_CORE_SPANISH_SOURCE_SEED_URLS_DECISION_2026_05_15.md)
 
 ### Boundary rule
 
 Crawler_Core stores discovered page links only as raw link evidence. Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-ranking. Desktop_Import on Ubuntu Desktop converts pre-ranking into real ranking/final rank.
 
 <!-- SOURCE_SEED_STARTPOINTS_INDEX_2026_05_12_END -->
-
-<!-- SOURCE_SEED_ES_README_INDEX_BEGIN -->
-### Spanish (`es`) source-seed startpoint catalog
-
-- Decision document: [`docs/TOPIC_CRAWLER_CORE_SPANISH_SOURCE_SEED_URLS_DECISION_2026_05_15.md`](TOPIC_CRAWLER_CORE_SPANISH_SOURCE_SEED_URLS_DECISION_2026_05_15.md)
-- Catalog JSON: [`makpi51crawler/catalog/startpoints/es/spanish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/es/spanish_source_families_v2.json)
-- Catalog status: `candidate_manifest=true`, `is_live=false`, `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
-- Safety state: no DB insert, no frontier activation, no URL fetch/live probe, no pi51c sync in this gate
-- Metrics: 45 source families, 95 seed surfaces, 95 seed URLs, 95 unique seed URLs, 0 duplicate URLs, 0 non-HTTPS URLs
-- Source quality distribution: A+=5, A=21, A-=3, B+=5, B=6, B-=5
-- Seed quality distribution: A+=10, A=43, A-=6, B+=12, B=14, B-=10
-- Sealed catalog commit: `8213fc273e767dd4509dc9c92ca0f2bc896b50e5`
-- Decision doc SHA256: `c8f28eca5dd09bfc45a157fa9b53e6fe8786d4400d27996a4e001492b165da3b`
-- Catalog SHA256: `1bc248b9c7342be61703433da4c3c428a6e7ed4d532f8ca02e07f4bdb78f5fa5`
-- Next gate: `SOURCE_SEED_R273_ES_README_INDEX_AUDIT_READONLY`
-<!-- SOURCE_SEED_ES_README_INDEX_END -->
-
 
 <!-- SOURCE_SEED_NEXT_LANGUAGE_DECISION_README_INDEX_BEGIN -->
 ## Source-seed next-language rollout decision / Sıradaki dil rollout karar mühürü
@@ -680,3 +663,83 @@ Crawler_Core stores discovered page links only as raw link evidence. Raw links a
 - R281 forbidden surfaces / R281 yasak yüzeyler: no file write, no git add/commit/push, no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe.
 - Correction note / Düzeltme notu: R280 non-target German legacy duplicate-helper finding is not a blocker for selecting the next missing language; Italian is the first unrolled language after Spanish.
 <!-- SOURCE_SEED_NEXT_LANGUAGE_DECISION_README_INDEX_END -->
+
+<!-- SOURCE_SEED_CANONICAL_STARTPOINT_SCHEMA_STANDARD_BEGIN -->
+## Source-seed canonical startpoint schema standard
+
+This standard is authoritative for all 25 language startpoint catalogs.
+
+Standard ID: `SOURCE_SEED_CANONICAL_STARTPOINT_SCHEMA_STANDARD`
+
+Applies to all startpoint catalog JSON files under:
+
+`makpi51crawler/catalog/startpoints/<lang>/<language>_source_families_v2.json`
+
+Required top-level catalog fields:
+
+- `schema`: must be `source_families_v2`
+- `schema_version`: must be `source_families_v2`
+- `catalog_version`: must match the language catalog name
+- `language_code`: must be one of the 25 canonical language codes
+- `candidate_manifest`: must be `true` until live activation is explicitly approved
+- `is_live`: must be `false` until pi51c live probe and explicit activation gate pass
+- `runtime_activation_policy`: must be `pi51c_live_probe_required_before_db_or_frontier_insert`
+- `source_families`: must be a non-empty list for rolled languages
+
+Required source-family object fields:
+
+- `source_family_code`: stable internal code, not a URL
+- `source_family_name`: human-readable source family name
+- `source_host`: hostname only
+- `source_root_url`: HTTPS root URL for the family
+- `quality_tier`: required; allowed values are `A+`, `A`, `A-`, `B+`, `B`, `B-`
+- `decision`: required; allowed values are `ACCEPT`, `ACCEPT_REVIEW`, `HOLD`, `REJECT`
+- `seed_surfaces`: required list; every accepted/review family must have at least one seed surface
+
+Required seed-surface object fields:
+
+- `seed_surface_code`: stable internal seed surface code
+- `seed_surface_name`: human-readable seed surface name
+- `surface_type`: controlled descriptive surface type
+- `quality_tier`: required; allowed values are `A+`, `A`, `A-`, `B+`, `B`, `B-`
+- `decision`: required; allowed values are `ACCEPT`, `ACCEPT_REVIEW`, `HOLD`, `REJECT`
+- `seed_urls`: required list of URL objects
+
+Required seed URL object fields:
+
+- `url`: HTTPS seed URL
+- legacy scalar `seed_url` is forbidden
+- URL values must be unique inside the language catalog
+- non-HTTPS URLs are forbidden
+- duplicate seed URLs are forbidden
+
+Safety rules:
+
+- `candidate_manifest=true` means catalog data is not live runtime input yet.
+- `is_live=false` means no DB insert is allowed.
+- `is_live=false` means no frontier activation is allowed.
+- `is_live=false` means no URL fetch/live probe is allowed.
+- `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert` is mandatory before any DB or frontier insertion.
+- pi51c live probe must happen before DB/frontier insert for every language catalog.
+- Crawler runtime must not treat catalog rows as live seeds until a separate activation gate sets the approved live state.
+
+Normalization rules:
+
+- All rolled language catalogs must use one canonical `source_families_v2` shape.
+- Every source family must have `quality_tier` and `decision`.
+- Every seed surface must have `quality_tier` and `decision`.
+- Every seed surface must use `seed_urls` as a list of URL objects.
+- Empty source families are forbidden.
+- Empty seed surfaces are forbidden.
+- Duplicate source family codes are forbidden.
+- Duplicate seed surface codes are forbidden.
+- Duplicate seed URLs are forbidden.
+- Host/source hierarchy must stay coherent: one source family can contain multiple country, language, or section seed surfaces.
+- FIATA-style multi-country paths must not become separate top-level sources only because country path differs.
+
+Documentation rule:
+
+- `docs/README.md` must list every rolled catalog in `Current sealed startpoint catalogs`.
+- `Source-seed policy and decision records` must index each language decision document when it exists.
+- Per-language one-off blocks are not preferred; shared rules belong in this canonical standard block.
+<!-- SOURCE_SEED_CANONICAL_STARTPOINT_SCHEMA_STANDARD_END -->
