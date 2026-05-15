@@ -665,3 +665,17 @@ Crawler_Core stores discovered page links only as raw link evidence. Raw links a
 - Next gate: `SOURCE_SEED_R273_ES_README_INDEX_AUDIT_READONLY`
 <!-- SOURCE_SEED_ES_README_INDEX_END -->
 
+
+<!-- SOURCE_SEED_NEXT_LANGUAGE_DECISION_README_INDEX_BEGIN -->
+## Source-seed next-language rollout decision / Sıradaki dil rollout karar mühürü
+
+- Gate / Kapı: `SOURCE_SEED_R280B_NEXT_LANGUAGE_ROLLOUT_DECISION_READONLY_CORRECTED`
+- Sealed head / Mühürlü HEAD: `1354763492338dee2bef20b2d52cf08484eb4e6f`
+- Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,fr,zh,es`
+- Next language / Sıradaki dil: Italian (`it`)
+- Next catalog path / Sıradaki katalog yolu: `makpi51crawler/catalog/startpoints/it/italian_source_families_v2.json`
+- Next gate / Sıradaki kapı: `SOURCE_SEED_R281_IT_SOURCE_SEED_BASELINE_AUDIT_READONLY`
+- R281 allowed mode / R281 izinli mod: read-only baseline audit only.
+- R281 forbidden surfaces / R281 yasak yüzeyler: no file write, no git add/commit/push, no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe.
+- Correction note / Düzeltme notu: R280 non-target German legacy duplicate-helper finding is not a blocker for selecting the next missing language; Italian is the first unrolled language after Spanish.
+<!-- SOURCE_SEED_NEXT_LANGUAGE_DECISION_README_INDEX_END -->
