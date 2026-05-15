@@ -648,3 +648,20 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 Crawler_Core stores discovered page links only as raw link evidence. Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-ranking. Desktop_Import on Ubuntu Desktop converts pre-ranking into real ranking/final rank.
 
 <!-- SOURCE_SEED_STARTPOINTS_INDEX_2026_05_12_END -->
+
+<!-- SOURCE_SEED_ES_README_INDEX_BEGIN -->
+### Spanish (`es`) source-seed startpoint catalog
+
+- Decision document: [`docs/TOPIC_CRAWLER_CORE_SPANISH_SOURCE_SEED_URLS_DECISION_2026_05_15.md`](TOPIC_CRAWLER_CORE_SPANISH_SOURCE_SEED_URLS_DECISION_2026_05_15.md)
+- Catalog JSON: [`makpi51crawler/catalog/startpoints/es/spanish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/es/spanish_source_families_v2.json)
+- Catalog status: `candidate_manifest=true`, `is_live=false`, `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+- Safety state: no DB insert, no frontier activation, no URL fetch/live probe, no pi51c sync in this gate
+- Metrics: 45 source families, 95 seed surfaces, 95 seed URLs, 95 unique seed URLs, 0 duplicate URLs, 0 non-HTTPS URLs
+- Source quality distribution: A+=5, A=21, A-=3, B+=5, B=6, B-=5
+- Seed quality distribution: A+=10, A=43, A-=6, B+=12, B=14, B-=10
+- Sealed catalog commit: `8213fc273e767dd4509dc9c92ca0f2bc896b50e5`
+- Decision doc SHA256: `c8f28eca5dd09bfc45a157fa9b53e6fe8786d4400d27996a4e001492b165da3b`
+- Catalog SHA256: `1bc248b9c7342be61703433da4c3c428a6e7ed4d532f8ca02e07f4bdb78f5fa5`
+- Next gate: `SOURCE_SEED_R273_ES_README_INDEX_AUDIT_READONLY`
+<!-- SOURCE_SEED_ES_README_INDEX_END -->
+
