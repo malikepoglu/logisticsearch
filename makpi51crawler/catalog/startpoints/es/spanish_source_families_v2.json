@@ -1,0 +1,3141 @@
+{
+  "schema": "source_families_v2",
+  "schema_version": "source_families_v2",
+  "catalog_version": "spanish_source_families_v2",
+  "language_code": "es",
+  "language_name": "Spanish",
+  "region_scope": [
+    "ES"
+  ],
+  "candidate_manifest": true,
+  "is_live": false,
+  "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+  "last_rewritten_by_gate": "SOURCE_SEED_R268E_ES_SOURCE_SEED_CATALOG_CREATE_LOCAL_ONLY_SOURCE_REF_INFER",
+  "source_contract_basis": "Spanish decision doc sealed at SOURCE_SEED_R267B",
+  "source_family_count": 45,
+  "seed_surface_count": 95,
+  "seed_url_count": 95,
+  "unique_seed_url_count": 95,
+  "duplicate_url_count": 0,
+  "quality_distribution": {
+    "source_families": {
+      "A+": 5,
+      "A": 21,
+      "A-": 3,
+      "B+": 5,
+      "B": 6,
+      "B-": 5
+    },
+    "seed_urls": {
+      "A+": 10,
+      "A": 43,
+      "A-": 6,
+      "B+": 12,
+      "B": 14,
+      "B-": 10
+    }
+  },
+  "activation_guards": {
+    "no_db_insert": true,
+    "no_frontier_activation": true,
+    "no_url_fetch_live_probe": true,
+    "pi51c_live_probe_required_before_db_or_frontier_insert": true
+  },
+  "source_families": [
+    {
+      "family_index": 1,
+      "family_code": "es_fiata_spain_member_directory",
+      "family_name": "International freight-forwarder member directory with Spain country surface.",
+      "source_host": "fiata.org",
+      "source_root_url": "https://fiata.org/directory/es/",
+      "quality_tier": "A+",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_fiata_spain_member_directory_surface_01",
+          "surface_name": "https://fiata.org/directory/es/",
+          "quality_tier": "A+",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 1,
+              "source_index": 1,
+              "submitted_url": "https://fiata.org/directory/es/",
+              "canonical_url": "https://fiata.org/directory/es/",
+              "seed_url": "https://fiata.org/directory/es/",
+              "quality_tier": "A+",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_fiata_spain_member_directory_surface_02",
+          "surface_name": "https://fiata.org/directory/",
+          "quality_tier": "A+",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 2,
+              "source_index": 1,
+              "submitted_url": "https://fiata.org/directory/",
+              "canonical_url": "https://fiata.org/directory/",
+              "seed_url": "https://fiata.org/directory/",
+              "quality_tier": "A+",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 2,
+      "family_code": "es_feteia_oltra_federation",
+      "family_name": "National federation reference for freight forwarding, logistics transport and customs representation.",
+      "source_host": "www.feteia.org",
+      "source_root_url": "https://www.feteia.org/",
+      "quality_tier": "A+",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_feteia_oltra_federation_surface_01",
+          "surface_name": "https://www.feteia.org/",
+          "quality_tier": "A+",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 3,
+              "source_index": 2,
+              "submitted_url": "https://www.feteia.org/",
+              "canonical_url": "https://www.feteia.org/",
+              "seed_url": "https://www.feteia.org/",
+              "quality_tier": "A+",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_feteia_oltra_federation_surface_02",
+          "surface_name": "https://www.feteia.org/quienes-somos/",
+          "quality_tier": "A+",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 4,
+              "source_index": 2,
+              "submitted_url": "https://www.feteia.org/quienes-somos/",
+              "canonical_url": "https://www.feteia.org/quienes-somos/",
+              "seed_url": "https://www.feteia.org/quienes-somos/",
+              "quality_tier": "A+",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 3,
+      "family_code": "es_ateia_euskadi_forwarders",
+      "family_name": "Regional ATEIA association surface connected to FETEIA ecosystem.",
+      "source_host": "www.ateia-euskadi.org",
+      "source_root_url": "https://www.ateia-euskadi.org/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_ateia_euskadi_forwarders_surface_01",
+          "surface_name": "https://www.ateia-euskadi.org/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 5,
+              "source_index": 3,
+              "submitted_url": "https://www.ateia-euskadi.org/",
+              "canonical_url": "https://www.ateia-euskadi.org/",
+              "seed_url": "https://www.ateia-euskadi.org/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_ateia_euskadi_forwarders_surface_02",
+          "surface_name": "https://www.ateia-euskadi.org/en-feteia",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 6,
+              "source_index": 3,
+              "submitted_url": "https://www.ateia-euskadi.org/en-feteia",
+              "canonical_url": "https://www.ateia-euskadi.org/en-feteia",
+              "seed_url": "https://www.ateia-euskadi.org/en-feteia",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 4,
+      "family_code": "es_ateia_barcelona_forwarders",
+      "family_name": "Barcelona regional freight forwarder association candidate member surface.",
+      "source_host": "www.ateia.com",
+      "source_root_url": "https://www.ateia.com/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_ateia_barcelona_forwarders_surface_01",
+          "surface_name": "https://www.ateia.com/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 7,
+              "source_index": 4,
+              "submitted_url": "https://www.ateia.com/",
+              "canonical_url": "https://www.ateia.com/",
+              "seed_url": "https://www.ateia.com/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_ateia_barcelona_forwarders_surface_02",
+          "surface_name": "https://www.ateia.com/asociados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 8,
+              "source_index": 4,
+              "submitted_url": "https://www.ateia.com/asociados/",
+              "canonical_url": "https://www.ateia.com/asociados/",
+              "seed_url": "https://www.ateia.com/asociados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 5,
+      "family_code": "es_ateia_madrid_forwarders",
+      "family_name": "Madrid regional freight forwarder association candidate member surface.",
+      "source_host": "www.ateiamadrid.com",
+      "source_root_url": "https://www.ateiamadrid.com/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_ateia_madrid_forwarders_surface_01",
+          "surface_name": "https://www.ateiamadrid.com/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 9,
+              "source_index": 5,
+              "submitted_url": "https://www.ateiamadrid.com/",
+              "canonical_url": "https://www.ateiamadrid.com/",
+              "seed_url": "https://www.ateiamadrid.com/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_ateia_madrid_forwarders_surface_02",
+          "surface_name": "https://www.ateiamadrid.com/asociados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 10,
+              "source_index": 5,
+              "submitted_url": "https://www.ateiamadrid.com/asociados/",
+              "canonical_url": "https://www.ateiamadrid.com/asociados/",
+              "seed_url": "https://www.ateiamadrid.com/asociados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 6,
+      "family_code": "es_ateia_valencia_forwarders",
+      "family_name": "Valencia regional freight forwarder association candidate member surface.",
+      "source_host": "www.ateia-valencia.com",
+      "source_root_url": "https://www.ateia-valencia.com/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_ateia_valencia_forwarders_surface_01",
+          "surface_name": "https://www.ateia-valencia.com/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 11,
+              "source_index": 6,
+              "submitted_url": "https://www.ateia-valencia.com/",
+              "canonical_url": "https://www.ateia-valencia.com/",
+              "seed_url": "https://www.ateia-valencia.com/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_ateia_valencia_forwarders_surface_02",
+          "surface_name": "https://www.ateia-valencia.com/asociados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 12,
+              "source_index": 6,
+              "submitted_url": "https://www.ateia-valencia.com/asociados/",
+              "canonical_url": "https://www.ateia-valencia.com/asociados/",
+              "seed_url": "https://www.ateia-valencia.com/asociados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 7,
+      "family_code": "es_ateia_algeciras_forwarders",
+      "family_name": "Algeciras regional freight forwarder association candidate member surface.",
+      "source_host": "www.ateia-oltra-algeciras.org",
+      "source_root_url": "https://www.ateia-oltra-algeciras.org/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_ateia_algeciras_forwarders_surface_01",
+          "surface_name": "https://www.ateia-oltra-algeciras.org/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 13,
+              "source_index": 7,
+              "submitted_url": "https://www.ateia-oltra-algeciras.org/",
+              "canonical_url": "https://www.ateia-oltra-algeciras.org/",
+              "seed_url": "https://www.ateia-oltra-algeciras.org/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_ateia_algeciras_forwarders_surface_02",
+          "surface_name": "https://www.ateia-oltra-algeciras.org/asociados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 14,
+              "source_index": 7,
+              "submitted_url": "https://www.ateia-oltra-algeciras.org/asociados/",
+              "canonical_url": "https://www.ateia-oltra-algeciras.org/asociados/",
+              "seed_url": "https://www.ateia-oltra-algeciras.org/asociados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 8,
+      "family_code": "es_ateia_aragon_forwarders",
+      "family_name": "Aragón regional association and member-surface candidate.",
+      "source_host": "www.ateiaaragon.org",
+      "source_root_url": "https://www.ateiaaragon.org/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_ateia_aragon_forwarders_surface_01",
+          "surface_name": "https://www.ateiaaragon.org/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 15,
+              "source_index": 8,
+              "submitted_url": "https://www.ateiaaragon.org/",
+              "canonical_url": "https://www.ateiaaragon.org/",
+              "seed_url": "https://www.ateiaaragon.org/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_ateia_aragon_forwarders_surface_02",
+          "surface_name": "https://www.ateiaaragon.org/asociados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 16,
+              "source_index": 8,
+              "submitted_url": "https://www.ateiaaragon.org/asociados/",
+              "canonical_url": "https://www.ateiaaragon.org/asociados/",
+              "seed_url": "https://www.ateiaaragon.org/asociados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 9,
+      "family_code": "es_ateia_baleares_forwarders",
+      "family_name": "Balearic freight forwarder association candidate surface.",
+      "source_host": "www.ateiabaleares.com",
+      "source_root_url": "https://www.ateiabaleares.com/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_ateia_baleares_forwarders_surface_01",
+          "surface_name": "https://www.ateiabaleares.com/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 17,
+              "source_index": 9,
+              "submitted_url": "https://www.ateiabaleares.com/",
+              "canonical_url": "https://www.ateiabaleares.com/",
+              "seed_url": "https://www.ateiabaleares.com/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_ateia_baleares_forwarders_surface_02",
+          "surface_name": "https://www.ateiabaleares.com/asociados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 18,
+              "source_index": 9,
+              "submitted_url": "https://www.ateiabaleares.com/asociados/",
+              "canonical_url": "https://www.ateiabaleares.com/asociados/",
+              "seed_url": "https://www.ateiabaleares.com/asociados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 10,
+      "family_code": "es_ateia_galicia_forwarders",
+      "family_name": "Galicia regional freight forwarder association candidate surface.",
+      "source_host": "www.ateiagalicia.com",
+      "source_root_url": "https://www.ateiagalicia.com/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_ateia_galicia_forwarders_surface_01",
+          "surface_name": "https://www.ateiagalicia.com/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 19,
+              "source_index": 10,
+              "submitted_url": "https://www.ateiagalicia.com/",
+              "canonical_url": "https://www.ateiagalicia.com/",
+              "seed_url": "https://www.ateiagalicia.com/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_ateia_galicia_forwarders_surface_02",
+          "surface_name": "https://www.ateiagalicia.com/asociados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 20,
+              "source_index": 10,
+              "submitted_url": "https://www.ateiagalicia.com/asociados/",
+              "canonical_url": "https://www.ateiagalicia.com/asociados/",
+              "seed_url": "https://www.ateiagalicia.com/asociados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 11,
+      "family_code": "es_ateia_canarias_forwarders",
+      "family_name": "Canary Islands regional freight forwarder association candidate surface.",
+      "source_host": "www.ateiacanarias.com",
+      "source_root_url": "https://www.ateiacanarias.com/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_ateia_canarias_forwarders_surface_01",
+          "surface_name": "https://www.ateiacanarias.com/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 21,
+              "source_index": 11,
+              "submitted_url": "https://www.ateiacanarias.com/",
+              "canonical_url": "https://www.ateiacanarias.com/",
+              "seed_url": "https://www.ateiacanarias.com/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_ateia_canarias_forwarders_surface_02",
+          "surface_name": "https://www.ateiacanarias.com/asociados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 22,
+              "source_index": 11,
+              "submitted_url": "https://www.ateiacanarias.com/asociados/",
+              "canonical_url": "https://www.ateiacanarias.com/asociados/",
+              "seed_url": "https://www.ateiacanarias.com/asociados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 12,
+      "family_code": "es_consejo_aduanas_customs_brokers",
+      "family_name": "National customs broker council and official college index candidate.",
+      "source_host": "www.consejoaduanas.org",
+      "source_root_url": "https://www.consejoaduanas.org/",
+      "quality_tier": "A+",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_consejo_aduanas_customs_brokers_surface_01",
+          "surface_name": "https://www.consejoaduanas.org/",
+          "quality_tier": "A+",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 23,
+              "source_index": 12,
+              "submitted_url": "https://www.consejoaduanas.org/",
+              "canonical_url": "https://www.consejoaduanas.org/",
+              "seed_url": "https://www.consejoaduanas.org/",
+              "quality_tier": "A+",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_consejo_aduanas_customs_brokers_surface_02",
+          "surface_name": "https://www.consejoaduanas.org/colegios/",
+          "quality_tier": "A+",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 24,
+              "source_index": 12,
+              "submitted_url": "https://www.consejoaduanas.org/colegios/",
+              "canonical_url": "https://www.consejoaduanas.org/colegios/",
+              "seed_url": "https://www.consejoaduanas.org/colegios/",
+              "quality_tier": "A+",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 13,
+      "family_code": "es_coacab_barcelona_customs_brokers",
+      "family_name": "Regional customs broker college candidate directory surface.",
+      "source_host": "www.coacab.com",
+      "source_root_url": "https://www.coacab.com/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_coacab_barcelona_customs_brokers_surface_01",
+          "surface_name": "https://www.coacab.com/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 25,
+              "source_index": 13,
+              "submitted_url": "https://www.coacab.com/",
+              "canonical_url": "https://www.coacab.com/",
+              "seed_url": "https://www.coacab.com/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_coacab_barcelona_customs_brokers_surface_02",
+          "surface_name": "https://www.coacab.com/colegiados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 26,
+              "source_index": 13,
+              "submitted_url": "https://www.coacab.com/colegiados/",
+              "canonical_url": "https://www.coacab.com/colegiados/",
+              "seed_url": "https://www.coacab.com/colegiados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 14,
+      "family_code": "es_coacav_valencia_customs_brokers",
+      "family_name": "Valencia customs broker college candidate member surface.",
+      "source_host": "www.coacav.com",
+      "source_root_url": "https://www.coacav.com/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_coacav_valencia_customs_brokers_surface_01",
+          "surface_name": "https://www.coacav.com/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 27,
+              "source_index": 14,
+              "submitted_url": "https://www.coacav.com/",
+              "canonical_url": "https://www.coacav.com/",
+              "seed_url": "https://www.coacav.com/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_coacav_valencia_customs_brokers_surface_02",
+          "surface_name": "https://www.coacav.com/colegiados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 28,
+              "source_index": 14,
+              "submitted_url": "https://www.coacav.com/colegiados/",
+              "canonical_url": "https://www.coacav.com/colegiados/",
+              "seed_url": "https://www.coacav.com/colegiados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 15,
+      "family_code": "es_coacam_madrid_customs_brokers",
+      "family_name": "Madrid customs broker college candidate member surface.",
+      "source_host": "www.coacam.es",
+      "source_root_url": "https://www.coacam.es/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_coacam_madrid_customs_brokers_surface_01",
+          "surface_name": "https://www.coacam.es/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 29,
+              "source_index": 15,
+              "submitted_url": "https://www.coacam.es/",
+              "canonical_url": "https://www.coacam.es/",
+              "seed_url": "https://www.coacam.es/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_coacam_madrid_customs_brokers_surface_02",
+          "surface_name": "https://www.coacam.es/colegiados/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 30,
+              "source_index": 15,
+              "submitted_url": "https://www.coacam.es/colegiados/",
+              "canonical_url": "https://www.coacam.es/colegiados/",
+              "seed_url": "https://www.coacam.es/colegiados/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 16,
+      "family_code": "es_port_barcelona_business_directory",
+      "family_name": "Official port business/company directory surface.",
+      "source_host": "www.portdebarcelona.cat",
+      "source_root_url": "https://www.portdebarcelona.cat/en/web/port-dels-negocis/directori-empreses",
+      "quality_tier": "A+",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_port_barcelona_business_directory_surface_01",
+          "surface_name": "https://www.portdebarcelona.cat/en/web/port-dels-negocis/directori-empreses",
+          "quality_tier": "A+",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 31,
+              "source_index": 16,
+              "submitted_url": "https://www.portdebarcelona.cat/en/web/port-dels-negocis/directori-empreses",
+              "canonical_url": "https://www.portdebarcelona.cat/en/web/port-dels-negocis/directori-empreses",
+              "seed_url": "https://www.portdebarcelona.cat/en/web/port-dels-negocis/directori-empreses",
+              "quality_tier": "A+",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_port_barcelona_business_directory_surface_02",
+          "surface_name": "https://www.portdebarcelona.cat/en/business",
+          "quality_tier": "A+",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 32,
+              "source_index": 16,
+              "submitted_url": "https://www.portdebarcelona.cat/en/business",
+              "canonical_url": "https://www.portdebarcelona.cat/en/business",
+              "seed_url": "https://www.portdebarcelona.cat/en/business",
+              "quality_tier": "A+",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 17,
+      "family_code": "es_valenciaport_services",
+      "family_name": "Official port services and port-community reference candidate.",
+      "source_host": "www.valenciaport.com",
+      "source_root_url": "https://www.valenciaport.com/en/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_valenciaport_services_surface_01",
+          "surface_name": "https://www.valenciaport.com/en/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 33,
+              "source_index": 17,
+              "submitted_url": "https://www.valenciaport.com/en/",
+              "canonical_url": "https://www.valenciaport.com/en/",
+              "seed_url": "https://www.valenciaport.com/en/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_valenciaport_services_surface_02",
+          "surface_name": "https://www.valenciaport.com/en/port-services/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 34,
+              "source_index": 17,
+              "submitted_url": "https://www.valenciaport.com/en/port-services/",
+              "canonical_url": "https://www.valenciaport.com/en/port-services/",
+              "seed_url": "https://www.valenciaport.com/en/port-services/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 18,
+      "family_code": "es_bilbaoport_directory",
+      "family_name": "Official port directory surface.",
+      "source_host": "www.bilbaoport.eus",
+      "source_root_url": "https://www.bilbaoport.eus/en/services/port-directory/",
+      "quality_tier": "A+",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_bilbaoport_directory_surface_01",
+          "surface_name": "https://www.bilbaoport.eus/en/services/port-directory/",
+          "quality_tier": "A+",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 35,
+              "source_index": 18,
+              "submitted_url": "https://www.bilbaoport.eus/en/services/port-directory/",
+              "canonical_url": "https://www.bilbaoport.eus/en/services/port-directory/",
+              "seed_url": "https://www.bilbaoport.eus/en/services/port-directory/",
+              "quality_tier": "A+",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_bilbaoport_directory_surface_02",
+          "surface_name": "https://www.bilbaoport.eus/en/",
+          "quality_tier": "A+",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 36,
+              "source_index": 18,
+              "submitted_url": "https://www.bilbaoport.eus/en/",
+              "canonical_url": "https://www.bilbaoport.eus/en/",
+              "seed_url": "https://www.bilbaoport.eus/en/",
+              "quality_tier": "A+",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 19,
+      "family_code": "es_algeciras_port_services",
+      "family_name": "Official major-port services surface for logistics entity discovery.",
+      "source_host": "www.apba.es",
+      "source_root_url": "https://www.apba.es/en/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_algeciras_port_services_surface_01",
+          "surface_name": "https://www.apba.es/en/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 37,
+              "source_index": 19,
+              "submitted_url": "https://www.apba.es/en/",
+              "canonical_url": "https://www.apba.es/en/",
+              "seed_url": "https://www.apba.es/en/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_algeciras_port_services_surface_02",
+          "surface_name": "https://www.apba.es/en/port-services/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 38,
+              "source_index": 19,
+              "submitted_url": "https://www.apba.es/en/port-services/",
+              "canonical_url": "https://www.apba.es/en/port-services/",
+              "seed_url": "https://www.apba.es/en/port-services/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 20,
+      "family_code": "es_tarragona_port_services",
+      "family_name": "Official port services candidate surface.",
+      "source_host": "www.porttarragona.cat",
+      "source_root_url": "https://www.porttarragona.cat/en/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_tarragona_port_services_surface_01",
+          "surface_name": "https://www.porttarragona.cat/en/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 39,
+              "source_index": 20,
+              "submitted_url": "https://www.porttarragona.cat/en/",
+              "canonical_url": "https://www.porttarragona.cat/en/",
+              "seed_url": "https://www.porttarragona.cat/en/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_tarragona_port_services_surface_02",
+          "surface_name": "https://www.porttarragona.cat/en/services",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 40,
+              "source_index": 20,
+              "submitted_url": "https://www.porttarragona.cat/en/services",
+              "canonical_url": "https://www.porttarragona.cat/en/services",
+              "seed_url": "https://www.porttarragona.cat/en/services",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 21,
+      "family_code": "es_castellon_port_community",
+      "family_name": "Official port-community candidate surface.",
+      "source_host": "www.portcastello.com",
+      "source_root_url": "https://www.portcastello.com/en/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_castellon_port_community_surface_01",
+          "surface_name": "https://www.portcastello.com/en/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 41,
+              "source_index": 21,
+              "submitted_url": "https://www.portcastello.com/en/",
+              "canonical_url": "https://www.portcastello.com/en/",
+              "seed_url": "https://www.portcastello.com/en/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_castellon_port_community_surface_02",
+          "surface_name": "https://www.portcastello.com/en/port-community",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 42,
+              "source_index": 21,
+              "submitted_url": "https://www.portcastello.com/en/port-community",
+              "canonical_url": "https://www.portcastello.com/en/port-community",
+              "seed_url": "https://www.portcastello.com/en/port-community",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 22,
+      "family_code": "es_seville_port_community",
+      "family_name": "Official port-community candidate surface.",
+      "source_host": "www.puertodesevilla.com",
+      "source_root_url": "https://www.puertodesevilla.com/en/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_seville_port_community_surface_01",
+          "surface_name": "https://www.puertodesevilla.com/en/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 43,
+              "source_index": 22,
+              "submitted_url": "https://www.puertodesevilla.com/en/",
+              "canonical_url": "https://www.puertodesevilla.com/en/",
+              "seed_url": "https://www.puertodesevilla.com/en/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_seville_port_community_surface_02",
+          "surface_name": "https://www.puertodesevilla.com/en/port-community",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 44,
+              "source_index": 22,
+              "submitted_url": "https://www.puertodesevilla.com/en/port-community",
+              "canonical_url": "https://www.puertodesevilla.com/en/port-community",
+              "seed_url": "https://www.puertodesevilla.com/en/port-community",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 23,
+      "family_code": "es_vigo_port_services",
+      "family_name": "Official port services candidate surface.",
+      "source_host": "www.apvigo.es",
+      "source_root_url": "https://www.apvigo.es/en/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_vigo_port_services_surface_01",
+          "surface_name": "https://www.apvigo.es/en/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 45,
+              "source_index": 23,
+              "submitted_url": "https://www.apvigo.es/en/",
+              "canonical_url": "https://www.apvigo.es/en/",
+              "seed_url": "https://www.apvigo.es/en/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_vigo_port_services_surface_02",
+          "surface_name": "https://www.apvigo.es/en/port-services",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 46,
+              "source_index": 23,
+              "submitted_url": "https://www.apvigo.es/en/port-services",
+              "canonical_url": "https://www.apvigo.es/en/port-services",
+              "seed_url": "https://www.apvigo.es/en/port-services",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 24,
+      "family_code": "es_cartagena_port_services",
+      "family_name": "Official port services candidate surface.",
+      "source_host": "www.apc.es",
+      "source_root_url": "https://www.apc.es/webapc/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_cartagena_port_services_surface_01",
+          "surface_name": "https://www.apc.es/webapc/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 47,
+              "source_index": 24,
+              "submitted_url": "https://www.apc.es/webapc/",
+              "canonical_url": "https://www.apc.es/webapc/",
+              "seed_url": "https://www.apc.es/webapc/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_cartagena_port_services_surface_02",
+          "surface_name": "https://www.apc.es/webapc/servicios/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 48,
+              "source_index": 24,
+              "submitted_url": "https://www.apc.es/webapc/servicios/",
+              "canonical_url": "https://www.apc.es/webapc/servicios/",
+              "seed_url": "https://www.apc.es/webapc/servicios/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 25,
+      "family_code": "es_puertos_del_estado_reference",
+      "family_name": "National public port-system reference surface.",
+      "source_host": "www.puertos.es",
+      "source_root_url": "https://www.puertos.es/",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_puertos_del_estado_reference_surface_01",
+          "surface_name": "https://www.puertos.es/",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 49,
+              "source_index": 25,
+              "submitted_url": "https://www.puertos.es/",
+              "canonical_url": "https://www.puertos.es/",
+              "seed_url": "https://www.puertos.es/",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_puertos_del_estado_reference_surface_02",
+          "surface_name": "https://www.puertos.es/en-us/Pages/default.aspx",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 50,
+              "source_index": 25,
+              "submitted_url": "https://www.puertos.es/en-us/Pages/default.aspx",
+              "canonical_url": "https://www.puertos.es/en-us/Pages/default.aspx",
+              "seed_url": "https://www.puertos.es/en-us/Pages/default.aspx",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 26,
+      "family_code": "es_aena_air_cargo_surfaces",
+      "family_name": "Official airport cargo surfaces for Madrid, Barcelona and national cargo discovery.",
+      "source_host": "www.aena.es",
+      "source_root_url": "https://www.aena.es/en/cargo.html",
+      "quality_tier": "A",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_aena_air_cargo_surfaces_surface_01",
+          "surface_name": "https://www.aena.es/en/cargo.html",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 51,
+              "source_index": 26,
+              "submitted_url": "https://www.aena.es/en/cargo.html",
+              "canonical_url": "https://www.aena.es/en/cargo.html",
+              "seed_url": "https://www.aena.es/en/cargo.html",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_aena_air_cargo_surfaces_surface_02",
+          "surface_name": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/cargo.html",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 52,
+              "source_index": 26,
+              "submitted_url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/cargo.html",
+              "canonical_url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/cargo.html",
+              "seed_url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/cargo.html",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 3,
+          "surface_code": "es_aena_air_cargo_surfaces_surface_03",
+          "surface_name": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/airport-services/cargo.html",
+          "quality_tier": "A",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 53,
+              "source_index": 26,
+              "submitted_url": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/airport-services/cargo.html",
+              "canonical_url": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/airport-services/cargo.html",
+              "seed_url": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/airport-services/cargo.html",
+              "quality_tier": "A",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 27,
+      "family_code": "es_barcelona_air_cargo_members",
+      "family_name": "Airport cargo community and member-surface candidate.",
+      "source_host": "barcelona-air-cargo.com",
+      "source_root_url": "https://barcelona-air-cargo.com/",
+      "quality_tier": "A-",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_barcelona_air_cargo_members_surface_01",
+          "surface_name": "https://barcelona-air-cargo.com/",
+          "quality_tier": "A-",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 54,
+              "source_index": 27,
+              "submitted_url": "https://barcelona-air-cargo.com/",
+              "canonical_url": "https://barcelona-air-cargo.com/",
+              "seed_url": "https://barcelona-air-cargo.com/",
+              "quality_tier": "A-",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_barcelona_air_cargo_members_surface_02",
+          "surface_name": "https://barcelona-air-cargo.com/en/members/",
+          "quality_tier": "A-",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 55,
+              "source_index": 27,
+              "submitted_url": "https://barcelona-air-cargo.com/en/members/",
+              "canonical_url": "https://barcelona-air-cargo.com/en/members/",
+              "seed_url": "https://barcelona-air-cargo.com/en/members/",
+              "quality_tier": "A-",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 28,
+      "family_code": "es_madrid_air_cargo_forum_members",
+      "family_name": "Airport cargo community and member-surface candidate.",
+      "source_host": "www.madridaircargoforum.com",
+      "source_root_url": "https://www.madridaircargoforum.com/",
+      "quality_tier": "A-",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_madrid_air_cargo_forum_members_surface_01",
+          "surface_name": "https://www.madridaircargoforum.com/",
+          "quality_tier": "A-",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 56,
+              "source_index": 28,
+              "submitted_url": "https://www.madridaircargoforum.com/",
+              "canonical_url": "https://www.madridaircargoforum.com/",
+              "seed_url": "https://www.madridaircargoforum.com/",
+              "quality_tier": "A-",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_madrid_air_cargo_forum_members_surface_02",
+          "surface_name": "https://www.madridaircargoforum.com/socios/",
+          "quality_tier": "A-",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 57,
+              "source_index": 28,
+              "submitted_url": "https://www.madridaircargoforum.com/socios/",
+              "canonical_url": "https://www.madridaircargoforum.com/socios/",
+              "seed_url": "https://www.madridaircargoforum.com/socios/",
+              "quality_tier": "A-",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 29,
+      "family_code": "es_zaragoza_airport_cargo",
+      "family_name": "Official AENA cargo airport surface for Spain’s freight airport network.",
+      "source_host": "www.aena.es",
+      "source_root_url": "https://www.aena.es/en/zaragoza/airport-services/cargo.html",
+      "quality_tier": "A-",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_zaragoza_airport_cargo_surface_01",
+          "surface_name": "https://www.aena.es/en/zaragoza/airport-services/cargo.html",
+          "quality_tier": "A-",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 58,
+              "source_index": 29,
+              "submitted_url": "https://www.aena.es/en/zaragoza/airport-services/cargo.html",
+              "canonical_url": "https://www.aena.es/en/zaragoza/airport-services/cargo.html",
+              "seed_url": "https://www.aena.es/en/zaragoza/airport-services/cargo.html",
+              "quality_tier": "A-",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_zaragoza_airport_cargo_surface_02",
+          "surface_name": "https://www.aena.es/en/zaragoza/airlines-and-destinations/cargo.html",
+          "quality_tier": "A-",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 59,
+              "source_index": 29,
+              "submitted_url": "https://www.aena.es/en/zaragoza/airlines-and-destinations/cargo.html",
+              "canonical_url": "https://www.aena.es/en/zaragoza/airlines-and-destinations/cargo.html",
+              "seed_url": "https://www.aena.es/en/zaragoza/airlines-and-destinations/cargo.html",
+              "quality_tier": "A-",
+              "decision": "ACCEPT_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 30,
+      "family_code": "es_sil_barcelona_participating_companies",
+      "family_name": "Major Spanish logistics exhibition participating-company directory.",
+      "source_host": "www.silbcn.com",
+      "source_root_url": "https://www.silbcn.com/en/companies.html",
+      "quality_tier": "B+",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_sil_barcelona_participating_companies_surface_01",
+          "surface_name": "https://www.silbcn.com/en/companies.html",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 60,
+              "source_index": 30,
+              "submitted_url": "https://www.silbcn.com/en/companies.html",
+              "canonical_url": "https://www.silbcn.com/en/companies.html",
+              "seed_url": "https://www.silbcn.com/en/companies.html",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_sil_barcelona_participating_companies_surface_02",
+          "surface_name": "https://www.silbcn.com/en/",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 61,
+              "source_index": 30,
+              "submitted_url": "https://www.silbcn.com/en/",
+              "canonical_url": "https://www.silbcn.com/en/",
+              "seed_url": "https://www.silbcn.com/en/",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 31,
+      "family_code": "es_logistics_automation_madrid_exhibitors",
+      "family_name": "Spanish logistics exhibition exhibitor directory.",
+      "source_host": "www.logisticsautomationmadrid.com",
+      "source_root_url": "https://www.logisticsautomationmadrid.com/en/exhibitors/",
+      "quality_tier": "B+",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_logistics_automation_madrid_exhibitors_surface_01",
+          "surface_name": "https://www.logisticsautomationmadrid.com/en/exhibitors/",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 62,
+              "source_index": 31,
+              "submitted_url": "https://www.logisticsautomationmadrid.com/en/exhibitors/",
+              "canonical_url": "https://www.logisticsautomationmadrid.com/en/exhibitors/",
+              "seed_url": "https://www.logisticsautomationmadrid.com/en/exhibitors/",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_logistics_automation_madrid_exhibitors_surface_02",
+          "surface_name": "https://www.logisticsautomationmadrid.com/en/",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 63,
+              "source_index": 31,
+              "submitted_url": "https://www.logisticsautomationmadrid.com/en/",
+              "canonical_url": "https://www.logisticsautomationmadrid.com/en/",
+              "seed_url": "https://www.logisticsautomationmadrid.com/en/",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 32,
+      "family_code": "es_empack_madrid_exhibitors",
+      "family_name": "Packaging/logistics trade-show exhibitor directory candidate.",
+      "source_host": "www.empackmadrid.com",
+      "source_root_url": "https://www.empackmadrid.com/en/exhibitors/",
+      "quality_tier": "B",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_empack_madrid_exhibitors_surface_01",
+          "surface_name": "https://www.empackmadrid.com/en/exhibitors/",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 64,
+              "source_index": 32,
+              "submitted_url": "https://www.empackmadrid.com/en/exhibitors/",
+              "canonical_url": "https://www.empackmadrid.com/en/exhibitors/",
+              "seed_url": "https://www.empackmadrid.com/en/exhibitors/",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_empack_madrid_exhibitors_surface_02",
+          "surface_name": "https://www.empackmadrid.com/en/",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 65,
+              "source_index": 32,
+              "submitted_url": "https://www.empackmadrid.com/en/",
+              "canonical_url": "https://www.empackmadrid.com/en/",
+              "seed_url": "https://www.empackmadrid.com/en/",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 33,
+      "family_code": "es_pickpack_expo_exhibitors",
+      "family_name": "Supply-chain and packaging event exhibitor directory candidate.",
+      "source_host": "www.pickpackexpo.com",
+      "source_root_url": "https://www.pickpackexpo.com/exhibitors/",
+      "quality_tier": "B",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_pickpack_expo_exhibitors_surface_01",
+          "surface_name": "https://www.pickpackexpo.com/exhibitors/",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 66,
+              "source_index": 33,
+              "submitted_url": "https://www.pickpackexpo.com/exhibitors/",
+              "canonical_url": "https://www.pickpackexpo.com/exhibitors/",
+              "seed_url": "https://www.pickpackexpo.com/exhibitors/",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_pickpack_expo_exhibitors_surface_02",
+          "surface_name": "https://www.pickpackexpo.com/",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 67,
+              "source_index": 33,
+              "submitted_url": "https://www.pickpackexpo.com/",
+              "canonical_url": "https://www.pickpackexpo.com/",
+              "seed_url": "https://www.pickpackexpo.com/",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 34,
+      "family_code": "es_transport_logistic_exhibitor_directory",
+      "family_name": "International logistics fair exhibitor directory with Spain company coverage.",
+      "source_host": "exhibitors.transportlogistic.de",
+      "source_root_url": "https://exhibitors.transportlogistic.de/en/",
+      "quality_tier": "B+",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_transport_logistic_exhibitor_directory_surface_01",
+          "surface_name": "https://exhibitors.transportlogistic.de/en/",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 68,
+              "source_index": 34,
+              "submitted_url": "https://exhibitors.transportlogistic.de/en/",
+              "canonical_url": "https://exhibitors.transportlogistic.de/en/",
+              "seed_url": "https://exhibitors.transportlogistic.de/en/",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_transport_logistic_exhibitor_directory_surface_02",
+          "surface_name": "https://transportlogistic.de/en/trade-fair/exhibitors-products/exhibitor-directory/",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 69,
+              "source_index": 34,
+              "submitted_url": "https://transportlogistic.de/en/trade-fair/exhibitors-products/exhibitor-directory/",
+              "canonical_url": "https://transportlogistic.de/en/trade-fair/exhibitors-products/exhibitor-directory/",
+              "seed_url": "https://transportlogistic.de/en/trade-fair/exhibitors-products/exhibitor-directory/",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 35,
+      "family_code": "es_azfreight_spain_forwarders",
+      "family_name": "Industry directory fallback with Spain freight-forwarder country/facility surfaces.",
+      "source_host": "azfreight.com",
+      "source_root_url": "https://azfreight.com/country-facility/freight-forwarders-in-spain/",
+      "quality_tier": "B+",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_azfreight_spain_forwarders_surface_01",
+          "surface_name": "https://azfreight.com/country/spain/",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 70,
+              "source_index": 35,
+              "submitted_url": "https://azfreight.com/country/spain/",
+              "canonical_url": "https://azfreight.com/country/spain/",
+              "seed_url": "https://azfreight.com/country/spain/",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_azfreight_spain_forwarders_surface_02",
+          "surface_name": "https://azfreight.com/country-facility/freight-forwarders-in-spain/",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 71,
+              "source_index": 35,
+              "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-spain/",
+              "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-spain/",
+              "seed_url": "https://azfreight.com/country-facility/freight-forwarders-in-spain/",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 36,
+      "family_code": "es_freightnet_spain_forwarders",
+      "family_name": "Industry directory fallback with paginated Spain freight-forwarder surfaces.",
+      "source_host": "www.freightnet.com",
+      "source_root_url": "https://www.freightnet.com/directory/p1/cES/s30.htm",
+      "quality_tier": "B+",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 4,
+      "seed_url_count": 4,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_freightnet_spain_forwarders_surface_01",
+          "surface_name": "https://www.freightnet.com/directory/p1/cES/s30.htm",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 72,
+              "source_index": 36,
+              "submitted_url": "https://www.freightnet.com/directory/p1/cES/s30.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p1/cES/s30.htm",
+              "seed_url": "https://www.freightnet.com/directory/p1/cES/s30.htm",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_freightnet_spain_forwarders_surface_02",
+          "surface_name": "https://www.freightnet.com/directory/p2/cES/s30.htm",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 73,
+              "source_index": 36,
+              "submitted_url": "https://www.freightnet.com/directory/p2/cES/s30.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p2/cES/s30.htm",
+              "seed_url": "https://www.freightnet.com/directory/p2/cES/s30.htm",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 3,
+          "surface_code": "es_freightnet_spain_forwarders_surface_03",
+          "surface_name": "https://www.freightnet.com/directory/p3/cES/s30.htm",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 74,
+              "source_index": 36,
+              "submitted_url": "https://www.freightnet.com/directory/p3/cES/s30.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p3/cES/s30.htm",
+              "seed_url": "https://www.freightnet.com/directory/p3/cES/s30.htm",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 4,
+          "surface_code": "es_freightnet_spain_forwarders_surface_04",
+          "surface_name": "https://www.freightnet.com/directory/p1/cES/s31.htm",
+          "quality_tier": "B+",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 75,
+              "source_index": 36,
+              "submitted_url": "https://www.freightnet.com/directory/p1/cES/s31.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p1/cES/s31.htm",
+              "seed_url": "https://www.freightnet.com/directory/p1/cES/s31.htm",
+              "quality_tier": "B+",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 37,
+      "family_code": "es_freightnet_spain_logistics_companies",
+      "family_name": "Industry directory fallback with Spain logistics-company surfaces.",
+      "source_host": "www.freightnet.com",
+      "source_root_url": "https://www.freightnet.com/directory/p1/cES/s99.htm",
+      "quality_tier": "B",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_freightnet_spain_logistics_companies_surface_01",
+          "surface_name": "https://www.freightnet.com/directory/p1/cES/s99.htm",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 76,
+              "source_index": 37,
+              "submitted_url": "https://www.freightnet.com/directory/p1/cES/s99.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p1/cES/s99.htm",
+              "seed_url": "https://www.freightnet.com/directory/p1/cES/s99.htm",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_freightnet_spain_logistics_companies_surface_02",
+          "surface_name": "https://www.freightnet.com/directory/p2/cES/s99.htm",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 77,
+              "source_index": 37,
+              "submitted_url": "https://www.freightnet.com/directory/p2/cES/s99.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p2/cES/s99.htm",
+              "seed_url": "https://www.freightnet.com/directory/p2/cES/s99.htm",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 3,
+          "surface_code": "es_freightnet_spain_logistics_companies_surface_03",
+          "surface_name": "https://www.freightnet.com/directory/p3/cES/s99.htm",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 78,
+              "source_index": 37,
+              "submitted_url": "https://www.freightnet.com/directory/p3/cES/s99.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p3/cES/s99.htm",
+              "seed_url": "https://www.freightnet.com/directory/p3/cES/s99.htm",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 38,
+      "family_code": "es_cargoyellowpages_spain",
+      "family_name": "Cargo and logistics directory fallback for Spain.",
+      "source_host": "www.cargoyellowpages.com",
+      "source_root_url": "https://www.cargoyellowpages.com/en/spain/",
+      "quality_tier": "B",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_cargoyellowpages_spain_surface_01",
+          "surface_name": "https://www.cargoyellowpages.com/en/spain/",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 79,
+              "source_index": 38,
+              "submitted_url": "https://www.cargoyellowpages.com/en/spain/",
+              "canonical_url": "https://www.cargoyellowpages.com/en/spain/",
+              "seed_url": "https://www.cargoyellowpages.com/en/spain/",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_cargoyellowpages_spain_surface_02",
+          "surface_name": "https://mobile.cargoyellowpages.com/spain/",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 80,
+              "source_index": 38,
+              "submitted_url": "https://mobile.cargoyellowpages.com/spain/",
+              "canonical_url": "https://mobile.cargoyellowpages.com/spain/",
+              "seed_url": "https://mobile.cargoyellowpages.com/spain/",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 39,
+      "family_code": "es_europages_forwarding_agents",
+      "family_name": "B2B directory fallback for Spain forwarding and logistics suppliers.",
+      "source_host": "www.europages.co.uk",
+      "source_root_url": "https://www.europages.co.uk/companies/spain/forwarding-agents.html",
+      "quality_tier": "B",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_europages_forwarding_agents_surface_01",
+          "surface_name": "https://www.europages.co.uk/companies/spain/forwarding-agents.html",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 81,
+              "source_index": 39,
+              "submitted_url": "https://www.europages.co.uk/companies/spain/forwarding-agents.html",
+              "canonical_url": "https://www.europages.co.uk/companies/spain/forwarding-agents.html",
+              "seed_url": "https://www.europages.co.uk/companies/spain/forwarding-agents.html",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_europages_forwarding_agents_surface_02",
+          "surface_name": "https://www.europages.co.uk/companies/spain/transport%20and%20logistics.html",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 82,
+              "source_index": 39,
+              "submitted_url": "https://www.europages.co.uk/companies/spain/transport%20and%20logistics.html",
+              "canonical_url": "https://www.europages.co.uk/companies/spain/transport%20and%20logistics.html",
+              "seed_url": "https://www.europages.co.uk/companies/spain/transport%20and%20logistics.html",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 40,
+      "family_code": "es_kompass_spain_transport_logistics",
+      "family_name": "B2B directory fallback with Spain transport/logistics category surfaces.",
+      "source_host": "es.kompass.com",
+      "source_root_url": "https://es.kompass.com/a/transporte-logistica/75/",
+      "quality_tier": "B",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_kompass_spain_transport_logistics_surface_01",
+          "surface_name": "https://es.kompass.com/a/transporte-logistica/75/",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 83,
+              "source_index": 40,
+              "submitted_url": "https://es.kompass.com/a/transporte-logistica/75/",
+              "canonical_url": "https://es.kompass.com/a/transporte-logistica/75/",
+              "seed_url": "https://es.kompass.com/a/transporte-logistica/75/",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_kompass_spain_transport_logistics_surface_02",
+          "surface_name": "https://es.kompass.com/s/transporte-logistica/10/",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 84,
+              "source_index": 40,
+              "submitted_url": "https://es.kompass.com/s/transporte-logistica/10/",
+              "canonical_url": "https://es.kompass.com/s/transporte-logistica/10/",
+              "seed_url": "https://es.kompass.com/s/transporte-logistica/10/",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 3,
+          "surface_code": "es_kompass_spain_transport_logistics_surface_03",
+          "surface_name": "https://es.kompass.com/a/servicios-logisticos/80690/",
+          "quality_tier": "B",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 85,
+              "source_index": 40,
+              "submitted_url": "https://es.kompass.com/a/servicios-logisticos/80690/",
+              "canonical_url": "https://es.kompass.com/a/servicios-logisticos/80690/",
+              "seed_url": "https://es.kompass.com/a/servicios-logisticos/80690/",
+              "quality_tier": "B",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 41,
+      "family_code": "es_paginas_amarillas_transport_logistics",
+      "family_name": "General commercial directory fallback; requires later live quality review.",
+      "source_host": "www.paginasamarillas.es",
+      "source_root_url": "https://www.paginasamarillas.es/",
+      "quality_tier": "B-",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_paginas_amarillas_transport_logistics_surface_01",
+          "surface_name": "https://www.paginasamarillas.es/search/transporte-logistica/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
+          "quality_tier": "B-",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 86,
+              "source_index": 41,
+              "submitted_url": "https://www.paginasamarillas.es/search/transporte-logistica/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
+              "canonical_url": "https://www.paginasamarillas.es/search/transporte-logistica/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
+              "seed_url": "https://www.paginasamarillas.es/search/transporte-logistica/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
+              "quality_tier": "B-",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_paginas_amarillas_transport_logistics_surface_02",
+          "surface_name": "https://www.paginasamarillas.es/search/agencias-de-transporte/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
+          "quality_tier": "B-",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 87,
+              "source_index": 41,
+              "submitted_url": "https://www.paginasamarillas.es/search/agencias-de-transporte/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
+              "canonical_url": "https://www.paginasamarillas.es/search/agencias-de-transporte/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
+              "seed_url": "https://www.paginasamarillas.es/search/agencias-de-transporte/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
+              "quality_tier": "B-",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 42,
+      "family_code": "es_einforma_transport_logistics",
+      "family_name": "Commercial business-information directory fallback; requires later live quality review.",
+      "source_host": "www.einforma.com",
+      "source_root_url": "https://www.einforma.com/",
+      "quality_tier": "B-",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_einforma_transport_logistics_surface_01",
+          "surface_name": "https://www.einforma.com/servlet/app/portal/ENTP/prod/ETIQUETA_EMPRESAS/etiqueta/transportes-y-logistica",
+          "quality_tier": "B-",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 88,
+              "source_index": 42,
+              "submitted_url": "https://www.einforma.com/servlet/app/portal/ENTP/prod/ETIQUETA_EMPRESAS/etiqueta/transportes-y-logistica",
+              "canonical_url": "https://www.einforma.com/servlet/app/portal/ENTP/prod/ETIQUETA_EMPRESAS/etiqueta/transportes-y-logistica",
+              "seed_url": "https://www.einforma.com/servlet/app/portal/ENTP/prod/ETIQUETA_EMPRESAS/etiqueta/transportes-y-logistica",
+              "quality_tier": "B-",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_einforma_transport_logistics_surface_02",
+          "surface_name": "https://www.einforma.com/informacion-empresa",
+          "quality_tier": "B-",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 89,
+              "source_index": 42,
+              "submitted_url": "https://www.einforma.com/informacion-empresa",
+              "canonical_url": "https://www.einforma.com/informacion-empresa",
+              "seed_url": "https://www.einforma.com/informacion-empresa",
+              "quality_tier": "B-",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 43,
+      "family_code": "es_axesor_logistics_transport",
+      "family_name": "Commercial business directory fallback; requires later live quality review.",
+      "source_host": "www.axesor.es",
+      "source_root_url": "https://www.axesor.es/",
+      "quality_tier": "B-",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_axesor_logistics_transport_surface_01",
+          "surface_name": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-logistica",
+          "quality_tier": "B-",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 90,
+              "source_index": 43,
+              "submitted_url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-logistica",
+              "canonical_url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-logistica",
+              "seed_url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-logistica",
+              "quality_tier": "B-",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_axesor_logistics_transport_surface_02",
+          "surface_name": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-transporte",
+          "quality_tier": "B-",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 91,
+              "source_index": 43,
+              "submitted_url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-transporte",
+              "canonical_url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-transporte",
+              "seed_url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-transporte",
+              "quality_tier": "B-",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 44,
+      "family_code": "es_goodfirms_spain_logistics",
+      "family_name": "Commercial list fallback; useful only after later live/human review.",
+      "source_host": "www.goodfirms.co",
+      "source_root_url": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/spain",
+      "quality_tier": "B-",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_goodfirms_spain_logistics_surface_01",
+          "surface_name": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/spain",
+          "quality_tier": "B-",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 92,
+              "source_index": 44,
+              "submitted_url": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/spain",
+              "canonical_url": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/spain",
+              "seed_url": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/spain",
+              "quality_tier": "B-",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_goodfirms_spain_logistics_surface_02",
+          "surface_name": "https://www.goodfirms.co/supply-chain-logistics-companies/spain",
+          "quality_tier": "B-",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 93,
+              "source_index": 44,
+              "submitted_url": "https://www.goodfirms.co/supply-chain-logistics-companies/spain",
+              "canonical_url": "https://www.goodfirms.co/supply-chain-logistics-companies/spain",
+              "seed_url": "https://www.goodfirms.co/supply-chain-logistics-companies/spain",
+              "quality_tier": "B-",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "family_index": 45,
+      "family_code": "es_freightos_top_forwarders_spain",
+      "family_name": "Editorial/commercial fallback seed for later review, not direct activation.",
+      "source_host": "www.freightos.com",
+      "source_root_url": "https://www.freightos.com/freight-resources/top-freight-forwarders-in-spain/",
+      "quality_tier": "B-",
+      "decision": "HOLD_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "seed_surfaces": [
+        {
+          "surface_index": 1,
+          "surface_code": "es_freightos_top_forwarders_spain_surface_01",
+          "surface_name": "https://www.freightos.com/freight-resources/top-freight-forwarders-in-spain/",
+          "quality_tier": "B-",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 94,
+              "source_index": 45,
+              "submitted_url": "https://www.freightos.com/freight-resources/top-freight-forwarders-in-spain/",
+              "canonical_url": "https://www.freightos.com/freight-resources/top-freight-forwarders-in-spain/",
+              "seed_url": "https://www.freightos.com/freight-resources/top-freight-forwarders-in-spain/",
+              "quality_tier": "B-",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        },
+        {
+          "surface_index": 2,
+          "surface_code": "es_freightos_top_forwarders_spain_surface_02",
+          "surface_name": "https://www.freightos.com/freight-resources/",
+          "quality_tier": "B-",
+          "decision": "HOLD_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "seed_url_count": 1,
+          "seed_urls": [
+            {
+              "seed_index": 95,
+              "source_index": 45,
+              "submitted_url": "https://www.freightos.com/freight-resources/",
+              "canonical_url": "https://www.freightos.com/freight-resources/",
+              "seed_url": "https://www.freightos.com/freight-resources/",
+              "quality_tier": "B-",
+              "decision": "HOLD_REVIEW",
+              "candidate_manifest": true,
+              "is_live": false,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
