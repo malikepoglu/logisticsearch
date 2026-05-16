@@ -631,6 +631,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Spanish (`es`) | [`spanish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/es/spanish_source_families_v2.json) | sealed candidate manifest, not live | 45 | 98 | 98 |
 | Italian (`it`) | [`italian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/it/italian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Portuguese (`pt`) | [`portuguese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/pt/portuguese_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
+| Dutch (`nl`) | [`dutch_source_families_v2.json`](../makpi51crawler/catalog/startpoints/nl/dutch_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 
 ### Source-seed policy and decision records
 
@@ -647,6 +648,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_SPANISH_SOURCE_SEED_URLS_DECISION_2026_05_15.md`](TOPIC_CRAWLER_CORE_SPANISH_SOURCE_SEED_URLS_DECISION_2026_05_15.md)
 - [`TOPIC_CRAWLER_CORE_ITALIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_ITALIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_PORTUGUESE_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_PORTUGUESE_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
+- [`TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 
 ### Boundary rule
 
@@ -655,15 +657,16 @@ Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-rank
 
 ## Source-seed next-language rollout decision / Sıradaki dil rollout karar mühürü
 
-- Gate / Kapı: `R312_PT_SOURCE_SEED_CATALOG_POST_PUSH_SEAL_READONLY`
-- Sealed head / Mühürlü HEAD: `521b0337c881b3474c7f79106d54889b7e160f5f`
-- Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,zh,fr,es,it,pt`
+- Gate / Kapı: `R326_NL_SOURCE_SEED_CATALOG_POST_PUSH_SEAL_READONLY`
+- Sealed head / Mühürlü HEAD: `ee845b1d1efe91dea2ad6bc2f2449f481b842bf7`
+- Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,zh,fr,es,it,pt,nl`
 - Next language / Sıradaki dil: pending separate read-only next-language decision gate
 - Next catalog path / Sıradaki katalog yolu: pending
-- Next decision gate / Sıradaki karar kapısı: `R317_NEXT_LANGUAGE_ROLLOUT_DECISION_READONLY`
-- R317 allowed mode / R317 izinli mod: read-only next-language decision only.
-- R317 forbidden surfaces / R317 yasak yüzeyler: no file write, no git add/commit/push, no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe.
-- Portuguese seal note / Portekizce mühür notu: Portuguese decision doc and catalog are now sealed on Ubuntu Desktop and GitHub as candidate manifests only; they are not live crawler input.
+- Next decision gate / Sıradaki karar kapısı: `R331_NEXT_LANGUAGE_ROLLOUT_DECISION_READONLY`
+- R331 allowed mode / R331 izinli mod: read-only next-language decision only.
+- R331 forbidden surfaces / R331 yasak yüzeyler: no file write, no git add/commit/push, no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe.
+- Dutch seal note / Hollandaca mühür notu: Dutch decision doc and catalog are now sealed on Ubuntu Desktop and GitHub as candidate manifests only; they are not live crawler input.
+- Follow-up after Dutch / Hollandaca sonrası takip: run a separate repo-wide GitHub/docs stale-link audit and controlled patch line for outdated source-seed standard links and references.
 
 
 ## Source-seed canonical startpoint schema standard
