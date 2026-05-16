@@ -633,6 +633,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Portuguese (`pt`) | [`portuguese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/pt/portuguese_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Dutch (`nl`) | [`dutch_source_families_v2.json`](../makpi51crawler/catalog/startpoints/nl/dutch_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Russian (`ru`) | [`russian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ru/russian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
+| Ukrainian (`uk`) | [`ukrainian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/uk/ukrainian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 56 | 56 |
 
 ### Source-seed policy and decision records
 
@@ -651,6 +652,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_PORTUGUESE_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_PORTUGUESE_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
+- [`TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 
 ### Boundary rule
 
@@ -658,15 +660,14 @@ Crawler_Core stores discovered page links only as raw link evidence.
 Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-ranking. Desktop_Import on Ubuntu Desktop converts pre-ranking into real ranking/final rank.
 
 ## Source-seed next-language rollout decision / Sıradaki dil rollout karar mühürü
-- Gate / Kapı: `R351F1_RU_GITHUB_MAIN_DOCS_INDEX_REPAIR_LOCAL_ONLY`
-- Sealed head before repair / Onarım öncesi mühürlü HEAD: `d31982d7d33502b2be58884c454d7911c311c111`
+- Gate / Kapı: `R361B5_UK_SOURCE_SEED_GITHUB_DOCS_INDEX_REPAIR_LOCAL_ONLY_LINE_BASED_ADHOC_REMOVAL`
+- Sealed head before repair / Onarım öncesi mühürlü HEAD: `948280d603af9fff9a5bed9b91f3d563b51ad543`
 - Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,zh,fr,es,it,pt,nl,ru,uk`
-- Current priority / Mevcut öncelik: finish Russian GitHub/docs index repair before pi51c sync.
-- Next language / Sıradaki dil: pending until Russian GitHub/docs index repair and 3-system sync are sealed.
+- Current priority / Mevcut öncelik: repair Ukrainian canonical docs/README source-seed index after the early pi51c repo/live sync, then run the Ukrainian 3-system post-sync seal.
+- Next language / Sıradaki dil: pending until Ukrainian GitHub/docs index repair and 3-system sync are sealed.
 - Next catalog path / Sıradaki katalog yolu: pending.
-- Next decision gate / Sıradaki karar kapısı: `R351F2_RU_GITHUB_MAIN_DOCS_INDEX_REPAIR_AUDIT_READONLY`
-- Forbidden surfaces / Yasak yüzeyler: no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe before Russian docs repair is sealed.
-
+- Next decision gate / Sıradaki karar kapısı: `R361C_UK_SOURCE_SEED_GITHUB_DOCS_INDEX_REPAIR_AUDIT_READONLY`
+- Forbidden surfaces / Yasak yüzeyler: no DB, no crawler, no systemd mutation, no URL fetch/live probe, and no next-language rollout before Ukrainian docs repair and 3-system seal are complete.
 ## Source-seed canonical startpoint schema standard
 
 This standard is authoritative for all 25 language startpoint catalogs.
@@ -753,12 +754,3 @@ Documentation rule:
 - Canonical repository path: `docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md`
 - Mandatory first operation for every language: read the GitHub raw version of this rule document before startpoint planning, writing, audit, commit, push, sync, or activation.
 <!-- SOURCE_SEED_CANONICAL_RULES_READ_FIRST_END -->
-
-## Ukrainian (`uk`) source-seed catalog index / Ukraynaca source-seed katalog indeksi
-
-- Status / Durum: candidate-only, not live.
-- Catalog JSON / Katalog JSON: `makpi51crawler/catalog/startpoints/uk/ukrainian_source_families_v2.json`
-- Decision doc / Karar dokümanı: `docs/TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`
-- Metrics / Metrikler: 40 source families, 56 seed surfaces / seed URLs, 56 unique seed URLs, 0 non-HTTPS, 0 empty.
-- Runtime activation policy / Runtime aktivasyon politikası: `pi51c_live_probe_required_before_db_or_frontier_insert`
-- Safety / Güvenlik: no DB insert, no frontier activation, no URL fetch/live probe, no pi51c live activation before an explicit controlled gate.
