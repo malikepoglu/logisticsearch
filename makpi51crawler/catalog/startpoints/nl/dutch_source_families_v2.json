@@ -1,0 +1,4527 @@
+{
+  "schema": "source_families_v2",
+  "schema_version": "source_families_v2",
+  "catalog_version": "dutch_source_families_v2",
+  "language_code": "nl",
+  "language_name": "Dutch",
+  "language_alias": [
+    "nl",
+    "dutch",
+    "nederlands",
+    "hollandaca"
+  ],
+  "candidate_manifest": true,
+  "is_live": false,
+  "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+  "standardization_policy": {
+    "canonical_rule_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md",
+    "canonical_rule_sha256": "65b36104f039962f3b6c8cd3c70b2575e0de00f27e50732e18953749d89bb49d",
+    "github_raw_rule_url": "https://raw.githubusercontent.com/malikepoglu/logisticsearch/e71d22f0d12546ebef125698d8ad093f587c661d/docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md",
+    "decision_doc": "docs/TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md",
+    "decision_doc_sha256": "69e523267a4ff9a592c8ce5a37d04037b077be7abe9c2105be75d21eef0479ea",
+    "candidate_manifest_only": true,
+    "directory_first_policy_applied": true,
+    "directory_first_policy_pending_canonical_rule_doc_patch": true,
+    "no_db_insert": true,
+    "no_frontier_activation": true,
+    "no_crawler_start_stop": true,
+    "no_systemd_mutation": true,
+    "no_url_fetch_live_probe": true,
+    "no_pi51c_live_activation": true
+  },
+  "standardization_gate": "R323_NL_SOURCE_SEED_CATALOG_LOCAL_ONLY",
+  "last_rewritten_by_gate": "R323_NL_SOURCE_SEED_CATALOG_LOCAL_ONLY",
+  "safety_guards": {
+    "candidate_manifest": true,
+    "is_live": false,
+    "enabled": false,
+    "needs_live_check": true,
+    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+    "safety_state": "candidate_only_not_live",
+    "secret_printing_forbidden": true,
+    "db_frontier_crawler_systemd_mutation_forbidden": true,
+    "url_fetch_live_probe_forbidden": true,
+    "pi51c_sync_forbidden_in_this_gate": true,
+    "pi51c_live_runtime_copy_forbidden_in_this_gate": true
+  },
+  "metrics": {
+    "source_family_count": 40,
+    "seed_surface_count": 84,
+    "seed_url_count": 84,
+    "unique_seed_url_count": 84,
+    "duplicate_seed_url_count": 0,
+    "non_https_seed_url_count": 0,
+    "directory_first_source_family_note_count": 8
+  },
+  "dropped_empty_source_families": [],
+  "source_families": [
+    {
+      "source_family_index": 1,
+      "source_family_code": "nl_fiata_directory",
+      "source_family_name": "FIATA Netherlands members directory",
+      "source_name": "FIATA Netherlands members directory",
+      "source_root_url": "https://fiata.org/directory/nl/",
+      "source_host": "fiata.org",
+      "source_categories": [
+        "global_association_directory"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 1,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "global_association_directory",
+        "decision_doc_note": "Directory-first source. Netherlands FIATA member surface for FENEX; candidate-only subordinate directory surface.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_fiata_directory_surface_01",
+          "seed_surface_name": "FIATA Netherlands members directory seed surface 1",
+          "source_family_code": "nl_fiata_directory",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 1,
+            "decision_doc_source_code": "nl_fiata_directory",
+            "surface_slug": "https_fiata_org_directory_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 1,
+              "url": "https://fiata.org/directory/nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 2,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_fiata_directory_surface_02",
+          "seed_surface_name": "FIATA Netherlands members directory seed surface 2",
+          "source_family_code": "nl_fiata_directory",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 2,
+            "decision_doc_source_code": "nl_fiata_directory",
+            "surface_slug": "https_fiata_org_directory",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 2,
+              "url": "https://fiata.org/directory/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 2,
+      "source_family_code": "nl_fenex_rotterdamtransport_members",
+      "source_family_name": "FENEX members on RotterdamTransport",
+      "source_name": "FENEX members on RotterdamTransport",
+      "source_root_url": "https://rotterdamtransport.com/membership/fenex-netherlands-association-for-forwarding-logistics/",
+      "source_host": "rotterdamtransport.com",
+      "source_categories": [
+        "freight_forwarding_association_member_directory"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 2,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "freight_forwarding_association_member_directory",
+        "decision_doc_note": "Directory-first source. FENEX member directory surface under RotterdamTransport; high value for forwarding/logistics companies.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 3,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_fenex_rotterdamtransport_members_surface_01",
+          "seed_surface_name": "FENEX members on RotterdamTransport seed surface 1",
+          "source_family_code": "nl_fenex_rotterdamtransport_members",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 3,
+            "decision_doc_source_code": "nl_fenex_rotterdamtransport_members",
+            "surface_slug": "https_rotterdamtransport_com_membership_fenex_netherlands_association_for_forwarding_logistics",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 3,
+              "url": "https://rotterdamtransport.com/membership/fenex-netherlands-association-for-forwarding-logistics/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 4,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_fenex_rotterdamtransport_members_surface_02",
+          "seed_surface_name": "FENEX members on RotterdamTransport seed surface 2",
+          "source_family_code": "nl_fenex_rotterdamtransport_members",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 4,
+            "decision_doc_source_code": "nl_fenex_rotterdamtransport_members",
+            "surface_slug": "https_rotterdamtransport_com_companies",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 4,
+              "url": "https://rotterdamtransport.com/companies/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 5,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "nl_fenex_rotterdamtransport_members_surface_03",
+          "seed_surface_name": "FENEX members on RotterdamTransport seed surface 3",
+          "source_family_code": "nl_fenex_rotterdamtransport_members",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 5,
+            "decision_doc_source_code": "nl_fenex_rotterdamtransport_members",
+            "surface_slug": "https_rotterdamtransport_com",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 5,
+              "url": "https://rotterdamtransport.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 3,
+      "source_family_code": "nl_port_rotterdam_logistics_index",
+      "source_family_name": "Port of Rotterdam logistics and company index",
+      "source_name": "Port of Rotterdam logistics and company index",
+      "source_root_url": "https://www.portofrotterdam.com/en/logistics",
+      "source_host": "www.portofrotterdam.com",
+      "source_categories": [
+        "port_logistics_company_directory"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 3,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "port_logistics_company_directory",
+        "decision_doc_note": "Directory-first source. Port/logistics index and company/warehousing directory surface around Rotterdam.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 6,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_port_rotterdam_logistics_index_surface_01",
+          "seed_surface_name": "Port of Rotterdam logistics and company index seed surface 1",
+          "source_family_code": "nl_port_rotterdam_logistics_index",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 6,
+            "decision_doc_source_code": "nl_port_rotterdam_logistics_index",
+            "surface_slug": "https_www_portofrotterdam_com_en_logistics",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 6,
+              "url": "https://www.portofrotterdam.com/en/logistics",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 7,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_port_rotterdam_logistics_index_surface_02",
+          "seed_surface_name": "Port of Rotterdam logistics and company index seed surface 2",
+          "source_family_code": "nl_port_rotterdam_logistics_index",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 7,
+            "decision_doc_source_code": "nl_port_rotterdam_logistics_index",
+            "surface_slug": "https_www_portofrotterdam_com_en_logistics_connections",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 7,
+              "url": "https://www.portofrotterdam.com/en/logistics/connections",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 8,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "nl_port_rotterdam_logistics_index_surface_03",
+          "seed_surface_name": "Port of Rotterdam logistics and company index seed surface 3",
+          "source_family_code": "nl_port_rotterdam_logistics_index",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 8,
+            "decision_doc_source_code": "nl_port_rotterdam_logistics_index",
+            "surface_slug": "https_www_portofrotterdam_com_en_logistics_storage_and_transhipment_warehousing_warehousing_options_in_the_rotterdam_port_area",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 8,
+              "url": "https://www.portofrotterdam.com/en/logistics/storage-and-transhipment/warehousing/warehousing-options-in-the-rotterdam-port-area",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 4,
+      "source_family_code": "nl_transport_guide_rotterdam",
+      "source_family_name": "Transport Guide Rotterdam",
+      "source_name": "Transport Guide Rotterdam",
+      "source_root_url": "https://www.transportguiderotterdam.com/companies",
+      "source_host": "www.transportguiderotterdam.com",
+      "source_categories": [
+        "rotterdam_transport_directory"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 4,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "rotterdam_transport_directory",
+        "decision_doc_note": "Directory-first source. Rotterdam transport guide directory grouped by transport mode.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 9,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_transport_guide_rotterdam_surface_01",
+          "seed_surface_name": "Transport Guide Rotterdam seed surface 1",
+          "source_family_code": "nl_transport_guide_rotterdam",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 9,
+            "decision_doc_source_code": "nl_transport_guide_rotterdam",
+            "surface_slug": "https_www_transportguiderotterdam_com_companies",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 9,
+              "url": "https://www.transportguiderotterdam.com/companies",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 10,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_transport_guide_rotterdam_surface_02",
+          "seed_surface_name": "Transport Guide Rotterdam seed surface 2",
+          "source_family_code": "nl_transport_guide_rotterdam",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 10,
+            "decision_doc_source_code": "nl_transport_guide_rotterdam",
+            "surface_slug": "https_www_transportguiderotterdam_com",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 10,
+              "url": "https://www.transportguiderotterdam.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 5,
+      "source_family_code": "nl_north_sea_port_business_directory",
+      "source_family_name": "North Sea Port business directory",
+      "source_name": "North Sea Port business directory",
+      "source_root_url": "https://www.northseaport.com/en/business-directory",
+      "source_host": "www.northseaport.com",
+      "source_categories": [
+        "port_business_directory"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 5,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_business_directory",
+        "decision_doc_note": "Directory-first source. Cross-border North Sea Port directory; Netherlands/Belgium port cluster relevance.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 11,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_north_sea_port_business_directory_surface_01",
+          "seed_surface_name": "North Sea Port business directory seed surface 1",
+          "source_family_code": "nl_north_sea_port_business_directory",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 11,
+            "decision_doc_source_code": "nl_north_sea_port_business_directory",
+            "surface_slug": "https_www_northseaport_com_en_business_directory",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 11,
+              "url": "https://www.northseaport.com/en/business-directory",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 12,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_north_sea_port_business_directory_surface_02",
+          "seed_surface_name": "North Sea Port business directory seed surface 2",
+          "source_family_code": "nl_north_sea_port_business_directory",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 12,
+            "decision_doc_source_code": "nl_north_sea_port_business_directory",
+            "surface_slug": "https_www_northseaport_com_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 12,
+              "url": "https://www.northseaport.com/en",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 13,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "nl_north_sea_port_business_directory_surface_03",
+          "seed_surface_name": "North Sea Port business directory seed surface 3",
+          "source_family_code": "nl_north_sea_port_business_directory",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 13,
+            "decision_doc_source_code": "nl_north_sea_port_business_directory",
+            "surface_slug": "https_www_northseaport_com_en_doing_business",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 13,
+              "url": "https://www.northseaport.com/en/doing-business",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 6,
+      "source_family_code": "nl_tln_association",
+      "source_family_name": "TLN - Transport en Logistiek Nederland",
+      "source_name": "TLN - Transport en Logistiek Nederland",
+      "source_root_url": "https://www.tln.nl/over-tln/about-tln",
+      "source_host": "www.tln.nl",
+      "source_categories": [
+        "transport_logistics_association"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 6,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "transport_logistics_association",
+        "decision_doc_note": "Association source. Dutch transport and logistics association; direct directory/member surfaces may be added after later live check.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 14,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_tln_association_surface_01",
+          "seed_surface_name": "TLN - Transport en Logistiek Nederland seed surface 1",
+          "source_family_code": "nl_tln_association",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 14,
+            "decision_doc_source_code": "nl_tln_association",
+            "surface_slug": "https_www_tln_nl_over_tln_about_tln",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 14,
+              "url": "https://www.tln.nl/over-tln/about-tln",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 15,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_tln_association_surface_02",
+          "seed_surface_name": "TLN - Transport en Logistiek Nederland seed surface 2",
+          "source_family_code": "nl_tln_association",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 15,
+            "decision_doc_source_code": "nl_tln_association",
+            "surface_slug": "https_www_tln_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 15,
+              "url": "https://www.tln.nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 7,
+      "source_family_code": "nl_evofenedex",
+      "source_family_name": "evofenedex",
+      "source_name": "evofenedex",
+      "source_root_url": "https://www.evofenedex.nl/",
+      "source_host": "www.evofenedex.nl",
+      "source_categories": [
+        "trade_logistics_association"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 7,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "trade_logistics_association",
+        "decision_doc_note": "Association source for trade/logistics/shippers ecosystem; candidate-only.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 16,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_evofenedex_surface_01",
+          "seed_surface_name": "evofenedex seed surface 1",
+          "source_family_code": "nl_evofenedex",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 16,
+            "decision_doc_source_code": "nl_evofenedex",
+            "surface_slug": "https_www_evofenedex_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 16,
+              "url": "https://www.evofenedex.nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 17,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_evofenedex_surface_02",
+          "seed_surface_name": "evofenedex seed surface 2",
+          "source_family_code": "nl_evofenedex",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 17,
+            "decision_doc_source_code": "nl_evofenedex",
+            "surface_slug": "https_www_evofenedex_nl_kennis_logistiek",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 17,
+              "url": "https://www.evofenedex.nl/kennis/logistiek",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 8,
+      "source_family_code": "nl_azfreight_forwarders",
+      "source_family_name": "AZFreight Netherlands freight forwarders",
+      "source_name": "AZFreight Netherlands freight forwarders",
+      "source_root_url": "https://azfreight.com/country-facility/freight-forwarders-in-netherlands/",
+      "source_host": "azfreight.com",
+      "source_categories": [
+        "commercial_freight_directory"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 8,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "commercial_freight_directory",
+        "decision_doc_note": "Directory-first commercial fallback for freight forwarders; lower priority than official/association/port directories.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 18,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_azfreight_forwarders_surface_01",
+          "seed_surface_name": "AZFreight Netherlands freight forwarders seed surface 1",
+          "source_family_code": "nl_azfreight_forwarders",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 18,
+            "decision_doc_source_code": "nl_azfreight_forwarders",
+            "surface_slug": "https_azfreight_com_country_facility_freight_forwarders_in_netherlands",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 18,
+              "url": "https://azfreight.com/country-facility/freight-forwarders-in-netherlands/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 19,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_azfreight_forwarders_surface_02",
+          "seed_surface_name": "AZFreight Netherlands freight forwarders seed surface 2",
+          "source_family_code": "nl_azfreight_forwarders",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 19,
+            "decision_doc_source_code": "nl_azfreight_forwarders",
+            "surface_slug": "https_azfreight_com_association_fenex_netherlands_association_for_forwarding_and_logistics",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 19,
+              "url": "https://azfreight.com/association/fenex-netherlands-association-for-forwarding-and-logistics/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 9,
+      "source_family_code": "nl_freightnet_forwarders",
+      "source_family_name": "Freightnet Netherlands freight forwarders",
+      "source_name": "Freightnet Netherlands freight forwarders",
+      "source_root_url": "https://www.freightnet.com/directory/p1/cNL/s30.htm",
+      "source_host": "www.freightnet.com",
+      "source_categories": [
+        "commercial_freight_directory"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 9,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "commercial_freight_directory",
+        "decision_doc_note": "Directory-first commercial fallback. Must not dominate scheduler over official/association directories.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 20,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_freightnet_forwarders_surface_01",
+          "seed_surface_name": "Freightnet Netherlands freight forwarders seed surface 1",
+          "source_family_code": "nl_freightnet_forwarders",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 20,
+            "decision_doc_source_code": "nl_freightnet_forwarders",
+            "surface_slug": "https_www_freightnet_com_directory_p1_cnl_s30_htm",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 20,
+              "url": "https://www.freightnet.com/directory/p1/cNL/s30.htm",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 21,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_freightnet_forwarders_surface_02",
+          "seed_surface_name": "Freightnet Netherlands freight forwarders seed surface 2",
+          "source_family_code": "nl_freightnet_forwarders",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 21,
+            "decision_doc_source_code": "nl_freightnet_forwarders",
+            "surface_slug": "https_www_freightnet_com_directory_p1_cnl_s11_htm",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 21,
+              "url": "https://www.freightnet.com/directory/p1/cNL/s11.htm",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 10,
+      "source_family_code": "nl_kompass_shipping_forwarding",
+      "source_family_name": "Kompass Netherlands shipping and forwarding agents",
+      "source_name": "Kompass Netherlands shipping and forwarding agents",
+      "source_root_url": "https://lb.kompass.com/z/nl/a/shipping-and-forwarding-agents/75780/",
+      "source_host": "lb.kompass.com",
+      "source_categories": [
+        "commercial_business_directory"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 10,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "commercial_business_directory",
+        "decision_doc_note": "Directory-first commercial business directory; lower priority fallback.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": true
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 22,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_kompass_shipping_forwarding_surface_01",
+          "seed_surface_name": "Kompass Netherlands shipping and forwarding agents seed surface 1",
+          "source_family_code": "nl_kompass_shipping_forwarding",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 22,
+            "decision_doc_source_code": "nl_kompass_shipping_forwarding",
+            "surface_slug": "https_lb_kompass_com_z_nl_a_shipping_and_forwarding_agents_75780",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 22,
+              "url": "https://lb.kompass.com/z/nl/a/shipping-and-forwarding-agents/75780/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 23,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_kompass_shipping_forwarding_surface_02",
+          "seed_surface_name": "Kompass Netherlands shipping and forwarding agents seed surface 2",
+          "source_family_code": "nl_kompass_shipping_forwarding",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 23,
+            "decision_doc_source_code": "nl_kompass_shipping_forwarding",
+            "surface_slug": "https_nl_kompass_com",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": true
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 23,
+              "url": "https://nl.kompass.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 11,
+      "source_family_code": "nl_port_amsterdam",
+      "source_family_name": "Port of Amsterdam",
+      "source_name": "Port of Amsterdam",
+      "source_root_url": "https://www.portofamsterdam.com/en",
+      "source_host": "www.portofamsterdam.com",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 11,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Official port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 24,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_port_amsterdam_surface_01",
+          "seed_surface_name": "Port of Amsterdam seed surface 1",
+          "source_family_code": "nl_port_amsterdam",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 24,
+            "decision_doc_source_code": "nl_port_amsterdam",
+            "surface_slug": "https_www_portofamsterdam_com_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 24,
+              "url": "https://www.portofamsterdam.com/en",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 25,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_port_amsterdam_surface_02",
+          "seed_surface_name": "Port of Amsterdam seed surface 2",
+          "source_family_code": "nl_port_amsterdam",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 25,
+            "decision_doc_source_code": "nl_port_amsterdam",
+            "surface_slug": "https_www_portofamsterdam_com_en_business",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 25,
+              "url": "https://www.portofamsterdam.com/en/business",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 12,
+      "source_family_code": "nl_groningen_seaports",
+      "source_family_name": "Groningen Seaports",
+      "source_name": "Groningen Seaports",
+      "source_root_url": "https://www.groningen-seaports.com/en/",
+      "source_host": "www.groningen-seaports.com",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 12,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Dutch seaport authority candidate for Eemshaven/Delfzijl.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 26,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_groningen_seaports_surface_01",
+          "seed_surface_name": "Groningen Seaports seed surface 1",
+          "source_family_code": "nl_groningen_seaports",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 26,
+            "decision_doc_source_code": "nl_groningen_seaports",
+            "surface_slug": "https_www_groningen_seaports_com_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 26,
+              "url": "https://www.groningen-seaports.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 27,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_groningen_seaports_surface_02",
+          "seed_surface_name": "Groningen Seaports seed surface 2",
+          "source_family_code": "nl_groningen_seaports",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 27,
+            "decision_doc_source_code": "nl_groningen_seaports",
+            "surface_slug": "https_www_groningen_seaports_com_en_ports",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 27,
+              "url": "https://www.groningen-seaports.com/en/ports/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 13,
+      "source_family_code": "nl_port_of_moerdijk",
+      "source_family_name": "Port of Moerdijk",
+      "source_name": "Port of Moerdijk",
+      "source_root_url": "https://www.portofmoerdijk.nl/en/",
+      "source_host": "www.portofmoerdijk.nl",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 13,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Official inland/short-sea/industrial port candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 28,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_port_of_moerdijk_surface_01",
+          "seed_surface_name": "Port of Moerdijk seed surface 1",
+          "source_family_code": "nl_port_of_moerdijk",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 28,
+            "decision_doc_source_code": "nl_port_of_moerdijk",
+            "surface_slug": "https_www_portofmoerdijk_nl_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 28,
+              "url": "https://www.portofmoerdijk.nl/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 29,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_port_of_moerdijk_surface_02",
+          "seed_surface_name": "Port of Moerdijk seed surface 2",
+          "source_family_code": "nl_port_of_moerdijk",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 29,
+            "decision_doc_source_code": "nl_port_of_moerdijk",
+            "surface_slug": "https_www_portofmoerdijk_nl_en_doing_business",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 29,
+              "url": "https://www.portofmoerdijk.nl/en/doing-business/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 14,
+      "source_family_code": "nl_schiphol_cargo",
+      "source_family_name": "Schiphol Cargo",
+      "source_name": "Schiphol Cargo",
+      "source_root_url": "https://www.schiphol.nl/en/cargo/",
+      "source_host": "www.schiphol.nl",
+      "source_categories": [
+        "air_cargo_airport"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 14,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "air_cargo_airport",
+        "decision_doc_note": "Official airport cargo ecosystem candidate with partners/handlers directory surface.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 30,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_schiphol_cargo_surface_01",
+          "seed_surface_name": "Schiphol Cargo seed surface 1",
+          "source_family_code": "nl_schiphol_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 30,
+            "decision_doc_source_code": "nl_schiphol_cargo",
+            "surface_slug": "https_www_schiphol_nl_en_cargo",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 30,
+              "url": "https://www.schiphol.nl/en/cargo/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 31,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_schiphol_cargo_surface_02",
+          "seed_surface_name": "Schiphol Cargo seed surface 2",
+          "source_family_code": "nl_schiphol_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 31,
+            "decision_doc_source_code": "nl_schiphol_cargo",
+            "surface_slug": "https_www_schiphol_nl_en_cargo_schiphols_facilities_and_partners_cargo",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 31,
+              "url": "https://www.schiphol.nl/en/cargo/schiphols-facilities-and-partners-cargo",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 32,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "nl_schiphol_cargo_surface_03",
+          "seed_surface_name": "Schiphol Cargo seed surface 3",
+          "source_family_code": "nl_schiphol_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 32,
+            "decision_doc_source_code": "nl_schiphol_cargo",
+            "surface_slug": "https_www_schiphol_nl_en_cargo_smart_cargo_mainport_program",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 32,
+              "url": "https://www.schiphol.nl/en/cargo/smart-cargo-mainport-program",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 15,
+      "source_family_code": "nl_air_cargo_netherlands",
+      "source_family_name": "Air Cargo Netherlands",
+      "source_name": "Air Cargo Netherlands",
+      "source_root_url": "https://www.aircargonetherlands.nl/",
+      "source_host": "www.aircargonetherlands.nl",
+      "source_categories": [
+        "air_cargo_association"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 15,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "air_cargo_association",
+        "decision_doc_note": "Dutch air cargo association candidate; directory/member surface may be expanded later.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 33,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_air_cargo_netherlands_surface_01",
+          "seed_surface_name": "Air Cargo Netherlands seed surface 1",
+          "source_family_code": "nl_air_cargo_netherlands",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 33,
+            "decision_doc_source_code": "nl_air_cargo_netherlands",
+            "surface_slug": "https_www_aircargonetherlands_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 33,
+              "url": "https://www.aircargonetherlands.nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 34,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_air_cargo_netherlands_surface_02",
+          "seed_surface_name": "Air Cargo Netherlands seed surface 2",
+          "source_family_code": "nl_air_cargo_netherlands",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 34,
+            "decision_doc_source_code": "nl_air_cargo_netherlands",
+            "surface_slug": "https_www_aircargonetherlands_nl_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 34,
+              "url": "https://www.aircargonetherlands.nl/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 16,
+      "source_family_code": "nl_deltalinqs",
+      "source_family_name": "Deltalinqs",
+      "source_name": "Deltalinqs",
+      "source_root_url": "https://www.deltalinqs.nl/",
+      "source_host": "www.deltalinqs.nl",
+      "source_categories": [
+        "port_industry_association"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 16,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "port_industry_association",
+        "decision_doc_note": "Rotterdam port and industrial association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 35,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_deltalinqs_surface_01",
+          "seed_surface_name": "Deltalinqs seed surface 1",
+          "source_family_code": "nl_deltalinqs",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 35,
+            "decision_doc_source_code": "nl_deltalinqs",
+            "surface_slug": "https_www_deltalinqs_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 35,
+              "url": "https://www.deltalinqs.nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 36,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_deltalinqs_surface_02",
+          "seed_surface_name": "Deltalinqs seed surface 2",
+          "source_family_code": "nl_deltalinqs",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 36,
+            "decision_doc_source_code": "nl_deltalinqs",
+            "surface_slug": "https_www_deltalinqs_nl_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 36,
+              "url": "https://www.deltalinqs.nl/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 17,
+      "source_family_code": "nl_dutch_fresh_port",
+      "source_family_name": "Dutch Fresh Port",
+      "source_name": "Dutch Fresh Port",
+      "source_root_url": "https://www.dutchfreshport.eu/",
+      "source_host": "www.dutchfreshport.eu",
+      "source_categories": [
+        "fresh_logistics_cluster"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 17,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "fresh_logistics_cluster",
+        "decision_doc_note": "Fresh logistics cluster candidate; useful for cold chain / reefer logistics.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 37,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_dutch_fresh_port_surface_01",
+          "seed_surface_name": "Dutch Fresh Port seed surface 1",
+          "source_family_code": "nl_dutch_fresh_port",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 37,
+            "decision_doc_source_code": "nl_dutch_fresh_port",
+            "surface_slug": "https_www_dutchfreshport_eu",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 37,
+              "url": "https://www.dutchfreshport.eu/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 38,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_dutch_fresh_port_surface_02",
+          "seed_surface_name": "Dutch Fresh Port seed surface 2",
+          "source_family_code": "nl_dutch_fresh_port",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 38,
+            "decision_doc_source_code": "nl_dutch_fresh_port",
+            "surface_slug": "https_www_dutchfreshport_eu_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 38,
+              "url": "https://www.dutchfreshport.eu/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 18,
+      "source_family_code": "nl_venlo_logistics_hotspot",
+      "source_family_name": "Logistics Hotspot Venlo",
+      "source_name": "Logistics Hotspot Venlo",
+      "source_root_url": "https://www.logisticsinsight.nl/",
+      "source_host": "www.logisticsinsight.nl",
+      "source_categories": [
+        "logistics_cluster"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 18,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "logistics_cluster",
+        "decision_doc_note": "Regional logistics cluster candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 39,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_venlo_logistics_hotspot_surface_01",
+          "seed_surface_name": "Logistics Hotspot Venlo seed surface 1",
+          "source_family_code": "nl_venlo_logistics_hotspot",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 39,
+            "decision_doc_source_code": "nl_venlo_logistics_hotspot",
+            "surface_slug": "https_www_logisticsinsight_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 39,
+              "url": "https://www.logisticsinsight.nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 40,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_venlo_logistics_hotspot_surface_02",
+          "seed_surface_name": "Logistics Hotspot Venlo seed surface 2",
+          "source_family_code": "nl_venlo_logistics_hotspot",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 40,
+            "decision_doc_source_code": "nl_venlo_logistics_hotspot",
+            "surface_slug": "https_www_logisticsinsight_nl_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 40,
+              "url": "https://www.logisticsinsight.nl/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 19,
+      "source_family_code": "nl_prorail_freight",
+      "source_family_name": "ProRail rail freight",
+      "source_name": "ProRail rail freight",
+      "source_root_url": "https://www.prorail.nl/",
+      "source_host": "www.prorail.nl",
+      "source_categories": [
+        "rail_freight_infrastructure"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 19,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "rail_freight_infrastructure",
+        "decision_doc_note": "Rail freight infrastructure / official railway capacity candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 41,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_prorail_freight_surface_01",
+          "seed_surface_name": "ProRail rail freight seed surface 1",
+          "source_family_code": "nl_prorail_freight",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 41,
+            "decision_doc_source_code": "nl_prorail_freight",
+            "surface_slug": "https_www_prorail_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 41,
+              "url": "https://www.prorail.nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 42,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_prorail_freight_surface_02",
+          "seed_surface_name": "ProRail rail freight seed surface 2",
+          "source_family_code": "nl_prorail_freight",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 42,
+            "decision_doc_source_code": "nl_prorail_freight",
+            "surface_slug": "https_www_prorail_nl_over_prorail_vervoer_goederenvervoer",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 42,
+              "url": "https://www.prorail.nl/over-prorail/vervoer/goederenvervoer",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 20,
+      "source_family_code": "nl_railcargo_information",
+      "source_family_name": "Rail Cargo Information Netherlands",
+      "source_name": "Rail Cargo Information Netherlands",
+      "source_root_url": "https://www.railcargo.nl/",
+      "source_host": "www.railcargo.nl",
+      "source_categories": [
+        "rail_freight_information"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 20,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "rail_freight_information",
+        "decision_doc_note": "Rail freight information candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 43,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_railcargo_information_surface_01",
+          "seed_surface_name": "Rail Cargo Information Netherlands seed surface 1",
+          "source_family_code": "nl_railcargo_information",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 43,
+            "decision_doc_source_code": "nl_railcargo_information",
+            "surface_slug": "https_www_railcargo_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 43,
+              "url": "https://www.railcargo.nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 44,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_railcargo_information_surface_02",
+          "seed_surface_name": "Rail Cargo Information Netherlands seed surface 2",
+          "source_family_code": "nl_railcargo_information",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 44,
+            "decision_doc_source_code": "nl_railcargo_information",
+            "surface_slug": "https_www_railcargo_nl_english",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 44,
+              "url": "https://www.railcargo.nl/english/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 21,
+      "source_family_code": "nl_kuehne_nagel",
+      "source_family_name": "Kuehne+Nagel Netherlands",
+      "source_name": "Kuehne+Nagel Netherlands",
+      "source_root_url": "https://nl.kuehne-nagel.com/en/",
+      "source_host": "nl.kuehne-nagel.com",
+      "source_categories": [
+        "global_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 21,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "global_logistics_operator",
+        "decision_doc_note": "Global logistics operator Netherlands surface candidate; lower priority than directories.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 45,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_kuehne_nagel_surface_01",
+          "seed_surface_name": "Kuehne+Nagel Netherlands seed surface 1",
+          "source_family_code": "nl_kuehne_nagel",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 45,
+            "decision_doc_source_code": "nl_kuehne_nagel",
+            "surface_slug": "https_nl_kuehne_nagel_com_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 45,
+              "url": "https://nl.kuehne-nagel.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 46,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_kuehne_nagel_surface_02",
+          "seed_surface_name": "Kuehne+Nagel Netherlands seed surface 2",
+          "source_family_code": "nl_kuehne_nagel",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 46,
+            "decision_doc_source_code": "nl_kuehne_nagel",
+            "surface_slug": "https_nl_kuehne_nagel_com_en_services",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 46,
+              "url": "https://nl.kuehne-nagel.com/en/-/services",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 22,
+      "source_family_code": "nl_dbschenker",
+      "source_family_name": "DB Schenker Netherlands",
+      "source_name": "DB Schenker Netherlands",
+      "source_root_url": "https://www.dbschenker.com/nl-en",
+      "source_host": "www.dbschenker.com",
+      "source_categories": [
+        "global_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 22,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "global_logistics_operator",
+        "decision_doc_note": "Global logistics operator Netherlands surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 47,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_dbschenker_surface_01",
+          "seed_surface_name": "DB Schenker Netherlands seed surface 1",
+          "source_family_code": "nl_dbschenker",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 47,
+            "decision_doc_source_code": "nl_dbschenker",
+            "surface_slug": "https_www_dbschenker_com_nl_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 47,
+              "url": "https://www.dbschenker.com/nl-en",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 48,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_dbschenker_surface_02",
+          "seed_surface_name": "DB Schenker Netherlands seed surface 2",
+          "source_family_code": "nl_dbschenker",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 48,
+            "decision_doc_source_code": "nl_dbschenker",
+            "surface_slug": "https_www_dbschenker_com_nl_en_products",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 48,
+              "url": "https://www.dbschenker.com/nl-en/products",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 23,
+      "source_family_code": "nl_dhl_global_forwarding",
+      "source_family_name": "DHL Global Forwarding Netherlands",
+      "source_name": "DHL Global Forwarding Netherlands",
+      "source_root_url": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding.html",
+      "source_host": "www.dhl.com",
+      "source_categories": [
+        "global_forwarding_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 23,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "global_forwarding_operator",
+        "decision_doc_note": "Global forwarding Netherlands surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 49,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_dhl_global_forwarding_surface_01",
+          "seed_surface_name": "DHL Global Forwarding Netherlands seed surface 1",
+          "source_family_code": "nl_dhl_global_forwarding",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 49,
+            "decision_doc_source_code": "nl_dhl_global_forwarding",
+            "surface_slug": "https_www_dhl_com_nl_en_home_our_divisions_global_forwarding_html",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 49,
+              "url": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding.html",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 50,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_dhl_global_forwarding_surface_02",
+          "seed_surface_name": "DHL Global Forwarding Netherlands seed surface 2",
+          "source_family_code": "nl_dhl_global_forwarding",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 50,
+            "decision_doc_source_code": "nl_dhl_global_forwarding",
+            "surface_slug": "https_www_dhl_com_nl_en_home_our_divisions_global_forwarding_freight_forwarding_html",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 50,
+              "url": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding/freight-forwarding.html",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 24,
+      "source_family_code": "nl_dsv",
+      "source_family_name": "DSV Netherlands",
+      "source_name": "DSV Netherlands",
+      "source_root_url": "https://www.dsv.com/en-nl",
+      "source_host": "www.dsv.com",
+      "source_categories": [
+        "global_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 24,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "global_logistics_operator",
+        "decision_doc_note": "Global logistics operator Netherlands surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 51,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_dsv_surface_01",
+          "seed_surface_name": "DSV Netherlands seed surface 1",
+          "source_family_code": "nl_dsv",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 51,
+            "decision_doc_source_code": "nl_dsv",
+            "surface_slug": "https_www_dsv_com_en_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 51,
+              "url": "https://www.dsv.com/en-nl",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 52,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_dsv_surface_02",
+          "seed_surface_name": "DSV Netherlands seed surface 2",
+          "source_family_code": "nl_dsv",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 52,
+            "decision_doc_source_code": "nl_dsv",
+            "surface_slug": "https_www_dsv_com_en_nl_our_solutions",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 52,
+              "url": "https://www.dsv.com/en-nl/our-solutions",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 25,
+      "source_family_code": "nl_ceva_logistics",
+      "source_family_name": "CEVA Logistics Netherlands",
+      "source_name": "CEVA Logistics Netherlands",
+      "source_root_url": "https://www.cevalogistics.com/en/where-we-are/europe/netherlands",
+      "source_host": "www.cevalogistics.com",
+      "source_categories": [
+        "global_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 25,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "global_logistics_operator",
+        "decision_doc_note": "Global logistics operator Netherlands surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 53,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_ceva_logistics_surface_01",
+          "seed_surface_name": "CEVA Logistics Netherlands seed surface 1",
+          "source_family_code": "nl_ceva_logistics",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 53,
+            "decision_doc_source_code": "nl_ceva_logistics",
+            "surface_slug": "https_www_cevalogistics_com_en_where_we_are_europe_netherlands",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 53,
+              "url": "https://www.cevalogistics.com/en/where-we-are/europe/netherlands",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 54,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_ceva_logistics_surface_02",
+          "seed_surface_name": "CEVA Logistics Netherlands seed surface 2",
+          "source_family_code": "nl_ceva_logistics",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 54,
+            "decision_doc_source_code": "nl_ceva_logistics",
+            "surface_slug": "https_www_cevalogistics_com_en_our_services",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 54,
+              "url": "https://www.cevalogistics.com/en/our-services",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 26,
+      "source_family_code": "nl_geodis",
+      "source_family_name": "GEODIS Netherlands",
+      "source_name": "GEODIS Netherlands",
+      "source_root_url": "https://geodis.com/nl/en",
+      "source_host": "geodis.com",
+      "source_categories": [
+        "global_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 26,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "global_logistics_operator",
+        "decision_doc_note": "Global logistics operator Netherlands surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 55,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_geodis_surface_01",
+          "seed_surface_name": "GEODIS Netherlands seed surface 1",
+          "source_family_code": "nl_geodis",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 55,
+            "decision_doc_source_code": "nl_geodis",
+            "surface_slug": "https_geodis_com_nl_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 55,
+              "url": "https://geodis.com/nl/en",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 56,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_geodis_surface_02",
+          "seed_surface_name": "GEODIS Netherlands seed surface 2",
+          "source_family_code": "nl_geodis",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 56,
+            "decision_doc_source_code": "nl_geodis",
+            "surface_slug": "https_geodis_com_nl_en_services",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 56,
+              "url": "https://geodis.com/nl/en/services",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 27,
+      "source_family_code": "nl_mainfreight",
+      "source_family_name": "Mainfreight Netherlands",
+      "source_name": "Mainfreight Netherlands",
+      "source_root_url": "https://www.mainfreight.com/netherlands/en-nz",
+      "source_host": "www.mainfreight.com",
+      "source_categories": [
+        "logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 27,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "logistics_operator",
+        "decision_doc_note": "Logistics operator Netherlands surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 57,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_mainfreight_surface_01",
+          "seed_surface_name": "Mainfreight Netherlands seed surface 1",
+          "source_family_code": "nl_mainfreight",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 57,
+            "decision_doc_source_code": "nl_mainfreight",
+            "surface_slug": "https_www_mainfreight_com_netherlands_en_nz",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 57,
+              "url": "https://www.mainfreight.com/netherlands/en-nz",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 58,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_mainfreight_surface_02",
+          "seed_surface_name": "Mainfreight Netherlands seed surface 2",
+          "source_family_code": "nl_mainfreight",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 58,
+            "decision_doc_source_code": "nl_mainfreight",
+            "surface_slug": "https_www_mainfreight_com_netherlands_en_nz_services",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 58,
+              "url": "https://www.mainfreight.com/netherlands/en-nz/services",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 28,
+      "source_family_code": "nl_rhenus",
+      "source_family_name": "Rhenus Netherlands",
+      "source_name": "Rhenus Netherlands",
+      "source_root_url": "https://www.rhenus.group/nl/en/",
+      "source_host": "www.rhenus.group",
+      "source_categories": [
+        "logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 28,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "logistics_operator",
+        "decision_doc_note": "Logistics operator Netherlands surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 59,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_rhenus_surface_01",
+          "seed_surface_name": "Rhenus Netherlands seed surface 1",
+          "source_family_code": "nl_rhenus",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 59,
+            "decision_doc_source_code": "nl_rhenus",
+            "surface_slug": "https_www_rhenus_group_nl_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 59,
+              "url": "https://www.rhenus.group/nl/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 60,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_rhenus_surface_02",
+          "seed_surface_name": "Rhenus Netherlands seed surface 2",
+          "source_family_code": "nl_rhenus",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 60,
+            "decision_doc_source_code": "nl_rhenus",
+            "surface_slug": "https_www_rhenus_group_nl_en_services",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 60,
+              "url": "https://www.rhenus.group/nl/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 29,
+      "source_family_code": "nl_nippon_express",
+      "source_family_name": "Nippon Express Netherlands",
+      "source_name": "Nippon Express Netherlands",
+      "source_root_url": "https://www.nipponexpress.com/nl/",
+      "source_host": "www.nipponexpress.com",
+      "source_categories": [
+        "global_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B-",
+      "quality_tier": "B-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 29,
+        "decision_doc_quality_tier_raw": "B_MINUS",
+        "decision_doc_category": "global_logistics_operator",
+        "decision_doc_note": "Global forwarding/logistics Netherlands surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 61,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_nippon_express_surface_01",
+          "seed_surface_name": "Nippon Express Netherlands seed surface 1",
+          "source_family_code": "nl_nippon_express",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B-",
+          "quality_tier": "B-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 61,
+            "decision_doc_source_code": "nl_nippon_express",
+            "surface_slug": "https_www_nipponexpress_com_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 61,
+              "url": "https://www.nipponexpress.com/nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 62,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_nippon_express_surface_02",
+          "seed_surface_name": "Nippon Express Netherlands seed surface 2",
+          "source_family_code": "nl_nippon_express",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B-",
+          "quality_tier": "B-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 62,
+            "decision_doc_source_code": "nl_nippon_express",
+            "surface_slug": "https_www_nipponexpress_com_nl_services",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 62,
+              "url": "https://www.nipponexpress.com/nl/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 30,
+      "source_family_code": "nl_bollore_logistics",
+      "source_family_name": "Bolloré Logistics Netherlands",
+      "source_name": "Bolloré Logistics Netherlands",
+      "source_root_url": "https://www.bollore-logistics.com/en/country/netherlands/",
+      "source_host": "www.bollore-logistics.com",
+      "source_categories": [
+        "global_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B-",
+      "quality_tier": "B-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 30,
+        "decision_doc_quality_tier_raw": "B_MINUS",
+        "decision_doc_category": "global_logistics_operator",
+        "decision_doc_note": "Global logistics Netherlands surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 63,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_bollore_logistics_surface_01",
+          "seed_surface_name": "Bolloré Logistics Netherlands seed surface 1",
+          "source_family_code": "nl_bollore_logistics",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B-",
+          "quality_tier": "B-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 63,
+            "decision_doc_source_code": "nl_bollore_logistics",
+            "surface_slug": "https_www_bollore_logistics_com_en_country_netherlands",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 63,
+              "url": "https://www.bollore-logistics.com/en/country/netherlands/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 64,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_bollore_logistics_surface_02",
+          "seed_surface_name": "Bolloré Logistics Netherlands seed surface 2",
+          "source_family_code": "nl_bollore_logistics",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B-",
+          "quality_tier": "B-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 64,
+            "decision_doc_source_code": "nl_bollore_logistics",
+            "surface_slug": "https_www_bollore_logistics_com_en_services",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 64,
+              "url": "https://www.bollore-logistics.com/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 31,
+      "source_family_code": "nl_bleckmann",
+      "source_family_name": "Bleckmann",
+      "source_name": "Bleckmann",
+      "source_root_url": "https://www.bleckmann.com/",
+      "source_host": "www.bleckmann.com",
+      "source_categories": [
+        "contract_logistics_ecommerce"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 31,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "contract_logistics_ecommerce",
+        "decision_doc_note": "Contract logistics / fashion / e-commerce logistics candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 65,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_bleckmann_surface_01",
+          "seed_surface_name": "Bleckmann seed surface 1",
+          "source_family_code": "nl_bleckmann",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 65,
+            "decision_doc_source_code": "nl_bleckmann",
+            "surface_slug": "https_www_bleckmann_com",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 65,
+              "url": "https://www.bleckmann.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 66,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_bleckmann_surface_02",
+          "seed_surface_name": "Bleckmann seed surface 2",
+          "source_family_code": "nl_bleckmann",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 66,
+            "decision_doc_source_code": "nl_bleckmann",
+            "surface_slug": "https_www_bleckmann_com_solutions",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 66,
+              "url": "https://www.bleckmann.com/solutions/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 32,
+      "source_family_code": "nl_broekman_logistics",
+      "source_family_name": "Broekman Logistics",
+      "source_name": "Broekman Logistics",
+      "source_root_url": "https://www.broekmanlogistics.com/",
+      "source_host": "www.broekmanlogistics.com",
+      "source_categories": [
+        "logistics_terminal_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 32,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "logistics_terminal_operator",
+        "decision_doc_note": "Dutch logistics and terminal services candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 67,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_broekman_logistics_surface_01",
+          "seed_surface_name": "Broekman Logistics seed surface 1",
+          "source_family_code": "nl_broekman_logistics",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 67,
+            "decision_doc_source_code": "nl_broekman_logistics",
+            "surface_slug": "https_www_broekmanlogistics_com",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 67,
+              "url": "https://www.broekmanlogistics.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 68,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_broekman_logistics_surface_02",
+          "seed_surface_name": "Broekman Logistics seed surface 2",
+          "source_family_code": "nl_broekman_logistics",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 68,
+            "decision_doc_source_code": "nl_broekman_logistics",
+            "surface_slug": "https_www_broekmanlogistics_com_services",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 68,
+              "url": "https://www.broekmanlogistics.com/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 33,
+      "source_family_code": "nl_hartman_expedition",
+      "source_family_name": "Hartman Expeditie",
+      "source_name": "Hartman Expeditie",
+      "source_root_url": "https://www.hartmanexpeditie.nl/",
+      "source_host": "www.hartmanexpeditie.nl",
+      "source_categories": [
+        "freight_forwarder"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 33,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "freight_forwarder",
+        "decision_doc_note": "Commercial freight forwarding candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 69,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_hartman_expedition_surface_01",
+          "seed_surface_name": "Hartman Expeditie seed surface 1",
+          "source_family_code": "nl_hartman_expedition",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 69,
+            "decision_doc_source_code": "nl_hartman_expedition",
+            "surface_slug": "https_www_hartmanexpeditie_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 69,
+              "url": "https://www.hartmanexpeditie.nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 70,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_hartman_expedition_surface_02",
+          "seed_surface_name": "Hartman Expeditie seed surface 2",
+          "source_family_code": "nl_hartman_expedition",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 70,
+            "decision_doc_source_code": "nl_hartman_expedition",
+            "surface_slug": "https_www_hartmanexpeditie_nl_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 70,
+              "url": "https://www.hartmanexpeditie.nl/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 34,
+      "source_family_code": "nl_rotra",
+      "source_family_name": "Rotra",
+      "source_name": "Rotra",
+      "source_root_url": "https://www.rotra.eu/",
+      "source_host": "www.rotra.eu",
+      "source_categories": [
+        "freight_forwarding_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 34,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "freight_forwarding_logistics_operator",
+        "decision_doc_note": "Commercial forwarding/logistics candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 71,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_rotra_surface_01",
+          "seed_surface_name": "Rotra seed surface 1",
+          "source_family_code": "nl_rotra",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 71,
+            "decision_doc_source_code": "nl_rotra",
+            "surface_slug": "https_www_rotra_eu",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 71,
+              "url": "https://www.rotra.eu/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 72,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_rotra_surface_02",
+          "seed_surface_name": "Rotra seed surface 2",
+          "source_family_code": "nl_rotra",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 72,
+            "decision_doc_source_code": "nl_rotra",
+            "surface_slug": "https_www_rotra_eu_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 72,
+              "url": "https://www.rotra.eu/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 35,
+      "source_family_code": "nl_neele_vat",
+      "source_family_name": "Neele-Vat Logistics",
+      "source_name": "Neele-Vat Logistics",
+      "source_root_url": "https://www.neelevat.com/",
+      "source_host": "www.neelevat.com",
+      "source_categories": [
+        "freight_forwarding_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 35,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "freight_forwarding_logistics_operator",
+        "decision_doc_note": "Dutch logistics and forwarding operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 73,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_neele_vat_surface_01",
+          "seed_surface_name": "Neele-Vat Logistics seed surface 1",
+          "source_family_code": "nl_neele_vat",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 73,
+            "decision_doc_source_code": "nl_neele_vat",
+            "surface_slug": "https_www_neelevat_com",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 73,
+              "url": "https://www.neelevat.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 74,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_neele_vat_surface_02",
+          "seed_surface_name": "Neele-Vat Logistics seed surface 2",
+          "source_family_code": "nl_neele_vat",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 74,
+            "decision_doc_source_code": "nl_neele_vat",
+            "surface_slug": "https_www_neelevat_com_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 74,
+              "url": "https://www.neelevat.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 36,
+      "source_family_code": "nl_dj_middelkoop",
+      "source_family_name": "D.J. Middelkoop",
+      "source_name": "D.J. Middelkoop",
+      "source_root_url": "https://www.djmiddelkoop.nl/",
+      "source_host": "www.djmiddelkoop.nl",
+      "source_categories": [
+        "transport_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B-",
+      "quality_tier": "B-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 36,
+        "decision_doc_quality_tier_raw": "B_MINUS",
+        "decision_doc_category": "transport_operator",
+        "decision_doc_note": "Transport operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 75,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_dj_middelkoop_surface_01",
+          "seed_surface_name": "D.J. Middelkoop seed surface 1",
+          "source_family_code": "nl_dj_middelkoop",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B-",
+          "quality_tier": "B-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 75,
+            "decision_doc_source_code": "nl_dj_middelkoop",
+            "surface_slug": "https_www_djmiddelkoop_nl",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 75,
+              "url": "https://www.djmiddelkoop.nl/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 76,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_dj_middelkoop_surface_02",
+          "seed_surface_name": "D.J. Middelkoop seed surface 2",
+          "source_family_code": "nl_dj_middelkoop",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B-",
+          "quality_tier": "B-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 76,
+            "decision_doc_source_code": "nl_dj_middelkoop",
+            "surface_slug": "https_www_djmiddelkoop_nl_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 76,
+              "url": "https://www.djmiddelkoop.nl/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 37,
+      "source_family_code": "nl_van_der_helm",
+      "source_family_name": "Van der Helm Logistics",
+      "source_name": "Van der Helm Logistics",
+      "source_root_url": "https://www.vanderhelm.com/",
+      "source_host": "www.vanderhelm.com",
+      "source_categories": [
+        "logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 37,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "logistics_operator",
+        "decision_doc_note": "Dutch logistics operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 77,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_van_der_helm_surface_01",
+          "seed_surface_name": "Van der Helm Logistics seed surface 1",
+          "source_family_code": "nl_van_der_helm",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 77,
+            "decision_doc_source_code": "nl_van_der_helm",
+            "surface_slug": "https_www_vanderhelm_com",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 77,
+              "url": "https://www.vanderhelm.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 78,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_van_der_helm_surface_02",
+          "seed_surface_name": "Van der Helm Logistics seed surface 2",
+          "source_family_code": "nl_van_der_helm",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 78,
+            "decision_doc_source_code": "nl_van_der_helm",
+            "surface_slug": "https_www_vanderhelm_com_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 78,
+              "url": "https://www.vanderhelm.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 38,
+      "source_family_code": "nl_jordex",
+      "source_family_name": "Jordex",
+      "source_name": "Jordex",
+      "source_root_url": "https://www.jordex.com/",
+      "source_host": "www.jordex.com",
+      "source_categories": [
+        "freight_forwarding_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 38,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "freight_forwarding_logistics_operator",
+        "decision_doc_note": "Dutch forwarding/logistics candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 79,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_jordex_surface_01",
+          "seed_surface_name": "Jordex seed surface 1",
+          "source_family_code": "nl_jordex",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 79,
+            "decision_doc_source_code": "nl_jordex",
+            "surface_slug": "https_www_jordex_com",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 79,
+              "url": "https://www.jordex.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 80,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_jordex_surface_02",
+          "seed_surface_name": "Jordex seed surface 2",
+          "source_family_code": "nl_jordex",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 80,
+            "decision_doc_source_code": "nl_jordex",
+            "surface_slug": "https_www_jordex_com_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 80,
+              "url": "https://www.jordex.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 39,
+      "source_family_code": "nl_hoyer_netherlands",
+      "source_family_name": "HOYER Netherlands",
+      "source_name": "HOYER Netherlands",
+      "source_root_url": "https://www.hoyer-group.com/en/",
+      "source_host": "www.hoyer-group.com",
+      "source_categories": [
+        "bulk_liquid_logistics_operator"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 39,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "bulk_liquid_logistics_operator",
+        "decision_doc_note": "Bulk/liquid logistics Netherlands surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 81,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_hoyer_netherlands_surface_01",
+          "seed_surface_name": "HOYER Netherlands seed surface 1",
+          "source_family_code": "nl_hoyer_netherlands",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 81,
+            "decision_doc_source_code": "nl_hoyer_netherlands",
+            "surface_slug": "https_www_hoyer_group_com_en",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 81,
+              "url": "https://www.hoyer-group.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 82,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_hoyer_netherlands_surface_02",
+          "seed_surface_name": "HOYER Netherlands seed surface 2",
+          "source_family_code": "nl_hoyer_netherlands",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 82,
+            "decision_doc_source_code": "nl_hoyer_netherlands",
+            "surface_slug": "https_www_hoyer_group_com_en_services",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 82,
+              "url": "https://www.hoyer-group.com/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 40,
+      "source_family_code": "nl_clutch_forwarders",
+      "source_family_name": "Clutch Netherlands freight forwarders",
+      "source_name": "Clutch Netherlands freight forwarders",
+      "source_root_url": "https://clutch.co/nl/logistics/freight-forwarders",
+      "source_host": "clutch.co",
+      "source_categories": [
+        "commercial_service_directory"
+      ],
+      "language_code": "nl",
+      "language_name": "Dutch",
+      "source_quality_tier": "B-",
+      "quality_tier": "B-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 40,
+        "decision_doc_quality_tier_raw": "B_MINUS",
+        "decision_doc_category": "commercial_service_directory",
+        "decision_doc_note": "Commercial service directory fallback; keep below official/member directories.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe",
+        "directory_first_policy_applied": false
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 83,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "nl_clutch_forwarders_surface_01",
+          "seed_surface_name": "Clutch Netherlands freight forwarders seed surface 1",
+          "source_family_code": "nl_clutch_forwarders",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B-",
+          "quality_tier": "B-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 83,
+            "decision_doc_source_code": "nl_clutch_forwarders",
+            "surface_slug": "https_clutch_co_nl_logistics_freight_forwarders",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 83,
+              "url": "https://clutch.co/nl/logistics/freight-forwarders",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 84,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "nl_clutch_forwarders_surface_02",
+          "seed_surface_name": "Clutch Netherlands freight forwarders seed surface 2",
+          "source_family_code": "nl_clutch_forwarders",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B-",
+          "quality_tier": "B-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 84,
+            "decision_doc_source_code": "nl_clutch_forwarders",
+            "surface_slug": "https_clutch_co_nl_logistics",
+            "url_validation_scope": "structural_only_no_live_probe",
+            "directory_first_policy_applied": false
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 84,
+              "url": "https://clutch.co/nl/logistics",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
