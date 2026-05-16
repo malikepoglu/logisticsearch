@@ -635,7 +635,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 
 ### Source-seed policy and decision records
 
-- [`TOPIC_CRAWLER_CORE_SOURCE_SEED_LATEST_SCHEMA_AND_LANGUAGE_ROLLOUT_STANDARD_2026_05_13.md`](TOPIC_CRAWLER_CORE_SOURCE_SEED_LATEST_SCHEMA_AND_LANGUAGE_ROLLOUT_STANDARD_2026_05_13.md)
+- [`TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md`](TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md`](TOPIC_CRAWLER_CORE_SOURCE_FAMILY_DAILY_BUDGET_AND_COUNTRY_SEED_POLICY_2026_05_11.md)
 - [`TOPIC_CRAWLER_CORE_ENGLISH_SOURCE_SEED_SUPER_EXPANSION_DECISION_2026_05_13.md`](TOPIC_CRAWLER_CORE_ENGLISH_SOURCE_SEED_SUPER_EXPANSION_DECISION_2026_05_13.md)
 - [`TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_BACKFILL_DECISION_2026_05_13.md`](TOPIC_CRAWLER_CORE_TURKISH_SOURCE_SEED_BACKFILL_DECISION_2026_05_13.md)
@@ -660,13 +660,13 @@ Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-rank
 - Gate / Kapı: `R326_NL_SOURCE_SEED_CATALOG_POST_PUSH_SEAL_READONLY`
 - Sealed head / Mühürlü HEAD: `ee845b1d1efe91dea2ad6bc2f2449f481b842bf7`
 - Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,zh,fr,es,it,pt,nl`
-- Next language / Sıradaki dil: pending separate read-only next-language decision gate
+- Next language / Sıradaki dil: pending after stale-link patch seal
 - Next catalog path / Sıradaki katalog yolu: pending
-- Next decision gate / Sıradaki karar kapısı: `R331_NEXT_LANGUAGE_ROLLOUT_DECISION_READONLY`
-- R331 allowed mode / R331 izinli mod: read-only next-language decision only.
-- R331 forbidden surfaces / R331 yasak yüzeyler: no file write, no git add/commit/push, no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe.
+- Next decision gate / Sıradaki karar kapısı: `R333_SOURCE_SEED_STALE_LINK_PATCH_LOCAL_ONLY`
+- R333 allowed mode / R333 izinli mod: local-only stale-link patch only.
+- R333 forbidden surfaces / R333 yasak yüzeyler: no git add/commit/push, no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe.
 - Dutch seal note / Hollandaca mühür notu: Dutch decision doc and catalog are now sealed on Ubuntu Desktop and GitHub as candidate manifests only; they are not live crawler input.
-- Follow-up after Dutch / Hollandaca sonrası takip: run a separate repo-wide GitHub/docs stale-link audit and controlled patch line for outdated source-seed standard links and references.
+- Follow-up after Dutch / Hollandaca sonrası takip: run and seal the repo-wide GitHub/docs stale-link patch line (`R333_SOURCE_SEED_STALE_LINK_PATCH_LOCAL_ONLY` -> `R334_SOURCE_SEED_STALE_LINK_PATCH_AUDIT_READONLY` -> `R335_SOURCE_SEED_STALE_LINK_PATCH_COMMIT_PUSH_GATE` -> `R336_SOURCE_SEED_STALE_LINK_PATCH_POST_PUSH_SEAL_READONLY`), then continue with `R337_NEXT_LANGUAGE_ROLLOUT_DECISION_READONLY`.
 
 
 ## Source-seed canonical startpoint schema standard

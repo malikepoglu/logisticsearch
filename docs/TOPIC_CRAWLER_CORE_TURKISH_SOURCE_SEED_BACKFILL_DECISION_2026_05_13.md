@@ -10,7 +10,7 @@ The goal is to migrate the current Turkish catalog to the latest `source_familie
 
 Reference standard document:
 
-- `docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_LATEST_SCHEMA_AND_LANGUAGE_ROLLOUT_STANDARD_2026_05_13.md`
+- `docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md`
 - Standard doc sha256: `986b76d80694296019f1392811a2fb9e7fb4fa360d36577af69458a2069bcf90`
 - Current standard commit: `d63007236de62f45a9314b27b91ad5a7c2ad87fe`
 - Current README index commit: `92931635911c49ba687ad18396bfb0fd5143705b`

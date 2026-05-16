@@ -6,7 +6,7 @@
 - Scope: local-only German backfill decision document.
 - Language: German (`de`).
 - Target schema: `source_families_v2`.
-- Standard reference: `TOPIC_CRAWLER_CORE_SOURCE_SEED_LATEST_SCHEMA_AND_LANGUAGE_ROLLOUT_STANDARD_2026_05_13.md`.
+- Standard reference: `TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md`.
 - Baseline catalog: `makpi51crawler/catalog/startpoints/de/german_source_families_v2.json`.
 - This is a decision document only. It does not rewrite the German catalog.
 - No DB insert, no live frontier activation, no crawler start.

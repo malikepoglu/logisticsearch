@@ -12,7 +12,7 @@ EN: This document records the Arabic (`ar`) source-seed catalog normalization an
 | previous research gate | SOURCE_SEED_R234_ARABIC_LATEST_SCHEMA_BACKFILL_RESEARCH_PLAN_READONLY |
 | language | Arabic (`ar`) |
 | target schema | `source_families_v2` |
-| standard reference | `docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_LATEST_SCHEMA_AND_LANGUAGE_ROLLOUT_STANDARD_2026_05_13.md` |
+| standard reference | `docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md` |
 | standard sha256 | `986b76d80694296019f1392811a2fb9e7fb4fa360d36577af69458a2069bcf90` |
 | runtime activation policy | `pi51c_live_probe_required_before_db_or_frontier_insert` |
 | pi51c sync allowed now | false |
