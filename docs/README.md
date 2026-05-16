@@ -632,6 +632,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Italian (`it`) | [`italian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/it/italian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Portuguese (`pt`) | [`portuguese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/pt/portuguese_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Dutch (`nl`) | [`dutch_source_families_v2.json`](../makpi51crawler/catalog/startpoints/nl/dutch_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
+| Russian (`ru`) | [`russian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ru/russian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 
 ### Source-seed policy and decision records
 
@@ -649,6 +650,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_ITALIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_ITALIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_PORTUGUESE_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_PORTUGUESE_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
+- [`TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 
 ### Boundary rule
 
@@ -656,18 +658,14 @@ Crawler_Core stores discovered page links only as raw link evidence.
 Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-ranking. Desktop_Import on Ubuntu Desktop converts pre-ranking into real ranking/final rank.
 
 ## Source-seed next-language rollout decision / Sıradaki dil rollout karar mühürü
-
-- Gate / Kapı: `R326_NL_SOURCE_SEED_CATALOG_POST_PUSH_SEAL_READONLY`
-- Sealed head / Mühürlü HEAD: `ee845b1d1efe91dea2ad6bc2f2449f481b842bf7`
+- Gate / Kapı: `R351F1_RU_GITHUB_MAIN_DOCS_INDEX_REPAIR_LOCAL_ONLY`
+- Sealed head before repair / Onarım öncesi mühürlü HEAD: `d31982d7d33502b2be58884c454d7911c311c111`
 - Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,zh,fr,es,it,pt,nl,ru`
-- Next language / Sıradaki dil: pending after Russian README index seal
-- Next catalog path / Sıradaki katalog yolu: pending
-- Next decision gate / Sıradaki karar kapısı: `R333_SOURCE_SEED_STALE_LINK_PATCH_LOCAL_ONLY`
-- R333 allowed mode / R333 izinli mod: local-only stale-link patch only.
-- R333 forbidden surfaces / R333 yasak yüzeyler: no git add/commit/push, no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe.
-- Dutch seal note / Hollandaca mühür notu: Dutch decision doc and catalog are now sealed on Ubuntu Desktop and GitHub as candidate manifests only; they are not live crawler input.
-- Follow-up after Dutch / Hollandaca sonrası takip: run and seal the repo-wide GitHub/docs stale-link patch line (`R333_SOURCE_SEED_STALE_LINK_PATCH_LOCAL_ONLY` -> `R334_SOURCE_SEED_STALE_LINK_PATCH_AUDIT_READONLY` -> `R335_SOURCE_SEED_STALE_LINK_PATCH_COMMIT_PUSH_GATE` -> `R336_SOURCE_SEED_STALE_LINK_PATCH_POST_PUSH_SEAL_READONLY`), then continue with `R351_NEXT_LANGUAGE_ROLLOUT_DECISION_READONLY`.
-
+- Current priority / Mevcut öncelik: finish Russian GitHub/docs index repair before pi51c sync.
+- Next language / Sıradaki dil: pending until Russian GitHub/docs index repair and 3-system sync are sealed.
+- Next catalog path / Sıradaki katalog yolu: pending.
+- Next decision gate / Sıradaki karar kapısı: `R351F2_RU_GITHUB_MAIN_DOCS_INDEX_REPAIR_AUDIT_READONLY`
+- Forbidden surfaces / Yasak yüzeyler: no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe before Russian docs repair is sealed.
 
 ## Source-seed canonical startpoint schema standard
 
@@ -755,22 +753,3 @@ Documentation rule:
 - Canonical repository path: `docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md`
 - Mandatory first operation for every language: read the GitHub raw version of this rule document before startpoint planning, writing, audit, commit, push, sync, or activation.
 <!-- SOURCE_SEED_CANONICAL_RULES_READ_FIRST_END -->
-
-<!-- SOURCE_SEED_RUSSIAN_INDEX_2026_05_16_BEGIN -->
-### Russian (`ru`) source-seed catalog index / Rusça source-seed katalog indeksi
-
-- Decision doc / Karar dokümanı: `docs/TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`
-- Decision doc SHA-256: `51ffaaf15061ebf8b341df40895d54b995887f3988a49cb25299dd3b7c74e3d0`
-- Decision doc size: `187` lines / `27142` bytes
-- Catalog JSON / Katalog JSON: `makpi51crawler/catalog/startpoints/ru/russian_source_families_v2.json`
-- Catalog JSON SHA-256: `30e36bf47f60d71fc1a5c5fa2db49f7d62c1f37c60897d7692dd5abadef60cbb`
-- Catalog JSON size: `3267` lines / `139849` bytes
-- Metrics / Metrikler: `40` source families, `84` seed surfaces, `84` seed URLs, `84` unique HTTPS seed URLs, `0` duplicate URLs, `0` non-HTTPS URLs
-- Quality counts / Kalite sayımları: `A=1`, `A_MINUS=11`, `A_PLUS=1`, `B=16`, `B_PLUS=11`
-- Decision counts / Karar sayımları: `ACCEPT_REVIEW=40`
-- Runtime policy / Çalışma politikası: `pi51c_live_probe_required_before_db_or_frontier_insert`
-- Safety / Güvenlik: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `candidate_only_not_live`
-- No DB insert, no frontier activation, no seed URL fetch/live probe, no pi51c live activation.
-- Gate trail / Gate hattı: `R338` baseline -> `R339` decision doc local-only -> `R340` decision doc audit -> `R341B` decision doc commit/push -> `R342` decision doc seal -> `R343` catalog local-only -> `R344` catalog audit -> `R345` catalog commit/push -> `R346` catalog post-push seal -> `R347` README index local-only.
-- Next gates / Sonraki gate'ler: `R348_README_INDEX_RUSSIAN_CATALOG_AUDIT_READONLY` -> `R349_README_INDEX_RUSSIAN_CATALOG_COMMIT_PUSH_GATE` -> `R350_README_INDEX_RUSSIAN_CATALOG_POST_PUSH_SEAL_READONLY` -> `R351_NEXT_LANGUAGE_ROLLOUT_DECISION_READONLY`.
-<!-- SOURCE_SEED_RUSSIAN_INDEX_2026_05_16_END -->
