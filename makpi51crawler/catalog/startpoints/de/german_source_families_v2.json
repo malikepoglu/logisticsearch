@@ -101,13 +101,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.dslv.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.dslv.org/",
-              "canonical_url": "https://www.dslv.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 1,
@@ -188,13 +191,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bgl-ev.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bgl-ev.de/",
-              "canonical_url": "https://www.bgl-ev.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 2,
@@ -238,13 +244,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bgl-ev.de/unsere-verbandsstruktur/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bgl-ev.de/unsere-verbandsstruktur/",
-              "canonical_url": "https://www.bgl-ev.de/unsere-verbandsstruktur/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 3,
@@ -325,13 +334,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hafen-hamburg.de/de/hafenbranchenbuch/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hafen-hamburg.de/de/hafenbranchenbuch/",
-              "canonical_url": "https://www.hafen-hamburg.de/de/hafenbranchenbuch/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 4,
@@ -413,13 +425,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.frankfurt-cargohub.com/en.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.frankfurt-cargohub.com/en.html",
-              "canonical_url": "https://www.frankfurt-cargohub.com/en.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 5,
@@ -500,13 +515,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aircargocommunity.com/en/standort/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aircargocommunity.com/en/standort/",
-              "canonical_url": "https://www.aircargocommunity.com/en/standort/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 6,
@@ -588,13 +606,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://die-gueterbahnen.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://die-gueterbahnen.com/",
-              "canonical_url": "https://die-gueterbahnen.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 7,
@@ -675,13 +696,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.vdv.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.vdv.de/",
-              "canonical_url": "https://www.vdv.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 8,
@@ -763,13 +787,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bsk-ffm.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bsk-ffm.de/",
-              "canonical_url": "https://www.bsk-ffm.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 9,
@@ -851,13 +878,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic.de/",
-              "canonical_url": "https://transportlogistic.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 10,
@@ -938,13 +968,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.wlw.de/de/suche/logistik/deutschland",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.wlw.de/de/suche/logistik/deutschland",
-              "canonical_url": "https://www.wlw.de/de/suche/logistik/deutschland",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 11,
@@ -988,13 +1021,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.wlw.de/de/suche/speditionen/deutschland",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.wlw.de/de/suche/speditionen/deutschland",
-              "canonical_url": "https://www.wlw.de/de/suche/speditionen/deutschland",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 12,
@@ -1035,13 +1071,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.wlw.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.wlw.de/",
-              "canonical_url": "https://www.wlw.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 13,
@@ -1123,13 +1162,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.kompass.com/z/de/a/transportation-and-logistics-services/75/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.kompass.com/z/de/a/transportation-and-logistics-services/75/",
-              "canonical_url": "https://www.kompass.com/z/de/a/transportation-and-logistics-services/75/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 14,
@@ -1170,13 +1212,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.kompass.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.kompass.com/",
-              "canonical_url": "https://www.kompass.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 15,
@@ -1257,13 +1302,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cDE/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cDE/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cDE/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 16,
@@ -1307,13 +1355,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cDE/s4.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cDE/s4.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cDE/s4.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 17,
@@ -1354,13 +1405,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/",
-              "canonical_url": "https://www.freightnet.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 18,
@@ -1442,13 +1496,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://mobile.cargoyellowpages.com/germany/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://mobile.cargoyellowpages.com/germany/",
-              "canonical_url": "https://mobile.cargoyellowpages.com/germany/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 19,
@@ -1492,13 +1549,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://mobile.cargoyellowpages.com/germany/frankfurt-am-main-airport.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://mobile.cargoyellowpages.com/germany/frankfurt-am-main-airport.html",
-              "canonical_url": "https://mobile.cargoyellowpages.com/germany/frankfurt-am-main-airport.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 20,
@@ -1539,13 +1599,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cargoyellowpages.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cargoyellowpages.com/",
-              "canonical_url": "https://www.cargoyellowpages.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 21,
@@ -1626,13 +1689,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.gelbeseiten.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.gelbeseiten.de/",
-              "canonical_url": "https://www.gelbeseiten.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 22,
@@ -1713,13 +1779,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.europages.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.europages.de/",
-              "canonical_url": "https://www.europages.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 23,
@@ -1800,13 +1869,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hamburg.de/branchenbuch/hamburg/hafencity/10239793/n0/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hamburg.de/branchenbuch/hamburg/hafencity/10239793/n0/",
-              "canonical_url": "https://www.hamburg.de/branchenbuch/hamburg/hafencity/10239793/n0/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 24,
@@ -1847,13 +1919,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hamburg.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hamburg.de/",
-              "canonical_url": "https://www.hamburg.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 25,
@@ -1934,13 +2009,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://de.railmarket.com/eu/germany/logistics-companies",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://de.railmarket.com/eu/germany/logistics-companies",
-              "canonical_url": "https://de.railmarket.com/eu/germany/logistics-companies",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 26,
@@ -1981,13 +2059,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://de.railmarket.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://de.railmarket.com/",
-              "canonical_url": "https://de.railmarket.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 27,
@@ -2069,13 +2150,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bvl.de/firmenmitglieder",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bvl.de/firmenmitglieder",
-              "canonical_url": "https://www.bvl.de/firmenmitglieder",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 28,
@@ -2157,13 +2241,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.firmendatenbanken.de/firmen/liste/logistik-unternehmen/1.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.firmendatenbanken.de/firmen/liste/logistik-unternehmen/1.html",
-              "canonical_url": "https://www.firmendatenbanken.de/firmen/liste/logistik-unternehmen/1.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 29,
@@ -2204,13 +2291,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.firmendatenbanken.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.firmendatenbanken.de/",
-              "canonical_url": "https://www.firmendatenbanken.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 30,
@@ -2292,13 +2382,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.balm.bund.de/DE/Themen/Marktzugang/marktzugang_node.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.balm.bund.de/DE/Themen/Marktzugang/marktzugang_node.html",
-              "canonical_url": "https://www.balm.bund.de/DE/Themen/Marktzugang/marktzugang_node.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 31,
@@ -2339,13 +2432,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.balm.bund.de/DE/Themen/Unternehmen/unternehmen_node.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.balm.bund.de/DE/Themen/Unternehmen/unternehmen_node.html",
-              "canonical_url": "https://www.balm.bund.de/DE/Themen/Unternehmen/unternehmen_node.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 32,
@@ -2425,13 +2521,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.dslv.org/de/mitglieder",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.dslv.org/de/mitglieder",
-              "canonical_url": "https://www.dslv.org/de/mitglieder",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 33,
@@ -2472,13 +2571,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.dslv.org/de/mitgliedschaft",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.dslv.org/de/mitgliedschaft",
-              "canonical_url": "https://www.dslv.org/de/mitgliedschaft",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 34,
@@ -2558,13 +2660,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bvl.de/service/mitglieder",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bvl.de/service/mitglieder",
-              "canonical_url": "https://www.bvl.de/service/mitglieder",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 35,
@@ -2605,13 +2710,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bvl.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bvl.de/",
-              "canonical_url": "https://www.bvl.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 36,
@@ -2691,13 +2799,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://biek.de/mitglieder.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://biek.de/mitglieder.html",
-              "canonical_url": "https://biek.de/mitglieder.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 37,
@@ -2738,13 +2849,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://biek.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://biek.de/",
-              "canonical_url": "https://biek.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 38,
@@ -2824,13 +2938,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.amoe.de/umzugsspediteur-suchen/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.amoe.de/umzugsspediteur-suchen/",
-              "canonical_url": "https://www.amoe.de/umzugsspediteur-suchen/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 39,
@@ -2910,13 +3027,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bgl-ev.de/web/der-bgl/mitglieder.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bgl-ev.de/web/der-bgl/mitglieder.htm",
-              "canonical_url": "https://www.bgl-ev.de/web/der-bgl/mitglieder.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 40,
@@ -2996,13 +3116,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bwvl.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bwvl.de/",
-              "canonical_url": "https://www.bwvl.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 41,
@@ -3043,13 +3166,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bwvl.de/mitglieder/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bwvl.de/mitglieder/",
-              "canonical_url": "https://www.bwvl.de/mitglieder/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 42,
@@ -3129,13 +3255,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hafen-hamburg.de/en/companies/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hafen-hamburg.de/en/companies/",
-              "canonical_url": "https://www.hafen-hamburg.de/en/companies/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 43,
@@ -3176,13 +3305,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hafen-hamburg.de/de/unternehmen/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hafen-hamburg.de/de/unternehmen/",
-              "canonical_url": "https://www.hafen-hamburg.de/de/unternehmen/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 44,
@@ -3223,13 +3355,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hafen-hamburg.de/de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hafen-hamburg.de/de/",
-              "canonical_url": "https://www.hafen-hamburg.de/de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 45,
@@ -3309,13 +3444,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hamburg-logistik.net/mitglieder/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hamburg-logistik.net/mitglieder/",
-              "canonical_url": "https://www.hamburg-logistik.net/mitglieder/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 46,
@@ -3356,13 +3494,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hamburg-logistik.net/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hamburg-logistik.net/",
-              "canonical_url": "https://www.hamburg-logistik.net/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 47,
@@ -3442,13 +3583,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.fra-fr8.com/members",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.fra-fr8.com/members",
-              "canonical_url": "https://www.fra-fr8.com/members",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 48,
@@ -3489,13 +3633,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.fra-fr8.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.fra-fr8.com/",
-              "canonical_url": "https://www.fra-fr8.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 49,
@@ -3575,13 +3722,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.munich-airport.de/cargo",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.munich-airport.de/cargo",
-              "canonical_url": "https://www.munich-airport.de/cargo",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 50,
@@ -3622,13 +3772,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.munich-airport.de/air-cargo-772051",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.munich-airport.de/air-cargo-772051",
-              "canonical_url": "https://www.munich-airport.de/air-cargo-772051",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 51,
@@ -3708,13 +3861,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.dus.com/en/businesspartner/air-cargo",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.dus.com/en/businesspartner/air-cargo",
-              "canonical_url": "https://www.dus.com/en/businesspartner/air-cargo",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 52,
@@ -3755,13 +3911,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.dus.com/de-de/businesspartner/air-cargo",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.dus.com/de-de/businesspartner/air-cargo",
-              "canonical_url": "https://www.dus.com/de-de/businesspartner/air-cargo",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 53,
@@ -3841,13 +4000,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.duisport.de/logistik/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.duisport.de/logistik/",
-              "canonical_url": "https://www.duisport.de/logistik/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 54,
@@ -3888,13 +4050,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.duisport.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.duisport.de/",
-              "canonical_url": "https://www.duisport.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 55,
@@ -3974,13 +4139,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://bremenports.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://bremenports.de/",
-              "canonical_url": "https://bremenports.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 56,
@@ -4021,13 +4189,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://bremenports.de/unternehmen/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://bremenports.de/unternehmen/",
-              "canonical_url": "https://bremenports.de/unternehmen/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 57,
@@ -4107,13 +4278,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic.de/en/trade-fair/exhibitors-products/exhibitor-directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic.de/en/trade-fair/exhibitors-products/exhibitor-directory/",
-              "canonical_url": "https://transportlogistic.de/en/trade-fair/exhibitors-products/exhibitor-directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 58,
@@ -4154,13 +4328,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://exhibitors.transportlogistic.de/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://exhibitors.transportlogistic.de/en/",
-              "canonical_url": "https://exhibitors.transportlogistic.de/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 59,
@@ -4201,13 +4378,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic.de/de/messe/aussteller-produkte/ausstellerverzeichnis/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic.de/de/messe/aussteller-produkte/ausstellerverzeichnis/",
-              "canonical_url": "https://transportlogistic.de/de/messe/aussteller-produkte/ausstellerverzeichnis/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 60,
@@ -4248,13 +4428,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic.de/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic.de/en/",
-              "canonical_url": "https://transportlogistic.de/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 61,
@@ -4295,13 +4478,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic.de/de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic.de/de/",
-              "canonical_url": "https://transportlogistic.de/de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 62,
@@ -4381,13 +4567,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logimat-messe.de/en/exhibitor-directory",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logimat-messe.de/en/exhibitor-directory",
-              "canonical_url": "https://www.logimat-messe.de/en/exhibitor-directory",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 63,
@@ -4428,13 +4617,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logimat-messe.de/de/ausstellerverzeichnis",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logimat-messe.de/de/ausstellerverzeichnis",
-              "canonical_url": "https://www.logimat-messe.de/de/ausstellerverzeichnis",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 64,
@@ -4475,13 +4667,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logimat-messe.de/en",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logimat-messe.de/en",
-              "canonical_url": "https://www.logimat-messe.de/en",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 65,
@@ -4522,13 +4717,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logimat-messe.de/de",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logimat-messe.de/de",
-              "canonical_url": "https://www.logimat-messe.de/de",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 66,
@@ -4569,13 +4767,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logimat-messe.de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logimat-messe.de/",
-              "canonical_url": "https://www.logimat-messe.de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 67,
@@ -4655,13 +4856,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.iaa-transportation.com/en/exhibitors-products/exhibitor-directory",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.iaa-transportation.com/en/exhibitors-products/exhibitor-directory",
-              "canonical_url": "https://www.iaa-transportation.com/en/exhibitors-products/exhibitor-directory",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 68,
@@ -4702,13 +4906,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.iaa-transportation.com/de/aussteller-produkte/ausstellerverzeichnis",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.iaa-transportation.com/de/aussteller-produkte/ausstellerverzeichnis",
-              "canonical_url": "https://www.iaa-transportation.com/de/aussteller-produkte/ausstellerverzeichnis",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 69,
@@ -4749,13 +4956,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.iaa-transportation.com/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.iaa-transportation.com/en/",
-              "canonical_url": "https://www.iaa-transportation.com/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 70,
@@ -4796,13 +5006,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.iaa-transportation.com/de/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.iaa-transportation.com/de/",
-              "canonical_url": "https://www.iaa-transportation.com/de/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 71,
@@ -4882,13 +5095,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://de.kompass.com/a/transport-logistik/75/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://de.kompass.com/a/transport-logistik/75/",
-              "canonical_url": "https://de.kompass.com/a/transport-logistik/75/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 72,
@@ -4929,13 +5145,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://de.kompass.com/a/logistikdienstleistungen/80690/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://de.kompass.com/a/logistikdienstleistungen/80690/",
-              "canonical_url": "https://de.kompass.com/a/logistikdienstleistungen/80690/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 73,
@@ -4976,13 +5195,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://de.kompass.com/s/transporte-logistik/10/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://de.kompass.com/s/transporte-logistik/10/",
-              "canonical_url": "https://de.kompass.com/s/transporte-logistik/10/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 74,
@@ -5023,13 +5245,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://de.kompass.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://de.kompass.com/",
-              "canonical_url": "https://de.kompass.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 75,
@@ -5109,13 +5334,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.wlw.de/de/suche/logistikdienstleister/deutschland",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.wlw.de/de/suche/logistikdienstleister/deutschland",
-              "canonical_url": "https://www.wlw.de/de/suche/logistikdienstleister/deutschland",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 76,
@@ -5156,13 +5384,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.wlw.de/de/suche/transportlogistik/deutschland",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.wlw.de/de/suche/transportlogistik/deutschland",
-              "canonical_url": "https://www.wlw.de/de/suche/transportlogistik/deutschland",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 77,
@@ -5242,13 +5473,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cDE/s31.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cDE/s31.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cDE/s31.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 78,
@@ -5289,13 +5523,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p2/cDE/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p2/cDE/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p2/cDE/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 79,
@@ -5336,13 +5573,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p3/cDE/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p3/cDE/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p3/cDE/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 80,
@@ -5422,13 +5662,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country/germany/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country/germany/",
-              "canonical_url": "https://azfreight.com/country/germany/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 81,
@@ -5469,13 +5712,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country-facility/freight-forwarders-in-germany/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-germany/",
-              "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-germany/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 82,
@@ -5516,13 +5762,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/directory/",
-              "canonical_url": "https://azfreight.com/directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 83,
@@ -5602,13 +5851,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sgkv.de/mitglieder/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sgkv.de/mitglieder/",
-              "canonical_url": "https://sgkv.de/mitglieder/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 84,
@@ -5649,13 +5901,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sgkv.de/mitglieder/mitgliederliste/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sgkv.de/mitglieder/mitgliederliste/",
-              "canonical_url": "https://sgkv.de/mitglieder/mitgliederliste/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 85,
@@ -5696,13 +5951,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sgkv.de/verein/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sgkv.de/verein/",
-              "canonical_url": "https://sgkv.de/verein/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 86,
@@ -5743,13 +6001,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sgkv.de/der-kombinierte-verkehr/zugang-zu-kv/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sgkv.de/der-kombinierte-verkehr/zugang-zu-kv/",
-              "canonical_url": "https://sgkv.de/der-kombinierte-verkehr/zugang-zu-kv/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 87,

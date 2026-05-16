@@ -101,13 +101,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/fr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/fr/",
-              "canonical_url": "https://fiata.org/directory/fr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 1,
@@ -148,13 +151,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/be/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/be/",
-              "canonical_url": "https://fiata.org/directory/be/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 2,
@@ -195,13 +201,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/ch/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/ch/",
-              "canonical_url": "https://fiata.org/directory/ch/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 3,
@@ -242,13 +251,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/ca/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/ca/",
-              "canonical_url": "https://fiata.org/directory/ca/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 4,
@@ -289,13 +301,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/ma/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/ma/",
-              "canonical_url": "https://fiata.org/directory/ma/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 5,
@@ -336,13 +351,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/tn/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/tn/",
-              "canonical_url": "https://fiata.org/directory/tn/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 6,
@@ -383,13 +401,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/ci/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/ci/",
-              "canonical_url": "https://fiata.org/directory/ci/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 7,
@@ -430,13 +451,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/sn/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/sn/",
-              "canonical_url": "https://fiata.org/directory/sn/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 8,
@@ -477,13 +501,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/cm/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/cm/",
-              "canonical_url": "https://fiata.org/directory/cm/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 9,
@@ -524,13 +551,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/mg/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/mg/",
-              "canonical_url": "https://fiata.org/directory/mg/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 10,
@@ -571,13 +601,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/mu/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/mu/",
-              "canonical_url": "https://fiata.org/directory/mu/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 11,
@@ -618,13 +651,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/",
-              "canonical_url": "https://fiata.org/directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 12,
@@ -665,13 +701,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/",
-              "canonical_url": "https://fiata.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 13,
@@ -751,13 +790,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ecologie.gouv.fr/politiques-publiques/liste-entreprises-inscrites-registre-electronique-national-entreprises",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ecologie.gouv.fr/politiques-publiques/liste-entreprises-inscrites-registre-electronique-national-entreprises",
-              "canonical_url": "https://www.ecologie.gouv.fr/politiques-publiques/liste-entreprises-inscrites-registre-electronique-national-entreprises",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 14,
@@ -798,13 +840,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ecologie.gouv.fr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ecologie.gouv.fr/",
-              "canonical_url": "https://www.ecologie.gouv.fr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 15,
@@ -884,13 +929,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://e-tlf.com/annuaire/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://e-tlf.com/annuaire/",
-              "canonical_url": "https://e-tlf.com/annuaire/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 16,
@@ -970,18 +1018,21 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://e-tlf.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://e-tlf.com/",
-              "canonical_url": "https://e-tlf.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 17,
           "family_seed_surface_index": 2,
-          "source_family_code": "fr_tlf_overseas_annuaire",
+          "source_family_code": "fr_tlf_association",
           "seed_quality_tier": "B",
           "seed_decision": "ACCEPT",
           "enabled": false,
@@ -1056,13 +1107,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.clecat.org/members/full-members",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.clecat.org/members/full-members",
-              "canonical_url": "https://www.clecat.org/members/full-members",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 18,
@@ -1103,13 +1157,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.clecat.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.clecat.org/",
-              "canonical_url": "https://www.clecat.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 19,
@@ -1189,13 +1246,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aeodirectory.com/aeo/search/?country=France",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aeodirectory.com/aeo/search/?country=France",
-              "canonical_url": "https://www.aeodirectory.com/aeo/search/?country=France",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 20,
@@ -1236,13 +1296,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aeodirectory.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aeodirectory.com/",
-              "canonical_url": "https://www.aeodirectory.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 21,
@@ -1322,13 +1385,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://taxation-customs.ec.europa.eu/customs/authorised-economic-operator_en",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://taxation-customs.ec.europa.eu/customs/authorised-economic-operator_en",
-              "canonical_url": "https://taxation-customs.ec.europa.eu/customs/authorised-economic-operator_en",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 22,
@@ -1369,13 +1435,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://taxation-customs.ec.europa.eu/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://taxation-customs.ec.europa.eu/",
-              "canonical_url": "https://taxation-customs.ec.europa.eu/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 23,
@@ -1455,13 +1524,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.douane.gouv.fr/fiche/registered-customs-representatives",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.douane.gouv.fr/fiche/registered-customs-representatives",
-              "canonical_url": "https://www.douane.gouv.fr/fiche/registered-customs-representatives",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 24,
@@ -1502,13 +1574,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.douane.gouv.fr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.douane.gouv.fr/",
-              "canonical_url": "https://www.douane.gouv.fr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 25,
@@ -1588,13 +1663,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.iata.org/en/publications/directories/cargolink/directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.iata.org/en/publications/directories/cargolink/directory/",
-              "canonical_url": "https://www.iata.org/en/publications/directories/cargolink/directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 26,
@@ -1635,13 +1713,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.iata.org/en/publications/directories/cargolink/directory/france-cargo-international-company-sas/9052/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.iata.org/en/publications/directories/cargolink/directory/france-cargo-international-company-sas/9052/",
-              "canonical_url": "https://www.iata.org/en/publications/directories/cargolink/directory/france-cargo-international-company-sas/9052/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 27,
@@ -1682,13 +1763,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.iata.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.iata.org/",
-              "canonical_url": "https://www.iata.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 28,
@@ -1768,13 +1852,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.sitl.eu/fr-fr/qui-participe/liste-des-exposants.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.sitl.eu/fr-fr/qui-participe/liste-des-exposants.html",
-              "canonical_url": "https://www.sitl.eu/fr-fr/qui-participe/liste-des-exposants.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 29,
@@ -1815,13 +1902,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.sitl.eu/en-gb/who-is-coming/Liste_des_exposants_2027.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.sitl.eu/en-gb/who-is-coming/Liste_des_exposants_2027.html",
-              "canonical_url": "https://www.sitl.eu/en-gb/who-is-coming/Liste_des_exposants_2027.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 30,
@@ -1862,13 +1952,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.sitl.eu/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.sitl.eu/",
-              "canonical_url": "https://www.sitl.eu/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 31,
@@ -1948,13 +2041,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.haropaport.com/en",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.haropaport.com/en",
-              "canonical_url": "https://www.haropaport.com/en",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 32,
@@ -1995,13 +2091,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.haropaport.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.haropaport.com/",
-              "canonical_url": "https://www.haropaport.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 33,
@@ -2081,13 +2180,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.marseille-port.fr/en/filieres/logistics",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.marseille-port.fr/en/filieres/logistics",
-              "canonical_url": "https://www.marseille-port.fr/en/filieres/logistics",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 34,
@@ -2128,13 +2230,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.marseille-port.fr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.marseille-port.fr/",
-              "canonical_url": "https://www.marseille-port.fr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 35,
@@ -2214,13 +2319,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/",
-              "canonical_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 36,
@@ -2261,13 +2369,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/rde-calais/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/rde-calais/",
-              "canonical_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/rde-calais/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 37,
@@ -2308,13 +2419,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/rde-comis-boulogne-sur-mer/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/rde-comis-boulogne-sur-mer/",
-              "canonical_url": "https://www.portboulognecalais.fr/services-aux-professionnels/services-a-la-marchandise/rde-comis-boulogne-sur-mer/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 38,
@@ -2355,13 +2469,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.portboulognecalais.fr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.portboulognecalais.fr/",
-              "canonical_url": "https://www.portboulognecalais.fr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 39,
@@ -2441,13 +2558,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.port.fr/liste-des-membres",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.port.fr/liste-des-membres",
-              "canonical_url": "https://www.port.fr/liste-des-membres",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 40,
@@ -2488,13 +2608,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.port.fr/liste-des-membres?field_type_de_membre_tid=4",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.port.fr/liste-des-membres?field_type_de_membre_tid=4",
-              "canonical_url": "https://www.port.fr/liste-des-membres?field_type_de_membre_tid=4",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 41,
@@ -2535,13 +2658,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.port.fr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.port.fr/",
-              "canonical_url": "https://www.port.fr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 42,
@@ -2621,13 +2747,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.parisaeroport.fr/en/professionals/cargo",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.parisaeroport.fr/en/professionals/cargo",
-              "canonical_url": "https://www.parisaeroport.fr/en/professionals/cargo",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 43,
@@ -2668,13 +2797,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.parisaeroport.fr/en/professionals/cargo/discover/welcome-to-cargo-city",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.parisaeroport.fr/en/professionals/cargo/discover/welcome-to-cargo-city",
-              "canonical_url": "https://www.parisaeroport.fr/en/professionals/cargo/discover/welcome-to-cargo-city",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 44,
@@ -2715,13 +2847,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.parisaeroport.fr/en/professionals/cargo/discover/les-vols-cargo",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.parisaeroport.fr/en/professionals/cargo/discover/les-vols-cargo",
-              "canonical_url": "https://www.parisaeroport.fr/en/professionals/cargo/discover/les-vols-cargo",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 45,
@@ -2762,13 +2897,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.parisaeroport.fr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.parisaeroport.fr/",
-              "canonical_url": "https://www.parisaeroport.fr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 46,
@@ -2848,13 +2986,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://umf.asso.fr/en/umf-adherents",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://umf.asso.fr/en/umf-adherents",
-              "canonical_url": "https://umf.asso.fr/en/umf-adherents",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 47,
@@ -2895,13 +3036,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://umf.asso.fr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://umf.asso.fr/",
-              "canonical_url": "https://umf.asso.fr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 48,
@@ -2981,13 +3125,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://forwardbelgium.be/find-a-forwarder",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://forwardbelgium.be/find-a-forwarder",
-              "canonical_url": "https://forwardbelgium.be/find-a-forwarder",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 49,
@@ -3028,13 +3175,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://forwardbelgium.be/Flexpage/DownloadFile?id=57009",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://forwardbelgium.be/Flexpage/DownloadFile?id=57009",
-              "canonical_url": "https://forwardbelgium.be/Flexpage/DownloadFile?id=57009",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 50,
@@ -3075,13 +3225,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://forwardbelgium.be/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://forwardbelgium.be/",
-              "canonical_url": "https://forwardbelgium.be/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 51,
@@ -3161,13 +3314,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://spedlogswiss.com/enUK/association/members",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://spedlogswiss.com/enUK/association/members",
-              "canonical_url": "https://spedlogswiss.com/enUK/association/members",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 52,
@@ -3208,13 +3364,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.spedlogswiss.com/deCH/verband/mitglieder",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.spedlogswiss.com/deCH/verband/mitglieder",
-              "canonical_url": "https://www.spedlogswiss.com/deCH/verband/mitglieder",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 53,
@@ -3255,13 +3414,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://spedlogswiss.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://spedlogswiss.com/",
-              "canonical_url": "https://spedlogswiss.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 54,
@@ -3341,13 +3503,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.clusterforlogistics.lu/members",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.clusterforlogistics.lu/members",
-              "canonical_url": "https://www.clusterforlogistics.lu/members",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 55,
@@ -3388,13 +3553,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.clusterforlogistics.lu/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.clusterforlogistics.lu/",
-              "canonical_url": "https://www.clusterforlogistics.lu/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 56,
@@ -3474,13 +3642,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://logistics.public.lu/en/setup-business/key-players.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://logistics.public.lu/en/setup-business/key-players.html",
-              "canonical_url": "https://logistics.public.lu/en/setup-business/key-players.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 57,
@@ -3521,13 +3692,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://logistics.public.lu/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://logistics.public.lu/",
-              "canonical_url": "https://logistics.public.lu/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 58,
@@ -3607,13 +3781,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.lux-airport.lu/corporate/business-partners/cargo/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.lux-airport.lu/corporate/business-partners/cargo/",
-              "canonical_url": "https://www.lux-airport.lu/corporate/business-partners/cargo/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 59,
@@ -3654,13 +3831,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.lux-airport.lu/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.lux-airport.lu/",
-              "canonical_url": "https://www.lux-airport.lu/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 60,
@@ -3740,13 +3920,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cluster-maritime.lu/members-list/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cluster-maritime.lu/members-list/",
-              "canonical_url": "https://www.cluster-maritime.lu/members-list/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 61,
@@ -3787,13 +3970,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cluster-maritime.lu/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cluster-maritime.lu/",
-              "canonical_url": "https://www.cluster-maritime.lu/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 62,
@@ -3873,13 +4059,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.monte-carlo.mc/en/directory/transportation-logistics/import-export/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.monte-carlo.mc/en/directory/transportation-logistics/import-export/",
-              "canonical_url": "https://www.monte-carlo.mc/en/directory/transportation-logistics/import-export/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 63,
@@ -3920,13 +4109,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.monte-carlo.mc/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.monte-carlo.mc/",
-              "canonical_url": "https://www.monte-carlo.mc/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 64,
@@ -4006,13 +4198,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ciffa.com/member-directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ciffa.com/member-directory/",
-              "canonical_url": "https://www.ciffa.com/member-directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 65,
@@ -4053,13 +4248,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ciffa.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ciffa.com/",
-              "canonical_url": "https://www.ciffa.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 66,
@@ -4139,13 +4337,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.truckstopquebec.com/annuaire/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.truckstopquebec.com/annuaire/",
-              "canonical_url": "https://www.truckstopquebec.com/annuaire/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 67,
@@ -4186,13 +4387,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.truckstopquebec.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.truckstopquebec.com/",
-              "canonical_url": "https://www.truckstopquebec.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 68,
@@ -4272,13 +4476,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.fleetdirectory.com/bylocation/canada/Quebec.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.fleetdirectory.com/bylocation/canada/Quebec.htm",
-              "canonical_url": "https://www.fleetdirectory.com/bylocation/canada/Quebec.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 69,
@@ -4319,13 +4526,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.fleetdirectory.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.fleetdirectory.com/",
-              "canonical_url": "https://www.fleetdirectory.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 70,
@@ -4405,13 +4615,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.affm.ma",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.affm.ma",
-              "canonical_url": "https://www.affm.ma",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 71,
@@ -4452,13 +4665,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.affm.ma/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.affm.ma/",
-              "canonical_url": "https://www.affm.ma/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 72,
@@ -4538,13 +4754,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aptmu.com/members/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aptmu.com/members/",
-              "canonical_url": "https://www.aptmu.com/members/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 73,
@@ -4585,13 +4804,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aptmu.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aptmu.com/",
-              "canonical_url": "https://www.aptmu.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 74,
@@ -4671,13 +4893,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mra.mu/download/ForwardingFreightAgentsList.pdf",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mra.mu/download/ForwardingFreightAgentsList.pdf",
-              "canonical_url": "https://www.mra.mu/download/ForwardingFreightAgentsList.pdf",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 75,
@@ -4718,13 +4943,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mra.mu/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mra.mu/",
-              "canonical_url": "https://www.mra.mu/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 76,
@@ -4804,13 +5032,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mra.mu/download/CustomsBrokersList.pdf",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mra.mu/download/CustomsBrokersList.pdf",
-              "canonical_url": "https://www.mra.mu/download/CustomsBrokersList.pdf",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 77,
@@ -4890,13 +5121,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mcci.org/en/membership/members-directory/?alph=F",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mcci.org/en/membership/members-directory/?alph=F",
-              "canonical_url": "https://www.mcci.org/en/membership/members-directory/?alph=F",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 78,
@@ -4937,13 +5171,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mcci.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mcci.org/",
-              "canonical_url": "https://www.mcci.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 79,
@@ -5023,13 +5260,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p3/cFR/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p3/cFR/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p3/cFR/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 80,
@@ -5070,13 +5310,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cBE/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cBE/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cBE/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 81,
@@ -5117,13 +5360,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cLU/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cLU/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cLU/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 82,
@@ -5164,13 +5410,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cMC/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cMC/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cMC/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 83,
@@ -5211,13 +5460,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cTN/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cTN/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cTN/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 84,
@@ -5258,13 +5510,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cSN/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cSN/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cSN/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 85,
@@ -5305,13 +5560,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p5/cCM/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p5/cCM/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p5/cCM/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 86,
@@ -5352,13 +5610,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cMG/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cMG/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cMG/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 87,
@@ -5399,13 +5660,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cMU/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cMU/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cMU/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 88,
@@ -5446,13 +5710,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/",
-              "canonical_url": "https://www.freightnet.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 89,
@@ -5532,13 +5799,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://paginasamarillasdelacarga.cargoyellowpages.com/france_freight_forwarders_cargo_agents.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://paginasamarillasdelacarga.cargoyellowpages.com/france_freight_forwarders_cargo_agents.html",
-              "canonical_url": "https://paginasamarillasdelacarga.cargoyellowpages.com/france_freight_forwarders_cargo_agents.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 90,
@@ -5579,13 +5849,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://mobile.cargoyellowpages.com/monaco/monaco.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://mobile.cargoyellowpages.com/monaco/monaco.html",
-              "canonical_url": "https://mobile.cargoyellowpages.com/monaco/monaco.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 91,
@@ -5626,13 +5899,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://paginasamarillasdelacarga.cargoyellowpages.com/morocco_freight_forwarders_cargo_agents.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://paginasamarillasdelacarga.cargoyellowpages.com/morocco_freight_forwarders_cargo_agents.html",
-              "canonical_url": "https://paginasamarillasdelacarga.cargoyellowpages.com/morocco_freight_forwarders_cargo_agents.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 92,
@@ -5673,13 +5949,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://mobile.cargoyellowpages.com/tunisia/tunis.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://mobile.cargoyellowpages.com/tunisia/tunis.html",
-              "canonical_url": "https://mobile.cargoyellowpages.com/tunisia/tunis.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 93,
@@ -5720,13 +5999,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://paginasamarillasdelacarga.cargoyellowpages.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://paginasamarillasdelacarga.cargoyellowpages.com/",
-              "canonical_url": "https://paginasamarillasdelacarga.cargoyellowpages.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 94,
@@ -5806,13 +6088,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country-facility/freight-forwarders-in-luxembourg/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-luxembourg/",
-              "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-luxembourg/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 95,
@@ -5853,13 +6138,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country-facility/freight-forwarders-in-senegal/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-senegal/",
-              "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-senegal/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 96,
@@ -5900,13 +6188,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country-facility/freight-forwarders-in-cameroon/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-cameroon/",
-              "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-cameroon/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 97,
@@ -5947,13 +6238,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country-facility/freight-forwarders-in-madagascar/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-madagascar/",
-              "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-madagascar/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 98,
@@ -5994,13 +6288,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/",
-              "canonical_url": "https://azfreight.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 99,
@@ -6080,13 +6377,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.jctrans.com/en/company/list",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.jctrans.com/en/company/list",
-              "canonical_url": "https://www.jctrans.com/en/company/list",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 100,
@@ -6127,13 +6427,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://m.jctrans.com/en/membership/listc/Cote%20d%27lvoire/0-0",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://m.jctrans.com/en/membership/listc/Cote%20d%27lvoire/0-0",
-              "canonical_url": "https://m.jctrans.com/en/membership/listc/Cote%20d%27lvoire/0-0",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 101,
@@ -6174,13 +6477,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.jctrans.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.jctrans.com/",
-              "canonical_url": "https://www.jctrans.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 102,
@@ -6260,13 +6566,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://aeroceanetwork.net/directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://aeroceanetwork.net/directory/",
-              "canonical_url": "https://aeroceanetwork.net/directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 103,
@@ -6307,13 +6616,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://aeroceanetwork.net/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://aeroceanetwork.net/",
-              "canonical_url": "https://aeroceanetwork.net/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 104,
@@ -6393,13 +6705,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://forwardingcompanies.com/in/senegal",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://forwardingcompanies.com/in/senegal",
-              "canonical_url": "https://forwardingcompanies.com/in/senegal",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 105,
@@ -6440,13 +6755,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://forwardingcompanies.com/in/cameroon",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://forwardingcompanies.com/in/cameroon",
-              "canonical_url": "https://forwardingcompanies.com/in/cameroon",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 106,
@@ -6487,13 +6805,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://forwardingcompanies.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://forwardingcompanies.com/",
-              "canonical_url": "https://forwardingcompanies.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 107,

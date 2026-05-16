@@ -101,13 +101,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://uygulama.gtb.gov.tr/GMBS/MusavirBilgileri.aspx",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://uygulama.gtb.gov.tr/GMBS/MusavirBilgileri.aspx",
-              "canonical_url": "https://uygulama.gtb.gov.tr/GMBS/MusavirBilgileri.aspx",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 1,
@@ -151,13 +154,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://ggm.ticaret.gov.tr/uygulamalar/gumruk-musavirleri-iletisim-bilgileri",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://ggm.ticaret.gov.tr/uygulamalar/gumruk-musavirleri-iletisim-bilgileri",
-              "canonical_url": "https://ggm.ticaret.gov.tr/uygulamalar/gumruk-musavirleri-iletisim-bilgileri",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 2,
@@ -238,13 +244,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri/2060-hava-kargo-kuruluslari",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri/2060-hava-kargo-kuruluslari",
-              "canonical_url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri/2060-hava-kargo-kuruluslari",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 3,
@@ -285,13 +294,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri/83-kargo-acentalari",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri/83-kargo-acentalari",
-              "canonical_url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri/83-kargo-acentalari",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 4,
@@ -332,13 +344,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/havacilik_isletmeleri/hava_kargo_isletmeleri/B-Grubu-270524.pdf",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/havacilik_isletmeleri/hava_kargo_isletmeleri/B-Grubu-270524.pdf",
-              "canonical_url": "https://web.shgm.gov.tr/documents/sivilhavacilik/files/havacilik_isletmeleri/hava_kargo_isletmeleri/B-Grubu-270524.pdf",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 5,
@@ -379,13 +394,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri",
-              "canonical_url": "https://web.shgm.gov.tr/tr/havacilik-isletmeleri",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 6,
@@ -466,13 +484,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi",
-              "canonical_url": "https://www.utikad.org.tr/UTIKAD-Uye-Listesi",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 7,
@@ -553,13 +574,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.turklim.org/uye-limanlar/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.turklim.org/uye-limanlar/",
-              "canonical_url": "https://www.turklim.org/uye-limanlar/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 8,
@@ -640,13 +664,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.und.org.tr/uyelerimiz",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.und.org.tr/uyelerimiz",
-              "canonical_url": "https://www.und.org.tr/uyelerimiz",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 9,
@@ -687,13 +714,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://eski.und.org.tr/tr/26/uyelerimiz",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://eski.und.org.tr/tr/26/uyelerimiz",
-              "canonical_url": "https://eski.und.org.tr/tr/26/uyelerimiz",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 10,
@@ -774,13 +804,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://ito.org.tr/tr/meslek-komiteleri/uye-firmalar/lojistik-hizmetler",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://ito.org.tr/tr/meslek-komiteleri/uye-firmalar/lojistik-hizmetler",
-              "canonical_url": "https://ito.org.tr/tr/meslek-komiteleri/uye-firmalar/lojistik-hizmetler",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 11,
@@ -861,13 +894,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.igmd.org.tr/uye-bul",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.igmd.org.tr/uye-bul",
-              "canonical_url": "https://www.igmd.org.tr/uye-bul",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 12,
@@ -911,13 +947,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.igmd.org.tr/firma-bul",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.igmd.org.tr/firma-bul",
-              "canonical_url": "https://www.igmd.org.tr/firma-bul",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 13,
@@ -998,13 +1037,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.izmgmd.org.tr/?go=uyeler",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.izmgmd.org.tr/?go=uyeler",
-              "canonical_url": "https://www.izmgmd.org.tr/?go=uyeler",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 14,
@@ -1085,13 +1127,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.denizticaretodasi.org.tr/tr/uyeler/tumu",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.denizticaretodasi.org.tr/tr/uyeler/tumu",
-              "canonical_url": "https://www.denizticaretodasi.org.tr/tr/uyeler/tumu",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 15,
@@ -1173,13 +1218,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.tcdd.gov.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.tcdd.gov.tr/",
-              "canonical_url": "https://www.tcdd.gov.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 16,
@@ -1260,13 +1308,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.turkishcargo.com/en/authorized-agents",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.turkishcargo.com/en/authorized-agents",
-              "canonical_url": "https://www.turkishcargo.com/en/authorized-agents",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 17,
@@ -1347,13 +1398,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.igairport.aero/en/aviation/cargo-and-logistics-center/cargo-and-lojistics/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.igairport.aero/en/aviation/cargo-and-logistics-center/cargo-and-lojistics/",
-              "canonical_url": "https://www.igairport.aero/en/aviation/cargo-and-logistics-center/cargo-and-lojistics/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 18,
@@ -1435,13 +1489,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://karid.org.tr/portfolio_category/uye-sirketler/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://karid.org.tr/portfolio_category/uye-sirketler/",
-              "canonical_url": "https://karid.org.tr/portfolio_category/uye-sirketler/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 19,
@@ -1522,13 +1579,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logitrans.istanbul/en-US/exhibitor-database",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logitrans.istanbul/en-US/exhibitor-database",
-              "canonical_url": "https://www.logitrans.istanbul/en-US/exhibitor-database",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 20,
@@ -1609,13 +1669,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.lojider.org.tr/Uye-Listesi",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.lojider.org.tr/Uye-Listesi",
-              "canonical_url": "https://www.lojider.org.tr/Uye-Listesi",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 21,
@@ -1696,13 +1759,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.find.com.tr/List/lojistik-ve-tasimacilik?Sorting=3",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.find.com.tr/List/lojistik-ve-tasimacilik?Sorting=3",
-              "canonical_url": "https://www.find.com.tr/List/lojistik-ve-tasimacilik?Sorting=3",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 22,
@@ -1784,13 +1850,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.nakliyerehberim.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.nakliyerehberim.com/",
-              "canonical_url": "https://www.nakliyerehberim.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 23,
@@ -1834,13 +1903,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.nakliyerehberim.com/lojistik.aspx",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.nakliyerehberim.com/lojistik.aspx",
-              "canonical_url": "https://www.nakliyerehberim.com/lojistik.aspx",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 24,
@@ -1884,13 +1956,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.nakliyerehberim.com/calistiklari-ulkelere-gore-nakliyeci-uyelerimiz-liste.aspx?sayfasi=5&ulke=Almanya",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.nakliyerehberim.com/calistiklari-ulkelere-gore-nakliyeci-uyelerimiz-liste.aspx?sayfasi=5&ulke=Almanya",
-              "canonical_url": "https://www.nakliyerehberim.com/calistiklari-ulkelere-gore-nakliyeci-uyelerimiz-liste.aspx?sayfasi=5&ulke=Almanya",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 25,
@@ -1971,13 +2046,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.tnd.org.tr/firmalar-tumu-1.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.tnd.org.tr/firmalar-tumu-1.html",
-              "canonical_url": "https://www.tnd.org.tr/firmalar-tumu-1.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 26,
@@ -2058,13 +2136,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://uhdgm.uab.gov.tr/tasima-isleri-organizatorlugu-tio",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://uhdgm.uab.gov.tr/tasima-isleri-organizatorlugu-tio",
-              "canonical_url": "https://uhdgm.uab.gov.tr/tasima-isleri-organizatorlugu-tio",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 27,
@@ -2105,13 +2186,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://uhdgm.uab.gov.tr/uploads/pages/tio/tio-yetki-belgesi.pdf",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://uhdgm.uab.gov.tr/uploads/pages/tio/tio-yetki-belgesi.pdf",
-              "canonical_url": "https://uhdgm.uab.gov.tr/uploads/pages/tio/tio-yetki-belgesi.pdf",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 28,
@@ -2152,13 +2236,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://uhdgm.uab.gov.tr/yetki-belgeli-firma-listesi",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://uhdgm.uab.gov.tr/yetki-belgeli-firma-listesi",
-              "canonical_url": "https://uhdgm.uab.gov.tr/yetki-belgeli-firma-listesi",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 29,
@@ -2199,13 +2286,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.turkiye.gov.tr/ulastirma-ve-altyapi-bakanligi",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.turkiye.gov.tr/ulastirma-ve-altyapi-bakanligi",
-              "canonical_url": "https://www.turkiye.gov.tr/ulastirma-ve-altyapi-bakanligi",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 30,
@@ -2246,13 +2336,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://uhdgm.uab.gov.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://uhdgm.uab.gov.tr/",
-              "canonical_url": "https://uhdgm.uab.gov.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 31,
@@ -2332,13 +2425,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://uhdgm.uab.gov.tr/yetki-belgeleri-hizmetleri",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://uhdgm.uab.gov.tr/yetki-belgeleri-hizmetleri",
-              "canonical_url": "https://uhdgm.uab.gov.tr/yetki-belgeleri-hizmetleri",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 32,
@@ -2418,13 +2514,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://ticaret.gov.tr/gumruk-islemleri/dijital-gumruk-uygulamalari/edi-xml-referans-mesajlari/ambar-kodlari",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://ticaret.gov.tr/gumruk-islemleri/dijital-gumruk-uygulamalari/edi-xml-referans-mesajlari/ambar-kodlari",
-              "canonical_url": "https://ticaret.gov.tr/gumruk-islemleri/dijital-gumruk-uygulamalari/edi-xml-referans-mesajlari/ambar-kodlari",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 33,
@@ -2465,13 +2564,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://ticaret.gov.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://ticaret.gov.tr/",
-              "canonical_url": "https://ticaret.gov.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 34,
@@ -2551,13 +2653,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://ticaret.gov.tr/gumruk-islemleri/dijital-gumruk-uygulamalari/edi-xml-referans-mesajlari/antrepo-kodlari",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://ticaret.gov.tr/gumruk-islemleri/dijital-gumruk-uygulamalari/edi-xml-referans-mesajlari/antrepo-kodlari",
-              "canonical_url": "https://ticaret.gov.tr/gumruk-islemleri/dijital-gumruk-uygulamalari/edi-xml-referans-mesajlari/antrepo-kodlari",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 35,
@@ -2637,13 +2742,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://ticaret.gov.tr/gumruk-islemleri/bilgi-bankasi",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://ticaret.gov.tr/gumruk-islemleri/bilgi-bankasi",
-              "canonical_url": "https://ticaret.gov.tr/gumruk-islemleri/bilgi-bankasi",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 36,
@@ -2723,13 +2831,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.lojider.org.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.lojider.org.tr/",
-              "canonical_url": "https://www.lojider.org.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 37,
@@ -2809,13 +2920,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/tr/",
-              "canonical_url": "https://fiata.org/directory/tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 38,
@@ -2856,13 +2970,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/",
-              "canonical_url": "https://fiata.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 39,
@@ -2942,13 +3059,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bugumder.org/uyelerimiz/firmalarimiz",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bugumder.org/uyelerimiz/firmalarimiz",
-              "canonical_url": "https://www.bugumder.org/uyelerimiz/firmalarimiz",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 40,
@@ -2989,13 +3109,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bugumder.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bugumder.org/",
-              "canonical_url": "https://www.bugumder.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 41,
@@ -3075,13 +3198,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://mergumder.org.tr/_yuklenenDosyalar/_dernekDuyurulari/uye_Listesi_16042025.pdf",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://mergumder.org.tr/_yuklenenDosyalar/_dernekDuyurulari/uye_Listesi_16042025.pdf",
-              "canonical_url": "https://mergumder.org.tr/_yuklenenDosyalar/_dernekDuyurulari/uye_Listesi_16042025.pdf",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 42,
@@ -3122,13 +3248,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://mergumder.org.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://mergumder.org.tr/",
-              "canonical_url": "https://mergumder.org.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 43,
@@ -3208,13 +3337,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ito.org.tr/tr/meslek-komiteleri/uye-firmalar/kargo-posta-ve-depolama?page=0",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ito.org.tr/tr/meslek-komiteleri/uye-firmalar/kargo-posta-ve-depolama?page=0",
-              "canonical_url": "https://www.ito.org.tr/tr/meslek-komiteleri/uye-firmalar/kargo-posta-ve-depolama?page=0",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 44,
@@ -3255,13 +3387,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ito.org.tr/tr/meslek-komiteleri/uye-firmalar/lojistik-hizmetler?page=0",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ito.org.tr/tr/meslek-komiteleri/uye-firmalar/lojistik-hizmetler?page=0",
-              "canonical_url": "https://www.ito.org.tr/tr/meslek-komiteleri/uye-firmalar/lojistik-hizmetler?page=0",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 45,
@@ -3302,13 +3437,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ito.org.tr/tr/meslek-komiteleri/nace-kodu/lojistik-hizmetler",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ito.org.tr/tr/meslek-komiteleri/nace-kodu/lojistik-hizmetler",
-              "canonical_url": "https://www.ito.org.tr/tr/meslek-komiteleri/nace-kodu/lojistik-hizmetler",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 46,
@@ -3349,13 +3487,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ito.org.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ito.org.tr/",
-              "canonical_url": "https://www.ito.org.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 47,
@@ -3435,13 +3576,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://izto.org.tr/tr/e-oda/meslek-komitesi-calismasi/lojistik-ve-gumruk-musavirligi-grubu",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://izto.org.tr/tr/e-oda/meslek-komitesi-calismasi/lojistik-ve-gumruk-musavirligi-grubu",
-              "canonical_url": "https://izto.org.tr/tr/e-oda/meslek-komitesi-calismasi/lojistik-ve-gumruk-musavirligi-grubu",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 48,
@@ -3482,13 +3626,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.izto.org.tr/tr/tg/lojistik",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.izto.org.tr/tr/tg/lojistik",
-              "canonical_url": "https://www.izto.org.tr/tr/tg/lojistik",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 49,
@@ -3529,13 +3676,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://eoda.izto.org.tr/web/uye_firmalar_yeni.aspx?id=286",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://eoda.izto.org.tr/web/uye_firmalar_yeni.aspx?id=286",
-              "canonical_url": "https://eoda.izto.org.tr/web/uye_firmalar_yeni.aspx?id=286",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 50,
@@ -3576,13 +3726,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://izto.org.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://izto.org.tr/",
-              "canonical_url": "https://izto.org.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 51,
@@ -3662,13 +3815,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://koto.org.tr/ihracatci-firmalar",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://koto.org.tr/ihracatci-firmalar",
-              "canonical_url": "https://koto.org.tr/ihracatci-firmalar",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 52,
@@ -3709,13 +3865,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://koto.org.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://koto.org.tr/",
-              "canonical_url": "https://koto.org.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 53,
@@ -3795,13 +3954,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.btso.org.tr/?page=projects%2Flojistik.asp",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.btso.org.tr/?page=projects%2Flojistik.asp",
-              "canonical_url": "https://www.btso.org.tr/?page=projects%2Flojistik.asp",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 54,
@@ -3842,13 +4004,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.btso.org.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.btso.org.tr/",
-              "canonical_url": "https://www.btso.org.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 55,
@@ -3928,13 +4093,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logitrans.istanbul/tr-TR/katilimci-listesi",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logitrans.istanbul/tr-TR/katilimci-listesi",
-              "canonical_url": "https://www.logitrans.istanbul/tr-TR/katilimci-listesi",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 56,
@@ -3975,13 +4143,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://logitrans.istanbul/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://logitrans.istanbul/",
-              "canonical_url": "https://logitrans.istanbul/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 57,
@@ -4022,13 +4193,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logitrans.istanbul/tr-TR/icerik/fuar-bilgileri/bilgi/fuar-verileri/239",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logitrans.istanbul/tr-TR/icerik/fuar-bilgileri/bilgi/fuar-verileri/239",
-              "canonical_url": "https://www.logitrans.istanbul/tr-TR/icerik/fuar-bilgileri/bilgi/fuar-verileri/239",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 58,
@@ -4069,13 +4243,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logitrans.istanbul/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logitrans.istanbul/",
-              "canonical_url": "https://www.logitrans.istanbul/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 59,
@@ -4155,13 +4332,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logitrans.istanbul/en-US/content/exhibition-directory/specials-areas/air-cargo-turkey/337",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logitrans.istanbul/en-US/content/exhibition-directory/specials-areas/air-cargo-turkey/337",
-              "canonical_url": "https://www.logitrans.istanbul/en-US/content/exhibition-directory/specials-areas/air-cargo-turkey/337",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 60,
@@ -4241,13 +4421,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://logitrans.istanbul/en-US/content/exhibition-directory/specials-areas/rail-cargo-turkey/338",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://logitrans.istanbul/en-US/content/exhibition-directory/specials-areas/rail-cargo-turkey/338",
-              "canonical_url": "https://logitrans.istanbul/en-US/content/exhibition-directory/specials-areas/rail-cargo-turkey/338",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 61,
@@ -4327,13 +4510,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.kompass.com/z/tr/a/transportation-and-logistics-services/75/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.kompass.com/z/tr/a/transportation-and-logistics-services/75/",
-              "canonical_url": "https://www.kompass.com/z/tr/a/transportation-and-logistics-services/75/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 62,
@@ -4374,13 +4560,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://lu.kompass.com/z/tr/s/transports-et-logistique/10/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://lu.kompass.com/z/tr/s/transports-et-logistique/10/",
-              "canonical_url": "https://lu.kompass.com/z/tr/s/transports-et-logistique/10/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 63,
@@ -4421,13 +4610,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://lu.kompass.com/z/tr/a/logistics-services/80690/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://lu.kompass.com/z/tr/a/logistics-services/80690/",
-              "canonical_url": "https://lu.kompass.com/z/tr/a/logistics-services/80690/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 64,
@@ -4468,13 +4660,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.kompass.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.kompass.com/",
-              "canonical_url": "https://www.kompass.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 65,
@@ -4554,13 +4749,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cTR/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cTR/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cTR/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 66,
@@ -4601,13 +4799,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cTR/s31.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cTR/s31.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cTR/s31.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 67,
@@ -4648,13 +4849,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p2/cTR/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p2/cTR/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p2/cTR/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 68,
@@ -4695,13 +4899,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p3/cTR/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p3/cTR/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p3/cTR/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 69,
@@ -4742,13 +4949,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p4/cTR/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p4/cTR/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p4/cTR/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 70,
@@ -4789,13 +4999,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/",
-              "canonical_url": "https://www.freightnet.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 71,
@@ -4875,13 +5088,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p58/cTR/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p58/cTR/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p58/cTR/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 72,
@@ -4922,13 +5138,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p59/cTR/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p59/cTR/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p59/cTR/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 73,
@@ -4969,13 +5188,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p60/cTR/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p60/cTR/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p60/cTR/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 74,
@@ -5016,13 +5238,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p61/cTR/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p61/cTR/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p61/cTR/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 75,
@@ -5063,13 +5288,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p62/cTR/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p62/cTR/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p62/cTR/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 76,
@@ -5149,13 +5377,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country/turkey/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country/turkey/",
-              "canonical_url": "https://azfreight.com/country/turkey/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 77,
@@ -5196,13 +5427,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country-facility/freight-forwarders-in-turkey/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-turkey/",
-              "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-turkey/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 78,
@@ -5243,13 +5477,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/directory/",
-              "canonical_url": "https://azfreight.com/directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 79,
@@ -5290,13 +5527,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/",
-              "canonical_url": "https://azfreight.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 80,
@@ -5376,13 +5616,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.tobb.org.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.tobb.org.tr/",
-              "canonical_url": "https://www.tobb.org.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 81,
@@ -5423,13 +5666,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.tobb.org.tr/Sayfalar/Eng/AnaSayfa.php",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.tobb.org.tr/Sayfalar/Eng/AnaSayfa.php",
-              "canonical_url": "https://www.tobb.org.tr/Sayfalar/Eng/AnaSayfa.php",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 82,
@@ -5509,13 +5755,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.denizticaretodasi.org.tr/tr/meslek-grubu/grup/32",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.denizticaretodasi.org.tr/tr/meslek-grubu/grup/32",
-              "canonical_url": "https://www.denizticaretodasi.org.tr/tr/meslek-grubu/grup/32",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 83,
@@ -5556,13 +5805,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.denizticaretodasi.org.tr/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.denizticaretodasi.org.tr/",
-              "canonical_url": "https://www.denizticaretodasi.org.tr/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 84,

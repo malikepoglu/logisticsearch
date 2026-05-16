@@ -109,13 +109,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/es/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/es/",
-              "canonical_url": "https://fiata.org/directory/es/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 1,
@@ -156,13 +159,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/",
-              "canonical_url": "https://fiata.org/directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 2,
@@ -242,13 +248,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.feteia.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.feteia.org/",
-              "canonical_url": "https://www.feteia.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 3,
@@ -289,13 +298,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.feteia.org/quienes-somos/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.feteia.org/quienes-somos/",
-              "canonical_url": "https://www.feteia.org/quienes-somos/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 4,
@@ -375,13 +387,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateia-euskadi.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateia-euskadi.org/",
-              "canonical_url": "https://www.ateia-euskadi.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 5,
@@ -422,13 +437,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateia-euskadi.org/en-feteia",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateia-euskadi.org/en-feteia",
-              "canonical_url": "https://www.ateia-euskadi.org/en-feteia",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 6,
@@ -508,13 +526,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateia.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateia.com/",
-              "canonical_url": "https://www.ateia.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 7,
@@ -555,13 +576,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateia.com/asociados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateia.com/asociados/",
-              "canonical_url": "https://www.ateia.com/asociados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 8,
@@ -641,13 +665,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateiamadrid.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateiamadrid.com/",
-              "canonical_url": "https://www.ateiamadrid.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 9,
@@ -688,13 +715,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateiamadrid.com/asociados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateiamadrid.com/asociados/",
-              "canonical_url": "https://www.ateiamadrid.com/asociados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 10,
@@ -774,13 +804,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateia-valencia.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateia-valencia.com/",
-              "canonical_url": "https://www.ateia-valencia.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 11,
@@ -821,13 +854,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateia-valencia.com/asociados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateia-valencia.com/asociados/",
-              "canonical_url": "https://www.ateia-valencia.com/asociados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 12,
@@ -907,13 +943,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateia-oltra-algeciras.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateia-oltra-algeciras.org/",
-              "canonical_url": "https://www.ateia-oltra-algeciras.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 13,
@@ -954,13 +993,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateia-oltra-algeciras.org/asociados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateia-oltra-algeciras.org/asociados/",
-              "canonical_url": "https://www.ateia-oltra-algeciras.org/asociados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 14,
@@ -1040,13 +1082,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateiaaragon.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateiaaragon.org/",
-              "canonical_url": "https://www.ateiaaragon.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 15,
@@ -1087,13 +1132,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateiaaragon.org/asociados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateiaaragon.org/asociados/",
-              "canonical_url": "https://www.ateiaaragon.org/asociados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 16,
@@ -1173,13 +1221,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateiabaleares.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateiabaleares.com/",
-              "canonical_url": "https://www.ateiabaleares.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 17,
@@ -1220,13 +1271,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateiabaleares.com/asociados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateiabaleares.com/asociados/",
-              "canonical_url": "https://www.ateiabaleares.com/asociados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 18,
@@ -1306,13 +1360,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateiagalicia.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateiagalicia.com/",
-              "canonical_url": "https://www.ateiagalicia.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 19,
@@ -1353,13 +1410,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateiagalicia.com/asociados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateiagalicia.com/asociados/",
-              "canonical_url": "https://www.ateiagalicia.com/asociados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 20,
@@ -1439,13 +1499,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateiacanarias.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateiacanarias.com/",
-              "canonical_url": "https://www.ateiacanarias.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 21,
@@ -1486,13 +1549,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ateiacanarias.com/asociados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ateiacanarias.com/asociados/",
-              "canonical_url": "https://www.ateiacanarias.com/asociados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 22,
@@ -1572,13 +1638,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.consejoaduanas.org/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.consejoaduanas.org/",
-              "canonical_url": "https://www.consejoaduanas.org/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 23,
@@ -1619,13 +1688,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.consejoaduanas.org/colegios/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.consejoaduanas.org/colegios/",
-              "canonical_url": "https://www.consejoaduanas.org/colegios/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 24,
@@ -1705,13 +1777,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.coacab.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.coacab.com/",
-              "canonical_url": "https://www.coacab.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 25,
@@ -1752,13 +1827,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.coacab.com/colegiados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.coacab.com/colegiados/",
-              "canonical_url": "https://www.coacab.com/colegiados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 26,
@@ -1838,13 +1916,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.coacav.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.coacav.com/",
-              "canonical_url": "https://www.coacav.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 27,
@@ -1885,13 +1966,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.coacav.com/colegiados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.coacav.com/colegiados/",
-              "canonical_url": "https://www.coacav.com/colegiados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 28,
@@ -1971,13 +2055,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.coacam.es/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.coacam.es/",
-              "canonical_url": "https://www.coacam.es/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 29,
@@ -2018,13 +2105,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.coacam.es/colegiados/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.coacam.es/colegiados/",
-              "canonical_url": "https://www.coacam.es/colegiados/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 30,
@@ -2104,13 +2194,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.portdebarcelona.cat/en/web/port-dels-negocis/directori-empreses",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.portdebarcelona.cat/en/web/port-dels-negocis/directori-empreses",
-              "canonical_url": "https://www.portdebarcelona.cat/en/web/port-dels-negocis/directori-empreses",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 31,
@@ -2151,13 +2244,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.portdebarcelona.cat/en/business",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.portdebarcelona.cat/en/business",
-              "canonical_url": "https://www.portdebarcelona.cat/en/business",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 32,
@@ -2237,13 +2333,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.valenciaport.com/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.valenciaport.com/en/",
-              "canonical_url": "https://www.valenciaport.com/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 33,
@@ -2284,13 +2383,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.valenciaport.com/en/port-services/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.valenciaport.com/en/port-services/",
-              "canonical_url": "https://www.valenciaport.com/en/port-services/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 34,
@@ -2370,13 +2472,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bilbaoport.eus/en/services/port-directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bilbaoport.eus/en/services/port-directory/",
-              "canonical_url": "https://www.bilbaoport.eus/en/services/port-directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 35,
@@ -2417,13 +2522,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.bilbaoport.eus/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.bilbaoport.eus/en/",
-              "canonical_url": "https://www.bilbaoport.eus/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 36,
@@ -2503,13 +2611,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.apba.es/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.apba.es/en/",
-              "canonical_url": "https://www.apba.es/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 37,
@@ -2550,13 +2661,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.apba.es/en/port-services/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.apba.es/en/port-services/",
-              "canonical_url": "https://www.apba.es/en/port-services/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 38,
@@ -2636,13 +2750,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.porttarragona.cat/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.porttarragona.cat/en/",
-              "canonical_url": "https://www.porttarragona.cat/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 39,
@@ -2683,13 +2800,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.porttarragona.cat/en/services",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.porttarragona.cat/en/services",
-              "canonical_url": "https://www.porttarragona.cat/en/services",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 40,
@@ -2769,13 +2889,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.portcastello.com/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.portcastello.com/en/",
-              "canonical_url": "https://www.portcastello.com/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 41,
@@ -2816,13 +2939,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.portcastello.com/en/port-community",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.portcastello.com/en/port-community",
-              "canonical_url": "https://www.portcastello.com/en/port-community",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 42,
@@ -2902,13 +3028,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.puertodesevilla.com/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.puertodesevilla.com/en/",
-              "canonical_url": "https://www.puertodesevilla.com/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 43,
@@ -2949,13 +3078,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.puertodesevilla.com/en/port-community",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.puertodesevilla.com/en/port-community",
-              "canonical_url": "https://www.puertodesevilla.com/en/port-community",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 44,
@@ -3035,13 +3167,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.apvigo.es/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.apvigo.es/en/",
-              "canonical_url": "https://www.apvigo.es/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 45,
@@ -3082,13 +3217,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.apvigo.es/en/port-services",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.apvigo.es/en/port-services",
-              "canonical_url": "https://www.apvigo.es/en/port-services",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 46,
@@ -3168,13 +3306,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.apc.es/webapc/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.apc.es/webapc/",
-              "canonical_url": "https://www.apc.es/webapc/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 47,
@@ -3215,13 +3356,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.apc.es/webapc/servicios/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.apc.es/webapc/servicios/",
-              "canonical_url": "https://www.apc.es/webapc/servicios/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 48,
@@ -3301,13 +3445,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.puertos.es/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.puertos.es/",
-              "canonical_url": "https://www.puertos.es/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 49,
@@ -3348,13 +3495,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.puertos.es/en-us/Pages/default.aspx",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.puertos.es/en-us/Pages/default.aspx",
-              "canonical_url": "https://www.puertos.es/en-us/Pages/default.aspx",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 50,
@@ -3434,13 +3584,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aena.es/en/cargo.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aena.es/en/cargo.html",
-              "canonical_url": "https://www.aena.es/en/cargo.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 51,
@@ -3481,13 +3634,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/cargo.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/cargo.html",
-              "canonical_url": "https://www.aena.es/en/adolfo-suarez-madrid-barajas/airport-services/cargo.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 52,
@@ -3528,13 +3684,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/airport-services/cargo.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/airport-services/cargo.html",
-              "canonical_url": "https://www.aena.es/en/josep-tarradellas-barcelona-el-prat/airport-services/cargo.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 53,
@@ -3614,13 +3773,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://barcelona-air-cargo.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://barcelona-air-cargo.com/",
-              "canonical_url": "https://barcelona-air-cargo.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 54,
@@ -3661,13 +3823,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://barcelona-air-cargo.com/en/members/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://barcelona-air-cargo.com/en/members/",
-              "canonical_url": "https://barcelona-air-cargo.com/en/members/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 55,
@@ -3747,13 +3912,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.madridaircargoforum.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.madridaircargoforum.com/",
-              "canonical_url": "https://www.madridaircargoforum.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 56,
@@ -3794,13 +3962,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.madridaircargoforum.com/socios/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.madridaircargoforum.com/socios/",
-              "canonical_url": "https://www.madridaircargoforum.com/socios/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 57,
@@ -3880,13 +4051,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aena.es/en/zaragoza/airport-services/cargo.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aena.es/en/zaragoza/airport-services/cargo.html",
-              "canonical_url": "https://www.aena.es/en/zaragoza/airport-services/cargo.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 58,
@@ -3927,13 +4101,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aena.es/en/zaragoza/airlines-and-destinations/cargo.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aena.es/en/zaragoza/airlines-and-destinations/cargo.html",
-              "canonical_url": "https://www.aena.es/en/zaragoza/airlines-and-destinations/cargo.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 59,
@@ -4013,13 +4190,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.silbcn.com/en/companies.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.silbcn.com/en/companies.html",
-              "canonical_url": "https://www.silbcn.com/en/companies.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 60,
@@ -4060,13 +4240,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.silbcn.com/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.silbcn.com/en/",
-              "canonical_url": "https://www.silbcn.com/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 61,
@@ -4146,13 +4329,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logisticsautomationmadrid.com/en/exhibitors/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logisticsautomationmadrid.com/en/exhibitors/",
-              "canonical_url": "https://www.logisticsautomationmadrid.com/en/exhibitors/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 62,
@@ -4193,13 +4379,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.logisticsautomationmadrid.com/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.logisticsautomationmadrid.com/en/",
-              "canonical_url": "https://www.logisticsautomationmadrid.com/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 63,
@@ -4279,13 +4468,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.empackmadrid.com/en/exhibitors/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.empackmadrid.com/en/exhibitors/",
-              "canonical_url": "https://www.empackmadrid.com/en/exhibitors/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 64,
@@ -4326,13 +4518,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.empackmadrid.com/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.empackmadrid.com/en/",
-              "canonical_url": "https://www.empackmadrid.com/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 65,
@@ -4412,13 +4607,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.pickpackexpo.com/exhibitors/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.pickpackexpo.com/exhibitors/",
-              "canonical_url": "https://www.pickpackexpo.com/exhibitors/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 66,
@@ -4459,13 +4657,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.pickpackexpo.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.pickpackexpo.com/",
-              "canonical_url": "https://www.pickpackexpo.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 67,
@@ -4545,13 +4746,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://exhibitors.transportlogistic.de/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://exhibitors.transportlogistic.de/en/",
-              "canonical_url": "https://exhibitors.transportlogistic.de/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 68,
@@ -4592,13 +4796,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic.de/en/trade-fair/exhibitors-products/exhibitor-directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic.de/en/trade-fair/exhibitors-products/exhibitor-directory/",
-              "canonical_url": "https://transportlogistic.de/en/trade-fair/exhibitors-products/exhibitor-directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 69,
@@ -4678,13 +4885,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country/spain/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country/spain/",
-              "canonical_url": "https://azfreight.com/country/spain/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 70,
@@ -4725,13 +4935,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country-facility/freight-forwarders-in-spain/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-spain/",
-              "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-spain/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 71,
@@ -4811,13 +5024,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cES/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cES/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cES/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 72,
@@ -4858,13 +5074,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p2/cES/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p2/cES/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p2/cES/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 73,
@@ -4905,13 +5124,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p3/cES/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p3/cES/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p3/cES/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 74,
@@ -4952,13 +5174,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cES/s31.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cES/s31.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cES/s31.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 75,
@@ -5038,13 +5263,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cES/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cES/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cES/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 76,
@@ -5085,13 +5313,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p2/cES/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p2/cES/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p2/cES/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 77,
@@ -5132,13 +5363,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p3/cES/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p3/cES/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p3/cES/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 78,
@@ -5218,13 +5452,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cargoyellowpages.com/en/spain/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cargoyellowpages.com/en/spain/",
-              "canonical_url": "https://www.cargoyellowpages.com/en/spain/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 79,
@@ -5265,13 +5502,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://mobile.cargoyellowpages.com/spain/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://mobile.cargoyellowpages.com/spain/",
-              "canonical_url": "https://mobile.cargoyellowpages.com/spain/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 80,
@@ -5351,13 +5591,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.europages.co.uk/companies/spain/forwarding-agents.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.europages.co.uk/companies/spain/forwarding-agents.html",
-              "canonical_url": "https://www.europages.co.uk/companies/spain/forwarding-agents.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 81,
@@ -5398,13 +5641,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.europages.co.uk/companies/spain/transport%20and%20logistics.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.europages.co.uk/companies/spain/transport%20and%20logistics.html",
-              "canonical_url": "https://www.europages.co.uk/companies/spain/transport%20and%20logistics.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 82,
@@ -5484,13 +5730,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://es.kompass.com/a/transporte-logistica/75/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://es.kompass.com/a/transporte-logistica/75/",
-              "canonical_url": "https://es.kompass.com/a/transporte-logistica/75/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 83,
@@ -5531,13 +5780,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://es.kompass.com/s/transporte-logistica/10/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://es.kompass.com/s/transporte-logistica/10/",
-              "canonical_url": "https://es.kompass.com/s/transporte-logistica/10/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 84,
@@ -5578,13 +5830,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://es.kompass.com/a/servicios-logisticos/80690/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://es.kompass.com/a/servicios-logisticos/80690/",
-              "canonical_url": "https://es.kompass.com/a/servicios-logisticos/80690/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 85,
@@ -5664,13 +5919,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.paginasamarillas.es/search/transporte-logistica/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.paginasamarillas.es/search/transporte-logistica/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
-              "canonical_url": "https://www.paginasamarillas.es/search/transporte-logistica/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 86,
@@ -5711,13 +5969,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.paginasamarillas.es/search/agencias-de-transporte/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.paginasamarillas.es/search/agencias-de-transporte/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
-              "canonical_url": "https://www.paginasamarillas.es/search/agencias-de-transporte/all-ma/all-pr/all-is/all-ci/all-ba/all-pu/all-nc/1",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 87,
@@ -5758,13 +6019,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.paginasamarillas.es/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.paginasamarillas.es/",
-              "canonical_url": "https://www.paginasamarillas.es/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 88,
@@ -5844,13 +6108,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.einforma.com/servlet/app/portal/ENTP/prod/ETIQUETA_EMPRESAS/etiqueta/transportes-y-logistica",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.einforma.com/servlet/app/portal/ENTP/prod/ETIQUETA_EMPRESAS/etiqueta/transportes-y-logistica",
-              "canonical_url": "https://www.einforma.com/servlet/app/portal/ENTP/prod/ETIQUETA_EMPRESAS/etiqueta/transportes-y-logistica",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 89,
@@ -5891,13 +6158,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.einforma.com/informacion-empresa",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.einforma.com/informacion-empresa",
-              "canonical_url": "https://www.einforma.com/informacion-empresa",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 90,
@@ -5938,13 +6208,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.einforma.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.einforma.com/",
-              "canonical_url": "https://www.einforma.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 91,
@@ -6024,13 +6297,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-logistica",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-logistica",
-              "canonical_url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-logistica",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 92,
@@ -6071,13 +6347,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-transporte",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-transporte",
-              "canonical_url": "https://www.axesor.es/directorio-informacion-empresas/empresas-de-transporte",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 93,
@@ -6118,13 +6397,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.axesor.es/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.axesor.es/",
-              "canonical_url": "https://www.axesor.es/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 94,
@@ -6204,13 +6486,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/spain",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/spain",
-              "canonical_url": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/spain",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 95,
@@ -6251,13 +6536,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.goodfirms.co/supply-chain-logistics-companies/spain",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.goodfirms.co/supply-chain-logistics-companies/spain",
-              "canonical_url": "https://www.goodfirms.co/supply-chain-logistics-companies/spain",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 96,
@@ -6337,13 +6625,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightos.com/freight-resources/top-freight-forwarders-in-spain/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightos.com/freight-resources/top-freight-forwarders-in-spain/",
-              "canonical_url": "https://www.freightos.com/freight-resources/top-freight-forwarders-in-spain/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 97,
@@ -6384,13 +6675,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightos.com/freight-resources/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightos.com/freight-resources/",
-              "canonical_url": "https://www.freightos.com/freight-resources/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 98,

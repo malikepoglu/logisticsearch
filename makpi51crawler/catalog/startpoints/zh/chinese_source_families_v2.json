@@ -101,13 +101,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/cn/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/cn/",
-              "canonical_url": "https://fiata.org/directory/cn/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 1,
@@ -148,13 +151,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/tw/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/tw/",
-              "canonical_url": "https://fiata.org/directory/tw/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 2,
@@ -235,13 +241,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://zizhan.cifa-china.com/cn/member-query.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://zizhan.cifa-china.com/cn/member-query.html",
-              "canonical_url": "https://zizhan.cifa-china.com/cn/member-query.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 3,
@@ -321,13 +330,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cifa.org.cn/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cifa.org.cn/",
-              "canonical_url": "https://www.cifa.org.cn/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 4,
@@ -407,13 +419,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/",
-              "canonical_url": "https://azfreight.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 5,
@@ -495,13 +510,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://zizhan.cifa-china.com/en/cifa-intro.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://zizhan.cifa-china.com/en/cifa-intro.html",
-              "canonical_url": "https://zizhan.cifa-china.com/en/cifa-intro.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 6,
@@ -542,13 +560,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://zizhan.cifa-china.com/en/member-rights.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://zizhan.cifa-china.com/en/member-rights.html",
-              "canonical_url": "https://zizhan.cifa-china.com/en/member-rights.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 7,
@@ -630,13 +651,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.haffa.com.hk/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.haffa.com.hk/",
-              "canonical_url": "https://www.haffa.com.hk/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 8,
@@ -716,13 +740,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.haffa.com.hk/en-HK/Membership/Profile.aspx",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.haffa.com.hk/en-HK/Membership/Profile.aspx",
-              "canonical_url": "https://www.haffa.com.hk/en-HK/Membership/Profile.aspx",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 9,
@@ -802,13 +829,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/hk/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/hk/",
-              "canonical_url": "https://fiata.org/directory/hk/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 10,
@@ -849,13 +879,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.haffa.com.hk/en-HK/Membership/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.haffa.com.hk/en-HK/Membership/",
-              "canonical_url": "https://www.haffa.com.hk/en-HK/Membership/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 11,
@@ -896,13 +929,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.haffa.com.hk/en-HK/Membership/Fiata/Introduction.aspx",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.haffa.com.hk/en-HK/Membership/Fiata/Introduction.aspx",
-              "canonical_url": "https://www.haffa.com.hk/en-HK/Membership/Fiata/Introduction.aspx",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 12,
@@ -983,13 +1019,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mardep.gov.hk/en/home.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mardep.gov.hk/en/home.html",
-              "canonical_url": "https://www.mardep.gov.hk/en/home.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 13,
@@ -1069,13 +1108,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mardep.gov.hk/en/public_services/port_services.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mardep.gov.hk/en/public_services/port_services.html",
-              "canonical_url": "https://www.mardep.gov.hk/en/public_services/port_services.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 14,
@@ -1156,13 +1198,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mardep.gov.hk/en/public_services/ocean.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mardep.gov.hk/en/public_services/ocean.html",
-              "canonical_url": "https://www.mardep.gov.hk/en/public_services/ocean.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 15,
@@ -1242,13 +1287,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/index.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/index.html",
-              "canonical_url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/index.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 16,
@@ -1289,13 +1337,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/freiforw/index.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/freiforw/index.html",
-              "canonical_url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/freiforw/index.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 17,
@@ -1375,13 +1426,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mardep.gov.hk/en/public_services/port.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mardep.gov.hk/en/public_services/port.html",
-              "canonical_url": "https://www.mardep.gov.hk/en/public_services/port.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 18,
@@ -1462,13 +1516,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/shipcomp/index.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/shipcomp/index.html",
-              "canonical_url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/shipcomp/index.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 19,
@@ -1509,13 +1566,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/locaship/index.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/locaship/index.html",
-              "canonical_url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/locaship/index.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 20,
@@ -1556,13 +1616,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/contfrei/index.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/contfrei/index.html",
-              "canonical_url": "https://www.mardep.gov.hk/en/public-services/shipping-directory/contfrei/index.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 21,
@@ -1603,13 +1666,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.mardep.gov.hk/filemanager/en/share/pub-services/pdf/sd.csv",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.mardep.gov.hk/filemanager/en/share/pub-services/pdf/sd.csv",
-              "canonical_url": "https://www.mardep.gov.hk/filemanager/en/share/pub-services/pdf/sd.csv",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 22,
@@ -1689,13 +1755,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hkmpdb.gov.hk/en/maritime-directory.php?cat=9",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hkmpdb.gov.hk/en/maritime-directory.php?cat=9",
-              "canonical_url": "https://www.hkmpdb.gov.hk/en/maritime-directory.php?cat=9",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 23,
@@ -1775,13 +1844,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hkmaritimehub.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hkmaritimehub.com/",
-              "canonical_url": "https://www.hkmaritimehub.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 24,
@@ -1861,13 +1933,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hongkongmaritimehub.com/the-hub-3/the-hub-directory/directory-freight-forwarders-logistics/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hongkongmaritimehub.com/the-hub-3/the-hub-directory/directory-freight-forwarders-logistics/",
-              "canonical_url": "https://www.hongkongmaritimehub.com/the-hub-3/the-hub-directory/directory-freight-forwarders-logistics/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 25,
@@ -1948,13 +2023,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hongkongmaritimehub.com/the-hub-3/the-hub-directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hongkongmaritimehub.com/the-hub-3/the-hub-directory/",
-              "canonical_url": "https://www.hongkongmaritimehub.com/the-hub-3/the-hub-directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 26,
@@ -1995,13 +2073,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hongkongmaritimehub.com/the-hub-3/the-hub-directory/directory-trade-shipping-organisations/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hongkongmaritimehub.com/the-hub-3/the-hub-directory/directory-trade-shipping-organisations/",
-              "canonical_url": "https://www.hongkongmaritimehub.com/the-hub-3/the-hub-directory/directory-trade-shipping-organisations/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 27,
@@ -2081,13 +2162,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.chamber.org.hk/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.chamber.org.hk/",
-              "canonical_url": "https://www.chamber.org.hk/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 28,
@@ -2167,13 +2251,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aat.com.hk/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aat.com.hk/en/",
-              "canonical_url": "https://www.aat.com.hk/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 29,
@@ -2254,13 +2341,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/association/cifa-china-international-freight-forwarders-association/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/association/cifa-china-international-freight-forwarders-association/",
-              "canonical_url": "https://azfreight.com/association/cifa-china-international-freight-forwarders-association/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 30,
@@ -2301,13 +2391,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://forwardingcompanies.com/association/china-international-freight-forwarders-association-cifa-",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://forwardingcompanies.com/association/china-international-freight-forwarders-association-cifa-",
-              "canonical_url": "https://forwardingcompanies.com/association/china-international-freight-forwarders-association-cifa-",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 31,
@@ -2348,13 +2441,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.chamber.org.hk/en/membership/directory_detail.aspx?id=HKH0803&member_cate=",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.chamber.org.hk/en/membership/directory_detail.aspx?id=HKH0803&member_cate=",
-              "canonical_url": "https://www.chamber.org.hk/en/membership/directory_detail.aspx?id=HKH0803&member_cate=",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 32,
@@ -2395,13 +2491,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory",
-              "canonical_url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 33,
@@ -2442,13 +2541,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/c",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/c",
-              "canonical_url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/c",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 34,
@@ -2489,13 +2591,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/d",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/d",
-              "canonical_url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/d",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 35,
@@ -2536,13 +2641,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/j",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/j",
-              "canonical_url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/j",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 36,
@@ -2583,13 +2691,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/s",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/s",
-              "canonical_url": "https://www.aat.com.hk/en/yellow-pages/freight-forwarder-directory/s",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 37,
@@ -2630,13 +2741,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aat.com.hk/zh-hant/yellow-pages/freight-forwarder-directory",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aat.com.hk/zh-hant/yellow-pages/freight-forwarder-directory",
-              "canonical_url": "https://www.aat.com.hk/zh-hant/yellow-pages/freight-forwarder-directory",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 38,
@@ -2677,13 +2791,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country-facility/freight-forwarders-in-taiwan/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-taiwan/",
-              "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-taiwan/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 39,
@@ -2724,13 +2841,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/freight-forwarder/taiwan/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/freight-forwarder/taiwan/",
-              "canonical_url": "https://azfreight.com/freight-forwarder/taiwan/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 40,
@@ -2811,13 +2931,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aat.com.hk/en/services/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aat.com.hk/en/services/",
-              "canonical_url": "https://www.aat.com.hk/en/services/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 41,
@@ -2898,13 +3021,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aat.com.hk/en/customer-airlines/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aat.com.hk/en/customer-airlines/",
-              "canonical_url": "https://www.aat.com.hk/en/customer-airlines/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 42,
@@ -2985,13 +3111,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://gemslinks.com/en/knowledge/freight-forwarder-network-reference/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://gemslinks.com/en/knowledge/freight-forwarder-network-reference/",
-              "canonical_url": "https://gemslinks.com/en/knowledge/freight-forwarder-network-reference/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 43,
@@ -3072,13 +3201,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.aat.com.hk/tc/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.aat.com.hk/tc/",
-              "canonical_url": "https://www.aat.com.hk/tc/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 44,
@@ -3159,13 +3291,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.iata.org/en/programs/cargo/cargolink/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.iata.org/en/programs/cargo/cargolink/",
-              "canonical_url": "https://www.iata.org/en/programs/cargo/cargolink/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 45,
@@ -3245,13 +3380,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.iata.org/en/publications/directories/cargolink/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.iata.org/en/publications/directories/cargolink/",
-              "canonical_url": "https://www.iata.org/en/publications/directories/cargolink/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 46,
@@ -3292,13 +3430,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.iata.org/en/publications/directories/cargolink/directory/hong-kong-air-cargo-terminals-ltd/205/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.iata.org/en/publications/directories/cargolink/directory/hong-kong-air-cargo-terminals-ltd/205/",
-              "canonical_url": "https://www.iata.org/en/publications/directories/cargolink/directory/hong-kong-air-cargo-terminals-ltd/205/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 47,
@@ -3378,13 +3519,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hactl.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hactl.com/",
-              "canonical_url": "https://www.hactl.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 48,
@@ -3464,13 +3608,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.customs.gov.hk/en/trade_facilitation/aeo/index.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.customs.gov.hk/en/trade_facilitation/aeo/index.html",
-              "canonical_url": "https://www.customs.gov.hk/en/trade_facilitation/aeo/index.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 49,
@@ -3550,13 +3697,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-aeo",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-aeo",
-              "canonical_url": "https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-aeo",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 50,
@@ -3597,13 +3747,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://data.gov.tw/en/datasets/8266",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://data.gov.tw/en/datasets/8266",
-              "canonical_url": "https://data.gov.tw/en/datasets/8266",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 51,
@@ -3644,13 +3797,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://data.gov.tw/en/datasets/6704",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://data.gov.tw/en/datasets/6704",
-              "canonical_url": "https://data.gov.tw/en/datasets/6704",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 52,
@@ -3691,13 +3847,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://data.gov.tw/en/datasets/8272",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://data.gov.tw/en/datasets/8272",
-              "canonical_url": "https://data.gov.tw/en/datasets/8272",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 53,
@@ -3738,13 +3897,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://data.gov.tw/en/datasets/17077",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://data.gov.tw/en/datasets/17077",
-              "canonical_url": "https://data.gov.tw/en/datasets/17077",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 54,
@@ -3824,13 +3986,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-aeo/resource/a2e4afa3-1ab5-4f47-b8cd-0d9215b5d9ad",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-aeo/resource/a2e4afa3-1ab5-4f47-b8cd-0d9215b5d9ad",
-              "canonical_url": "https://data.gov.hk/en-data/dataset/hk-customs-ced_stat-aeo/resource/a2e4afa3-1ab5-4f47-b8cd-0d9215b5d9ad",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 55,
@@ -3910,13 +4075,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.customs.gov.hk/en/trade_facilitation/aeo/list/index.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.customs.gov.hk/en/trade_facilitation/aeo/list/index.html",
-              "canonical_url": "https://www.customs.gov.hk/en/trade_facilitation/aeo/list/index.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 56,
@@ -3957,13 +4125,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.customs.gov.hk/filemanager/common/pdf/aeo_dict_en.pdf",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.customs.gov.hk/filemanager/common/pdf/aeo_dict_en.pdf",
-              "canonical_url": "https://www.customs.gov.hk/filemanager/common/pdf/aeo_dict_en.pdf",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 57,
@@ -4043,13 +4214,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://aeo.wcoomd.org/search",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://aeo.wcoomd.org/search",
-              "canonical_url": "https://aeo.wcoomd.org/search",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 58,
@@ -4129,13 +4303,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://data.gov.tw/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://data.gov.tw/",
-              "canonical_url": "https://data.gov.tw/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 59,
@@ -4215,13 +4392,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://web.customs.gov.tw/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://web.customs.gov.tw/",
-              "canonical_url": "https://web.customs.gov.tw/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 60,
@@ -4301,13 +4481,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://portal.sw.nat.gov.tw/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://portal.sw.nat.gov.tw/",
-              "canonical_url": "https://portal.sw.nat.gov.tw/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 61,
@@ -4387,13 +4570,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://web.customs.gov.tw/singlehtml/186",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://web.customs.gov.tw/singlehtml/186",
-              "canonical_url": "https://web.customs.gov.tw/singlehtml/186",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 62,
@@ -4473,13 +4659,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://aeo.customs.gov.tw/portal/aeop27?language=english",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://aeo.customs.gov.tw/portal/aeop27?language=english",
-              "canonical_url": "https://aeo.customs.gov.tw/portal/aeop27?language=english",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 63,
@@ -4559,13 +4748,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://web.customs.gov.tw/etaichung/singlehtml/ee1bc7abc2c84831b3de9951d2af42f0",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://web.customs.gov.tw/etaichung/singlehtml/ee1bc7abc2c84831b3de9951d2af42f0",
-              "canonical_url": "https://web.customs.gov.tw/etaichung/singlehtml/ee1bc7abc2c84831b3de9951d2af42f0",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 64,
@@ -4645,13 +4837,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://fiata.org/directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://fiata.org/directory/",
-              "canonical_url": "https://fiata.org/directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 65,
@@ -4732,13 +4927,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.tiffa.org.tw/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.tiffa.org.tw/",
-              "canonical_url": "https://www.tiffa.org.tw/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 66,
@@ -4819,13 +5017,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cTW.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cTW.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cTW.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 67,
@@ -4906,13 +5107,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cTW/s34.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cTW/s34.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cTW/s34.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 68,
@@ -4994,13 +5198,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://forwardingcompanies.com/in/taiwan-chinese-taipei",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://forwardingcompanies.com/in/taiwan-chinese-taipei",
-              "canonical_url": "https://forwardingcompanies.com/in/taiwan-chinese-taipei",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 69,
@@ -5081,13 +5288,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country/taiwan/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country/taiwan/",
-              "canonical_url": "https://azfreight.com/country/taiwan/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 70,
@@ -5168,13 +5378,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://azfreight.com/country-facility/logistics-companies-in-taiwan/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://azfreight.com/country-facility/logistics-companies-in-taiwan/",
-              "canonical_url": "https://azfreight.com/country-facility/logistics-companies-in-taiwan/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 71,
@@ -5255,13 +5468,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://m.jctrans.com/en/company/listc/Taiwan-China/0-0",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://m.jctrans.com/en/company/listc/Taiwan-China/0-0",
-              "canonical_url": "https://m.jctrans.com/en/company/listc/Taiwan-China/0-0",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 72,
@@ -5341,13 +5557,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cargoyellowpages.com/en/taiwan/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cargoyellowpages.com/en/taiwan/",
-              "canonical_url": "https://www.cargoyellowpages.com/en/taiwan/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 73,
@@ -5428,13 +5647,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://english.customs.gov.cn/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://english.customs.gov.cn/",
-              "canonical_url": "https://english.customs.gov.cn/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 74,
@@ -5475,13 +5697,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://english.customs.gov.cn/service",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://english.customs.gov.cn/service",
-              "canonical_url": "https://english.customs.gov.cn/service",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 75,
@@ -5561,13 +5786,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://en.sse.net.cn/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://en.sse.net.cn/",
-              "canonical_url": "https://en.sse.net.cn/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 76,
@@ -5608,13 +5836,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://en.sse.net.cn/brief/contactusen.jsp",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://en.sse.net.cn/brief/contactusen.jsp",
-              "canonical_url": "https://en.sse.net.cn/brief/contactusen.jsp",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 77,
@@ -5694,13 +5925,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://en.shippingchina.com/nvocc/index/index.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://en.shippingchina.com/nvocc/index/index.html",
-              "canonical_url": "https://en.shippingchina.com/nvocc/index/index.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 78,
@@ -5780,13 +6014,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.shippingchina.com/companys/index/index.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.shippingchina.com/companys/index/index.html",
-              "canonical_url": "https://www.shippingchina.com/companys/index/index.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 79,
@@ -5866,13 +6103,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://en.shippingchina.com/companys/index/index/page/71.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://en.shippingchina.com/companys/index/index/page/71.html",
-              "canonical_url": "https://en.shippingchina.com/companys/index/index/page/71.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 80,
@@ -5952,13 +6192,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.sse.net.cn/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.sse.net.cn/",
-              "canonical_url": "https://www.sse.net.cn/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 81,
@@ -6038,13 +6281,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://en-shftz.pudong.gov.cn/investment/services/17.shtml",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://en-shftz.pudong.gov.cn/investment/services/17.shtml",
-              "canonical_url": "https://en-shftz.pudong.gov.cn/investment/services/17.shtml",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 82,
@@ -6124,13 +6370,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.hengyang.gov.cn/fgw/xxgk/tzgg/20200118/i343950.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.hengyang.gov.cn/fgw/xxgk/tzgg/20200118/i343950.html",
-              "canonical_url": "https://www.hengyang.gov.cn/fgw/xxgk/tzgg/20200118/i343950.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 83,
@@ -6171,13 +6420,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.zjccla.com/page122?article_id=58",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.zjccla.com/page122?article_id=58",
-              "canonical_url": "https://www.zjccla.com/page122?article_id=58",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 84,
@@ -6218,13 +6470,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.scmfair.com/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.scmfair.com/en/",
-              "canonical_url": "https://www.scmfair.com/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 85,
@@ -6265,13 +6520,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.scmfair.com/en/h-col-154.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.scmfair.com/en/h-col-154.html",
-              "canonical_url": "https://www.scmfair.com/en/h-col-154.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 86,
@@ -6351,13 +6609,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.zhanjiang.gov.cn/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.zhanjiang.gov.cn/",
-              "canonical_url": "https://www.zhanjiang.gov.cn/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 87,
@@ -6437,13 +6698,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.asiafruitlogistica.com/zh-hans/catalogue/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.asiafruitlogistica.com/zh-hans/catalogue/",
-              "canonical_url": "https://www.asiafruitlogistica.com/zh-hans/catalogue/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 88,
@@ -6524,13 +6788,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cTW/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cTW/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cTW/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 89,
@@ -6571,13 +6838,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cTW/s23.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cTW/s23.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cTW/s23.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 90,
@@ -6618,13 +6888,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cCN/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cCN/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cCN/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 91,
@@ -6665,13 +6938,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cCN/s23.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cCN/s23.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cCN/s23.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 92,
@@ -6712,13 +6988,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cHK/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cHK/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cHK/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 93,
@@ -6799,13 +7078,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p53/cCN/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p53/cCN/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p53/cCN/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 94,
@@ -6886,13 +7168,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p295/cCN/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p295/cCN/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p295/cCN/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 95,
@@ -6973,13 +7258,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p299/cCN/s30.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p299/cCN/s30.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p299/cCN/s30.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 96,
@@ -7060,13 +7348,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cCN/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cCN/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cCN/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 97,
@@ -7147,13 +7438,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p240/cCN/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p240/cCN/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p240/cCN/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 98,
@@ -7194,13 +7488,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p171/cCN/s99.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p171/cCN/s99.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p171/cCN/s99.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 99,
@@ -7281,13 +7578,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cCN/s34.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cCN/s34.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cCN/s34.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 100,
@@ -7369,13 +7669,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cargoyellowpages.com/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cargoyellowpages.com/en/",
-              "canonical_url": "https://www.cargoyellowpages.com/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 101,
@@ -7456,13 +7759,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cargoyellowpages.com/en/china/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cargoyellowpages.com/en/china/",
-              "canonical_url": "https://www.cargoyellowpages.com/en/china/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 102,
@@ -7543,13 +7849,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cargoyellowpages.com/en/directory.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cargoyellowpages.com/en/directory.html",
-              "canonical_url": "https://www.cargoyellowpages.com/en/directory.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 103,
@@ -7590,13 +7899,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://mobile.cargoyellowpages.com/china/shanghai.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://mobile.cargoyellowpages.com/china/shanghai.html",
-              "canonical_url": "https://mobile.cargoyellowpages.com/china/shanghai.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 104,
@@ -7677,13 +7989,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://mobile.cargoyellowpages.com/china/ningbo.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://mobile.cargoyellowpages.com/china/ningbo.html",
-              "canonical_url": "https://mobile.cargoyellowpages.com/china/ningbo.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 105,
@@ -7764,13 +8079,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://paginasamarillasdelacarga.cargoyellowpages.com/china3_freight_forwarders_cargo_agents.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://paginasamarillasdelacarga.cargoyellowpages.com/china3_freight_forwarders_cargo_agents.html",
-              "canonical_url": "https://paginasamarillasdelacarga.cargoyellowpages.com/china3_freight_forwarders_cargo_agents.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 106,
@@ -7852,13 +8170,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://m.jctrans.com/en/company/listc/China_Shanghai/0-0",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://m.jctrans.com/en/company/listc/China_Shanghai/0-0",
-              "canonical_url": "https://m.jctrans.com/en/company/listc/China_Shanghai/0-0",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 107,
@@ -7938,13 +8259,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.jctrans.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.jctrans.com/",
-              "canonical_url": "https://www.jctrans.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 108,
@@ -8024,13 +8348,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.jctrans.com/en/company/list",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.jctrans.com/en/company/list",
-              "canonical_url": "https://www.jctrans.com/en/company/list",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 109,
@@ -8071,13 +8398,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://m.jctrans.com/en/company/list/0-GRP",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://m.jctrans.com/en/company/list/0-GRP",
-              "canonical_url": "https://m.jctrans.com/en/company/list/0-GRP",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 110,
@@ -8157,13 +8487,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://forwardingcompanies.com/in/shenzhen",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://forwardingcompanies.com/in/shenzhen",
-              "canonical_url": "https://forwardingcompanies.com/in/shenzhen",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 111,
@@ -8244,13 +8577,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://forwardingcompanies.com/in/shanghai",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://forwardingcompanies.com/in/shanghai",
-              "canonical_url": "https://forwardingcompanies.com/in/shanghai",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 112,
@@ -8331,13 +8667,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.schednet.com/asiainfo/asiainfo.asp",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.schednet.com/asiainfo/asiainfo.asp",
-              "canonical_url": "https://www.schednet.com/asiainfo/asiainfo.asp",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 113,
@@ -8417,13 +8756,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://ddpchain.com/shipping-companies-in-beijing/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://ddpchain.com/shipping-companies-in-beijing/",
-              "canonical_url": "https://ddpchain.com/shipping-companies-in-beijing/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 114,
@@ -8503,13 +8845,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://ddpchain.com/shipping-companies-in-ningbo/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://ddpchain.com/shipping-companies-in-ningbo/",
-              "canonical_url": "https://ddpchain.com/shipping-companies-in-ningbo/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 115,
@@ -8589,13 +8934,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.freightnet.com/directory/p1/cHK.htm",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.freightnet.com/directory/p1/cHK.htm",
-              "canonical_url": "https://www.freightnet.com/directory/p1/cHK.htm",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 116,
@@ -8676,13 +9024,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cargoyellowpages.com/en/hong-kong/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cargoyellowpages.com/en/hong-kong/",
-              "canonical_url": "https://www.cargoyellowpages.com/en/hong-kong/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 117,
@@ -8763,13 +9114,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cargoyellowpages.com/hong_kong_QT_freight_forwarders_cargo_agents.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cargoyellowpages.com/hong_kong_QT_freight_forwarders_cargo_agents.html",
-              "canonical_url": "https://www.cargoyellowpages.com/hong_kong_QT_freight_forwarders_cargo_agents.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 118,
@@ -8850,13 +9204,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cargoyellowpages.com/hong_kong_freight_forwarders_cargo_agents.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cargoyellowpages.com/hong_kong_freight_forwarders_cargo_agents.html",
-              "canonical_url": "https://www.cargoyellowpages.com/hong_kong_freight_forwarders_cargo_agents.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 119,
@@ -8897,13 +9254,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.cargoyellowpages.com/hong_kong2_freight_forwarders_cargo_agents.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.cargoyellowpages.com/hong_kong2_freight_forwarders_cargo_agents.html",
-              "canonical_url": "https://www.cargoyellowpages.com/hong_kong2_freight_forwarders_cargo_agents.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 120,
@@ -8984,13 +9344,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://m.jctrans.com/en/membership/listc/HongKong-China/0-0?years=0",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://m.jctrans.com/en/membership/listc/HongKong-China/0-0?years=0",
-              "canonical_url": "https://m.jctrans.com/en/membership/listc/HongKong-China/0-0?years=0",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 121,
@@ -9070,13 +9433,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sourcing.hktdc.com/en/Suppliers/Logistics-Transportation-0884688ce3a111ea883f06c82c63b760/1",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sourcing.hktdc.com/en/Suppliers/Logistics-Transportation-0884688ce3a111ea883f06c82c63b760/1",
-              "canonical_url": "https://sourcing.hktdc.com/en/Suppliers/Logistics-Transportation-0884688ce3a111ea883f06c82c63b760/1",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 122,
@@ -9156,13 +9522,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sourcing.hktdc.com/en/Service-Provider/Logistics-Transportation-0884688ce3a111ea883f06c82c63b760/1",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sourcing.hktdc.com/en/Service-Provider/Logistics-Transportation-0884688ce3a111ea883f06c82c63b760/1",
-              "canonical_url": "https://sourcing.hktdc.com/en/Service-Provider/Logistics-Transportation-0884688ce3a111ea883f06c82c63b760/1",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 123,
@@ -9242,13 +9611,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sourcing.hktdc.com/en/Service-Search/forwarder/1",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sourcing.hktdc.com/en/Service-Search/forwarder/1",
-              "canonical_url": "https://sourcing.hktdc.com/en/Service-Search/forwarder/1",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 124,
@@ -9328,13 +9700,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sourcing.hktdc.com/en/Supplier-Store-Directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sourcing.hktdc.com/en/Supplier-Store-Directory/",
-              "canonical_url": "https://sourcing.hktdc.com/en/Supplier-Store-Directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 125,
@@ -9414,13 +9789,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sourcing.hktdc.com/en/Service-Search/freight%20forwaders/1",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sourcing.hktdc.com/en/Service-Search/freight%20forwaders/1",
-              "canonical_url": "https://sourcing.hktdc.com/en/Service-Search/freight%20forwaders/1",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 126,
@@ -9461,13 +9839,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sourcing.hktdc.com/en/Service-Search/logistic/1",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sourcing.hktdc.com/en/Service-Search/logistic/1",
-              "canonical_url": "https://sourcing.hktdc.com/en/Service-Search/logistic/1",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 127,
@@ -9547,13 +9928,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sourcing.hktdc.com/en/Service-Search/logistics%20%26%20transport%20service/1?catId=f45d19e4e3a011ea883f06c82c63b760",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sourcing.hktdc.com/en/Service-Search/logistics%20%26%20transport%20service/1?catId=f45d19e4e3a011ea883f06c82c63b760",
-              "canonical_url": "https://sourcing.hktdc.com/en/Service-Search/logistics%20%26%20transport%20service/1?catId=f45d19e4e3a011ea883f06c82c63b760",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 128,
@@ -9633,13 +10017,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://sourcing.hktdc.com/en/Supplier-Search/International%20Freight%20Forwarding/1",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://sourcing.hktdc.com/en/Supplier-Search/International%20Freight%20Forwarding/1",
-              "canonical_url": "https://sourcing.hktdc.com/en/Supplier-Search/International%20Freight%20Forwarding/1",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 129,
@@ -9719,13 +10106,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://en.wiffa.net/memberverificationlist.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://en.wiffa.net/memberverificationlist.html",
-              "canonical_url": "https://en.wiffa.net/memberverificationlist.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 130,
@@ -9805,13 +10195,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.wiffa.net/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.wiffa.net/",
-              "canonical_url": "https://www.wiffa.net/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 131,
@@ -9891,13 +10284,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://en.wiffa.net/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://en.wiffa.net/",
-              "canonical_url": "https://en.wiffa.net/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 132,
@@ -9938,13 +10334,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.wiffa.net/meeting2021/pren/directory?stype=3",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.wiffa.net/meeting2021/pren/directory?stype=3",
-              "canonical_url": "https://www.wiffa.net/meeting2021/pren/directory?stype=3",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 133,
@@ -10024,13 +10423,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.wiffa.net/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.wiffa.net/en/",
-              "canonical_url": "https://www.wiffa.net/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 134,
@@ -10110,13 +10512,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic-china.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic-china.com/",
-              "canonical_url": "https://transportlogistic-china.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 135,
@@ -10197,13 +10602,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.transportlogistic-china.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.transportlogistic-china.com/",
-              "canonical_url": "https://www.transportlogistic-china.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 136,
@@ -10244,13 +10652,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.transportlogistic-china.com/exhibitor-directory",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.transportlogistic-china.com/exhibitor-directory",
-              "canonical_url": "https://www.transportlogistic-china.com/exhibitor-directory",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 137,
@@ -10291,13 +10702,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/",
-              "canonical_url": "https://transportlogistic.de/en/trade-fair/exhibitor-directory/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 138,
@@ -10378,13 +10792,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://exhibitors.transportlogistic.de/en/exhibitors-and-directories/exhibitors-brand-names-search/exhibitorFulltextlist/Exhibitors/All/?cHash=0c747bdc6b2e6fb10d7f7055d878a0c5",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://exhibitors.transportlogistic.de/en/exhibitors-and-directories/exhibitors-brand-names-search/exhibitorFulltextlist/Exhibitors/All/?cHash=0c747bdc6b2e6fb10d7f7055d878a0c5",
-              "canonical_url": "https://exhibitors.transportlogistic.de/en/exhibitors-and-directories/exhibitors-brand-names-search/exhibitorFulltextlist/Exhibitors/All/?cHash=0c747bdc6b2e6fb10d7f7055d878a0c5",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 139,
@@ -10425,13 +10842,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://exhibitors.transportlogistic.de/en/exhibitors-and-directories/exhibitors-brand-names",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://exhibitors.transportlogistic.de/en/exhibitors-and-directories/exhibitors-brand-names",
-              "canonical_url": "https://exhibitors.transportlogistic.de/en/exhibitors-and-directories/exhibitors-brand-names",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 140,
@@ -10512,13 +10932,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic-china.com/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic-china.com/en/",
-              "canonical_url": "https://transportlogistic-china.com/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 141,
@@ -10599,13 +11022,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.scmfair.com/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.scmfair.com/",
-              "canonical_url": "https://www.scmfair.com/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 142,
@@ -10685,13 +11111,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.scmfair.com/en/exhibitor/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.scmfair.com/en/exhibitor/",
-              "canonical_url": "https://www.scmfair.com/en/exhibitor/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 143,
@@ -10771,13 +11200,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://en.cisce.org.cn/overview/exhibitors.html",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://en.cisce.org.cn/overview/exhibitors.html",
-              "canonical_url": "https://en.cisce.org.cn/overview/exhibitors.html",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 144,
@@ -10857,13 +11289,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic.de/en/transport-logistic-worldwide/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic.de/en/transport-logistic-worldwide/",
-              "canonical_url": "https://transportlogistic.de/en/transport-logistic-worldwide/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 145,
@@ -10944,13 +11379,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://transportlogistic.de/en/",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://transportlogistic.de/en/",
-              "canonical_url": "https://transportlogistic.de/en/",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 146,
@@ -11031,13 +11469,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.chinalet.cn/gw/sctu/202506250917201596.pdf",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.chinalet.cn/gw/sctu/202506250917201596.pdf",
-              "canonical_url": "https://www.chinalet.cn/gw/sctu/202506250917201596.pdf",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 147,
@@ -11118,13 +11559,16 @@
           },
           "seed_urls": [
             {
+              "seed_url_index": 1,
               "url": "https://www.ciie.org/resource/upload/zbh/201910/22200146h725.pdf",
               "url_type": "entrypoint",
-              "method": "GET",
-              "submitted_url": "https://www.ciie.org/resource/upload/zbh/201910/22200146h725.pdf",
-              "canonical_url": "https://www.ciie.org/resource/upload/zbh/201910/22200146h725.pdf",
-              "url_role": "primary_seed",
-              "live_check_required": true
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
             }
           ],
           "seed_surface_index": 148,
