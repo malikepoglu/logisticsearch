@@ -1,0 +1,4399 @@
+{
+  "schema": "source_families_v2",
+  "schema_version": "source_families_v2",
+  "catalog_version": "italian_source_families_v2",
+  "language_code": "it",
+  "language_name": "Italian",
+  "language_alias": [
+    "it",
+    "italian",
+    "italiano"
+  ],
+  "candidate_manifest": true,
+  "is_live": false,
+  "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+  "standardization_policy": {
+    "canonical_rule_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md",
+    "canonical_rule_sha256": "65b36104f039962f3b6c8cd3c70b2575e0de00f27e50732e18953749d89bb49d",
+    "github_raw_rule_url": "https://raw.githubusercontent.com/malikepoglu/logisticsearch/74e64b85277c05ef7b3bebb52520f86133780d9b/docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md",
+    "decision_doc": "docs/TOPIC_CRAWLER_CORE_ITALIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md",
+    "decision_doc_sha256": "9209c83f93d4c03ecfcbfcfbd6a82190117c264f1f231f550afb8a160a6c8373",
+    "candidate_manifest_only": true,
+    "no_db_insert": true,
+    "no_frontier_activation": true,
+    "no_crawler_start_stop": true,
+    "no_systemd_mutation": true,
+    "no_url_fetch_live_probe": true,
+    "no_pi51c_live_activation": true
+  },
+  "standardization_gate": "R296_IT_SOURCE_SEED_CATALOG_LOCAL_ONLY",
+  "last_rewritten_by_gate": "R296_IT_SOURCE_SEED_CATALOG_LOCAL_ONLY",
+  "safety_guards": {
+    "candidate_manifest": true,
+    "is_live": false,
+    "enabled": false,
+    "needs_live_check": true,
+    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+    "safety_state": "candidate_only_not_live",
+    "secret_printing_forbidden": true,
+    "db_frontier_crawler_systemd_mutation_forbidden": true,
+    "url_fetch_live_probe_forbidden": true,
+    "pi51c_sync_forbidden_in_this_gate": true,
+    "pi51c_live_runtime_copy_forbidden_in_this_gate": true
+  },
+  "metrics": {
+    "source_family_count": 40,
+    "seed_surface_count": 84,
+    "seed_url_count": 84,
+    "unique_seed_url_count": 84,
+    "duplicate_seed_url_count": 0,
+    "non_https_seed_url_count": 0
+  },
+  "dropped_empty_source_families": [],
+  "source_families": [
+    {
+      "source_family_index": 1,
+      "source_family_code": "it_fiata_directory",
+      "source_family_name": "FIATA Italy members directory",
+      "source_name": "FIATA Italy members directory",
+      "source_root_url": "https://fiata.org/directory/it/",
+      "source_host": "fiata.org",
+      "source_categories": [
+        "global_association_directory"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 1,
+      "seed_url_count": 1,
+      "family_metadata": {
+        "decision_doc_source_index": 1,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "global_association_directory",
+        "decision_doc_note": "Italy member directory; shared FIATA host, not separate top-level live source until later gate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_fiata_directory_surface_01",
+          "seed_surface_name": "FIATA Italy members directory seed surface 1",
+          "source_family_code": "it_fiata_directory",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 1,
+            "decision_doc_source_code": "it_fiata_directory",
+            "surface_slug": "https_fiata_org_directory_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 1,
+              "url": "https://fiata.org/directory/it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 2,
+      "source_family_code": "it_fedespedi",
+      "source_family_name": "Fedespedi",
+      "source_name": "Fedespedi",
+      "source_root_url": "https://www.fedespedi.it/",
+      "source_host": "www.fedespedi.it",
+      "source_categories": [
+        "freight_forwarding_association"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 2,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "freight_forwarding_association",
+        "decision_doc_note": "Primary Italian international freight forwarding association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 2,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_fedespedi_surface_01",
+          "seed_surface_name": "Fedespedi seed surface 1",
+          "source_family_code": "it_fedespedi",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 2,
+            "decision_doc_source_code": "it_fedespedi",
+            "surface_slug": "https_www_fedespedi_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 2,
+              "url": "https://www.fedespedi.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 3,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_fedespedi_surface_02",
+          "seed_surface_name": "Fedespedi seed surface 2",
+          "source_family_code": "it_fedespedi",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 3,
+            "decision_doc_source_code": "it_fedespedi",
+            "surface_slug": "https_www_fedespedi_it_fiata_2",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 3,
+              "url": "https://www.fedespedi.it/fiata-2/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 4,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "it_fedespedi_surface_03",
+          "seed_surface_name": "Fedespedi seed surface 3",
+          "source_family_code": "it_fedespedi",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 4,
+            "decision_doc_source_code": "it_fedespedi",
+            "surface_slug": "https_www_fedespedi_it_category_news",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 4,
+              "url": "https://www.fedespedi.it/category/news/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 3,
+      "source_family_code": "it_confetra",
+      "source_family_name": "Confetra",
+      "source_name": "Confetra",
+      "source_root_url": "https://www.confetra.com/",
+      "source_host": "www.confetra.com",
+      "source_categories": [
+        "transport_logistics_confederation"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 3,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "transport_logistics_confederation",
+        "decision_doc_note": "Transport and logistics confederation umbrella candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 5,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_confetra_surface_01",
+          "seed_surface_name": "Confetra seed surface 1",
+          "source_family_code": "it_confetra",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 5,
+            "decision_doc_source_code": "it_confetra",
+            "surface_slug": "https_www_confetra_com",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 5,
+              "url": "https://www.confetra.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 6,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_confetra_surface_02",
+          "seed_surface_name": "Confetra seed surface 2",
+          "source_family_code": "it_confetra",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 6,
+            "decision_doc_source_code": "it_confetra",
+            "surface_slug": "https_www_confetra_com_abbreviazioni_comuni_i",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 6,
+              "url": "https://www.confetra.com/abbreviazioni-comuni-i/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 7,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "it_confetra_surface_03",
+          "seed_surface_name": "Confetra seed surface 3",
+          "source_family_code": "it_confetra",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 7,
+            "decision_doc_source_code": "it_confetra",
+            "surface_slug": "https_www_confetra_com_category_news",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 7,
+              "url": "https://www.confetra.com/category/news/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 4,
+      "source_family_code": "it_anita",
+      "source_family_name": "ANITA",
+      "source_name": "ANITA",
+      "source_root_url": "https://www.anita.it/",
+      "source_host": "www.anita.it",
+      "source_categories": [
+        "road_transport_association"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 4,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "road_transport_association",
+        "decision_doc_note": "Road haulage and logistics company association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 8,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_anita_surface_01",
+          "seed_surface_name": "ANITA seed surface 1",
+          "source_family_code": "it_anita",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 8,
+            "decision_doc_source_code": "it_anita",
+            "surface_slug": "https_www_anita_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 8,
+              "url": "https://www.anita.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 9,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_anita_surface_02",
+          "seed_surface_name": "ANITA seed surface 2",
+          "source_family_code": "it_anita",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 9,
+            "decision_doc_source_code": "it_anita",
+            "surface_slug": "https_www_anita_it_associazione",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 9,
+              "url": "https://www.anita.it/associazione/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 5,
+      "source_family_code": "it_albo_autotrasporto",
+      "source_family_name": "Albo Autotrasporto",
+      "source_name": "Albo Autotrasporto",
+      "source_root_url": "https://www.alboautotrasporto.it/",
+      "source_host": "www.alboautotrasporto.it",
+      "source_categories": [
+        "official_road_haulage_registry"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 5,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "official_road_haulage_registry",
+        "decision_doc_note": "Official road haulage registry surface; live usage must be carefully gated.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 10,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_albo_autotrasporto_surface_01",
+          "seed_surface_name": "Albo Autotrasporto seed surface 1",
+          "source_family_code": "it_albo_autotrasporto",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 10,
+            "decision_doc_source_code": "it_albo_autotrasporto",
+            "surface_slug": "https_www_alboautotrasporto_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 10,
+              "url": "https://www.alboautotrasporto.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 11,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_albo_autotrasporto_surface_02",
+          "seed_surface_name": "Albo Autotrasporto seed surface 2",
+          "source_family_code": "it_albo_autotrasporto",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 11,
+            "decision_doc_source_code": "it_albo_autotrasporto",
+            "surface_slug": "https_www_alboautotrasporto_it_web_portale_albo",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 11,
+              "url": "https://www.alboautotrasporto.it/web/portale-albo/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 6,
+      "source_family_code": "it_assologistica",
+      "source_family_name": "Assologistica",
+      "source_name": "Assologistica",
+      "source_root_url": "https://www.assologistica.it/",
+      "source_host": "www.assologistica.it",
+      "source_categories": [
+        "logistics_association"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 6,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "logistics_association",
+        "decision_doc_note": "Italian logistics association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 12,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_assologistica_surface_01",
+          "seed_surface_name": "Assologistica seed surface 1",
+          "source_family_code": "it_assologistica",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 12,
+            "decision_doc_source_code": "it_assologistica",
+            "surface_slug": "https_www_assologistica_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 12,
+              "url": "https://www.assologistica.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 13,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_assologistica_surface_02",
+          "seed_surface_name": "Assologistica seed surface 2",
+          "source_family_code": "it_assologistica",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 13,
+            "decision_doc_source_code": "it_assologistica",
+            "surface_slug": "https_www_assologistica_it_chi_siamo",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 13,
+              "url": "https://www.assologistica.it/chi-siamo/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 7,
+      "source_family_code": "it_assoporti",
+      "source_family_name": "Assoporti",
+      "source_name": "Assoporti",
+      "source_root_url": "https://www.assoporti.it/",
+      "source_host": "www.assoporti.it",
+      "source_categories": [
+        "ports_association"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 7,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "ports_association",
+        "decision_doc_note": "Italian ports association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 14,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_assoporti_surface_01",
+          "seed_surface_name": "Assoporti seed surface 1",
+          "source_family_code": "it_assoporti",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 14,
+            "decision_doc_source_code": "it_assoporti",
+            "surface_slug": "https_www_assoporti_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 14,
+              "url": "https://www.assoporti.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 15,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_assoporti_surface_02",
+          "seed_surface_name": "Assoporti seed surface 2",
+          "source_family_code": "it_assoporti",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 15,
+            "decision_doc_source_code": "it_assoporti",
+            "surface_slug": "https_www_assoporti_it_it_autorita_di_sistema_portuale",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 15,
+              "url": "https://www.assoporti.it/it/autorita-di-sistema-portuale/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 8,
+      "source_family_code": "it_confitarma",
+      "source_family_name": "Confitarma",
+      "source_name": "Confitarma",
+      "source_root_url": "https://www.confitarma.it/",
+      "source_host": "www.confitarma.it",
+      "source_categories": [
+        "shipping_association"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 8,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "shipping_association",
+        "decision_doc_note": "Shipping association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 16,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_confitarma_surface_01",
+          "seed_surface_name": "Confitarma seed surface 1",
+          "source_family_code": "it_confitarma",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 16,
+            "decision_doc_source_code": "it_confitarma",
+            "surface_slug": "https_www_confitarma_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 16,
+              "url": "https://www.confitarma.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 17,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_confitarma_surface_02",
+          "seed_surface_name": "Confitarma seed surface 2",
+          "source_family_code": "it_confitarma",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 17,
+            "decision_doc_source_code": "it_confitarma",
+            "surface_slug": "https_www_confitarma_it_chi_siamo",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 17,
+              "url": "https://www.confitarma.it/chi-siamo/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 9,
+      "source_family_code": "it_federagenti",
+      "source_family_name": "Federagenti",
+      "source_name": "Federagenti",
+      "source_root_url": "https://www.federagenti.it/",
+      "source_host": "www.federagenti.it",
+      "source_categories": [
+        "shipping_agents_association"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 9,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "shipping_agents_association",
+        "decision_doc_note": "Maritime agents federation candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 18,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_federagenti_surface_01",
+          "seed_surface_name": "Federagenti seed surface 1",
+          "source_family_code": "it_federagenti",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 18,
+            "decision_doc_source_code": "it_federagenti",
+            "surface_slug": "https_www_federagenti_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 18,
+              "url": "https://www.federagenti.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 19,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_federagenti_surface_02",
+          "seed_surface_name": "Federagenti seed surface 2",
+          "source_family_code": "it_federagenti",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 19,
+            "decision_doc_source_code": "it_federagenti",
+            "surface_slug": "https_www_federagenti_it_associazione",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 19,
+              "url": "https://www.federagenti.it/associazione/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 10,
+      "source_family_code": "it_assarmatori",
+      "source_family_name": "Assarmatori",
+      "source_name": "Assarmatori",
+      "source_root_url": "https://www.assarmatori.eu/",
+      "source_host": "www.assarmatori.eu",
+      "source_categories": [
+        "shipowners_association"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 10,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "shipowners_association",
+        "decision_doc_note": "Shipowners association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 20,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_assarmatori_surface_01",
+          "seed_surface_name": "Assarmatori seed surface 1",
+          "source_family_code": "it_assarmatori",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 20,
+            "decision_doc_source_code": "it_assarmatori",
+            "surface_slug": "https_www_assarmatori_eu",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 20,
+              "url": "https://www.assarmatori.eu/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 21,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_assarmatori_surface_02",
+          "seed_surface_name": "Assarmatori seed surface 2",
+          "source_family_code": "it_assarmatori",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 21,
+            "decision_doc_source_code": "it_assarmatori",
+            "surface_slug": "https_www_assarmatori_eu_associazione",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 21,
+              "url": "https://www.assarmatori.eu/associazione/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 11,
+      "source_family_code": "it_assiterminal",
+      "source_family_name": "Assiterminal",
+      "source_name": "Assiterminal",
+      "source_root_url": "https://www.assiterminal.it/",
+      "source_host": "www.assiterminal.it",
+      "source_categories": [
+        "port_terminal_association"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 11,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "port_terminal_association",
+        "decision_doc_note": "Port terminal operators association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 22,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_assiterminal_surface_01",
+          "seed_surface_name": "Assiterminal seed surface 1",
+          "source_family_code": "it_assiterminal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 22,
+            "decision_doc_source_code": "it_assiterminal",
+            "surface_slug": "https_www_assiterminal_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 22,
+              "url": "https://www.assiterminal.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 23,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_assiterminal_surface_02",
+          "seed_surface_name": "Assiterminal seed surface 2",
+          "source_family_code": "it_assiterminal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 23,
+            "decision_doc_source_code": "it_assiterminal",
+            "surface_slug": "https_www_assiterminal_it_associazione",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 23,
+              "url": "https://www.assiterminal.it/associazione/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 12,
+      "source_family_code": "it_anama_air_cargo",
+      "source_family_name": "ANAMA",
+      "source_name": "ANAMA",
+      "source_root_url": "https://www.anama.it/",
+      "source_host": "www.anama.it",
+      "source_categories": [
+        "air_cargo_forwarding_association"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 12,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "air_cargo_forwarding_association",
+        "decision_doc_note": "Airfreight forwarding association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 24,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_anama_air_cargo_surface_01",
+          "seed_surface_name": "ANAMA seed surface 1",
+          "source_family_code": "it_anama_air_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 24,
+            "decision_doc_source_code": "it_anama_air_cargo",
+            "surface_slug": "https_www_anama_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 24,
+              "url": "https://www.anama.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 25,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_anama_air_cargo_surface_02",
+          "seed_surface_name": "ANAMA seed surface 2",
+          "source_family_code": "it_anama_air_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 25,
+            "decision_doc_source_code": "it_anama_air_cargo",
+            "surface_slug": "https_www_anama_it_chi_siamo",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 25,
+              "url": "https://www.anama.it/chi-siamo/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 13,
+      "source_family_code": "it_unione_interporti_riuniti",
+      "source_family_name": "Unione Interporti Riuniti",
+      "source_name": "Unione Interporti Riuniti",
+      "source_root_url": "https://www.unioneinterportiriuniti.org/",
+      "source_host": "www.unioneinterportiriuniti.org",
+      "source_categories": [
+        "freight_village_network_association"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 13,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "freight_village_network_association",
+        "decision_doc_note": "Interport/freight-village network association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 26,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_unione_interporti_riuniti_surface_01",
+          "seed_surface_name": "Unione Interporti Riuniti seed surface 1",
+          "source_family_code": "it_unione_interporti_riuniti",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 26,
+            "decision_doc_source_code": "it_unione_interporti_riuniti",
+            "surface_slug": "https_www_unioneinterportiriuniti_org",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 26,
+              "url": "https://www.unioneinterportiriuniti.org/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 27,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_unione_interporti_riuniti_surface_02",
+          "seed_surface_name": "Unione Interporti Riuniti seed surface 2",
+          "source_family_code": "it_unione_interporti_riuniti",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 27,
+            "decision_doc_source_code": "it_unione_interporti_riuniti",
+            "surface_slug": "https_www_unioneinterportiriuniti_org_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 27,
+              "url": "https://www.unioneinterportiriuniti.org/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 14,
+      "source_family_code": "it_ports_genoa",
+      "source_family_name": "Ports of Genoa",
+      "source_name": "Ports of Genoa",
+      "source_root_url": "https://www.portsofgenoa.com/",
+      "source_host": "www.portsofgenoa.com",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 14,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Western Ligurian Sea port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 28,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_ports_genoa_surface_01",
+          "seed_surface_name": "Ports of Genoa seed surface 1",
+          "source_family_code": "it_ports_genoa",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 28,
+            "decision_doc_source_code": "it_ports_genoa",
+            "surface_slug": "https_www_portsofgenoa_com",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 28,
+              "url": "https://www.portsofgenoa.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 29,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_ports_genoa_surface_02",
+          "seed_surface_name": "Ports of Genoa seed surface 2",
+          "source_family_code": "it_ports_genoa",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 29,
+            "decision_doc_source_code": "it_ports_genoa",
+            "surface_slug": "https_www_portsofgenoa_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 29,
+              "url": "https://www.portsofgenoa.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 15,
+      "source_family_code": "it_port_trieste",
+      "source_family_name": "Port of Trieste",
+      "source_name": "Port of Trieste",
+      "source_root_url": "https://www.porto.trieste.it/",
+      "source_host": "www.porto.trieste.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 15,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Northern Adriatic gateway port candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 30,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_trieste_surface_01",
+          "seed_surface_name": "Port of Trieste seed surface 1",
+          "source_family_code": "it_port_trieste",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 30,
+            "decision_doc_source_code": "it_port_trieste",
+            "surface_slug": "https_www_porto_trieste_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 30,
+              "url": "https://www.porto.trieste.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 31,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_trieste_surface_02",
+          "seed_surface_name": "Port of Trieste seed surface 2",
+          "source_family_code": "it_port_trieste",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 31,
+            "decision_doc_source_code": "it_port_trieste",
+            "surface_slug": "https_www_porto_trieste_it_eng",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 31,
+              "url": "https://www.porto.trieste.it/eng/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 16,
+      "source_family_code": "it_port_laspezia_carrara",
+      "source_family_name": "AdSP Mar Ligure Orientale",
+      "source_name": "AdSP Mar Ligure Orientale",
+      "source_root_url": "https://www.adspmarligureorientale.it/",
+      "source_host": "www.adspmarligureorientale.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 16,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "La Spezia and Marina di Carrara port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 32,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_laspezia_carrara_surface_01",
+          "seed_surface_name": "AdSP Mar Ligure Orientale seed surface 1",
+          "source_family_code": "it_port_laspezia_carrara",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 32,
+            "decision_doc_source_code": "it_port_laspezia_carrara",
+            "surface_slug": "https_www_adspmarligureorientale_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 32,
+              "url": "https://www.adspmarligureorientale.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 33,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_laspezia_carrara_surface_02",
+          "seed_surface_name": "AdSP Mar Ligure Orientale seed surface 2",
+          "source_family_code": "it_port_laspezia_carrara",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 33,
+            "decision_doc_source_code": "it_port_laspezia_carrara",
+            "surface_slug": "https_www_adspmarligureorientale_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 33,
+              "url": "https://www.adspmarligureorientale.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 17,
+      "source_family_code": "it_port_livorno",
+      "source_family_name": "AdSP Mar Tirreno Settentrionale",
+      "source_name": "AdSP Mar Tirreno Settentrionale",
+      "source_root_url": "https://www.portialtotirreno.it/",
+      "source_host": "www.portialtotirreno.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 17,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Livorno and northern Tyrrhenian port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 34,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_livorno_surface_01",
+          "seed_surface_name": "AdSP Mar Tirreno Settentrionale seed surface 1",
+          "source_family_code": "it_port_livorno",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 34,
+            "decision_doc_source_code": "it_port_livorno",
+            "surface_slug": "https_www_portialtotirreno_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 34,
+              "url": "https://www.portialtotirreno.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 35,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_livorno_surface_02",
+          "seed_surface_name": "AdSP Mar Tirreno Settentrionale seed surface 2",
+          "source_family_code": "it_port_livorno",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 35,
+            "decision_doc_source_code": "it_port_livorno",
+            "surface_slug": "https_www_portialtotirreno_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 35,
+              "url": "https://www.portialtotirreno.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 18,
+      "source_family_code": "it_port_venice_chioggia",
+      "source_family_name": "Ports of Venice and Chioggia",
+      "source_name": "Ports of Venice and Chioggia",
+      "source_root_url": "https://www.port.venice.it/",
+      "source_host": "www.port.venice.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 18,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "North Adriatic Sea port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 36,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_venice_chioggia_surface_01",
+          "seed_surface_name": "Ports of Venice and Chioggia seed surface 1",
+          "source_family_code": "it_port_venice_chioggia",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 36,
+            "decision_doc_source_code": "it_port_venice_chioggia",
+            "surface_slug": "https_www_port_venice_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 36,
+              "url": "https://www.port.venice.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 37,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_venice_chioggia_surface_02",
+          "seed_surface_name": "Ports of Venice and Chioggia seed surface 2",
+          "source_family_code": "it_port_venice_chioggia",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 37,
+            "decision_doc_source_code": "it_port_venice_chioggia",
+            "surface_slug": "https_www_port_venice_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 37,
+              "url": "https://www.port.venice.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 19,
+      "source_family_code": "it_port_ravenna",
+      "source_family_name": "Port of Ravenna",
+      "source_name": "Port of Ravenna",
+      "source_root_url": "https://www.port.ravenna.it/",
+      "source_host": "www.port.ravenna.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 19,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Ravenna port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 38,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_ravenna_surface_01",
+          "seed_surface_name": "Port of Ravenna seed surface 1",
+          "source_family_code": "it_port_ravenna",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 38,
+            "decision_doc_source_code": "it_port_ravenna",
+            "surface_slug": "https_www_port_ravenna_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 38,
+              "url": "https://www.port.ravenna.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 39,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_ravenna_surface_02",
+          "seed_surface_name": "Port of Ravenna seed surface 2",
+          "source_family_code": "it_port_ravenna",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 39,
+            "decision_doc_source_code": "it_port_ravenna",
+            "surface_slug": "https_www_port_ravenna_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 39,
+              "url": "https://www.port.ravenna.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 20,
+      "source_family_code": "it_port_gioia_tauro",
+      "source_family_name": "Port of Gioia Tauro",
+      "source_name": "Port of Gioia Tauro",
+      "source_root_url": "https://www.portodigioiatauro.it/",
+      "source_host": "www.portodigioiatauro.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 20,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Gioia Tauro port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 40,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_gioia_tauro_surface_01",
+          "seed_surface_name": "Port of Gioia Tauro seed surface 1",
+          "source_family_code": "it_port_gioia_tauro",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 40,
+            "decision_doc_source_code": "it_port_gioia_tauro",
+            "surface_slug": "https_www_portodigioiatauro_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 40,
+              "url": "https://www.portodigioiatauro.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 41,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_gioia_tauro_surface_02",
+          "seed_surface_name": "Port of Gioia Tauro seed surface 2",
+          "source_family_code": "it_port_gioia_tauro",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 41,
+            "decision_doc_source_code": "it_port_gioia_tauro",
+            "surface_slug": "https_www_portodigioiatauro_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 41,
+              "url": "https://www.portodigioiatauro.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 21,
+      "source_family_code": "it_port_naples_salerno",
+      "source_family_name": "Ports of Naples and Salerno",
+      "source_name": "Ports of Naples and Salerno",
+      "source_root_url": "https://www.porto.napoli.it/",
+      "source_host": "www.porto.napoli.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 21,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Central Tyrrhenian port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 42,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_naples_salerno_surface_01",
+          "seed_surface_name": "Ports of Naples and Salerno seed surface 1",
+          "source_family_code": "it_port_naples_salerno",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 42,
+            "decision_doc_source_code": "it_port_naples_salerno",
+            "surface_slug": "https_www_porto_napoli_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 42,
+              "url": "https://www.porto.napoli.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 43,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_naples_salerno_surface_02",
+          "seed_surface_name": "Ports of Naples and Salerno seed surface 2",
+          "source_family_code": "it_port_naples_salerno",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 43,
+            "decision_doc_source_code": "it_port_naples_salerno",
+            "surface_slug": "https_www_porto_napoli_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 43,
+              "url": "https://www.porto.napoli.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 22,
+      "source_family_code": "it_port_bari_brindisi",
+      "source_family_name": "AdSP Mare Adriatico Meridionale",
+      "source_name": "AdSP Mare Adriatico Meridionale",
+      "source_root_url": "https://www.adspmam.it/",
+      "source_host": "www.adspmam.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 22,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Southern Adriatic port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 44,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_bari_brindisi_surface_01",
+          "seed_surface_name": "AdSP Mare Adriatico Meridionale seed surface 1",
+          "source_family_code": "it_port_bari_brindisi",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 44,
+            "decision_doc_source_code": "it_port_bari_brindisi",
+            "surface_slug": "https_www_adspmam_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 44,
+              "url": "https://www.adspmam.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 45,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_bari_brindisi_surface_02",
+          "seed_surface_name": "AdSP Mare Adriatico Meridionale seed surface 2",
+          "source_family_code": "it_port_bari_brindisi",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 45,
+            "decision_doc_source_code": "it_port_bari_brindisi",
+            "surface_slug": "https_www_adspmam_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 45,
+              "url": "https://www.adspmam.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 23,
+      "source_family_code": "it_port_civitavecchia",
+      "source_family_name": "Ports of Rome",
+      "source_name": "Ports of Rome",
+      "source_root_url": "https://www.portidiroma.it/",
+      "source_host": "www.portidiroma.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 23,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Civitavecchia, Fiumicino and Gaeta port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 46,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_civitavecchia_surface_01",
+          "seed_surface_name": "Ports of Rome seed surface 1",
+          "source_family_code": "it_port_civitavecchia",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 46,
+            "decision_doc_source_code": "it_port_civitavecchia",
+            "surface_slug": "https_www_portidiroma_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 46,
+              "url": "https://www.portidiroma.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 47,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_civitavecchia_surface_02",
+          "seed_surface_name": "Ports of Rome seed surface 2",
+          "source_family_code": "it_port_civitavecchia",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 47,
+            "decision_doc_source_code": "it_port_civitavecchia",
+            "surface_slug": "https_www_portidiroma_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 47,
+              "url": "https://www.portidiroma.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 24,
+      "source_family_code": "it_port_taranto",
+      "source_family_name": "Port of Taranto",
+      "source_name": "Port of Taranto",
+      "source_root_url": "https://www.port.taranto.it/",
+      "source_host": "www.port.taranto.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 24,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Taranto port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 48,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_taranto_surface_01",
+          "seed_surface_name": "Port of Taranto seed surface 1",
+          "source_family_code": "it_port_taranto",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 48,
+            "decision_doc_source_code": "it_port_taranto",
+            "surface_slug": "https_www_port_taranto_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 48,
+              "url": "https://www.port.taranto.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 49,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_taranto_surface_02",
+          "seed_surface_name": "Port of Taranto seed surface 2",
+          "source_family_code": "it_port_taranto",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 49,
+            "decision_doc_source_code": "it_port_taranto",
+            "surface_slug": "https_www_port_taranto_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 49,
+              "url": "https://www.port.taranto.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 25,
+      "source_family_code": "it_port_ancona",
+      "source_family_name": "Port of Ancona",
+      "source_name": "Port of Ancona",
+      "source_root_url": "https://www.porto.ancona.it/",
+      "source_host": "www.porto.ancona.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 25,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Central Adriatic port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 50,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_ancona_surface_01",
+          "seed_surface_name": "Port of Ancona seed surface 1",
+          "source_family_code": "it_port_ancona",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 50,
+            "decision_doc_source_code": "it_port_ancona",
+            "surface_slug": "https_www_porto_ancona_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 50,
+              "url": "https://www.porto.ancona.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 51,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_ancona_surface_02",
+          "seed_surface_name": "Port of Ancona seed surface 2",
+          "source_family_code": "it_port_ancona",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 51,
+            "decision_doc_source_code": "it_port_ancona",
+            "surface_slug": "https_www_porto_ancona_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 51,
+              "url": "https://www.porto.ancona.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 26,
+      "source_family_code": "it_port_sardinia",
+      "source_family_name": "AdSP Mare di Sardegna",
+      "source_name": "AdSP Mare di Sardegna",
+      "source_root_url": "https://www.adspmaredisardegna.it/",
+      "source_host": "www.adspmaredisardegna.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 26,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Sardinian port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 52,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_sardinia_surface_01",
+          "seed_surface_name": "AdSP Mare di Sardegna seed surface 1",
+          "source_family_code": "it_port_sardinia",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 52,
+            "decision_doc_source_code": "it_port_sardinia",
+            "surface_slug": "https_www_adspmaredisardegna_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 52,
+              "url": "https://www.adspmaredisardegna.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 53,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_sardinia_surface_02",
+          "seed_surface_name": "AdSP Mare di Sardegna seed surface 2",
+          "source_family_code": "it_port_sardinia",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 53,
+            "decision_doc_source_code": "it_port_sardinia",
+            "surface_slug": "https_www_adspmaredisardegna_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 53,
+              "url": "https://www.adspmaredisardegna.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 27,
+      "source_family_code": "it_port_western_sicily",
+      "source_family_name": "AdSP Mare di Sicilia Occidentale",
+      "source_name": "AdSP Mare di Sicilia Occidentale",
+      "source_root_url": "https://www.adsppalermo.it/",
+      "source_host": "www.adsppalermo.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 27,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Western Sicily port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 54,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_western_sicily_surface_01",
+          "seed_surface_name": "AdSP Mare di Sicilia Occidentale seed surface 1",
+          "source_family_code": "it_port_western_sicily",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 54,
+            "decision_doc_source_code": "it_port_western_sicily",
+            "surface_slug": "https_www_adsppalermo_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 54,
+              "url": "https://www.adsppalermo.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 55,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_western_sicily_surface_02",
+          "seed_surface_name": "AdSP Mare di Sicilia Occidentale seed surface 2",
+          "source_family_code": "it_port_western_sicily",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 55,
+            "decision_doc_source_code": "it_port_western_sicily",
+            "surface_slug": "https_www_adsppalermo_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 55,
+              "url": "https://www.adsppalermo.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 28,
+      "source_family_code": "it_port_eastern_sicily",
+      "source_family_name": "AdSP Mare di Sicilia Orientale",
+      "source_name": "AdSP Mare di Sicilia Orientale",
+      "source_root_url": "https://www.adspmaresiciliaorientale.it/",
+      "source_host": "www.adspmaresiciliaorientale.it",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 28,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Eastern Sicily port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 56,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_port_eastern_sicily_surface_01",
+          "seed_surface_name": "AdSP Mare di Sicilia Orientale seed surface 1",
+          "source_family_code": "it_port_eastern_sicily",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 56,
+            "decision_doc_source_code": "it_port_eastern_sicily",
+            "surface_slug": "https_www_adspmaresiciliaorientale_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 56,
+              "url": "https://www.adspmaresiciliaorientale.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 57,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_port_eastern_sicily_surface_02",
+          "seed_surface_name": "AdSP Mare di Sicilia Orientale seed surface 2",
+          "source_family_code": "it_port_eastern_sicily",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 57,
+            "decision_doc_source_code": "it_port_eastern_sicily",
+            "surface_slug": "https_www_adspmaresiciliaorientale_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 57,
+              "url": "https://www.adspmaresiciliaorientale.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 29,
+      "source_family_code": "it_malpensa_cargo",
+      "source_family_name": "Milano Malpensa Cargo",
+      "source_name": "Milano Malpensa Cargo",
+      "source_root_url": "https://www.milanomalpensacargo.com/en",
+      "source_host": "www.milanomalpensacargo.com",
+      "source_categories": [
+        "airport_cargo"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 4,
+      "seed_url_count": 4,
+      "family_metadata": {
+        "decision_doc_source_index": 29,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "airport_cargo",
+        "decision_doc_note": "Primary air cargo hub candidate; multiple cargo-community surfaces.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 58,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_malpensa_cargo_surface_01",
+          "seed_surface_name": "Milano Malpensa Cargo seed surface 1",
+          "source_family_code": "it_malpensa_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 58,
+            "decision_doc_source_code": "it_malpensa_cargo",
+            "surface_slug": "https_www_milanomalpensacargo_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 58,
+              "url": "https://www.milanomalpensacargo.com/en",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 59,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_malpensa_cargo_surface_02",
+          "seed_surface_name": "Milano Malpensa Cargo seed surface 2",
+          "source_family_code": "it_malpensa_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 59,
+            "decision_doc_source_code": "it_malpensa_cargo",
+            "surface_slug": "https_www_milanomalpensacargo_com_en_cargo_city",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 59,
+              "url": "https://www.milanomalpensacargo.com/en/cargo-city",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 60,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "it_malpensa_cargo_surface_03",
+          "seed_surface_name": "Milano Malpensa Cargo seed surface 3",
+          "source_family_code": "it_malpensa_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 60,
+            "decision_doc_source_code": "it_malpensa_cargo",
+            "surface_slug": "https_www_milanomalpensacargo_com_en_flights",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 60,
+              "url": "https://www.milanomalpensacargo.com/en/flights",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 61,
+          "family_seed_surface_index": 4,
+          "seed_surface_code": "it_malpensa_cargo_surface_04",
+          "seed_surface_name": "Milano Malpensa Cargo seed surface 4",
+          "source_family_code": "it_malpensa_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 61,
+            "decision_doc_source_code": "it_malpensa_cargo",
+            "surface_slug": "https_www_milanomalpensacargo_com_en_operators",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 61,
+              "url": "https://www.milanomalpensacargo.com/en/operators",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 30,
+      "source_family_code": "it_adr_cargo",
+      "source_family_name": "Aeroporti di Roma Cargo",
+      "source_name": "Aeroporti di Roma Cargo",
+      "source_root_url": "https://www.adr.it/web/aeroporti-di-roma-en/cargo",
+      "source_host": "www.adr.it",
+      "source_categories": [
+        "airport_cargo"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 30,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "airport_cargo",
+        "decision_doc_note": "Rome airport cargo candidate; live probe required before trust elevation.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 62,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_adr_cargo_surface_01",
+          "seed_surface_name": "Aeroporti di Roma Cargo seed surface 1",
+          "source_family_code": "it_adr_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 62,
+            "decision_doc_source_code": "it_adr_cargo",
+            "surface_slug": "https_www_adr_it_web_aeroporti_di_roma_en_cargo",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 62,
+              "url": "https://www.adr.it/web/aeroporti-di-roma-en/cargo",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 63,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_adr_cargo_surface_02",
+          "seed_surface_name": "Aeroporti di Roma Cargo seed surface 2",
+          "source_family_code": "it_adr_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 63,
+            "decision_doc_source_code": "it_adr_cargo",
+            "surface_slug": "https_www_adr_it_web_aeroporti_di_roma_en_business_cargo",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 63,
+              "url": "https://www.adr.it/web/aeroporti-di-roma-en/business/cargo",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 31,
+      "source_family_code": "it_bologna_airport_cargo",
+      "source_family_name": "Bologna Airport Cargo",
+      "source_name": "Bologna Airport Cargo",
+      "source_root_url": "https://www.bologna-airport.it/en/the-company/business/aviation/cargo/?idC=62405",
+      "source_host": "www.bologna-airport.it",
+      "source_categories": [
+        "airport_cargo"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 31,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "airport_cargo",
+        "decision_doc_note": "Bologna cargo and goods transport candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 64,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_bologna_airport_cargo_surface_01",
+          "seed_surface_name": "Bologna Airport Cargo seed surface 1",
+          "source_family_code": "it_bologna_airport_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 64,
+            "decision_doc_source_code": "it_bologna_airport_cargo",
+            "surface_slug": "https_www_bologna_airport_it_en_the_company_business_aviation_cargo_idc_62405",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 64,
+              "url": "https://www.bologna-airport.it/en/the-company/business/aviation/cargo/?idC=62405",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 65,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_bologna_airport_cargo_surface_02",
+          "seed_surface_name": "Bologna Airport Cargo seed surface 2",
+          "source_family_code": "it_bologna_airport_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 65,
+            "decision_doc_source_code": "it_bologna_airport_cargo",
+            "surface_slug": "https_www_bologna_airport_it_it_la_societa_business_aviation_cargo_idc_62405",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 65,
+              "url": "https://www.bologna-airport.it/it/la-societa/business/aviation/cargo/?idC=62405",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 66,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "it_bologna_airport_cargo_surface_03",
+          "seed_surface_name": "Bologna Airport Cargo seed surface 3",
+          "source_family_code": "it_bologna_airport_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 66,
+            "decision_doc_source_code": "it_bologna_airport_cargo",
+            "surface_slug": "https_www_bologna_airport_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 66,
+              "url": "https://www.bologna-airport.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 32,
+      "source_family_code": "it_venice_airport_cargo",
+      "source_family_name": "Venice Airport Cargo",
+      "source_name": "Venice Airport Cargo",
+      "source_root_url": "https://www.veneziaairport.it/en/transport/cargo.html",
+      "source_host": "www.veneziaairport.it",
+      "source_categories": [
+        "airport_cargo"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 32,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "airport_cargo",
+        "decision_doc_note": "Venice air cargo candidate; URL structure must be confirmed by later live probe.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 67,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_venice_airport_cargo_surface_01",
+          "seed_surface_name": "Venice Airport Cargo seed surface 1",
+          "source_family_code": "it_venice_airport_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 67,
+            "decision_doc_source_code": "it_venice_airport_cargo",
+            "surface_slug": "https_www_veneziaairport_it_en_transport_cargo_html",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 67,
+              "url": "https://www.veneziaairport.it/en/transport/cargo.html",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 68,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_venice_airport_cargo_surface_02",
+          "seed_surface_name": "Venice Airport Cargo seed surface 2",
+          "source_family_code": "it_venice_airport_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 68,
+            "decision_doc_source_code": "it_venice_airport_cargo",
+            "surface_slug": "https_www_veneziaairport_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 68,
+              "url": "https://www.veneziaairport.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 33,
+      "source_family_code": "it_alha_group",
+      "source_family_name": "Alha Group",
+      "source_name": "Alha Group",
+      "source_root_url": "https://alhagroup.com/en/",
+      "source_host": "alhagroup.com",
+      "source_categories": [
+        "air_cargo_handler"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 33,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "air_cargo_handler",
+        "decision_doc_note": "Air cargo handling/trucking ecosystem candidate; commercial source, lower priority than official bodies.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 69,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_alha_group_surface_01",
+          "seed_surface_name": "Alha Group seed surface 1",
+          "source_family_code": "it_alha_group",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 69,
+            "decision_doc_source_code": "it_alha_group",
+            "surface_slug": "https_alhagroup_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 69,
+              "url": "https://alhagroup.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 70,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_alha_group_surface_02",
+          "seed_surface_name": "Alha Group seed surface 2",
+          "source_family_code": "it_alha_group",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 70,
+            "decision_doc_source_code": "it_alha_group",
+            "surface_slug": "https_alhagroup_com_en_services",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 70,
+              "url": "https://alhagroup.com/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 34,
+      "source_family_code": "it_aircargo_italia",
+      "source_family_name": "Aircargo Italia",
+      "source_name": "Aircargo Italia",
+      "source_root_url": "https://www.aircargoitalia.it/en/",
+      "source_host": "www.aircargoitalia.it",
+      "source_categories": [
+        "air_cargo_handler"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 34,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "air_cargo_handler",
+        "decision_doc_note": "Air cargo handling/GSSA candidate; commercial source, live check required.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 71,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_aircargo_italia_surface_01",
+          "seed_surface_name": "Aircargo Italia seed surface 1",
+          "source_family_code": "it_aircargo_italia",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 71,
+            "decision_doc_source_code": "it_aircargo_italia",
+            "surface_slug": "https_www_aircargoitalia_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 71,
+              "url": "https://www.aircargoitalia.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 72,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_aircargo_italia_surface_02",
+          "seed_surface_name": "Aircargo Italia seed surface 2",
+          "source_family_code": "it_aircargo_italia",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 72,
+            "decision_doc_source_code": "it_aircargo_italia",
+            "surface_slug": "https_www_aircargoitalia_it_en_about_us",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 72,
+              "url": "https://www.aircargoitalia.it/en/about-us/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 35,
+      "source_family_code": "it_interporto_bologna",
+      "source_family_name": "Interporto Bologna",
+      "source_name": "Interporto Bologna",
+      "source_root_url": "https://www.bo.interporto.it/",
+      "source_host": "www.bo.interporto.it",
+      "source_categories": [
+        "interport_freight_village"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 35,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "interport_freight_village",
+        "decision_doc_note": "Freight village/intermodal node candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 73,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_interporto_bologna_surface_01",
+          "seed_surface_name": "Interporto Bologna seed surface 1",
+          "source_family_code": "it_interporto_bologna",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 73,
+            "decision_doc_source_code": "it_interporto_bologna",
+            "surface_slug": "https_www_bo_interporto_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 73,
+              "url": "https://www.bo.interporto.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 74,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_interporto_bologna_surface_02",
+          "seed_surface_name": "Interporto Bologna seed surface 2",
+          "source_family_code": "it_interporto_bologna",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 74,
+            "decision_doc_source_code": "it_interporto_bologna",
+            "surface_slug": "https_www_bo_interporto_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 74,
+              "url": "https://www.bo.interporto.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 36,
+      "source_family_code": "it_interporto_padova",
+      "source_family_name": "Interporto Padova",
+      "source_name": "Interporto Padova",
+      "source_root_url": "https://www.interportopd.it/",
+      "source_host": "www.interportopd.it",
+      "source_categories": [
+        "interport_freight_village"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 36,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "interport_freight_village",
+        "decision_doc_note": "Freight village/intermodal node candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 75,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_interporto_padova_surface_01",
+          "seed_surface_name": "Interporto Padova seed surface 1",
+          "source_family_code": "it_interporto_padova",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 75,
+            "decision_doc_source_code": "it_interporto_padova",
+            "surface_slug": "https_www_interportopd_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 75,
+              "url": "https://www.interportopd.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 76,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_interporto_padova_surface_02",
+          "seed_surface_name": "Interporto Padova seed surface 2",
+          "source_family_code": "it_interporto_padova",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 76,
+            "decision_doc_source_code": "it_interporto_padova",
+            "surface_slug": "https_www_interportopd_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 76,
+              "url": "https://www.interportopd.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 37,
+      "source_family_code": "it_quadrante_europa_verona",
+      "source_family_name": "Quadrante Europa Verona",
+      "source_name": "Quadrante Europa Verona",
+      "source_root_url": "https://www.quadranteeuropa.it/",
+      "source_host": "www.quadranteeuropa.it",
+      "source_categories": [
+        "interport_freight_village"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 37,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "interport_freight_village",
+        "decision_doc_note": "Verona intermodal/freight village candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 77,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_quadrante_europa_verona_surface_01",
+          "seed_surface_name": "Quadrante Europa Verona seed surface 1",
+          "source_family_code": "it_quadrante_europa_verona",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 77,
+            "decision_doc_source_code": "it_quadrante_europa_verona",
+            "surface_slug": "https_www_quadranteeuropa_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 77,
+              "url": "https://www.quadranteeuropa.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 78,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_quadrante_europa_verona_surface_02",
+          "seed_surface_name": "Quadrante Europa Verona seed surface 2",
+          "source_family_code": "it_quadrante_europa_verona",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 78,
+            "decision_doc_source_code": "it_quadrante_europa_verona",
+            "surface_slug": "https_www_quadranteeuropa_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 78,
+              "url": "https://www.quadranteeuropa.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 38,
+      "source_family_code": "it_cim_novara",
+      "source_family_name": "CIM Novara",
+      "source_name": "CIM Novara",
+      "source_root_url": "https://www.cimspa.it/",
+      "source_host": "www.cimspa.it",
+      "source_categories": [
+        "interport_freight_village"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 38,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "interport_freight_village",
+        "decision_doc_note": "Novara intermodal terminal/freight village candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 79,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_cim_novara_surface_01",
+          "seed_surface_name": "CIM Novara seed surface 1",
+          "source_family_code": "it_cim_novara",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 79,
+            "decision_doc_source_code": "it_cim_novara",
+            "surface_slug": "https_www_cimspa_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 79,
+              "url": "https://www.cimspa.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 80,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_cim_novara_surface_02",
+          "seed_surface_name": "CIM Novara seed surface 2",
+          "source_family_code": "it_cim_novara",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 80,
+            "decision_doc_source_code": "it_cim_novara",
+            "surface_slug": "https_www_cimspa_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 80,
+              "url": "https://www.cimspa.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 39,
+      "source_family_code": "it_interporto_toscano",
+      "source_family_name": "Interporto Toscano Amerigo Vespucci",
+      "source_name": "Interporto Toscano Amerigo Vespucci",
+      "source_root_url": "https://www.interportotoscano.com/",
+      "source_host": "www.interportotoscano.com",
+      "source_categories": [
+        "interport_freight_village"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 39,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "interport_freight_village",
+        "decision_doc_note": "Tuscan freight village candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 81,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_interporto_toscano_surface_01",
+          "seed_surface_name": "Interporto Toscano Amerigo Vespucci seed surface 1",
+          "source_family_code": "it_interporto_toscano",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 81,
+            "decision_doc_source_code": "it_interporto_toscano",
+            "surface_slug": "https_www_interportotoscano_com",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 81,
+              "url": "https://www.interportotoscano.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 82,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_interporto_toscano_surface_02",
+          "seed_surface_name": "Interporto Toscano Amerigo Vespucci seed surface 2",
+          "source_family_code": "it_interporto_toscano",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 82,
+            "decision_doc_source_code": "it_interporto_toscano",
+            "surface_slug": "https_www_interportotoscano_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 82,
+              "url": "https://www.interportotoscano.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 40,
+      "source_family_code": "it_interporto_campano",
+      "source_family_name": "Interporto Campano",
+      "source_name": "Interporto Campano",
+      "source_root_url": "https://www.interportocampano.it/",
+      "source_host": "www.interportocampano.it",
+      "source_categories": [
+        "interport_freight_village"
+      ],
+      "language_code": "it",
+      "language_name": "Italian",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 40,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "interport_freight_village",
+        "decision_doc_note": "Campania freight village candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 83,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "it_interporto_campano_surface_01",
+          "seed_surface_name": "Interporto Campano seed surface 1",
+          "source_family_code": "it_interporto_campano",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 83,
+            "decision_doc_source_code": "it_interporto_campano",
+            "surface_slug": "https_www_interportocampano_it",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 83,
+              "url": "https://www.interportocampano.it/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 84,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "it_interporto_campano_surface_02",
+          "seed_surface_name": "Interporto Campano seed surface 2",
+          "source_family_code": "it_interporto_campano",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 84,
+            "decision_doc_source_code": "it_interporto_campano",
+            "surface_slug": "https_www_interportocampano_it_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 84,
+              "url": "https://www.interportocampano.it/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
