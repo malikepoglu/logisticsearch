@@ -1,0 +1,3267 @@
+{
+  "schema": "source_families_v2",
+  "schema_version": "source_families_v2",
+  "catalog_version": "russian_source_families_v2",
+  "language_code": "ru",
+  "language_name": "Russian",
+  "candidate_manifest": true,
+  "is_live": false,
+  "enabled": false,
+  "needs_live_check": true,
+  "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+  "safety_state": "candidate_only_not_live",
+  "standardization_gate": "R343_RU_SOURCE_SEED_CATALOG_LOCAL_ONLY",
+  "last_rewritten_by_gate": "R343_RU_SOURCE_SEED_CATALOG_LOCAL_ONLY",
+  "created_from_decision_doc": "docs/TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md",
+  "decision_doc_sha256": "51ffaaf15061ebf8b341df40895d54b995887f3988a49cb25299dd3b7c74e3d0",
+  "canonical_rule_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md",
+  "canonical_rule_doc_sha256": "65b36104f039962f3b6c8cd3c70b2575e0de00f27e50732e18953749d89bb49d",
+  "generated_at_utc": "2026-05-16T15:00:08Z",
+  "standardization_policy": {
+    "schema": "source_families_v2",
+    "candidate_manifest_required": true,
+    "is_live_required": false,
+    "enabled_required": false,
+    "needs_live_check_required": true,
+    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+    "safety_state": "candidate_only_not_live",
+    "directory_first_policy_applied": true,
+    "crawler_core_raw_links_are_not_added_seeds": true,
+    "parse_core_may_create_added_seeds_later": true,
+    "desktop_import_final_validation_later": true,
+    "no_db_insert": true,
+    "no_frontier_activation": true,
+    "no_url_fetch_live_probe": true,
+    "no_pi51c_live_activation": true
+  },
+  "safety_guards": {
+    "candidate_manifest": true,
+    "is_live": false,
+    "enabled": false,
+    "needs_live_check": true,
+    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+    "safety_state": "candidate_only_not_live",
+    "no_db_insert": true,
+    "no_frontier_activation": true,
+    "no_url_fetch_live_probe": true,
+    "no_pi51c_live_activation": true
+  },
+  "metrics": {
+    "source_family_count": 40,
+    "seed_surface_count": 84,
+    "seed_url_count": 84,
+    "unique_seed_url_count": 84,
+    "duplicate_seed_url_count": 0,
+    "non_https_seed_url_count": 0,
+    "empty_seed_url_count": 0,
+    "directory_first_source_family_note_count": 21,
+    "quality_counts": {
+      "A": 1,
+      "A_MINUS": 11,
+      "A_PLUS": 1,
+      "B": 16,
+      "B_PLUS": 11
+    },
+    "decision_counts": {
+      "ACCEPT_REVIEW": 40
+    }
+  },
+  "source_families": [
+    {
+      "source_family_index": 1,
+      "source_code": "RU001_FIATA_ARE",
+      "source_family_code": "RU001_FIATA_ARE",
+      "name": "FIATA Russia and FAR/ARE association directory surfaces",
+      "category": "association_directory",
+      "quality": "A_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 3,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: FIATA country listing plus Russian freight forwarding association surfaces.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 1,
+          "seed_surface_code": "RU001_FIATA_ARE_SURFACE_01_https_fiata_org_directory_ru",
+          "source_code": "RU001_FIATA_ARE",
+          "surface_name": "FIATA Russia and FAR/ARE association directory surfaces seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://fiata.org/directory/ru/",
+          "seed_urls": [
+            {
+              "seed_url_index": 1,
+              "source_code": "RU001_FIATA_ARE",
+              "url": "https://fiata.org/directory/ru/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 2,
+          "seed_surface_code": "RU001_FIATA_ARE_SURFACE_02_https_en_far_aerf_ru_overview",
+          "source_code": "RU001_FIATA_ARE",
+          "surface_name": "FIATA Russia and FAR/ARE association directory surfaces seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://en.far-aerf.ru/overview",
+          "seed_urls": [
+            {
+              "seed_url_index": 2,
+              "source_code": "RU001_FIATA_ARE",
+              "url": "https://en.far-aerf.ru/overview",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 3,
+          "seed_surface_code": "RU001_FIATA_ARE_SURFACE_03_https_far_aerf_ru",
+          "source_code": "RU001_FIATA_ARE",
+          "surface_name": "FIATA Russia and FAR/ARE association directory surfaces seed surface 3",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://far-aerf.ru/",
+          "seed_urls": [
+            {
+              "seed_url_index": 3,
+              "source_code": "RU001_FIATA_ARE",
+              "url": "https://far-aerf.ru/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 2,
+      "source_code": "RU002_FREIGHTNET_RUSSIA",
+      "source_family_code": "RU002_FREIGHTNET_RUSSIA",
+      "name": "Freightnet Russia logistics directory",
+      "category": "commercial_b2b_directory",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 3,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: freight and forwarding directory pages for Russia.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 4,
+          "seed_surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_01_https_www_freightnet_com_directory_p1_cr",
+          "source_code": "RU002_FREIGHTNET_RUSSIA",
+          "surface_name": "Freightnet Russia logistics directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.freightnet.com/directory/p1/cRU/s99.htm",
+          "seed_urls": [
+            {
+              "seed_url_index": 4,
+              "source_code": "RU002_FREIGHTNET_RUSSIA",
+              "url": "https://www.freightnet.com/directory/p1/cRU/s99.htm",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 5,
+          "seed_surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_02_https_www_freightnet_com_directory_p2_cr",
+          "source_code": "RU002_FREIGHTNET_RUSSIA",
+          "surface_name": "Freightnet Russia logistics directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.freightnet.com/directory/p2/cRU/s99.htm",
+          "seed_urls": [
+            {
+              "seed_url_index": 5,
+              "source_code": "RU002_FREIGHTNET_RUSSIA",
+              "url": "https://www.freightnet.com/directory/p2/cRU/s99.htm",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 6,
+          "seed_surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_03_https_www_freightnet_com_directory_p1_cr",
+          "source_code": "RU002_FREIGHTNET_RUSSIA",
+          "surface_name": "Freightnet Russia logistics directory seed surface 3",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.freightnet.com/directory/p1/cRU/s30.htm",
+          "seed_urls": [
+            {
+              "seed_url_index": 6,
+              "source_code": "RU002_FREIGHTNET_RUSSIA",
+              "url": "https://www.freightnet.com/directory/p1/cRU/s30.htm",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 3,
+      "source_code": "RU003_FORWARDINGCOMPANIES_RU",
+      "source_family_code": "RU003_FORWARDINGCOMPANIES_RU",
+      "name": "ForwardingCompanies Russian Federation directory",
+      "category": "commercial_b2b_directory",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 3,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: country and association pages for freight forwarders.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 7,
+          "seed_surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_01_https_forwardingcompanies_com_in_russian",
+          "source_code": "RU003_FORWARDINGCOMPANIES_RU",
+          "surface_name": "ForwardingCompanies Russian Federation directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://forwardingcompanies.com/in/russian-federation",
+          "seed_urls": [
+            {
+              "seed_url_index": 7,
+              "source_code": "RU003_FORWARDINGCOMPANIES_RU",
+              "url": "https://forwardingcompanies.com/in/russian-federation",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 8,
+          "seed_surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_02_https_forwardingcompanies_com_associatio",
+          "source_code": "RU003_FORWARDINGCOMPANIES_RU",
+          "surface_name": "ForwardingCompanies Russian Federation directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://forwardingcompanies.com/association/the-russian-association-of-freight-forwarding-and-logistic-organizations-far-",
+          "seed_urls": [
+            {
+              "seed_url_index": 8,
+              "source_code": "RU003_FORWARDINGCOMPANIES_RU",
+              "url": "https://forwardingcompanies.com/association/the-russian-association-of-freight-forwarding-and-logistic-organizations-far-",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 9,
+          "seed_surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_03_https_forwardingcompanies_com_in_russian",
+          "source_code": "RU003_FORWARDINGCOMPANIES_RU",
+          "surface_name": "ForwardingCompanies Russian Federation directory seed surface 3",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://forwardingcompanies.com/in/russian-federation/moscow",
+          "seed_urls": [
+            {
+              "seed_url_index": 9,
+              "source_code": "RU003_FORWARDINGCOMPANIES_RU",
+              "url": "https://forwardingcompanies.com/in/russian-federation/moscow",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 4,
+      "source_code": "RU004_CARGO_YELLOW_PAGES",
+      "source_family_code": "RU004_CARGO_YELLOW_PAGES",
+      "name": "CargoYellowPages Russia freight and cargo directories",
+      "category": "commercial_b2b_directory",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 3,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: Russia country cargo agent and freight forwarder lists.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 10,
+          "seed_surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_01_https_www_cargoyellowpages_com_russia_fr",
+          "source_code": "RU004_CARGO_YELLOW_PAGES",
+          "surface_name": "CargoYellowPages Russia freight and cargo directories seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.cargoyellowpages.com/russia_freight_forwarders_cargo_agents.html",
+          "seed_urls": [
+            {
+              "seed_url_index": 10,
+              "source_code": "RU004_CARGO_YELLOW_PAGES",
+              "url": "https://www.cargoyellowpages.com/russia_freight_forwarders_cargo_agents.html",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 11,
+          "seed_surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_02_https_www_cargoyellowpages_com_en_russia",
+          "source_code": "RU004_CARGO_YELLOW_PAGES",
+          "surface_name": "CargoYellowPages Russia freight and cargo directories seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.cargoyellowpages.com/en/russia/",
+          "seed_urls": [
+            {
+              "seed_url_index": 11,
+              "source_code": "RU004_CARGO_YELLOW_PAGES",
+              "url": "https://www.cargoyellowpages.com/en/russia/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 12,
+          "seed_surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_03_https_www_cargoyellowpages_com_russia",
+          "source_code": "RU004_CARGO_YELLOW_PAGES",
+          "surface_name": "CargoYellowPages Russia freight and cargo directories seed surface 3",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.cargoyellowpages.com/russia/",
+          "seed_urls": [
+            {
+              "seed_url_index": 12,
+              "source_code": "RU004_CARGO_YELLOW_PAGES",
+              "url": "https://www.cargoyellowpages.com/russia/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 5,
+      "source_code": "RU005_AZFREIGHT_RUSSIA",
+      "source_family_code": "RU005_AZFREIGHT_RUSSIA",
+      "name": "AZFreight Russia freight forwarder directory",
+      "category": "commercial_b2b_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: logistics and freight forwarder country pages.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 13,
+          "seed_surface_code": "RU005_AZFREIGHT_RUSSIA_SURFACE_01_https_azfreight_com_country_facility_fre",
+          "source_code": "RU005_AZFREIGHT_RUSSIA",
+          "surface_name": "AZFreight Russia freight forwarder directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://azfreight.com/country-facility/freight-forwarders-in-russia/",
+          "seed_urls": [
+            {
+              "seed_url_index": 13,
+              "source_code": "RU005_AZFREIGHT_RUSSIA",
+              "url": "https://azfreight.com/country-facility/freight-forwarders-in-russia/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 14,
+          "seed_surface_code": "RU005_AZFREIGHT_RUSSIA_SURFACE_02_https_azfreight_com_countries_russia",
+          "source_code": "RU005_AZFREIGHT_RUSSIA",
+          "surface_name": "AZFreight Russia freight forwarder directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://azfreight.com/countries/russia/",
+          "seed_urls": [
+            {
+              "seed_url_index": 14,
+              "source_code": "RU005_AZFREIGHT_RUSSIA",
+              "url": "https://azfreight.com/countries/russia/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 6,
+      "source_code": "RU006_JCTRANS_RUSSIA",
+      "source_family_code": "RU006_JCTRANS_RUSSIA",
+      "name": "JCtrans Russia freight forwarder directory",
+      "category": "commercial_b2b_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: country company list surface.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 15,
+          "seed_surface_code": "RU006_JCTRANS_RUSSIA_SURFACE_01_https_m_jctrans_com_en_company_listc_rus",
+          "source_code": "RU006_JCTRANS_RUSSIA",
+          "surface_name": "JCtrans Russia freight forwarder directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://m.jctrans.com/en/company/listc/Russia/0-0",
+          "seed_urls": [
+            {
+              "seed_url_index": 15,
+              "source_code": "RU006_JCTRANS_RUSSIA",
+              "url": "https://m.jctrans.com/en/company/listc/Russia/0-0",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 16,
+          "seed_surface_code": "RU006_JCTRANS_RUSSIA_SURFACE_02_https_www_jctrans_com_en_company_listc_r",
+          "source_code": "RU006_JCTRANS_RUSSIA",
+          "surface_name": "JCtrans Russia freight forwarder directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.jctrans.com/en/company/listc/Russia/0-0",
+          "seed_urls": [
+            {
+              "seed_url_index": 16,
+              "source_code": "RU006_JCTRANS_RUSSIA",
+              "url": "https://www.jctrans.com/en/company/listc/Russia/0-0",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 7,
+      "source_code": "RU007_RAILMARKET_RUSSIA",
+      "source_family_code": "RU007_RAILMARKET_RUSSIA",
+      "name": "RailMarket Russian Federation forwarding and logistics",
+      "category": "rail_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: rail logistics and rail forwarder discovery surface.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 17,
+          "seed_surface_code": "RU007_RAILMARKET_RUSSIA_SURFACE_01_https_railmarket_com_ap_russian_federati",
+          "source_code": "RU007_RAILMARKET_RUSSIA",
+          "surface_name": "RailMarket Russian Federation forwarding and logistics seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://railmarket.com/ap/russian-federation/forwarding-logistics",
+          "seed_urls": [
+            {
+              "seed_url_index": 17,
+              "source_code": "RU007_RAILMARKET_RUSSIA",
+              "url": "https://railmarket.com/ap/russian-federation/forwarding-logistics",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 18,
+          "seed_surface_code": "RU007_RAILMARKET_RUSSIA_SURFACE_02_https_railmarket_com_ap_russian_federati",
+          "source_code": "RU007_RAILMARKET_RUSSIA",
+          "surface_name": "RailMarket Russian Federation forwarding and logistics seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://railmarket.com/ap/russian-federation/rail-forwarders",
+          "seed_urls": [
+            {
+              "seed_url_index": 18,
+              "source_code": "RU007_RAILMARKET_RUSSIA",
+              "url": "https://railmarket.com/ap/russian-federation/rail-forwarders",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 8,
+      "source_code": "RU008_RUZAVE_RUSSIA",
+      "source_family_code": "RU008_RUZAVE_RUSSIA",
+      "name": "Ruzave Russia shipping and freight directory",
+      "category": "commercial_b2b_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: shipping and freight forwarding discovery pages.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 19,
+          "seed_surface_code": "RU008_RUZAVE_RUSSIA_SURFACE_01_https_ruzave_com_russia",
+          "source_code": "RU008_RUZAVE_RUSSIA",
+          "surface_name": "Ruzave Russia shipping and freight directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://ruzave.com/russia",
+          "seed_urls": [
+            {
+              "seed_url_index": 19,
+              "source_code": "RU008_RUZAVE_RUSSIA",
+              "url": "https://ruzave.com/russia",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 20,
+          "seed_surface_code": "RU008_RUZAVE_RUSSIA_SURFACE_02_https_ruzave_com_russia_freight_forwarde",
+          "source_code": "RU008_RUZAVE_RUSSIA",
+          "surface_name": "Ruzave Russia shipping and freight directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://ruzave.com/russia/freight-forwarders/freight-forwardingservices/",
+          "seed_urls": [
+            {
+              "seed_url_index": 20,
+              "source_code": "RU008_RUZAVE_RUSSIA",
+              "url": "https://ruzave.com/russia/freight-forwarders/freight-forwardingservices/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 9,
+      "source_code": "RU009_ROOLZ_RUSSIA",
+      "source_family_code": "RU009_ROOLZ_RUSSIA",
+      "name": "Roolz Russia forwarder and carrier directory",
+      "category": "commercial_b2b_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: country forwarder and carrier list candidates.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 21,
+          "seed_surface_code": "RU009_ROOLZ_RUSSIA_SURFACE_01_https_roolz_net_companies_forwarders_rus",
+          "source_code": "RU009_ROOLZ_RUSSIA",
+          "surface_name": "Roolz Russia forwarder and carrier directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://roolz.net/companies/forwarders/russia",
+          "seed_urls": [
+            {
+              "seed_url_index": 21,
+              "source_code": "RU009_ROOLZ_RUSSIA",
+              "url": "https://roolz.net/companies/forwarders/russia",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 22,
+          "seed_surface_code": "RU009_ROOLZ_RUSSIA_SURFACE_02_https_roolz_net_companies_carriers_russi",
+          "source_code": "RU009_ROOLZ_RUSSIA",
+          "surface_name": "Roolz Russia forwarder and carrier directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://roolz.net/companies/carriers/russia",
+          "seed_urls": [
+            {
+              "seed_url_index": 22,
+              "source_code": "RU009_ROOLZ_RUSSIA",
+              "url": "https://roolz.net/companies/carriers/russia",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 10,
+      "source_code": "RU010_SHIPPINGLINE_RUSSIA",
+      "source_family_code": "RU010_SHIPPINGLINE_RUSSIA",
+      "name": "ShippingLine Russia freight forwarders directory",
+      "category": "shipping_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: shipping catalogue and freight forwarder country pages.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 23,
+          "seed_surface_code": "RU010_SHIPPINGLINE_RUSSIA_SURFACE_01_https_www_shippingline_org_company_ru_ru",
+          "source_code": "RU010_SHIPPINGLINE_RUSSIA",
+          "surface_name": "ShippingLine Russia freight forwarders directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.shippingline.org/company/ru/Russia-Freight_Forwarders-2.html",
+          "seed_urls": [
+            {
+              "seed_url_index": 23,
+              "source_code": "RU010_SHIPPINGLINE_RUSSIA",
+              "url": "https://www.shippingline.org/company/ru/Russia-Freight_Forwarders-2.html",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 24,
+          "seed_surface_code": "RU010_SHIPPINGLINE_RUSSIA_SURFACE_02_https_www_shippingline_org_company_ru_ru",
+          "source_code": "RU010_SHIPPINGLINE_RUSSIA",
+          "surface_name": "ShippingLine Russia freight forwarders directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.shippingline.org/company/ru/Russia-Logistics-1.html",
+          "seed_urls": [
+            {
+              "seed_url_index": 24,
+              "source_code": "RU010_SHIPPINGLINE_RUSSIA",
+              "url": "https://www.shippingline.org/company/ru/Russia-Logistics-1.html",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 11,
+      "source_code": "RU011_GOODFIRMS_RUSSIA",
+      "source_family_code": "RU011_GOODFIRMS_RUSSIA",
+      "name": "GoodFirms Russia logistics company list",
+      "category": "commercial_review_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Discovery-only directory; keep candidate until live review.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 25,
+          "seed_surface_code": "RU011_GOODFIRMS_RUSSIA_SURFACE_01_https_www_goodfirms_co_supply_chain_logi",
+          "source_code": "RU011_GOODFIRMS_RUSSIA",
+          "surface_name": "GoodFirms Russia logistics company list seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.goodfirms.co/supply-chain-logistics-companies/russia",
+          "seed_urls": [
+            {
+              "seed_url_index": 25,
+              "source_code": "RU011_GOODFIRMS_RUSSIA",
+              "url": "https://www.goodfirms.co/supply-chain-logistics-companies/russia",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 26,
+          "seed_surface_code": "RU011_GOODFIRMS_RUSSIA_SURFACE_02_https_www_goodfirms_co_supply_chain_logi",
+          "source_code": "RU011_GOODFIRMS_RUSSIA",
+          "surface_name": "GoodFirms Russia logistics company list seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.goodfirms.co/supply-chain-logistics-companies/warehousing/russia",
+          "seed_urls": [
+            {
+              "seed_url_index": 26,
+              "source_code": "RU011_GOODFIRMS_RUSSIA",
+              "url": "https://www.goodfirms.co/supply-chain-logistics-companies/warehousing/russia",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 12,
+      "source_code": "RU012_CLUTCH_RUSSIA",
+      "source_family_code": "RU012_CLUTCH_RUSSIA",
+      "name": "Clutch Russia logistics company discovery",
+      "category": "commercial_review_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Discovery-only commercial directory candidate.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 27,
+          "seed_surface_code": "RU012_CLUTCH_RUSSIA_SURFACE_01_https_clutch_co_ru_logistics",
+          "source_code": "RU012_CLUTCH_RUSSIA",
+          "surface_name": "Clutch Russia logistics company discovery seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://clutch.co/ru/logistics",
+          "seed_urls": [
+            {
+              "seed_url_index": 27,
+              "source_code": "RU012_CLUTCH_RUSSIA",
+              "url": "https://clutch.co/ru/logistics",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 28,
+          "seed_surface_code": "RU012_CLUTCH_RUSSIA_SURFACE_02_https_clutch_co_ru_supply_chain_logistic",
+          "source_code": "RU012_CLUTCH_RUSSIA",
+          "surface_name": "Clutch Russia logistics company discovery seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://clutch.co/ru/supply-chain/logistics",
+          "seed_urls": [
+            {
+              "seed_url_index": 28,
+              "source_code": "RU012_CLUTCH_RUSSIA",
+              "url": "https://clutch.co/ru/supply-chain/logistics",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 13,
+      "source_code": "RU013_KOMPASS_RUSSIA",
+      "source_family_code": "RU013_KOMPASS_RUSSIA",
+      "name": "Kompass Russia logistics and transport directory",
+      "category": "commercial_company_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: business directory candidate for logistics companies.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 29,
+          "seed_surface_code": "RU013_KOMPASS_RUSSIA_SURFACE_01_https_ru_kompass_com_a_logistics_90280",
+          "source_code": "RU013_KOMPASS_RUSSIA",
+          "surface_name": "Kompass Russia logistics and transport directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://ru.kompass.com/a/logistics/90280/",
+          "seed_urls": [
+            {
+              "seed_url_index": 29,
+              "source_code": "RU013_KOMPASS_RUSSIA",
+              "url": "https://ru.kompass.com/a/logistics/90280/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 30,
+          "seed_surface_code": "RU013_KOMPASS_RUSSIA_SURFACE_02_https_www_kompass_com_a_logistics_servic",
+          "source_code": "RU013_KOMPASS_RUSSIA",
+          "surface_name": "Kompass Russia logistics and transport directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.kompass.com/a/logistics-services/9028/c/russian-federation/ru/",
+          "seed_urls": [
+            {
+              "seed_url_index": 30,
+              "source_code": "RU013_KOMPASS_RUSSIA",
+              "url": "https://www.kompass.com/a/logistics-services/9028/c/russian-federation/ru/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 14,
+      "source_code": "RU014_EUROPAGES_RUSSIA",
+      "source_family_code": "RU014_EUROPAGES_RUSSIA",
+      "name": "Europages Russia transport and freight directory",
+      "category": "commercial_company_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: European B2B directory surfaces for Russia.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 31,
+          "seed_surface_code": "RU014_EUROPAGES_RUSSIA_SURFACE_01_https_www_europages_co_uk_companies_russ",
+          "source_code": "RU014_EUROPAGES_RUSSIA",
+          "surface_name": "Europages Russia transport and freight directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.europages.co.uk/companies/russia/transport%20and%20logistics.html",
+          "seed_urls": [
+            {
+              "seed_url_index": 31,
+              "source_code": "RU014_EUROPAGES_RUSSIA",
+              "url": "https://www.europages.co.uk/companies/russia/transport%20and%20logistics.html",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 32,
+          "seed_surface_code": "RU014_EUROPAGES_RUSSIA_SURFACE_02_https_www_europages_co_uk_companies_russ",
+          "source_code": "RU014_EUROPAGES_RUSSIA",
+          "surface_name": "Europages Russia transport and freight directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.europages.co.uk/companies/russia/freight%20forwarders.html",
+          "seed_urls": [
+            {
+              "seed_url_index": 32,
+              "source_code": "RU014_EUROPAGES_RUSSIA",
+              "url": "https://www.europages.co.uk/companies/russia/freight%20forwarders.html",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 15,
+      "source_code": "RU015_ALL_FORWARD_RUSSIA",
+      "source_family_code": "RU015_ALL_FORWARD_RUSSIA",
+      "name": "All Forward member directory Russia search",
+      "category": "network_member_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: freight network member directory search surfaces.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 33,
+          "seed_surface_code": "RU015_ALL_FORWARD_RUSSIA_SURFACE_01_https_www_all_forward_com_membersdirecto",
+          "source_code": "RU015_ALL_FORWARD_RUSSIA",
+          "surface_name": "All Forward member directory Russia search seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.all-forward.com/MembersDirectory",
+          "seed_urls": [
+            {
+              "seed_url_index": 33,
+              "source_code": "RU015_ALL_FORWARD_RUSSIA",
+              "url": "https://www.all-forward.com/MembersDirectory",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 34,
+          "seed_surface_code": "RU015_ALL_FORWARD_RUSSIA_SURFACE_02_https_www_all_forward_com_membersdirecto",
+          "source_code": "RU015_ALL_FORWARD_RUSSIA",
+          "surface_name": "All Forward member directory Russia search seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.all-forward.com/MembersDirectory?country=Russia",
+          "seed_urls": [
+            {
+              "seed_url_index": 34,
+              "source_code": "RU015_ALL_FORWARD_RUSSIA",
+              "url": "https://www.all-forward.com/MembersDirectory?country=Russia",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 16,
+      "source_code": "RU016_WCAWORLD_RUSSIA",
+      "source_family_code": "RU016_WCAWORLD_RUSSIA",
+      "name": "WCAworld directory Russia search",
+      "category": "network_member_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: freight network member search candidate.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 35,
+          "seed_surface_code": "RU016_WCAWORLD_RUSSIA_SURFACE_01_https_www_wcaworld_com_directory",
+          "source_code": "RU016_WCAWORLD_RUSSIA",
+          "surface_name": "WCAworld directory Russia search seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.wcaworld.com/Directory",
+          "seed_urls": [
+            {
+              "seed_url_index": 35,
+              "source_code": "RU016_WCAWORLD_RUSSIA",
+              "url": "https://www.wcaworld.com/Directory",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 36,
+          "seed_surface_code": "RU016_WCAWORLD_RUSSIA_SURFACE_02_https_www_wcaworld_com_directory_search_",
+          "source_code": "RU016_WCAWORLD_RUSSIA",
+          "surface_name": "WCAworld directory Russia search seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.wcaworld.com/Directory?search=Russia",
+          "seed_urls": [
+            {
+              "seed_url_index": 36,
+              "source_code": "RU016_WCAWORLD_RUSSIA",
+              "url": "https://www.wcaworld.com/Directory?search=Russia",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 17,
+      "source_code": "RU017_SEARATES_RUSSIA",
+      "source_family_code": "RU017_SEARATES_RUSSIA",
+      "name": "SeaRates Russia freight and maritime directory surfaces",
+      "category": "shipping_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: maritime and freight country discovery.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 37,
+          "seed_surface_code": "RU017_SEARATES_RUSSIA_SURFACE_01_https_www_searates_com_freight_russia",
+          "source_code": "RU017_SEARATES_RUSSIA",
+          "surface_name": "SeaRates Russia freight and maritime directory surfaces seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.searates.com/freight/russia/",
+          "seed_urls": [
+            {
+              "seed_url_index": 37,
+              "source_code": "RU017_SEARATES_RUSSIA",
+              "url": "https://www.searates.com/freight/russia/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 38,
+          "seed_surface_code": "RU017_SEARATES_RUSSIA_SURFACE_02_https_www_searates_com_maritime_russia",
+          "source_code": "RU017_SEARATES_RUSSIA",
+          "surface_name": "SeaRates Russia freight and maritime directory surfaces seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.searates.com/maritime/russia/",
+          "seed_urls": [
+            {
+              "seed_url_index": 38,
+              "source_code": "RU017_SEARATES_RUSSIA",
+              "url": "https://www.searates.com/maritime/russia/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 18,
+      "source_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+      "source_family_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+      "name": "World Port Source Russia port directory",
+      "category": "port_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: port geography source for later port-linked logistics discovery.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 39,
+          "seed_surface_code": "RU018_WORLD_PORT_SOURCE_RUSSIA_SURFACE_01_https_www_worldportsource_com_ports_rus_",
+          "source_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+          "surface_name": "World Port Source Russia port directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.worldportsource.com/ports/RUS.php",
+          "seed_urls": [
+            {
+              "seed_url_index": 39,
+              "source_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+              "url": "https://www.worldportsource.com/ports/RUS.php",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 40,
+          "seed_surface_code": "RU018_WORLD_PORT_SOURCE_RUSSIA_SURFACE_02_https_www_worldportsource_com_ports_inde",
+          "source_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+          "surface_name": "World Port Source Russia port directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.worldportsource.com/ports/index/RUS.php",
+          "seed_urls": [
+            {
+              "seed_url_index": 40,
+              "source_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+              "url": "https://www.worldportsource.com/ports/index/RUS.php",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 19,
+      "source_code": "RU019_PORTS_COM_RUSSIA",
+      "source_family_code": "RU019_PORTS_COM_RUSSIA",
+      "name": "Ports.com Russia port directory",
+      "category": "port_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: port listing candidate; not live until probe.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 41,
+          "seed_surface_code": "RU019_PORTS_COM_RUSSIA_SURFACE_01_https_ports_com_russia",
+          "source_code": "RU019_PORTS_COM_RUSSIA",
+          "surface_name": "Ports.com Russia port directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://ports.com/russia/",
+          "seed_urls": [
+            {
+              "seed_url_index": 41,
+              "source_code": "RU019_PORTS_COM_RUSSIA",
+              "url": "https://ports.com/russia/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 42,
+          "seed_surface_code": "RU019_PORTS_COM_RUSSIA_SURFACE_02_https_ports_com_sea_route",
+          "source_code": "RU019_PORTS_COM_RUSSIA",
+          "surface_name": "Ports.com Russia port directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://ports.com/sea-route/",
+          "seed_urls": [
+            {
+              "seed_url_index": 42,
+              "source_code": "RU019_PORTS_COM_RUSSIA",
+              "url": "https://ports.com/sea-route/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 20,
+      "source_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+      "source_family_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+      "name": "MarineTraffic Russia port discovery",
+      "category": "port_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: port discovery candidate for sea logistics context.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 43,
+          "seed_surface_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS_SURFACE_01_https_www_marinetraffic_com_en_ais_index",
+          "source_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+          "surface_name": "MarineTraffic Russia port discovery seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.marinetraffic.com/en/ais/index/ports/all/per_country:RU",
+          "seed_urls": [
+            {
+              "seed_url_index": 43,
+              "source_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+              "url": "https://www.marinetraffic.com/en/ais/index/ports/all/per_country:RU",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 44,
+          "seed_surface_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS_SURFACE_02_https_www_marinetraffic_com_en_ais_index",
+          "source_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+          "surface_name": "MarineTraffic Russia port discovery seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.marinetraffic.com/en/ais/index/search/all?keyword=Russia",
+          "seed_urls": [
+            {
+              "seed_url_index": 44,
+              "source_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+              "url": "https://www.marinetraffic.com/en/ais/index/search/all?keyword=Russia",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 21,
+      "source_code": "RU021_PORTNEWS_RUSSIA",
+      "source_family_code": "RU021_PORTNEWS_RUSSIA",
+      "name": "PortNews ports and company directories",
+      "category": "port_and_company_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: sector news portal with ports/company directory surfaces.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 45,
+          "seed_surface_code": "RU021_PORTNEWS_RUSSIA_SURFACE_01_https_en_portnews_ru_ports",
+          "source_code": "RU021_PORTNEWS_RUSSIA",
+          "surface_name": "PortNews ports and company directories seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://en.portnews.ru/ports/",
+          "seed_urls": [
+            {
+              "seed_url_index": 45,
+              "source_code": "RU021_PORTNEWS_RUSSIA",
+              "url": "https://en.portnews.ru/ports/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 46,
+          "seed_surface_code": "RU021_PORTNEWS_RUSSIA_SURFACE_02_https_en_portnews_ru_companies",
+          "source_code": "RU021_PORTNEWS_RUSSIA",
+          "surface_name": "PortNews ports and company directories seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://en.portnews.ru/companies/",
+          "seed_urls": [
+            {
+              "seed_url_index": 46,
+              "source_code": "RU021_PORTNEWS_RUSSIA",
+              "url": "https://en.portnews.ru/companies/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 22,
+      "source_code": "RU022_MORPORT_RUSSIA",
+      "source_family_code": "RU022_MORPORT_RUSSIA",
+      "name": "Association of Commercial Sea Ports Russia",
+      "category": "association_directory",
+      "quality": "A",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: official association/member style port surface.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 47,
+          "seed_surface_code": "RU022_MORPORT_RUSSIA_SURFACE_01_https_morport_com_en",
+          "source_code": "RU022_MORPORT_RUSSIA",
+          "surface_name": "Association of Commercial Sea Ports Russia seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://morport.com/en/",
+          "seed_urls": [
+            {
+              "seed_url_index": 47,
+              "source_code": "RU022_MORPORT_RUSSIA",
+              "url": "https://morport.com/en/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 48,
+          "seed_surface_code": "RU022_MORPORT_RUSSIA_SURFACE_02_https_morport_com_en_members",
+          "source_code": "RU022_MORPORT_RUSSIA",
+          "surface_name": "Association of Commercial Sea Ports Russia seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://morport.com/en/members/",
+          "seed_urls": [
+            {
+              "seed_url_index": 48,
+              "source_code": "RU022_MORPORT_RUSSIA",
+              "url": "https://morport.com/en/members/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 23,
+      "source_code": "RU023_PORT_SPB",
+      "source_family_code": "RU023_PORT_SPB",
+      "name": "Port of Saint Petersburg official directory surfaces",
+      "category": "official_port_surface",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Official port surface; directory-like port service discovery candidate.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 49,
+          "seed_surface_code": "RU023_PORT_SPB_SURFACE_01_https_www_psp_ru_en",
+          "source_code": "RU023_PORT_SPB",
+          "surface_name": "Port of Saint Petersburg official directory surfaces seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.psp.ru/en/",
+          "seed_urls": [
+            {
+              "seed_url_index": 49,
+              "source_code": "RU023_PORT_SPB",
+              "url": "https://www.psp.ru/en/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 50,
+          "seed_surface_code": "RU023_PORT_SPB_SURFACE_02_https_www_psp_ru_en_port_services",
+          "source_code": "RU023_PORT_SPB",
+          "surface_name": "Port of Saint Petersburg official directory surfaces seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.psp.ru/en/port-services",
+          "seed_urls": [
+            {
+              "seed_url_index": 50,
+              "source_code": "RU023_PORT_SPB",
+              "url": "https://www.psp.ru/en/port-services",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 24,
+      "source_code": "RU024_NOVOROSSIYSK_PORT",
+      "source_family_code": "RU024_NOVOROSSIYSK_PORT",
+      "name": "Novorossiysk Commercial Sea Port official surfaces",
+      "category": "official_port_surface",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Official port/operator surface; candidate for port-linked logistics discovery.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 51,
+          "seed_surface_code": "RU024_NOVOROSSIYSK_PORT_SURFACE_01_https_nmtp_info_en",
+          "source_code": "RU024_NOVOROSSIYSK_PORT",
+          "surface_name": "Novorossiysk Commercial Sea Port official surfaces seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://nmtp.info/en/",
+          "seed_urls": [
+            {
+              "seed_url_index": 51,
+              "source_code": "RU024_NOVOROSSIYSK_PORT",
+              "url": "https://nmtp.info/en/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 52,
+          "seed_surface_code": "RU024_NOVOROSSIYSK_PORT_SURFACE_02_https_nmtp_info_en_holding_stevedoring",
+          "source_code": "RU024_NOVOROSSIYSK_PORT",
+          "surface_name": "Novorossiysk Commercial Sea Port official surfaces seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://nmtp.info/en/holding/stevedoring/",
+          "seed_urls": [
+            {
+              "seed_url_index": 52,
+              "source_code": "RU024_NOVOROSSIYSK_PORT",
+              "url": "https://nmtp.info/en/holding/stevedoring/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 25,
+      "source_code": "RU025_VLADIVOSTOK_PORT",
+      "source_family_code": "RU025_VLADIVOSTOK_PORT",
+      "name": "Vladivostok Sea Commercial Port official surfaces",
+      "category": "official_port_surface",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Official port/operator surface for Far East logistics discovery.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 53,
+          "seed_surface_code": "RU025_VLADIVOSTOK_PORT_SURFACE_01_https_www_vmtp_ru_en",
+          "source_code": "RU025_VLADIVOSTOK_PORT",
+          "surface_name": "Vladivostok Sea Commercial Port official surfaces seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.vmtp.ru/en/",
+          "seed_urls": [
+            {
+              "seed_url_index": 53,
+              "source_code": "RU025_VLADIVOSTOK_PORT",
+              "url": "https://www.vmtp.ru/en/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 54,
+          "seed_surface_code": "RU025_VLADIVOSTOK_PORT_SURFACE_02_https_www_vmtp_ru_en_services",
+          "source_code": "RU025_VLADIVOSTOK_PORT",
+          "surface_name": "Vladivostok Sea Commercial Port official surfaces seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.vmtp.ru/en/services/",
+          "seed_urls": [
+            {
+              "seed_url_index": 54,
+              "source_code": "RU025_VLADIVOSTOK_PORT",
+              "url": "https://www.vmtp.ru/en/services/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 26,
+      "source_code": "RU026_GLOBAL_PORTS",
+      "source_family_code": "RU026_GLOBAL_PORTS",
+      "name": "Global Ports terminal network",
+      "category": "terminal_network_directory",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Official terminal network directory candidate.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 55,
+          "seed_surface_code": "RU026_GLOBAL_PORTS_SURFACE_01_https_www_globalports_com_terminals",
+          "source_code": "RU026_GLOBAL_PORTS",
+          "surface_name": "Global Ports terminal network seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.globalports.com/terminals/",
+          "seed_urls": [
+            {
+              "seed_url_index": 55,
+              "source_code": "RU026_GLOBAL_PORTS",
+              "url": "https://www.globalports.com/terminals/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 56,
+          "seed_surface_code": "RU026_GLOBAL_PORTS_SURFACE_02_https_www_globalports_com_about_terminal",
+          "source_code": "RU026_GLOBAL_PORTS",
+          "surface_name": "Global Ports terminal network seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.globalports.com/about/terminals/",
+          "seed_urls": [
+            {
+              "seed_url_index": 56,
+              "source_code": "RU026_GLOBAL_PORTS",
+              "url": "https://www.globalports.com/about/terminals/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 27,
+      "source_code": "RU027_FESCO",
+      "source_family_code": "RU027_FESCO",
+      "name": "FESCO locations and services",
+      "category": "official_logistics_network",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Official logistics network/location surface; fallback after directory pages.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 57,
+          "seed_surface_code": "RU027_FESCO_SURFACE_01_https_www_fesco_ru_en_clients_locations",
+          "source_code": "RU027_FESCO",
+          "surface_name": "FESCO locations and services seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.fesco.ru/en/clients/locations/",
+          "seed_urls": [
+            {
+              "seed_url_index": 57,
+              "source_code": "RU027_FESCO",
+              "url": "https://www.fesco.ru/en/clients/locations/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 58,
+          "seed_surface_code": "RU027_FESCO_SURFACE_02_https_www_fesco_ru_en_clients_services",
+          "source_code": "RU027_FESCO",
+          "surface_name": "FESCO locations and services seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.fesco.ru/en/clients/services/",
+          "seed_urls": [
+            {
+              "seed_url_index": 58,
+              "source_code": "RU027_FESCO",
+              "url": "https://www.fesco.ru/en/clients/services/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 28,
+      "source_code": "RU028_TRANSCONTAINER",
+      "source_family_code": "RU028_TRANSCONTAINER",
+      "name": "TransContainer terminal network",
+      "category": "rail_terminal_network",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Official rail container terminal network candidate.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 59,
+          "seed_surface_code": "RU028_TRANSCONTAINER_SURFACE_01_https_trcont_com_en_terminals_and_servic",
+          "source_code": "RU028_TRANSCONTAINER",
+          "surface_name": "TransContainer terminal network seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://trcont.com/en/terminals-and-services/terminal-network/",
+          "seed_urls": [
+            {
+              "seed_url_index": 59,
+              "source_code": "RU028_TRANSCONTAINER",
+              "url": "https://trcont.com/en/terminals-and-services/terminal-network/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 60,
+          "seed_surface_code": "RU028_TRANSCONTAINER_SURFACE_02_https_trcont_com_en",
+          "source_code": "RU028_TRANSCONTAINER",
+          "surface_name": "TransContainer terminal network seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://trcont.com/en/",
+          "seed_urls": [
+            {
+              "seed_url_index": 60,
+              "source_code": "RU028_TRANSCONTAINER",
+              "url": "https://trcont.com/en/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 29,
+      "source_code": "RU029_RZD_LOGISTICS",
+      "source_family_code": "RU029_RZD_LOGISTICS",
+      "name": "RZD Logistics services and contacts",
+      "category": "rail_logistics_operator",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Official rail logistics operator surfaces; candidate fallback.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 61,
+          "seed_surface_code": "RU029_RZD_LOGISTICS_SURFACE_01_https_www_rzdlog_com_en_services",
+          "source_code": "RU029_RZD_LOGISTICS",
+          "surface_name": "RZD Logistics services and contacts seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.rzdlog.com/en/services/",
+          "seed_urls": [
+            {
+              "seed_url_index": 61,
+              "source_code": "RU029_RZD_LOGISTICS",
+              "url": "https://www.rzdlog.com/en/services/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 62,
+          "seed_surface_code": "RU029_RZD_LOGISTICS_SURFACE_02_https_www_rzdlog_com_en_contacts",
+          "source_code": "RU029_RZD_LOGISTICS",
+          "surface_name": "RZD Logistics services and contacts seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.rzdlog.com/en/contacts/",
+          "seed_urls": [
+            {
+              "seed_url_index": 62,
+              "source_code": "RU029_RZD_LOGISTICS",
+              "url": "https://www.rzdlog.com/en/contacts/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 30,
+      "source_code": "RU030_RZD_CARGO",
+      "source_family_code": "RU030_RZD_CARGO",
+      "name": "Russian Railways cargo surfaces",
+      "category": "rail_freight_surface",
+      "quality": "A_MINUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Official rail/cargo surfaces for rail logistics context.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 63,
+          "seed_surface_code": "RU030_RZD_CARGO_SURFACE_01_https_cargo_rzd_ru_en",
+          "source_code": "RU030_RZD_CARGO",
+          "surface_name": "Russian Railways cargo surfaces seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://cargo.rzd.ru/en/",
+          "seed_urls": [
+            {
+              "seed_url_index": 63,
+              "source_code": "RU030_RZD_CARGO",
+              "url": "https://cargo.rzd.ru/en/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 64,
+          "seed_surface_code": "RU030_RZD_CARGO_SURFACE_02_https_eng_rzd_ru_en",
+          "source_code": "RU030_RZD_CARGO",
+          "surface_name": "Russian Railways cargo surfaces seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "A_MINUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://eng.rzd.ru/en/",
+          "seed_urls": [
+            {
+              "seed_url_index": 64,
+              "source_code": "RU030_RZD_CARGO",
+              "url": "https://eng.rzd.ru/en/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 31,
+      "source_code": "RU031_DELOVYE_LINII",
+      "source_family_code": "RU031_DELOVYE_LINII",
+      "name": "Delovye Linii terminal and city directory",
+      "category": "domestic_terminal_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-like terminal/city locator; candidate only.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 65,
+          "seed_surface_code": "RU031_DELOVYE_LINII_SURFACE_01_https_www_dellin_ru_contacts",
+          "source_code": "RU031_DELOVYE_LINII",
+          "surface_name": "Delovye Linii terminal and city directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.dellin.ru/contacts/",
+          "seed_urls": [
+            {
+              "seed_url_index": 65,
+              "source_code": "RU031_DELOVYE_LINII",
+              "url": "https://www.dellin.ru/contacts/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 66,
+          "seed_surface_code": "RU031_DELOVYE_LINII_SURFACE_02_https_www_dellin_ru_cities",
+          "source_code": "RU031_DELOVYE_LINII",
+          "surface_name": "Delovye Linii terminal and city directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.dellin.ru/cities/",
+          "seed_urls": [
+            {
+              "seed_url_index": 66,
+              "source_code": "RU031_DELOVYE_LINII",
+              "url": "https://www.dellin.ru/cities/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 32,
+      "source_code": "RU032_PEK",
+      "source_family_code": "RU032_PEK",
+      "name": "PEK contacts and terminal directory",
+      "category": "domestic_terminal_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-like terminal locator; candidate only.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 67,
+          "seed_surface_code": "RU032_PEK_SURFACE_01_https_pecom_ru_ru_contacts",
+          "source_code": "RU032_PEK",
+          "surface_name": "PEK contacts and terminal directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://pecom.ru/ru/contacts/",
+          "seed_urls": [
+            {
+              "seed_url_index": 67,
+              "source_code": "RU032_PEK",
+              "url": "https://pecom.ru/ru/contacts/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 68,
+          "seed_surface_code": "RU032_PEK_SURFACE_02_https_pecom_ru_ru_contacts_terminaly",
+          "source_code": "RU032_PEK",
+          "surface_name": "PEK contacts and terminal directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://pecom.ru/ru/contacts/terminaly/",
+          "seed_urls": [
+            {
+              "seed_url_index": 68,
+              "source_code": "RU032_PEK",
+              "url": "https://pecom.ru/ru/contacts/terminaly/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 33,
+      "source_code": "RU033_CDEK",
+      "source_family_code": "RU033_CDEK",
+      "name": "CDEK office locator surfaces",
+      "category": "parcel_office_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Office locator directory candidate for logistics point discovery.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 69,
+          "seed_surface_code": "RU033_CDEK_SURFACE_01_https_www_cdek_ru_ru_offices",
+          "source_code": "RU033_CDEK",
+          "surface_name": "CDEK office locator surfaces seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.cdek.ru/ru/offices/",
+          "seed_urls": [
+            {
+              "seed_url_index": 69,
+              "source_code": "RU033_CDEK",
+              "url": "https://www.cdek.ru/ru/offices/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 70,
+          "seed_surface_code": "RU033_CDEK_SURFACE_02_https_www_cdek_ru_ru_contacts",
+          "source_code": "RU033_CDEK",
+          "surface_name": "CDEK office locator surfaces seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.cdek.ru/ru/contacts/",
+          "seed_urls": [
+            {
+              "seed_url_index": 70,
+              "source_code": "RU033_CDEK",
+              "url": "https://www.cdek.ru/ru/contacts/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 34,
+      "source_code": "RU034_BOXBERRY",
+      "source_family_code": "RU034_BOXBERRY",
+      "name": "Boxberry office and courier directory surfaces",
+      "category": "parcel_office_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Office locator candidate; not a B2B priority but useful for parcel logistics discovery.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 71,
+          "seed_surface_code": "RU034_BOXBERRY_SURFACE_01_https_boxberry_ru_find_an_office",
+          "source_code": "RU034_BOXBERRY",
+          "surface_name": "Boxberry office and courier directory surfaces seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://boxberry.ru/find_an_office/",
+          "seed_urls": [
+            {
+              "seed_url_index": 71,
+              "source_code": "RU034_BOXBERRY",
+              "url": "https://boxberry.ru/find_an_office/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 72,
+          "seed_surface_code": "RU034_BOXBERRY_SURFACE_02_https_boxberry_ru_courier_delivery",
+          "source_code": "RU034_BOXBERRY",
+          "surface_name": "Boxberry office and courier directory surfaces seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://boxberry.ru/courier-delivery/",
+          "seed_urls": [
+            {
+              "seed_url_index": 72,
+              "source_code": "RU034_BOXBERRY",
+              "url": "https://boxberry.ru/courier-delivery/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 35,
+      "source_code": "RU035_DPD_RUSSIA",
+      "source_family_code": "RU035_DPD_RUSSIA",
+      "name": "DPD Russia contacts and home surfaces",
+      "category": "parcel_network_surface",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Parcel/logistics network surface; candidate until live review.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 73,
+          "seed_surface_code": "RU035_DPD_RUSSIA_SURFACE_01_https_www_dpd_ru_dpd_contacts_index_do2",
+          "source_code": "RU035_DPD_RUSSIA",
+          "surface_name": "DPD Russia contacts and home surfaces seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.dpd.ru/dpd/contacts/index.do2",
+          "seed_urls": [
+            {
+              "seed_url_index": 73,
+              "source_code": "RU035_DPD_RUSSIA",
+              "url": "https://www.dpd.ru/dpd/contacts/index.do2",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 74,
+          "seed_surface_code": "RU035_DPD_RUSSIA_SURFACE_02_https_www_dpd_ru_dpd_home_do2",
+          "source_code": "RU035_DPD_RUSSIA",
+          "surface_name": "DPD Russia contacts and home surfaces seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.dpd.ru/dpd/home.do2",
+          "seed_urls": [
+            {
+              "seed_url_index": 74,
+              "source_code": "RU035_DPD_RUSSIA",
+              "url": "https://www.dpd.ru/dpd/home.do2",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 36,
+      "source_code": "RU036_BAIKAL_SERVICE",
+      "source_family_code": "RU036_BAIKAL_SERVICE",
+      "name": "Baikal Service terminal directory",
+      "category": "domestic_terminal_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-like terminal/contact surface; candidate only.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 75,
+          "seed_surface_code": "RU036_BAIKAL_SERVICE_SURFACE_01_https_www_baikalsr_ru_contacts_terminaly",
+          "source_code": "RU036_BAIKAL_SERVICE",
+          "surface_name": "Baikal Service terminal directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.baikalsr.ru/contacts/terminaly/",
+          "seed_urls": [
+            {
+              "seed_url_index": 75,
+              "source_code": "RU036_BAIKAL_SERVICE",
+              "url": "https://www.baikalsr.ru/contacts/terminaly/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 76,
+          "seed_surface_code": "RU036_BAIKAL_SERVICE_SURFACE_02_https_www_baikalsr_ru_contacts",
+          "source_code": "RU036_BAIKAL_SERVICE",
+          "surface_name": "Baikal Service terminal directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.baikalsr.ru/contacts/",
+          "seed_urls": [
+            {
+              "seed_url_index": 76,
+              "source_code": "RU036_BAIKAL_SERVICE",
+              "url": "https://www.baikalsr.ru/contacts/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 37,
+      "source_code": "RU037_KIT_TRANSPORT",
+      "source_family_code": "RU037_KIT_TRANSPORT",
+      "name": "KIT transport terminal and contact surfaces",
+      "category": "domestic_terminal_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Terminal/contact locator candidate.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 77,
+          "seed_surface_code": "RU037_KIT_TRANSPORT_SURFACE_01_https_tk_kit_com_contacts",
+          "source_code": "RU037_KIT_TRANSPORT",
+          "surface_name": "KIT transport terminal and contact surfaces seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://tk-kit.com/contacts/",
+          "seed_urls": [
+            {
+              "seed_url_index": 77,
+              "source_code": "RU037_KIT_TRANSPORT",
+              "url": "https://tk-kit.com/contacts/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 78,
+          "seed_surface_code": "RU037_KIT_TRANSPORT_SURFACE_02_https_tk_kit_com_terminal",
+          "source_code": "RU037_KIT_TRANSPORT",
+          "surface_name": "KIT transport terminal and contact surfaces seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://tk-kit.com/terminal/",
+          "seed_urls": [
+            {
+              "seed_url_index": 78,
+              "source_code": "RU037_KIT_TRANSPORT",
+              "url": "https://tk-kit.com/terminal/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 38,
+      "source_code": "RU038_MAJOR_EXPRESS",
+      "source_family_code": "RU038_MAJOR_EXPRESS",
+      "name": "Major Express branch directory",
+      "category": "express_logistics_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Branch directory candidate for express logistics discovery.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 79,
+          "seed_surface_code": "RU038_MAJOR_EXPRESS_SURFACE_01_https_www_majorexpress_ru_branches",
+          "source_code": "RU038_MAJOR_EXPRESS",
+          "surface_name": "Major Express branch directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.majorexpress.ru/branches/",
+          "seed_urls": [
+            {
+              "seed_url_index": 79,
+              "source_code": "RU038_MAJOR_EXPRESS",
+              "url": "https://www.majorexpress.ru/branches/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 80,
+          "seed_surface_code": "RU038_MAJOR_EXPRESS_SURFACE_02_https_www_majorexpress_ru",
+          "source_code": "RU038_MAJOR_EXPRESS",
+          "surface_name": "Major Express branch directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.majorexpress.ru/",
+          "seed_urls": [
+            {
+              "seed_url_index": 80,
+              "source_code": "RU038_MAJOR_EXPRESS",
+              "url": "https://www.majorexpress.ru/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 39,
+      "source_code": "RU039_PONY_EXPRESS",
+      "source_family_code": "RU039_PONY_EXPRESS",
+      "name": "Pony Express office directory",
+      "category": "express_logistics_directory",
+      "quality": "B",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Office directory candidate for express logistics discovery.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 81,
+          "seed_surface_code": "RU039_PONY_EXPRESS_SURFACE_01_https_www_ponyexpress_ru_offices",
+          "source_code": "RU039_PONY_EXPRESS",
+          "surface_name": "Pony Express office directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.ponyexpress.ru/offices/",
+          "seed_urls": [
+            {
+              "seed_url_index": 81,
+              "source_code": "RU039_PONY_EXPRESS",
+              "url": "https://www.ponyexpress.ru/offices/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 82,
+          "seed_surface_code": "RU039_PONY_EXPRESS_SURFACE_02_https_www_ponyexpress_ru_en",
+          "source_code": "RU039_PONY_EXPRESS",
+          "surface_name": "Pony Express office directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://www.ponyexpress.ru/en/",
+          "seed_urls": [
+            {
+              "seed_url_index": 82,
+              "source_code": "RU039_PONY_EXPRESS",
+              "url": "https://www.ponyexpress.ru/en/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 40,
+      "source_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+      "source_family_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+      "name": "TransRussia exhibitor directory",
+      "category": "trade_fair_exhibitor_directory",
+      "quality": "B_PLUS",
+      "decision": "ACCEPT_REVIEW",
+      "seed_url_count": 2,
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "directory_first_note": "Directory-first: industry exhibition directory candidate for Russian logistics suppliers.",
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 83,
+          "seed_surface_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY_SURFACE_01_https_transrussia_ru_en_exhibitor_list",
+          "source_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+          "surface_name": "TransRussia exhibitor directory seed surface 1",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://transrussia.ru/en/exhibitor-list/",
+          "seed_urls": [
+            {
+              "seed_url_index": 83,
+              "source_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+              "url": "https://transrussia.ru/en/exhibitor-list/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 84,
+          "seed_surface_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY_SURFACE_02_https_transrussia_ru_en",
+          "source_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+          "surface_name": "TransRussia exhibitor directory seed surface 2",
+          "surface_type": "directory_or_locator_candidate",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "quality": "B_PLUS",
+          "decision": "ACCEPT_REVIEW",
+          "url": "https://transrussia.ru/en/",
+          "seed_urls": [
+            {
+              "seed_url_index": 84,
+              "source_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+              "url": "https://transrussia.ru/en/",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
