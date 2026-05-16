@@ -754,3 +754,7 @@ Documentation rule:
 - Canonical repository path: `docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md`
 - Mandatory first operation for every language: read the GitHub raw version of this rule document before startpoint planning, writing, audit, commit, push, sync, or activation.
 <!-- SOURCE_SEED_CANONICAL_RULES_READ_FIRST_END -->
+
+## Source-seed rollout discipline
+
+- [Source-seed language rollout 17-step discipline / Source-seed dil rollout 17 adım disiplini](TOPIC_CRAWLER_CORE_SOURCE_SEED_LANGUAGE_ROLLOUT_17_STEP_DISCIPLINE_2026_05_17.md) - Permanent 17-step source-seed language rollout standard, including mandatory candidate-list user-review wording.
