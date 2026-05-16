@@ -743,3 +743,11 @@ Documentation rule:
 - `Source-seed policy and decision records` must index each language decision document when it exists.
 - Per-language one-off blocks are not preferred; shared rules belong in this canonical standard block.
 <!-- SOURCE_SEED_CANONICAL_STARTPOINT_SCHEMA_STANDARD_END -->
+
+<!-- SOURCE_SEED_CANONICAL_RULES_READ_FIRST_BEGIN -->
+## Source-seed canonical startpoint JSON rules
+
+- [Crawler Core source-seed startpoint JSON canonical rules](TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md)
+- Canonical repository path: `docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md`
+- Mandatory first operation for every language: read the GitHub raw version of this rule document before startpoint planning, writing, audit, commit, push, sync, or activation.
+<!-- SOURCE_SEED_CANONICAL_RULES_READ_FIRST_END -->
