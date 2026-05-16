@@ -1,0 +1,2364 @@
+{
+  "schema": "source_families_v2",
+  "schema_version": "source_families_v2",
+  "catalog_version": "ukrainian_source_families_v2",
+  "language_code": "uk",
+  "language_name": "Ukrainian",
+  "country_scope": "UA",
+  "region_scope": "Ukraine",
+  "candidate_manifest": true,
+  "is_live": false,
+  "enabled": false,
+  "needs_live_check": true,
+  "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+  "safety_state": "candidate_only_not_live",
+  "created_by_gate": "R355_UK_SOURCE_SEED_CATALOG_JSON_LOCAL_ONLY",
+  "decision_doc_path": "docs/TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md",
+  "decision_doc_sha256": "6c256a6631dde81e8d1dca5e3ac7374be15cd068ae99e6d1c8a9fcff6865008f",
+  "canonical_rule_doc_path": "docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md",
+  "canonical_rule_doc_sha256": "65b36104f039962f3b6c8cd3c70b2575e0de00f27e50732e18953749d89bb49d",
+  "base_repository_head": "4b69d2c72c86bf0994a774291abd955a883876ce",
+  "directory_first_policy_applied": true,
+  "standardization_policy": {
+    "candidate_only": true,
+    "no_db_insert": true,
+    "no_frontier_activation": true,
+    "no_url_fetch_live_probe": true,
+    "no_pi51c_live_activation": true,
+    "manual_review_required_before_frontier_insert": true
+  },
+  "metrics": {
+    "source_family_count": 40,
+    "seed_surface_count": 56,
+    "seed_url_count": 56,
+    "unique_seed_url_count": 56,
+    "duplicate_seed_url_count": 0,
+    "non_https_seed_url_count": 0,
+    "empty_seed_url_count": 0,
+    "quality_counts": {
+      "A": 3,
+      "A_MINUS": 8,
+      "A_PLUS": 3,
+      "B": 14,
+      "B_MINUS": 2,
+      "B_PLUS": 10
+    },
+    "priority_counts": {
+      "HIGH": 7,
+      "LOW": 2,
+      "MEDIUM": 10,
+      "MEDIUM_HIGH": 8,
+      "MEDIUM_LOW": 10,
+      "VERY_HIGH": 3
+    },
+    "decision_counts": {
+      "ACCEPT_REVIEW": 40
+    }
+  },
+  "source_families": [
+    {
+      "source_code": "UK001_AIFFU_SEARCH_FORWARDER",
+      "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+      "source_family_name": "Uk001 Aiffu Search Forwarder",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "ameu.org.ua",
+      "source_root_url": "https://ameu.org.ua/",
+      "host_budget_group": "ameu.org.ua",
+      "quality": "A_PLUS",
+      "priority": "VERY_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "National association forwarder search surface; first-class directory seed.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S01",
+          "surface_name": "UK001_AIFFU_SEARCH_FORWARDER seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://ameu.org.ua/en/search-forwarder",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ameu.org.ua/en/search-forwarder",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S02",
+          "surface_name": "UK001_AIFFU_SEARCH_FORWARDER seed surface 02",
+          "surface_type": "directory",
+          "source_url": "https://ameu.org.ua/en/search-forwarder?start=20",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ameu.org.ua/en/search-forwarder?start=20",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S03",
+          "surface_name": "UK001_AIFFU_SEARCH_FORWARDER seed surface 03",
+          "surface_type": "directory",
+          "source_url": "https://ameu.org.ua/en/search-forwarder?start=40",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ameu.org.ua/en/search-forwarder?start=40",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S04",
+          "surface_name": "UK001_AIFFU_SEARCH_FORWARDER seed surface 04",
+          "surface_type": "directory",
+          "source_url": "https://ameu.org.ua/en/search-forwarder?start=60",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ameu.org.ua/en/search-forwarder?start=60",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK002_AIFFU_FULL_MEMBERS",
+      "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+      "source_family_name": "Uk002 Aiffu Full Members",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "ameu.org.ua",
+      "source_root_url": "https://ameu.org.ua/",
+      "host_budget_group": "ameu.org.ua",
+      "quality": "A_PLUS",
+      "priority": "VERY_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "AIFFU full-member pages; strong member directory candidate.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK002_AIFFU_FULL_MEMBERS_S01",
+          "surface_name": "UK002_AIFFU_FULL_MEMBERS seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://ameu.org.ua/en/members/active-members?dir=asc&order=f_vvvvvvvvvv&start=0",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ameu.org.ua/en/members/active-members?dir=asc&order=f_vvvvvvvvvv&start=0",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK002_AIFFU_FULL_MEMBERS_S02",
+          "surface_name": "UK002_AIFFU_FULL_MEMBERS seed surface 02",
+          "surface_type": "directory",
+          "source_url": "https://ameu.org.ua/en/members/active-members?start=20",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ameu.org.ua/en/members/active-members?start=20",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK002_AIFFU_FULL_MEMBERS_S03",
+          "surface_name": "UK002_AIFFU_FULL_MEMBERS seed surface 03",
+          "surface_type": "directory",
+          "source_url": "https://ameu.org.ua/en/members/active-members?start=40",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ameu.org.ua/en/members/active-members?start=40",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK002_AIFFU_FULL_MEMBERS_S04",
+          "surface_name": "UK002_AIFFU_FULL_MEMBERS seed surface 04",
+          "surface_type": "directory",
+          "source_url": "https://ameu.org.ua/en/members/active-members?start=60",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ameu.org.ua/en/members/active-members?start=60",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK003_FIATA_UKRAINE_DIRECTORY",
+      "source_family_code": "UK003_FIATA_UKRAINE_DIRECTORY",
+      "source_family_name": "Uk003 Fiata Ukraine Directory",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "fiata.org",
+      "source_root_url": "https://fiata.org/",
+      "host_budget_group": "fiata.org",
+      "quality": "A_PLUS",
+      "priority": "VERY_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "FIATA country directory for Ukraine; authoritative association cross-reference.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK003_FIATA_UKRAINE_DIRECTORY_S01",
+          "surface_name": "UK003_FIATA_UKRAINE_DIRECTORY seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://fiata.org/directory/ua/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://fiata.org/directory/ua/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+      "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+      "source_family_name": "Uk004 Ukrzovnishtrans Official Association",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "atfl.org.ua",
+      "source_root_url": "https://www.atfl.org.ua/",
+      "host_budget_group": "atfl.org.ua",
+      "quality": "A",
+      "priority": "HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Official association/reference surface for Ukrainian forwarding and logistics representation.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S01",
+          "surface_name": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://www.atfl.org.ua/en",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.atfl.org.ua/en",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S02",
+          "surface_name": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION seed surface 02",
+          "surface_type": "source_surface",
+          "source_url": "https://www.atfl.org.ua/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.atfl.org.ua/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S03",
+          "surface_name": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION seed surface 03",
+          "surface_type": "source_surface",
+          "source_url": "https://www.atfl.org.ua/en/pro-nas/istoriya",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.atfl.org.ua/en/pro-nas/istoriya",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S04",
+          "surface_name": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION seed surface 04",
+          "surface_type": "source_surface",
+          "source_url": "https://www.atfl.org.ua/en/pidvishennya-kvalifikaciyi",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.atfl.org.ua/en/pidvishennya-kvalifikaciyi",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE",
+      "source_family_code": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE",
+      "source_family_name": "Uk005 Clecat Ukrzovnishtrans Reference",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "clecat.org",
+      "source_root_url": "https://www.clecat.org/",
+      "host_budget_group": "clecat.org",
+      "quality": "A_MINUS",
+      "priority": "MEDIUM_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "European association reference page; useful for association verification.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE_S01",
+          "surface_name": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://www.clecat.org/members/associate-members",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.clecat.org/members/associate-members",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION",
+      "source_family_code": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION",
+      "source_family_name": "Uk006 Cargo Agent Network Ukraine Association",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "cargoagentnetwork.com",
+      "source_root_url": "https://www.cargoagentnetwork.com/",
+      "host_budget_group": "cargoagentnetwork.com",
+      "quality": "A_MINUS",
+      "priority": "MEDIUM_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Country directory for cargo agents in Ukraine.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION_S01",
+          "surface_name": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://www.cargoagentnetwork.com/country/ukraine/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.cargoagentnetwork.com/country/ukraine/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION",
+      "source_family_code": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION",
+      "source_family_name": "Uk007 Azfreight Ukrzovnishtrans Association",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "azfreight.com",
+      "source_root_url": "https://azfreight.com/",
+      "host_budget_group": "azfreight.com",
+      "quality": "B",
+      "priority": "MEDIUM",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Secondary association profile/reference; not a primary directory.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION_S01",
+          "surface_name": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://azfreight.com/association/ukrzovnishtrans-association-of-transport-forwarding-organisations/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://azfreight.com/association/ukrzovnishtrans-association-of-transport-forwarding-organisations/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS",
+      "source_family_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS",
+      "source_family_name": "Uk008 Freightnet Ukraine Forwarders",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "freightnet.com",
+      "source_root_url": "https://www.freightnet.com/",
+      "host_budget_group": "freightnet.com",
+      "quality": "A_MINUS",
+      "priority": "HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Freight forwarding directory with Ukraine country pages.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS_S01",
+          "surface_name": "UK008_FREIGHTNET_UKRAINE_FORWARDERS seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://www.freightnet.com/directory/p1/cUA/s30.htm",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.freightnet.com/directory/p1/cUA/s30.htm",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS_S02",
+          "surface_name": "UK008_FREIGHTNET_UKRAINE_FORWARDERS seed surface 02",
+          "surface_type": "directory",
+          "source_url": "https://www.freightnet.com/directory/p2/cUA/s30.htm",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.freightnet.com/directory/p2/cUA/s30.htm",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK009_FORWARDINGCOMPANIES_UKRAINE",
+      "source_family_code": "UK009_FORWARDINGCOMPANIES_UKRAINE",
+      "source_family_name": "Uk009 Forwardingcompanies Ukraine",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "forwardingcompanies.com",
+      "source_root_url": "https://forwardingcompanies.com/",
+      "host_budget_group": "forwardingcompanies.com",
+      "quality": "A_MINUS",
+      "priority": "HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Freight forwarding company directory for Ukraine.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK009_FORWARDINGCOMPANIES_UKRAINE_S01",
+          "surface_name": "UK009_FORWARDINGCOMPANIES_UKRAINE seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://forwardingcompanies.com/in/ukraine",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://forwardingcompanies.com/in/ukraine",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY",
+      "source_family_code": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY",
+      "source_family_name": "Uk010 Ruzave Ukraine Shipping Directory",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "ruzave.com",
+      "source_root_url": "https://ruzave.com/",
+      "host_budget_group": "ruzave.com",
+      "quality": "A_MINUS",
+      "priority": "HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Shipping/logistics directory country surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY_S01",
+          "surface_name": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://ruzave.com/ukraine",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ruzave.com/ukraine",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES",
+      "source_family_code": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES",
+      "source_family_name": "Uk011 Railmarket Ukraine Logistics Companies",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "railmarket.com",
+      "source_root_url": "https://railmarket.com/",
+      "host_budget_group": "railmarket.com",
+      "quality": "A_MINUS",
+      "priority": "HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Railmarket logistics company directory for Ukraine.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES_S01",
+          "surface_name": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://railmarket.com/eu/ukraine/logistics-companies",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://railmarket.com/eu/ukraine/logistics-companies",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES",
+      "source_family_code": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES",
+      "source_family_name": "Uk012 Railmarket Ukraine Railway Companies",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "railmarket.com",
+      "source_root_url": "https://railmarket.com/",
+      "host_budget_group": "railmarket.com",
+      "quality": "B_PLUS",
+      "priority": "MEDIUM_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Railway company directory; supports rail/logistics discovery.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES_S01",
+          "surface_name": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://railmarket.com/eu/ukraine/companies",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://railmarket.com/eu/ukraine/companies",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK013_JCTRANS_UKRAINE_FORWARDERS",
+      "source_family_code": "UK013_JCTRANS_UKRAINE_FORWARDERS",
+      "source_family_name": "Uk013 Jctrans Ukraine Forwarders",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "m.jctrans.com",
+      "source_root_url": "https://m.jctrans.com/",
+      "host_budget_group": "m.jctrans.com",
+      "quality": "B_PLUS",
+      "priority": "MEDIUM_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Marketplace-style forwarder directory; candidate only.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK013_JCTRANS_UKRAINE_FORWARDERS_S01",
+          "surface_name": "UK013_JCTRANS_UKRAINE_FORWARDERS seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://m.jctrans.com/en/company/listc/Ukraine/0-0",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://m.jctrans.com/en/company/listc/Ukraine/0-0",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK014_ROOLZ_UKRAINE_FORWARDERS",
+      "source_family_code": "UK014_ROOLZ_UKRAINE_FORWARDERS",
+      "source_family_name": "Uk014 Roolz Ukraine Forwarders",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "roolz.net",
+      "source_root_url": "https://roolz.net/",
+      "host_budget_group": "roolz.net",
+      "quality": "B_PLUS",
+      "priority": "MEDIUM_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Forwarder directory/marketplace surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK014_ROOLZ_UKRAINE_FORWARDERS_S01",
+          "surface_name": "UK014_ROOLZ_UKRAINE_FORWARDERS seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://roolz.net/companies/forwarders/ukraine",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://roolz.net/companies/forwarders/ukraine",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK015_GOODFIRMS_UKRAINE_LOGISTICS",
+      "source_family_code": "UK015_GOODFIRMS_UKRAINE_LOGISTICS",
+      "source_family_name": "Uk015 Goodfirms Ukraine Logistics",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "goodfirms.co",
+      "source_root_url": "https://www.goodfirms.co/",
+      "host_budget_group": "goodfirms.co",
+      "quality": "B_PLUS",
+      "priority": "MEDIUM",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Commercial logistics company list; candidate with lower trust than associations.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK015_GOODFIRMS_UKRAINE_LOGISTICS_S01",
+          "surface_name": "UK015_GOODFIRMS_UKRAINE_LOGISTICS seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://www.goodfirms.co/supply-chain-logistics-companies/ukraine",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.goodfirms.co/supply-chain-logistics-companies/ukraine",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS",
+      "source_family_code": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS",
+      "source_family_name": "Uk016 Clutch Ukraine Freight Forwarders",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "clutch.co",
+      "source_root_url": "https://clutch.co/",
+      "host_budget_group": "clutch.co",
+      "quality": "B_PLUS",
+      "priority": "MEDIUM",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Commercial review directory for freight forwarders.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS_S01",
+          "surface_name": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://clutch.co/ua/logistics/freight-forwarders",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://clutch.co/ua/logistics/freight-forwarders",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT",
+      "source_family_code": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT",
+      "source_family_name": "Uk017 Clutch Ukraine Rail Freight",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "clutch.co",
+      "source_root_url": "https://clutch.co/",
+      "host_budget_group": "clutch.co",
+      "quality": "B",
+      "priority": "MEDIUM",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Rail freight company review/directory surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT_S01",
+          "surface_name": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://clutch.co/ua/logistics/rail-freight-companies",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://clutch.co/ua/logistics/rail-freight-companies",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE",
+      "source_family_code": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE",
+      "source_family_name": "Uk018 Logistics Companies Directory Ukraine",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "logisticscompaniesdirectory.com",
+      "source_root_url": "https://logisticscompaniesdirectory.com/",
+      "host_budget_group": "logisticscompaniesdirectory.com",
+      "quality": "B_PLUS",
+      "priority": "MEDIUM",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Logistics company directory; candidate only.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE_S01",
+          "surface_name": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://logisticscompaniesdirectory.com/network-regions/ukraine/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://logisticscompaniesdirectory.com/network-regions/ukraine/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING",
+      "source_family_code": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING",
+      "source_family_name": "Uk019 Opca Ukraine Forwarders Trucking",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "overseasprojectcargo.com",
+      "source_root_url": "https://overseasprojectcargo.com/",
+      "host_budget_group": "overseasprojectcargo.com",
+      "quality": "B_PLUS",
+      "priority": "MEDIUM",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Project cargo/forwarder directory for Ukraine.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING_S01",
+          "surface_name": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/ukraine-freight-forwarders/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://overseasprojectcargo.com/InternationalFreightForwarders/ukraine-freight-forwarders/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK020_FORWARDERSPAGES_UKRAINE",
+      "source_family_code": "UK020_FORWARDERSPAGES_UKRAINE",
+      "source_family_name": "Uk020 Forwarderspages Ukraine",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "forwarderspages.com",
+      "source_root_url": "https://www.forwarderspages.com/",
+      "host_budget_group": "forwarderspages.com",
+      "quality": "B",
+      "priority": "MEDIUM_LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Secondary forwarder directory.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK020_FORWARDERSPAGES_UKRAINE_S01",
+          "surface_name": "UK020_FORWARDERSPAGES_UKRAINE seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://www.forwarderspages.com/country/ukraine",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.forwarderspages.com/country/ukraine",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK021_SEARATES_UKRAINE_PORTS",
+      "source_family_code": "UK021_SEARATES_UKRAINE_PORTS",
+      "source_family_name": "Uk021 Searates Ukraine Ports",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "searates.com",
+      "source_root_url": "https://www.searates.com/",
+      "host_budget_group": "searates.com",
+      "quality": "B_PLUS",
+      "priority": "MEDIUM_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Port and maritime reference surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK021_SEARATES_UKRAINE_PORTS_S01",
+          "surface_name": "UK021_SEARATES_UKRAINE_PORTS seed surface 01",
+          "surface_type": "port_maritime_reference",
+          "source_url": "https://www.searates.com/maritime/ukraine",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.searates.com/maritime/ukraine",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK022_CARGOROUTER_UKRAINE_PORTS",
+      "source_family_code": "UK022_CARGOROUTER_UKRAINE_PORTS",
+      "source_family_name": "Uk022 Cargorouter Ukraine Ports",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "cargorouter.com",
+      "source_root_url": "https://www.cargorouter.com/",
+      "host_budget_group": "cargorouter.com",
+      "quality": "B",
+      "priority": "MEDIUM",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Port directory reference.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK022_CARGOROUTER_UKRAINE_PORTS_S01",
+          "surface_name": "UK022_CARGOROUTER_UKRAINE_PORTS seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://www.cargorouter.com/directory/ports/Ukraine/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.cargorouter.com/directory/ports/Ukraine/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES",
+      "source_family_code": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES",
+      "source_family_name": "Uk023 Marinetraffic Ukraine Maritime Companies",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "marinetraffic.com",
+      "source_root_url": "https://www.marinetraffic.com/",
+      "host_budget_group": "marinetraffic.com",
+      "quality": "B_PLUS",
+      "priority": "MEDIUM",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Maritime company directory filtered to Ukraine.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES_S01",
+          "surface_name": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://www.marinetraffic.com/en/maritime-companies/directory/port%3A124/per_page%3A20/sublocation%3AUKRAINE",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.marinetraffic.com/en/maritime-companies/directory/port%3A124/per_page%3A20/sublocation%3AUKRAINE",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS",
+      "source_family_code": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS",
+      "source_family_name": "Uk024 Marinetraffic Ukraine Port Agents",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "marinetraffic.com",
+      "source_root_url": "https://www.marinetraffic.com/",
+      "host_budget_group": "marinetraffic.com",
+      "quality": "B_PLUS",
+      "priority": "MEDIUM",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Port agency directory filtered to Ukraine.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS_S01",
+          "surface_name": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://www.marinetraffic.com/en/maritime-companies/directory/secind%3A59/industry%3Aport%20agents/tag%3APort%20Agency/sublocation%3AUKRAINE",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.marinetraffic.com/en/maritime-companies/directory/secind%3A59/industry%3Aport%20agents/tag%3APort%20Agency/sublocation%3AUKRAINE",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK025_SHIPSGO_UKRAINE_PORTS",
+      "source_family_code": "UK025_SHIPSGO_UKRAINE_PORTS",
+      "source_family_name": "Uk025 Shipsgo Ukraine Ports",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "shipsgo.com",
+      "source_root_url": "https://shipsgo.com/",
+      "host_budget_group": "shipsgo.com",
+      "quality": "B",
+      "priority": "MEDIUM",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Port reference surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK025_SHIPSGO_UKRAINE_PORTS_S01",
+          "surface_name": "UK025_SHIPSGO_UKRAINE_PORTS seed surface 01",
+          "surface_type": "port_maritime_reference",
+          "source_url": "https://shipsgo.com/ocean/ports/countries/ukraine",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://shipsgo.com/ocean/ports/countries/ukraine",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK026_INCODOCS_UKRAINE_PORTS",
+      "source_family_code": "UK026_INCODOCS_UKRAINE_PORTS",
+      "source_family_name": "Uk026 Incodocs Ukraine Ports",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "incodocs.com",
+      "source_root_url": "https://incodocs.com/",
+      "host_budget_group": "incodocs.com",
+      "quality": "B",
+      "priority": "MEDIUM_LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Port reference surface; lower priority.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK026_INCODOCS_UKRAINE_PORTS_S01",
+          "surface_name": "UK026_INCODOCS_UKRAINE_PORTS seed surface 01",
+          "surface_type": "port_maritime_reference",
+          "source_url": "https://incodocs.com/ports/ua",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://incodocs.com/ports/ua",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY",
+      "source_family_code": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY",
+      "source_family_name": "Uk027 Tarangya Ukraine Port Directory",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "tarangya.com",
+      "source_root_url": "https://www.tarangya.com/",
+      "host_budget_group": "tarangya.com",
+      "quality": "B_MINUS",
+      "priority": "LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Low-priority port directory reference.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY_S01",
+          "surface_name": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://www.tarangya.com/company/others/port-directory/country-wise/UA",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.tarangya.com/company/others/port-directory/country-wise/UA",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS",
+      "source_family_code": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS",
+      "source_family_name": "Uk028 Business In Ukraine Ports Terminals",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "business-in-ukraine.online",
+      "source_root_url": "https://business-in-ukraine.online/",
+      "host_budget_group": "business-in-ukraine.online",
+      "quality": "B",
+      "priority": "MEDIUM_LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Port and maritime terminal business category reference.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS_S01",
+          "surface_name": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS seed surface 01",
+          "surface_type": "port_maritime_reference",
+          "source_url": "https://business-in-ukraine.online/business/category/ports-and-maritime-terminals/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://business-in-ukraine.online/business/category/ports-and-maritime-terminals/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK029_USPA_OFFICIAL_PORT_AUTHORITY",
+      "source_family_code": "UK029_USPA_OFFICIAL_PORT_AUTHORITY",
+      "source_family_name": "Uk029 Uspa Official Port Authority",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "uspa.gov.ua",
+      "source_root_url": "https://www.uspa.gov.ua/",
+      "host_budget_group": "uspa.gov.ua",
+      "quality": "A",
+      "priority": "HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Official Ukrainian Sea Ports Authority surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK029_USPA_OFFICIAL_PORT_AUTHORITY_S01",
+          "surface_name": "UK029_USPA_OFFICIAL_PORT_AUTHORITY seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://www.uspa.gov.ua/en/homepage-en",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.uspa.gov.ua/en/homepage-en",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL",
+      "source_family_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL",
+      "source_family_name": "Uk030 Ukrzaliznytsia Cargo Rail",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "uz.gov.ua",
+      "source_root_url": "https://uz.gov.ua/",
+      "host_budget_group": "uz.gov.ua",
+      "quality": "A",
+      "priority": "HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Official Ukrainian Railways cargo transport and station directory surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL_S01",
+          "surface_name": "UK030_UKRZALIZNYTSIA_CARGO_RAIL seed surface 01",
+          "surface_type": "port_maritime_reference",
+          "source_url": "https://uz.gov.ua/en/cargo_transportation/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://uz.gov.ua/en/cargo_transportation/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL_S02",
+          "surface_name": "UK030_UKRZALIZNYTSIA_CARGO_RAIL seed surface 02",
+          "surface_type": "port_maritime_reference",
+          "source_url": "https://uz.gov.ua/en/cargo_transportation/general_information/cargo_stations/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://uz.gov.ua/en/cargo_transportation/general_information/cargo_stations/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+      "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+      "source_family_name": "Uk031 Ukrposhta Business Postal Logistics",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "ukrposhta.ua",
+      "source_root_url": "https://www.ukrposhta.ua/",
+      "host_budget_group": "ukrposhta.ua",
+      "quality": "A_MINUS",
+      "priority": "MEDIUM_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "National postal/logistics operator business and delivery surfaces.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S01",
+          "surface_name": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://www.ukrposhta.ua/en",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.ukrposhta.ua/en",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S02",
+          "surface_name": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS seed surface 02",
+          "surface_type": "source_surface",
+          "source_url": "https://www.ukrposhta.ua/en/ukrposhta-dlia-biznesu",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.ukrposhta.ua/en/ukrposhta-dlia-biznesu",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S03",
+          "surface_name": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS seed surface 03",
+          "surface_type": "source_surface",
+          "source_url": "https://www.ukrposhta.ua/en/dostavka-po-svitu",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.ukrposhta.ua/en/dostavka-po-svitu",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S04",
+          "surface_name": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS seed surface 04",
+          "surface_type": "source_surface",
+          "source_url": "https://track.ukrposhta.ua/tracking_EN.html",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://track.ukrposhta.ua/tracking_EN.html",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+      "source_family_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+      "source_family_name": "Uk032 Nova Post Business Logistics",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "novaposhta.ua",
+      "source_root_url": "https://novaposhta.ua/",
+      "host_budget_group": "novaposhta.ua",
+      "quality": "A_MINUS",
+      "priority": "MEDIUM_HIGH",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Large parcel/logistics operator and business logistics surfaces.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S01",
+          "surface_name": "UK032_NOVA_POST_BUSINESS_LOGISTICS seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://novaposhta.ua/en/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://novaposhta.ua/en/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S02",
+          "surface_name": "UK032_NOVA_POST_BUSINESS_LOGISTICS seed surface 02",
+          "surface_type": "business_logistics_reference",
+          "source_url": "https://novaposhtaglobal.ua/en/for-business/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://novaposhtaglobal.ua/en/for-business/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S03",
+          "surface_name": "UK032_NOVA_POST_BUSINESS_LOGISTICS seed surface 03",
+          "surface_type": "source_surface",
+          "source_url": "https://nova.global/en-ua/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://nova.global/en-ua/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES",
+      "source_family_code": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES",
+      "source_family_name": "Uk033 Mordor Ukraine Freight Companies",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "mordorintelligence.com",
+      "source_root_url": "https://www.mordorintelligence.com/",
+      "host_budget_group": "mordorintelligence.com",
+      "quality": "B",
+      "priority": "MEDIUM_LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Market report company list; secondary seed only.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES_S01",
+          "surface_name": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://www.mordorintelligence.com/industry-reports/ukraine-freight-and-logistics-market/companies",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.mordorintelligence.com/industry-reports/ukraine-freight-and-logistics-market/companies",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES",
+      "source_family_code": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES",
+      "source_family_name": "Uk034 Ensun Ukraine Forwarding Companies",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "ensun.io",
+      "source_root_url": "https://ensun.io/",
+      "host_budget_group": "ensun.io",
+      "quality": "B",
+      "priority": "MEDIUM_LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Commercial directory/search surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES_S01",
+          "surface_name": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://ensun.io/search/freight-forwarding/ukraine",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ensun.io/search/freight-forwarding/ukraine",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS",
+      "source_family_code": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS",
+      "source_family_name": "Uk035 Df Alliance Ukraine Forwarders",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "df-alliance.com",
+      "source_root_url": "https://www.df-alliance.com/",
+      "host_budget_group": "df-alliance.com",
+      "quality": "B_MINUS",
+      "priority": "LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Low-priority forwarder reference.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS_S01",
+          "surface_name": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS seed surface 01",
+          "surface_type": "directory",
+          "source_url": "https://www.df-alliance.com/freight-forwarder/ukraine",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://www.df-alliance.com/freight-forwarder/ukraine",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES",
+      "source_family_code": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES",
+      "source_family_name": "Uk036 Eba Ukraine Logistics Member References",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "eba.com.ua",
+      "source_root_url": "https://eba.com.ua/",
+      "host_budget_group": "eba.com.ua",
+      "quality": "B",
+      "priority": "MEDIUM_LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Business association member reference; not broad directory.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES_S01",
+          "surface_name": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://eba.com.ua/en/member/dsv-logistyka-tov/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://eba.com.ua/en/member/dsv-logistyka-tov/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR",
+      "source_family_code": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR",
+      "source_family_name": "Uk037 Ekol Ukraine Direct Operator",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "ekol.com.ua",
+      "source_root_url": "https://ekol.com.ua/",
+      "host_budget_group": "ekol.com.ua",
+      "quality": "B",
+      "priority": "MEDIUM_LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Direct operator surface; diversity/support seed.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR_S01",
+          "surface_name": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR seed surface 01",
+          "surface_type": "port_maritime_reference",
+          "source_url": "https://ekol.com.ua/en/services/transport-solutions/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://ekol.com.ua/en/services/transport-solutions/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR",
+      "source_family_code": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR",
+      "source_family_name": "Uk038 Stoles Logistic Direct Operator",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "stoles.com.ua",
+      "source_root_url": "https://stoles.com.ua/",
+      "host_budget_group": "stoles.com.ua",
+      "quality": "B",
+      "priority": "MEDIUM_LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Direct operator logistics services surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR_S01",
+          "surface_name": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://stoles.com.ua/en/services/logistics/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://stoles.com.ua/en/services/logistics/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR",
+      "source_family_code": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR",
+      "source_family_name": "Uk039 Corcel Ukraine Direct Operator",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "corcel.com.ua",
+      "source_root_url": "https://corcel.com.ua/",
+      "host_budget_group": "corcel.com.ua",
+      "quality": "B",
+      "priority": "MEDIUM_LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Direct operator logistics services surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR_S01",
+          "surface_name": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://corcel.com.ua/en/our-services/logistics-services/",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://corcel.com.ua/en/our-services/logistics-services/",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_code": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR",
+      "source_family_code": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR",
+      "source_family_name": "Uk040 Star Logistics Direct Operator",
+      "language_code": "uk",
+      "country_scope": "UA",
+      "source_host": "starlogistics.com.ua",
+      "source_root_url": "https://starlogistics.com.ua/",
+      "host_budget_group": "starlogistics.com.ua",
+      "quality": "B",
+      "priority": "MEDIUM_LOW",
+      "decision": "ACCEPT_REVIEW",
+      "rationale": "Direct operator logistics services surface.",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "daily_family_budget_required": true,
+      "source_family_visit_policy": "manual_review_required_before_frontier_insert",
+      "seed_surfaces": [
+        {
+          "surface_code": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR_S01",
+          "surface_name": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR seed surface 01",
+          "surface_type": "source_surface",
+          "source_url": "https://starlogistics.com.ua/en",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_urls": [
+            {
+              "url": "https://starlogistics.com.ua/en",
+              "seed_url_role": "startpoint",
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
