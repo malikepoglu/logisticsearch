@@ -1,0 +1,2845 @@
+{
+  "candidate_manifest": true,
+  "canonical_rule_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md",
+  "catalog_notes": [
+    "Candidate manifest only; not live crawler activation.",
+    "All families, surfaces, and seed URLs are disabled.",
+    "All seed URLs require live check before DB/frontier insertion.",
+    "Decision doc FIATA duplicate URL debt is resolved in JSON by official URL overrides for Bon Marine and Despred."
+  ],
+  "catalog_version": "2026-05-17.bg.v1",
+  "country_code": "BG",
+  "country_name": "Bulgaria",
+  "created_at_utc": "2026-05-16T23:37:06.800027+00:00",
+  "created_by_gate": "R370_BG_SOURCE_SEED_CATALOG_JSON_LOCAL_ONLY",
+  "enabled": false,
+  "is_enabled": false,
+  "is_live": false,
+  "language_code": "bg",
+  "language_name": "Bulgarian",
+  "metrics": {
+    "decision_doc_seed_url_count": 40,
+    "decision_doc_unique_seed_url_count": 38,
+    "duplicate_seed_url_excess_count": 0,
+    "empty_seed_url_count": 0,
+    "non_https_seed_url_count": 0,
+    "seed_surface_count": 40,
+    "seed_url_count": 40,
+    "source_family_count": 40,
+    "unique_seed_url_count": 40
+  },
+  "needs_live_check": true,
+  "no_db_insert": true,
+  "no_frontier_activation": true,
+  "no_url_fetch_live_probe": true,
+  "pi51c_live_probe_required_before_db_or_frontier_insert": true,
+  "review_state": "needs_live_check",
+  "robots_review_required": true,
+  "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+  "safety_state": "candidate_only_not_live",
+  "schema": "source_families_v2",
+  "schema_version": "2.0",
+  "source_decision_doc": "docs/TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md",
+  "source_families": [
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Bulgarian freight forwarding/logistics association member directory.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg001_nsbs_members",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG001_NSBS_MEMBERS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://nsbs.bg/en/members",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://nsbs.bg/en/members",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG001_NSBS_MEMBERS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://nsbs.bg/en/members",
+              "url": "https://nsbs.bg/en/members",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG001_NSBS_MEMBERS",
+          "surface_name": "Bulgarian freight forwarding/logistics association member directory.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG001_NSBS_MEMBERS",
+      "source_family_index": 1,
+      "source_family_name": "Bg001 Nsbs Members",
+      "source_quality": "A_PLUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "National association context for transport, freight forwarding, and logistics.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg002_nsbs_home",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG002_NSBS_HOME_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://nsbs.bg/en/home",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://nsbs.bg/en/home",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG002_NSBS_HOME_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://nsbs.bg/en/home",
+              "url": "https://nsbs.bg/en/home",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG002_NSBS_HOME",
+          "surface_name": "National association context for transport, freight forwarding, and logistics.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG002_NSBS_HOME",
+      "source_family_index": 2,
+      "source_family_name": "Bg002 Nsbs Home",
+      "source_quality": "A_PLUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "FIATA Bulgaria member directory / authoritative cross-check surface.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg003_fiata_bg_directory",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG003_FIATA_BG_DIRECTORY_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://fiata.org/directory/bg/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://fiata.org/directory/bg/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG003_FIATA_BG_DIRECTORY_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://fiata.org/directory/bg/",
+              "url": "https://fiata.org/directory/bg/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG003_FIATA_BG_DIRECTORY",
+          "surface_name": "FIATA Bulgaria member directory / authoritative cross-check surface.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG003_FIATA_BG_DIRECTORY",
+      "source_family_index": 3,
+      "source_family_name": "Bg003 Fiata Bg Directory",
+      "source_quality": "A_PLUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Who Is Who in Transport and Freight Forwarding in Bulgaria.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg004_logistika_whoiswho",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG004_LOGISTIKA_WHOISWHO_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.whoiswho.logistika.bg/en/index.php",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.whoiswho.logistika.bg/en/index.php",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG004_LOGISTIKA_WHOISWHO_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.whoiswho.logistika.bg/en/index.php",
+              "url": "https://www.whoiswho.logistika.bg/en/index.php",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG004_LOGISTIKA_WHOISWHO",
+          "surface_name": "Who Is Who in Transport and Freight Forwarding in Bulgaria.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG004_LOGISTIKA_WHOISWHO",
+      "source_family_index": 4,
+      "source_family_name": "Bg004 Logistika Whoiswho",
+      "source_quality": "A"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Bulgaria freight/logistics company directory.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg005_freightnet_logistics_bg",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG005_FREIGHTNET_LOGISTICS_BG_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.freightnet.com/directory/p1/cBG/s99.htm",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.freightnet.com/directory/p1/cBG/s99.htm",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG005_FREIGHTNET_LOGISTICS_BG_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.freightnet.com/directory/p1/cBG/s99.htm",
+              "url": "https://www.freightnet.com/directory/p1/cBG/s99.htm",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG005_FREIGHTNET_LOGISTICS_BG",
+          "surface_name": "Bulgaria freight/logistics company directory.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG005_FREIGHTNET_LOGISTICS_BG",
+      "source_family_index": 5,
+      "source_family_name": "Bg005 Freightnet Logistics Bg",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Bulgaria freight forwarders directory.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg006_freightnet_forwarders_bg",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG006_FREIGHTNET_FORWARDERS_BG_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.freightnet.com/directory/p2/cBG/s30.htm",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.freightnet.com/directory/p2/cBG/s30.htm",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG006_FREIGHTNET_FORWARDERS_BG_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.freightnet.com/directory/p2/cBG/s30.htm",
+              "url": "https://www.freightnet.com/directory/p2/cBG/s30.htm",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG006_FREIGHTNET_FORWARDERS_BG",
+          "surface_name": "Bulgaria freight forwarders directory.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG006_FREIGHTNET_FORWARDERS_BG",
+      "source_family_index": 6,
+      "source_family_name": "Bg006 Freightnet Forwarders Bg",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Bulgarian transportation and logistics company index.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg007_investbulgaria_transport_logistics",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.investbulgaria.com/Bulgarian-Transportation-and-Logistics-Companies/130",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.investbulgaria.com/Bulgarian-Transportation-and-Logistics-Companies/130",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.investbulgaria.com/Bulgarian-Transportation-and-Logistics-Companies/130",
+              "url": "https://www.investbulgaria.com/Bulgarian-Transportation-and-Logistics-Companies/130",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS",
+          "surface_name": "Bulgarian transportation and logistics company index.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS",
+      "source_family_index": 7,
+      "source_family_name": "Bg007 Investbulgaria Transport Logistics",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Rail/intermodal/logistics oriented Bulgaria company directory.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg008_railmarket_logistics_bg",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG008_RAILMARKET_LOGISTICS_BG_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://railmarket.com/eu/bulgaria/logistics-companies",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://railmarket.com/eu/bulgaria/logistics-companies",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG008_RAILMARKET_LOGISTICS_BG_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://railmarket.com/eu/bulgaria/logistics-companies",
+              "url": "https://railmarket.com/eu/bulgaria/logistics-companies",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG008_RAILMARKET_LOGISTICS_BG",
+          "surface_name": "Rail/intermodal/logistics oriented Bulgaria company directory.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG008_RAILMARKET_LOGISTICS_BG",
+      "source_family_index": 8,
+      "source_family_name": "Bg008 Railmarket Logistics Bg",
+      "source_quality": "B_PLUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Cargo agents / freight forwarders discovery directory.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg009_cargoyellowpages_bg",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG009_CARGOYELLOWPAGES_BG_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.cargoyellowpages.com/bulgaria_freight_forwarders_cargo_agents.html",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.cargoyellowpages.com/bulgaria_freight_forwarders_cargo_agents.html",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG009_CARGOYELLOWPAGES_BG_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.cargoyellowpages.com/bulgaria_freight_forwarders_cargo_agents.html",
+              "url": "https://www.cargoyellowpages.com/bulgaria_freight_forwarders_cargo_agents.html",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG009_CARGOYELLOWPAGES_BG",
+          "surface_name": "Cargo agents / freight forwarders discovery directory.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG009_CARGOYELLOWPAGES_BG",
+      "source_family_index": 9,
+      "source_family_name": "Bg009 Cargoyellowpages Bg",
+      "source_quality": "B_PLUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Freight forwarders / project cargo discovery directory.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg010_opca_bg_forwarders",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG010_OPCA_BG_FORWARDERS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/bulgaria-freight-forwarders/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/bulgaria-freight-forwarders/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG010_OPCA_BG_FORWARDERS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/bulgaria-freight-forwarders/",
+              "url": "https://overseasprojectcargo.com/InternationalFreightForwarders/bulgaria-freight-forwarders/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG010_OPCA_BG_FORWARDERS",
+          "surface_name": "Freight forwarders / project cargo discovery directory.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG010_OPCA_BG_FORWARDERS",
+      "source_family_index": 10,
+      "source_family_name": "Bg010 Opca Bg Forwarders",
+      "source_quality": "B_PLUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Shipping/freight forwarding discovery directory.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg011_ruzave_bg",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG011_RUZAVE_BG_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://ruzave.com/bulgaria",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://ruzave.com/bulgaria",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG011_RUZAVE_BG_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://ruzave.com/bulgaria",
+              "url": "https://ruzave.com/bulgaria",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG011_RUZAVE_BG",
+          "surface_name": "Shipping/freight forwarding discovery directory.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG011_RUZAVE_BG",
+      "source_family_index": 11,
+      "source_family_name": "Bg011 Ruzave Bg",
+      "source_quality": "B"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "General business directory; logistics discovery fallback.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg012_kompass_bg_transport_logistics",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://bg.kompass.com/s/transport-logistics/10/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://bg.kompass.com/s/transport-logistics/10/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://bg.kompass.com/s/transport-logistics/10/",
+              "url": "https://bg.kompass.com/s/transport-logistics/10/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS",
+          "surface_name": "General business directory; logistics discovery fallback.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS",
+      "source_family_index": 12,
+      "source_family_name": "Bg012 Kompass Bg Transport Logistics",
+      "source_quality": "B"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Supply-chain/logistics discovery surface.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg013_goodfirms_bg_logistics",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG013_GOODFIRMS_BG_LOGISTICS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.goodfirms.co/supply-chain-logistics-companies/bulgaria",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.goodfirms.co/supply-chain-logistics-companies/bulgaria",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG013_GOODFIRMS_BG_LOGISTICS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.goodfirms.co/supply-chain-logistics-companies/bulgaria",
+              "url": "https://www.goodfirms.co/supply-chain-logistics-companies/bulgaria",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG013_GOODFIRMS_BG_LOGISTICS",
+          "surface_name": "Supply-chain/logistics discovery surface.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG013_GOODFIRMS_BG_LOGISTICS",
+      "source_family_index": 13,
+      "source_family_name": "Bg013 Goodfirms Bg Logistics",
+      "source_quality": "B"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Current freight-forwarder discovery surface.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg014_clutch_bg_freight_forwarders",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://clutch.co/bg/logistics/freight-forwarders",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://clutch.co/bg/logistics/freight-forwarders",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://clutch.co/bg/logistics/freight-forwarders",
+              "url": "https://clutch.co/bg/logistics/freight-forwarders",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS",
+          "surface_name": "Current freight-forwarder discovery surface.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS",
+      "source_family_index": 14,
+      "source_family_name": "Bg014 Clutch Bg Freight Forwarders",
+      "source_quality": "B"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Current supply-chain/logistics discovery surface.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg015_clutch_bg_supply_chain",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://clutch.co/bg/logistics/supply-chain-management",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://clutch.co/bg/logistics/supply-chain-management",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://clutch.co/bg/logistics/supply-chain-management",
+              "url": "https://clutch.co/bg/logistics/supply-chain-management",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN",
+          "surface_name": "Current supply-chain/logistics discovery surface.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN",
+      "source_family_index": 15,
+      "source_family_name": "Bg015 Clutch Bg Supply Chain",
+      "source_quality": "B"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Long-tail company discovery surface; needs live check.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg016_ensun_bg_logistics",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG016_ENSUN_BG_LOGISTICS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://ensun.io/search/logistic/bulgaria",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://ensun.io/search/logistic/bulgaria",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG016_ENSUN_BG_LOGISTICS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://ensun.io/search/logistic/bulgaria",
+              "url": "https://ensun.io/search/logistic/bulgaria",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG016_ENSUN_BG_LOGISTICS",
+          "surface_name": "Long-tail company discovery surface; needs live check.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG016_ENSUN_BG_LOGISTICS",
+      "source_family_index": 16,
+      "source_family_name": "Bg016 Ensun Bg Logistics",
+      "source_quality": "B_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Discovery/paywall-like business directory; not authority.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg017_lusha_bg_transport_logistics",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.lusha.com/company-search/transportation-logistics-and-storage/a64fd456c3/bulgaria/199/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.lusha.com/company-search/transportation-logistics-and-storage/a64fd456c3/bulgaria/199/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.lusha.com/company-search/transportation-logistics-and-storage/a64fd456c3/bulgaria/199/",
+              "url": "https://www.lusha.com/company-search/transportation-logistics-and-storage/a64fd456c3/bulgaria/199/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS",
+          "surface_name": "Discovery/paywall-like business directory; not authority.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS",
+      "source_family_index": 17,
+      "source_family_name": "Bg017 Lusha Bg Transport Logistics",
+      "source_quality": "B_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "European association context for Bulgarian member body.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg018_clecat_nsbs_context",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG018_CLECAT_NSBS_CONTEXT_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.clecat.org/members/full-members",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.clecat.org/members/full-members",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG018_CLECAT_NSBS_CONTEXT_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.clecat.org/members/full-members",
+              "url": "https://www.clecat.org/members/full-members",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG018_CLECAT_NSBS_CONTEXT",
+          "surface_name": "European association context for Bulgarian member body.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG018_CLECAT_NSBS_CONTEXT",
+      "source_family_index": 18,
+      "source_family_name": "Bg018 Clecat Nsbs Context",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Business network discovery for transport/logistics firms.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg019_bblf_transport_industry",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG019_BBLF_TRANSPORT_INDUSTRY_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.bblf.bg/en/industries",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.bblf.bg/en/industries",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG019_BBLF_TRANSPORT_INDUSTRY_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.bblf.bg/en/industries",
+              "url": "https://www.bblf.bg/en/industries",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG019_BBLF_TRANSPORT_INDUSTRY",
+          "surface_name": "Business network discovery for transport/logistics firms.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG019_BBLF_TRANSPORT_INDUSTRY",
+      "source_family_index": 19,
+      "source_family_name": "Bg019 Bblf Transport Industry",
+      "source_quality": "B"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "General chamber context; discovery-only.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg020_bcci_general_context",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG020_BCCI_GENERAL_CONTEXT_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.bcci.bg/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.bcci.bg/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG020_BCCI_GENERAL_CONTEXT_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.bcci.bg/",
+              "url": "https://www.bcci.bg/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG020_BCCI_GENERAL_CONTEXT",
+          "surface_name": "General chamber context; discovery-only.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG020_BCCI_GENERAL_CONTEXT",
+      "source_family_index": 20,
+      "source_family_name": "Bg020 Bcci General Context",
+      "source_quality": "B"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official logistics provider seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg021_gopet_trans",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG021_GOPET_TRANS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://gopettrans.com/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://gopettrans.com/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG021_GOPET_TRANS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://gopettrans.com/",
+              "url": "https://gopettrans.com/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG021_GOPET_TRANS",
+          "surface_name": "Official logistics provider seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG021_GOPET_TRANS",
+      "source_family_index": 21,
+      "source_family_name": "Bg021 Gopet Trans",
+      "source_quality": "A"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official warehousing/logistics service seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg022_gopet_warehousing",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG022_GOPET_WAREHOUSING_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://gopettrans.com/warehousing-logistics/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://gopettrans.com/warehousing-logistics/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG022_GOPET_WAREHOUSING_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://gopettrans.com/warehousing-logistics/",
+              "url": "https://gopettrans.com/warehousing-logistics/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG022_GOPET_WAREHOUSING",
+          "surface_name": "Official warehousing/logistics service seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG022_GOPET_WAREHOUSING",
+      "source_family_index": 22,
+      "source_family_name": "Bg022 Gopet Warehousing",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official contact/address extraction seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg023_gopet_contact",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG023_GOPET_CONTACT_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://gopettrans.com/contact/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://gopettrans.com/contact/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG023_GOPET_CONTACT_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://gopettrans.com/contact/",
+              "url": "https://gopettrans.com/contact/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG023_GOPET_CONTACT",
+          "surface_name": "Official contact/address extraction seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG023_GOPET_CONTACT",
+      "source_family_index": 23,
+      "source_family_name": "Bg023 Gopet Contact",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official logistics company seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg024_unimasters_home",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG024_UNIMASTERS_HOME_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.unimasters.com/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.unimasters.com/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG024_UNIMASTERS_HOME_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.unimasters.com/",
+              "url": "https://www.unimasters.com/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG024_UNIMASTERS_HOME",
+          "surface_name": "Official logistics company seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG024_UNIMASTERS_HOME",
+      "source_family_index": 24,
+      "source_family_name": "Bg024 Unimasters Home",
+      "source_quality": "A"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official multi-location contact extraction seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg025_unimasters_contacts",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG025_UNIMASTERS_CONTACTS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.unimasters.com/page/6/Contacts.html",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.unimasters.com/page/6/Contacts.html",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG025_UNIMASTERS_CONTACTS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.unimasters.com/page/6/Contacts.html",
+              "url": "https://www.unimasters.com/page/6/Contacts.html",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG025_UNIMASTERS_CONTACTS",
+          "surface_name": "Official multi-location contact extraction seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG025_UNIMASTERS_CONTACTS",
+      "source_family_index": 25,
+      "source_family_name": "Bg025 Unimasters Contacts",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official Eurosped logistics service seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg026_eurosped_home",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG026_EUROSPED_HOME_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.eurosped.bg/en/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.eurosped.bg/en/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG026_EUROSPED_HOME_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.eurosped.bg/en/",
+              "url": "https://www.eurosped.bg/en/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG026_EUROSPED_HOME",
+          "surface_name": "Official Eurosped logistics service seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG026_EUROSPED_HOME",
+      "source_family_index": 26,
+      "source_family_name": "Bg026 Eurosped Home",
+      "source_quality": "A"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Domestic forwarding/transport/groupage seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg027_eurosped_bg_transport",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG027_EUROSPED_BG_TRANSPORT_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.eurosped.bg/en/transport-in-bulgaria/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.eurosped.bg/en/transport-in-bulgaria/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG027_EUROSPED_BG_TRANSPORT_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.eurosped.bg/en/transport-in-bulgaria/",
+              "url": "https://www.eurosped.bg/en/transport-in-bulgaria/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG027_EUROSPED_BG_TRANSPORT",
+          "surface_name": "Domestic forwarding/transport/groupage seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG027_EUROSPED_BG_TRANSPORT",
+      "source_family_index": 27,
+      "source_family_name": "Bg027 Eurosped Bg Transport",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Warehouse / 4PL / supply-chain seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg028_eurosped_warehouse",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG028_EUROSPED_WAREHOUSE_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.eurosped.bg/en/eurolog-warehouse-logistics-4pl/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.eurosped.bg/en/eurolog-warehouse-logistics-4pl/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG028_EUROSPED_WAREHOUSE_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.eurosped.bg/en/eurolog-warehouse-logistics-4pl/",
+              "url": "https://www.eurosped.bg/en/eurolog-warehouse-logistics-4pl/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG028_EUROSPED_WAREHOUSE",
+          "surface_name": "Warehouse / 4PL / supply-chain seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG028_EUROSPED_WAREHOUSE",
+      "source_family_index": 28,
+      "source_family_name": "Bg028 Eurosped Warehouse",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official NTZ logistics/freight forwarding seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg029_ntz_home",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG029_NTZ_HOME_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://ntz.bg/en/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://ntz.bg/en/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG029_NTZ_HOME_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://ntz.bg/en/",
+              "url": "https://ntz.bg/en/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG029_NTZ_HOME",
+          "surface_name": "Official NTZ logistics/freight forwarding seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG029_NTZ_HOME",
+      "source_family_index": 29,
+      "source_family_name": "Bg029 Ntz Home",
+      "source_quality": "A"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official company profile seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg030_ntz_about",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG030_NTZ_ABOUT_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://ntz.bg/en/about-us/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://ntz.bg/en/about-us/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG030_NTZ_ABOUT_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://ntz.bg/en/about-us/",
+              "url": "https://ntz.bg/en/about-us/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG030_NTZ_ABOUT",
+          "surface_name": "Official company profile seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG030_NTZ_ABOUT",
+      "source_family_index": 30,
+      "source_family_name": "Bg030 Ntz About",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official contact/address extraction seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg031_ntz_contacts",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG031_NTZ_CONTACTS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://ntz.bg/en/contacts/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://ntz.bg/en/contacts/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG031_NTZ_CONTACTS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://ntz.bg/en/contacts/",
+              "url": "https://ntz.bg/en/contacts/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG031_NTZ_CONTACTS",
+          "surface_name": "Official contact/address extraction seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG031_NTZ_CONTACTS",
+      "source_family_index": 31,
+      "source_family_name": "Bg031 Ntz Contacts",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official Bulgarian transport/logistics company profile seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg032_interlogistica_about",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG032_INTERLOGISTICA_ABOUT_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.interlogistica.bg/en/info/about/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.interlogistica.bg/en/info/about/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG032_INTERLOGISTICA_ABOUT_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.interlogistica.bg/en/info/about/",
+              "url": "https://www.interlogistica.bg/en/info/about/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG032_INTERLOGISTICA_ABOUT",
+          "surface_name": "Official Bulgarian transport/logistics company profile seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG032_INTERLOGISTICA_ABOUT",
+      "source_family_index": 32,
+      "source_family_name": "Bg032 Interlogistica About",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official freight/logistics company seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg033_wto_bg_home",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG033_WTO_BG_HOME_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.wto.bg/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.wto.bg/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG033_WTO_BG_HOME_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.wto.bg/",
+              "url": "https://www.wto.bg/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG033_WTO_BG_HOME",
+          "surface_name": "Official freight/logistics company seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG033_WTO_BG_HOME",
+      "source_family_index": 33,
+      "source_family_name": "Bg033 Wto Bg Home",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Global logistics provider Bulgaria surface.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg034_dachser_bg",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG034_DACHSER_BG_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.dachser.bg/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.dachser.bg/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG034_DACHSER_BG_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.dachser.bg/",
+              "url": "https://www.dachser.bg/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG034_DACHSER_BG",
+          "surface_name": "Global logistics provider Bulgaria surface.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG034_DACHSER_BG",
+      "source_family_index": 34,
+      "source_family_name": "Bg034 Dachser Bg",
+      "source_quality": "B_PLUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Global logistics provider Bulgaria surface.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg035_dsv_bg",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG035_DSV_BG_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.bg.dsv.com/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.bg.dsv.com/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG035_DSV_BG_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.bg.dsv.com/",
+              "url": "https://www.bg.dsv.com/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG035_DSV_BG",
+          "surface_name": "Global logistics provider Bulgaria surface.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG035_DSV_BG",
+      "source_family_index": 35,
+      "source_family_name": "Bg035 Dsv Bg",
+      "source_quality": "B_PLUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official transport/forwarding company seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg036_flexytrans_home",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG036_FLEXYTRANS_HOME_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.flexytrans.bg/en/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.flexytrans.bg/en/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG036_FLEXYTRANS_HOME_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.flexytrans.bg/en/",
+              "url": "https://www.flexytrans.bg/en/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG036_FLEXYTRANS_HOME",
+          "surface_name": "Official transport/forwarding company seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG036_FLEXYTRANS_HOME",
+      "source_family_index": 36,
+      "source_family_name": "Bg036 Flexytrans Home",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Official Bulgarian cargo transport company seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg037_eurospeed_home",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG037_EUROSPEED_HOME_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://eu-speed.com/en/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://eu-speed.com/en/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG037_EUROSPEED_HOME_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://eu-speed.com/en/",
+              "url": "https://eu-speed.com/en/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG037_EUROSPEED_HOME",
+          "surface_name": "Official Bulgarian cargo transport company seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG037_EUROSPEED_HOME",
+      "source_family_index": 37,
+      "source_family_name": "Bg037 Eurospeed Home",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "Warehouse logistics service seed.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg038_orbit_warehouse",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG038_ORBIT_WAREHOUSE_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://www.orbit.bg/en/service/warehouse-logistics/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://www.orbit.bg/en/service/warehouse-logistics/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG038_ORBIT_WAREHOUSE_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://www.orbit.bg/en/service/warehouse-logistics/",
+              "url": "https://www.orbit.bg/en/service/warehouse-logistics/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG038_ORBIT_WAREHOUSE",
+          "surface_name": "Warehouse logistics service seed.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG038_ORBIT_WAREHOUSE",
+      "source_family_index": 38,
+      "source_family_name": "Bg038 Orbit Warehouse",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "FIATA/NSBS-listed company candidate; official domain to be extracted later.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg039_bon_marine_from_fiata_nsbs",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG039_BON_MARINE_FROM_FIATA_NSBS_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://bonmarine.com/en/home/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://fiata.org/directory/bg/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG039_BON_MARINE_FROM_FIATA_NSBS_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://bonmarine.com/en/home/",
+              "url": "https://bonmarine.com/en/home/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG039_BON_MARINE_FROM_FIATA_NSBS",
+          "surface_name": "FIATA/NSBS-listed company candidate; official domain to be extracted later.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG039_BON_MARINE_FROM_FIATA_NSBS",
+      "source_family_index": 39,
+      "source_family_name": "Bg039 Bon Marine From Fiata Nsbs",
+      "source_quality": "A_MINUS"
+    },
+    {
+      "candidate_manifest": true,
+      "country_code": "BG",
+      "country_name": "Bulgaria",
+      "decision": "ACCEPT_REVIEW",
+      "decision_note": "FIATA-listed Bulgarian freight/logistics candidate; official domain to be confirmed later.",
+      "enabled": false,
+      "family_metadata": {
+        "crawl_depth_policy": "seed_only_until_live_probe",
+        "crawl_priority": "candidate_review",
+        "host_budget_group": "bg040_despred_from_fiata",
+        "source_origin": "R366 Bulgarian decision doc"
+      },
+      "is_enabled": false,
+      "is_live": false,
+      "language_code": "bg",
+      "needs_live_check": true,
+      "review_state": "needs_live_check",
+      "robots_review_required": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+      "safety_state": "candidate_only_not_live",
+      "seed_surface_count": 1,
+      "seed_surfaces": [
+        {
+          "candidate_manifest": true,
+          "enabled": false,
+          "is_enabled": false,
+          "is_live": false,
+          "needs_live_check": true,
+          "review_state": "needs_live_check",
+          "robots_review_required": true,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "safety_state": "candidate_only_not_live",
+          "seed_surface_code": "BG040_DESPRED_FROM_FIATA_SURFACE_001",
+          "seed_surface_index": 1,
+          "seed_urls": [
+            {
+              "candidate_manifest": true,
+              "canonical_url": "https://despred.com/en/home/",
+              "enabled": false,
+              "is_enabled": false,
+              "is_live": false,
+              "needs_live_check": true,
+              "notes": "Candidate seed URL only; not a live crawler/frontier activation.",
+              "original_decision_doc_url": "https://fiata.org/directory/bg/",
+              "review_state": "needs_live_check",
+              "robots_review_required": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live",
+              "seed_url_code": "BG040_DESPRED_FROM_FIATA_SEED_URL_001",
+              "seed_url_index": 1,
+              "submitted_url": "https://despred.com/en/home/",
+              "url": "https://despred.com/en/home/",
+              "url_type": "directory_or_official_candidate"
+            }
+          ],
+          "source_code": "BG040_DESPRED_FROM_FIATA",
+          "surface_name": "FIATA-listed Bulgarian freight/logistics candidate; official domain to be confirmed later.",
+          "surface_type": "directory_or_official_candidate"
+        }
+      ],
+      "source_category": [
+        "directory",
+        "official_or_discovery_candidate"
+      ],
+      "source_family_code": "BG040_DESPRED_FROM_FIATA",
+      "source_family_index": 40,
+      "source_family_name": "Bg040 Despred From Fiata",
+      "source_quality": "A_MINUS"
+    }
+  ]
+}
