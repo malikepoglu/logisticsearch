@@ -1,0 +1,4400 @@
+{
+  "schema": "source_families_v2",
+  "schema_version": "source_families_v2",
+  "catalog_version": "portuguese_source_families_v2",
+  "language_code": "pt",
+  "language_name": "Portuguese",
+  "language_alias": [
+    "pt",
+    "portuguese",
+    "português",
+    "portugues"
+  ],
+  "candidate_manifest": true,
+  "is_live": false,
+  "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+  "standardization_policy": {
+    "canonical_rule_doc": "docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md",
+    "canonical_rule_sha256": "65b36104f039962f3b6c8cd3c70b2575e0de00f27e50732e18953749d89bb49d",
+    "github_raw_rule_url": "https://raw.githubusercontent.com/malikepoglu/logisticsearch/80fae567a5c61cd262db1ab03c20fcc615335d20/docs/TOPIC_CRAWLER_CORE_SOURCE_SEED_STARTPOINT_JSON_CANONICAL_RULES_2026_05_16.md",
+    "decision_doc": "docs/TOPIC_CRAWLER_CORE_PORTUGUESE_SOURCE_SEED_URLS_DECISION_2026_05_16.md",
+    "decision_doc_sha256": "99ea6b74002f20f4f44966b410637f515f0ff17e631ca9db0016b80600385a85",
+    "candidate_manifest_only": true,
+    "no_db_insert": true,
+    "no_frontier_activation": true,
+    "no_crawler_start_stop": true,
+    "no_systemd_mutation": true,
+    "no_url_fetch_live_probe": true,
+    "no_pi51c_live_activation": true
+  },
+  "standardization_gate": "R309_PT_SOURCE_SEED_CATALOG_LOCAL_ONLY",
+  "last_rewritten_by_gate": "R309_PT_SOURCE_SEED_CATALOG_LOCAL_ONLY",
+  "safety_guards": {
+    "candidate_manifest": true,
+    "is_live": false,
+    "enabled": false,
+    "needs_live_check": true,
+    "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+    "safety_state": "candidate_only_not_live",
+    "secret_printing_forbidden": true,
+    "db_frontier_crawler_systemd_mutation_forbidden": true,
+    "url_fetch_live_probe_forbidden": true,
+    "pi51c_sync_forbidden_in_this_gate": true,
+    "pi51c_live_runtime_copy_forbidden_in_this_gate": true
+  },
+  "metrics": {
+    "source_family_count": 40,
+    "seed_surface_count": 84,
+    "seed_url_count": 84,
+    "unique_seed_url_count": 84,
+    "duplicate_seed_url_count": 0,
+    "non_https_seed_url_count": 0
+  },
+  "dropped_empty_source_families": [],
+  "source_families": [
+    {
+      "source_family_index": 1,
+      "source_family_code": "pt_fiata_directory",
+      "source_family_name": "FIATA Portugal members directory",
+      "source_name": "FIATA Portugal members directory",
+      "source_root_url": "https://fiata.org/directory/pt/",
+      "source_host": "fiata.org",
+      "source_categories": [
+        "global_association_directory"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 1,
+      "seed_url_count": 1,
+      "family_metadata": {
+        "decision_doc_source_index": 1,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "global_association_directory",
+        "decision_doc_note": "Portugal member page under FIATA shared host; candidate-only subordinate surface.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_fiata_directory_surface_01",
+          "seed_surface_name": "FIATA Portugal members directory seed surface 1",
+          "source_family_code": "pt_fiata_directory",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 1,
+            "decision_doc_source_code": "pt_fiata_directory",
+            "surface_slug": "https_fiata_org_directory_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 1,
+              "url": "https://fiata.org/directory/pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 2,
+      "source_family_code": "pt_apat",
+      "source_family_name": "APAT - Associação dos Transitários de Portugal",
+      "source_name": "APAT - Associação dos Transitários de Portugal",
+      "source_root_url": "https://www.apat.pt/en/home",
+      "source_host": "www.apat.pt",
+      "source_categories": [
+        "freight_forwarding_association"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 2,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "freight_forwarding_association",
+        "decision_doc_note": "National Portuguese freight forwarders association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 2,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_apat_surface_01",
+          "seed_surface_name": "APAT - Associação dos Transitários de Portugal seed surface 1",
+          "source_family_code": "pt_apat",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 2,
+            "decision_doc_source_code": "pt_apat",
+            "surface_slug": "https_www_apat_pt_en_home",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 2,
+              "url": "https://www.apat.pt/en/home",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 3,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_apat_surface_02",
+          "seed_surface_name": "APAT - Associação dos Transitários de Portugal seed surface 2",
+          "source_family_code": "pt_apat",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 3,
+            "decision_doc_source_code": "pt_apat",
+            "surface_slug": "https_www_apat_pt_en_a_associacao",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 3,
+              "url": "https://www.apat.pt/en/a_associacao",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 4,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "pt_apat_surface_03",
+          "seed_surface_name": "APAT - Associação dos Transitários de Portugal seed surface 3",
+          "source_family_code": "pt_apat",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 4,
+            "decision_doc_source_code": "pt_apat",
+            "surface_slug": "https_www_apat_pt_en_vantagens_associados",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 4,
+              "url": "https://www.apat.pt/en/vantagens_associados",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 3,
+      "source_family_code": "pt_antram",
+      "source_family_name": "ANTRAM",
+      "source_name": "ANTRAM",
+      "source_root_url": "https://www.antram.pt/",
+      "source_host": "www.antram.pt",
+      "source_categories": [
+        "road_freight_association"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 3,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "road_freight_association",
+        "decision_doc_note": "Portuguese road freight transport association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 5,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_antram_surface_01",
+          "seed_surface_name": "ANTRAM seed surface 1",
+          "source_family_code": "pt_antram",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 5,
+            "decision_doc_source_code": "pt_antram",
+            "surface_slug": "https_www_antram_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 5,
+              "url": "https://www.antram.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 6,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_antram_surface_02",
+          "seed_surface_name": "ANTRAM seed surface 2",
+          "source_family_code": "pt_antram",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 6,
+            "decision_doc_source_code": "pt_antram",
+            "surface_slug": "https_www_antram_pt_associacao",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 6,
+              "url": "https://www.antram.pt/associacao/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 4,
+      "source_family_code": "pt_aplog",
+      "source_family_name": "APLOG - Associação Portuguesa de Logística",
+      "source_name": "APLOG - Associação Portuguesa de Logística",
+      "source_root_url": "https://aplog.pt/",
+      "source_host": "aplog.pt",
+      "source_categories": [
+        "logistics_association"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 4,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "logistics_association",
+        "decision_doc_note": "Portuguese logistics association candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 7,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_aplog_surface_01",
+          "seed_surface_name": "APLOG - Associação Portuguesa de Logística seed surface 1",
+          "source_family_code": "pt_aplog",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 7,
+            "decision_doc_source_code": "pt_aplog",
+            "surface_slug": "https_aplog_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 7,
+              "url": "https://aplog.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 8,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_aplog_surface_02",
+          "seed_surface_name": "APLOG - Associação Portuguesa de Logística seed surface 2",
+          "source_family_code": "pt_aplog",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 8,
+            "decision_doc_source_code": "pt_aplog",
+            "surface_slug": "https_aplog_pt_a_aplog",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 8,
+              "url": "https://aplog.pt/a-aplog/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 5,
+      "source_family_code": "pt_associacao_portos_portugal",
+      "source_family_name": "Associação dos Portos de Portugal",
+      "source_name": "Associação dos Portos de Portugal",
+      "source_root_url": "https://www.portosdeportugal.pt/",
+      "source_host": "www.portosdeportugal.pt",
+      "source_categories": [
+        "ports_association"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 5,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "ports_association",
+        "decision_doc_note": "Portuguese ports association / port-sector reference candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 9,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_associacao_portos_portugal_surface_01",
+          "seed_surface_name": "Associação dos Portos de Portugal seed surface 1",
+          "source_family_code": "pt_associacao_portos_portugal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 9,
+            "decision_doc_source_code": "pt_associacao_portos_portugal",
+            "surface_slug": "https_www_portosdeportugal_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 9,
+              "url": "https://www.portosdeportugal.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 10,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_associacao_portos_portugal_surface_02",
+          "seed_surface_name": "Associação dos Portos de Portugal seed surface 2",
+          "source_family_code": "pt_associacao_portos_portugal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 10,
+            "decision_doc_source_code": "pt_associacao_portos_portugal",
+            "surface_slug": "https_www_portosdeportugal_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 10,
+              "url": "https://www.portosdeportugal.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 6,
+      "source_family_code": "pt_janela_unica_logistica",
+      "source_family_name": "Janela Única Logística project",
+      "source_name": "Janela Única Logística project",
+      "source_root_url": "https://www.projeto-jul.pt/en",
+      "source_host": "www.projeto-jul.pt",
+      "source_categories": [
+        "logistics_single_window"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 6,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "logistics_single_window",
+        "decision_doc_note": "National logistics single-window ecosystem candidate; no runtime activation.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 11,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_janela_unica_logistica_surface_01",
+          "seed_surface_name": "Janela Única Logística project seed surface 1",
+          "source_family_code": "pt_janela_unica_logistica",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 11,
+            "decision_doc_source_code": "pt_janela_unica_logistica",
+            "surface_slug": "https_www_projeto_jul_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 11,
+              "url": "https://www.projeto-jul.pt/en",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 12,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_janela_unica_logistica_surface_02",
+          "seed_surface_name": "Janela Única Logística project seed surface 2",
+          "source_family_code": "pt_janela_unica_logistica",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 12,
+            "decision_doc_source_code": "pt_janela_unica_logistica",
+            "surface_slug": "https_www_projeto_jul_pt_en_entities_involved",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 12,
+              "url": "https://www.projeto-jul.pt/en/entities-involved",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 7,
+      "source_family_code": "pt_imt_transportes",
+      "source_family_name": "IMT Portugal",
+      "source_name": "IMT Portugal",
+      "source_root_url": "https://www.imt-ip.pt/",
+      "source_host": "www.imt-ip.pt",
+      "source_categories": [
+        "official_transport_authority"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 7,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "official_transport_authority",
+        "decision_doc_note": "Official transport authority candidate; structural-only URL validation.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 13,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_imt_transportes_surface_01",
+          "seed_surface_name": "IMT Portugal seed surface 1",
+          "source_family_code": "pt_imt_transportes",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 13,
+            "decision_doc_source_code": "pt_imt_transportes",
+            "surface_slug": "https_www_imt_ip_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 13,
+              "url": "https://www.imt-ip.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 14,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_imt_transportes_surface_02",
+          "seed_surface_name": "IMT Portugal seed surface 2",
+          "source_family_code": "pt_imt_transportes",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 14,
+            "decision_doc_source_code": "pt_imt_transportes",
+            "surface_slug": "https_www_imt_ip_pt_sites_imtt_portugues_transportesrodoviarios_transportemercadorias_paginas_transportemercadorias_aspx",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 14,
+              "url": "https://www.imt-ip.pt/sites/IMTT/Portugues/TransportesRodoviarios/TransporteMercadorias/Paginas/TransporteMercadorias.aspx",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 8,
+      "source_family_code": "pt_port_lisbon",
+      "source_family_name": "Port of Lisbon",
+      "source_name": "Port of Lisbon",
+      "source_root_url": "https://www.portodelisboa.pt/en/home",
+      "source_host": "www.portodelisboa.pt",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 8,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Major Portuguese port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 15,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_port_lisbon_surface_01",
+          "seed_surface_name": "Port of Lisbon seed surface 1",
+          "source_family_code": "pt_port_lisbon",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 15,
+            "decision_doc_source_code": "pt_port_lisbon",
+            "surface_slug": "https_www_portodelisboa_pt_en_home",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 15,
+              "url": "https://www.portodelisboa.pt/en/home",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 16,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_port_lisbon_surface_02",
+          "seed_surface_name": "Port of Lisbon seed surface 2",
+          "source_family_code": "pt_port_lisbon",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 16,
+            "decision_doc_source_code": "pt_port_lisbon",
+            "surface_slug": "https_www_portodelisboa_pt_en_business",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 16,
+              "url": "https://www.portodelisboa.pt/en/business",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 9,
+      "source_family_code": "pt_port_sines_algarve",
+      "source_family_name": "Ports of Sines and Algarve",
+      "source_name": "Ports of Sines and Algarve",
+      "source_root_url": "https://www.apsinesalgarve.pt/en/",
+      "source_host": "www.apsinesalgarve.pt",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 9,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Sines is a major Portuguese cargo/container platform; candidate-only.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 17,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_port_sines_algarve_surface_01",
+          "seed_surface_name": "Ports of Sines and Algarve seed surface 1",
+          "source_family_code": "pt_port_sines_algarve",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 17,
+            "decision_doc_source_code": "pt_port_sines_algarve",
+            "surface_slug": "https_www_apsinesalgarve_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 17,
+              "url": "https://www.apsinesalgarve.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 18,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_port_sines_algarve_surface_02",
+          "seed_surface_name": "Ports of Sines and Algarve seed surface 2",
+          "source_family_code": "pt_port_sines_algarve",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 18,
+            "decision_doc_source_code": "pt_port_sines_algarve",
+            "surface_slug": "https_www_apsinesalgarve_pt_en_ports_port_of_sines",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 18,
+              "url": "https://www.apsinesalgarve.pt/en/ports/port-of-sines/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 19,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "pt_port_sines_algarve_surface_03",
+          "seed_surface_name": "Ports of Sines and Algarve seed surface 3",
+          "source_family_code": "pt_port_sines_algarve",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 19,
+            "decision_doc_source_code": "pt_port_sines_algarve",
+            "surface_slug": "https_www_apsinesalgarve_pt_en_ports_port_of_portimao",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 19,
+              "url": "https://www.apsinesalgarve.pt/en/ports/port-of-portimao/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 10,
+      "source_family_code": "pt_port_leixoes_apdl",
+      "source_family_name": "APDL / Port of Leixões",
+      "source_name": "APDL / Port of Leixões",
+      "source_root_url": "https://www.apdl.pt/en/",
+      "source_host": "www.apdl.pt",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A+",
+      "quality_tier": "A+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 10,
+        "decision_doc_quality_tier_raw": "A_PLUS",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Northern Portugal / Leixões port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 20,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_port_leixoes_apdl_surface_01",
+          "seed_surface_name": "APDL / Port of Leixões seed surface 1",
+          "source_family_code": "pt_port_leixoes_apdl",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 20,
+            "decision_doc_source_code": "pt_port_leixoes_apdl",
+            "surface_slug": "https_www_apdl_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 20,
+              "url": "https://www.apdl.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 21,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_port_leixoes_apdl_surface_02",
+          "seed_surface_name": "APDL / Port of Leixões seed surface 2",
+          "source_family_code": "pt_port_leixoes_apdl",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 21,
+            "decision_doc_source_code": "pt_port_leixoes_apdl",
+            "surface_slug": "https_leixoes_apdl_pt_en_the_port",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 21,
+              "url": "https://leixoes.apdl.pt/en/the-port/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 22,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "pt_port_leixoes_apdl_surface_03",
+          "seed_surface_name": "APDL / Port of Leixões seed surface 3",
+          "source_family_code": "pt_port_leixoes_apdl",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A+",
+          "quality_tier": "A+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 22,
+            "decision_doc_source_code": "pt_port_leixoes_apdl",
+            "surface_slug": "https_www_apdl_pt_en_ports",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 22,
+              "url": "https://www.apdl.pt/en/ports/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 11,
+      "source_family_code": "pt_port_aveiro",
+      "source_family_name": "Port of Aveiro",
+      "source_name": "Port of Aveiro",
+      "source_root_url": "https://portodeaveiro.pt/",
+      "source_host": "portodeaveiro.pt",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 11,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Central Portugal port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 23,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_port_aveiro_surface_01",
+          "seed_surface_name": "Port of Aveiro seed surface 1",
+          "source_family_code": "pt_port_aveiro",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 23,
+            "decision_doc_source_code": "pt_port_aveiro",
+            "surface_slug": "https_portodeaveiro_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 23,
+              "url": "https://portodeaveiro.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 24,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_port_aveiro_surface_02",
+          "seed_surface_name": "Port of Aveiro seed surface 2",
+          "source_family_code": "pt_port_aveiro",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 24,
+            "decision_doc_source_code": "pt_port_aveiro",
+            "surface_slug": "https_portodeaveiro_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 24,
+              "url": "https://portodeaveiro.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 12,
+      "source_family_code": "pt_port_setubal_sesimbra",
+      "source_family_name": "Ports of Setúbal and Sesimbra",
+      "source_name": "Ports of Setúbal and Sesimbra",
+      "source_root_url": "https://www.portodesetubal.pt/",
+      "source_host": "www.portodesetubal.pt",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 12,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Setúbal/Sesimbra port authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 25,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_port_setubal_sesimbra_surface_01",
+          "seed_surface_name": "Ports of Setúbal and Sesimbra seed surface 1",
+          "source_family_code": "pt_port_setubal_sesimbra",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 25,
+            "decision_doc_source_code": "pt_port_setubal_sesimbra",
+            "surface_slug": "https_www_portodesetubal_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 25,
+              "url": "https://www.portodesetubal.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 26,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_port_setubal_sesimbra_surface_02",
+          "seed_surface_name": "Ports of Setúbal and Sesimbra seed surface 2",
+          "source_family_code": "pt_port_setubal_sesimbra",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 26,
+            "decision_doc_source_code": "pt_port_setubal_sesimbra",
+            "surface_slug": "https_www_portodesetubal_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 26,
+              "url": "https://www.portodesetubal.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 13,
+      "source_family_code": "pt_port_viana_castelo",
+      "source_family_name": "Port of Viana do Castelo",
+      "source_name": "Port of Viana do Castelo",
+      "source_root_url": "https://www.portodeviana.pt/",
+      "source_host": "www.portodeviana.pt",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 13,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Northern regional port candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 27,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_port_viana_castelo_surface_01",
+          "seed_surface_name": "Port of Viana do Castelo seed surface 1",
+          "source_family_code": "pt_port_viana_castelo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 27,
+            "decision_doc_source_code": "pt_port_viana_castelo",
+            "surface_slug": "https_www_portodeviana_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 27,
+              "url": "https://www.portodeviana.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 28,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_port_viana_castelo_surface_02",
+          "seed_surface_name": "Port of Viana do Castelo seed surface 2",
+          "source_family_code": "pt_port_viana_castelo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 28,
+            "decision_doc_source_code": "pt_port_viana_castelo",
+            "surface_slug": "https_www_portodeviana_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 28,
+              "url": "https://www.portodeviana.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 14,
+      "source_family_code": "pt_ports_madeira",
+      "source_family_name": "APRAM / Ports of Madeira",
+      "source_name": "APRAM / Ports of Madeira",
+      "source_root_url": "https://www.apram.pt/",
+      "source_host": "www.apram.pt",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 14,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Madeira ports authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 29,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_ports_madeira_surface_01",
+          "seed_surface_name": "APRAM / Ports of Madeira seed surface 1",
+          "source_family_code": "pt_ports_madeira",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 29,
+            "decision_doc_source_code": "pt_ports_madeira",
+            "surface_slug": "https_www_apram_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 29,
+              "url": "https://www.apram.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 30,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_ports_madeira_surface_02",
+          "seed_surface_name": "APRAM / Ports of Madeira seed surface 2",
+          "source_family_code": "pt_ports_madeira",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 30,
+            "decision_doc_source_code": "pt_ports_madeira",
+            "surface_slug": "https_www_apram_pt_site_index_php_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 30,
+              "url": "https://www.apram.pt/site/index.php/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 15,
+      "source_family_code": "pt_ports_azores",
+      "source_family_name": "Ports of Azores",
+      "source_name": "Ports of Azores",
+      "source_root_url": "https://www.portosdosacores.pt/",
+      "source_host": "www.portosdosacores.pt",
+      "source_categories": [
+        "port_authority"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 15,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "port_authority",
+        "decision_doc_note": "Azores ports authority candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 31,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_ports_azores_surface_01",
+          "seed_surface_name": "Ports of Azores seed surface 1",
+          "source_family_code": "pt_ports_azores",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 31,
+            "decision_doc_source_code": "pt_ports_azores",
+            "surface_slug": "https_www_portosdosacores_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 31,
+              "url": "https://www.portosdosacores.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 32,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_ports_azores_surface_02",
+          "seed_surface_name": "Ports of Azores seed surface 2",
+          "source_family_code": "pt_ports_azores",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 32,
+            "decision_doc_source_code": "pt_ports_azores",
+            "surface_slug": "https_www_portosdosacores_pt_index_php_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 32,
+              "url": "https://www.portosdosacores.pt/index.php/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 16,
+      "source_family_code": "pt_tap_air_cargo",
+      "source_family_name": "TAP Air Cargo",
+      "source_name": "TAP Air Cargo",
+      "source_root_url": "https://www.tapcargo.com/en",
+      "source_host": "www.tapcargo.com",
+      "source_categories": [
+        "air_cargo_carrier"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A",
+      "quality_tier": "A",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 16,
+        "decision_doc_quality_tier_raw": "A",
+        "decision_doc_category": "air_cargo_carrier",
+        "decision_doc_note": "Portuguese air cargo carrier candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 33,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_tap_air_cargo_surface_01",
+          "seed_surface_name": "TAP Air Cargo seed surface 1",
+          "source_family_code": "pt_tap_air_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 33,
+            "decision_doc_source_code": "pt_tap_air_cargo",
+            "surface_slug": "https_www_tapcargo_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 33,
+              "url": "https://www.tapcargo.com/en",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 34,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_tap_air_cargo_surface_02",
+          "seed_surface_name": "TAP Air Cargo seed surface 2",
+          "source_family_code": "pt_tap_air_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 34,
+            "decision_doc_source_code": "pt_tap_air_cargo",
+            "surface_slug": "https_www_tapcargo_com_en_products",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 34,
+              "url": "https://www.tapcargo.com/en/products",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 35,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "pt_tap_air_cargo_surface_03",
+          "seed_surface_name": "TAP Air Cargo seed surface 3",
+          "source_family_code": "pt_tap_air_cargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A",
+          "quality_tier": "A",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 35,
+            "decision_doc_source_code": "pt_tap_air_cargo",
+            "surface_slug": "https_www_tapcargo_com_en_network",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 35,
+              "url": "https://www.tapcargo.com/en/network",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 17,
+      "source_family_code": "pt_portway",
+      "source_family_name": "Portway Handling de Portugal",
+      "source_name": "Portway Handling de Portugal",
+      "source_root_url": "https://www.portway.pt/en/",
+      "source_host": "www.portway.pt",
+      "source_categories": [
+        "airport_cargo_handler"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 17,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "airport_cargo_handler",
+        "decision_doc_note": "Portuguese airport ground/cargo handling candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 36,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_portway_surface_01",
+          "seed_surface_name": "Portway Handling de Portugal seed surface 1",
+          "source_family_code": "pt_portway",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 36,
+            "decision_doc_source_code": "pt_portway",
+            "surface_slug": "https_www_portway_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 36,
+              "url": "https://www.portway.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 37,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_portway_surface_02",
+          "seed_surface_name": "Portway Handling de Portugal seed surface 2",
+          "source_family_code": "pt_portway",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 37,
+            "decision_doc_source_code": "pt_portway",
+            "surface_slug": "https_www_portway_pt_en_our_business",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 37,
+              "url": "https://www.portway.pt/en/our-business",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 38,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "pt_portway_surface_03",
+          "seed_surface_name": "Portway Handling de Portugal seed surface 3",
+          "source_family_code": "pt_portway",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 38,
+            "decision_doc_source_code": "pt_portway",
+            "surface_slug": "https_www_portway_pt_en_contacts",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 38,
+              "url": "https://www.portway.pt/en/contacts",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 18,
+      "source_family_code": "pt_ana_airports",
+      "source_family_name": "ANA Aeroportos de Portugal",
+      "source_name": "ANA Aeroportos de Portugal",
+      "source_root_url": "https://www.ana.pt/en/lis/home",
+      "source_host": "www.ana.pt",
+      "source_categories": [
+        "airport_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 18,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "airport_operator",
+        "decision_doc_note": "Portuguese airport operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 39,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_ana_airports_surface_01",
+          "seed_surface_name": "ANA Aeroportos de Portugal seed surface 1",
+          "source_family_code": "pt_ana_airports",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 39,
+            "decision_doc_source_code": "pt_ana_airports",
+            "surface_slug": "https_www_ana_pt_en_lis_home",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 39,
+              "url": "https://www.ana.pt/en/lis/home",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 40,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_ana_airports_surface_02",
+          "seed_surface_name": "ANA Aeroportos de Portugal seed surface 2",
+          "source_family_code": "pt_ana_airports",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 40,
+            "decision_doc_source_code": "pt_ana_airports",
+            "surface_slug": "https_www_ana_pt_en_opo_home",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 40,
+              "url": "https://www.ana.pt/en/opo/home",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 19,
+      "source_family_code": "pt_groundforce_portugal",
+      "source_family_name": "Groundforce Portugal",
+      "source_name": "Groundforce Portugal",
+      "source_root_url": "https://www.groundforce.pt/en",
+      "source_host": "www.groundforce.pt",
+      "source_categories": [
+        "airport_ground_cargo_handler"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 19,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "airport_ground_cargo_handler",
+        "decision_doc_note": "Airport handling/cargo candidate; live check required later.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 41,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_groundforce_portugal_surface_01",
+          "seed_surface_name": "Groundforce Portugal seed surface 1",
+          "source_family_code": "pt_groundforce_portugal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 41,
+            "decision_doc_source_code": "pt_groundforce_portugal",
+            "surface_slug": "https_www_groundforce_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 41,
+              "url": "https://www.groundforce.pt/en",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 42,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_groundforce_portugal_surface_02",
+          "seed_surface_name": "Groundforce Portugal seed surface 2",
+          "source_family_code": "pt_groundforce_portugal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 42,
+            "decision_doc_source_code": "pt_groundforce_portugal",
+            "surface_slug": "https_www_groundforce_pt_en_services",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 42,
+              "url": "https://www.groundforce.pt/en/services",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 20,
+      "source_family_code": "pt_portocargo",
+      "source_family_name": "PORTOCARGO",
+      "source_name": "PORTOCARGO",
+      "source_root_url": "https://portocargo.pt/en/home/",
+      "source_host": "portocargo.pt",
+      "source_categories": [
+        "freight_forwarder"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 3,
+      "seed_url_count": 3,
+      "family_metadata": {
+        "decision_doc_source_index": 20,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "freight_forwarder",
+        "decision_doc_note": "Commercial freight forwarder candidate; below official/association priority.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 43,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_portocargo_surface_01",
+          "seed_surface_name": "PORTOCARGO seed surface 1",
+          "source_family_code": "pt_portocargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 43,
+            "decision_doc_source_code": "pt_portocargo",
+            "surface_slug": "https_portocargo_pt_en_home",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 43,
+              "url": "https://portocargo.pt/en/home/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 44,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_portocargo_surface_02",
+          "seed_surface_name": "PORTOCARGO seed surface 2",
+          "source_family_code": "pt_portocargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 44,
+            "decision_doc_source_code": "pt_portocargo",
+            "surface_slug": "https_portocargo_pt_en_sea_freight",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 44,
+              "url": "https://portocargo.pt/en/sea-freight/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 45,
+          "family_seed_surface_index": 3,
+          "seed_surface_code": "pt_portocargo_surface_03",
+          "seed_surface_name": "PORTOCARGO seed surface 3",
+          "source_family_code": "pt_portocargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 45,
+            "decision_doc_source_code": "pt_portocargo",
+            "surface_slug": "https_portocargo_pt_en_air_freight",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 45,
+              "url": "https://portocargo.pt/en/air-freight/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 21,
+      "source_family_code": "pt_igacargo",
+      "source_family_name": "IGACARGO",
+      "source_name": "IGACARGO",
+      "source_root_url": "https://www.igacargo.pt/en/",
+      "source_host": "www.igacargo.pt",
+      "source_categories": [
+        "freight_forwarder_air_cargo"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 21,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "freight_forwarder_air_cargo",
+        "decision_doc_note": "Customs and air cargo services candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 46,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_igacargo_surface_01",
+          "seed_surface_name": "IGACARGO seed surface 1",
+          "source_family_code": "pt_igacargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 46,
+            "decision_doc_source_code": "pt_igacargo",
+            "surface_slug": "https_www_igacargo_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 46,
+              "url": "https://www.igacargo.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 47,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_igacargo_surface_02",
+          "seed_surface_name": "IGACARGO seed surface 2",
+          "source_family_code": "pt_igacargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 47,
+            "decision_doc_source_code": "pt_igacargo",
+            "surface_slug": "https_www_igacargo_pt_en_history",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 47,
+              "url": "https://www.igacargo.pt/en/history/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 22,
+      "source_family_code": "pt_navigomes",
+      "source_family_name": "NAVIGOMES",
+      "source_name": "NAVIGOMES",
+      "source_root_url": "https://www.navigomes.pt/en",
+      "source_host": "www.navigomes.pt",
+      "source_categories": [
+        "freight_forwarder"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 22,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "freight_forwarder",
+        "decision_doc_note": "Commercial freight forwarder candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 48,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_navigomes_surface_01",
+          "seed_surface_name": "NAVIGOMES seed surface 1",
+          "source_family_code": "pt_navigomes",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 48,
+            "decision_doc_source_code": "pt_navigomes",
+            "surface_slug": "https_www_navigomes_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 48,
+              "url": "https://www.navigomes.pt/en",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 49,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_navigomes_surface_02",
+          "seed_surface_name": "NAVIGOMES seed surface 2",
+          "source_family_code": "pt_navigomes",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 49,
+            "decision_doc_source_code": "pt_navigomes",
+            "surface_slug": "https_www_navigomes_pt_en_node_57",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 49,
+              "url": "https://www.navigomes.pt/en/node/57",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 23,
+      "source_family_code": "pt_luis_simoes",
+      "source_family_name": "Luís Simões",
+      "source_name": "Luís Simões",
+      "source_root_url": "https://www.luis-simoes.com/en/",
+      "source_host": "www.luis-simoes.com",
+      "source_categories": [
+        "road_transport_logistics_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 23,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "road_transport_logistics_operator",
+        "decision_doc_note": "Iberian road transport/logistics operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 50,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_luis_simoes_surface_01",
+          "seed_surface_name": "Luís Simões seed surface 1",
+          "source_family_code": "pt_luis_simoes",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 50,
+            "decision_doc_source_code": "pt_luis_simoes",
+            "surface_slug": "https_www_luis_simoes_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 50,
+              "url": "https://www.luis-simoes.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 51,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_luis_simoes_surface_02",
+          "seed_surface_name": "Luís Simões seed surface 2",
+          "source_family_code": "pt_luis_simoes",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 51,
+            "decision_doc_source_code": "pt_luis_simoes",
+            "surface_slug": "https_www_luis_simoes_com_en_services",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 51,
+              "url": "https://www.luis-simoes.com/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 24,
+      "source_family_code": "pt_torrestir",
+      "source_family_name": "Torrestir",
+      "source_name": "Torrestir",
+      "source_root_url": "https://www.torrestir.com/en/",
+      "source_host": "www.torrestir.com",
+      "source_categories": [
+        "transport_logistics_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 24,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "transport_logistics_operator",
+        "decision_doc_note": "Commercial transport/logistics operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 52,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_torrestir_surface_01",
+          "seed_surface_name": "Torrestir seed surface 1",
+          "source_family_code": "pt_torrestir",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 52,
+            "decision_doc_source_code": "pt_torrestir",
+            "surface_slug": "https_www_torrestir_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 52,
+              "url": "https://www.torrestir.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 53,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_torrestir_surface_02",
+          "seed_surface_name": "Torrestir seed surface 2",
+          "source_family_code": "pt_torrestir",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 53,
+            "decision_doc_source_code": "pt_torrestir",
+            "surface_slug": "https_www_torrestir_com_en_services",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 53,
+              "url": "https://www.torrestir.com/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 25,
+      "source_family_code": "pt_garland",
+      "source_family_name": "Garland",
+      "source_name": "Garland",
+      "source_root_url": "https://www.garland.pt/en/",
+      "source_host": "www.garland.pt",
+      "source_categories": [
+        "freight_forwarding_logistics_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 25,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "freight_forwarding_logistics_operator",
+        "decision_doc_note": "Commercial forwarding/logistics operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 54,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_garland_surface_01",
+          "seed_surface_name": "Garland seed surface 1",
+          "source_family_code": "pt_garland",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 54,
+            "decision_doc_source_code": "pt_garland",
+            "surface_slug": "https_www_garland_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 54,
+              "url": "https://www.garland.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 55,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_garland_surface_02",
+          "seed_surface_name": "Garland seed surface 2",
+          "source_family_code": "pt_garland",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 55,
+            "decision_doc_source_code": "pt_garland",
+            "surface_slug": "https_www_garland_pt_en_services",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 55,
+              "url": "https://www.garland.pt/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 26,
+      "source_family_code": "pt_rangel",
+      "source_family_name": "Rangel Logistics Solutions",
+      "source_name": "Rangel Logistics Solutions",
+      "source_root_url": "https://www.rangel.com/en/",
+      "source_host": "www.rangel.com",
+      "source_categories": [
+        "logistics_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 26,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "logistics_operator",
+        "decision_doc_note": "Portuguese logistics operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 56,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_rangel_surface_01",
+          "seed_surface_name": "Rangel Logistics Solutions seed surface 1",
+          "source_family_code": "pt_rangel",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 56,
+            "decision_doc_source_code": "pt_rangel",
+            "surface_slug": "https_www_rangel_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 56,
+              "url": "https://www.rangel.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 57,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_rangel_surface_02",
+          "seed_surface_name": "Rangel Logistics Solutions seed surface 2",
+          "source_family_code": "pt_rangel",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 57,
+            "decision_doc_source_code": "pt_rangel",
+            "surface_slug": "https_www_rangel_com_en_services",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 57,
+              "url": "https://www.rangel.com/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 27,
+      "source_family_code": "pt_olicargo",
+      "source_family_name": "Olicargo",
+      "source_name": "Olicargo",
+      "source_root_url": "https://www.olicargo.com/en/",
+      "source_host": "www.olicargo.com",
+      "source_categories": [
+        "freight_forwarding_logistics_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 27,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "freight_forwarding_logistics_operator",
+        "decision_doc_note": "Commercial forwarding/logistics candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 58,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_olicargo_surface_01",
+          "seed_surface_name": "Olicargo seed surface 1",
+          "source_family_code": "pt_olicargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 58,
+            "decision_doc_source_code": "pt_olicargo",
+            "surface_slug": "https_www_olicargo_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 58,
+              "url": "https://www.olicargo.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 59,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_olicargo_surface_02",
+          "seed_surface_name": "Olicargo seed surface 2",
+          "source_family_code": "pt_olicargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 59,
+            "decision_doc_source_code": "pt_olicargo",
+            "surface_slug": "https_www_olicargo_com_en_services",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 59,
+              "url": "https://www.olicargo.com/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 28,
+      "source_family_code": "pt_transitex",
+      "source_family_name": "Transitex",
+      "source_name": "Transitex",
+      "source_root_url": "https://www.transitex.com/en/",
+      "source_host": "www.transitex.com",
+      "source_categories": [
+        "freight_forwarding_logistics_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 28,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "freight_forwarding_logistics_operator",
+        "decision_doc_note": "Commercial freight forwarding/logistics candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 60,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_transitex_surface_01",
+          "seed_surface_name": "Transitex seed surface 1",
+          "source_family_code": "pt_transitex",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 60,
+            "decision_doc_source_code": "pt_transitex",
+            "surface_slug": "https_www_transitex_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 60,
+              "url": "https://www.transitex.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 61,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_transitex_surface_02",
+          "seed_surface_name": "Transitex seed surface 2",
+          "source_family_code": "pt_transitex",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 61,
+            "decision_doc_source_code": "pt_transitex",
+            "surface_slug": "https_www_transitex_com_en_services",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 61,
+              "url": "https://www.transitex.com/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 29,
+      "source_family_code": "pt_jomatir",
+      "source_family_name": "Jomatir",
+      "source_name": "Jomatir",
+      "source_root_url": "https://www.jomatir.pt/en/",
+      "source_host": "www.jomatir.pt",
+      "source_categories": [
+        "road_transport_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 29,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "road_transport_operator",
+        "decision_doc_note": "Portuguese road transport candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 62,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_jomatir_surface_01",
+          "seed_surface_name": "Jomatir seed surface 1",
+          "source_family_code": "pt_jomatir",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 62,
+            "decision_doc_source_code": "pt_jomatir",
+            "surface_slug": "https_www_jomatir_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 62,
+              "url": "https://www.jomatir.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 63,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_jomatir_surface_02",
+          "seed_surface_name": "Jomatir seed surface 2",
+          "source_family_code": "pt_jomatir",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 63,
+            "decision_doc_source_code": "pt_jomatir",
+            "surface_slug": "https_www_jomatir_pt_en_services",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 63,
+              "url": "https://www.jomatir.pt/en/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 30,
+      "source_family_code": "pt_medway",
+      "source_family_name": "MEDWAY Iberia",
+      "source_name": "MEDWAY Iberia",
+      "source_root_url": "https://www.medway-iberia.com/",
+      "source_host": "www.medway-iberia.com",
+      "source_categories": [
+        "rail_freight_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 30,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "rail_freight_operator",
+        "decision_doc_note": "Rail freight/intermodal operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 64,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_medway_surface_01",
+          "seed_surface_name": "MEDWAY Iberia seed surface 1",
+          "source_family_code": "pt_medway",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 64,
+            "decision_doc_source_code": "pt_medway",
+            "surface_slug": "https_www_medway_iberia_com",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 64,
+              "url": "https://www.medway-iberia.com/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 65,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_medway_surface_02",
+          "seed_surface_name": "MEDWAY Iberia seed surface 2",
+          "source_family_code": "pt_medway",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 65,
+            "decision_doc_source_code": "pt_medway",
+            "surface_slug": "https_www_medway_iberia_com_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 65,
+              "url": "https://www.medway-iberia.com/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 31,
+      "source_family_code": "pt_takargo",
+      "source_family_name": "Takargo",
+      "source_name": "Takargo",
+      "source_root_url": "https://www.takargo.pt/",
+      "source_host": "www.takargo.pt",
+      "source_categories": [
+        "rail_freight_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 31,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "rail_freight_operator",
+        "decision_doc_note": "Rail freight operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 66,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_takargo_surface_01",
+          "seed_surface_name": "Takargo seed surface 1",
+          "source_family_code": "pt_takargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 66,
+            "decision_doc_source_code": "pt_takargo",
+            "surface_slug": "https_www_takargo_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 66,
+              "url": "https://www.takargo.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 67,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_takargo_surface_02",
+          "seed_surface_name": "Takargo seed surface 2",
+          "source_family_code": "pt_takargo",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 67,
+            "decision_doc_source_code": "pt_takargo",
+            "surface_slug": "https_www_takargo_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 67,
+              "url": "https://www.takargo.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 32,
+      "source_family_code": "pt_psa_sines",
+      "source_family_name": "PSA Sines",
+      "source_name": "PSA Sines",
+      "source_root_url": "https://www.psasines.pt/",
+      "source_host": "www.psasines.pt",
+      "source_categories": [
+        "container_terminal_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "A-",
+      "quality_tier": "A-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 32,
+        "decision_doc_quality_tier_raw": "A_MINUS",
+        "decision_doc_category": "container_terminal_operator",
+        "decision_doc_note": "Sines container terminal operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 68,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_psa_sines_surface_01",
+          "seed_surface_name": "PSA Sines seed surface 1",
+          "source_family_code": "pt_psa_sines",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 68,
+            "decision_doc_source_code": "pt_psa_sines",
+            "surface_slug": "https_www_psasines_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 68,
+              "url": "https://www.psasines.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 69,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_psa_sines_surface_02",
+          "seed_surface_name": "PSA Sines seed surface 2",
+          "source_family_code": "pt_psa_sines",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "A-",
+          "quality_tier": "A-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 69,
+            "decision_doc_source_code": "pt_psa_sines",
+            "surface_slug": "https_www_psasines_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 69,
+              "url": "https://www.psasines.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 33,
+      "source_family_code": "pt_yilport_leixoes",
+      "source_family_name": "YILPORT Leixões",
+      "source_name": "YILPORT Leixões",
+      "source_root_url": "https://www.yilport.com/en/port-terminals/yilport-iberia/yilport-leixoes",
+      "source_host": "www.yilport.com",
+      "source_categories": [
+        "port_terminal_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 33,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "port_terminal_operator",
+        "decision_doc_note": "Leixões terminal operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 70,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_yilport_leixoes_surface_01",
+          "seed_surface_name": "YILPORT Leixões seed surface 1",
+          "source_family_code": "pt_yilport_leixoes",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 70,
+            "decision_doc_source_code": "pt_yilport_leixoes",
+            "surface_slug": "https_www_yilport_com_en_port_terminals_yilport_iberia_yilport_leixoes",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 70,
+              "url": "https://www.yilport.com/en/port-terminals/yilport-iberia/yilport-leixoes",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 71,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_yilport_leixoes_surface_02",
+          "seed_surface_name": "YILPORT Leixões seed surface 2",
+          "source_family_code": "pt_yilport_leixoes",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 71,
+            "decision_doc_source_code": "pt_yilport_leixoes",
+            "surface_slug": "https_www_yilport_com_en_port_terminals_yilport_iberia",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 71,
+              "url": "https://www.yilport.com/en/port-terminals/yilport-iberia",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 34,
+      "source_family_code": "pt_liscont",
+      "source_family_name": "LISCONT",
+      "source_name": "LISCONT",
+      "source_root_url": "https://www.liscont.pt/",
+      "source_host": "www.liscont.pt",
+      "source_categories": [
+        "container_terminal_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 34,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "container_terminal_operator",
+        "decision_doc_note": "Lisbon container terminal operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 72,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_liscont_surface_01",
+          "seed_surface_name": "LISCONT seed surface 1",
+          "source_family_code": "pt_liscont",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 72,
+            "decision_doc_source_code": "pt_liscont",
+            "surface_slug": "https_www_liscont_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 72,
+              "url": "https://www.liscont.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 73,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_liscont_surface_02",
+          "seed_surface_name": "LISCONT seed surface 2",
+          "source_family_code": "pt_liscont",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 73,
+            "decision_doc_source_code": "pt_liscont",
+            "surface_slug": "https_www_liscont_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 73,
+              "url": "https://www.liscont.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 35,
+      "source_family_code": "pt_tcl_leixoes",
+      "source_family_name": "TCL Leixões",
+      "source_name": "TCL Leixões",
+      "source_root_url": "https://www.tcl-leixoes.pt/",
+      "source_host": "www.tcl-leixoes.pt",
+      "source_categories": [
+        "container_terminal_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B+",
+      "quality_tier": "B+",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 35,
+        "decision_doc_quality_tier_raw": "B_PLUS",
+        "decision_doc_category": "container_terminal_operator",
+        "decision_doc_note": "Leixões container terminal candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 74,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_tcl_leixoes_surface_01",
+          "seed_surface_name": "TCL Leixões seed surface 1",
+          "source_family_code": "pt_tcl_leixoes",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 74,
+            "decision_doc_source_code": "pt_tcl_leixoes",
+            "surface_slug": "https_www_tcl_leixoes_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 74,
+              "url": "https://www.tcl-leixoes.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 75,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_tcl_leixoes_surface_02",
+          "seed_surface_name": "TCL Leixões seed surface 2",
+          "source_family_code": "pt_tcl_leixoes",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B+",
+          "quality_tier": "B+",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 75,
+            "decision_doc_source_code": "pt_tcl_leixoes",
+            "surface_slug": "https_www_tcl_leixoes_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 75,
+              "url": "https://www.tcl-leixoes.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 36,
+      "source_family_code": "pt_sotagus",
+      "source_family_name": "Sotagus",
+      "source_name": "Sotagus",
+      "source_root_url": "https://www.sotagus.pt/",
+      "source_host": "www.sotagus.pt",
+      "source_categories": [
+        "container_terminal_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 36,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "container_terminal_operator",
+        "decision_doc_note": "Container terminal / logistics terminal candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 76,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_sotagus_surface_01",
+          "seed_surface_name": "Sotagus seed surface 1",
+          "source_family_code": "pt_sotagus",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 76,
+            "decision_doc_source_code": "pt_sotagus",
+            "surface_slug": "https_www_sotagus_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 76,
+              "url": "https://www.sotagus.pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 77,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_sotagus_surface_02",
+          "seed_surface_name": "Sotagus seed surface 2",
+          "source_family_code": "pt_sotagus",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 77,
+            "decision_doc_source_code": "pt_sotagus",
+            "surface_slug": "https_www_sotagus_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 77,
+              "url": "https://www.sotagus.pt/en/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 37,
+      "source_family_code": "pt_noatum_logistics_portugal",
+      "source_family_name": "Noatum Logistics Portugal",
+      "source_name": "Noatum Logistics Portugal",
+      "source_root_url": "https://www.noatumlogistics.com/pt/",
+      "source_host": "www.noatumlogistics.com",
+      "source_categories": [
+        "freight_forwarding_logistics_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 37,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "freight_forwarding_logistics_operator",
+        "decision_doc_note": "Commercial logistics operator candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 78,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_noatum_logistics_portugal_surface_01",
+          "seed_surface_name": "Noatum Logistics Portugal seed surface 1",
+          "source_family_code": "pt_noatum_logistics_portugal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 78,
+            "decision_doc_source_code": "pt_noatum_logistics_portugal",
+            "surface_slug": "https_www_noatumlogistics_com_pt",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 78,
+              "url": "https://www.noatumlogistics.com/pt/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 79,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_noatum_logistics_portugal_surface_02",
+          "seed_surface_name": "Noatum Logistics Portugal seed surface 2",
+          "source_family_code": "pt_noatum_logistics_portugal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 79,
+            "decision_doc_source_code": "pt_noatum_logistics_portugal",
+            "surface_slug": "https_www_noatumlogistics_com_pt_services",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 79,
+              "url": "https://www.noatumlogistics.com/pt/services/",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 38,
+      "source_family_code": "pt_dbschenker_portugal",
+      "source_family_name": "DB Schenker Portugal",
+      "source_name": "DB Schenker Portugal",
+      "source_root_url": "https://www.dbschenker.com/pt-en",
+      "source_host": "www.dbschenker.com",
+      "source_categories": [
+        "global_logistics_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 38,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "global_logistics_operator",
+        "decision_doc_note": "Global logistics operator Portugal surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 80,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_dbschenker_portugal_surface_01",
+          "seed_surface_name": "DB Schenker Portugal seed surface 1",
+          "source_family_code": "pt_dbschenker_portugal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 80,
+            "decision_doc_source_code": "pt_dbschenker_portugal",
+            "surface_slug": "https_www_dbschenker_com_pt_en",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 80,
+              "url": "https://www.dbschenker.com/pt-en",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 81,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_dbschenker_portugal_surface_02",
+          "seed_surface_name": "DB Schenker Portugal seed surface 2",
+          "source_family_code": "pt_dbschenker_portugal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 81,
+            "decision_doc_source_code": "pt_dbschenker_portugal",
+            "surface_slug": "https_www_dbschenker_com_pt_en_products",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 81,
+              "url": "https://www.dbschenker.com/pt-en/products",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 39,
+      "source_family_code": "pt_dhl_global_forwarding_portugal",
+      "source_family_name": "DHL Global Forwarding Portugal",
+      "source_name": "DHL Global Forwarding Portugal",
+      "source_root_url": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding.html",
+      "source_host": "www.dhl.com",
+      "source_categories": [
+        "global_logistics_operator"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B",
+      "quality_tier": "B",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 2,
+      "seed_url_count": 2,
+      "family_metadata": {
+        "decision_doc_source_index": 39,
+        "decision_doc_quality_tier_raw": "B",
+        "decision_doc_category": "global_logistics_operator",
+        "decision_doc_note": "Global forwarding Portugal surface candidate.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 82,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_dhl_global_forwarding_portugal_surface_01",
+          "seed_surface_name": "DHL Global Forwarding Portugal seed surface 1",
+          "source_family_code": "pt_dhl_global_forwarding_portugal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 82,
+            "decision_doc_source_code": "pt_dhl_global_forwarding_portugal",
+            "surface_slug": "https_www_dhl_com_pt_en_home_our_divisions_global_forwarding_html",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 82,
+              "url": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding.html",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        },
+        {
+          "seed_surface_index": 83,
+          "family_seed_surface_index": 2,
+          "seed_surface_code": "pt_dhl_global_forwarding_portugal_surface_02",
+          "seed_surface_name": "DHL Global Forwarding Portugal seed surface 2",
+          "source_family_code": "pt_dhl_global_forwarding_portugal",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B",
+          "quality_tier": "B",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 83,
+            "decision_doc_source_code": "pt_dhl_global_forwarding_portugal",
+            "surface_slug": "https_www_dhl_com_pt_en_home_our_divisions_global_forwarding_freight_forwarding_html",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 83,
+              "url": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding/freight-forwarding.html",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "source_family_index": 40,
+      "source_family_code": "pt_cargoyellowpages_directory",
+      "source_family_name": "Cargo Yellow Pages Portugal",
+      "source_name": "Cargo Yellow Pages Portugal",
+      "source_root_url": "https://www.cargoyellowpages.com/portugal_freight_forwarders_cargo_agents.html",
+      "source_host": "www.cargoyellowpages.com",
+      "source_categories": [
+        "commercial_freight_directory"
+      ],
+      "language_code": "pt",
+      "language_name": "Portuguese",
+      "source_quality_tier": "B-",
+      "quality_tier": "B-",
+      "source_decision": "ACCEPT_REVIEW",
+      "decision": "ACCEPT_REVIEW",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "seed_surface_count": 1,
+      "seed_url_count": 1,
+      "family_metadata": {
+        "decision_doc_source_index": 40,
+        "decision_doc_quality_tier_raw": "B_MINUS",
+        "decision_doc_category": "commercial_freight_directory",
+        "decision_doc_note": "Lower-priority commercial directory candidate; must not dominate scheduler.",
+        "source_model": "candidate_manifest_only",
+        "url_validation_scope": "structural_only_no_live_probe"
+      },
+      "seed_surfaces": [
+        {
+          "seed_surface_index": 84,
+          "family_seed_surface_index": 1,
+          "seed_surface_code": "pt_cargoyellowpages_directory_surface_01",
+          "seed_surface_name": "Cargo Yellow Pages Portugal seed surface 1",
+          "source_family_code": "pt_cargoyellowpages_directory",
+          "surface_type": "candidate_startpoint",
+          "seed_quality_tier": "B-",
+          "quality_tier": "B-",
+          "seed_decision": "ACCEPT_REVIEW",
+          "decision": "ACCEPT_REVIEW",
+          "candidate_manifest": true,
+          "is_live": false,
+          "enabled": false,
+          "needs_live_check": true,
+          "surface_metadata": {
+            "decision_doc_seed_url_index": 84,
+            "decision_doc_source_code": "pt_cargoyellowpages_directory",
+            "surface_slug": "https_www_cargoyellowpages_com_portugal_freight_forwarders_cargo_agents_html",
+            "url_validation_scope": "structural_only_no_live_probe"
+          },
+          "seed_urls": [
+            {
+              "seed_url_index": 84,
+              "url": "https://www.cargoyellowpages.com/portugal_freight_forwarders_cargo_agents.html",
+              "url_type": "candidate_startpoint",
+              "is_primary": true,
+              "candidate_manifest": true,
+              "is_live": false,
+              "enabled": false,
+              "needs_live_check": true,
+              "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+              "safety_state": "candidate_only_not_live"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
