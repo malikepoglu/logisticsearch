@@ -622,13 +622,14 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 
 | Language | Catalog | Status | Source families | Seed surfaces | Seed URLs |
 |---|---|---:|---:|---:|---:|
-| English (`en`) | [`english_source_families_v2.json`](../makpi51crawler/catalog/startpoints/en/english_source_families_v2.json) | sealed candidate manifest, not live | 171 | 450 | 381 |
-| Turkish (`tr`) | [`turkish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/tr/turkish_source_families_v2.json) | sealed candidate manifest, not live | 40 | 80 | 73 |
-| German (`de`) | [`german_source_families_v2.json`](../makpi51crawler/catalog/startpoints/de/german_source_families_v2.json) | sealed candidate manifest, not live | 41 | 80 | 81 |
-| Arabic (`ar`) | [`arabic_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ar/arabic_source_families_v2.json) | sealed candidate manifest, not live | 40 | 80 | 80 |
-| Chinese (`zh`) | [`chinese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/zh/chinese_source_families_v2.json) | sealed candidate manifest, not live | 105 | 106 | 106 |
-| French (`fr`) | [`french_source_families_v2.json`](../makpi51crawler/catalog/startpoints/fr/french_source_families_v2.json) | sealed candidate manifest, not live | 37 | 72 | 72 |
-| Spanish (`es`) | [`spanish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/es/spanish_source_families_v2.json) | sealed candidate manifest, not live | 45 | 95 | 95 |
+| English (`en`) | [`english_source_families_v2.json`](../makpi51crawler/catalog/startpoints/en/english_source_families_v2.json) | sealed candidate manifest, not live | 171 | 561 | 561 |
+| Turkish (`tr`) | [`turkish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/tr/turkish_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
+| German (`de`) | [`german_source_families_v2.json`](../makpi51crawler/catalog/startpoints/de/german_source_families_v2.json) | sealed candidate manifest, not live | 41 | 87 | 87 |
+| Arabic (`ar`) | [`arabic_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ar/arabic_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
+| Chinese (`zh`) | [`chinese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/zh/chinese_source_families_v2.json) | sealed candidate manifest, not live | 105 | 148 | 148 |
+| French (`fr`) | [`french_source_families_v2.json`](../makpi51crawler/catalog/startpoints/fr/french_source_families_v2.json) | sealed candidate manifest, not live | 37 | 107 | 107 |
+| Spanish (`es`) | [`spanish_source_families_v2.json`](../makpi51crawler/catalog/startpoints/es/spanish_source_families_v2.json) | sealed candidate manifest, not live | 45 | 98 | 98 |
+| Italian (`it`) | [`italian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/it/italian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 
 ### Source-seed policy and decision records
 
@@ -643,28 +644,26 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_CHINESE_SOURCE_SEED_URLS_DECISION_2026_05_12.md`](TOPIC_CRAWLER_CORE_CHINESE_SOURCE_SEED_URLS_DECISION_2026_05_12.md)
 - [`TOPIC_CRAWLER_CORE_FRENCH_SOURCE_SEED_URLS_DECISION_2026_05_12.md`](TOPIC_CRAWLER_CORE_FRENCH_SOURCE_SEED_URLS_DECISION_2026_05_12.md)
 - [`TOPIC_CRAWLER_CORE_SPANISH_SOURCE_SEED_URLS_DECISION_2026_05_15.md`](TOPIC_CRAWLER_CORE_SPANISH_SOURCE_SEED_URLS_DECISION_2026_05_15.md)
+- [`TOPIC_CRAWLER_CORE_ITALIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_ITALIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 
 ### Boundary rule
 
-Crawler_Core stores discovered page links only as raw link evidence. Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-ranking. Desktop_Import on Ubuntu Desktop converts pre-ranking into real ranking/final rank.
+Crawler_Core stores discovered page links only as raw link evidence.
+Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-ranking. Desktop_Import on Ubuntu Desktop converts pre-ranking into real ranking/final rank.
 
-<!-- SOURCE_SEED_STARTPOINTS_INDEX_2026_05_12_END -->
-
-<!-- SOURCE_SEED_NEXT_LANGUAGE_DECISION_README_INDEX_BEGIN -->
 ## Source-seed next-language rollout decision / Sıradaki dil rollout karar mühürü
 
-- Gate / Kapı: `SOURCE_SEED_R280B_NEXT_LANGUAGE_ROLLOUT_DECISION_READONLY_CORRECTED`
-- Sealed head / Mühürlü HEAD: `1354763492338dee2bef20b2d52cf08484eb4e6f`
-- Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,fr,zh,es`
-- Next language / Sıradaki dil: Italian (`it`)
-- Next catalog path / Sıradaki katalog yolu: `makpi51crawler/catalog/startpoints/it/italian_source_families_v2.json`
-- Next gate / Sıradaki kapı: `SOURCE_SEED_R281_IT_SOURCE_SEED_BASELINE_AUDIT_READONLY`
-- R281 allowed mode / R281 izinli mod: read-only baseline audit only.
-- R281 forbidden surfaces / R281 yasak yüzeyler: no file write, no git add/commit/push, no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe.
-- Correction note / Düzeltme notu: R280 non-target German legacy duplicate-helper finding is not a blocker for selecting the next missing language; Italian is the first unrolled language after Spanish.
-<!-- SOURCE_SEED_NEXT_LANGUAGE_DECISION_README_INDEX_END -->
+- Gate / Kapı: `R299_IT_SOURCE_SEED_CATALOG_POST_PUSH_SEAL_READONLY`
+- Sealed head / Mühürlü HEAD: `2e89fa2a65894dd605f6f5d0e4e4a958cb0d98be`
+- Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,zh,fr,es,it`
+- Next language / Sıradaki dil: pending separate read-only next-language decision gate
+- Next catalog path / Sıradaki katalog yolu: pending
+- Next decision gate / Sıradaki karar kapısı: `R303_NEXT_LANGUAGE_ROLLOUT_DECISION_READONLY`
+- R303 allowed mode / R303 izinli mod: read-only next-language decision only.
+- R303 forbidden surfaces / R303 yasak yüzeyler: no file write, no git add/commit/push, no pi51c sync, no DB, no crawler, no systemd mutation, no URL fetch/live probe.
+- Italian seal note / İtalyanca mühür notu: Italian decision doc and catalog are now sealed on Ubuntu Desktop and GitHub as candidate manifests only; they are not live crawler input.
 
-<!-- SOURCE_SEED_CANONICAL_STARTPOINT_SCHEMA_STANDARD_BEGIN -->
+
 ## Source-seed canonical startpoint schema standard
 
 This standard is authoritative for all 25 language startpoint catalogs.
