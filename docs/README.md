@@ -634,7 +634,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Dutch (`nl`) | [`dutch_source_families_v2.json`](../makpi51crawler/catalog/startpoints/nl/dutch_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Russian (`ru`) | [`russian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ru/russian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Ukrainian (`uk`) | [`ukrainian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/uk/ukrainian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 56 | 56 |
-| Bulgarian (`bg`) | [catalog](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 40 | 40 |
+| Bulgarian (`bg`) | [catalog](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json) | sealed candidate manifest, not live; minimum seed target repaired | 40 | 50 | 50 |
 
 ### Source-seed policy and decision records
 
@@ -654,7 +654,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
-- Bulgarian source-seed URLs decision — 2026-05-17: [decision](TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md); [catalog](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json); 40 source families, 40 seed surfaces, 40 seed URLs, 40 unique seed URLs; candidate-only, not live; `pi51c_live_probe_required_before_db_or_frontier_insert`.
+- Bulgarian source-seed URLs decision — 2026-05-17: [decision](TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md); [catalog](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json); 40 source families, 50 seed surfaces, 50 seed URLs, 50 unique seed URLs; candidate-only, not live; `pi51c_live_probe_required_before_db_or_frontier_insert`.
 
 ### Boundary rule
 
@@ -662,10 +662,10 @@ Crawler_Core stores discovered page links only as raw link evidence.
 Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-ranking. Desktop_Import on Ubuntu Desktop converts pre-ranking into real ranking/final rank.
 
 ## Source-seed next-language rollout decision / Sıradaki dil rollout karar mühürü
-- Gate / Kapı: `R379C_BG_SOURCE_SEED_README_REPAIR_LOCAL_ONLY_OCCURRENCE_FIX`
-- Sealed head before repair / Onarım öncesi mühürlü HEAD: `04ee1464558ae7461ffc2189af1d2a03d41d8252`
+- Gate / Kapı: `R379J_BG_SOURCE_SEED_MINIMUM_EXPANSION_REPAIR_LOCAL_ONLY`
+- Current local repair / Mevcut lokal onarım: Bulgarian catalog expanded from `40/40/40/40 unique` to `40/50/50/50 unique` using 10 NSBS member-profile seed surfaces.
 - Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,zh,fr,es,it,pt,nl,ru,uk,bg`
-- Current priority / Mevcut öncelik: audit the Bulgarian README repair, commit/push the README-only repair, post-push seal GitHub, and only after that redo the pi51c sync decision.
+- Current priority / Mevcut öncelik: audit this Bulgarian minimum expansion repair, commit/push the three-file repair, post-push seal GitHub, rerun metric target audit, and only then redo the pi51c sync decision.
 ## Source-seed canonical startpoint schema standard
 
 This standard is authoritative for all 25 language startpoint catalogs.

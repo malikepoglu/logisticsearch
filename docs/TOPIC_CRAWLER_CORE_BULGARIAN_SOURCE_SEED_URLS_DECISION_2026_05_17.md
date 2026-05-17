@@ -137,3 +137,27 @@ This document is not a live crawler activation surface. It is a candidate decisi
 - Multi-country directory hosts such as FIATA, Freightnet, Clutch, GoodFirms, Ensun, Lusha, Ruzave, CargoYellowPages, Kompass, and OPCA must remain discovery surfaces unless a later live check confirms exact Bulgarian official company pages.
 - Official company pages may later be split into multiple seed surfaces in the JSON stage if strict catalog metrics require richer service/contact segmentation.
 - This decision doc intentionally does not create or activate frontier seeds.
+
+## R379J Bulgarian source-seed minimum expansion repair
+
+- Gate: `R379J_BG_SOURCE_SEED_MINIMUM_EXPANSION_REPAIR_LOCAL_ONLY`
+- Repair type: minimum high-quality seed expansion before any pi51c sync/live copy.
+- Before repair metrics: `pre_repair_source_family_count=40`, `pre_repair_seed_surface_count=40`, `pre_repair_seed_url_count=40`, `pre_repair_unique_seed_url_count=40`.
+- After repair metrics: 40 source families, 50 seed surfaces, 50 seed URLs, 50 unique seed URLs.
+- Strict target status: PASS for minimum `40+ source families / 50+ seed surfaces and URLs`.
+- Preferred target status: still below preferred `80+ seed surfaces and URLs`; future preferred expansion remains optional and separate.
+- Runtime policy remains: `pi51c_live_probe_required_before_db_or_frontier_insert`.
+
+| # | Source family | Added seed surface code | Quality | URL | Reason |
+|---:|---|---|---|---|---|
+| 41 | BG001_NSBS_MEMBERS | BG001_NSBS_MEMBER_TRANSLAND | A_PLUS | https://nsbs.bg/en/transland-ltd | NSBS member profile; Bulgarian transport/logistics/forwarding services; strong directory-backed entity seed. |
+| 42 | BG001_NSBS_MEMBERS | BG001_NSBS_MEMBER_WORLD_TRANSPORT_OVERSEAS | A_PLUS | https://nsbs.bg/en/world-transport-overseas-bulgaria-ltd | NSBS member profile; freight forwarding company with regional network; strong directory-backed entity seed. |
+| 43 | BG001_NSBS_MEMBERS | BG001_NSBS_MEMBER_UNIMASTERS_LOGISTICS | A_PLUS | https://nsbs.bg/en/unimasters-logistics-plc | NSBS member profile; known Bulgarian logistics operator; reinforces existing Unimasters entity coverage. |
+| 44 | BG001_NSBS_MEMBERS | BG001_NSBS_MEMBER_E_LOGISTICS | A_PLUS | https://nsbs.bg/en/e-logistics-ltd | NSBS member profile; integrated logistics and transport/warehousing context. |
+| 45 | BG001_NSBS_MEMBERS | BG001_NSBS_MEMBER_PRO_LOGISTICS_SERVICES | A | https://nsbs.bg/en/pro-logistics-services-ltd | NSBS member profile; project/oversized/multimodal logistics candidate. |
+| 46 | BG001_NSBS_MEMBERS | BG001_NSBS_MEMBER_HOLLEMAN_BULGARIA | A | https://nsbs.bg/en/holleman-bulgaria-ltd | NSBS member profile; heavy/oversized transport specialization. |
+| 47 | BG001_NSBS_MEMBERS | BG001_NSBS_MEMBER_BULGARIA_TRANS | A | https://nsbs.bg/en/bulgaria-trans-ltd | NSBS member profile; Bulgarian transport/logistics entity seed. |
+| 48 | BG001_NSBS_MEMBERS | BG001_NSBS_MEMBER_TRANSTERRA_LOGISTICS | A | https://www.nsbs.bg/en/transterra-logistics-bulgaria-ltd | NSBS member profile; Bulgarian logistics entity seed with branch context. |
+| 49 | BG001_NSBS_MEMBERS | BG001_NSBS_MEMBER_EUROTRANS | A_MINUS | https://nsbs.bg/en/eurotrans-ltd | NSBS member profile; freight transport surface; narrower but clean association-backed seed. |
+| 50 | BG001_NSBS_MEMBERS | BG001_NSBS_MEMBER_ETNA_CARGO_TRANSPORT | A_MINUS | https://nsbs.bg/en/etna-cargo-transport-ltd | NSBS member profile; NSBS/FIATA and logistics center context. |
+
