@@ -633,8 +633,8 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Portuguese (`pt`) | [`portuguese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/pt/portuguese_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Dutch (`nl`) | [`dutch_source_families_v2.json`](../makpi51crawler/catalog/startpoints/nl/dutch_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Russian (`ru`) | [`russian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ru/russian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
-| Ukrainian (`uk`) | [`ukrainian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/uk/ukrainian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 56 | 56 |
-| Bulgarian (`bg`) | [catalog](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json) | sealed candidate manifest, not live; minimum seed target repaired | 40 | 50 | 50 |
+| Ukrainian (`uk`) | [ukrainian_source_families_v2.json](../makpi51crawler/catalog/startpoints/uk/ukrainian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 56 | 56 |
+| Bulgarian (`bg`) | [bulgarian_source_families_v2.json](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json) | sealed candidate manifest, not live; minimum seed target repaired | 40 | 50 | 50 |
 
 ### Source-seed policy and decision records
 
@@ -654,7 +654,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
-- Bulgarian source-seed URLs decision — 2026-05-17: [decision](TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md); [catalog](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json); 40 source families, 50 seed surfaces, 50 seed URLs, 50 unique seed URLs; candidate-only, not live; `pi51c_live_probe_required_before_db_or_frontier_insert`.
+- Bulgarian source-seed URLs decision — 2026-05-17: [decision](TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md); [bulgarian_source_families_v2.json](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json); 40 source families, 50 seed surfaces, 50 seed URLs, 50 unique seed URLs; candidate-only, not live; `pi51c_live_probe_required_before_db_or_frontier_insert`.
 
 ### Boundary rule
 
