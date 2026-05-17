@@ -330,3 +330,118 @@ When asking ChatGPT, Codex, or any assistant to work on a language startpoint ca
     First read the canonical source-seed startpoint JSON rules from GitHub raw, verify the required needles, and stop if the rule file cannot be read. Do not use memory or local assumptions as the rule authority.
 
 This sentence is mandatory for all future language-specific source-seed tasks.
+
+<!-- SOURCE_SEED_METADATA_MODEL_CANONICAL_EXTENSION_BEGIN -->
+
+## Source-seed language / locale / country metadata model
+
+This section is the canonical extension for separating catalog target language from real URL content language and country coverage.
+
+### Required seed-level metadata fields
+
+Every `seed_urls[]` entry must carry the following metadata before a catalog can be treated as final-sealed:
+
+- `target_language_code`
+  - Catalog rollout target language.
+  - Example: Bulgarian catalog uses `bg`.
+- `content_language_code`
+  - Actual readable content language of the URL.
+  - Example: `/en/members` uses `en` even when the catalog target is `bg`.
+- `url_locale_code`
+  - URL path or locale signal when available.
+  - Example: `/en/...` uses `en`, `/bg/...` uses `bg`.
+- `source_country_codes`
+  - ISO-like uppercase country codes for the site or organization origin.
+  - Example: Bulgarian association source uses `["BG"]`.
+- `covered_country_codes`
+  - ISO-like uppercase country codes for companies, listings, or geography covered by the page.
+  - Example: Bulgaria member directory uses `["BG"]`.
+- `language_fit`
+  - Controlled enum describing how the URL language fits the target catalog.
+- `coverage_fit`
+  - Controlled enum describing how the URL country coverage fits the catalog.
+- `locale_review_status`
+  - Controlled enum describing whether locale/native/fallback status was reviewed.
+
+### `language_fit` enum
+
+Allowed values:
+
+- `native`
+  - Content language matches the catalog target language.
+- `multilingual`
+  - Page has multiple language surfaces and includes the target language.
+- `english_fallback`
+  - Content is English, but the source is country-relevant and no verified native alternative has been accepted yet.
+- `foreign_language_country_relevant`
+  - Content is not target language and not English, but the source is still country-relevant.
+- `unknown`
+  - Language must be manually reviewed before activation.
+
+### `coverage_fit` enum
+
+Allowed values:
+
+- `country_primary`
+  - The page primarily covers the catalog country.
+- `country_slice_of_global_directory`
+  - The page is a country-specific slice inside a global or regional directory.
+- `official_company_local_entity`
+  - The page is an official local entity, office, or branch page.
+- `regional_or_industry_context`
+  - The page is useful regional or industry context but not a pure country directory.
+- `weak_discovery`
+  - Weak source used only as a discovery candidate and requiring manual review.
+
+### `locale_review_status` enum
+
+Allowed values:
+
+- `native_locale_verified`
+  - Native target-language page is verified.
+- `english_fallback_verified`
+  - English fallback is intentionally accepted as country-relevant.
+- `needs_native_alternative_check`
+  - English or foreign-language URL may be useful, but native alternative must still be searched.
+- `broken_or_blocked`
+  - URL is broken, blocked, or returns persistent failure in live/reachability checks.
+- `manual_review_required`
+  - Human review required before activation.
+
+### Naming rule
+
+Top-level `language_code` remains the catalog rollout target language.
+
+Seed-level actual content language must be represented as `content_language_code`.
+
+Do not use a plain ambiguous `language` field for new schema work. If compatibility ever requires a `language` field, it must be documented as a seed-level alias of `content_language_code`, not as the catalog target language.
+
+### Correct modeling example
+
+Indented JSON example:
+
+    {
+      "url": "https://nsbs.bg/en/members",
+      "quality_status": "A_PLUS",
+      "target_language_code": "bg",
+      "content_language_code": "en",
+      "url_locale_code": "en",
+      "source_country_codes": ["BG"],
+      "covered_country_codes": ["BG"],
+      "language_fit": "english_fallback",
+      "coverage_fit": "country_primary",
+      "locale_review_status": "needs_native_alternative_check",
+      "candidate_manifest": true,
+      "is_live": false,
+      "enabled": false,
+      "needs_live_check": true,
+      "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert"
+    }
+
+### Activation boundary
+
+These metadata fields do not make a URL live.
+
+A seed remains candidate-only until a separate gated live/reachability probe, locale review, country coverage review, commit/push seal, and later pi51c sync line explicitly approve it.
+
+<!-- SOURCE_SEED_METADATA_MODEL_CANONICAL_EXTENSION_END -->

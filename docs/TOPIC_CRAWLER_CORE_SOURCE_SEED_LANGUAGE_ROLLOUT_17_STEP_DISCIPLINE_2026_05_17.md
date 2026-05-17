@@ -446,3 +446,66 @@ Known audit lesson:
 - Unique source code count can be correct even when raw occurrence count is double.
 - Audits must parse sections separately.
 
+
+<!-- SOURCE_SEED_METADATA_MODEL_17_PLUS_DISCIPLINE_EXTENSION_BEGIN -->
+
+## 17+ source-seed rollout discipline extension: metadata / locale / country gates
+
+The language rollout process is now extended from a strict 17-step workflow to a 17+ workflow when language, locale, country coverage, or live reachability risk is present.
+
+The following gates are mandatory before treating any rolled catalog as final-sealed:
+
+### Metadata model gates
+
+1. Candidate list user review
+   - User-visible candidate source/seed list must be reviewed before JSON mutation.
+2. Decision doc gate
+   - Decision doc must explain source families, country coverage, language/locale assumptions, and exclusion rationale.
+3. Catalog JSON gate
+   - Candidate JSON must remain `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`.
+4. Structural audit gate
+   - JSON parse, schema, counts, URL uniqueness, HTTPS, empty URL, quality fields, and runtime activation policy must pass.
+5. Language / locale / country metadata audit gate
+   - Every `seed_urls[]` entry must include:
+     - `target_language_code`
+     - `content_language_code`
+     - `url_locale_code`
+     - `source_country_codes`
+     - `covered_country_codes`
+     - `language_fit`
+     - `coverage_fit`
+     - `locale_review_status`
+6. Public live reachability audit gate
+   - Must be separate from schema repair.
+   - Must not activate DB/frontier/crawler by itself.
+   - Broken or blocked URLs must be classified, not silently accepted.
+7. Locale / native / fallback classification audit gate
+   - Native URLs, multilingual URLs, English fallback URLs, foreign-language country-relevant URLs, and unknown URLs must be separated.
+8. Commit/push gate
+   - Dirty scope and staged scope must be exact.
+   - Commit must be narrow and reversible.
+9. Post-push exact-head raw GitHub seal
+   - Raw GitHub files at exact pushed HEAD must match local SHA evidence.
+10. pi51c sync decision gate
+   - Deferred until all 25 language catalogs are completed and sealed on Ubuntu Desktop + GitHub.
+   - No pi51c `/logisticsearch/repo` sync and no `/logisticsearch/makpi51crawler` live copy before that global gate.
+
+### Required audit result names
+
+For each language, use explicit gates like:
+
+- `<LANG>_METADATA_MODEL_GAP_AUDIT_READONLY`
+- `<LANG>_METADATA_MODEL_LOCAL_ONLY`
+- `<LANG>_METADATA_MODEL_AUDIT_READONLY`
+- `<LANG>_METADATA_MODEL_COMMIT_PUSH_GATE`
+- `<LANG>_METADATA_MODEL_POST_PUSH_SEAL_READONLY`
+- `<LANG>_LIVE_AND_LOCALE_REPAIR_PLAN_READONLY`
+- `<LANG>_FINAL_JSON_TRUTH_SEAL_READONLY`
+
+### Non-negotiable safety line
+
+Metadata repair does not imply runtime activation.
+
+No DB insert, no frontier activation, no crawler start/stop, no systemd mutation, no pi51c sync, and no live copy are allowed in metadata model gates.
+
+<!-- SOURCE_SEED_METADATA_MODEL_17_PLUS_DISCIPLINE_EXTENSION_END -->
