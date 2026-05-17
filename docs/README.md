@@ -634,6 +634,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Dutch (`nl`) | [`dutch_source_families_v2.json`](../makpi51crawler/catalog/startpoints/nl/dutch_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Russian (`ru`) | [`russian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ru/russian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 84 | 84 |
 | Ukrainian (`uk`) | [`ukrainian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/uk/ukrainian_source_families_v2.json) | sealed candidate manifest, not live | 40 | 56 | 56 |
+| Bulgarian (`bg`) | 40 | 40 | 40 | 40 | [catalog](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json) | `candidate_manifest=true`, `is_live=false`, `needs_live_check=true`, `pi51c_live_probe_required_before_db_or_frontier_insert` |
 
 ### Source-seed policy and decision records
 
@@ -653,6 +654,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
+- [Bulgarian source-seed URLs decision — 2026-05-17](TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md) — 40 source families, 40 seed surfaces, 40 seed URLs, 40 unique seed URLs; catalog: [`makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json); candidate-only, not live; `pi51c_live_probe_required_before_db_or_frontier_insert`.
 
 ### Boundary rule
 
@@ -662,7 +664,7 @@ Raw links are not `added_seeds`. Parse_Core creates `added_seeds` after pre-rank
 ## Source-seed next-language rollout decision / Sıradaki dil rollout karar mühürü
 - Gate / Kapı: `R361B5_UK_SOURCE_SEED_GITHUB_DOCS_INDEX_REPAIR_LOCAL_ONLY_LINE_BASED_ADHOC_REMOVAL`
 - Sealed head before repair / Onarım öncesi mühürlü HEAD: `948280d603af9fff9a5bed9b91f3d563b51ad543`
-- Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,zh,fr,es,it,pt,nl,ru,uk`
+- Rolled-out tracked catalogs / Tamamlanmış kataloglar: `en,tr,de,ar,zh,fr,es,it,pt,nl,ru,uk,bg`
 - Current priority / Mevcut öncelik: repair Ukrainian canonical docs/README source-seed index after the early pi51c repo/live sync, then run the Ukrainian 3-system post-sync seal.
 - Next language / Sıradaki dil: pending until Ukrainian GitHub/docs index repair and 3-system sync are sealed.
 - Next catalog path / Sıradaki katalog yolu: pending.
