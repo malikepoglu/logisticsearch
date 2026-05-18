@@ -985,3 +985,42 @@ Arabic source-seed catalog final JSON truth is sealed for the current metadata m
 Arabic remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
 
 <!-- SOURCE_SEED_AR_FINAL_JSON_TRUTH_STATUS_END -->
+
+<!-- SOURCE_SEED_ZH_FINAL_JSON_TRUTH_STATUS_BEGIN -->
+
+## Chinese final JSON truth
+
+`CHINESE_FINAL_JSON_TRUTH_SEALED_HEAD`: `28c3f6427c3997ce19e6ccf8a3fd25f6f8e456cb`
+
+Chinese source-seed catalog final JSON truth is sealed for the current metadata model.
+
+- Catalog: `makpi51crawler/catalog/startpoints/zh/chinese_source_families_v2.json`
+- SHA256: `cff8cbd975ea6a203aa6b392d9d56e73e5316677a3cbb4a3c30f9c587324403d`
+- Metrics: 105 source families, 148 seed surfaces, 148 seed URLs, 148 unique HTTPS URLs
+- Candidate/runtime safety:
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+- Seed metadata completeness:
+  - `target_language_code`: zh=148
+  - `content_language_code: zh=24, en=100, unknown=24`
+  - `url_locale_code`: zh=24, en=100, und=24
+  - `source_country_codes`: CN=11, DE=5, HK=32, TW=11, ZZ=89
+  - `covered_country_codes: CN=44, HK=49, TW=23, ZZ=32`
+  - `language_fit`: native=24, english_fallback=100, unknown=24
+  - `locale_review_status`: native_locale_verified: 24, needs_native_alternative_check: 100, manual_review_required: 24
+  - `coverage_fit`: country_primary=17, country_slice_of_global_directory=62, official_company_local_entity=37, regional_or_industry_context=32
+- Quality split:
+  - A_PLUS=1
+  - A=23
+  - A_MINUS=79
+  - B_PLUS=21
+  - B=1
+  - B_MINUS=23
+
+Chinese remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
+
+<!-- SOURCE_SEED_ZH_FINAL_JSON_TRUTH_STATUS_END -->

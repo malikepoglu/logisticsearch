@@ -576,3 +576,30 @@ Arabic metadata model rows follow the general source-seed standard, with these A
 Arabic metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
 
 <!-- SOURCE_SEED_ARABIC_METADATA_MODEL_RULE_END -->
+
+<!-- SOURCE_SEED_CHINESE_METADATA_MODEL_RULE_BEGIN -->
+
+## Chinese metadata model rule
+
+Chinese metadata model rows follow the general source-seed standard, with these Chinese-specific interpretation rules:
+
+- Top-level `language_code=zh` means the rollout target is Chinese.
+- Seed-level `target_language_code=zh` is required for every Chinese catalog URL.
+- Seed-level `content_language_code=zh` is accepted only when URL/path/host/source semantics provide a Chinese signal.
+- Seed-level `content_language_code=en` records English fallback surfaces that may still be useful for Chinese logistics discovery.
+- Seed-level `content_language_code=unknown` must stay under human/manual review and must not be treated as native Chinese content.
+- `url_locale_code=zh` records visible Chinese locale or Chinese-content URL signal.
+- `url_locale_code=en` records visible English locale or English-content URL signal.
+- `url_locale_code=und` records an undetermined URL locale.
+- `source_country_codes` records source or organization origin when inferable; for Chinese-region surfaces this may include `CN`, `HK`, and `TW`; otherwise `ZZ` or another explicit non-target source country such as `DE`.
+- `covered_country_codes` records covered country or region when inferable; for Chinese-region coverage this may include `CN`, `HK`, and `TW`; otherwise `ZZ`.
+- `country_primary` is used for Chinese-country primary/local directory surfaces.
+- `country_slice_of_global_directory` is used for Chinese-country slices inside global directories.
+- `official_company_local_entity` is used for company/local-entity pages where Chinese-region source-country coverage is explicit enough.
+- `regional_or_industry_context` is used for global, regional, or industry context where Chinese-region coverage is not a clean country slice.
+- `needs_native_alternative_check` marks English fallback rows where a Chinese-native alternative should later be considered.
+- `manual_review_required` marks unknown/undetermined rows that still need human review before any live activation.
+
+Chinese metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
+
+<!-- SOURCE_SEED_CHINESE_METADATA_MODEL_RULE_END -->

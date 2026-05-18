@@ -618,3 +618,23 @@ No next-language mutation should begin until the after-Arabic docs/rules/standar
 This preserves the rule: 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
 
 <!-- SOURCE_SEED_AFTER_AR_DOCS_CHECKPOINT_END -->
+
+<!-- SOURCE_SEED_AFTER_ZH_DOCS_CHECKPOINT_BEGIN -->
+
+## After Chinese final JSON truth seal
+
+After Chinese final JSON truth seal, the mandatory documentation checkpoint is:
+
+`SOURCE_SEED_DOCS_STANDARDS_FORMAT_GAP_AUDIT_READONLY_AFTER_ZH`
+
+If that audit reports documentation gaps, run:
+
+`SOURCE_SEED_DOCS_STANDARDS_FORMAT_LOCAL_ONLY_AFTER_ZH`
+
+Then run a read-only audit, commit/push gate, and exact-head post-push seal before continuing to the next rolled-language repair.
+
+No next-language mutation should begin until the after-Chinese docs/rules/standards/format checkpoint is sealed.
+
+This preserves the rule: 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
+
+<!-- SOURCE_SEED_AFTER_ZH_DOCS_CHECKPOINT_END -->
