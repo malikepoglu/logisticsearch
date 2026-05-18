@@ -1,6 +1,6 @@
 {
   "schema": "source_families_v2",
-  "schema_version": "source_families_v2",
+  "schema_version": "2.0",
   "catalog_version": "spanish_source_families_v2",
   "language_code": "es",
   "language_name": "Spanish",
@@ -118,7 +118,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 1,
@@ -129,7 +142,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         },
         {
           "seed_surface_code": "es_fiata_spain_member_directory_surface_02",
@@ -168,7 +183,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 2,
@@ -179,7 +207,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 1,
@@ -257,7 +287,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 3,
@@ -268,7 +311,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_feteia_oltra_federation_surface_02",
@@ -307,7 +352,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 4,
@@ -318,7 +376,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 2,
@@ -396,7 +456,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 5,
@@ -407,7 +480,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_ateia_euskadi_forwarders_surface_02",
@@ -446,7 +521,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 6,
@@ -457,7 +545,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 3,
@@ -535,7 +625,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 7,
@@ -546,7 +649,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_ateia_barcelona_forwarders_surface_02",
@@ -585,7 +690,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 8,
@@ -596,7 +714,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 4,
@@ -674,7 +794,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B"
             }
           ],
           "seed_surface_index": 9,
@@ -685,7 +818,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B"
         },
         {
           "seed_surface_code": "es_ateia_madrid_forwarders_surface_02",
@@ -724,7 +859,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B"
             }
           ],
           "seed_surface_index": 10,
@@ -735,7 +883,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B"
         }
       ],
       "source_family_index": 5,
@@ -813,7 +963,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B"
             }
           ],
           "seed_surface_index": 11,
@@ -824,7 +987,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B"
         },
         {
           "seed_surface_code": "es_ateia_valencia_forwarders_surface_02",
@@ -863,7 +1028,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B"
             }
           ],
           "seed_surface_index": 12,
@@ -874,7 +1052,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B"
         }
       ],
       "source_family_index": 6,
@@ -952,7 +1132,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 13,
@@ -963,7 +1156,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_ateia_algeciras_forwarders_surface_02",
@@ -1002,7 +1197,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 14,
@@ -1013,7 +1221,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 7,
@@ -1091,7 +1301,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 15,
@@ -1102,7 +1325,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_ateia_aragon_forwarders_surface_02",
@@ -1141,7 +1366,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 16,
@@ -1152,7 +1390,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 8,
@@ -1230,7 +1470,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 17,
@@ -1241,7 +1494,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_ateia_baleares_forwarders_surface_02",
@@ -1280,7 +1535,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 18,
@@ -1291,7 +1559,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 9,
@@ -1369,7 +1639,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 19,
@@ -1380,7 +1663,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_ateia_galicia_forwarders_surface_02",
@@ -1419,7 +1704,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 20,
@@ -1430,7 +1728,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 10,
@@ -1508,7 +1808,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 21,
@@ -1519,7 +1832,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_ateia_canarias_forwarders_surface_02",
@@ -1558,7 +1873,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 22,
@@ -1569,7 +1897,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 11,
@@ -1647,7 +1977,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 23,
@@ -1658,7 +2001,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         },
         {
           "seed_surface_code": "es_consejo_aduanas_customs_brokers_surface_02",
@@ -1697,7 +2042,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 24,
@@ -1708,7 +2066,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         }
       ],
       "source_family_index": 12,
@@ -1786,7 +2146,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 25,
@@ -1797,7 +2170,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_coacab_barcelona_customs_brokers_surface_02",
@@ -1836,7 +2211,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 26,
@@ -1847,7 +2235,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 13,
@@ -1925,7 +2315,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 27,
@@ -1936,7 +2339,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_coacav_valencia_customs_brokers_surface_02",
@@ -1975,7 +2380,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 28,
@@ -1986,7 +2404,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 14,
@@ -2064,7 +2484,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 29,
@@ -2075,7 +2508,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_coacam_madrid_customs_brokers_surface_02",
@@ -2114,7 +2549,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 30,
@@ -2125,7 +2573,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 15,
@@ -2203,7 +2653,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 31,
@@ -2214,7 +2677,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_port_barcelona_business_directory_surface_02",
@@ -2253,7 +2718,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 32,
@@ -2264,7 +2742,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 16,
@@ -2342,7 +2822,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 33,
@@ -2353,7 +2846,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_valenciaport_services_surface_02",
@@ -2392,7 +2887,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 34,
@@ -2403,7 +2911,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 17,
@@ -2481,7 +2991,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 35,
@@ -2492,7 +3015,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_bilbaoport_directory_surface_02",
@@ -2531,7 +3056,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 36,
@@ -2542,7 +3080,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 18,
@@ -2620,7 +3160,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 37,
@@ -2631,7 +3184,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_algeciras_port_services_surface_02",
@@ -2670,7 +3225,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 38,
@@ -2681,7 +3249,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 19,
@@ -2759,7 +3329,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 39,
@@ -2770,7 +3353,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_tarragona_port_services_surface_02",
@@ -2809,7 +3394,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 40,
@@ -2820,7 +3418,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 20,
@@ -2898,7 +3498,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 41,
@@ -2909,7 +3522,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_castellon_port_community_surface_02",
@@ -2948,7 +3563,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 42,
@@ -2959,7 +3587,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 21,
@@ -3037,7 +3667,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 43,
@@ -3048,7 +3691,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_seville_port_community_surface_02",
@@ -3087,7 +3732,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 44,
@@ -3098,7 +3756,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 22,
@@ -3176,7 +3836,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 45,
@@ -3187,7 +3860,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_vigo_port_services_surface_02",
@@ -3226,7 +3901,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 46,
@@ -3237,7 +3925,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 23,
@@ -3315,7 +4005,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 47,
@@ -3326,7 +4029,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_cartagena_port_services_surface_02",
@@ -3365,7 +4070,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 48,
@@ -3376,7 +4094,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 24,
@@ -3454,7 +4174,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 49,
@@ -3465,7 +4198,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_puertos_del_estado_reference_surface_02",
@@ -3504,7 +4239,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 50,
@@ -3515,7 +4263,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 25,
@@ -3593,7 +4343,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 51,
@@ -3604,7 +4367,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_aena_air_cargo_surfaces_surface_02",
@@ -3643,7 +4408,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 52,
@@ -3654,7 +4432,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_aena_air_cargo_surfaces_surface_03",
@@ -3693,7 +4473,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 53,
@@ -3704,7 +4497,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 26,
@@ -3782,7 +4577,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 54,
@@ -3793,7 +4601,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_barcelona_air_cargo_members_surface_02",
@@ -3832,7 +4642,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 55,
@@ -3843,7 +4666,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 27,
@@ -3921,7 +4746,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 56,
@@ -3932,7 +4770,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_madrid_air_cargo_forum_members_surface_02",
@@ -3971,7 +4811,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 57,
@@ -3982,7 +4835,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 28,
@@ -4060,7 +4915,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 58,
@@ -4071,7 +4939,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_zaragoza_airport_cargo_surface_02",
@@ -4110,7 +4980,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 59,
@@ -4121,7 +5004,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 29,
@@ -4199,7 +5084,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 60,
@@ -4210,7 +5108,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_sil_barcelona_participating_companies_surface_02",
@@ -4249,7 +5149,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 61,
@@ -4260,7 +5173,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 30,
@@ -4338,7 +5253,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 62,
@@ -4349,7 +5277,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_logistics_automation_madrid_exhibitors_surface_02",
@@ -4388,7 +5318,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 63,
@@ -4399,7 +5342,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 31,
@@ -4477,7 +5422,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 64,
@@ -4488,7 +5446,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_code": "es_empack_madrid_exhibitors_surface_02",
@@ -4527,7 +5487,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
           ],
           "seed_surface_index": 65,
@@ -4538,7 +5511,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_MINUS"
         }
       ],
       "source_family_index": 32,
@@ -4616,7 +5591,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 66,
@@ -4627,7 +5615,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_pickpack_expo_exhibitors_surface_02",
@@ -4666,7 +5656,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 67,
@@ -4677,7 +5680,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 33,
@@ -4755,7 +5760,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "DE"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 68,
@@ -4766,7 +5784,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_transport_logistic_exhibitor_directory_surface_02",
@@ -4805,7 +5825,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "DE"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 69,
@@ -4816,7 +5849,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 34,
@@ -4894,7 +5929,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 70,
@@ -4905,7 +5953,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         },
         {
           "seed_surface_code": "es_azfreight_spain_forwarders_surface_02",
@@ -4944,7 +5994,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 71,
@@ -4955,7 +6018,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         }
       ],
       "source_family_index": 35,
@@ -5033,7 +6098,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 72,
@@ -5044,7 +6122,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_freightnet_spain_forwarders_surface_02",
@@ -5083,7 +6163,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 73,
@@ -5094,7 +6187,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_freightnet_spain_forwarders_surface_03",
@@ -5133,7 +6228,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 74,
@@ -5144,7 +6252,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_freightnet_spain_forwarders_surface_04",
@@ -5183,7 +6293,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 75,
@@ -5194,7 +6317,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 36,
@@ -5272,7 +6397,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 76,
@@ -5283,7 +6421,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_freightnet_spain_logistics_companies_surface_02",
@@ -5322,7 +6462,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 77,
@@ -5333,7 +6486,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_code": "es_freightnet_spain_logistics_companies_surface_03",
@@ -5372,7 +6527,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 78,
@@ -5383,7 +6551,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 37,
@@ -5461,7 +6631,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 79,
@@ -5472,7 +6655,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         },
         {
           "seed_surface_code": "es_cargoyellowpages_spain_surface_02",
@@ -5511,7 +6696,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 80,
@@ -5522,7 +6720,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         }
       ],
       "source_family_index": 38,
@@ -5600,7 +6800,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "GB"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 81,
@@ -5611,7 +6824,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         },
         {
           "seed_surface_code": "es_europages_forwarding_agents_surface_02",
@@ -5650,7 +6865,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "GB"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 82,
@@ -5661,7 +6889,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         }
       ],
       "source_family_index": 39,
@@ -5739,7 +6969,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 83,
@@ -5750,7 +6993,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         },
         {
           "seed_surface_code": "es_kompass_spain_transport_logistics_surface_02",
@@ -5789,7 +7034,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 84,
@@ -5800,7 +7058,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         },
         {
           "seed_surface_code": "es_kompass_spain_transport_logistics_surface_03",
@@ -5839,7 +7099,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 85,
@@ -5850,7 +7123,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 40,
@@ -5928,7 +7203,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A_PLUS"
             }
           ],
           "seed_surface_index": 86,
@@ -5939,7 +7227,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_PLUS"
         },
         {
           "seed_surface_code": "es_paginas_amarillas_transport_logistics_surface_02",
@@ -5978,7 +7268,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A_PLUS"
             }
           ],
           "seed_surface_index": 87,
@@ -5989,7 +7292,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_PLUS"
         },
         {
           "seed_surface_code": "es_paginas_amarillas_transport_logistics_seed_003",
@@ -6028,7 +7333,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 88,
@@ -6039,7 +7357,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 41,
@@ -6117,7 +7437,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 89,
@@ -6128,7 +7461,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         },
         {
           "seed_surface_code": "es_einforma_transport_logistics_surface_02",
@@ -6167,7 +7502,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 90,
@@ -6178,7 +7526,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_code": "es_einforma_transport_logistics_seed_003",
@@ -6217,7 +7567,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 91,
@@ -6228,7 +7591,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 42,
@@ -6306,7 +7671,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A_PLUS"
             }
           ],
           "seed_surface_index": 92,
@@ -6317,7 +7695,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_PLUS"
         },
         {
           "seed_surface_code": "es_axesor_logistics_transport_surface_02",
@@ -6356,7 +7736,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A_PLUS"
             }
           ],
           "seed_surface_index": 93,
@@ -6367,7 +7760,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A_PLUS"
         },
         {
           "seed_surface_code": "es_axesor_logistics_transport_seed_003",
@@ -6406,7 +7801,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ES"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
           ],
           "seed_surface_index": 94,
@@ -6417,7 +7825,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_MINUS"
         }
       ],
       "source_family_index": 43,
@@ -6495,7 +7905,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "CO"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 95,
@@ -6506,7 +7929,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         },
         {
           "seed_surface_code": "es_goodfirms_spain_logistics_surface_02",
@@ -6545,7 +7970,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "CO"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 96,
@@ -6556,7 +7994,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         }
       ],
       "source_family_index": 44,
@@ -6634,7 +8074,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "es",
+              "url_locale_code": "es",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ES"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
           ],
           "seed_surface_index": 97,
@@ -6645,7 +8098,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "A"
         },
         {
           "seed_surface_code": "es_freightos_top_forwarders_spain_surface_02",
@@ -6684,7 +8139,20 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe"
+              "safety_state": "candidate_manifest_only_no_db_no_frontier_no_live_probe",
+              "target_language_code": "es",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
           ],
           "seed_surface_index": 98,
@@ -6695,7 +8163,9 @@
           "enabled": false,
           "needs_live_check": true,
           "candidate_manifest": true,
-          "is_live": false
+          "is_live": false,
+          "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
+          "quality_status": "B_PLUS"
         }
       ],
       "source_family_index": 45,
@@ -6716,5 +8186,9 @@
     }
   ],
   "language_alias": "es",
-  "last_rewritten_by_gate": "SOURCE_SEED_R284H_ROLLED_LANGUAGE_STANDARDIZATION_PATCH_LOCAL_ONLY"
+  "last_rewritten_by_gate": "SOURCE_SEED_R284H_ROLLED_LANGUAGE_STANDARDIZATION_PATCH_LOCAL_ONLY",
+  "enabled": false,
+  "needs_live_check": true,
+  "safety_state": "candidate_only_not_live",
+  "review_state": "needs_live_check"
 }
