@@ -684,3 +684,30 @@ Italian metadata model rows follow the general source-seed standard, with these 
 Italian metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
 
 <!-- SOURCE_SEED_ITALIAN_METADATA_MODEL_RULE_END -->
+
+<!-- SOURCE_SEED_PORTUGUESE_METADATA_MODEL_RULE_BEGIN -->
+
+## Portuguese metadata model rule
+
+Portuguese metadata model rows follow the general source-seed standard, with these Portuguese-specific interpretation rules:
+
+- Top-level `language_code=pt` means the rollout target is Portuguese.
+- Seed-level `target_language_code=pt` is required for every Portuguese catalog URL.
+- Seed-level `content_language_code=pt` is accepted only when URL/path/host/source semantics provide a Portuguese signal.
+- Seed-level `content_language_code=en` records English fallback surfaces that may still be useful for Portuguese logistics discovery.
+- Seed-level `content_language_code=unknown` must stay under human/manual review and must not be treated as native Portuguese content.
+- `url_locale_code=pt` records visible Portuguese locale or Portuguese-content URL signal.
+- `url_locale_code=en` records visible English locale or English-content URL signal.
+- `url_locale_code=und` records an undetermined URL locale.
+- `source_country_codes` records source or organization origin when inferable; for Portuguese rollout this may include `PT` and `ZZ`.
+- `covered_country_codes` records covered country or region when inferable; for this Portuguese seal it is `PT` or `ZZ`.
+- `country_primary` is used for Portuguese-country primary/local directory surfaces.
+- `country_slice_of_global_directory` is used for Portuguese-country slices inside global directories.
+- `official_company_local_entity` is used for company/local-entity pages where Portuguese source-country coverage is explicit enough.
+- `regional_or_industry_context` is used for global, regional, or industry context where Portuguese coverage is not a clean country slice.
+- `needs_native_alternative_check` marks English fallback rows where a Portuguese-native alternative should later be considered.
+- `manual_review_required` marks unknown/undetermined rows that still need human review before any live activation.
+
+Portuguese metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
+
+<!-- SOURCE_SEED_PORTUGUESE_METADATA_MODEL_RULE_END -->

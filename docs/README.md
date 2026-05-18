@@ -1140,3 +1140,41 @@ Italian source-seed catalog final JSON truth is sealed for the current metadata 
 Italian remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
 
 <!-- SOURCE_SEED_IT_FINAL_JSON_TRUTH_STATUS_END -->
+
+<!-- SOURCE_SEED_PT_FINAL_JSON_TRUTH_STATUS_BEGIN -->
+
+## Portuguese final JSON truth
+
+`PORTUGUESE_FINAL_JSON_TRUTH_SEALED_HEAD`: `0a90002be0efff93a3c59a4bfe83dfe3d221d4b6`
+
+Portuguese source-seed catalog final JSON truth is sealed for the current metadata model.
+
+- Catalog: `makpi51crawler/catalog/startpoints/pt/portuguese_source_families_v2.json`
+- SHA256: `7a429b8995e29e3634452fb71e463d0237e498a6498ff9227a3ae753febc984d`
+- Metrics: 40 source families, 84 seed surfaces, 84 seed URLs, 84 unique HTTPS URLs
+- Candidate/runtime safety:
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+- Seed metadata completeness:
+  - `target_language_code`: pt=84
+  - `content_language_code: pt=13, en=56, unknown=15`
+  - `url_locale_code`: pt=13, en=56, und=15
+  - `source_country_codes`: PT=59, ZZ=25
+  - `covered_country_codes: PT=60, ZZ=24`
+  - `language_fit`: native=13, english_fallback=56, unknown=15
+  - `locale_review_status`: native_locale_verified: 13, needs_native_alternative_check: 56, manual_review_required: 15
+  - `coverage_fit`: country_primary=8, country_slice_of_global_directory=1, official_company_local_entity=51, regional_or_industry_context=24
+- Quality split:
+  - A_PLUS=3
+  - A=10
+  - A_MINUS=40
+  - B_PLUS=16
+  - B_MINUS=15
+
+Portuguese remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
+
+<!-- SOURCE_SEED_PT_FINAL_JSON_TRUTH_STATUS_END -->
