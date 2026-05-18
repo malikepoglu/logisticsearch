@@ -947,3 +947,41 @@ German source-seed catalog final JSON truth is sealed for the current metadata m
 German remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
 
 <!-- SOURCE_SEED_DE_FINAL_JSON_TRUTH_STATUS_END -->
+
+<!-- SOURCE_SEED_AR_FINAL_JSON_TRUTH_STATUS_BEGIN -->
+
+## Arabic final JSON truth
+
+`ARABIC_FINAL_JSON_TRUTH_SEALED_HEAD`: `c14b303acf5656a04299f4e734caac7ed63129fe`
+
+Arabic source-seed catalog final JSON truth is sealed for the current metadata model.
+
+- Catalog: `makpi51crawler/catalog/startpoints/ar/arabic_source_families_v2.json`
+- SHA256: `f20349f43bba5ce52d4031619f20f03df2c33ab25fd467ba91bb01195a37a7de`
+- Metrics: 40 source families, 84 seed surfaces, 84 seed URLs, 84 unique HTTPS URLs
+- Candidate/runtime safety:
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+- Seed metadata completeness:
+  - `target_language_code`: ar=84
+  - `content_language_code: ar=1, en=63, unknown=20`
+  - `url_locale_code`: ar=1, en=63, und=20
+  - `source_country_codes`: AE=8, BH=1, EG=4, JO=3, OM=3, SA=6, ZZ=59
+  - `covered_country_codes: AE=12, BH=1, EG=4, JO=4, LB=1, OM=4, QA=3, SA=8, ZZ=47`
+  - `language_fit`: native=1, english_fallback=63, unknown=20
+  - `locale_review_status`: native_locale_verified: 1, needs_native_alternative_check: 63, manual_review_required: 20
+  - `coverage_fit`: country_primary=7, country_slice_of_global_directory=12, official_company_local_entity=18, regional_or_industry_context=47
+- Quality split:
+  - A_PLUS=1
+  - A_MINUS=21
+  - B_PLUS=42
+  - B=2
+  - B_MINUS=18
+
+Arabic remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
+
+<!-- SOURCE_SEED_AR_FINAL_JSON_TRUTH_STATUS_END -->

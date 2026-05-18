@@ -549,3 +549,30 @@ German metadata model rows follow the general source-seed standard, with these G
 German metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
 
 <!-- SOURCE_SEED_GERMAN_METADATA_MODEL_RULE_END -->
+
+<!-- SOURCE_SEED_ARABIC_METADATA_MODEL_RULE_BEGIN -->
+
+## Arabic metadata model rule
+
+Arabic metadata model rows follow the general source-seed standard, with these Arabic-specific interpretation rules:
+
+- Top-level `language_code=ar` means the rollout target is Arabic.
+- Seed-level `target_language_code=ar` is required for every Arabic catalog URL.
+- Seed-level `content_language_code=ar` is accepted only when URL/path/host/source semantics provide an Arabic signal.
+- Seed-level `content_language_code=en` records English fallback surfaces that may still be useful for Arabic logistics discovery.
+- Seed-level `content_language_code=unknown` must stay under human/manual review and must not be treated as native Arabic content.
+- `url_locale_code=ar` records visible Arabic locale or Arabic-content URL signal.
+- `url_locale_code=en` records visible English locale or English-content URL signal.
+- `url_locale_code=und` records an undetermined URL locale.
+- `source_country_codes` records source or organization origin when inferable; otherwise `ZZ`.
+- `covered_country_codes` records covered country or region when inferable; for Arabic-region coverage this may include `AE`, `BH`, `EG`, `JO`, `LB`, `OM`, `QA`, `SA`; otherwise `ZZ`.
+- `country_primary` is used for Arabic-country primary/local directory surfaces.
+- `country_slice_of_global_directory` is used for Arabic-country slices inside global directories.
+- `official_company_local_entity` is used for company/local-entity pages where Arabic-region source-country coverage is explicit enough.
+- `regional_or_industry_context` is used for global, regional, or industry context where Arabic-region coverage is not a clean country slice.
+- `needs_native_alternative_check` marks English fallback rows where an Arabic-native alternative should later be considered.
+- `manual_review_required` marks unknown/undetermined rows that still need human review before any live activation.
+
+Arabic metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
+
+<!-- SOURCE_SEED_ARABIC_METADATA_MODEL_RULE_END -->
