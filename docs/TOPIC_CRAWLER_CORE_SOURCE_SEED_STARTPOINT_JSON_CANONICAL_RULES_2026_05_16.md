@@ -603,3 +603,30 @@ Chinese metadata model rows follow the general source-seed standard, with these 
 Chinese metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
 
 <!-- SOURCE_SEED_CHINESE_METADATA_MODEL_RULE_END -->
+
+<!-- SOURCE_SEED_FRENCH_METADATA_MODEL_RULE_BEGIN -->
+
+## French metadata model rule
+
+French metadata model rows follow the general source-seed standard, with these French-specific interpretation rules:
+
+- Top-level `language_code=fr` means the rollout target is French.
+- Seed-level `target_language_code=fr` is required for every French catalog URL.
+- Seed-level `content_language_code=fr` is accepted only when URL/path/host/source semantics provide a French signal.
+- Seed-level `content_language_code=en` records English fallback surfaces that may still be useful for French logistics discovery.
+- Seed-level `content_language_code=unknown` must stay under human/manual review and must not be treated as native French content.
+- `url_locale_code=fr` records visible French locale or French-content URL signal.
+- `url_locale_code=en` records visible English locale or English-content URL signal.
+- `url_locale_code=und` records an undetermined URL locale.
+- `source_country_codes` records source or organization origin when inferable; for French-region surfaces this may include `BE`, `CH`, `FR`, `LU`, `MA`, `MC`, `SN`, and `TN`; otherwise `ZZ` or another explicit non-target source country/region such as `EU`.
+- `covered_country_codes` records covered country or region when inferable; for French-region coverage this may include `BE`, `CH`, `FR`, `LU`, `MA`, `MC`, `SN`, and `TN`; otherwise `ZZ`.
+- `country_primary` is used for French-country primary/local directory surfaces.
+- `country_slice_of_global_directory` is used for French-country or French-region slices inside global directories.
+- `official_company_local_entity` is used for company/local-entity pages where French-region source-country coverage is explicit enough.
+- `regional_or_industry_context` is used for global, regional, or industry context where French-region coverage is not a clean country slice.
+- `needs_native_alternative_check` marks English fallback rows where a French-native alternative should later be considered.
+- `manual_review_required` marks unknown/undetermined rows that still need human review before any live activation.
+
+French metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
+
+<!-- SOURCE_SEED_FRENCH_METADATA_MODEL_RULE_END -->
