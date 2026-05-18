@@ -558,3 +558,23 @@ No next-language mutation should begin until the after-English docs/rules/standa
 This preserves the rule: 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
 
 <!-- SOURCE_SEED_AFTER_EN_DOCS_CHECKPOINT_END -->
+
+<!-- SOURCE_SEED_AFTER_TR_DOCS_CHECKPOINT_BEGIN -->
+
+## After Turkish final JSON truth seal
+
+After Turkish final JSON truth seal, the mandatory documentation checkpoint is:
+
+`SOURCE_SEED_DOCS_STANDARDS_FORMAT_GAP_AUDIT_READONLY_AFTER_TR`
+
+If that audit reports documentation gaps, run:
+
+`SOURCE_SEED_DOCS_STANDARDS_FORMAT_LOCAL_ONLY_AFTER_TR`
+
+Then run a read-only audit, commit/push gate, and exact-head post-push seal before continuing to the next rolled-language repair.
+
+No next-language mutation should begin until the after-Turkish docs/rules/standards/format checkpoint is sealed.
+
+This preserves the rule: 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
+
+<!-- SOURCE_SEED_AFTER_TR_DOCS_CHECKPOINT_END -->
