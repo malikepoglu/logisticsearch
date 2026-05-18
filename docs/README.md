@@ -910,3 +910,40 @@ Turkish source-seed catalog final JSON truth is sealed for the current metadata 
 Turkish remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
 
 <!-- SOURCE_SEED_TR_FINAL_JSON_TRUTH_STATUS_END -->
+
+<!-- SOURCE_SEED_DE_FINAL_JSON_TRUTH_STATUS_BEGIN -->
+
+## German final JSON truth
+
+`GERMAN_FINAL_JSON_TRUTH_SEALED_HEAD`: `e50770241600b9fdbcc0d577fdfb304b6753cda5`
+
+German source-seed catalog final JSON truth is sealed for the current metadata model.
+
+- Catalog: `makpi51crawler/catalog/startpoints/de/german_source_families_v2.json`
+- SHA256: `ce383ba327b70e8246218ffa3e1af72b4094c0a10a8c2e3c01664c31846182cb`
+- Metrics: 41 source families, 87 seed surfaces, 87 seed URLs, 87 unique HTTPS URLs
+- Candidate/runtime safety:
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+- Seed metadata completeness:
+  - `target_language_code`: de=87
+  - `content_language_code: de=52, en=16, unknown=19`
+  - `url_locale_code`: de=52, en=16, und=19
+  - `source_country_codes`: DE=51, ZZ=36
+  - `covered_country_codes: DE=62, ZZ=25`
+  - `language_fit`: native=52, english_fallback=16, unknown=19
+  - `locale_review_status`: native_locale_verified: 52, needs_native_alternative_check: 16, manual_review_required: 19
+  - `coverage_fit`: country_primary=18, country_slice_of_global_directory=11, official_company_local_entity=33, regional_or_industry_context=25
+- Quality split:
+  - A_PLUS=17
+  - A=35
+  - B_PLUS=16
+  - B_MINUS=19
+
+German remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
+
+<!-- SOURCE_SEED_DE_FINAL_JSON_TRUTH_STATUS_END -->
