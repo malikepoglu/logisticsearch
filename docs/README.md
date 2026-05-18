@@ -1063,3 +1063,42 @@ French source-seed catalog final JSON truth is sealed for the current metadata m
 French remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
 
 <!-- SOURCE_SEED_FR_FINAL_JSON_TRUTH_STATUS_END -->
+
+<!-- SOURCE_SEED_ES_FINAL_JSON_TRUTH_STATUS_BEGIN -->
+
+## Spanish final JSON truth
+
+`SPANISH_FINAL_JSON_TRUTH_SEALED_HEAD`: `878b69c28358e05a47a0bf211a1865097d876c8e`
+
+Spanish source-seed catalog final JSON truth is sealed for the current metadata model.
+
+- Catalog: `makpi51crawler/catalog/startpoints/es/spanish_source_families_v2.json`
+- SHA256: `b68585e8dc69364eb723f305f3d18f1977c37e78dcb0c7a068136d3753f2a4a3`
+- Metrics: 45 source families, 98 seed surfaces, 98 seed URLs, 98 unique HTTPS URLs
+- Candidate/runtime safety:
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+- Seed metadata completeness:
+  - `target_language_code`: es=98
+  - `content_language_code: es=19, en=44, unknown=35`
+  - `url_locale_code`: es=19, en=44, und=35
+  - `source_country_codes`: CO=2, DE=2, ES=21, GB=2, ZZ=71
+  - `covered_country_codes: ES=46, ZZ=52`
+  - `language_fit`: native=19, english_fallback=44, unknown=35
+  - `locale_review_status`: native_locale_verified: 19, needs_native_alternative_check: 44, manual_review_required: 35
+  - `coverage_fit`: country_primary=9, country_slice_of_global_directory=25, official_company_local_entity=12, regional_or_industry_context=52
+- Quality split:
+  - A_PLUS=4
+  - A=15
+  - A_MINUS=22
+  - B_PLUS=22
+  - B=4
+  - B_MINUS=31
+
+Spanish remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
+
+<!-- SOURCE_SEED_ES_FINAL_JSON_TRUTH_STATUS_END -->

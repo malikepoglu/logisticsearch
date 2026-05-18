@@ -630,3 +630,30 @@ French metadata model rows follow the general source-seed standard, with these F
 French metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
 
 <!-- SOURCE_SEED_FRENCH_METADATA_MODEL_RULE_END -->
+
+<!-- SOURCE_SEED_SPANISH_METADATA_MODEL_RULE_BEGIN -->
+
+## Spanish metadata model rule
+
+Spanish metadata model rows follow the general source-seed standard, with these Spanish-specific interpretation rules:
+
+- Top-level `language_code=es` means the rollout target is Spanish.
+- Seed-level `target_language_code=es` is required for every Spanish catalog URL.
+- Seed-level `content_language_code=es` is accepted only when URL/path/host/source semantics provide a Spanish signal.
+- Seed-level `content_language_code=en` records English fallback surfaces that may still be useful for Spanish logistics discovery.
+- Seed-level `content_language_code=unknown` must stay under human/manual review and must not be treated as native Spanish content.
+- `url_locale_code=es` records visible Spanish locale or Spanish-content URL signal.
+- `url_locale_code=en` records visible English locale or English-content URL signal.
+- `url_locale_code=und` records an undetermined URL locale.
+- `source_country_codes` records source or organization origin when inferable; for Spanish rollout this may include `CO`, `DE`, `ES`, `GB`, and `ZZ`.
+- `covered_country_codes` records covered country or region when inferable; for this Spanish seal it is `ES` or `ZZ`.
+- `country_primary` is used for Spanish-country primary/local directory surfaces.
+- `country_slice_of_global_directory` is used for Spanish-country slices inside global directories.
+- `official_company_local_entity` is used for company/local-entity pages where Spanish source-country coverage is explicit enough.
+- `regional_or_industry_context` is used for global, regional, or industry context where Spanish coverage is not a clean country slice.
+- `needs_native_alternative_check` marks English fallback rows where a Spanish-native alternative should later be considered.
+- `manual_review_required` marks unknown/undetermined rows that still need human review before any live activation.
+
+Spanish metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
+
+<!-- SOURCE_SEED_SPANISH_METADATA_MODEL_RULE_END -->
