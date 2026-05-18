@@ -657,3 +657,30 @@ Spanish metadata model rows follow the general source-seed standard, with these 
 Spanish metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
 
 <!-- SOURCE_SEED_SPANISH_METADATA_MODEL_RULE_END -->
+
+<!-- SOURCE_SEED_ITALIAN_METADATA_MODEL_RULE_BEGIN -->
+
+## Italian metadata model rule
+
+Italian metadata model rows follow the general source-seed standard, with these Italian-specific interpretation rules:
+
+- Top-level `language_code=it` means the rollout target is Italian.
+- Seed-level `target_language_code=it` is required for every Italian catalog URL.
+- Seed-level `content_language_code=it` is accepted only when URL/path/host/source semantics provide an Italian signal.
+- Seed-level `content_language_code=en` records English fallback surfaces that may still be useful for Italian logistics discovery.
+- Seed-level `content_language_code=unknown` must stay under human/manual review and must not be treated as native Italian content.
+- `url_locale_code=it` records visible Italian locale or Italian-content URL signal.
+- `url_locale_code=en` records visible English locale or English-content URL signal.
+- `url_locale_code=und` records an undetermined URL locale.
+- `source_country_codes` records source or organization origin when inferable; for Italian rollout this may include `EU`, `IT`, and `ZZ`.
+- `covered_country_codes` records covered country or region when inferable; for this Italian seal it is `IT` or `ZZ`.
+- `country_primary` is used for Italian-country primary/local directory surfaces.
+- `country_slice_of_global_directory` is used for Italian-country slices inside global directories.
+- `official_company_local_entity` is used for company/local-entity pages where Italian source-country coverage is explicit enough.
+- `regional_or_industry_context` is used for global, regional, or industry context where Italian coverage is not a clean country slice.
+- `needs_native_alternative_check` marks English fallback rows where an Italian-native alternative should later be considered.
+- `manual_review_required` marks unknown/undetermined rows that still need human review before any live activation.
+
+Italian metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
+
+<!-- SOURCE_SEED_ITALIAN_METADATA_MODEL_RULE_END -->
