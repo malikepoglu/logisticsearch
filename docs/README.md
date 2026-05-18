@@ -836,3 +836,40 @@ Before moving into broad `ROLLED_STARTPOINT_JSON_METADATA_GAP_AUDIT_READONLY`, k
 No DB insert, no frontier activation, no crawler start, no systemd mutation, no pi51c sync, and no live copy are allowed from source-seed metadata or documentation gates.
 
 <!-- SOURCE_SEED_JSON_METADATA_STANDARDS_SUMMARY_END -->
+
+<!-- SOURCE_SEED_EN_FINAL_JSON_TRUTH_STATUS_BEGIN -->
+
+## English final JSON truth
+
+`ENGLISH_FINAL_JSON_TRUTH_SEALED_HEAD`: `c44c06ae88cdeb6505c0cedf9b28a1ee872c06d7`
+
+English source-seed catalog final JSON truth is sealed for the current metadata model.
+
+- Catalog: `makpi51crawler/catalog/startpoints/en/english_source_families_v2.json`
+- SHA256: `b2b0abc4985dc78fe08b450387a380f8f0579ed3df3549404fbce4743c5e3421`
+- Metrics: 171 source families, 561 seed surfaces, 561 seed URLs, 561 unique HTTPS URLs
+- Candidate/runtime safety:
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+- Seed metadata completeness:
+  - `target_language_code`: en=561
+  - `content_language_code: en=417, unknown=144`
+  - `url_locale_code`: en=417, und=144
+  - `language_fit`: native=417, unknown=144
+  - `locale_review_status`: native_locale_verified: 417, manual_review_required: 144
+  - `coverage_fit`: country_slice_of_global_directory=306, official_company_local_entity=91, regional_or_industry_context=164
+- Quality split:
+  - A_PLUS=154
+  - A=178
+  - A_MINUS=81
+  - B_PLUS=91
+  - B=27
+  - B_MINUS=30
+
+English remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
+
+<!-- SOURCE_SEED_EN_FINAL_JSON_TRUTH_STATUS_END -->
