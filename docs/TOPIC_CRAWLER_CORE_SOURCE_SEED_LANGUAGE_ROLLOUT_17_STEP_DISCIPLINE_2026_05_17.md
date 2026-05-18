@@ -509,3 +509,32 @@ Metadata repair does not imply runtime activation.
 No DB insert, no frontier activation, no crawler start/stop, no systemd mutation, no pi51c sync, and no live copy are allowed in metadata model gates.
 
 <!-- SOURCE_SEED_METADATA_MODEL_17_PLUS_DISCIPLINE_EXTENSION_END -->
+
+<!-- SOURCE_SEED_DOCS_STANDARDS_CHECKPOINT_BEGIN -->
+
+## Mandatory docs / rules / standards checkpoint
+
+After each language reaches final JSON truth seal, run a documentation checkpoint before moving to the next rolled-catalog audit.
+
+Required order:
+
+1. Final JSON truth seal for the language.
+2. Documentation/rules/standards/format gap audit.
+3. Local-only documentation update if README, canonical rules, or discipline docs are missing current standards.
+4. Read-only documentation audit.
+5. Commit/push documentation update.
+6. Post-push exact-head documentation seal.
+7. Only then continue to broad rolled-catalog metadata audits or the next language.
+
+This checkpoint must verify that:
+
+- README summarizes the current JSON format and source-seed safety state.
+- Canonical rules define required seed-level metadata fields.
+- Canonical rules define reachability review encoding such as `broken_or_blocked`.
+- 17+ discipline includes docs/rules/standards checkpoint before cross-language rollout work.
+- All source-seed catalogs remain candidate-only unless a separate explicit activation gate exists.
+- 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
+
+This checkpoint never permits DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
+
+<!-- SOURCE_SEED_DOCS_STANDARDS_CHECKPOINT_END -->

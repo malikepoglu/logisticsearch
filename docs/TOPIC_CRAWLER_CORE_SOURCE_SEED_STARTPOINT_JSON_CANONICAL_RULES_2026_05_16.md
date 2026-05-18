@@ -445,3 +445,33 @@ These metadata fields do not make a URL live.
 A seed remains candidate-only until a separate gated live/reachability probe, locale review, country coverage review, commit/push seal, and later pi51c sync line explicitly approve it.
 
 <!-- SOURCE_SEED_METADATA_MODEL_CANONICAL_EXTENSION_END -->
+
+<!-- SOURCE_SEED_REACHABILITY_STATUS_FORMAT_RULE_BEGIN -->
+
+## Reachability status format rule
+
+`locale_review_status` may encode candidate-only reachability review outcomes when a source-seed URL has been checked by a controlled read-only probe.
+
+Allowed reachability-related use:
+
+- `broken_or_blocked`
+  - Use for persistent or material HTTP 4xx/5xx failure, DNS/network/TLS failure, blocked source, or equivalent access failure.
+  - This is a candidate-review marker only.
+  - It must not delete the URL.
+  - It must not activate DB/frontier/crawler/runtime behavior.
+  - It must preserve enough context for later repair, replacement, or retest.
+- `needs_native_alternative_check`
+  - Keep for reachable English fallback rows that still need native-language search.
+  - Temporary rate-limit rows may stay here unless a later explicit reachability schema adds a separate retry field.
+- `manual_review_required`
+  - Use when locale or content language cannot be determined without human review.
+- `native_locale_verified`
+  - Use only when the URL itself is verified as native target-language content.
+- `english_fallback_verified`
+  - Use only when English fallback was intentionally accepted after review.
+
+Do not overload `language_fit`, `coverage_fit`, or `content_language_code` to represent HTTP reachability.
+
+Do not introduce runtime activation from this metadata.
+
+<!-- SOURCE_SEED_REACHABILITY_STATUS_FORMAT_RULE_END -->

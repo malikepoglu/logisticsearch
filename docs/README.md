@@ -756,3 +756,83 @@ Documentation rule:
 ## Source-seed rollout discipline
 
 - [Source-seed language rollout 17-step discipline / Source-seed dil rollout 17 adım disiplini](TOPIC_CRAWLER_CORE_SOURCE_SEED_LANGUAGE_ROLLOUT_17_STEP_DISCIPLINE_2026_05_17.md) - Permanent 17-step source-seed language rollout standard, including mandatory candidate-list user-review wording.
+
+<!-- SOURCE_SEED_JSON_METADATA_STANDARDS_SUMMARY_BEGIN -->
+
+## Source-seed JSON metadata, standards, and format checkpoint
+
+This README section summarizes the current source-seed JSON standard used after the Bulgarian final JSON truth seal.
+
+### Canonical source-seed JSON format
+
+Every rolled `source_families_v2` catalog remains a candidate manifest until a separate activation gate says otherwise.
+
+Required top-level safety fields:
+
+- `schema`: `source_families_v2`
+- `schema_version`: `2.0`
+- `candidate_manifest`: `true`
+- `is_live`: `false`
+- `enabled`: `false`
+- `needs_live_check`: `true`
+- `runtime_activation_policy`: `pi51c_live_probe_required_before_db_or_frontier_insert`
+- `safety_state`: `candidate_only_not_live`
+
+Required seed-level metadata fields:
+
+- `target_language_code`
+- `content_language_code`
+- `url_locale_code`
+- `source_country_codes`
+- `covered_country_codes`
+- `language_fit`
+- `coverage_fit`
+- `locale_review_status`
+
+### Language, locale, and country separation
+
+Top-level `language_code` is the rollout target language. It is not proof that every URL is written in that language.
+
+Seed-level `content_language_code` records the actual content language.
+
+Seed-level `url_locale_code` records the visible URL locale signal when available.
+
+Seed-level `source_country_codes` records the source or organization origin.
+
+Seed-level `covered_country_codes` records the country coverage of the page or listing.
+
+Do not add a plain ambiguous `language` field to new source-seed JSON work.
+
+### Reachability and review status format
+
+`locale_review_status=broken_or_blocked` is the canonical candidate-only marker for URL rows that are currently unusable because of HTTP 4xx/5xx, DNS/network/TLS failure, or equivalent blocking found in a controlled read-only reachability probe.
+
+`broken_or_blocked` does not delete the URL and does not activate anything. It preserves the evidence for later repair or replacement.
+
+Rate-limited rows should not be forced into `broken_or_blocked` unless a separate gate decides the block is persistent. Temporary `429` rows may remain as `needs_native_alternative_check` or another explicitly documented review state.
+
+### Bulgarian final JSON truth status
+
+Bulgarian catalog final JSON truth was sealed at:
+
+- Head: `0d912774e0f0522b62743fb755b12812d5979e2b`
+- Catalog: `makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json`
+- SHA256: `cd901adcc5472c8d333c59186894565d22c39846222cce1d342824a83c02d2cc`
+- Metrics: 40 source families, 50 seed surfaces, 50 seed URLs, 50 unique HTTPS URLs
+- Final status split:
+  - `broken_or_blocked`: 14
+  - `native_locale_verified`: 3
+  - `needs_native_alternative_check`: 26
+  - `manual_review_required`: 7
+
+The Bulgarian catalog remains candidate-only and not live.
+
+### Mandatory next-order rule
+
+Before moving into broad `ROLLED_STARTPOINT_JSON_METADATA_GAP_AUDIT_READONLY`, keep documentation and standards aligned first.
+
+25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
+
+No DB insert, no frontier activation, no crawler start, no systemd mutation, no pi51c sync, and no live copy are allowed from source-seed metadata or documentation gates.
+
+<!-- SOURCE_SEED_JSON_METADATA_STANDARDS_SUMMARY_END -->
