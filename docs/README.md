@@ -655,8 +655,8 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_DUTCH_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_RUSSIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
 - [`TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md`](TOPIC_CRAWLER_CORE_UKRAINIAN_SOURCE_SEED_URLS_DECISION_2026_05_16.md)
-- Bulgarian source-seed URLs decision — 2026-05-17: [decision](TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md); [bulgarian_source_families_v2.json](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json); 40 source families, 50 seed surfaces, 50 seed URLs, 50 unique seed URLs; candidate-only, not live; `pi51c_live_probe_required_before_db_or_frontier_insert`.
-- Czech source-seed URLs decision — 2026-05-19: [decision](TOPIC_CRAWLER_CORE_CZECH_SOURCE_SEED_URLS_DECISION_2026_05_19.md); [czech_source_families_v2.json](../makpi51crawler/catalog/startpoints/cs/czech_source_families_v2.json); 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique seed URLs; candidate-only, not live; `pi51c_live_probe_required_before_db_or_frontier_insert`.
+- [`TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md`](TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md)
+- [`TOPIC_CRAWLER_CORE_CZECH_SOURCE_SEED_URLS_DECISION_2026_05_19.md`](TOPIC_CRAWLER_CORE_CZECH_SOURCE_SEED_URLS_DECISION_2026_05_19.md)
 
 ### Boundary rule
 
