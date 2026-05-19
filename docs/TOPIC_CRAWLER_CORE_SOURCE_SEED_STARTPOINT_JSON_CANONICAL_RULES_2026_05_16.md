@@ -792,3 +792,30 @@ Ukrainian metadata model rows follow the general source-seed standard, with thes
 Ukrainian metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
 
 <!-- SOURCE_SEED_UKRAINIAN_METADATA_MODEL_RULE_END -->
+
+<!-- SOURCE_SEED_CS_RULE_STANDARD_PATCH_2026_05_19 -->
+
+## Czech (`cs`) source-seed catalog standard record — 2026-05-19
+
+The Czech source-seed catalog is tracked at:
+
+- `makpi51crawler/catalog/startpoints/cs/czech_source_families_v2.json`
+
+Required Czech (`cs`) catalog facts:
+
+- `schema=source_families_v2`
+- `schema_version=2.0`
+- `language_code=cs`
+- `candidate_manifest=true`
+- `is_live=false`
+- `enabled=false`
+- `needs_live_check=true`
+- `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+- `safety_state=candidate_only_not_live`
+- 45 source families
+- 90 seed surfaces
+- 90 seed URLs
+- 0 duplicate seed URLs
+- 0 non-HTTPS seed URLs
+
+Czech (`cs`) remains candidate-only until a future controlled live-probe gate explicitly promotes selected surfaces. No DB/frontier/crawler activation is implied by this standards record.

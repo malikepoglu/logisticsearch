@@ -778,3 +778,35 @@ No all-rolled metadata audit or next-language mutation should begin until the af
 This preserves the rule: 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
 
 <!-- SOURCE_SEED_AFTER_UK_DOCS_CHECKPOINT_END -->
+
+<!-- SOURCE_SEED_CS_DISCIPLINE_STANDARD_PATCH_2026_05_19 -->
+
+## Czech (`cs`) rollout discipline record — 2026-05-19
+
+Czech (`cs`) follows the 17-step language rollout discipline.
+
+- CS-01 — baseline and remaining-language discovery read-only
+- CS-02 — decision document and candidate catalog local-only
+- CS-03 — local-only audit read-only
+- CS-04 — diff and dirty-scope audit read-only
+- CS-05 — commit/push gate
+- CS-06 — post-push seal read-only
+- CS-07 — docs standards format gap audit read-only
+- CS-08 — docs standards format patch local-only
+- CS-09 — docs standards format audit read-only
+- CS-10 — docs standards commit/push gate
+- CS-11 — docs standards post-push seal read-only
+- CS-12 — rolled metadata gap audit read-only after Czech
+- CS-13 — pi51c sync preflight read-only
+- CS-14 — pi51c repo sync gate
+- CS-15 — pi51c live sync gate
+- CS-16 — 4-layer equality seal read-only
+- CS-17 — next language decision read-only
+
+Czech (`cs`) approved candidate size:
+
+- 45 source families
+- 90 seed surfaces
+- 90 seed URLs
+
+The Czech (`cs`) catalog remains candidate-only: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `safety_state=candidate_only_not_live`.

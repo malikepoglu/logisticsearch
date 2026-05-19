@@ -1292,3 +1292,23 @@ Ukrainian source-seed catalog final JSON truth is sealed for the current metadat
 Ukrainian remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
 
 <!-- SOURCE_SEED_UK_FINAL_JSON_TRUTH_STATUS_END -->
+
+<!-- SOURCE_SEED_CS_DOCS_STANDARD_PATCH_2026_05_19 -->
+
+## Source-seed rollout update — Czech (`cs`) — 2026-05-19
+
+Czech (`cs`) is now recorded as a candidate-only source-seed rollout language.
+
+- Language: Czech
+- Language code: `cs`
+- Decision document: `docs/TOPIC_CRAWLER_CORE_CZECH_SOURCE_SEED_URLS_DECISION_2026_05_19.md`
+- Candidate catalog: `makpi51crawler/catalog/startpoints/cs/czech_source_families_v2.json`
+- Source families: 45 source families
+- Seed surfaces: 90 seed surfaces
+- Seed URLs: 90 seed URLs
+- Candidate state: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`
+- Runtime activation policy: `pi51c_live_probe_required_before_db_or_frontier_insert`
+- Safety state: `candidate_only_not_live`
+- Commit subject: `feat(source-seed): add Czech startpoint catalog`
+
+This README entry is an index/standards pointer only. It does not authorize DB insertion, frontier insertion, crawler start, systemd mutation, pi51c sync, or public URL probing.
