@@ -718,3 +718,23 @@ No next-language mutation should begin until the after-Portuguese docs/rules/sta
 This preserves the rule: 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
 
 <!-- SOURCE_SEED_AFTER_PT_DOCS_CHECKPOINT_END -->
+
+<!-- SOURCE_SEED_AFTER_NL_DOCS_CHECKPOINT_BEGIN -->
+
+## After Dutch final JSON truth seal
+
+After Dutch final JSON truth seal, the mandatory documentation checkpoint is:
+
+`SOURCE_SEED_DOCS_STANDARDS_FORMAT_GAP_AUDIT_READONLY_AFTER_NL`
+
+If that audit reports documentation gaps, run:
+
+`SOURCE_SEED_DOCS_STANDARDS_FORMAT_LOCAL_ONLY_AFTER_NL`
+
+Then run a read-only audit, commit/push gate, and exact-head post-push seal before continuing to the next rolled-language repair.
+
+No next-language mutation should begin until the after-Dutch docs/rules/standards/format checkpoint is sealed.
+
+This preserves the rule: 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
+
+<!-- SOURCE_SEED_AFTER_NL_DOCS_CHECKPOINT_END -->

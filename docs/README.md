@@ -1178,3 +1178,41 @@ Portuguese source-seed catalog final JSON truth is sealed for the current metada
 Portuguese remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
 
 <!-- SOURCE_SEED_PT_FINAL_JSON_TRUTH_STATUS_END -->
+
+<!-- SOURCE_SEED_NL_FINAL_JSON_TRUTH_STATUS_BEGIN -->
+
+## Dutch final JSON truth
+
+`DUTCH_FINAL_JSON_TRUTH_SEALED_HEAD`: `24b70c7821136fcd66d182cd4e49a3f4b234766f`
+
+Dutch source-seed catalog final JSON truth is sealed for the current metadata model.
+
+- Catalog: `makpi51crawler/catalog/startpoints/nl/dutch_source_families_v2.json`
+- SHA256: `b364a2849fe2d62fa6213d1f4cf6b3ec7e30935598e39faeef91b5bd63a82594`
+- Metrics: 40 source families, 84 seed surfaces, 84 seed URLs, 84 unique HTTPS URLs
+- Candidate/runtime safety:
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+- Seed metadata completeness:
+  - `target_language_code`: nl=84
+  - `content_language_code: nl=41, en=30, unknown=13`
+  - `url_locale_code`: nl=41, en=30, und=13
+  - `source_country_codes`: NL=23, ZZ=55, EU=4, CO=2
+  - `covered_country_codes: NL=41, ZZ=43`
+  - `language_fit`: native=41, english_fallback=30, unknown=13
+  - `locale_review_status`: native_locale_verified: 41, needs_native_alternative_check: 30, manual_review_required: 13
+  - `coverage_fit`: country_primary=13, country_slice_of_global_directory=18, official_company_local_entity=10, regional_or_industry_context=43
+- Quality split:
+  - A_PLUS=9
+  - A=32
+  - A_MINUS=8
+  - B_PLUS=22
+  - B_MINUS=13
+
+Dutch remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
+
+<!-- SOURCE_SEED_NL_FINAL_JSON_TRUTH_STATUS_END -->
