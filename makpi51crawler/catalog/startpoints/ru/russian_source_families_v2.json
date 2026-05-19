@@ -1,6 +1,6 @@
 {
   "schema": "source_families_v2",
-  "schema_version": "source_families_v2",
+  "schema_version": "2.0",
   "catalog_version": "russian_source_families_v2",
   "language_code": "ru",
   "language_name": "Russian",
@@ -109,9 +109,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 2,
@@ -138,9 +152,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 3,
@@ -167,9 +195,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         }
       ]
     },
@@ -215,9 +257,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_index": 5,
@@ -244,9 +300,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_index": 6,
@@ -273,9 +343,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         }
       ]
     },
@@ -321,9 +405,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 8,
@@ -350,9 +448,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 9,
@@ -379,9 +491,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -427,9 +553,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 11,
@@ -456,9 +596,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 12,
@@ -485,9 +639,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -533,9 +701,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 14,
@@ -562,9 +744,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -610,9 +806,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 16,
@@ -639,9 +849,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -687,9 +911,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 18,
@@ -716,9 +954,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -764,9 +1016,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 20,
@@ -793,9 +1059,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -841,9 +1121,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 22,
@@ -870,9 +1164,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -918,9 +1226,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 24,
@@ -947,9 +1269,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -995,9 +1331,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "CO"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 26,
@@ -1024,9 +1374,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "CO"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -1072,9 +1436,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "CO"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 28,
@@ -1101,9 +1479,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "CO"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -1149,9 +1541,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_index": 30,
@@ -1178,9 +1584,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -1226,9 +1646,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "GB"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 32,
@@ -1255,9 +1689,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "GB"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -1303,9 +1751,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_index": 34,
@@ -1332,9 +1794,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -1380,9 +1856,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_index": 36,
@@ -1409,9 +1899,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -1457,9 +1961,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 38,
@@ -1486,9 +2004,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -1534,9 +2066,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 40,
@@ -1563,9 +2109,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         }
       ]
     },
@@ -1611,9 +2171,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 42,
@@ -1640,9 +2214,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         }
       ]
     },
@@ -1688,9 +2276,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_index": 44,
@@ -1717,9 +2319,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_slice_of_global_directory",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -1765,9 +2381,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 46,
@@ -1794,9 +2424,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
-          ]
+          ],
+          "quality_status": "A_MINUS"
         }
       ]
     },
@@ -1842,9 +2486,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_index": 48,
@@ -1871,9 +2529,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         }
       ]
     },
@@ -1919,9 +2591,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
-          ]
+          ],
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_index": 50,
@@ -1948,9 +2634,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
-          ]
+          ],
+          "quality_status": "A_MINUS"
         }
       ]
     },
@@ -1996,9 +2696,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_index": 52,
@@ -2025,9 +2739,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         }
       ]
     },
@@ -2073,9 +2801,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
-          ]
+          ],
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_index": 54,
@@ -2102,9 +2844,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
-          ]
+          ],
+          "quality_status": "A_MINUS"
         }
       ]
     },
@@ -2150,9 +2906,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 56,
@@ -2179,9 +2949,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         }
       ]
     },
@@ -2227,9 +3011,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
-          ]
+          ],
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_index": 58,
@@ -2256,9 +3054,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
-          ]
+          ],
+          "quality_status": "A_MINUS"
         }
       ]
     },
@@ -2304,9 +3116,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_index": 60,
@@ -2333,9 +3159,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         }
       ]
     },
@@ -2381,9 +3221,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         },
         {
           "seed_surface_index": 62,
@@ -2410,9 +3264,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "B_PLUS"
             }
-          ]
+          ],
+          "quality_status": "B_PLUS"
         }
       ]
     },
@@ -2458,9 +3326,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
-          ]
+          ],
+          "quality_status": "A_MINUS"
         },
         {
           "seed_surface_index": 64,
@@ -2487,9 +3369,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
-          ]
+          ],
+          "quality_status": "A_MINUS"
         }
       ]
     },
@@ -2535,9 +3431,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 66,
@@ -2564,9 +3474,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         }
       ]
     },
@@ -2612,9 +3536,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 68,
@@ -2641,9 +3579,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -2689,9 +3641,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         },
         {
           "seed_surface_index": 70,
@@ -2718,9 +3684,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     },
@@ -2766,9 +3746,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 72,
@@ -2795,9 +3789,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         }
       ]
     },
@@ -2843,9 +3851,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 74,
@@ -2872,9 +3894,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         }
       ]
     },
@@ -2920,9 +3956,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 76,
@@ -2949,9 +3999,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         }
       ]
     },
@@ -2997,9 +4061,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 78,
@@ -3026,9 +4104,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "ZZ"
+              ],
+              "covered_country_codes": [
+                "ZZ"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "regional_or_industry_context",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         }
       ]
     },
@@ -3074,9 +4166,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 80,
@@ -3103,9 +4209,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         }
       ]
     },
@@ -3151,9 +4271,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "unknown",
+              "url_locale_code": "und",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "unknown",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "manual_review_required",
+              "quality_status": "B_MINUS"
             }
-          ]
+          ],
+          "quality_status": "B_MINUS"
         },
         {
           "seed_surface_index": 82,
@@ -3180,9 +4314,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "en",
+              "url_locale_code": "en",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "english_fallback",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "needs_native_alternative_check",
+              "quality_status": "A_MINUS"
             }
-          ]
+          ],
+          "quality_status": "A_MINUS"
         }
       ]
     },
@@ -3228,9 +4376,23 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "country_primary",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A_PLUS"
             }
-          ]
+          ],
+          "quality_status": "A_PLUS"
         },
         {
           "seed_surface_index": 84,
@@ -3257,11 +4419,26 @@
               "enabled": false,
               "needs_live_check": true,
               "runtime_activation_policy": "pi51c_live_probe_required_before_db_or_frontier_insert",
-              "safety_state": "candidate_only_not_live"
+              "safety_state": "candidate_only_not_live",
+              "target_language_code": "ru",
+              "content_language_code": "ru",
+              "url_locale_code": "ru",
+              "source_country_codes": [
+                "RU"
+              ],
+              "covered_country_codes": [
+                "RU"
+              ],
+              "language_fit": "native",
+              "coverage_fit": "official_company_local_entity",
+              "locale_review_status": "native_locale_verified",
+              "quality_status": "A"
             }
-          ]
+          ],
+          "quality_status": "A"
         }
       ]
     }
-  ]
+  ],
+  "review_state": "needs_live_check"
 }
