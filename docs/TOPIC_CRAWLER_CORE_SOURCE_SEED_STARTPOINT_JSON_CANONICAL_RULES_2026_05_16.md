@@ -877,3 +877,21 @@ No DB/frontier/crawler activation is implied by this standards record.
   - `source_country_codes` includes `HU` for Hungarian/local or Hungary-targeted official-company surfaces.
   - `covered_country_codes` includes `HU`.
 - Activation boundary: no DB insert, no frontier insert, no crawler activation, and no public source URL probe until an explicit future pi51c live-probe gate.
+
+### Romanian (`ro`) source-seed catalog standard record
+
+- Final JSON truth sealed head: `c86a2e72c235c6752df45b1d3a7993394f898c31`
+- Decision doc: `docs/TOPIC_CRAWLER_CORE_ROMANIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`
+- Decision doc SHA256: `3aafa89e5d09040151351d913910a6710314325a9508321da8b2c8231623cc1b`
+- Catalog path: `makpi51crawler/catalog/startpoints/ro/romanian_source_families_v2.json`
+- Catalog SHA256: `aec39f2cde047a65d970aff68c60317ce9b549a373a507fce6b20bdae5e33ca4`
+- Taxonomy path: `makpi51crawler/taxonomy/languages/logisticsearch_taxonomy_romanian_ro.json`
+- Taxonomy SHA256: `3e38cbe8d12579fcb68d84d049f65c7771194293b100c0d6d37345775e4f32bb`
+- Counts: 45 source families, 90 seed surfaces, 90 seed URLs.
+- Required target language: `target_language_code=ro`
+- Required content language model: `content_language_code=ro|en`
+- Required URL locale model: `url_locale_code=ro|en`
+- Required candidate flags: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`
+- Required activation policy: `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+- Required safety state: `safety_state=candidate_only_not_live`
+- Public source URL probe status: not performed in this metadata/doc gate.

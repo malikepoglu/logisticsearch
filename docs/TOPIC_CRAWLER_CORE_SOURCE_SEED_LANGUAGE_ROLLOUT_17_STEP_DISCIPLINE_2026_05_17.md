@@ -878,3 +878,19 @@ Hungarian (`hu`) rollout discipline record:
 - Remaining languages after Hungarian: `ro,ja,ko,id,vi,hi,bn,ur,he`
 - pi51c sync status: not done for Hungarian in this gate.
 - Next language decision gate should select Romanian (`ro`) unless a later read-only gate changes the rollout order.
+
+## After Romanian final JSON truth seal
+
+Romanian (`ro`) rollout discipline record:
+
+- Final JSON truth sealed head: `c86a2e72c235c6752df45b1d3a7993394f898c31`
+- Decision doc: `docs/TOPIC_CRAWLER_CORE_ROMANIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`
+- Catalog path: `makpi51crawler/catalog/startpoints/ro/romanian_source_families_v2.json`
+- Catalog SHA256: `aec39f2cde047a65d970aff68c60317ce9b549a373a507fce6b20bdae5e33ca4`
+- Taxonomy SHA256: `3e38cbe8d12579fcb68d84d049f65c7771194293b100c0d6d37345775e4f32bb`
+- Counts: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique URLs.
+- Candidate-only safety: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `safety_state=candidate_only_not_live`.
+- Rolled languages after Romanian: `en,tr,de,ar,zh,fr,es,it,pt,nl,ru,uk,bg,cs,el,hu,ro`.
+- Remaining languages after Romanian: `ja,ko,id,vi,hi,bn,ur,he`.
+- Next language after Romanian: Japanese (`ja`).
+- pi51c sync after Romanian: not done yet at this docs-standard local-only gate; final completion sync must make Ubuntu Desktop repo = GitHub main = pi51c `/logisticsearch/repo` = pi51c `/logisticsearch/makpi51crawler` runtime subtree.
