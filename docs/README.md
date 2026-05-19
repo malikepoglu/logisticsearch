@@ -637,6 +637,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Bulgarian (`bg`) | [bulgarian_source_families_v2.json](../makpi51crawler/catalog/startpoints/bg/bulgarian_source_families_v2.json) | sealed candidate manifest, not live; minimum seed target repaired | 40 | 50 | 50 |
 | Czech (`cs`) | [`czech_source_families_v2.json`](../makpi51crawler/catalog/startpoints/cs/czech_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Greek (`el`) | [`greek_source_families_v2.json`](../makpi51crawler/catalog/startpoints/el/greek_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
+| Hungarian (`hu`) | [`hungarian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/hu/hungarian_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 
 ### Source-seed policy and decision records
 
@@ -659,6 +660,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md`](TOPIC_CRAWLER_CORE_BULGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_17.md)
 - [`TOPIC_CRAWLER_CORE_CZECH_SOURCE_SEED_URLS_DECISION_2026_05_19.md`](TOPIC_CRAWLER_CORE_CZECH_SOURCE_SEED_URLS_DECISION_2026_05_19.md)
 - [`TOPIC_CRAWLER_CORE_GREEK_SOURCE_SEED_URLS_DECISION_2026_05_19.md`](TOPIC_CRAWLER_CORE_GREEK_SOURCE_SEED_URLS_DECISION_2026_05_19.md)
+- [`TOPIC_CRAWLER_CORE_HUNGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_19.md`](TOPIC_CRAWLER_CORE_HUNGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_19.md)
 
 ### Boundary rule
 

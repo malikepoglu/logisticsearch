@@ -855,3 +855,26 @@ Greek (`el`) source-seed artifacts:
 
 - `docs/TOPIC_CRAWLER_CORE_GREEK_SOURCE_SEED_URLS_DECISION_2026_05_19.md`
 - `makpi51crawler/catalog/startpoints/el/greek_source_families_v2.json`
+
+## After Hungarian final JSON truth seal
+
+Hungarian (`hu`) rollout discipline record:
+
+- Final JSON truth head: `3c8700358f0b71e16ed55fde65b15e35ca20d19c`
+- Commit subject: `feat(source-seed): add Hungarian startpoint catalog`
+- Decision document: `docs/TOPIC_CRAWLER_CORE_HUNGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_19.md`
+- Catalog: `makpi51crawler/catalog/startpoints/hu/hungarian_source_families_v2.json`
+- Decision document SHA256: `5df6d40afaa10d61ace2d3979c3b99b1e9652db7eb262bb95ffa3fee0b2e839c`
+- Catalog SHA256: `2c2bc39e02679950410299288b08966222de494533990749deeb761125f3a2a1`
+- Source families: 45 source families
+- Seed surfaces: 90 seed surfaces
+- Seed URLs: 90 seed URLs
+- Unique seed URLs: 90 unique seed URLs
+- Duplicate seed URLs: 0
+- Empty seed URLs: 0
+- Non-HTTPS seed URLs: 0
+- Safety state: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `safety_state=candidate_only_not_live`
+- Rolled languages on GitHub after Hungarian: `en,tr,de,ar,zh,fr,es,it,pt,nl,ru,uk,bg,cs,el,hu`
+- Remaining languages after Hungarian: `ro,ja,ko,id,vi,hi,bn,ur,he`
+- pi51c sync status: not done for Hungarian in this gate.
+- Next language decision gate should select Romanian (`ro`) unless a later read-only gate changes the rollout order.

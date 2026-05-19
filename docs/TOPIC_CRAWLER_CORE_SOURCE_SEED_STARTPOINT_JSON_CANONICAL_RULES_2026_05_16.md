@@ -847,3 +847,33 @@ Required Greek (`el`) catalog facts:
 
 Greek (`el`) remains candidate-only until a future controlled live-probe gate explicitly promotes selected surfaces.
 No DB/frontier/crawler activation is implied by this standards record.
+
+## Hungarian (`hu`) source-seed catalog standard record
+
+- Decision document: [`TOPIC_CRAWLER_CORE_HUNGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_19.md`](TOPIC_CRAWLER_CORE_HUNGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_19.md)
+- Catalog path: `makpi51crawler/catalog/startpoints/hu/hungarian_source_families_v2.json`
+- Catalog SHA256: `2c2bc39e02679950410299288b08966222de494533990749deeb761125f3a2a1`
+- Decision document SHA256: `5df6d40afaa10d61ace2d3979c3b99b1e9652db7eb262bb95ffa3fee0b2e839c`
+- Final JSON truth head: `3c8700358f0b71e16ed55fde65b15e35ca20d19c`
+- Source families: 45
+- Seed surfaces: 90
+- Seed URLs: 90
+- Unique seed URLs: 90
+- Duplicate seed URLs: 0
+- Empty seed URLs: 0
+- Non-HTTPS seed URLs: 0
+- Required top-level safety state:
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `review_state=needs_live_check`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+- Hungarian metadata standard:
+  - `target_language_code=hu`
+  - `content_language_code=hu` for native/local Hungarian surfaces; `content_language_code=en` only for English fallback surfaces.
+  - `url_locale_code=hu` for Hungarian/local surfaces; `url_locale_code=en` only for English fallback surfaces.
+  - `source_country_codes` includes `HU` for Hungarian/local or Hungary-targeted official-company surfaces.
+  - `covered_country_codes` includes `HU`.
+- Activation boundary: no DB insert, no frontier insert, no crawler activation, and no public source URL probe until an explicit future pi51c live-probe gate.
