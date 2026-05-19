@@ -738,3 +738,30 @@ Dutch metadata model rows follow the general source-seed standard, with these Du
 Dutch metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
 
 <!-- SOURCE_SEED_DUTCH_METADATA_MODEL_RULE_END -->
+
+<!-- SOURCE_SEED_RUSSIAN_METADATA_MODEL_RULE_BEGIN -->
+
+## Russian metadata model rule
+
+Russian metadata model rows follow the general source-seed standard, with these Russian-specific interpretation rules:
+
+- Top-level `language_code=ru` means the rollout target is Russian.
+- Seed-level `target_language_code=ru` is required for every Russian catalog URL.
+- Seed-level `content_language_code=ru` is accepted only when URL/path/host/source semantics provide a Russian signal.
+- Seed-level `content_language_code=en` records English fallback surfaces that may still be useful for Russian logistics discovery.
+- Seed-level `content_language_code=unknown` must stay under human/manual review and must not be treated as native Russian content.
+- `url_locale_code=ru` records visible Russian locale or Russian-content URL signal.
+- `url_locale_code=en` records visible English locale or English-content URL signal.
+- `url_locale_code=und` records an undetermined URL locale.
+- `source_country_codes` records source or organization origin when inferable; for Russian rollout this may include `RU`, `ZZ`, `CO`, and `GB`.
+- `covered_country_codes` records covered country or region when inferable; for this Russian seal it is `RU` or `ZZ`.
+- `country_primary` is used for Russian-country primary/local directory surfaces.
+- `country_slice_of_global_directory` is used for Russian-country slices inside global directories.
+- `official_company_local_entity` is used for company/local-entity pages where Russian source-country coverage is explicit enough.
+- `regional_or_industry_context` is used for global, regional, or industry context where Russian coverage is not a clean country slice.
+- `needs_native_alternative_check` marks English fallback rows where a Russian-native alternative should later be considered.
+- `manual_review_required` marks unknown/undetermined rows that still need human review before any live activation.
+
+Russian metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
+
+<!-- SOURCE_SEED_RUSSIAN_METADATA_MODEL_RULE_END -->

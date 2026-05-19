@@ -1216,3 +1216,41 @@ Dutch source-seed catalog final JSON truth is sealed for the current metadata mo
 Dutch remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
 
 <!-- SOURCE_SEED_NL_FINAL_JSON_TRUTH_STATUS_END -->
+
+<!-- SOURCE_SEED_RU_FINAL_JSON_TRUTH_STATUS_BEGIN -->
+
+## Russian final JSON truth
+
+`RUSSIAN_FINAL_JSON_TRUTH_SEALED_HEAD`: `9fc0a004520045e62a03d427b945134f18552372`
+
+Russian source-seed catalog final JSON truth is sealed for the current metadata model.
+
+- Catalog: `makpi51crawler/catalog/startpoints/ru/russian_source_families_v2.json`
+- SHA256: `18a36e0051b46b0200a001d42cbe17bb22468e4257ce729465c8d065dced128c`
+- Metrics: 40 source families, 84 seed surfaces, 84 seed URLs, 84 unique HTTPS URLs
+- Candidate/runtime safety:
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+- Seed metadata completeness:
+  - `target_language_code`: ru=84
+  - `content_language_code: ru=38, en=25, unknown=21`
+  - `url_locale_code`: ru=38, en=25, und=21
+  - `source_country_codes`: RU=30, ZZ=48, CO=4, GB=2
+  - `covered_country_codes: RU=59, ZZ=25`
+  - `language_fit`: native=38, english_fallback=25, unknown=21
+  - `locale_review_status`: native_locale_verified: 38, needs_native_alternative_check: 25, manual_review_required: 21
+  - `coverage_fit`: country_primary=4, country_slice_of_global_directory=29, official_company_local_entity=26, regional_or_industry_context=25
+- Quality split:
+  - A_PLUS=1
+  - A=37
+  - A_MINUS=10
+  - B_PLUS=15
+  - B_MINUS=21
+
+Russian remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
+
+<!-- SOURCE_SEED_RU_FINAL_JSON_TRUTH_STATUS_END -->
