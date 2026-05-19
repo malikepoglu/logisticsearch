@@ -1254,3 +1254,41 @@ Russian source-seed catalog final JSON truth is sealed for the current metadata 
 Russian remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
 
 <!-- SOURCE_SEED_RU_FINAL_JSON_TRUTH_STATUS_END -->
+
+<!-- SOURCE_SEED_UK_FINAL_JSON_TRUTH_STATUS_BEGIN -->
+
+## Ukrainian final JSON truth
+
+`UKRAINIAN_FINAL_JSON_TRUTH_SEALED_HEAD`: `274260de62e11f04db35f34852f196be3b5f09f5`
+
+Ukrainian source-seed catalog final JSON truth is sealed for the current metadata model.
+
+- Catalog: `makpi51crawler/catalog/startpoints/uk/ukrainian_source_families_v2.json`
+- SHA256: `5588b73db4f418c16157559b3447325ae39ebb5a7f0aa119a8cb139c4179ecf0`
+- Metrics: 40 source families, 56 seed surfaces, 56 seed URLs, 56 unique HTTPS URLs
+- Candidate/runtime safety:
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+  - `review_state=needs_live_check`
+- Seed metadata completeness:
+  - `target_language_code`: uk=56
+  - `content_language_code: uk=23, en=30, unknown=3`
+  - `url_locale_code`: uk=23, en=30, und=3
+  - `source_country_codes`: UA=26, ZZ=27, CO=3
+  - `covered_country_codes: UA=45, ZZ=11`
+  - `language_fit`: native=23, english_fallback=30, unknown=3
+  - `locale_review_status`: native_locale_verified: 23, needs_native_alternative_check: 30, manual_review_required: 3
+  - `coverage_fit`: country_primary=15, country_slice_of_global_directory=20, official_company_local_entity=10, regional_or_industry_context=11
+- Quality split:
+  - A=23
+  - A_MINUS=23
+  - B_PLUS=7
+  - B_MINUS=3
+
+Ukrainian remains candidate-only. This seal does not allow DB insert, frontier activation, crawler start, systemd mutation, pi51c sync, or live copy.
+
+<!-- SOURCE_SEED_UK_FINAL_JSON_TRUTH_STATUS_END -->

@@ -765,3 +765,30 @@ Russian metadata model rows follow the general source-seed standard, with these 
 Russian metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
 
 <!-- SOURCE_SEED_RUSSIAN_METADATA_MODEL_RULE_END -->
+
+<!-- SOURCE_SEED_UKRAINIAN_METADATA_MODEL_RULE_BEGIN -->
+
+## Ukrainian metadata model
+
+Ukrainian metadata model rows follow the general source-seed standard, with these Ukrainian-specific interpretation rules:
+
+- Top-level `language_code=uk` means the rollout target is Ukrainian.
+- Seed-level `target_language_code=uk` is required for every Ukrainian catalog URL.
+- Seed-level `content_language_code=uk` is accepted only when URL/path/host/source semantics provide a Ukrainian signal.
+- Seed-level `content_language_code=en` records English fallback surfaces that may still be useful for Ukrainian logistics discovery.
+- Seed-level `content_language_code=unknown` must stay under human/manual review and must not be treated as native Ukrainian content.
+- `url_locale_code=uk` records visible Ukrainian locale, `/uk`, `/ua`, or Ukrainian-content URL signal.
+- `url_locale_code=en` records visible English locale or English-content URL signal.
+- `url_locale_code=und` records an undetermined URL locale.
+- `source_country_codes` records source or organization origin when inferable; for this Ukrainian seal it may include `UA`, `ZZ`, and `CO`.
+- `covered_country_codes` records covered country or region when inferable; for this Ukrainian seal it is `UA` or `ZZ`.
+- `country_primary` is used for Ukrainian-country primary/local directory surfaces.
+- `country_slice_of_global_directory` is used for Ukrainian-country slices inside global directories.
+- `official_company_local_entity` is used for company/local-entity pages where Ukrainian source-country coverage is explicit enough.
+- `regional_or_industry_context` is used for global, regional, or industry context where Ukrainian coverage is not a clean country slice.
+- `needs_native_alternative_check` marks English fallback rows where a Ukrainian-native alternative should later be considered.
+- `manual_review_required` marks unknown/undetermined rows that still need human review before any live activation.
+
+Ukrainian metadata inference is not a public reachability result. Do not mark rows `broken_or_blocked` without a separate read-only public reachability probe gate.
+
+<!-- SOURCE_SEED_UKRAINIAN_METADATA_MODEL_RULE_END -->

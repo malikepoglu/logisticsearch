@@ -758,3 +758,23 @@ No next-language mutation should begin until the after-Russian docs/rules/standa
 This preserves the rule: 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
 
 <!-- SOURCE_SEED_AFTER_RU_DOCS_CHECKPOINT_END -->
+
+<!-- SOURCE_SEED_AFTER_UK_DOCS_CHECKPOINT_BEGIN -->
+
+## After Ukrainian final JSON truth seal
+
+After Ukrainian final JSON truth seal, the mandatory documentation checkpoint is:
+
+`SOURCE_SEED_DOCS_STANDARDS_FORMAT_GAP_AUDIT_READONLY_AFTER_UK`
+
+If that audit reports documentation gaps, run:
+
+`SOURCE_SEED_DOCS_STANDARDS_FORMAT_LOCAL_ONLY_AFTER_UK`
+
+Then run a read-only audit, commit/push gate, and exact-head post-push seal before running the all-rolled metadata gap audit.
+
+No all-rolled metadata audit or next-language mutation should begin until the after-Ukrainian docs/rules/standards/format checkpoint is sealed.
+
+This preserves the rule: 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
+
+<!-- SOURCE_SEED_AFTER_UK_DOCS_CHECKPOINT_END -->
