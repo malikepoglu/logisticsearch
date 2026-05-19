@@ -819,3 +819,31 @@ Required Czech (`cs`) catalog facts:
 - 0 non-HTTPS seed URLs
 
 Czech (`cs`) remains candidate-only until a future controlled live-probe gate explicitly promotes selected surfaces. No DB/frontier/crawler activation is implied by this standards record.
+
+## Greek (`el`) source-seed catalog standard record — 2026-05-19
+
+The Greek source-seed catalog is tracked at:
+
+- `makpi51crawler/catalog/startpoints/el/greek_source_families_v2.json`
+
+Required Greek (`el`) catalog facts:
+
+- `schema=source_families_v2`
+- `schema_version=2.0`
+- `language_code=el`
+- `candidate_manifest=true`
+- `is_live=false`
+- `enabled=false`
+- `needs_live_check=true`
+- `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+- `safety_state=candidate_only_not_live`
+- 45 source families
+- 90 seed surfaces
+- 90 seed URLs
+- 0 duplicate seed URLs
+- 0 non-HTTPS seed URLs
+- quality distribution: `A=8`, `A_MINUS=15`, `A_PLUS=5`, `B=3`, `B_PLUS=14`
+- decision distribution: `ACCEPT=9`, `ACCEPT_REVIEW=35`, `HOLD_REVIEW=1`
+
+Greek (`el`) remains candidate-only until a future controlled live-probe gate explicitly promotes selected surfaces.
+No DB/frontier/crawler activation is implied by this standards record.

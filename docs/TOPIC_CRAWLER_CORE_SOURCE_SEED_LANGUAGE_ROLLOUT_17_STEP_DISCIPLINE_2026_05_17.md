@@ -810,3 +810,48 @@ Czech (`cs`) approved candidate size:
 - 90 seed URLs
 
 The Czech (`cs`) catalog remains candidate-only: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `safety_state=candidate_only_not_live`.
+
+## After Greek final JSON truth seal
+
+After Greek final JSON truth seal, the mandatory documentation checkpoint is: `SOURCE_SEED_DOCS_STANDARDS_FORMAT_GAP_AUDIT_READONLY_AFTER_EL`
+
+If that audit reports documentation gaps, run: `SOURCE_SEED_DOCS_STANDARDS_FORMAT_LOCAL_ONLY_AFTER_EL`
+
+Then run a read-only audit, commit/push gate, and exact-head post-push seal before continuing to the next rolled-language repair.
+
+No next-language mutation should begin until the after-Greek docs/rules/standards/format checkpoint is sealed. This preserves the rule: 25 dil tamamlanmadan pi51c repo/live sync yapılmaz.
+
+## Greek (`el`) rollout discipline record — 2026-05-19
+
+Greek (`el`) follows the 17-step language rollout discipline.
+
+- EL-01 — baseline and remaining-language discovery read-only
+- EL-02 — source/seed candidate review list
+- EL-03 — decision document and candidate catalog local-only
+- EL-04 — local-only audit read-only
+- EL-05 — diff and dirty-scope audit read-only
+- EL-06 — commit/push gate
+- EL-07 — post-push seal read-only
+- EL-08 — docs standards format patch local-only
+- EL-09 — docs standards format audit read-only
+- EL-10 — docs standards commit/push gate
+- EL-11 — docs standards post-push seal read-only
+- EL-12 — rolled metadata gap audit read-only after Greek
+- EL-13 — pi51c sync preflight read-only
+- EL-14 — pi51c repo sync gate
+- EL-15 — pi51c live sync gate
+- EL-16 — 4-layer equality seal read-only
+- EL-17 — next language decision read-only
+
+Greek (`el`) approved candidate size:
+
+- 45 source families
+- 90 seed surfaces
+- 90 seed URLs
+
+The Greek (`el`) catalog remains candidate-only: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `safety_state=candidate_only_not_live`.
+
+Greek (`el`) source-seed artifacts:
+
+- `docs/TOPIC_CRAWLER_CORE_GREEK_SOURCE_SEED_URLS_DECISION_2026_05_19.md`
+- `makpi51crawler/catalog/startpoints/el/greek_source_families_v2.json`
