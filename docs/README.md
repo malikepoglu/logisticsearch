@@ -642,6 +642,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Japanese (`ja`) | [`japanese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ja/japanese_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Korean (`ko`) | [`korean_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ko/korean_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Indonesian (`id`) | [`indonesian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/id/indonesian_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
+| Vietnamese (`vi`) | [`vietnamese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/vi/vietnamese_source_families_v2.json) | [decision doc](TOPIC_CRAWLER_CORE_VIETNAMESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md) | 45 | 90 | 90 | `candidate_only_not_live` | `needs_live_check` |
 
 ### Source-seed policy and decision records
 
@@ -670,6 +671,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_JAPANESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_JAPANESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 - Korean (`ko`) decision doc: [`TOPIC_CRAWLER_CORE_KOREAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_KOREAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md); catalog: `makpi51crawler/catalog/startpoints/ko/korean_source_families_v2.json`; source families 45; seed surfaces 90; seed URLs 90; candidate-only/not-live.
 - Indonesian (`id`) decision doc: [`TOPIC_CRAWLER_CORE_INDONESIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_INDONESIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md) — final JSON truth head `0e248abcce0a019c8ee23363787bc3e41a618c6e`; catalog SHA `adc44a4be281c5c8021295a024b083acae4852c6c235aee5ce50ccfaa610d80b`; taxonomy SHA `658ab2385399b1109d244b62fd5599161763028d813cb44a70a76b4466ee0d88`; status: sealed candidate manifest, not live.
+- Vietnamese (`vi`) decision doc: [`TOPIC_CRAWLER_CORE_VIETNAMESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_VIETNAMESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md) — final JSON truth head `999d8ea78d7113945f30c289b8fd79ceab8ee4a3`; catalog `makpi51crawler/catalog/startpoints/vi/vietnamese_source_families_v2.json` SHA `2df88ebf0947f173f0ea8931d2b0a5fdfdf6d36e75843cad38abc38b16140280`; taxonomy `makpi51crawler/taxonomy/languages/logisticsearch_taxonomy_vietnamese_vi.json` SHA `04de0caa3bcce317def635c3838e6091d92c278d384d036e7bc7fa5f51db2819`; 45 source families / 90 seed surfaces / 90 seed URLs / 90 unique URLs; candidate-only, not live; next language: Hindi (`hi`).
 
 ### Boundary rule
 

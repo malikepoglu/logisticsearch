@@ -971,3 +971,21 @@ No DB/frontier/crawler activation is implied by this standards record.
   - `public_url_probe_status=not_probed`
 - Candidate-only runtime flags must remain: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `review_state=needs_live_check`, `safety_state=candidate_only_not_live`.
 - Runtime activation policy remains `pi51c_live_probe_required_before_db_or_frontier_insert`.
+
+### Vietnamese (`vi`) source-seed catalog standard record
+
+- Final JSON truth head: `999d8ea78d7113945f30c289b8fd79ceab8ee4a3`
+- Decision doc: `docs/TOPIC_CRAWLER_CORE_VIETNAMESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md`
+- Decision doc SHA256: `1657e27715188eb8760413a7e072aee0275b6d820b7356ecd96a93e02387e65a`
+- Catalog path: `makpi51crawler/catalog/startpoints/vi/vietnamese_source_families_v2.json`
+- Catalog SHA256: `2df88ebf0947f173f0ea8931d2b0a5fdfdf6d36e75843cad38abc38b16140280`
+- Taxonomy path: `makpi51crawler/taxonomy/languages/logisticsearch_taxonomy_vietnamese_vi.json`
+- Taxonomy SHA256: `04de0caa3bcce317def635c3838e6091d92c278d384d036e7bc7fa5f51db2819`
+- Counts: 45 source families / 90 seed surfaces / 90 seed URLs / 90 unique URLs.
+- Quality distribution: `{'A': 11, 'A_MINUS': 9, 'A_PLUS': 6, 'B': 7, 'B_PLUS': 12}`
+- Decision distribution: `{'ACCEPT': 15, 'ACCEPT_REVIEW': 29, 'HOLD_REVIEW': 1}`
+- Candidate flags: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `review_state=needs_live_check`, `safety_state=candidate_only_not_live`.
+- Runtime activation policy: `pi51c_live_probe_required_before_db_or_frontier_insert`.
+- Metadata rule: `target_language_code=vi`; `content_language_code=vi|en|unknown`; `url_locale_code=vi|en|und`; `covered_country_codes` must include `VN`; `public_url_probe_status=not_probed`.
+- Source priority: directory sites first, then associations, official/company/port surfaces, networks, and marketplaces.
+- Completion sync policy after docs commit: Ubuntu Desktop = GitHub = pi51c `/logisticsearch/repo` = pi51c `/logisticsearch/makpi51crawler` tracked subtree.

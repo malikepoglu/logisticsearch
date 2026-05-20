@@ -943,3 +943,20 @@ Romanian (`ro`) rollout discipline record:
 - Next language after Indonesian four-layer equality: Vietnamese (`vi`).
 - Indonesian pi51c sync status after ID-08: not done.
 - Final completion policy remains: Ubuntu Desktop = GitHub = pi51c `/logisticsearch/repo` = pi51c `/logisticsearch/makpi51crawler` tracked subtree.
+
+### After Vietnamese final JSON truth seal
+
+- Gate sealed: `VI-08_VIETNAMESE_FINAL_JSON_TRUTH_SEAL_READONLY`
+- Final JSON truth head: `999d8ea78d7113945f30c289b8fd79ceab8ee4a3`
+- Vietnamese catalog: `makpi51crawler/catalog/startpoints/vi/vietnamese_source_families_v2.json`
+- Vietnamese catalog SHA256: `2df88ebf0947f173f0ea8931d2b0a5fdfdf6d36e75843cad38abc38b16140280`
+- Vietnamese taxonomy SHA256: `04de0caa3bcce317def635c3838e6091d92c278d384d036e7bc7fa5f51db2819`
+- Vietnamese decision doc SHA256: `1657e27715188eb8760413a7e072aee0275b6d820b7356ecd96a93e02387e65a`
+- Final counts: 45 source families / 90 seed surfaces / 90 seed URLs / 90 unique URLs.
+- Quality distribution: `{'A': 11, 'A_MINUS': 9, 'A_PLUS': 6, 'B': 7, 'B_PLUS': 12}`
+- Decision distribution: `{'ACCEPT': 15, 'ACCEPT_REVIEW': 29, 'HOLD_REVIEW': 1}`
+- Rolled languages after Vietnamese: 21.
+- Remaining languages after Vietnamese: `hi,bn,ur,he`.
+- Next language: Hindi (`hi`).
+- pi51c sync after Vietnamese is not done until the dedicated repo/live sync gate.
+- Final completion sync policy remains: Ubuntu Desktop = GitHub = pi51c `/logisticsearch/repo` = pi51c `/logisticsearch/makpi51crawler` tracked subtree.
