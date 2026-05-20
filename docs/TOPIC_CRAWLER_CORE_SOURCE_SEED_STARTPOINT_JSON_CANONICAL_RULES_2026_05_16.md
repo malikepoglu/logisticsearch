@@ -989,3 +989,23 @@ No DB/frontier/crawler activation is implied by this standards record.
 - Metadata rule: `target_language_code=vi`; `content_language_code=vi|en|unknown`; `url_locale_code=vi|en|und`; `covered_country_codes` must include `VN`; `public_url_probe_status=not_probed`.
 - Source priority: directory sites first, then associations, official/company/port surfaces, networks, and marketplaces.
 - Completion sync policy after docs commit: Ubuntu Desktop = GitHub = pi51c `/logisticsearch/repo` = pi51c `/logisticsearch/makpi51crawler` tracked subtree.
+
+## Hindi (`hi`) source-seed final JSON truth — 2026-05-20
+
+- Gate: `HI-08_HINDI_FINAL_JSON_TRUTH_SEAL_READONLY`
+- Canonical GitHub HEAD: `7a70e6d8e668e4c5ff0b3222610f6d64ec5a405b`
+- Decision doc: `docs/TOPIC_CRAWLER_CORE_HINDI_SOURCE_SEED_URLS_DECISION_2026_05_20.md`
+- Decision doc SHA256: `2f2fe3093a73c8826d8f7e594cf2d6c516748c84a493671f5b614c6e32d0fe64`
+- Catalog: `makpi51crawler/catalog/startpoints/hi/hindi_source_families_v2.json`
+- Catalog SHA256: `73b7e54da70743e84e71c94bc0155b4fa8303ad1199142f55a63a27c00c652ff`
+- Taxonomy: `makpi51crawler/taxonomy/languages/logisticsearch_taxonomy_hindi_hi.json`
+- Taxonomy SHA256: `0f4de3dc0f11a61b14df9cffad16fe89345f8c50b444cbc4262f60e73f96227f`
+- Counts: 45 source families / 90 seed surfaces / 90 seed URLs / 90 unique URLs.
+- Duplicate/empty/non-HTTPS seed URLs: 0 / 0 / 0.
+- Candidate-only state: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `safety_state=candidate_only_not_live`.
+- Runtime activation policy: `pi51c_live_probe_required_before_db_or_frontier_insert`.
+- Metadata rule: `target_language_code=hi`; `content_language_code in {hi,en,unknown}`; `url_locale_code in {hi,en,und}`; `covered_country_codes` includes `IN`.
+- Quality distribution: A 15 / A_MINUS 9 / A_PLUS 7 / B 4 / B_PLUS 10.
+- Decision distribution: ACCEPT 12 / ACCEPT_REVIEW 33.
+- Remaining source-seed rollout after Hindi: `bn,ur,he`.
+- pi51c sync after Hindi: not done at this checkpoint.

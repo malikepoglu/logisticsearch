@@ -960,3 +960,18 @@ Romanian (`ro`) rollout discipline record:
 - Next language: Hindi (`hi`).
 - pi51c sync after Vietnamese is not done until the dedicated repo/live sync gate.
 - Final completion sync policy remains: Ubuntu Desktop = GitHub = pi51c `/logisticsearch/repo` = pi51c `/logisticsearch/makpi51crawler` tracked subtree.
+
+## After Hindi (`hi`) docs checkpoint — HI-08 sealed
+
+- Hindi final JSON truth gate: `HI-08_HINDI_FINAL_JSON_TRUTH_SEAL_READONLY`.
+- Canonical GitHub HEAD after Hindi catalog commit: `7a70e6d8e668e4c5ff0b3222610f6d64ec5a405b`.
+- Hindi decision doc SHA256: `2f2fe3093a73c8826d8f7e594cf2d6c516748c84a493671f5b614c6e32d0fe64`.
+- Hindi catalog SHA256: `73b7e54da70743e84e71c94bc0155b4fa8303ad1199142f55a63a27c00c652ff`.
+- Hindi taxonomy SHA256: `0f4de3dc0f11a61b14df9cffad16fe89345f8c50b444cbc4262f60e73f96227f`.
+- Hindi source-seed counts: 45 source families / 90 seed surfaces / 90 seed URLs / 90 unique URLs.
+- Safety state remains candidate-only/not-live: no DB insert, no frontier activation, no crawler start, no public URL probe.
+- Rolled languages on GitHub after Hindi: 22.
+- Remaining languages after Hindi: `bn,ur,he`.
+- Next language: Bengali (`bn`).
+- pi51c repo/live sync after Hindi is intentionally not done until docs standard patch is committed, pushed, and sealed.
+- Final completion policy remains: Ubuntu Desktop equals GitHub equals pi51c `/logisticsearch/repo` equals pi51c `/logisticsearch/makpi51crawler`.

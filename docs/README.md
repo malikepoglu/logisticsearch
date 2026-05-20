@@ -643,6 +643,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Korean (`ko`) | [`korean_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ko/korean_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Indonesian (`id`) | [`indonesian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/id/indonesian_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Vietnamese (`vi`) | [`vietnamese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/vi/vietnamese_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
+| Hindi (`hi`) | [`hindi_source_families_v2.json`](../makpi51crawler/catalog/startpoints/hi/hindi_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 
 ### Source-seed policy and decision records
 
@@ -672,6 +673,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_KOREAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_KOREAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 - [`TOPIC_CRAWLER_CORE_INDONESIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_INDONESIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 - [`TOPIC_CRAWLER_CORE_VIETNAMESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_VIETNAMESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
+- [`TOPIC_CRAWLER_CORE_HINDI_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_HINDI_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 
 ### Boundary rule
 
