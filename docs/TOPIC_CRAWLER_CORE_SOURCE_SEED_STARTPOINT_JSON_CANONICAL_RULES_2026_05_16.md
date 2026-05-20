@@ -949,3 +949,25 @@ No DB/frontier/crawler activation is implied by this standards record.
   - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
 - Public source URL probe status: not probed during catalog creation/final JSON truth gates.
 - Completion rule: Korean is not fully complete until Ubuntu Desktop, GitHub, pi51c `/logisticsearch/repo`, and pi51c `/logisticsearch/makpi51crawler` tracked subtree equality all pass.
+
+### Indonesian (`id`) source-seed catalog standard record
+
+- Final JSON truth sealed head: `0e248abcce0a019c8ee23363787bc3e41a618c6e`
+- Decision doc: `docs/TOPIC_CRAWLER_CORE_INDONESIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`
+- Decision doc SHA256: `6e87a0d6d3cb135108042c7ca14e792e261dc2e22c1fe79ad92880c2ee39af45`
+- Catalog path: `makpi51crawler/catalog/startpoints/id/indonesian_source_families_v2.json`
+- Catalog SHA256: `adc44a4be281c5c8021295a024b083acae4852c6c235aee5ce50ccfaa610d80b`
+- Taxonomy path: `makpi51crawler/taxonomy/languages/logisticsearch_taxonomy_indonesian_id.json`
+- Taxonomy SHA256: `658ab2385399b1109d244b62fd5599161763028d813cb44a70a76b4466ee0d88`
+- Counts: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique seed URLs.
+- Required metadata model:
+  - `target_language_code=id`
+  - `content_language_code=id|en|unknown`
+  - `url_locale_code=id|en|und`
+  - `covered_country_codes` must include `ID`
+  - `source_country_codes` may be `ID` or `ZZ`
+  - `language_fit` must be one of `native`, `english_fallback`, `unknown`
+  - `coverage_fit` must be one of `country_primary`, `country_slice_of_global_directory`, `official_company_local_entity`, `regional_or_industry_context`
+  - `public_url_probe_status=not_probed`
+- Candidate-only runtime flags must remain: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `review_state=needs_live_check`, `safety_state=candidate_only_not_live`.
+- Runtime activation policy remains `pi51c_live_probe_required_before_db_or_frontier_insert`.

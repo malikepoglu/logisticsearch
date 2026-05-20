@@ -641,6 +641,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Romanian (`ro`) | [`romanian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ro/romanian_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Japanese (`ja`) | [`japanese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ja/japanese_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Korean (`ko`) | [`korean_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ko/korean_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
+| Indonesian (`id`) | [`indonesian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/id/indonesian_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 
 ### Source-seed policy and decision records
 
@@ -668,6 +669,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_ROMANIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_ROMANIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 - [`TOPIC_CRAWLER_CORE_JAPANESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_JAPANESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 - Korean (`ko`) decision doc: [`TOPIC_CRAWLER_CORE_KOREAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_KOREAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md); catalog: `makpi51crawler/catalog/startpoints/ko/korean_source_families_v2.json`; source families 45; seed surfaces 90; seed URLs 90; candidate-only/not-live.
+- Indonesian (`id`) decision doc: [`TOPIC_CRAWLER_CORE_INDONESIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_INDONESIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md) — final JSON truth head `0e248abcce0a019c8ee23363787bc3e41a618c6e`; catalog SHA `adc44a4be281c5c8021295a024b083acae4852c6c235aee5ce50ccfaa610d80b`; taxonomy SHA `658ab2385399b1109d244b62fd5599161763028d813cb44a70a76b4466ee0d88`; status: sealed candidate manifest, not live.
 
 ### Boundary rule
 

@@ -929,3 +929,17 @@ Romanian (`ro`) rollout discipline record:
 - Next language after Korean: Indonesian (`id`).
 - Korean pi51c sync status after KO-08: not done.
 - Final completion policy remains: Ubuntu Desktop = GitHub = pi51c `/logisticsearch/repo` = pi51c `/logisticsearch/makpi51crawler` tracked subtree.
+
+### After Indonesian final JSON truth seal
+
+- Indonesian (`id`) final JSON truth sealed at head `0e248abcce0a019c8ee23363787bc3e41a618c6e`.
+- Indonesian decision doc SHA256: `6e87a0d6d3cb135108042c7ca14e792e261dc2e22c1fe79ad92880c2ee39af45`.
+- Indonesian catalog SHA256: `adc44a4be281c5c8021295a024b083acae4852c6c235aee5ce50ccfaa610d80b`.
+- Indonesian taxonomy SHA256: `658ab2385399b1109d244b62fd5599161763028d813cb44a70a76b4466ee0d88`.
+- Indonesian counts: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique seed URLs.
+- Indonesian quality distribution: `A=21`, `A_MINUS=4`, `A_PLUS=6`, `B=3`, `B_MINUS=2`, `B_PLUS=9`.
+- Indonesian decision distribution: `ACCEPT=10`, `ACCEPT_REVIEW=33`, `HOLD_REVIEW=2`.
+- Remaining rollout order after Indonesian: `vi,hi,bn,ur,he`.
+- Next language after Indonesian four-layer equality: Vietnamese (`vi`).
+- Indonesian pi51c sync status after ID-08: not done.
+- Final completion policy remains: Ubuntu Desktop = GitHub = pi51c `/logisticsearch/repo` = pi51c `/logisticsearch/makpi51crawler` tracked subtree.
