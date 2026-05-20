@@ -975,3 +975,17 @@ Romanian (`ro`) rollout discipline record:
 - Next language: Bengali (`bn`).
 - pi51c repo/live sync after Hindi is intentionally not done until docs standard patch is committed, pushed, and sealed.
 - Final completion policy remains: Ubuntu Desktop equals GitHub equals pi51c `/logisticsearch/repo` equals pi51c `/logisticsearch/makpi51crawler`.
+
+### After Bengali (`bn`) docs checkpoint
+
+- Base source-seed commit: `386003f96ae1eca4bf000d1105507dc1943cf840` (`feat(source-seed): add Bengali startpoint catalog`).
+- Bengali final JSON truth sealed: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique URLs.
+- Bengali doc SHA: `f6b6126b0e72d99b692d9f5c44ccc6adeccf2448614ac2ae7a1439e5a213260f`.
+- Bengali catalog SHA: `0f50d0193656e612564fcb9d501998cea72470fad49a2dd53ddfc73635d1ed94`.
+- Bengali taxonomy SHA: `4167f8d5daff48d646939bbbddea1e6735b3f38bfd7c12e8d525ea9e5a15bdd5`.
+- Docs standard patch required after BN-08: true; this local-only patch records it.
+- Remaining languages after Bengali: `ur,he`.
+- Next language: Urdu (`ur`).
+- pi51c sync after Bengali: false until docs standard post-push seal and explicit sync gate.
+- Safety: candidate-only/not-live; no DB/frontier/crawler/systemd/public URL probe.
+- Final completion sync policy remains Ubuntu Desktop = GitHub = pi51c repo = pi51c makpi51crawler.

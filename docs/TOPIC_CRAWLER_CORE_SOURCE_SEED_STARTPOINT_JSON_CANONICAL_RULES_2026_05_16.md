@@ -1009,3 +1009,23 @@ No DB/frontier/crawler activation is implied by this standards record.
 - Decision distribution: ACCEPT 12 / ACCEPT_REVIEW 33.
 - Remaining source-seed rollout after Hindi: `bn,ur,he`.
 - pi51c sync after Hindi: not done at this checkpoint.
+
+### Bengali (`bn`) source-seed final JSON truth
+
+- Head: `386003f96ae1eca4bf000d1105507dc1943cf840`.
+- Decision doc: `docs/TOPIC_CRAWLER_CORE_BENGALI_SOURCE_SEED_URLS_DECISION_2026_05_20.md`.
+- Catalog: `makpi51crawler/catalog/startpoints/bn/bengali_source_families_v2.json`.
+- Taxonomy: `makpi51crawler/taxonomy/languages/logisticsearch_taxonomy_bengali_bn.json`.
+- Decision doc SHA: `f6b6126b0e72d99b692d9f5c44ccc6adeccf2448614ac2ae7a1439e5a213260f`.
+- Catalog SHA: `0f50d0193656e612564fcb9d501998cea72470fad49a2dd53ddfc73635d1ed94`.
+- Taxonomy SHA: `4167f8d5daff48d646939bbbddea1e6735b3f38bfd7c12e8d525ea9e5a15bdd5`.
+- Counts: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique HTTPS URLs.
+- Quality distribution: A=11, A_MINUS=15, A_PLUS=6, B=1, B_PLUS=12.
+- Decision distribution: ACCEPT=13, ACCEPT_REVIEW=31, HOLD_REVIEW=1.
+- Metadata rule: `target_language_code=bn`.
+- Metadata rule: `content_language_code in {bn,en,unknown}`.
+- Metadata rule: `url_locale_code in {bn,en,und}`.
+- Coverage rule: `covered_country_codes` includes `BD`; West Bengal/Kolkata fallback can include `IN`.
+- Candidate policy: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`.
+- Runtime activation policy: `pi51c_live_probe_required_before_db_or_frontier_insert`.
+- Public URL probe: not run; no DB/frontier/crawler/systemd mutation.
