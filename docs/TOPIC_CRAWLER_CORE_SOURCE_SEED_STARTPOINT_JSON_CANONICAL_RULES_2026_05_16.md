@@ -924,3 +924,28 @@ No DB/frontier/crawler activation is implied by this standards record.
   - `safety_state=candidate_only_not_live`
 - Runtime boundary: no DB insert, no frontier insert, no crawler activation, no systemd mutation, no public source URL probe before pi51c live review.
 
+### Korean (`ko`) source-seed catalog standard record
+
+- Final JSON truth head: `61b879102c2acb189866f7aec06c3a1e7f3bd5e2`
+- Parent head before Korean catalog commit: `0cd76ff36a42e9d4d6d66fb1782f768d89d4a5b6`
+- Decision doc: `docs/TOPIC_CRAWLER_CORE_KOREAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`
+- Decision doc SHA256: `5d915489ae9e3b98edd3c7bb49ec4ad9dc9345640330ab35b3acbbb24ded8dfa`
+- Catalog: `makpi51crawler/catalog/startpoints/ko/korean_source_families_v2.json`
+- Catalog SHA256: `fb4d9aa0a2e87b5b0fa7364bfc5408093f165abdfe6a5a49ce974341f353bca7`
+- Taxonomy JSON: `makpi51crawler/taxonomy/languages/logisticsearch_taxonomy_korean_ko.json`
+- Taxonomy SHA256: `ec3175fcef4ec450a8c812c20ae7e5b8fa503bbfa14eea0055a5d8ec18aeaca3`
+- Metrics: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique seed URLs.
+- Required metadata model:
+  - `target_language_code=ko`
+  - `content_language_code=ko|en|unknown`
+  - `url_locale_code=ko|en|und`
+  - `covered_country_codes` must include `KR`
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `review_state=needs_live_check`
+  - `safety_state=candidate_only_not_live`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+- Public source URL probe status: not probed during catalog creation/final JSON truth gates.
+- Completion rule: Korean is not fully complete until Ubuntu Desktop, GitHub, pi51c `/logisticsearch/repo`, and pi51c `/logisticsearch/makpi51crawler` tracked subtree equality all pass.

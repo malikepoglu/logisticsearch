@@ -913,3 +913,19 @@ Romanian (`ro`) rollout discipline record:
 - pi51c sync after Japanese: not done at this checkpoint
 - Final completion sync policy remains: Ubuntu Desktop repo = GitHub main = pi51c `/logisticsearch/repo` = pi51c `/logisticsearch/makpi51crawler` runtime subtree.
 
+### After Korean final JSON truth seal
+
+- Gate: `KO-08_KOREAN_FINAL_JSON_TRUTH_SEAL_READONLY`
+- Result: PASS.
+- Head: `61b879102c2acb189866f7aec06c3a1e7f3bd5e2`
+- Korean decision doc SHA256: `5d915489ae9e3b98edd3c7bb49ec4ad9dc9345640330ab35b3acbbb24ded8dfa`
+- Korean catalog SHA256: `fb4d9aa0a2e87b5b0fa7364bfc5408093f165abdfe6a5a49ce974341f353bca7`
+- Korean taxonomy SHA256: `ec3175fcef4ec450a8c812c20ae7e5b8fa503bbfa14eea0055a5d8ec18aeaca3`
+- Korean catalog truth: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique seed URLs.
+- Candidate-only safety remains active: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`, `safety_state=candidate_only_not_live`.
+- Duplicate family/surface/seed/url count: 0; empty URL count: 0; non-HTTPS URL count: 0; metadata missing/bad count: 0.
+- Rolled languages on GitHub after Korean: 19.
+- Remaining rollout order after Korean: `id,vi,hi,bn,ur,he`.
+- Next language after Korean: Indonesian (`id`).
+- Korean pi51c sync status after KO-08: not done.
+- Final completion policy remains: Ubuntu Desktop = GitHub = pi51c `/logisticsearch/repo` = pi51c `/logisticsearch/makpi51crawler` tracked subtree.
