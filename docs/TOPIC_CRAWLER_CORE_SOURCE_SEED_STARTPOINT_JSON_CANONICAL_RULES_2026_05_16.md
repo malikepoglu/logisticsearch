@@ -895,3 +895,32 @@ No DB/frontier/crawler activation is implied by this standards record.
 - Required activation policy: `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
 - Required safety state: `safety_state=candidate_only_not_live`
 - Public source URL probe status: not performed in this metadata/doc gate.
+
+### Japanese (`ja`) source-seed catalog standard record
+
+- Final JSON truth head: `b056ffaa185889815af09a89b98647dccbcb500a`
+- Parent: `7911ca2028d73c10daec6a2e3fb06efa2b7cff6e`
+- Tree: `f52fdccb546aaa4666e876a966a51c82ddfb90bb`
+- Decision doc: `docs/TOPIC_CRAWLER_CORE_JAPANESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md`
+- Catalog: `makpi51crawler/catalog/startpoints/ja/japanese_source_families_v2.json`
+- Taxonomy: `makpi51crawler/taxonomy/languages/logisticsearch_taxonomy_japanese_ja.json`
+- Decision doc SHA256: `e19590eabef76ab4f0b7ef253139bda8838303b0df8c116d270b44989d97d77d`
+- Catalog SHA256: `ef766100e03d43c3d33d042753154ba0b18c702d718b91b21dd2a96888243cf9`
+- Taxonomy SHA256: `d96868184073187c3283342a799f7c1b159c3e9b6703d6e76baa83bc2b324911`
+- Counts: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique URLs
+- Quality counts: A_PLUS=4, A=6, A_MINUS=8, B_PLUS=21, B=6
+- Decision counts: ACCEPT=7, ACCEPT_REVIEW=38
+- Required metadata model:
+  - `target_language_code=ja`
+  - `content_language_code=ja|en`
+  - `url_locale_code=ja|en`
+  - `covered_country_codes` must include `JP`
+  - `candidate_manifest=true`
+  - `is_live=false`
+  - `enabled=false`
+  - `needs_live_check=true`
+  - `review_state=needs_live_check`
+  - `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+  - `safety_state=candidate_only_not_live`
+- Runtime boundary: no DB insert, no frontier insert, no crawler activation, no systemd mutation, no public source URL probe before pi51c live review.
+

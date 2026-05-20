@@ -639,6 +639,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Greek (`el`) | [`greek_source_families_v2.json`](../makpi51crawler/catalog/startpoints/el/greek_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Hungarian (`hu`) | [`hungarian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/hu/hungarian_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Romanian (`ro`) | [`romanian_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ro/romanian_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
+| Japanese (`ja`) | [`japanese_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ja/japanese_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 
 ### Source-seed policy and decision records
 
@@ -664,6 +665,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_HUNGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_19.md`](TOPIC_CRAWLER_CORE_HUNGARIAN_SOURCE_SEED_URLS_DECISION_2026_05_19.md)
 
 - [`TOPIC_CRAWLER_CORE_ROMANIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_ROMANIAN_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
+- [`TOPIC_CRAWLER_CORE_JAPANESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_JAPANESE_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 
 ### Boundary rule
 
