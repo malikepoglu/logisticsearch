@@ -989,3 +989,15 @@ Romanian (`ro`) rollout discipline record:
 - pi51c sync after Bengali: false until docs standard post-push seal and explicit sync gate.
 - Safety: candidate-only/not-live; no DB/frontier/crawler/systemd/public URL probe.
 - Final completion sync policy remains Ubuntu Desktop = GitHub = pi51c repo = pi51c makpi51crawler.
+### After Urdu (`ur`) docs checkpoint
+- Base source-seed commit: `d1c39607a075cdbf8f00778e39995b4f2f0cf400` (`feat(source-seed): add Urdu startpoint catalog`).
+- Urdu final JSON truth sealed: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique URLs.
+- Urdu doc SHA: `760ff04b696b23cc490733cf643ef25b19147f2041bc20d8f55fdd3da2b93fa0`.
+- Urdu catalog SHA: `5d8b689677adca054d9221e82cedc015cfbd8de773eb4df7a1cea079b550e7f2`.
+- Urdu taxonomy SHA: `b96cec8f9d426d01ba7f74f6f951b4030a5e31795cdf72e14cd368291cf12650`.
+- Docs standard patch required after UR-08: true; this local-only patch records it.
+- Remaining languages after Urdu: `he`.
+- Next language: Hebrew (`he`).
+- pi51c sync after Urdu: false until docs standard post-push seal and explicit sync gate.
+- Safety: candidate-only/not-live; no DB/frontier/crawler/systemd/public URL probe.
+- Final completion sync policy remains Ubuntu Desktop = GitHub = pi51c repo = pi51c makpi51crawler.

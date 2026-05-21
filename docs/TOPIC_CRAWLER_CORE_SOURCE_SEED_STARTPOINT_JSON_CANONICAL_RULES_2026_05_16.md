@@ -1029,3 +1029,21 @@ No DB/frontier/crawler activation is implied by this standards record.
 - Candidate policy: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`.
 - Runtime activation policy: `pi51c_live_probe_required_before_db_or_frontier_insert`.
 - Public URL probe: not run; no DB/frontier/crawler/systemd mutation.
+### Urdu (`ur`) source-seed final JSON truth
+- Head: `d1c39607a075cdbf8f00778e39995b4f2f0cf400`.
+- Decision doc: `docs/TOPIC_CRAWLER_CORE_URDU_SOURCE_SEED_URLS_DECISION_2026_05_21.md`.
+- Catalog: `makpi51crawler/catalog/startpoints/ur/urdu_source_families_v2.json`.
+- Taxonomy: `makpi51crawler/taxonomy/languages/logisticsearch_taxonomy_urdu_ur.json`.
+- Decision doc SHA: `760ff04b696b23cc490733cf643ef25b19147f2041bc20d8f55fdd3da2b93fa0`.
+- Catalog SHA: `5d8b689677adca054d9221e82cedc015cfbd8de773eb4df7a1cea079b550e7f2`.
+- Taxonomy SHA: `b96cec8f9d426d01ba7f74f6f951b4030a5e31795cdf72e14cd368291cf12650`.
+- Counts: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique HTTPS URLs.
+- Quality distribution: A=5, A_MINUS=13, A_PLUS=2, B=7, B_PLUS=18.
+- Decision distribution: ACCEPT=6, ACCEPT_REVIEW=32, HOLD_REVIEW=7.
+- Metadata rule: `target_language_code=ur`.
+- Metadata rule: `content_language_code in {ur,en,unknown}`.
+- Metadata rule: `url_locale_code in {ur,en,und}`.
+- Coverage rule: `covered_country_codes` remains Pakistan/Urdu-market focused where available; broader fallback surfaces remain candidate-only review material.
+- Candidate policy: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`.
+- Runtime activation policy: `pi51c_live_probe_required_before_db_or_frontier_insert`.
+- Public URL probe: not probed; no DB/frontier/crawler/systemd mutation.
