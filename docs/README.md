@@ -646,6 +646,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Hindi (`hi`) | [`hindi_source_families_v2.json`](../makpi51crawler/catalog/startpoints/hi/hindi_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Bengali (`bn`) | [`bengali_source_families_v2.json`](../makpi51crawler/catalog/startpoints/bn/bengali_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Urdu (`ur`) | [`urdu_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ur/urdu_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
+| Hebrew (`he`) | [`hebrew_source_families_v2.json`](../makpi51crawler/catalog/startpoints/he/hebrew_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 
 ### Source-seed policy and decision records
 
@@ -678,6 +679,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_HINDI_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_HINDI_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 - [`TOPIC_CRAWLER_CORE_BENGALI_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_BENGALI_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 - [`TOPIC_CRAWLER_CORE_URDU_SOURCE_SEED_URLS_DECISION_2026_05_21.md`](TOPIC_CRAWLER_CORE_URDU_SOURCE_SEED_URLS_DECISION_2026_05_21.md)
+- [`TOPIC_CRAWLER_CORE_HEBREW_SOURCE_SEED_URLS_DECISION_2026_05_21.md`](TOPIC_CRAWLER_CORE_HEBREW_SOURCE_SEED_URLS_DECISION_2026_05_21.md) — Hebrew (`he`) source-seed URL decision; 45 source families / 90 seed surfaces / 90 seed URLs; candidate-only, not live; final 25/25 language catalog completion.
 
 ### Boundary rule
 

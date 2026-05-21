@@ -1047,3 +1047,19 @@ No DB/frontier/crawler activation is implied by this standards record.
 - Candidate policy: `candidate_manifest=true`, `is_live=false`, `enabled=false`, `needs_live_check=true`.
 - Runtime activation policy: `pi51c_live_probe_required_before_db_or_frontier_insert`.
 - Public URL probe: not probed; no DB/frontier/crawler/systemd mutation.
+
+### Hebrew (`he`) source-seed final JSON truth
+
+- Canonical HEAD: `949de3d8474e007d305371faeeb48f43c4610363`
+- Decision doc: `docs/TOPIC_CRAWLER_CORE_HEBREW_SOURCE_SEED_URLS_DECISION_2026_05_21.md`
+- Decision doc SHA256: `cdb63b18723e94ef67d48f87959d6e96d49151686ea52e73b10ee858c372cada`
+- Catalog: `makpi51crawler/catalog/startpoints/he/hebrew_source_families_v2.json`
+- Catalog SHA256: `f27339a493ad6b62adb29c3cc068a9403d8666c3c72e3042f3e361131d46074f`
+- Taxonomy: `makpi51crawler/taxonomy/languages/logisticsearch_taxonomy_hebrew_he.json`
+- Taxonomy SHA256: `15cfd433e3708c280e284163a06c204e8cf2ab8d041b5f05887a63ed4145b50b`
+- Canonical counts: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique HTTPS seed URLs.
+- Quality distribution: `{"A": 10, "A_MINUS": 12, "A_PLUS": 3, "B": 8, "B_PLUS": 12}`
+- Decision distribution: `{"ACCEPT": 13, "ACCEPT_REVIEW": 24, "HOLD_REVIEW": 8}`
+- Metadata distribution: `target_language_code=he`; `content_language_code={"en": 30, "he": 15}`; `url_locale_code={"en": 30, "he": 15}`; `language_fit={"english_fallback": 30, "native": 15}`; `locale_review_status={"native_locale_verified": 15, "needs_native_alternative_check": 30}`.
+- Safety truth: candidate-only, not live; no DB insert; no frontier activation; no crawler/systemd mutation; no public source URL probe.
+- Completion truth: rolled source-seed language catalogs are now 25/25; remaining languages `NONE`; pi51c sync after Hebrew remains false.

@@ -1001,3 +1001,19 @@ Romanian (`ro`) rollout discipline record:
 - pi51c sync after Urdu: false until docs standard post-push seal and explicit sync gate.
 - Safety: candidate-only/not-live; no DB/frontier/crawler/systemd/public URL probe.
 - Final completion sync policy remains Ubuntu Desktop = GitHub = pi51c repo = pi51c makpi51crawler.
+
+## After Hebrew (`he`) docs checkpoint
+
+- Source-seed language rollout state: Hebrew (`he`) final JSON truth is sealed and all 25 language catalogs are now present.
+- Canonical HEAD before docs patch: `949de3d8474e007d305371faeeb48f43c4610363`.
+- Hebrew decision doc SHA256: `cdb63b18723e94ef67d48f87959d6e96d49151686ea52e73b10ee858c372cada`.
+- Hebrew catalog SHA256: `f27339a493ad6b62adb29c3cc068a9403d8666c3c72e3042f3e361131d46074f`.
+- Hebrew taxonomy SHA256: `15cfd433e3708c280e284163a06c204e8cf2ab8d041b5f05887a63ed4145b50b`.
+- Hebrew counts: 45 source families, 90 seed surfaces, 90 seed URLs, 90 unique HTTPS seed URLs.
+- Hebrew quality distribution: `{"A": 10, "A_MINUS": 12, "A_PLUS": 3, "B": 8, "B_PLUS": 12}`.
+- Hebrew decision distribution: `{"ACCEPT": 13, "ACCEPT_REVIEW": 24, "HOLD_REVIEW": 8}`.
+- Global rollout completion: 25 rolled catalogs / 25 taxonomy languages; remaining languages `NONE`.
+- Docs patch scope after Hebrew: README, canonical rules doc, and 17-step discipline doc only.
+- Runtime safety: pi51c sync after Hebrew remains false; no DB/frontier/crawler/systemd mutation; no public URL probe.
+- Next safe gate: `HE-09_SOURCE_SEED_DOCS_STANDARDS_FORMAT_AUDIT_READONLY_AFTER_HE`.
+- Planned next artifact after Hebrew final sync/seals: prepare `global directories` JSON in the same canonical source-seed standard and format.
