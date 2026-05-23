@@ -647,6 +647,7 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 | Bengali (`bn`) | [`bengali_source_families_v2.json`](../makpi51crawler/catalog/startpoints/bn/bengali_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Urdu (`ur`) | [`urdu_source_families_v2.json`](../makpi51crawler/catalog/startpoints/ur/urdu_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
 | Hebrew (`he`) | [`hebrew_source_families_v2.json`](../makpi51crawler/catalog/startpoints/he/hebrew_source_families_v2.json) | sealed candidate manifest, not live | 45 | 90 | 90 |
+| Global directories (`global`) | [`global_directories_source_families_v2.json`](../makpi51crawler/catalog/startpoints/global/global_directories_source_families_v2.json) | sealed candidate manifest, not live; runtime schema aligned; four-layer synchronized | 696 | 696 | 696 |
 
 ### Source-seed policy and decision records
 
@@ -679,7 +680,21 @@ This index anchors the current crawler_core source/seed catalog work so the 25-l
 - [`TOPIC_CRAWLER_CORE_HINDI_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_HINDI_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 - [`TOPIC_CRAWLER_CORE_BENGALI_SOURCE_SEED_URLS_DECISION_2026_05_20.md`](TOPIC_CRAWLER_CORE_BENGALI_SOURCE_SEED_URLS_DECISION_2026_05_20.md)
 - [`TOPIC_CRAWLER_CORE_URDU_SOURCE_SEED_URLS_DECISION_2026_05_21.md`](TOPIC_CRAWLER_CORE_URDU_SOURCE_SEED_URLS_DECISION_2026_05_21.md)
-- [`TOPIC_CRAWLER_CORE_HEBREW_SOURCE_SEED_URLS_DECISION_2026_05_21.md`](TOPIC_CRAWLER_CORE_HEBREW_SOURCE_SEED_URLS_DECISION_2026_05_21.md) — Hebrew (`he`) source-seed URL decision; 45 source families / 90 seed surfaces / 90 seed URLs; candidate-only, not live; final 25/25 language catalog completion.
+- [`TOPIC_CRAWLER_CORE_HEBREW_SOURCE_SEED_URLS_DECISION_2026_05_21.md`](TOPIC_CRAWLER_CORE_HEBREW_SOURCE_SEED_URLS_DECISION_2026_05_21.md)
+- [`TOPIC_CRAWLER_CORE_GLOBAL_DIRECTORIES_SOURCE_SEED_URLS_DECISION_2026_05_22.md`](TOPIC_CRAWLER_CORE_GLOBAL_DIRECTORIES_SOURCE_SEED_URLS_DECISION_2026_05_22.md)
+- [`TOPIC_CRAWLER_CORE_GLOBAL_DIRECTORIES_RUNTIME_SCHEMA_AND_FOUR_LAYER_SEAL_2026_05_23.md`](TOPIC_CRAWLER_CORE_GLOBAL_DIRECTORIES_RUNTIME_SCHEMA_AND_FOUR_LAYER_SEAL_2026_05_23.md)
+
+<!-- GLOBAL_DIR_R2A72_README_FINAL_SUMMARY_BEGIN -->
+### Global directories source-seed final seal / Küresel dizin source-seed final mührü
+
+EN: The global directories catalog is the 26th startpoint catalog layer, separate from the 25 language catalogs. The raw review set was 1,072 references. Deterministic deduplication, normalized-host canonicalization, and source-family merge rules reduced this to 696 canonical source families, 696 seed surfaces, and 696 seed URLs. The first canonical JSON identity was `2b158159e0746e014a8176f31c8fb910d868fee219e542ec764a1bc1c24b55c1`; after runtime schema alignment and four-layer synchronization, the current sealed JSON identity is `d58b7e2cbdbeee71e170c2636c199421c60951b5570b32f1f4329c407bfe0363`, 122,178 lines, 5,272,821 bytes.
+
+TR: Global directories kataloğu, 25 dil kataloğundan ayrı çalışan 26. startpoint catalog katmanıdır. Ham inceleme seti 1.072 referanstan oluştu. Deterministik deduplication, normalized-host canonicalization ve source-family merge kurallarıyla bu set 696 canonical source family, 696 seed surface ve 696 seed URL seviyesine indirildi. İlk canonical JSON kimliği `2b158159e0746e014a8176f31c8fb910d868fee219e542ec764a1bc1c24b55c1` idi; runtime schema alignment ve dört katman senkronizasyonundan sonra güncel mühürlü JSON kimliği `d58b7e2cbdbeee71e170c2636c199421c60951b5570b32f1f4329c407bfe0363`, 122.178 satır, 5.272.821 bayttır.
+
+EN: The catalog is still candidate-only and not live. No DB insert, no frontier activation, no crawler start, no systemd mutation, and no public source URL probe is implied by this documentation seal.
+
+TR: Katalog hâlâ candidate-only ve live değildir. Bu dokümantasyon mührü DB insert, frontier activation, crawler start, systemd mutation veya public source URL probe anlamına gelmez.
+<!-- GLOBAL_DIR_R2A72_README_FINAL_SUMMARY_END -->
 
 ### Boundary rule
 

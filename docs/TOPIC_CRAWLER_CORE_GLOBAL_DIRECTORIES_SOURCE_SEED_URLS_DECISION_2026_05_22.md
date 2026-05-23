@@ -145,3 +145,47 @@ This section intentionally keeps the exact audit literals required by the docume
 - No public source URL probe
 - No systemd mutation
 - No pi51c sync
+
+<!-- GLOBAL_DIR_R2A72_RUNTIME_SCHEMA_FINAL_SEAL_BEGIN -->
+## Runtime schema alignment and four-layer final seal / Runtime schema hizalaması ve dört katman final mührü
+
+EN: This section was added after `GLOBAL_DIR_R2A71_FOUR_LAYER_SEAL_READONLY`. The original canonical JSON identity remains preserved above as the first deduplicated decision identity. The current runtime-schema-aligned catalog identity is now:
+
+- `HEAD=934a9b4628127e96c61324cd236ee3e33708d84d`
+- `SUBJECT=fix(source-seed): align global directories runtime schema`
+- `global_directories_source_families_v2.json`
+- `SHA256=d58b7e2cbdbeee71e170c2636c199421c60951b5570b32f1f4329c407bfe0363`
+- `LINES=122178`
+- `BYTES=5272821`
+- `source_families=696`
+- `seed_surfaces=696`
+- `seed_urls=696`
+- `raw_refs=1072`
+- `merge_excess_raw_records=376`
+- `duplicate_root_domain_groups=204`
+- `runtime_validator=OK`
+- `projected_rows=2`
+
+TR: Bu bölüm `GLOBAL_DIR_R2A71_FOUR_LAYER_SEAL_READONLY` sonrasında eklenmiştir. Yukarıdaki ilk canonical JSON kimliği, ilk deduplication karar kimliği olarak korunur. Güncel runtime-schema-aligned catalog kimliği artık şudur:
+
+- `HEAD=934a9b4628127e96c61324cd236ee3e33708d84d`
+- `SUBJECT=fix(source-seed): align global directories runtime schema`
+- `global_directories_source_families_v2.json`
+- `SHA256=d58b7e2cbdbeee71e170c2636c199421c60951b5570b32f1f4329c407bfe0363`
+- `LINES=122178`
+- `BYTES=5272821`
+- `source_families=696`
+- `seed_surfaces=696`
+- `seed_urls=696`
+- `raw_refs=1072`
+- `merge_excess_raw_records=376`
+- `duplicate_root_domain_groups=204`
+- `runtime_validator=OK`
+- `projected_rows=2`
+
+EN: Four-layer synchronization was sealed across Ubuntu Desktop, GitHub, pi51c `/logisticsearch/repo`, and pi51c live runtime `/logisticsearch/makpi51crawler`. The catalog is still candidate-only and not live. No DB insert, no frontier activation, no crawler start, no systemd mutation, and no public source URL probe occurred.
+
+TR: Dört katman senkronizasyonu Ubuntu Desktop, GitHub, pi51c `/logisticsearch/repo` ve pi51c live runtime `/logisticsearch/makpi51crawler` üzerinde mühürlendi. Katalog hâlâ candidate-only ve live değildir. DB insert, frontier activation, crawler start, systemd mutation ve public source URL probe yapılmadı.
+
+Detailed final seal document: `docs/TOPIC_CRAWLER_CORE_GLOBAL_DIRECTORIES_RUNTIME_SCHEMA_AND_FOUR_LAYER_SEAL_2026_05_23.md`.
+<!-- GLOBAL_DIR_R2A72_RUNTIME_SCHEMA_FINAL_SEAL_END -->
