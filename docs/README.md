@@ -1337,3 +1337,48 @@ Czech (`cs`) is now recorded as a candidate-only source-seed rollout language.
 - Commit subject: `feat(source-seed): add Czech startpoint catalog`
 
 This README entry is an index/standards pointer only. It does not authorize DB insertion, frontier insertion, crawler start, systemd mutation, pi51c sync, or public URL probing.
+<!-- GLOBAL_DIR_R2A34_DOCS_INDEX_PATCH_LOCAL_ONLY:README -->
+
+## Global directories source-seed catalog / Küresel dizin startpoint kataloğu
+
+`makpi51crawler/catalog/startpoints/global/global_directories_source_families_v2.json` is the canonical global-directory source-seed catalog added by `GLOBAL_DIR_R2A31_GLOBAL_JSON_COMMIT_PUSH_GATE`.
+
+TR: Bu dosya 25 dil kataloğuna ek olarak kullanılan `global` kapsamlı kalıcı startpoint kataloğudur. Dil kataloğu değildir; `language_code=global` ile dünya genelindeki lojistik dizinleri, makro otoriteleri, birlikleri, B2B dizinleri, liman/demiryolu/hava/karayolu ağlarını ve özel kargo kaynaklarını candidate-only olarak tutar.
+
+EN: This catalog is not a language rollout. It is a global root-domain authority/directory layer that complements the 25 language catalogs. It is used to seed broad discovery candidates, while crawler activation remains blocked until explicit pi51c live probe and future frontier promotion gates.
+
+Current sealed metrics:
+
+| Field | Value |
+| --- | ---: |
+| Raw input rows preserved in metadata | 1072 |
+| Canonical source families | 696 |
+| Seed surfaces | 696 |
+| Seed URLs | 696 |
+| Duplicate root-domain groups | 204 |
+| Duplicate raw records inside duplicate groups | 580 |
+| Merge-excess raw records | 376 |
+| Exact URL exceptions | 1 |
+| HOLD_VERIFY entries | 1 |
+| HTTP canonical URLs | 6 |
+| HTTPS canonical URLs | 690 |
+| File SHA256 | `2b158159e0746e014a8176f31c8fb910d868fee219e542ec764a1bc1c24b55c1` |
+
+Safety status:
+
+- `candidate_manifest=true`
+- `enabled=false`
+- `is_live=false`
+- `needs_live_check=true`
+- `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+- No DB insert was performed.
+- No frontier activation was performed.
+- No crawler/systemd/pi51c mutation was performed.
+- No public source URL probe was performed during catalog creation.
+
+Key modeling decisions:
+
+- Duplicate raw rows are not discarded silently. One canonical source family is kept per normalized root host; duplicate metadata is merged into `family_metadata.raw_refs`, aliases, categories, language scopes, and Turkish descriptions.
+- `kompass.com` and `europages.com` are kept as broad root-domain global B2B source families. They are not path-restricted at crawler_core level; the first logistics-specific filtering belongs to parse_core/taxonomy filtering.
+- Wikipedia logistics search is the single exact URL exception and stays as `url_type=exact_url`.
+- ASLOG Morocco remains `HOLD_VERIFY` until the official Morocco domain is verified.

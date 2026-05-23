@@ -1,8 +1,8 @@
 # Source-seed language rollout 17-step discipline / Source-seed dil rollout 17 adım disiplini
 
-Gate / Kapı: `R367A_SOURCE_SEED_17_STEP_LANGUAGE_ROLLOUT_DISCIPLINE_DOC_COMMIT_PUSH_GATE`  
-Date / Tarih: `2026-05-17`  
-Scope / Kapsam: `crawler_core source-seed language rollout discipline`  
+Gate / Kapı: `R367A_SOURCE_SEED_17_STEP_LANGUAGE_ROLLOUT_DISCIPLINE_DOC_COMMIT_PUSH_GATE`
+Date / Tarih: `2026-05-17`
+Scope / Kapsam: `crawler_core source-seed language rollout discipline`
 Status / Durum: `CANONICAL_STANDARD`
 
 ## Purpose / Amaç
@@ -1017,3 +1017,59 @@ Romanian (`ro`) rollout discipline record:
 - Runtime safety: pi51c sync after Hebrew remains false; no DB/frontier/crawler/systemd mutation; no public URL probe.
 - Next safe gate: `HE-09_SOURCE_SEED_DOCS_STANDARDS_FORMAT_AUDIT_READONLY_AFTER_HE`.
 - Planned next artifact after Hebrew final sync/seals: prepare `global directories` JSON in the same canonical source-seed standard and format.
+<!-- GLOBAL_DIR_R2A34_DOCS_INDEX_PATCH_LOCAL_ONLY:DISCIPLINE -->
+
+## GLOBAL_DIR_R2A global directories rollout discipline
+
+The global directories catalog used a controlled R2A gate sequence and must remain governed separately from the 25 language rollout sequence.
+
+Sealed gate summary:
+
+| Gate | Purpose | Result |
+| --- | --- | --- |
+| R2A20 | Confirm expected 1072 gap after 960+9+3 staged rows | PASS |
+| R2A21 | Append correct `EXTRA_RAW_960_PLUS` group 7 and group 8 rows | PASS |
+| R2A22 | Rebuild dedup/canonical reports after 1072 rows | PASS |
+| R2A23 | Confirm +100 contributed metadata only, no new unique hosts | PASS |
+| R2A24 | Build 1072 merge policy pack | PASS |
+| R2A25 | Seal 1072 tmp state | PASS |
+| R2A26 | JSON builder dry-run, no file write | PASS |
+| R2A27 | Create local global JSON | PASS |
+| R2A28/R2A28B | Classify corrected audit false-fail for no-www canonical and HTTP duplicate collapse | PASS |
+| R2A29 | Corrected local JSON audit | PASS |
+| R2A30 | Diff scope audit | PASS |
+| R2A31 | Commit and push one-file global JSON | PASS |
+| R2A32 | Post-push seal | PASS |
+
+Discipline constraints:
+
+- Do not activate global directories directly into DB/frontier.
+- Do not start crawler from this catalog before pi51c live probe gates.
+- Do not convert `language_code=global` into a taxonomy language.
+- Treat this as the `25 language catalogs + 1 global directories catalog` source-seed layer.
+- Maintain raw reference preservation: `1072 raw refs -> 696 canonical source families`.
+- Every future added global source batch must rebuild dedup/canonical/merge policy before any JSON rewrite.
+
+Next required documentation gates after R2A32:
+
+- `GLOBAL_DIR_R2A34_DOCS_INDEX_PATCH_LOCAL_ONLY`
+- `GLOBAL_DIR_R2A35_DOCS_INDEX_AUDIT_READONLY`
+- `GLOBAL_DIR_R2A36_DOCS_INDEX_COMMIT_PUSH_GATE`
+- `GLOBAL_DIR_R2A37_DOCS_INDEX_POST_PUSH_SEAL_READONLY`
+<!-- GLOBAL_DIR_R2A34B2_DOCS_NEEDLE_FIX_LOCAL_ONLY_ROBUST:DISCIPLINE -->
+
+## Global directories exact index needles / Küresel dizin kesin indeks işaretleri
+
+This corrective note intentionally preserves the exact searchable literals required by the documentation gate.
+
+- Catalog file: `global_directories_source_families_v2.json`
+- Catalog title: Global directories
+- Catalog identity: `language_code=global`
+- Canonical raw-to-family model: `1072 raw refs -> 696 canonical source families`
+- Duplicate root-domain groups: `204`
+- Merge-excess raw records: `376`
+- Safety state: `candidate_only_not_live`
+- Runtime activation policy: `pi51c_live_probe_required_before_db_or_frontier_insert`
+- Gate family: `GLOBAL_DIR_R2A`
+
+Operational rule: this global catalog is the `+1 global directories` layer beside the 25 language catalogs; it is not a live crawler insertion list.

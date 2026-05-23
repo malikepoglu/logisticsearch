@@ -1063,3 +1063,54 @@ No DB/frontier/crawler activation is implied by this standards record.
 - Metadata distribution: `target_language_code=he`; `content_language_code={"en": 30, "he": 15}`; `url_locale_code={"en": 30, "he": 15}`; `language_fit={"english_fallback": 30, "native": 15}`; `locale_review_status={"native_locale_verified": 15, "needs_native_alternative_check": 30}`.
 - Safety truth: candidate-only, not live; no DB insert; no frontier activation; no crawler/systemd mutation; no public source URL probe.
 - Completion truth: rolled source-seed language catalogs are now 25/25; remaining languages `NONE`; pi51c sync after Hebrew remains false.
+<!-- GLOBAL_DIR_R2A34_DOCS_INDEX_PATCH_LOCAL_ONLY:RULE -->
+
+## Global directories canonical JSON rule / Küresel dizin JSON kuralı
+
+The global directories catalog is allowed as a special source-seed catalog under:
+
+`makpi51crawler/catalog/startpoints/global/global_directories_source_families_v2.json`
+
+Required top-level identity:
+
+- `schema=source_families_v2`
+- `schema_version=2.0`
+- `catalog_version=global_directories_source_families_v2`
+- `language_code=global`
+- `candidate_manifest=true`
+- `enabled=false`
+- `is_live=false`
+- `needs_live_check=true`
+- `safety_state=candidate_only_not_live`
+- `review_state=needs_live_check`
+- `runtime_activation_policy=pi51c_live_probe_required_before_db_or_frontier_insert`
+
+Canonicalization rule:
+
+TR: Global dizin kataloğunda temel birim “normalized root host”tur. Aynı domain birden fazla raw listede geçerse tek `source_family` kalır; kalan raw kayıtlar metadata olarak birleştirilir. Bu, duplicate silme değil, controlled merge işlemidir.
+
+EN: The canonical unit is the normalized root host. Repeated raw rows collapse into one source family, while raw references and descriptions remain preserved as metadata.
+
+Exceptions and holds:
+
+- Exact URL exception is allowed only when the source is intentionally not a root-domain seed. Current sealed exception: Wikipedia logistics search URL.
+- `HOLD_VERIFY_BEFORE_JSON` entries may exist in a candidate-only JSON, but must remain disabled/not-live and cannot be promoted to frontier until resolved.
+- Current sealed hold: ASLOG Morocco domain verification.
+
+Crawler/parse boundary:
+
+- Broad global domains such as `kompass.com` and `europages.com` remain root-domain source families.
+- crawler_core must obey robots/rate budgets and collect only after live probe approval.
+- parse_core performs logistics/taxonomy filtering after fetch. Path-only narrowing is not required at source_family modeling time for these broad B2B directories.
+
+Current sealed global metrics:
+
+| Metric | Value |
+| --- | ---: |
+| Raw rows | 1072 |
+| Canonical source families | 696 |
+| Duplicate root-domain groups | 204 |
+| Merge-excess raw records | 376 |
+| Seed URLs | 696 |
+| HOLD_VERIFY rows | 1 |
+| Exact URL exception rows | 1 |
