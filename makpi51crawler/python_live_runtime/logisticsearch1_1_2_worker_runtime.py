@@ -1739,88 +1739,92 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
         # TR: Diğer tüm beklenmeyen hatalar minimal worker bilinmeyen drift’i
         # TR: gizlemesin diye permanent olarak finalize edilir.
         except Exception as exc:
-            # EN: Any prior SQL failure may have left the transaction aborted.
-            # EN: We must rollback before entering finalize/logging paths.
-            # TR: Önceki SQL hatası transaction'ı aborted bırakmış olabilir.
-            # TR: finalize/logging yoluna girmeden önce rollback zorunludur.
-            # EN: LOCAL VALUE EXPLANATION / run_claim_probe / rollback_error_message
-            # EN: rollback_error_message keeps this intermediate worker-runtime truth named, visible, and reviewable instead of hiding it inline.
-            # EN: Expected values depend on the active branch below; collapsing rollback_error_message into an unnamed expression would weaken audits.
-            # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / rollback_error_message
-            # TR: rollback_error_message bu ara worker-runtime doğrusunu satır içine gizlemek yerine isimli, görünür ve denetlenebilir tutar.
-            # TR: Beklenen değerler aşağıdaki aktif dala göre değişir; rollback_error_message değerini isimsiz ifadeye ezmek denetimi zayıflatır.
-            rollback_error_message = None
-            try:
-                rollback(conn)
-            except Exception as rollback_exc:
-                # EN: LOCAL VALUE EXPLANATION / run_claim_probe / rollback_error_message
-                # EN: This local exists because the worker-runtime corridor should keep
-                # EN: intermediate phase truth named, visible, and reviewable instead of hiding `f"{type(rollback_exc).__name__}: {rollback_exc}"` inline.
-                # EN: Expected meaning:
-                # EN: - current local name(s): rollback_error_message
-                # EN: - this value helps keep claim / robots / fetch / parse / finalize / release branch meaning readable
-                # EN: - None, empty, fallback, or branch-sensitive values may still be valid depending on the checks below
-                # EN: Undesired reading:
-                # EN: - treating this local as durable global crawler truth
-                # EN: - assuming this local alone proves the whole worker corridor succeeded
-                # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / rollback_error_message
-                # TR: Bu yerel değer vardır; çünkü worker-runtime koridoru ara faz
-                # TR: doğrusunu satır içine gizlemek yerine isimli, görünür ve denetlenebilir tutmalıdır.
-                # TR: Beklenen anlam:
-                # TR: - mevcut yerel ad(lar): rollback_error_message
-                # TR: - bu değer claim / robots / fetch / parse / finalize / release dal anlamını okunabilir tutmaya yardım eder
-                # TR: - None, boş, fallback veya dala duyarlı değerler aşağıdaki kontrollere göre yine geçerli olabilir
-                # TR: İstenmeyen okuma:
-                # TR: - bu yereli kalıcı global crawler doğrusu sanmak
-                # TR: - yalnızca bu yerelin tüm worker koridorunun başarılı olduğunu kanıtladığını düşünmek
-                rollback_error_message = f"{type(rollback_exc).__name__}: {rollback_exc}"
-
+            # EN: This broad exception branch now separates DB exceptions from
+            # EN: non-DB runtime/acquisition exceptions before finalize/logging.
+            # EN: Only psycopg/DB exceptions may need rollback before finalization;
+            # EN: non-DB acquisition exceptions must preserve the leased claim so the
+            # EN: permanent-error finalizer can update the frontier row.
+            # TR: Bu geniş exception dalı artık finalize/logging öncesinde DB
+            # TR: exception'ları ile DB dışı runtime/acquisition exception'ları ayırır.
+            # TR: Yalnızca psycopg/DB exception durumunda finalization öncesi rollback
+            # TR: gerekebilir; DB dışı acquisition exception durumunda leased claim
+            # TR: korunmalıdır ki permanent-error finalizer frontier satırını güncelleyebilsin.
+            # EN: FRONTIER_PERMANENT_ERROR_FINALIZE_R1_BEGIN
+            # EN: A non-DB runtime/acquisition exception must preserve the active
+            # EN: claim transaction until the permanent-error finalizer runs.
+            # EN: Reason: frontier.finish_fetch_permanent_error(...) requires the
+            # EN: current frontier.url row to still be state=leased with the same
+            # EN: lease_token. Rolling back before finalization erases that lease and
+            # EN: produces a no-row result, which can make the worker reclaim the same
+            # EN: URL forever.
+            # EN: Expected values:
+            # EN: - non-psycopg exception module => preserve transaction for finalize
+            # EN: - psycopg exception module => rollback first because the transaction
+            # EN:   may already be aborted
+            # EN: Undesired values:
+            # EN: - unconditional rollback before permanent-error finalization
+            # EN: - silent repeat-claim loop after finalize no-row
+            # TR: FRONTIER_PERMANENT_ERROR_FINALIZE_R1_BEGIN
+            # TR: DB dışı runtime/acquisition exception durumunda aktif claim
+            # TR: transaction'ı permanent-error finalizer çalışana kadar korunmalıdır.
+            # TR: Sebep: frontier.finish_fetch_permanent_error(...) mevcut
+            # TR: frontier.url satırının hâlâ state=leased ve aynı lease_token ile
+            # TR: durmasını ister. Finalize öncesi rollback bu lease'i siler ve no-row
+            # TR: sonucu üretir; bu da worker'ın aynı URL'yi sonsuza kadar tekrar claim
+            # TR: etmesine yol açabilir.
+            # TR: Beklenen değerler:
+            # TR: - non-psycopg exception module => transaction finalize için korunur
+            # TR: - psycopg exception module => transaction zaten aborted olabilir diye
+            # TR:   önce rollback yapılır
+            # TR: Hatalı değerler:
+            # TR: - permanent-error finalization öncesi koşulsuz rollback
+            # TR: - finalize no-row sonrası sessiz tekrar-claim döngüsü
             # EN: LOCAL VALUE EXPLANATION / run_claim_probe / final_error_message
-            # EN: This local exists because the worker-runtime corridor should keep
-            # EN: intermediate phase truth named, visible, and reviewable instead of hiding `f"{type(exc).__name__}: {exc}"` inline.
-            # EN: Expected meaning:
-            # EN: - current local name(s): final_error_message
-            # EN: - this value helps keep claim / robots / fetch / parse / finalize / release branch meaning readable
-            # EN: - None, empty, fallback, or branch-sensitive values may still be valid depending on the checks below
-            # EN: Undesired reading:
-            # EN: - treating this local as durable global crawler truth
-            # EN: - assuming this local alone proves the whole worker corridor succeeded
+            # EN: final_error_message starts with the original exception class and text
+            # EN: before the R1 transaction-boundary diagnostics are appended.
+            # EN: Expected value: non-empty human-readable exception evidence.
+            # EN: Undesired value: using final_error_message before assigning it.
             # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / final_error_message
-            # TR: Bu yerel değer vardır; çünkü worker-runtime koridoru ara faz
-            # TR: doğrusunu satır içine gizlemek yerine isimli, görünür ve denetlenebilir tutmalıdır.
-            # TR: Beklenen anlam:
-            # TR: - mevcut yerel ad(lar): final_error_message
-            # TR: - bu değer claim / robots / fetch / parse / finalize / release dal anlamını okunabilir tutmaya yardım eder
-            # TR: - None, boş, fallback veya dala duyarlı değerler aşağıdaki kontrollere göre yine geçerli olabilir
-            # TR: İstenmeyen okuma:
-            # TR: - bu yereli kalıcı global crawler doğrusu sanmak
-            # TR: - yalnızca bu yerelin tüm worker koridorunun başarılı olduğunu kanıtladığını düşünmek
+            # TR: final_error_message R1 transaction-boundary tanıları eklenmeden önce
+            # TR: özgün exception sınıfı ve metni ile başlar.
+            # TR: Beklenen değer: boş olmayan insan-okunur exception kanıtı.
+            # TR: Hatalı değer: final_error_message değerini atamadan kullanmak.
             final_error_message = f"{type(exc).__name__}: {exc}"
+
+            exception_module_name = type(exc).__module__
+            rollback_before_finalize = exception_module_name.startswith("psycopg")
+            rollback_error_message = None
+            rollback_before_finalize_done = False
+
+            if rollback_before_finalize:
+                try:
+                    rollback(conn)
+                    rollback_before_finalize_done = True
+                except Exception as rollback_exc:
+                    # EN: LOCAL VALUE EXPLANATION / run_claim_probe / rollback_error_message
+                    # EN: This local records rollback failure only for the DB-exception branch.
+                    # EN: Non-DB acquisition errors must not rollback before permanent-error finalize.
+                    # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / rollback_error_message
+                    # TR: Bu yerel yalnızca DB-exception dalındaki rollback hatasını kaydeder.
+                    # TR: DB dışı acquisition hataları permanent-error finalize öncesi rollback yapmamalıdır.
+                    rollback_error_message = f"{type(rollback_exc).__name__}: {rollback_exc}"
+
+            final_error_message = (
+                f"{final_error_message} | "
+                f"frontier_permanent_error_finalize_r1="
+                f"exception_module={exception_module_name};"
+                f"rollback_before_finalize={rollback_before_finalize};"
+                f"rollback_before_finalize_done={rollback_before_finalize_done}"
+            )
+
             if rollback_error_message is not None:
-                # EN: LOCAL VALUE EXPLANATION / run_claim_probe / final_error_message
-                # EN: This local exists because the worker-runtime corridor should keep
-                # EN: intermediate phase truth named, visible, and reviewable instead of hiding `f"{final_error_message} | " f"rollback_before_finalize_failed: {rollback_error_message}"` inline.
-                # EN: Expected meaning:
-                # EN: - current local name(s): final_error_message
-                # EN: - this value helps keep claim / robots / fetch / parse / finalize / release branch meaning readable
-                # EN: - None, empty, fallback, or branch-sensitive values may still be valid depending on the checks below
-                # EN: Undesired reading:
-                # EN: - treating this local as durable global crawler truth
-                # EN: - assuming this local alone proves the whole worker corridor succeeded
-                # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / final_error_message
-                # TR: Bu yerel değer vardır; çünkü worker-runtime koridoru ara faz
-                # TR: doğrusunu satır içine gizlemek yerine isimli, görünür ve denetlenebilir tutmalıdır.
-                # TR: Beklenen anlam:
-                # TR: - mevcut yerel ad(lar): final_error_message
-                # TR: - bu değer claim / robots / fetch / parse / finalize / release dal anlamını okunabilir tutmaya yardım eder
-                # TR: - None, boş, fallback veya dala duyarlı değerler aşağıdaki kontrollere göre yine geçerli olabilir
-                # TR: İstenmeyen okuma:
-                # TR: - bu yereli kalıcı global crawler doğrusu sanmak
-                # TR: - yalnızca bu yerelin tüm worker koridorunun başarılı olduğunu kanıtladığını düşünmek
                 final_error_message = (
                     f"{final_error_message} | "
                     f"rollback_before_finalize_failed: {rollback_error_message}"
                 )
+
+            # EN: FRONTIER_PERMANENT_ERROR_FINALIZE_R1_END
+            # TR: FRONTIER_PERMANENT_ERROR_FINALIZE_R1_END
 
             # EN: LOCAL VALUE EXPLANATION / run_claim_probe / finalize_result
             # EN: This local exists because the worker-runtime corridor should keep
