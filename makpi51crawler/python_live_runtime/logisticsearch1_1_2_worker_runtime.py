@@ -159,6 +159,9 @@ from __future__ import annotations
 # TR: Parent yüzeyi main_loop’un beklediği public yapılı konfigürasyon ve sonuç
 # TR: sözleşmelerini hâlâ sahiplendiği için dataclass içe aktarıyoruz.
 from dataclasses import dataclass
+# EN: We import datetime/timezone because the worker policy receipt needs a real UTC datetime object.
+# TR: Worker policy receipt gerçek UTC datetime nesnesine ihtiyaç duyduğu için datetime/timezone içe aktarıyoruz.
+from datetime import datetime, timezone
 
 # EN: We import socket because transport-timeout failures are still classified by
 # EN: the parent orchestration try/except surface.
@@ -218,6 +221,13 @@ from .logisticsearch1_1_2_4_acquisition_runtime import (
 # EN: flows may still continue into minimal parse persistence.
 # TR: Başarılı fetch akışları minimal parse persistence aşamasına devam
 # TR: edebileceği için kanonik parse continuation yüzeyini içe aktarıyoruz.
+# EN: We import the worker/frontier policy adapter because claim payloads must be checked
+# EN: after frontier claim and before public fetch.
+# TR: Frontier claim sonrası ve public fetch öncesi claim payloadları denetlenmek
+# TR: zorunda olduğu için worker/frontier policy adapter içe aktarıyoruz.
+from .logisticsearch1_1_2_6_worker_frontier_policy_adapter import (
+    build_worker_frontier_policy_receipt,
+)
 from .logisticsearch1_1_2_6_parse_runtime import (
     MinimalParseApplyResult,
     apply_minimal_parse_entry,
@@ -733,6 +743,53 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 observed_at=utc_now_iso(),
                 runtime_control=runtime_control,
             )
+
+        # EN: WORKER_FRONTIER_POLICY_BINDING_R1_BEGIN
+        # EN: This block is the first explicit worker binding for the visit-policy helper.
+        # EN: It runs after frontier.claim_next_url(...) returned a row and before robots
+        # EN: refresh/public fetch can start.
+        # EN: Expected values: a receipt dict from build_worker_frontier_policy_receipt(...).
+        # EN: Undesired values: sleeping here, starting public fetch here, or mutating catalog JSON.
+        # EN: MUST_NOT_CREATE_NEW_QUEUE_ENGINE because capped root-domain rows must be
+        # EN: skipped without turning Python into a second durable queue truth.
+        # TR: WORKER_FRONTIER_POLICY_BINDING_R1_BEGIN
+        # TR: Bu blok visit-policy helper için ilk açık worker binding noktasıdır.
+        # TR: frontier.claim_next_url(...) satır döndürdükten sonra ve robots refresh/public
+        # TR: fetch başlamadan önce çalışır.
+        # TR: Beklenen doğru değerler: build_worker_frontier_policy_receipt(...) tarafından
+        # TR: dönen receipt dict yapısıdır.
+        # TR: Hata değerleri: burada uyumak, public fetch başlatmak veya catalog JSON mutasyonu yapmak.
+        # TR: MUST_NOT_CREATE_NEW_QUEUE_ENGINE; çünkü capped root-domain satırları Python'u
+        # TR: ikinci kalıcı queue doğrusu hâline getirmeden atlanmalıdır.
+        worker_frontier_policy_receipt = build_worker_frontier_policy_receipt(
+            now=datetime.now(timezone.utc),
+            claimed_payload=claimed_url,
+        )
+        runtime_control = {
+            **(dict(runtime_control) if runtime_control is not None else {}),
+            "worker_frontier_policy_receipt": worker_frontier_policy_receipt,
+        }
+        if worker_frontier_policy_receipt.get("queue_should_skip_domain") is True:
+            rollback(conn)
+            return ClaimProbeResult(
+                run_id=run_id,
+                claimed=False,
+                claimed_url=claimed_url,
+                robots_allow_decision=None,
+                storage_plan=storage_plan,
+                fetched_page=None,
+                finalize_result={
+                    "action": "policy_skip_domain_select_next_eligible",
+                    "queue_action": worker_frontier_policy_receipt.get("queue_action"),
+                    "sleep_on_capped_domain": worker_frontier_policy_receipt.get("sleep_on_capped_domain"),
+                    "worker_frontier_policy_receipt": worker_frontier_policy_receipt,
+                },
+                parse_apply_result=parse_apply_result,
+                observed_at=utc_now_iso(),
+                runtime_control=runtime_control,
+            )
+        # EN: WORKER_FRONTIER_POLICY_BINDING_R1_END
+        # TR: WORKER_FRONTIER_POLICY_BINDING_R1_END
 
         # EN: We extract the host/path pair once because refresh and allow decisions
         # EN: are both anchored to the same claimed target.
