@@ -504,6 +504,156 @@ class ClaimProbeResult:
 # TR: Okuyucu run_claim_probe fonksiyonunun ne aldığını, neyi koordine ettiğini ve hangi yapılı sonucu döndürdüğünü anlayabilmelidir.
 # TR: Parametre sözleşmesi:
 # TR: - config => run_claim_probe fonksiyonunun açık worker-runtime girdi sözleşmesidir; bu değer görünür orkestrasyon sınırının parçasıdır
+
+def _logisticsearch_extract_claimed_url_value(claimed_url: object, key: str) -> object | None:
+    """Return a claim attribute from either a dataclass-like object or dict.
+
+    EN: The worker receives claimed_url from the frontier claim layer. During
+    exception handling we must update exactly that leased row; therefore this
+    helper intentionally accepts both object attributes and mapping keys.
+
+    TR: Worker claimed_url değerini frontier claim katmanından alır. Exception
+    sırasında tam olarak o leased satır güncellenmelidir; bu yüzden helper hem
+    object attribute hem dict key yüzeylerini bilinçli olarak kabul eder.
+    """
+
+    if isinstance(claimed_url, dict):
+        return claimed_url.get(key)
+    return getattr(claimed_url, key, None)
+
+
+def _logisticsearch_runtime_exception_should_retry_wait(
+    *,
+    exc: BaseException,
+    error_message: str,
+) -> bool:
+    """Classify non-DB acquisition/runtime failures that must not become dead first.
+
+    EN: Playwright navigation timeouts, SSL/cipher negotiation failures, network
+    transient browser acquisition errors and Python timeout/socket/URL errors are
+    runtime acquisition failures. They are not evidence that a logistics source is
+    permanently invalid. First handling must be retry_wait with visible evidence.
+
+    TR: Playwright navigation timeout, SSL/cipher negotiation hataları, geçici
+    browser/network acquisition hataları ve Python timeout/socket/URL hataları
+    lojistik kaynağın kalıcı olarak geçersiz olduğunu kanıtlamaz. İlk davranış
+    görünür kanıtla retry_wait olmalıdır.
+    """
+
+    exception_name = type(exc).__name__.lower()
+    exception_module = type(exc).__module__.lower()
+    evidence = f"{exception_module} {exception_name} {error_message}".lower()
+
+    retry_needles = (
+        "timeouterror",
+        "timeout",
+        "page.goto",
+        "net::err_ssl",
+        "ssl_version_or_cipher_mismatch",
+        "err_connection",
+        "err_timed_out",
+        "err_name_not_resolved",
+        "err_network",
+        "playwright",
+        "urlerror",
+        "socket.timeout",
+    )
+
+    return any(needle in evidence for needle in retry_needles)
+
+
+def _logisticsearch_finish_runtime_exception_retry_wait(
+    *,
+    conn: object,
+    claimed_url: object,
+    error_message: str,
+    worker_id: str,
+) -> dict[str, object]:
+    """Move a leased runtime/acquisition failure to retry_wait instead of dead.
+
+    EN: This is intentionally narrower than permanent finalization. It updates
+    only the active leased frontier.url row and keeps a visible receipt in
+    url_metadata. It does not fetch, parse, mutate catalog JSON, or create a new
+    queue engine.
+
+    TR: Bu davranış permanent finalization'dan bilinçli olarak daha dardır. Sadece
+    aktif leased frontier.url satırını günceller ve url_metadata içinde görünür
+    kanıt bırakır. Fetch/parse/catalog JSON mutation/new queue engine yapmaz.
+    """
+
+    # EN: LOCAL VALUE EXPLANATION / url_id
+    # EN: Expected value: existing frontier.url.url_id for the currently claimed row.
+    # EN: Error value: missing/empty value; then no row is updated and caller can see no-row.
+    # TR: YEREL DEĞER AÇIKLAMASI / url_id
+    # TR: Beklenen değer: o anda claim edilmiş frontier.url.url_id değeri.
+    # TR: Hata değeri: eksik/boş değer; bu durumda satır güncellenmez.
+    url_id = _logisticsearch_extract_claimed_url_value(claimed_url, "url_id")
+
+    # EN: LOCAL VALUE EXPLANATION / lease_token
+    # EN: Expected value: current active lease_token. It prevents accidental updates
+    # EN: to a row that is no longer owned by this worker.
+    # TR: YEREL DEĞER AÇIKLAMASI / lease_token
+    # TR: Beklenen değer: aktif lease_token. Bu worker'ın artık sahip olmadığı
+    # TR: bir satırı yanlışlıkla güncellemesini engeller.
+    lease_token = _logisticsearch_extract_claimed_url_value(claimed_url, "lease_token")
+
+    retry_after_seconds = 300
+    error_class = "unexpected_fetch_runtime_error"
+    bounded_message = str(error_message)[:4000]
+
+    cursor = conn.execute(
+        """
+        UPDATE frontier.url
+        SET
+          state = 'retry_wait'::frontier.url_state_enum,
+          next_fetch_at = now() + (%s::integer * interval '1 second'),
+          revisit_not_before = now() + (%s::integer * interval '1 second'),
+          last_fetch_finished_at = now(),
+          last_error_class = %s,
+          last_error_message = %s,
+          retryable_error_count = retryable_error_count + 1,
+          consecutive_error_count = consecutive_error_count + 1,
+          fetch_attempt_count = fetch_attempt_count + 1,
+          lease_token = NULL,
+          updated_at = now(),
+          url_metadata = COALESCE(url_metadata, '{}'::jsonb)
+            || jsonb_build_object(
+              'dead_policy_hardening_runtime_retry_r1', true,
+              'runtime_retry_wait_error_class', %s,
+              'runtime_retry_wait_worker_id', %s,
+              'runtime_retry_wait_after_seconds', %s,
+              'runtime_retry_wait_reason', 'non_db_runtime_acquisition_exception_not_permanent_on_first_attempt'
+            )
+        WHERE url_id = %s
+          AND lease_token = %s
+        """,
+        (
+            retry_after_seconds,
+            retry_after_seconds,
+            error_class,
+            bounded_message,
+            error_class,
+            worker_id,
+            retry_after_seconds,
+            url_id,
+            lease_token,
+        ),
+    )
+
+    updated_row_count = int(getattr(cursor, "rowcount", 0) or 0)
+
+    return {
+        "frontier_result": "runtime_exception_retry_wait",
+        "updated_row_count": updated_row_count,
+        "url_id": str(url_id),
+        "error_class": error_class,
+        "retry_after_seconds": retry_after_seconds,
+        "worker_id": worker_id,
+    }
+
+
+
+
 def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
     # EN: We create a unique run id first so the whole execution can be traced.
     # TR: Tüm çalıştırma izlenebilir olsun diye önce benzersiz bir run id üretiyoruz.
@@ -1846,12 +1996,34 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
             # TR: İstenmeyen okuma:
             # TR: - bu yereli kalıcı global crawler doğrusu sanmak
             # TR: - yalnızca bu yerelin tüm worker koridorunun başarılı olduğunu kanıtladığını düşünmek
-            finalize_result = finalize_unexpected_runtime_error(
-                conn,
-                claimed_url=claimed_url,
+            # EN: DEAD_POLICY_HARDENING_RUNTIME_RETRY_R1_BEGIN
+            # EN: Non-DB acquisition/runtime exceptions such as Playwright timeout,
+            # EN: SSL cipher mismatch, URL/socket timeout, and browser navigation
+            # EN: transient failures must not become permanent/dead on the first
+            # EN: occurrence. They are moved to retry_wait with a visible receipt.
+            # TR: DEAD_POLICY_HARDENING_RUNTIME_RETRY_R1_BEGIN
+            # TR: Playwright timeout, SSL cipher mismatch, URL/socket timeout ve
+            # TR: browser navigation transient hataları ilk olayda permanent/dead
+            # TR: yapılmamalıdır. Görünür kanıtla retry_wait durumuna alınır.
+            if _logisticsearch_runtime_exception_should_retry_wait(
+                exc=exc,
                 error_message=final_error_message,
-                worker_id=config.worker_id,
-            )
+            ):
+                finalize_result = _logisticsearch_finish_runtime_exception_retry_wait(
+                    conn=conn,
+                    claimed_url=claimed_url,
+                    error_message=final_error_message,
+                    worker_id=config.worker_id,
+                )
+            else:
+                finalize_result = finalize_unexpected_runtime_error(
+                    conn,
+                    claimed_url=claimed_url,
+                    error_message=final_error_message,
+                    worker_id=config.worker_id,
+                )
+            # EN: DEAD_POLICY_HARDENING_RUNTIME_RETRY_R1_END
+            # TR: DEAD_POLICY_HARDENING_RUNTIME_RETRY_R1_END
             commit(conn)
 
             return ClaimProbeResult(
