@@ -171,17 +171,21 @@ EN: pi51c repo and pi51c live runtime global JSON files were byte-identical at f
 
 TR: Final mühürde pi51c repo ve pi51c live runtime global JSON dosyaları byte seviyesinde eşitti. Live startpoint catalog sayısı global catalog dahil 26 idi.
 
-## 10. Validator seal / Validator mührü
+## 10. Validator and projection return-shape seal / Validator ve projection return-shape mührü
 
-| Surface | Validator state | Projected rows |
-|---|---|---:|
-| Ubuntu Desktop local runtime validator | `OK` | `2` |
-| pi51c repo runtime validator | `OK` | `2` |
-| pi51c live runtime validator | `OK` | `2` |
+| Surface | Validator state | Return type | Top-level keys | `projected_sources` rows | `projected_seed_urls` rows |
+|---|---|---|---|---:|---:|
+| Ubuntu Desktop local runtime validator | `OK` | `dict` | `projected_sources`, `projected_seed_urls` | `696` | `696` |
+| pi51c repo runtime validator | `OK` | `dict` | `projected_sources`, `projected_seed_urls` | `696` | `696` |
+| pi51c live runtime validator | `OK` | `dict` | `projected_sources`, `projected_seed_urls` | `696` | `696` |
 
-EN: `projected_rows=2` is a runtime projection behavior, not proof that only two raw references exist. The catalog itself contains 696 source families, 696 seed surfaces, and 696 seed URLs. Before DB/frontier activation, projection behavior should be inspected in a separate read-only gate.
+EN: The earlier `projected_rows` value `2` wording was not a loss of 694 seed rows. It was Python `len(...)` on a dictionary with two top-level keys. `project_catalog_to_seed_rows()` returns two row groups: `projected_sources` and `projected_seed_urls`. Each group contains 696 rows.
 
-TR: `projected_rows=2` runtime projection davranışıdır; yalnızca iki ham referans olduğu anlamına gelmez. Kataloğun kendisi 696 source family, 696 seed surface ve 696 seed URL içerir. DB/frontier aktivasyonu öncesinde projection davranışı ayrı bir read-only gate ile incelenmelidir.
+TR: Önceki `projected_rows` değeri `2` ifadesi 694 seed row kaybı değildir. İki top-level key içeren dictionary üzerinde Python `len(...)` sonucudur. `project_catalog_to_seed_rows()` iki row group döndürür: `projected_sources` ve `projected_seed_urls`. Her iki grup da 696 satır içerir.
+
+EN: This confirms that the catalog contains 696 source projections and 696 seed URL projections while still remaining candidate-only, disabled, not live, and not DB/frontier inserted.
+
+TR: Bu sonuç, katalogda 696 source projection ve 696 seed URL projection bulunduğunu; buna rağmen katalog hâlâ candidate-only, disabled, not live ve DB/frontier’e insert edilmemiş durumda kaldığını doğrular.
 
 ## 11. Safety and non-touch assertions / Güvenlik ve dokunmama beyanları
 
@@ -211,6 +215,6 @@ TR: Global directories kataloğu candidate-only ve live değildir.
 
 ## 12. Next required work / Sonraki zorunlu iş
 
-EN: Before any activation work, run a read-only projection behavior audit to explain why `project_catalog_to_seed_rows()` projects two rows from a 696-seed candidate catalog. Only after that should a tiny, explicit live-probe candidate subset be planned.
+EN: Projection return shape is now understood and does not require a runtime patch. Before any DB/frontier activation, the next safe phase is a read-only activation-plan gate that selects a tiny public reachability probe candidate subset. This future probe must still avoid DB insert, frontier activation, crawler service start, systemd mutation, and broad queue activation.
 
-TR: Herhangi bir aktivasyon işinden önce, 696 seed içeren candidate catalog’dan `project_catalog_to_seed_rows()` fonksiyonunun neden iki row project ettiğini açıklayan read-only projection behavior audit yapılmalıdır. Ancak bundan sonra çok küçük ve açık izinli live-probe candidate subset planlanmalıdır.
+TR: Projection return shape artık anlaşılmıştır ve runtime patch gerektirmez. DB/frontier aktivasyonundan önceki güvenli sonraki faz, çok küçük bir public reachability probe candidate subset seçen read-only activation-plan gate olmalıdır. Bu gelecek probe yine DB insert, frontier activation, crawler service start, systemd mutation ve geniş queue activation yapmamalıdır.

@@ -164,7 +164,11 @@ EN: This section was added after `GLOBAL_DIR_R2A71_FOUR_LAYER_SEAL_READONLY`. Th
 - `merge_excess_raw_records=376`
 - `duplicate_root_domain_groups=204`
 - `runtime_validator=OK`
-- `projected_rows=2`
+- `projection_return_type=dict`
+- `projection_top_level_key_count=2`
+- `projection_top_level_keys=projected_sources,projected_seed_urls`
+- `projected_sources=696`
+- `projected_seed_urls=696`
 
 TR: Bu bölüm `GLOBAL_DIR_R2A71_FOUR_LAYER_SEAL_READONLY` sonrasında eklenmiştir. Yukarıdaki ilk canonical JSON kimliği, ilk deduplication karar kimliği olarak korunur. Güncel runtime-schema-aligned catalog kimliği artık şudur:
 
@@ -181,7 +185,11 @@ TR: Bu bölüm `GLOBAL_DIR_R2A71_FOUR_LAYER_SEAL_READONLY` sonrasında eklenmiş
 - `merge_excess_raw_records=376`
 - `duplicate_root_domain_groups=204`
 - `runtime_validator=OK`
-- `projected_rows=2`
+- `projection_return_type=dict`
+- `projection_top_level_key_count=2`
+- `projection_top_level_keys=projected_sources,projected_seed_urls`
+- `projected_sources=696`
+- `projected_seed_urls=696`
 
 EN: Four-layer synchronization was sealed across Ubuntu Desktop, GitHub, pi51c `/logisticsearch/repo`, and pi51c live runtime `/logisticsearch/makpi51crawler`. The catalog is still candidate-only and not live. No DB insert, no frontier activation, no crawler start, no systemd mutation, and no public source URL probe occurred.
 
@@ -189,3 +197,9 @@ TR: Dört katman senkronizasyonu Ubuntu Desktop, GitHub, pi51c `/logisticsearch/
 
 Detailed final seal document: `docs/TOPIC_CRAWLER_CORE_GLOBAL_DIRECTORIES_RUNTIME_SCHEMA_AND_FOUR_LAYER_SEAL_2026_05_23.md`.
 <!-- GLOBAL_DIR_R2A72_RUNTIME_SCHEMA_FINAL_SEAL_END -->
+
+<!-- GLOBAL_DIR_R2A81B_PROJECTION_RETURN_SHAPE_CORRECTION_BEGIN -->
+EN: Earlier documentation used the shorthand `projected_rows` value `2`, but R2A80B proved that this was Python `len(...)` on a dictionary with two top-level row groups. The runtime projection return object is `dict`; its top-level keys are `projected_sources` and `projected_seed_urls`; each list contains 696 rows.
+
+TR: Önceki dokümantasyonda `projected_rows` değeri `2` şeklinde kısaltma kullanılmıştı; R2A80B bunun iki top-level row group içeren dictionary üzerinde Python `len(...)` sonucu olduğunu kanıtladı. Runtime projection return object `dict`; top-level key’ler `projected_sources` ve `projected_seed_urls`; her iki liste de 696 satır içerir.
+<!-- GLOBAL_DIR_R2A81B_PROJECTION_RETURN_SHAPE_CORRECTION_END -->
