@@ -1397,3 +1397,7 @@ Key modeling decisions:
 - `kompass.com` and `europages.com` are kept as broad root-domain global B2B source families. They are not path-restricted at crawler_core level; the first logistics-specific filtering belongs to parse_core/taxonomy filtering.
 - Wikipedia logistics search is the single exact URL exception and stays as `url_type=exact_url`.
 - ASLOG Morocco remains `HOLD_VERIFY` until the official Morocco domain is verified.
+
+## Crawler Core
+
+- TOPIC_CRAWLER_CORE_VISIT_POLICY_AND_RUNTIME_STATE_SEPARATION_2026_05_24.md - Seals static JSON visit policy vs dynamic DB/runtime visit state; documents FIATA 30-second root-domain override semantics without live runtime JSON mutation.
