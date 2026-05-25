@@ -170,6 +170,7 @@ import html
 # EN: We import hashlib because discovered canonical URLs should be hashed in the same explicit way before DB enqueue.
 # TR: Keşfedilmiş kanonik URL'ler DB enqueue öncesinde aynı açık biçimde hash'lensin diye hashlib içe aktarıyoruz.
 import hashlib
+import os
 
 # EN: We import re because this minimal first parse layer intentionally uses
 # EN: narrow standard-library regex extraction instead of a larger parser stack.
@@ -2890,6 +2891,56 @@ def enqueue_minimal_discovered_links(
 # TR: - source_note => apply_minimal_parse_entry fonksiyonunun açık parse-runtime girdi parametresidir; bu değer fonksiyonun görünür sözleşmesinin parçasıdır
 # TR: - workflow_state => apply_minimal_parse_entry fonksiyonunun açık parse-runtime girdi parametresidir; bu değer fonksiyonun görünür sözleşmesinin parçasıdır
 # TR: - workflow_state_reason => apply_minimal_parse_entry fonksiyonunun açık parse-runtime girdi parametresidir; bu değer fonksiyonun görünür sözleşmesinin parçasıdır
+
+# EN: CRAWLER_CORE_RAW_ONLY_DISCOVERY_ENQUEUE_SWITCH_R1_BEGIN
+# EN: crawler_core is a raw-fetch / queue-consumer runtime. It must not promote
+# EN: newly discovered HTML links into frontier during crawler_core tests or live
+# EN: crawl loops unless a later parse_core-controlled flow explicitly enables
+# EN: this old bridge for a dedicated parse/promotion run.
+# TR: CRAWLER_CORE_RAW_ONLY_DISCOVERY_ENQUEUE_SWITCH_R1_BEGIN
+# TR: crawler_core ham-fetch / queue-consumer runtime katmanıdır. parse_core
+# TR: kontrollü ayrı bir parse/promotion koşusu açıkça etkinleştirmediği sürece
+# TR: crawler_core testlerinde veya live crawl loop içinde yeni keşfedilen HTML
+# TR: linklerini frontier'a promote etmemelidir.
+def crawler_core_parse_discovery_enqueue_enabled() -> bool:
+    value = os.environ.get(
+        "LOGISTICSEARCH_CRAWLER_CORE_ENABLE_PARSE_DISCOVERY_ENQUEUE",
+        "",
+    ).strip().lower()
+    return value in {"1", "true", "yes", "on", "enabled"}
+
+
+def build_crawler_core_raw_only_discovery_skip_result(
+    *,
+    url_id: int,
+    raw_storage_path: str,
+    source_run_id: str,
+    source_note: str | None,
+) -> dict:
+    return {
+        "action": "enqueue_minimal_discovered_links",
+        "status": "skipped",
+        "discovery_enqueue_enabled": False,
+        "discovery_disabled_reason": "crawler_core_raw_only_boundary",
+        "boundary_contract": "crawler_core_raw_fetch_queue_consumer_only",
+        "parse_core_responsibility": "new_link_evaluation_and_queue_promotion",
+        "frontier_promotion_performed": False,
+        "normalized_url_count": 0,
+        "enqueued_url_count": 0,
+        "skipped_url_count": 0,
+        "degraded": False,
+        "url_id": int(url_id),
+        "raw_storage_path": str(raw_storage_path),
+        "source_run_id": str(source_run_id),
+        "source_note": source_note,
+        "future_parse_core_can_enable_with_env": "LOGISTICSEARCH_CRAWLER_CORE_ENABLE_PARSE_DISCOVERY_ENQUEUE=1",
+    }
+
+
+# EN: CRAWLER_CORE_RAW_ONLY_DISCOVERY_ENQUEUE_SWITCH_R1_END
+# TR: CRAWLER_CORE_RAW_ONLY_DISCOVERY_ENQUEUE_SWITCH_R1_END
+
+
 def apply_minimal_parse_entry(
     *,
     conn,
@@ -2925,13 +2976,27 @@ def apply_minimal_parse_entry(
     # EN: Expected values are dict-like success or degraded discovery receipts.
     # TR: discovery_result, minimal discovered-link enqueue köprüsünün görünür sonucunu taşır.
     # TR: Beklenen değerler dict-benzeri başarı veya degrade discovery makbuzlarıdır.
-    discovery_result = enqueue_minimal_discovered_links(
-        conn=conn,
-        url_id=url_id,
-        raw_storage_path=raw_storage_path,
-        source_run_id=source_run_id,
-        source_note=source_note,
-    )
+    # EN: crawler_core raw-only boundary: default runtime/test flow must not promote
+    # EN: newly discovered links into frontier. parse_core may explicitly enable
+    # EN: this old discovery enqueue bridge in a later dedicated parse/promotion run.
+    # TR: crawler_core raw-only sınırı: varsayılan runtime/test akışı yeni keşfedilen
+    # TR: linkleri frontier'a promote etmemelidir. parse_core ileride ayrı bir
+    # TR: parse/promotion koşusunda bu eski discovery enqueue köprüsünü açıkça açabilir.
+    if crawler_core_parse_discovery_enqueue_enabled():
+        discovery_result = enqueue_minimal_discovered_links(
+            conn=conn,
+            url_id=url_id,
+            raw_storage_path=raw_storage_path,
+            source_run_id=source_run_id,
+            source_note=source_note,
+        )
+    else:
+        discovery_result = build_crawler_core_raw_only_discovery_skip_result(
+            url_id=url_id,
+            raw_storage_path=raw_storage_path,
+            source_run_id=source_run_id,
+            source_note=source_note,
+        )
 
     # EN: We build minimal taxonomy candidates through the already-proven runtime
     # EN: taxonomy helper and its second database connection.
