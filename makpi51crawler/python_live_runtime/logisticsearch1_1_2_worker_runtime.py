@@ -601,6 +601,15 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
     error_class = "unexpected_fetch_runtime_error"
     bounded_message = str(error_message)[:4000]
 
+    # EN: RUNTIME_RETRY_WAIT_SQL_CAST_R1_BEGIN
+    # EN: PostgreSQL cannot infer parameter types inside jsonb_build_object
+    # EN: reliably when psycopg sends placeholders. Runtime retry_wait finalization
+    # EN: therefore casts receipt parameters explicitly instead of relying on
+    # EN: implicit inference.
+    # TR: RUNTIME_RETRY_WAIT_SQL_CAST_R1_BEGIN
+    # TR: PostgreSQL jsonb_build_object içindeki psycopg placeholder tiplerini
+    # TR: her zaman güvenilir çıkaramaz. Bu yüzden runtime retry_wait finalization
+    # TR: receipt parametrelerini implicit inference'a bırakmadan açık cast eder.
     cursor = conn.execute(
         """
         UPDATE frontier.url
@@ -609,8 +618,8 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
           next_fetch_at = now() + (%s::integer * interval '1 second'),
           revisit_not_before = now() + (%s::integer * interval '1 second'),
           last_fetch_finished_at = now(),
-          last_error_class = %s,
-          last_error_message = %s,
+          last_error_class = %s::text,
+          last_error_message = %s::text,
           retryable_error_count = retryable_error_count + 1,
           consecutive_error_count = consecutive_error_count + 1,
           fetch_attempt_count = fetch_attempt_count + 1,
@@ -619,9 +628,9 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
           url_metadata = COALESCE(url_metadata, '{}'::jsonb)
             || jsonb_build_object(
               'dead_policy_hardening_runtime_retry_r1', true,
-              'runtime_retry_wait_error_class', %s,
-              'runtime_retry_wait_worker_id', %s,
-              'runtime_retry_wait_after_seconds', %s,
+              'runtime_retry_wait_error_class', %s::text,
+              'runtime_retry_wait_worker_id', %s::text,
+              'runtime_retry_wait_after_seconds', %s::integer,
               'runtime_retry_wait_reason', 'non_db_runtime_acquisition_exception_not_permanent_on_first_attempt'
             )
         WHERE url_id = %s
