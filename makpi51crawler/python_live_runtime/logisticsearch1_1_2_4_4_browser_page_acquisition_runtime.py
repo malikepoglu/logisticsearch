@@ -564,6 +564,7 @@ def fetch_page_with_browser_to_raw_storage(
         raw_sha256=rendered_html_sha256,
         fetched_at=fetched_at.isoformat(),
         acquisition_method="browser",
+        claimed_url=claimed_url,
     )
 
     # EN: We return the same FetchedPageResult contract shape already used by the

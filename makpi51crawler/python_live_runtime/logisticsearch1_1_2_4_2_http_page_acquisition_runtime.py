@@ -610,6 +610,7 @@ def fetch_page_to_raw_storage(
         raw_sha256=raw_sha256,
         fetched_at=fetched_at.isoformat(),
         acquisition_method="http",
+        claimed_url=claimed_url,
     )
 
     # EN: We return one explicit structured fetch result.

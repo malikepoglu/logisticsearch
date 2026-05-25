@@ -2025,6 +2025,147 @@ def decode_raw_fetch_body_as_html_text(
         return raw_body_bytes.decode("utf-8", errors="replace"), f"utf8_replace_after_failed:{declared_encoding}"
 
 
+
+# EN: RAW_FETCH_JSON_PROVENANCE_PRESERVATION_R2_BEGIN
+# EN: crawler_core preserves queue-provided provenance inside raw fetch JSON
+# EN: evidence. This is evidence preservation only: no link promotion, no source
+# EN: scoring, no parse_core pre-ranking, no catalog mutation, and no DB schema
+# EN: mutation.
+# TR: RAW_FETCH_JSON_PROVENANCE_PRESERVATION_R2_BEGIN
+# TR: crawler_core queue tarafindan verilen provenance bilgisini raw fetch JSON
+# TR: kaniti icinde korur. Bu yalnizca kanit korumadir: link promote etmez,
+# TR: source scoring yapmaz, parse_core pre-ranking yapmaz, catalog veya DB schema
+# TR: mutate etmez.
+def _raw_fetch_json_provenance_scalar(value: object) -> object:
+    if value is None:
+        return None
+    if isinstance(value, (str, int, float, bool)):
+        return value
+    return str(value)
+
+
+def _raw_fetch_json_provenance_object(value: object) -> object:
+    if value is None:
+        return None
+    if isinstance(value, dict):
+        return {
+            str(key): _raw_fetch_json_provenance_object(item)
+            for key, item in value.items()
+        }
+    if isinstance(value, list):
+        return [_raw_fetch_json_provenance_object(item) for item in value]
+    return _raw_fetch_json_provenance_scalar(value)
+
+
+def _raw_fetch_claimed_url_value(claimed_url: object | None, key: str) -> object | None:
+    if claimed_url is None:
+        return None
+    if isinstance(claimed_url, dict):
+        return claimed_url.get(key)
+    return getattr(claimed_url, key, None)
+
+
+def _raw_fetch_claimed_url_metadata(claimed_url: object | None) -> dict[str, object]:
+    metadata = _raw_fetch_claimed_url_value(claimed_url, "url_metadata")
+    if isinstance(metadata, dict):
+        return {
+            str(key): _raw_fetch_json_provenance_object(value)
+            for key, value in metadata.items()
+        }
+
+    fallback = _raw_fetch_claimed_url_value(claimed_url, "metadata")
+    if isinstance(fallback, dict):
+        return {
+            str(key): _raw_fetch_json_provenance_object(value)
+            for key, value in fallback.items()
+        }
+
+    return {}
+
+
+def build_raw_fetch_json_provenance_payload(
+    *,
+    claimed_url: object | None,
+) -> dict[str, object]:
+    metadata = _raw_fetch_claimed_url_metadata(claimed_url)
+
+    canonical_url = _raw_fetch_claimed_url_value(claimed_url, "canonical_url")
+    source_id = _raw_fetch_claimed_url_value(claimed_url, "source_id") or metadata.get("source_id")
+    seed_id = _raw_fetch_claimed_url_value(claimed_url, "seed_id") or metadata.get("seed_id")
+    host_id = _raw_fetch_claimed_url_value(claimed_url, "host_id") or metadata.get("host_id")
+    parent_url_id = _raw_fetch_claimed_url_value(claimed_url, "parent_url_id") or metadata.get("parent_url_id")
+    discovery_type = _raw_fetch_claimed_url_value(claimed_url, "discovery_type") or metadata.get("discovery_type")
+
+    if claimed_url is None and not metadata:
+        return {}
+
+    queue_provenance = {
+        "schema_version": "queue_provenance.v1",
+        "catalog_file": metadata.get("catalog_file"),
+        "catalog_code": metadata.get("catalog_code"),
+        "language_code": metadata.get("language_code"),
+        "source_family_code": metadata.get("source_family_code"),
+        "surface_code": metadata.get("surface_code"),
+        "seed_index": metadata.get("seed_index"),
+        "catalog_index": metadata.get("catalog_index"),
+        "catalog_url_index": metadata.get("catalog_url_index"),
+        "global_url_index": metadata.get("global_url_index"),
+        "global_seen_index": metadata.get("global_seen_index"),
+        "duplicate_policy": metadata.get("duplicate_policy"),
+        "activation_profile": metadata.get("activation_profile"),
+        "normalized_root_domain": metadata.get("normalized_root_domain"),
+        "min_delay_ms": metadata.get("min_delay_ms"),
+        "min_visit_interval_seconds": metadata.get("min_visit_interval_seconds"),
+    }
+
+    source_provenance = {
+        "schema_version": "source_provenance.v1",
+        "source_id": _raw_fetch_json_provenance_scalar(source_id),
+        "seed_id": _raw_fetch_json_provenance_scalar(seed_id),
+        "host_id": _raw_fetch_json_provenance_scalar(host_id),
+        "source_catalog_file": metadata.get("catalog_file"),
+        "source_catalog_code": metadata.get("catalog_code"),
+        "source_language_code": metadata.get("language_code"),
+        "source_family_code": metadata.get("source_family_code"),
+        "source_surface_code": metadata.get("surface_code"),
+    }
+
+    parent_canonical_url = (
+        metadata.get("parent_canonical_url")
+        or metadata.get("discovered_from_canonical_url")
+        or metadata.get("referrer_url")
+        or metadata.get("referer_url")
+    )
+
+    referrer_provenance = {
+        "schema_version": "referrer_provenance.v1",
+        "parent_url_id": _raw_fetch_json_provenance_scalar(parent_url_id),
+        "parent_canonical_url": _raw_fetch_json_provenance_scalar(parent_canonical_url),
+        "referrer_url": _raw_fetch_json_provenance_scalar(metadata.get("referrer_url") or parent_canonical_url),
+        "referer_url": _raw_fetch_json_provenance_scalar(metadata.get("referer_url") or parent_canonical_url),
+        "root_seed_url_id": _raw_fetch_json_provenance_scalar(metadata.get("root_seed_url_id")),
+        "root_seed_canonical_url": _raw_fetch_json_provenance_scalar(metadata.get("root_seed_canonical_url")),
+    }
+
+    return {
+        "canonical_url": _raw_fetch_json_provenance_scalar(canonical_url),
+        "source_id": _raw_fetch_json_provenance_scalar(source_id),
+        "seed_id": _raw_fetch_json_provenance_scalar(seed_id),
+        "host_id": _raw_fetch_json_provenance_scalar(host_id),
+        "parent_url_id": _raw_fetch_json_provenance_scalar(parent_url_id),
+        "discovery_type": _raw_fetch_json_provenance_scalar(discovery_type),
+        "url_metadata": _raw_fetch_json_provenance_object(metadata),
+        "queue_provenance": _raw_fetch_json_provenance_object(queue_provenance),
+        "source_provenance": _raw_fetch_json_provenance_object(source_provenance),
+        "referrer_provenance": _raw_fetch_json_provenance_object(referrer_provenance),
+        "raw_evidence_provenance_preservation_r2": True,
+    }
+
+
+# EN: RAW_FETCH_JSON_PROVENANCE_PRESERVATION_R2_END
+# TR: RAW_FETCH_JSON_PROVENANCE_PRESERVATION_R2_END
+
+
 def build_raw_fetch_json_zstd_envelope(
     *,
     url_id: int,
@@ -2039,6 +2180,7 @@ def build_raw_fetch_json_zstd_envelope(
     raw_sha256: str,
     fetched_at: str,
     acquisition_method: str,
+    claimed_url: object | None = None,
 ) -> tuple[dict[str, object], bytes]:
     # EN: The envelope keeps decoded HTML with tags for inspection while the raw
     # EN: body artefact remains the durable byte-for-byte source of truth.
@@ -2091,6 +2233,12 @@ def build_raw_fetch_json_zstd_envelope(
         },
     }
 
+    provenance_payload = build_raw_fetch_json_provenance_payload(
+        claimed_url=claimed_url,
+    )
+    if provenance_payload:
+        envelope.update(provenance_payload)
+
     raw_json_bytes = json.dumps(
         envelope,
         ensure_ascii=False,
@@ -2121,6 +2269,7 @@ def _write_raw_fetch_json_zstd_envelope_compressed_only_v1(
     raw_sha256: str,
     fetched_at: str,
     acquisition_method: str,
+    claimed_url: object | None = None,
 ) -> str:
     # EN: This function writes a compressed JSON sidecar beside the existing raw
     # EN: evidence file. The original raw evidence path remains unchanged.
@@ -2145,6 +2294,7 @@ def _write_raw_fetch_json_zstd_envelope_compressed_only_v1(
         raw_sha256=raw_sha256,
         fetched_at=fetched_at,
         acquisition_method=acquisition_method,
+        claimed_url=claimed_url,
     )
 
     temp_sidecar_path = sidecar_path.with_name(sidecar_path.name + ".tmp")
