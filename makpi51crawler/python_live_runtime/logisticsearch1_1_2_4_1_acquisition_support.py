@@ -2057,30 +2057,83 @@ def _raw_fetch_json_provenance_object(value: object) -> object:
     return _raw_fetch_json_provenance_scalar(value)
 
 
+# EN: RAW_FETCH_JSON_PROVENANCE_MAPPING_ACCESSOR_R1_BEGIN
+# EN: Real claimed_url rows can be plain dicts, psycopg mapping-like rows, or
+# EN: small runtime objects. Preserve provenance from all mapping-like shapes.
+# TR: RAW_FETCH_JSON_PROVENANCE_MAPPING_ACCESSOR_R1_BEGIN
+# TR: Gercek claimed_url satirlari duz dict, psycopg mapping-benzeri row veya
+# TR: kucuk runtime object olabilir. Provenance bilgisini tum mapping-benzeri
+# TR: sekillerden koru.
 def _raw_fetch_claimed_url_value(claimed_url: object | None, key: str) -> object | None:
     if claimed_url is None:
         return None
+
     if isinstance(claimed_url, dict):
         return claimed_url.get(key)
+
+    getter = getattr(claimed_url, "get", None)
+    if callable(getter):
+        try:
+            return getter(key)
+        except Exception:
+            pass
+
+    try:
+        return claimed_url[key]  # type: ignore[index]
+    except Exception:
+        pass
+
     return getattr(claimed_url, key, None)
 
 
-def _raw_fetch_claimed_url_metadata(claimed_url: object | None) -> dict[str, object]:
-    metadata = _raw_fetch_claimed_url_value(claimed_url, "url_metadata")
-    if isinstance(metadata, dict):
-        return {
-            str(key): _raw_fetch_json_provenance_object(value)
-            for key, value in metadata.items()
-        }
+def _raw_fetch_provenance_mapping_to_dict(value: object) -> dict[str, object]:
+    if value is None:
+        return {}
 
-    fallback = _raw_fetch_claimed_url_value(claimed_url, "metadata")
-    if isinstance(fallback, dict):
-        return {
-            str(key): _raw_fetch_json_provenance_object(value)
-            for key, value in fallback.items()
-        }
+    if isinstance(value, str):
+        try:
+            decoded = json.loads(value)
+        except Exception:
+            return {}
+        return _raw_fetch_provenance_mapping_to_dict(decoded)
+
+    if isinstance(value, dict):
+        items_callable = value.items
+    else:
+        items_callable = getattr(value, "items", None)
+
+    if not callable(items_callable):
+        return {}
+
+    try:
+        items_iterable = items_callable()
+    except Exception:
+        return {}
+
+    return {
+        str(key): _raw_fetch_json_provenance_object(item)
+        for key, item in items_iterable
+    }
+
+
+def _raw_fetch_claimed_url_metadata(claimed_url: object | None) -> dict[str, object]:
+    metadata = _raw_fetch_provenance_mapping_to_dict(
+        _raw_fetch_claimed_url_value(claimed_url, "url_metadata")
+    )
+    if metadata:
+        return metadata
+
+    fallback = _raw_fetch_provenance_mapping_to_dict(
+        _raw_fetch_claimed_url_value(claimed_url, "metadata")
+    )
+    if fallback:
+        return fallback
 
     return {}
+
+
+# EN: RAW_FETCH_JSON_PROVENANCE_MAPPING_ACCESSOR_R1_END
+# TR: RAW_FETCH_JSON_PROVENANCE_MAPPING_ACCESSOR_R1_END
 
 
 def build_raw_fetch_json_provenance_payload(
