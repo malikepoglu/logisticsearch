@@ -1401,3 +1401,7 @@ Key modeling decisions:
 ## Crawler Core
 
 - TOPIC_CRAWLER_CORE_VISIT_POLICY_AND_RUNTIME_STATE_SEPARATION_2026_05_24.md - Seals static JSON visit policy vs dynamic DB/runtime visit state; documents FIATA 30-second root-domain override semantics without live runtime JSON mutation.
+
+## Crawler_Core Raw-Only Boundary / Queue Contract
+
+- [Crawler_Core Raw-Only Boundary and Future Queue Contract](TOPIC_CRAWLER_CORE_RAW_ONLY_AND_QUEUE_BOUNDARY_2026_05_25.md) — defines the responsibility boundary: crawler_core fetches raw evidence from startpoints/future queue; parse_core evaluates/promotes new queue links; desktop_import applies final ranking.
