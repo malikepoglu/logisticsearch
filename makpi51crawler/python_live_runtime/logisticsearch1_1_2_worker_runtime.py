@@ -581,6 +581,30 @@ def _logisticsearch_classify_browser_runtime_error(
         return "runtime_transport_retryable_error", True
 
     return "unexpected_fetch_runtime_error", False
+
+# RETRY_WAIT_BACKOFF_POLICY_R3_BEGIN
+def _logisticsearch_runtime_exception_retry_after_seconds(error_class: str | None) -> int:
+    """Return conservative retry_wait backoff for browser/runtime acquisition errors.
+
+    EN: DNS, SSL, certificate and browser protocol failures are usually not
+    fixed by retrying every few minutes.
+    TR: DNS, SSL, sertifika ve browser protokol hataları çoğu zaman birkaç
+    dakikada bir tekrar denemeyle düzelmez.
+    """
+
+    policy = {
+        "browser_dns_name_not_resolved": 86400,
+        "browser_ssl_version_or_cipher_mismatch": 604800,
+        "browser_ssl_protocol_error": 604800,
+        "browser_cert_common_name_invalid": 604800,
+        "browser_cert_date_invalid": 604800,
+        "browser_http2_protocol_error": 21600,
+        "browser_navigation_timeout": 21600,
+        "runtime_transport_retryable_error": 1800,
+    }
+    return int(policy.get(str(error_class or ""), 1800))
+# RETRY_WAIT_BACKOFF_POLICY_R3_END
+
 # PLAYWRIGHT_BROWSER_ERROR_CLASSIFICATION_R2_END
 
 
@@ -648,6 +672,7 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
     error_class = _logisticsearch_classify_browser_runtime_error(
         error_message=error_message,
     )[0]
+    retry_after_seconds = _logisticsearch_runtime_exception_retry_after_seconds(error_class)
     # RETRY_WAIT_EVIDENCE_AND_LABEL_R1_BEGIN
     # EN: retry_wait receipts must not claim they came from permanent finalize.
     # EN: This branch handles recoverable browser/runtime acquisition exceptions.
@@ -695,7 +720,8 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
               'runtime_retry_wait_fetch_attempt_row_created', false,
               'runtime_retry_wait_fetch_attempt_row_reason', 'runtime_exception_before_terminal_fetch_attempt_log',
               'runtime_retry_wait_frontier_fetch_attempt_count_incremented', false,
-              'runtime_retry_wait_counter_policy', 'claim_increment_only_no_second_increment'
+              'runtime_retry_wait_counter_policy', 'claim_increment_only_no_second_increment',
+              'runtime_retry_wait_backoff_policy', 'class_based_runtime_exception_backoff_v3'
             )
         WHERE url_id = %s
           AND lease_token = %s
