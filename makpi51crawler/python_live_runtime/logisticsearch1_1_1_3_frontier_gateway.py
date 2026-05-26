@@ -300,7 +300,7 @@ def _frontier_enrich_claimed_row_with_provenance(
               parent_url_id,
               discovery_type::text AS discovery_type,
               url_metadata,
-              metadata
+              url_metadata AS metadata
             FROM frontier.url
             WHERE url_id = %(url_id)s
             """,
