@@ -648,7 +648,19 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
     error_class = _logisticsearch_classify_browser_runtime_error(
         error_message=error_message,
     )[0]
-    bounded_message = str(error_message)[:4000]
+    # RETRY_WAIT_EVIDENCE_AND_LABEL_R1_BEGIN
+    # EN: retry_wait receipts must not claim they came from permanent finalize.
+    # EN: This branch handles recoverable browser/runtime acquisition exceptions.
+    # TR: retry_wait kanıtları permanent finalize kaynaklıymış gibi görünmemelidir.
+    # TR: Bu dal toparlanabilir browser/runtime acquisition exception durumlarını işler.
+    bounded_message = (
+        str(error_message)
+        .replace(
+            "frontier_permanent_error_finalize_r1=",
+            "frontier_runtime_exception_retry_wait_r1=",
+        )
+    )[:4000]
+    # RETRY_WAIT_EVIDENCE_AND_LABEL_R1_END
 
     # EN: RUNTIME_RETRY_WAIT_SQL_CAST_R1_BEGIN
     # EN: PostgreSQL cannot infer parameter types inside jsonb_build_object
@@ -671,7 +683,6 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
           last_error_message = %s::text,
           retryable_error_count = retryable_error_count + 1,
           consecutive_error_count = consecutive_error_count + 1,
-          fetch_attempt_count = fetch_attempt_count + 1,
           lease_token = NULL,
           updated_at = now(),
           url_metadata = COALESCE(url_metadata, '{}'::jsonb)
@@ -680,7 +691,11 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
               'runtime_retry_wait_error_class', %s::text,
               'runtime_retry_wait_worker_id', %s::text,
               'runtime_retry_wait_after_seconds', %s::integer,
-              'runtime_retry_wait_reason', 'non_db_runtime_acquisition_exception_not_permanent_on_first_attempt'
+              'runtime_retry_wait_reason', 'non_db_runtime_acquisition_exception_not_permanent_on_first_attempt',
+              'runtime_retry_wait_fetch_attempt_row_created', false,
+              'runtime_retry_wait_fetch_attempt_row_reason', 'runtime_exception_before_terminal_fetch_attempt_log',
+              'runtime_retry_wait_frontier_fetch_attempt_count_incremented', false,
+              'runtime_retry_wait_counter_policy', 'claim_increment_only_no_second_increment'
             )
         WHERE url_id = %s
           AND lease_token = %s
