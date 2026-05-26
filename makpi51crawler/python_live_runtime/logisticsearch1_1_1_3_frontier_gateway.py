@@ -212,6 +212,123 @@ from .logisticsearch1_1_1_1_gateway_support import ClaimedUrl, _row_to_claimed_u
 # TR: - conn => claim_next_url fonksiyonunun açık frontier-gateway girdi parametresidir; bu değer fonksiyonun görünür DB-helper sözleşmesinin parçasıdır
 # TR: - worker_id => claim_next_url fonksiyonunun açık frontier-gateway girdi parametresidir; bu değer fonksiyonun görünür DB-helper sözleşmesinin parçasıdır
 # TR: - lease_seconds => claim_next_url fonksiyonunun açık frontier-gateway girdi parametresidir; bu değer fonksiyonun görünür DB-helper sözleşmesinin parçasıdır
+# EN: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_BEGIN
+# EN: The SQL claim function returns lease/scheduling fields. Raw evidence also
+# EN: needs source_id, seed_id, discovery_type and url_metadata. This helper
+# EN: enriches the transient Python payload from frontier.url by url_id inside
+# EN: the existing transaction. It performs SELECT only.
+# TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_BEGIN
+# TR: SQL claim fonksiyonu lease/scheduling alanlarını döndürür. Raw kanıt ayrıca
+# TR: source_id, seed_id, discovery_type ve url_metadata ister. Bu yardımcı mevcut
+# TR: transaction içinde url_id ile frontier.url üzerinden geçici Python payload'ını
+# TR: zenginleştirir. Sadece SELECT yapar.
+def _frontier_claim_payload_get_optional(row: object, key: str) -> object | None:
+    if row is None:
+        return None
+    if isinstance(row, dict):
+        return row.get(key)
+
+    getter = getattr(row, "get", None)
+    if callable(getter):
+        try:
+            return getter(key)
+        except Exception:
+            pass
+
+    try:
+        return row[key]  # type: ignore[index]
+    except Exception:
+        pass
+
+    return getattr(row, key, None)
+
+
+def _frontier_claim_payload_as_dict(row: object) -> dict[str, object]:
+    if isinstance(row, dict):
+        return dict(row)
+
+    keys_callable = getattr(row, "keys", None)
+    if callable(keys_callable):
+        try:
+            return {
+                str(key): _frontier_claim_payload_get_optional(row, str(key))
+                for key in keys_callable()
+            }
+        except Exception:
+            pass
+
+    payload: dict[str, object] = {}
+    for key in (
+        "url_id",
+        "canonical_url",
+        "scheme",
+        "host",
+        "port",
+        "url_path",
+        "url_query",
+        "host_id",
+        "authority_key",
+        "robots_mode",
+        "user_agent_token",
+        "score",
+        "depth",
+        "priority",
+        "lease_token",
+        "lease_expires_at",
+    ):
+        value = _frontier_claim_payload_get_optional(row, key)
+        if value is not None:
+            payload[key] = value
+    return payload
+
+
+def _frontier_enrich_claimed_row_with_provenance(
+    conn: psycopg.Connection,
+    row: object,
+) -> dict[str, object]:
+    payload = _frontier_claim_payload_as_dict(row)
+    url_id = payload.get("url_id")
+    if url_id is None:
+        return payload
+
+    with conn.cursor(row_factory=dict_row) as cur:
+        cur.execute(
+            """
+            SELECT
+              source_id,
+              seed_id,
+              parent_url_id,
+              discovery_type::text AS discovery_type,
+              url_metadata,
+              metadata
+            FROM frontier.url
+            WHERE url_id = %(url_id)s
+            """,
+            {"url_id": url_id},
+        )
+        provenance_row = cur.fetchone()
+
+    if provenance_row is None:
+        return payload
+
+    payload["source_id"] = (
+        None if provenance_row.get("source_id") is None else str(provenance_row.get("source_id"))
+    )
+    payload["seed_id"] = (
+        None if provenance_row.get("seed_id") is None else str(provenance_row.get("seed_id"))
+    )
+    payload["parent_url_id"] = provenance_row.get("parent_url_id")
+    payload["discovery_type"] = provenance_row.get("discovery_type")
+    payload["url_metadata"] = provenance_row.get("url_metadata")
+    payload["metadata"] = provenance_row.get("metadata")
+
+    return payload
+
+
+# EN: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_END
+# TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_END
+
+
 def claim_next_url(
     conn: psycopg.Connection,
     worker_id: str,
@@ -255,9 +372,19 @@ def claim_next_url(
         # TR: Python tarafında iş-yok durumunu açık hale getirmek için None döndürüyoruz.
         return None
 
+    # EN: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_BEGIN
+    # EN: Enrich the transient claimed_url payload with provenance from frontier.url
+    # EN: before the worker/acquisition path writes raw evidence.
+    # TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_BEGIN
+    # TR: Worker/acquisition yolu raw kanıt yazmadan önce geçici claimed_url
+    # TR: payload'ını frontier.url provenance bilgisiyle zenginleştir.
+    enriched_row = _frontier_enrich_claimed_row_with_provenance(conn, row)
+
     # EN: If a row exists, we convert it into our strongly-shaped Python object.
     # TR: Satır varsa onu şekli net Python nesnemize dönüştürüyoruz.
-    return _row_to_claimed_url(row)
+    return _row_to_claimed_url(enriched_row)
+    # EN: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_END
+    # TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_END
 
 
 

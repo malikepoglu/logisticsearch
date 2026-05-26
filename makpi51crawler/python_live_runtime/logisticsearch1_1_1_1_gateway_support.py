@@ -359,6 +359,19 @@ class ClaimedUrl:
     # TR: robots_mode host-seviyesi robots davranış modu metnini taşır.
     robots_mode: str
 
+    # EN: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_SUPPORT_R3_BEGIN
+    # EN: Optional provenance fields carried from frontier.url to raw evidence.
+    # TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_SUPPORT_R3_BEGIN
+    # TR: frontier.url içinden raw kanıta taşınan opsiyonel provenance alanları.
+    source_id: str | None = None
+    seed_id: str | None = None
+    parent_url_id: int | None = None
+    discovery_type: str | None = None
+    url_metadata: dict[str, object] | None = None
+    metadata: dict[str, object] | None = None
+    # EN: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_SUPPORT_R3_END
+    # TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_SUPPORT_R3_END
+
 
 
 # EN: CONNECTION HELPER PURPOSE MEMORY BLOCK V4 / connect_db
@@ -505,6 +518,70 @@ def connect_db(dsn: str) -> psycopg.Connection:
 # TR: - row tek bir claim edilmiş iş öğesini zaten taşıyan dict-benzeri DB payload'ıdır
 # TR: Kabul edilen çıktı:
 # TR: - ClaimedUrl nesnesi
+# EN: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_SUPPORT_R3_BEGIN
+# EN: These helpers let _row_to_claimed_url accept dict-like rows carrying
+# EN: queue/source/referrer provenance without changing DB schema.
+# TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_SUPPORT_R3_BEGIN
+# TR: Bu yardımcılar _row_to_claimed_url fonksiyonunun DB schema değiştirmeden
+# TR: queue/source/referrer provenance taşıyan dict-benzeri satırları kabul etmesini sağlar.
+def _gateway_claim_row_get_optional(row: object, key: str) -> object | None:
+    if row is None:
+        return None
+    if isinstance(row, dict):
+        return row.get(key)
+
+    getter = getattr(row, "get", None)
+    if callable(getter):
+        try:
+            return getter(key)
+        except Exception:
+            pass
+
+    try:
+        return row[key]  # type: ignore[index]
+    except Exception:
+        pass
+
+    return getattr(row, key, None)
+
+
+def _gateway_claim_row_optional_str(row: object, key: str) -> str | None:
+    value = _gateway_claim_row_get_optional(row, key)
+    if value is None:
+        return None
+    return str(value)
+
+
+def _gateway_claim_row_optional_int(row: object, key: str) -> int | None:
+    value = _gateway_claim_row_get_optional(row, key)
+    if value is None:
+        return None
+    return int(value)
+
+
+def _gateway_claim_row_mapping_to_dict(value: object | None) -> dict[str, object] | None:
+    if value is None:
+        return None
+
+    if isinstance(value, dict):
+        return {str(key): item for key, item in value.items()}
+
+    items_callable = getattr(value, "items", None)
+    if not callable(items_callable):
+        return None
+
+    try:
+        items_iterable = items_callable()
+    except Exception:
+        return None
+
+    return {str(key): item for key, item in items_iterable}
+
+
+# EN: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_SUPPORT_R3_END
+# TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_SUPPORT_R3_END
+
+
 def _row_to_claimed_url(row: dict[str, Any]) -> ClaimedUrl:
     """
     EN:
@@ -567,6 +644,16 @@ def _row_to_claimed_url(row: dict[str, Any]) -> ClaimedUrl:
         authority_key=row["authority_key"],
         user_agent_token=row["user_agent_token"],
         robots_mode=row["robots_mode"],
+        source_id=_gateway_claim_row_optional_str(row, "source_id"),
+        seed_id=_gateway_claim_row_optional_str(row, "seed_id"),
+        parent_url_id=_gateway_claim_row_optional_int(row, "parent_url_id"),
+        discovery_type=_gateway_claim_row_optional_str(row, "discovery_type"),
+        url_metadata=_gateway_claim_row_mapping_to_dict(
+            _gateway_claim_row_get_optional(row, "url_metadata")
+        ),
+        metadata=_gateway_claim_row_mapping_to_dict(
+            _gateway_claim_row_get_optional(row, "metadata")
+        ),
     )
     return claimed_url
 
