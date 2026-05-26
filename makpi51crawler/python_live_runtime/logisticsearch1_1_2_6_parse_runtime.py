@@ -918,11 +918,34 @@ def extract_visible_text_from_html(html_text: str) -> str:
 # TR: Parametre sözleşmesi:
 # TR: - query_text => build_query_item fonksiyonunun açık parse-runtime girdi parametresidir; bu değer fonksiyonun görünür sözleşmesinin parçasıdır
 # TR: - field_name => build_query_item fonksiyonunun açık parse-runtime girdi parametresidir; bu değer fonksiyonun görünür sözleşmesinin parçasıdır
+
+# CRAWLER_CORE_PG_SAFE_QUERY_TEXT_R1_BEGIN
+def _crawler_core_pg_safe_query_text(value: object, *, max_chars: int = 4000) -> str:
+    """Return PostgreSQL/jsonb-safe crawler text without NUL/control bytes."""
+    if value is None:
+        return ""
+    text = value if isinstance(value, str) else str(value)
+    cleaned: list[str] = []
+    for ch in text:
+        code = ord(ch)
+        if code == 0:
+            cleaned.append(" ")
+        elif code < 32 and ch not in ("\n", "\r", "\t"):
+            cleaned.append(" ")
+        else:
+            cleaned.append(ch)
+    safe = "".join(cleaned)
+    if len(safe) > max_chars:
+        return safe[:max_chars] + "...[truncated]"
+    return safe
+# CRAWLER_CORE_PG_SAFE_QUERY_TEXT_R1_END
+
+
 def build_query_item(*, query_text: str, field_name: str) -> dict:
     # EN: We keep the structure deliberately simple and explicit for the first parse layer.
     # TR: İlk parse katmanı için yapıyı bilinçli olarak sade ve açık tutuyoruz.
     return {
-        "query_text": query_text,
+        "query_text": _crawler_core_pg_safe_query_text(query_text),
         "field_name": field_name,
         "source": "minimal_parse_runtime",
     }

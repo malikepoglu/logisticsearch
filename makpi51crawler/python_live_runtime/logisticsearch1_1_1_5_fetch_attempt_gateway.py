@@ -424,6 +424,58 @@ from psycopg.rows import dict_row
 # TR: REAL-RULE AST REPAIR / FONKSIYON log_fetch_attempt_terminal
 # TR: log_fetch_attempt_terminal acik bir fetch-attempt-gateway helper/runtime sozlesmesidir.
 # TR: Burada acik tutulan parametreler: conn, url_id, host_id, worker_id, request_url, outcome, fetch_kind, lease_token, request_method, final_url, http_status, content_type, content_length, body_storage_path, body_sha256, body_bytes, etag, last_modified, error_class, error_message, fetch_metadata.
+
+# FETCH_ATTEMPT_PG_SAFE_JSON_TEXT_R1_BEGIN
+def _fetch_attempt_pg_safe_text(value: object, *, max_chars: int = 4000) -> str | None:
+    """Return PostgreSQL/jsonb-safe text; removes NUL and unsafe C0 controls."""
+    if value is None:
+        return None
+    text = value if isinstance(value, str) else str(value)
+    cleaned: list[str] = []
+    for ch in text:
+        code = ord(ch)
+        if code == 0:
+            cleaned.append(" ")
+        elif code < 32 and ch not in ("\n", "\r", "\t"):
+            cleaned.append(" ")
+        else:
+            cleaned.append(ch)
+    safe = "".join(cleaned)
+    if len(safe) > max_chars:
+        return safe[:max_chars] + "...[truncated]"
+    return safe
+
+
+def _fetch_attempt_pg_safe_json(value: object, *, max_depth: int = 20) -> object:
+    """Return a jsonb-safe object recursively without NUL/control text."""
+    if max_depth <= 0:
+        return _fetch_attempt_pg_safe_text(type(value).__name__, max_chars=200)
+
+    if value is None or isinstance(value, (bool, int, float)):
+        return value
+
+    if isinstance(value, str):
+        return _fetch_attempt_pg_safe_text(value)
+
+    if isinstance(value, dict):
+        cleaned: dict[str, object] = {}
+        for key, item in value.items():
+            safe_key = _fetch_attempt_pg_safe_text(key, max_chars=300)
+            if not safe_key:
+                safe_key = "empty_key"
+            cleaned[safe_key] = _fetch_attempt_pg_safe_json(item, max_depth=max_depth - 1)
+        return cleaned
+
+    if isinstance(value, (list, tuple, set)):
+        return [
+            _fetch_attempt_pg_safe_json(item, max_depth=max_depth - 1)
+            for item in value
+        ]
+
+    return _fetch_attempt_pg_safe_text(value)
+# FETCH_ATTEMPT_PG_SAFE_JSON_TEXT_R1_END
+
+
 def log_fetch_attempt_terminal(
     conn: psycopg.Connection,
     *,
@@ -520,8 +572,10 @@ def log_fetch_attempt_terminal(
                 "etag": etag,
                 "last_modified": last_modified,
                 "error_class": error_class,
-                "error_message": error_message,
-                "fetch_metadata": psycopg.types.json.Jsonb(fetch_metadata or {}),
+                "error_message": _fetch_attempt_pg_safe_text(error_message),
+                "fetch_metadata": psycopg.types.json.Jsonb(
+                    _fetch_attempt_pg_safe_json(fetch_metadata or {})
+                ),
             },
         )
 
