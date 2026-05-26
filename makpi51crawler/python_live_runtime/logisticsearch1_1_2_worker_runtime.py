@@ -522,6 +522,68 @@ def _logisticsearch_extract_claimed_url_value(claimed_url: object, key: str) -> 
     return getattr(claimed_url, key, None)
 
 
+# PLAYWRIGHT_BROWSER_ERROR_CLASSIFICATION_R2_BEGIN
+def _logisticsearch_classify_browser_runtime_error(
+    *,
+    exc: BaseException | None = None,
+    error_message: str,
+) -> tuple[str, bool]:
+    """Return a deterministic crawler_core runtime error class and retry policy.
+
+    EN: Browser/navigation failures are ordinary web-crawl facts, not unknown
+    drift. This helper keeps the retry_wait receipt specific enough for later
+    audits and Parse_Core pre-ranking.
+    TR: Browser/navigation hataları sıradan web-crawl gerçekleridir, bilinmeyen
+    drift değildir. Bu helper retry_wait kanıtını sonraki audit ve Parse_Core
+    pre-ranking için yeterince özgül tutar.
+    """
+
+    exception_name = "" if exc is None else type(exc).__name__.lower()
+    exception_module = "" if exc is None else type(exc).__module__.lower()
+    evidence = f"{exception_module} {exception_name} {error_message}".lower()
+
+    browser_patterns: tuple[tuple[str, str, bool], ...] = (
+        ("err_ssl_version_or_cipher_mismatch", "browser_ssl_version_or_cipher_mismatch", True),
+        ("err_ssl_protocol_error", "browser_ssl_protocol_error", True),
+        ("err_cert_common_name_invalid", "browser_cert_common_name_invalid", True),
+        ("err_cert_date_invalid", "browser_cert_date_invalid", True),
+        ("err_name_not_resolved", "browser_dns_name_not_resolved", True),
+        ("err_http2_protocol_error", "browser_http2_protocol_error", True),
+        ("timeout 30000ms exceeded", "browser_navigation_timeout", True),
+        ("page.goto: timeout", "browser_navigation_timeout", True),
+        ("net::err_connection_reset", "browser_connection_reset", True),
+        ("net::err_connection_closed", "browser_connection_closed", True),
+        ("net::err_connection_refused", "browser_connection_refused", True),
+        ("net::err_timed_out", "browser_network_timeout", True),
+        ("net::err_too_many_redirects", "browser_too_many_redirects", True),
+    )
+
+    for raw_pattern, error_class, retryable in browser_patterns:
+        if raw_pattern in evidence:
+            return error_class, retryable
+
+    if "playwright" in evidence or "page.goto" in evidence:
+        return "browser_navigation_error", True
+
+    retryable_runtime_needles = (
+        "timeouterror",
+        "timeout",
+        "temporarily unavailable",
+        "connection reset",
+        "connection aborted",
+        "connection refused",
+        "network",
+        "urlerror",
+        "socket.timeout",
+    )
+
+    if any(needle in evidence for needle in retryable_runtime_needles):
+        return "runtime_transport_retryable_error", True
+
+    return "unexpected_fetch_runtime_error", False
+# PLAYWRIGHT_BROWSER_ERROR_CLASSIFICATION_R2_END
+
+
 def _logisticsearch_runtime_exception_should_retry_wait(
     *,
     exc: BaseException,
@@ -540,26 +602,11 @@ def _logisticsearch_runtime_exception_should_retry_wait(
     görünür kanıtla retry_wait olmalıdır.
     """
 
-    exception_name = type(exc).__name__.lower()
-    exception_module = type(exc).__module__.lower()
-    evidence = f"{exception_module} {exception_name} {error_message}".lower()
-
-    retry_needles = (
-        "timeouterror",
-        "timeout",
-        "page.goto",
-        "net::err_ssl",
-        "ssl_version_or_cipher_mismatch",
-        "err_connection",
-        "err_timed_out",
-        "err_name_not_resolved",
-        "err_network",
-        "playwright",
-        "urlerror",
-        "socket.timeout",
+    _error_class, retryable = _logisticsearch_classify_browser_runtime_error(
+        exc=exc,
+        error_message=error_message,
     )
-
-    return any(needle in evidence for needle in retry_needles)
+    return retryable
 
 
 def _logisticsearch_finish_runtime_exception_retry_wait(
@@ -598,7 +645,9 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
     lease_token = _logisticsearch_extract_claimed_url_value(claimed_url, "lease_token")
 
     retry_after_seconds = 300
-    error_class = "unexpected_fetch_runtime_error"
+    error_class = _logisticsearch_classify_browser_runtime_error(
+        error_message=error_message,
+    )[0]
     bounded_message = str(error_message)[:4000]
 
     # EN: RUNTIME_RETRY_WAIT_SQL_CAST_R1_BEGIN
