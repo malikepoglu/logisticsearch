@@ -325,6 +325,22 @@ from pathlib import Path
 # TR: açık ayrımı korumalıdır; bu yüzden socket ile birlikte HTTPError ve URLError
 # TR: içe aktarıyoruz.
 import socket
+# ROBOTS_TXT_REMOTE_DISCONNECTED_TRANSPORT_R1_BEGIN
+# EN: robots.txt fetch uses urllib/http.client underneath; upstream close/reset
+# EN: events must return structured robots transport evidence, not crash the
+# EN: crawler loop. This keeps crawler_core deterministic for parse_core.
+# TR: robots.txt fetch altta urllib/http.client kullanır; upstream kapanma/reset
+# TR: olayları crawler loop'u düşürmemeli, yapılı robots transport kanıtı
+# TR: döndürmelidir. Bu parse_core için crawler_core'u deterministik tutar.
+from http.client import (
+    BadStatusLine,
+    CannotSendRequest,
+    IncompleteRead,
+    RemoteDisconnected,
+    ResponseNotReady,
+)
+# ROBOTS_TXT_REMOTE_DISCONNECTED_TRANSPORT_R1_END
+
 from urllib.error import HTTPError, URLError
 
 # EN: We import Request and urlopen from the standard library so this robots child
@@ -1276,7 +1292,19 @@ def fetch_robots_txt_to_raw_storage(
         # TR: - aşağıdaki dal kontrolleri tamamlanmadan başarı anlamı yüklemek
         body = exc.read()
 
-    except (URLError, TimeoutError, socket.timeout) as exc:
+    except (
+        URLError,
+        RemoteDisconnected,
+        BadStatusLine,
+        IncompleteRead,
+        CannotSendRequest,
+        ResponseNotReady,
+        TimeoutError,
+        socket.timeout,
+        ConnectionResetError,
+        ConnectionAbortedError,
+        ConnectionRefusedError,
+    ) as exc:
         # EN: Transport-class failures produce no reliable HTTP cache truth, so we
         # EN: return a structured non-body result and let the caller decide cache_state.
         # TR: Taşıma-sınıfı hatalar güvenilir HTTP cache doğrusu üretmez; bu yüzden
