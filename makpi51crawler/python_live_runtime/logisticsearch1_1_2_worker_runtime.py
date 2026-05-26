@@ -169,6 +169,16 @@ from datetime import datetime, timezone
 # TR: sınıflandırıldığı için socket içe aktarıyoruz.
 import socket
 
+# REMOTE_DISCONNECTED_RUNTIME_CLASSIFICATION_R1_BEGIN
+# EN: http.client.RemoteDisconnected is raised when an upstream closes the
+# EN: connection before sending a response; crawler_core must treat that as
+# EN: retryable transport evidence, not as a process-killing unknown crash.
+# TR: http.client.RemoteDisconnected, upstream cevap göndermeden bağlantıyı
+# TR: kapattığında gelir; crawler_core bunu process'i düşüren bilinmeyen hata
+# TR: değil, retryable taşıma kanıtı olarak ele almalıdır.
+from http.client import RemoteDisconnected
+# REMOTE_DISCONNECTED_RUNTIME_CLASSIFICATION_R1_END
+
 # EN: We import HTTPError and URLError because the parent still owns the high-level
 # EN: fetch outcome branching that separates HTTP failures from transport failures.
 # TR: Parent hâlâ HTTP hataları ile taşıma hatalarını ayıran üst-seviye fetch
@@ -575,6 +585,11 @@ def _logisticsearch_classify_browser_runtime_error(
         "network",
         "urlerror",
         "socket.timeout",
+        "remotedisconnected",
+        "remote end closed connection without response",
+        "connection reset by peer",
+        "connection aborted",
+        "connection refused",
     )
 
     if any(needle in evidence for needle in retryable_runtime_needles):
@@ -1937,11 +1952,21 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
                 runtime_control=runtime_control,
             )
 
-        # EN: URLError, TimeoutError, and socket timeout failures are treated as
-        # EN: retryable transport failures by this minimal layer.
-        # TR: URLError, TimeoutError ve socket timeout hataları bu minimal katmanda
+        # EN: URLError, RemoteDisconnected, TimeoutError, socket timeout and
+        # EN: direct connection-reset style failures are treated as retryable
+        # EN: transport failures by this minimal layer.
+        # TR: URLError, RemoteDisconnected, TimeoutError, socket timeout ve
+        # TR: doğrudan bağlantı-kapanma/reset türü hatalar bu minimal katmanda
         # TR: retryable taşıma hataları olarak ele alınır.
-        except (URLError, TimeoutError, socket.timeout) as exc:
+        except (
+            URLError,
+            RemoteDisconnected,
+            TimeoutError,
+            socket.timeout,
+            ConnectionResetError,
+            ConnectionAbortedError,
+            ConnectionRefusedError,
+        ) as exc:
             # EN: LOCAL VALUE EXPLANATION / run_claim_probe / finalize_result
             # EN: This local exists because the worker-runtime corridor should keep
             # EN: intermediate phase truth named, visible, and reviewable instead of hiding `finalize_transport_error( conn, claimed_url=claimed_url, error_message=f"{type(exc).__name__}: {exc}", worker_id=config.worker_id, )` inline.
