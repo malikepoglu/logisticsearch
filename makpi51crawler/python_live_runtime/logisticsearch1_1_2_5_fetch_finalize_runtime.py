@@ -1410,6 +1410,16 @@ def finalize_http_error(
 # TR: REAL-RULE AST REPAIR / FONKSIYON finalize_transport_error
 # TR: finalize_transport_error acik bir fetch-finalize runtime/helper sozlesmesidir.
 # TR: Burada acik tutulan parametreler: conn, claimed_url, error_message, worker_id.
+# TRANSPORT_NAMING_DRIFT_RUNTIME_TRANSPORT_R3_BEGIN
+# EN: finalize_transport_error must use the same canonical transport class
+# EN: as the worker retry/backoff classifier: runtime_transport_retryable_error.
+# EN: The separate transport_retryable_error_finalize_no_row diagnostic label
+# EN: intentionally remains distinct for degraded no-row evidence.
+# TR: finalize_transport_error, worker retry/backoff sınıflandırmasıyla aynı
+# TR: canonical transport sınıfını kullanmalıdır: runtime_transport_retryable_error.
+# TR: Ayrı transport_retryable_error_finalize_no_row diagnostic etiketi,
+# TR: degraded no-row kanıtı için bilinçli olarak ayrı bırakılır.
+# TRANSPORT_NAMING_DRIFT_RUNTIME_TRANSPORT_R3_END
 def finalize_transport_error(
     conn,
     *,
@@ -1491,7 +1501,7 @@ def finalize_transport_error(
         note="worker runtime transport-error finalize path",
         acquisition_method=None,
         fetched_page=None,
-        error_class="transport_retryable_error",
+        error_class="runtime_transport_retryable_error",
         error_message=error_message,
     )
 
@@ -1503,7 +1513,7 @@ def finalize_transport_error(
     try:
         # EN: LOCAL VALUE EXPLANATION / finalize_transport_error / finalize_result
         # EN: This local exists because the current finalize-phase branch needs a named
-        # EN: and reviewable intermediate value instead of hiding `finish_fetch_retryable_error( conn, url_id=url_id, lease_token=lease_token, http_status=None, error_class="transport_retryable_error", error` inline.
+        # EN: and reviewable intermediate value instead of hiding `finish_fetch_retryable_error( conn, url_id=url_id, lease_token=lease_token, http_status=None, error_class="runtime_transport_retryable_error", error` inline.
         # EN: Expected meaning:
         # EN: - current local name(s): finalize_result
         # EN: - this value helps keep success / retryable / permanent / degraded outcome meaning readable
@@ -1526,7 +1536,7 @@ def finalize_transport_error(
             url_id=url_id,
             lease_token=lease_token,
             http_status=None,
-            error_class="transport_retryable_error",
+            error_class="runtime_transport_retryable_error",
             error_message=error_message,
             retry_delay=None,
         )
