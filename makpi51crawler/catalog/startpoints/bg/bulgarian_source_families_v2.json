@@ -52,7 +52,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg001_nsbs_members",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 1,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -107,13 +119,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBERS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/members"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "Bulgarian freight forwarding/logistics association member directory.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_PLUS"
+          "quality_status": "A_PLUS",
+          "surface_code": "BG001_NSBS_MEMBERS_SURFACE_001",
+          "seed_surface_name": "Bulgarian freight forwarding/logistics association member directory.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBERS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "candidate_manifest": true,
@@ -158,14 +191,35 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBER_TRANSLAND",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/transland-ltd"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "NSBS member profile - Transland Ltd.",
           "surface_type": "directory_or_official_candidate",
           "quality_status": "A_PLUS",
-          "description": "NSBS member profile; Bulgarian transport/logistics/forwarding services; strong directory-backed entity seed."
+          "description": "NSBS member profile; Bulgarian transport/logistics/forwarding services; strong directory-backed entity seed.",
+          "surface_code": "BG001_NSBS_MEMBER_TRANSLAND",
+          "seed_surface_name": "NSBS member profile - Transland Ltd.",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBER_TRANSLAND",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "candidate_manifest": true,
@@ -210,14 +264,35 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBER_WORLD_TRANSPORT_OVERSEAS",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/world-transport-overseas-bulgaria-ltd"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "NSBS member profile - World Transport Overseas Bulgaria LTD",
           "surface_type": "directory_or_official_candidate",
           "quality_status": "A_PLUS",
-          "description": "NSBS member profile; freight forwarding company with regional network; strong directory-backed entity seed."
+          "description": "NSBS member profile; freight forwarding company with regional network; strong directory-backed entity seed.",
+          "surface_code": "BG001_NSBS_MEMBER_WORLD_TRANSPORT_OVERSEAS",
+          "seed_surface_name": "NSBS member profile - World Transport Overseas Bulgaria LTD",
+          "surface_index": 3,
+          "family_seed_surface_index": 3,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBER_WORLD_TRANSPORT_OVERSEAS",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "candidate_manifest": true,
@@ -262,14 +337,35 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBER_UNIMASTERS_LOGISTICS",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/unimasters-logistics-plc"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "NSBS member profile - Unimasters Logistics PLC",
           "surface_type": "directory_or_official_candidate",
           "quality_status": "A_PLUS",
-          "description": "NSBS member profile; known Bulgarian logistics operator; reinforces existing Unimasters entity coverage."
+          "description": "NSBS member profile; known Bulgarian logistics operator; reinforces existing Unimasters entity coverage.",
+          "surface_code": "BG001_NSBS_MEMBER_UNIMASTERS_LOGISTICS",
+          "seed_surface_name": "NSBS member profile - Unimasters Logistics PLC",
+          "surface_index": 4,
+          "family_seed_surface_index": 4,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBER_UNIMASTERS_LOGISTICS",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "candidate_manifest": true,
@@ -314,14 +410,35 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBER_E_LOGISTICS",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/e-logistics-ltd"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "NSBS member profile - E-Logistics Ltd.",
           "surface_type": "directory_or_official_candidate",
           "quality_status": "A_PLUS",
-          "description": "NSBS member profile; integrated logistics and transport/warehousing context."
+          "description": "NSBS member profile; integrated logistics and transport/warehousing context.",
+          "surface_code": "BG001_NSBS_MEMBER_E_LOGISTICS",
+          "seed_surface_name": "NSBS member profile - E-Logistics Ltd.",
+          "surface_index": 5,
+          "family_seed_surface_index": 5,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBER_E_LOGISTICS",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "candidate_manifest": true,
@@ -366,14 +483,35 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBER_PRO_LOGISTICS_SERVICES",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/pro-logistics-services-ltd"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "NSBS member profile - Pro Logistics & Services Ltd.",
           "surface_type": "directory_or_official_candidate",
           "quality_status": "A",
-          "description": "NSBS member profile; project/oversized/multimodal logistics candidate."
+          "description": "NSBS member profile; project/oversized/multimodal logistics candidate.",
+          "surface_code": "BG001_NSBS_MEMBER_PRO_LOGISTICS_SERVICES",
+          "seed_surface_name": "NSBS member profile - Pro Logistics & Services Ltd.",
+          "surface_index": 6,
+          "family_seed_surface_index": 6,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBER_PRO_LOGISTICS_SERVICES",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "candidate_manifest": true,
@@ -418,14 +556,35 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBER_HOLLEMAN_BULGARIA",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/holleman-bulgaria-ltd"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "NSBS member profile - Holleman Bulgaria Ltd.",
           "surface_type": "directory_or_official_candidate",
           "quality_status": "A",
-          "description": "NSBS member profile; heavy/oversized transport specialization."
+          "description": "NSBS member profile; heavy/oversized transport specialization.",
+          "surface_code": "BG001_NSBS_MEMBER_HOLLEMAN_BULGARIA",
+          "seed_surface_name": "NSBS member profile - Holleman Bulgaria Ltd.",
+          "surface_index": 7,
+          "family_seed_surface_index": 7,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBER_HOLLEMAN_BULGARIA",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "candidate_manifest": true,
@@ -470,14 +629,35 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBER_BULGARIA_TRANS",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/bulgaria-trans-ltd"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "NSBS member profile - Bulgaria Trans Ltd.",
           "surface_type": "directory_or_official_candidate",
           "quality_status": "A",
-          "description": "NSBS member profile; Bulgarian transport/logistics entity seed."
+          "description": "NSBS member profile; Bulgarian transport/logistics entity seed.",
+          "surface_code": "BG001_NSBS_MEMBER_BULGARIA_TRANS",
+          "seed_surface_name": "NSBS member profile - Bulgaria Trans Ltd.",
+          "surface_index": 8,
+          "family_seed_surface_index": 8,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBER_BULGARIA_TRANS",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "candidate_manifest": true,
@@ -522,14 +702,35 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBER_TRANSTERRA_LOGISTICS",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.nsbs.bg/en/transterra-logistics-bulgaria-ltd"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "NSBS member profile - Transterra Logistics Bulgaria Ltd.",
           "surface_type": "directory_or_official_candidate",
           "quality_status": "A",
-          "description": "NSBS member profile; Bulgarian logistics entity seed with branch context."
+          "description": "NSBS member profile; Bulgarian logistics entity seed with branch context.",
+          "surface_code": "BG001_NSBS_MEMBER_TRANSTERRA_LOGISTICS",
+          "seed_surface_name": "NSBS member profile - Transterra Logistics Bulgaria Ltd.",
+          "surface_index": 9,
+          "family_seed_surface_index": 9,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBER_TRANSTERRA_LOGISTICS",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "candidate_manifest": true,
@@ -574,14 +775,35 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBER_EUROTRANS",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/eurotrans-ltd"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "NSBS member profile - Eurotrans Ltd.",
           "surface_type": "directory_or_official_candidate",
           "quality_status": "A_MINUS",
-          "description": "NSBS member profile; freight transport surface; narrower but clean association-backed seed."
+          "description": "NSBS member profile; freight transport surface; narrower but clean association-backed seed.",
+          "surface_code": "BG001_NSBS_MEMBER_EUROTRANS",
+          "seed_surface_name": "NSBS member profile - Eurotrans Ltd.",
+          "surface_index": 10,
+          "family_seed_surface_index": 10,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBER_EUROTRANS",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "candidate_manifest": true,
@@ -626,14 +848,35 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG001_NSBS_MEMBERS",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG001_NSBS_MEMBER_ETNA_CARGO_TRANSPORT",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/etna-cargo-transport-ltd"
+              }
             }
           ],
           "source_code": "BG001_NSBS_MEMBERS",
           "surface_name": "NSBS member profile - Etna Cargo Transport Ltd.",
           "surface_type": "directory_or_official_candidate",
           "quality_status": "A_MINUS",
-          "description": "NSBS member profile; NSBS/FIATA and logistics center context."
+          "description": "NSBS member profile; NSBS/FIATA and logistics center context.",
+          "surface_code": "BG001_NSBS_MEMBER_ETNA_CARGO_TRANSPORT",
+          "seed_surface_name": "NSBS member profile - Etna Cargo Transport Ltd.",
+          "surface_index": 11,
+          "family_seed_surface_index": 11,
+          "source_family_code": "BG001_NSBS_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "BG001_NSBS_MEMBERS",
+            "surface_code": "BG001_NSBS_MEMBER_ETNA_CARGO_TRANSPORT",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -643,7 +886,16 @@
       "source_family_code": "BG001_NSBS_MEMBERS",
       "source_family_index": 1,
       "source_family_name": "Bg001 Nsbs Members",
-      "source_quality": "A_PLUS"
+      "source_quality": "A_PLUS",
+      "source_status": "candidate",
+      "source_root_url": "https://nsbs.bg/en/members",
+      "source_host": "nsbs.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -656,7 +908,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg002_nsbs_home",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 2,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -711,13 +975,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG002_NSBS_HOME",
+                "source_host": "nsbs.bg",
+                "surface_code": "BG002_NSBS_HOME_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nsbs.bg/en/home"
+              }
             }
           ],
           "source_code": "BG002_NSBS_HOME",
           "surface_name": "National association context for transport, freight forwarding, and logistics.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_PLUS"
+          "quality_status": "A_PLUS",
+          "surface_code": "BG002_NSBS_HOME_SURFACE_001",
+          "seed_surface_name": "National association context for transport, freight forwarding, and logistics.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG002_NSBS_HOME",
+          "surface_metadata": {
+            "source_family_code": "BG002_NSBS_HOME",
+            "surface_code": "BG002_NSBS_HOME_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -727,7 +1012,16 @@
       "source_family_code": "BG002_NSBS_HOME",
       "source_family_index": 2,
       "source_family_name": "Bg002 Nsbs Home",
-      "source_quality": "A_PLUS"
+      "source_quality": "A_PLUS",
+      "source_status": "candidate",
+      "source_root_url": "https://nsbs.bg/en/home",
+      "source_host": "nsbs.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -740,7 +1034,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg003_fiata_bg_directory",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 3,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -795,13 +1101,34 @@
               ],
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
-              "locale_review_status": "native_locale_verified"
+              "locale_review_status": "native_locale_verified",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG003_FIATA_BG_DIRECTORY",
+                "source_host": "fiata.org",
+                "surface_code": "BG003_FIATA_BG_DIRECTORY_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://fiata.org/directory/bg/"
+              }
             }
           ],
           "source_code": "BG003_FIATA_BG_DIRECTORY",
           "surface_name": "FIATA Bulgaria member directory / authoritative cross-check surface.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_PLUS"
+          "quality_status": "A_PLUS",
+          "surface_code": "BG003_FIATA_BG_DIRECTORY_SURFACE_001",
+          "seed_surface_name": "FIATA Bulgaria member directory / authoritative cross-check surface.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG003_FIATA_BG_DIRECTORY",
+          "surface_metadata": {
+            "source_family_code": "BG003_FIATA_BG_DIRECTORY",
+            "surface_code": "BG003_FIATA_BG_DIRECTORY_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -811,7 +1138,16 @@
       "source_family_code": "BG003_FIATA_BG_DIRECTORY",
       "source_family_index": 3,
       "source_family_name": "Bg003 Fiata Bg Directory",
-      "source_quality": "A_PLUS"
+      "source_quality": "A_PLUS",
+      "source_status": "candidate",
+      "source_root_url": "https://fiata.org/directory/bg/",
+      "source_host": "fiata.org",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -824,7 +1160,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg004_logistika_whoiswho",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 4,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -879,13 +1227,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG004_LOGISTIKA_WHOISWHO",
+                "source_host": "www.whoiswho.logistika.bg",
+                "surface_code": "BG004_LOGISTIKA_WHOISWHO_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.whoiswho.logistika.bg/en/index.php"
+              }
             }
           ],
           "source_code": "BG004_LOGISTIKA_WHOISWHO",
           "surface_name": "Who Is Who in Transport and Freight Forwarding in Bulgaria.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "BG004_LOGISTIKA_WHOISWHO_SURFACE_001",
+          "seed_surface_name": "Who Is Who in Transport and Freight Forwarding in Bulgaria.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG004_LOGISTIKA_WHOISWHO",
+          "surface_metadata": {
+            "source_family_code": "BG004_LOGISTIKA_WHOISWHO",
+            "surface_code": "BG004_LOGISTIKA_WHOISWHO_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -895,7 +1264,16 @@
       "source_family_code": "BG004_LOGISTIKA_WHOISWHO",
       "source_family_index": 4,
       "source_family_name": "Bg004 Logistika Whoiswho",
-      "source_quality": "A"
+      "source_quality": "A",
+      "source_status": "candidate",
+      "source_root_url": "https://www.whoiswho.logistika.bg/en/index.php",
+      "source_host": "www.whoiswho.logistika.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -908,7 +1286,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg005_freightnet_logistics_bg",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 5,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -963,13 +1353,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG005_FREIGHTNET_LOGISTICS_BG",
+                "source_host": "www.freightnet.com",
+                "surface_code": "BG005_FREIGHTNET_LOGISTICS_BG_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.freightnet.com/directory/p1/cBG/s99.htm"
+              }
             }
           ],
           "source_code": "BG005_FREIGHTNET_LOGISTICS_BG",
           "surface_name": "Bulgaria freight/logistics company directory.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG005_FREIGHTNET_LOGISTICS_BG_SURFACE_001",
+          "seed_surface_name": "Bulgaria freight/logistics company directory.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG005_FREIGHTNET_LOGISTICS_BG",
+          "surface_metadata": {
+            "source_family_code": "BG005_FREIGHTNET_LOGISTICS_BG",
+            "surface_code": "BG005_FREIGHTNET_LOGISTICS_BG_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -979,7 +1390,16 @@
       "source_family_code": "BG005_FREIGHTNET_LOGISTICS_BG",
       "source_family_index": 5,
       "source_family_name": "Bg005 Freightnet Logistics Bg",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.freightnet.com/directory/p1/cBG/s99.htm",
+      "source_host": "www.freightnet.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -992,7 +1412,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg006_freightnet_forwarders_bg",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 6,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1047,13 +1479,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG006_FREIGHTNET_FORWARDERS_BG",
+                "source_host": "www.freightnet.com",
+                "surface_code": "BG006_FREIGHTNET_FORWARDERS_BG_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.freightnet.com/directory/p2/cBG/s30.htm"
+              }
             }
           ],
           "source_code": "BG006_FREIGHTNET_FORWARDERS_BG",
           "surface_name": "Bulgaria freight forwarders directory.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG006_FREIGHTNET_FORWARDERS_BG_SURFACE_001",
+          "seed_surface_name": "Bulgaria freight forwarders directory.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG006_FREIGHTNET_FORWARDERS_BG",
+          "surface_metadata": {
+            "source_family_code": "BG006_FREIGHTNET_FORWARDERS_BG",
+            "surface_code": "BG006_FREIGHTNET_FORWARDERS_BG_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1063,7 +1516,16 @@
       "source_family_code": "BG006_FREIGHTNET_FORWARDERS_BG",
       "source_family_index": 6,
       "source_family_name": "Bg006 Freightnet Forwarders Bg",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.freightnet.com/directory/p2/cBG/s30.htm",
+      "source_host": "www.freightnet.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1076,7 +1538,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg007_investbulgaria_transport_logistics",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 7,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1131,13 +1605,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS",
+                "source_host": "www.investbulgaria.com",
+                "surface_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.investbulgaria.com/Bulgarian-Transportation-and-Logistics-Companies/130"
+              }
             }
           ],
           "source_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS",
           "surface_name": "Bulgarian transportation and logistics company index.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS_SURFACE_001",
+          "seed_surface_name": "Bulgarian transportation and logistics company index.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS",
+            "surface_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1147,7 +1642,16 @@
       "source_family_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS",
       "source_family_index": 7,
       "source_family_name": "Bg007 Investbulgaria Transport Logistics",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.investbulgaria.com/Bulgarian-Transportation-and-Logistics-Companies/130",
+      "source_host": "www.investbulgaria.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1160,7 +1664,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg008_railmarket_logistics_bg",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 8,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1215,13 +1731,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG008_RAILMARKET_LOGISTICS_BG",
+                "source_host": "railmarket.com",
+                "surface_code": "BG008_RAILMARKET_LOGISTICS_BG_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://railmarket.com/eu/bulgaria/logistics-companies"
+              }
             }
           ],
           "source_code": "BG008_RAILMARKET_LOGISTICS_BG",
           "surface_name": "Rail/intermodal/logistics oriented Bulgaria company directory.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "BG008_RAILMARKET_LOGISTICS_BG_SURFACE_001",
+          "seed_surface_name": "Rail/intermodal/logistics oriented Bulgaria company directory.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG008_RAILMARKET_LOGISTICS_BG",
+          "surface_metadata": {
+            "source_family_code": "BG008_RAILMARKET_LOGISTICS_BG",
+            "surface_code": "BG008_RAILMARKET_LOGISTICS_BG_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1231,7 +1768,16 @@
       "source_family_code": "BG008_RAILMARKET_LOGISTICS_BG",
       "source_family_index": 8,
       "source_family_name": "Bg008 Railmarket Logistics Bg",
-      "source_quality": "B_PLUS"
+      "source_quality": "B_PLUS",
+      "source_status": "candidate",
+      "source_root_url": "https://railmarket.com/eu/bulgaria/logistics-companies",
+      "source_host": "railmarket.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1244,7 +1790,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg009_cargoyellowpages_bg",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 9,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1299,13 +1857,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG009_CARGOYELLOWPAGES_BG",
+                "source_host": "www.cargoyellowpages.com",
+                "surface_code": "BG009_CARGOYELLOWPAGES_BG_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.cargoyellowpages.com/bulgaria_freight_forwarders_cargo_agents.html"
+              }
             }
           ],
           "source_code": "BG009_CARGOYELLOWPAGES_BG",
           "surface_name": "Cargo agents / freight forwarders discovery directory.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "BG009_CARGOYELLOWPAGES_BG_SURFACE_001",
+          "seed_surface_name": "Cargo agents / freight forwarders discovery directory.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG009_CARGOYELLOWPAGES_BG",
+          "surface_metadata": {
+            "source_family_code": "BG009_CARGOYELLOWPAGES_BG",
+            "surface_code": "BG009_CARGOYELLOWPAGES_BG_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1315,7 +1894,16 @@
       "source_family_code": "BG009_CARGOYELLOWPAGES_BG",
       "source_family_index": 9,
       "source_family_name": "Bg009 Cargoyellowpages Bg",
-      "source_quality": "B_PLUS"
+      "source_quality": "B_PLUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.cargoyellowpages.com/bulgaria_freight_forwarders_cargo_agents.html",
+      "source_host": "www.cargoyellowpages.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1328,7 +1916,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg010_opca_bg_forwarders",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 10,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1383,13 +1983,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG010_OPCA_BG_FORWARDERS",
+                "source_host": "overseasprojectcargo.com",
+                "surface_code": "BG010_OPCA_BG_FORWARDERS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/bulgaria-freight-forwarders/"
+              }
             }
           ],
           "source_code": "BG010_OPCA_BG_FORWARDERS",
           "surface_name": "Freight forwarders / project cargo discovery directory.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "BG010_OPCA_BG_FORWARDERS_SURFACE_001",
+          "seed_surface_name": "Freight forwarders / project cargo discovery directory.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG010_OPCA_BG_FORWARDERS",
+          "surface_metadata": {
+            "source_family_code": "BG010_OPCA_BG_FORWARDERS",
+            "surface_code": "BG010_OPCA_BG_FORWARDERS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1399,7 +2020,16 @@
       "source_family_code": "BG010_OPCA_BG_FORWARDERS",
       "source_family_index": 10,
       "source_family_name": "Bg010 Opca Bg Forwarders",
-      "source_quality": "B_PLUS"
+      "source_quality": "B_PLUS",
+      "source_status": "candidate",
+      "source_root_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/bulgaria-freight-forwarders/",
+      "source_host": "overseasprojectcargo.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1412,7 +2042,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg011_ruzave_bg",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 11,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1467,13 +2109,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG011_RUZAVE_BG",
+                "source_host": "ruzave.com",
+                "surface_code": "BG011_RUZAVE_BG_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ruzave.com/bulgaria"
+              }
             }
           ],
           "source_code": "BG011_RUZAVE_BG",
           "surface_name": "Shipping/freight forwarding discovery directory.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B"
+          "quality_status": "B",
+          "surface_code": "BG011_RUZAVE_BG_SURFACE_001",
+          "seed_surface_name": "Shipping/freight forwarding discovery directory.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG011_RUZAVE_BG",
+          "surface_metadata": {
+            "source_family_code": "BG011_RUZAVE_BG",
+            "surface_code": "BG011_RUZAVE_BG_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1483,7 +2146,16 @@
       "source_family_code": "BG011_RUZAVE_BG",
       "source_family_index": 11,
       "source_family_name": "Bg011 Ruzave Bg",
-      "source_quality": "B"
+      "source_quality": "B",
+      "source_status": "candidate",
+      "source_root_url": "https://ruzave.com/bulgaria",
+      "source_host": "ruzave.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1496,7 +2168,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg012_kompass_bg_transport_logistics",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 12,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1551,13 +2235,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS",
+                "source_host": "bg.kompass.com",
+                "surface_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://bg.kompass.com/s/transport-logistics/10/"
+              }
             }
           ],
           "source_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS",
           "surface_name": "General business directory; logistics discovery fallback.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B"
+          "quality_status": "B",
+          "surface_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS_SURFACE_001",
+          "seed_surface_name": "General business directory; logistics discovery fallback.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS",
+            "surface_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1567,7 +2272,16 @@
       "source_family_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS",
       "source_family_index": 12,
       "source_family_name": "Bg012 Kompass Bg Transport Logistics",
-      "source_quality": "B"
+      "source_quality": "B",
+      "source_status": "candidate",
+      "source_root_url": "https://bg.kompass.com/s/transport-logistics/10/",
+      "source_host": "bg.kompass.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1580,7 +2294,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg013_goodfirms_bg_logistics",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 13,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1635,13 +2361,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG013_GOODFIRMS_BG_LOGISTICS",
+                "source_host": "www.goodfirms.co",
+                "surface_code": "BG013_GOODFIRMS_BG_LOGISTICS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.goodfirms.co/supply-chain-logistics-companies/bulgaria"
+              }
             }
           ],
           "source_code": "BG013_GOODFIRMS_BG_LOGISTICS",
           "surface_name": "Supply-chain/logistics discovery surface.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B"
+          "quality_status": "B",
+          "surface_code": "BG013_GOODFIRMS_BG_LOGISTICS_SURFACE_001",
+          "seed_surface_name": "Supply-chain/logistics discovery surface.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG013_GOODFIRMS_BG_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "BG013_GOODFIRMS_BG_LOGISTICS",
+            "surface_code": "BG013_GOODFIRMS_BG_LOGISTICS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1651,7 +2398,16 @@
       "source_family_code": "BG013_GOODFIRMS_BG_LOGISTICS",
       "source_family_index": 13,
       "source_family_name": "Bg013 Goodfirms Bg Logistics",
-      "source_quality": "B"
+      "source_quality": "B",
+      "source_status": "candidate",
+      "source_root_url": "https://www.goodfirms.co/supply-chain-logistics-companies/bulgaria",
+      "source_host": "www.goodfirms.co",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1664,7 +2420,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg014_clutch_bg_freight_forwarders",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 14,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1719,13 +2487,34 @@
               ],
               "language_fit": "native",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "native_locale_verified"
+              "locale_review_status": "native_locale_verified",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS",
+                "source_host": "clutch.co",
+                "surface_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://clutch.co/bg/logistics/freight-forwarders"
+              }
             }
           ],
           "source_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS",
           "surface_name": "Current freight-forwarder discovery surface.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B"
+          "quality_status": "B",
+          "surface_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS_SURFACE_001",
+          "seed_surface_name": "Current freight-forwarder discovery surface.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS",
+          "surface_metadata": {
+            "source_family_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS",
+            "surface_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1735,7 +2524,16 @@
       "source_family_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS",
       "source_family_index": 14,
       "source_family_name": "Bg014 Clutch Bg Freight Forwarders",
-      "source_quality": "B"
+      "source_quality": "B",
+      "source_status": "candidate",
+      "source_root_url": "https://clutch.co/bg/logistics/freight-forwarders",
+      "source_host": "clutch.co",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1748,7 +2546,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg015_clutch_bg_supply_chain",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 15,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1803,13 +2613,34 @@
               ],
               "language_fit": "native",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "native_locale_verified"
+              "locale_review_status": "native_locale_verified",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN",
+                "source_host": "clutch.co",
+                "surface_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://clutch.co/bg/logistics/supply-chain-management"
+              }
             }
           ],
           "source_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN",
           "surface_name": "Current supply-chain/logistics discovery surface.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B"
+          "quality_status": "B",
+          "surface_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN_SURFACE_001",
+          "seed_surface_name": "Current supply-chain/logistics discovery surface.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN",
+          "surface_metadata": {
+            "source_family_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN",
+            "surface_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1819,7 +2650,16 @@
       "source_family_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN",
       "source_family_index": 15,
       "source_family_name": "Bg015 Clutch Bg Supply Chain",
-      "source_quality": "B"
+      "source_quality": "B",
+      "source_status": "candidate",
+      "source_root_url": "https://clutch.co/bg/logistics/supply-chain-management",
+      "source_host": "clutch.co",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1832,7 +2672,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg016_ensun_bg_logistics",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 16,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1887,13 +2739,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG016_ENSUN_BG_LOGISTICS",
+                "source_host": "ensun.io",
+                "surface_code": "BG016_ENSUN_BG_LOGISTICS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ensun.io/search/logistic/bulgaria"
+              }
             }
           ],
           "source_code": "BG016_ENSUN_BG_LOGISTICS",
           "surface_name": "Long-tail company discovery surface; needs live check.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "BG016_ENSUN_BG_LOGISTICS_SURFACE_001",
+          "seed_surface_name": "Long-tail company discovery surface; needs live check.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG016_ENSUN_BG_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "BG016_ENSUN_BG_LOGISTICS",
+            "surface_code": "BG016_ENSUN_BG_LOGISTICS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1903,7 +2776,16 @@
       "source_family_code": "BG016_ENSUN_BG_LOGISTICS",
       "source_family_index": 16,
       "source_family_name": "Bg016 Ensun Bg Logistics",
-      "source_quality": "B_MINUS"
+      "source_quality": "B_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://ensun.io/search/logistic/bulgaria",
+      "source_host": "ensun.io",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -1916,7 +2798,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg017_lusha_bg_transport_logistics",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 17,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -1971,13 +2865,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS",
+                "source_host": "www.lusha.com",
+                "surface_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.lusha.com/company-search/transportation-logistics-and-storage/a64fd456c3/bulgaria/199/"
+              }
             }
           ],
           "source_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS",
           "surface_name": "Discovery/paywall-like business directory; not authority.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS_SURFACE_001",
+          "seed_surface_name": "Discovery/paywall-like business directory; not authority.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS",
+            "surface_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -1987,7 +2902,16 @@
       "source_family_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS",
       "source_family_index": 17,
       "source_family_name": "Bg017 Lusha Bg Transport Logistics",
-      "source_quality": "B_MINUS"
+      "source_quality": "B_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.lusha.com/company-search/transportation-logistics-and-storage/a64fd456c3/bulgaria/199/",
+      "source_host": "www.lusha.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2000,7 +2924,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg018_clecat_nsbs_context",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 18,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2055,13 +2991,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG018_CLECAT_NSBS_CONTEXT",
+                "source_host": "www.clecat.org",
+                "surface_code": "BG018_CLECAT_NSBS_CONTEXT_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.clecat.org/members/full-members"
+              }
             }
           ],
           "source_code": "BG018_CLECAT_NSBS_CONTEXT",
           "surface_name": "European association context for Bulgarian member body.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG018_CLECAT_NSBS_CONTEXT_SURFACE_001",
+          "seed_surface_name": "European association context for Bulgarian member body.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG018_CLECAT_NSBS_CONTEXT",
+          "surface_metadata": {
+            "source_family_code": "BG018_CLECAT_NSBS_CONTEXT",
+            "surface_code": "BG018_CLECAT_NSBS_CONTEXT_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2071,7 +3028,16 @@
       "source_family_code": "BG018_CLECAT_NSBS_CONTEXT",
       "source_family_index": 18,
       "source_family_name": "Bg018 Clecat Nsbs Context",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.clecat.org/members/full-members",
+      "source_host": "www.clecat.org",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2084,7 +3050,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg019_bblf_transport_industry",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 19,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2139,13 +3117,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG019_BBLF_TRANSPORT_INDUSTRY",
+                "source_host": "www.bblf.bg",
+                "surface_code": "BG019_BBLF_TRANSPORT_INDUSTRY_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.bblf.bg/en/industries"
+              }
             }
           ],
           "source_code": "BG019_BBLF_TRANSPORT_INDUSTRY",
           "surface_name": "Business network discovery for transport/logistics firms.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B"
+          "quality_status": "B",
+          "surface_code": "BG019_BBLF_TRANSPORT_INDUSTRY_SURFACE_001",
+          "seed_surface_name": "Business network discovery for transport/logistics firms.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG019_BBLF_TRANSPORT_INDUSTRY",
+          "surface_metadata": {
+            "source_family_code": "BG019_BBLF_TRANSPORT_INDUSTRY",
+            "surface_code": "BG019_BBLF_TRANSPORT_INDUSTRY_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2155,7 +3154,16 @@
       "source_family_code": "BG019_BBLF_TRANSPORT_INDUSTRY",
       "source_family_index": 19,
       "source_family_name": "Bg019 Bblf Transport Industry",
-      "source_quality": "B"
+      "source_quality": "B",
+      "source_status": "candidate",
+      "source_root_url": "https://www.bblf.bg/en/industries",
+      "source_host": "www.bblf.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2168,7 +3176,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg020_bcci_general_context",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 20,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2223,13 +3243,34 @@
               ],
               "language_fit": "unknown",
               "coverage_fit": "country_primary",
-              "locale_review_status": "manual_review_required"
+              "locale_review_status": "manual_review_required",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG020_BCCI_GENERAL_CONTEXT",
+                "source_host": "www.bcci.bg",
+                "surface_code": "BG020_BCCI_GENERAL_CONTEXT_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.bcci.bg/"
+              }
             }
           ],
           "source_code": "BG020_BCCI_GENERAL_CONTEXT",
           "surface_name": "General chamber context; discovery-only.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B"
+          "quality_status": "B",
+          "surface_code": "BG020_BCCI_GENERAL_CONTEXT_SURFACE_001",
+          "seed_surface_name": "General chamber context; discovery-only.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG020_BCCI_GENERAL_CONTEXT",
+          "surface_metadata": {
+            "source_family_code": "BG020_BCCI_GENERAL_CONTEXT",
+            "surface_code": "BG020_BCCI_GENERAL_CONTEXT_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2239,7 +3280,16 @@
       "source_family_code": "BG020_BCCI_GENERAL_CONTEXT",
       "source_family_index": 20,
       "source_family_name": "Bg020 Bcci General Context",
-      "source_quality": "B"
+      "source_quality": "B",
+      "source_status": "candidate",
+      "source_root_url": "https://www.bcci.bg/",
+      "source_host": "www.bcci.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2252,7 +3302,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg021_gopet_trans",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 21,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2307,13 +3369,34 @@
               ],
               "language_fit": "unknown",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "manual_review_required"
+              "locale_review_status": "manual_review_required",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG021_GOPET_TRANS",
+                "source_host": "gopettrans.com",
+                "surface_code": "BG021_GOPET_TRANS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://gopettrans.com/"
+              }
             }
           ],
           "source_code": "BG021_GOPET_TRANS",
           "surface_name": "Official logistics provider seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "BG021_GOPET_TRANS_SURFACE_001",
+          "seed_surface_name": "Official logistics provider seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG021_GOPET_TRANS",
+          "surface_metadata": {
+            "source_family_code": "BG021_GOPET_TRANS",
+            "surface_code": "BG021_GOPET_TRANS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2323,7 +3406,16 @@
       "source_family_code": "BG021_GOPET_TRANS",
       "source_family_index": 21,
       "source_family_name": "Bg021 Gopet Trans",
-      "source_quality": "A"
+      "source_quality": "A",
+      "source_status": "candidate",
+      "source_root_url": "https://gopettrans.com/",
+      "source_host": "gopettrans.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2336,7 +3428,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg022_gopet_warehousing",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 22,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2391,13 +3495,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG022_GOPET_WAREHOUSING",
+                "source_host": "gopettrans.com",
+                "surface_code": "BG022_GOPET_WAREHOUSING_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://gopettrans.com/warehousing-logistics/"
+              }
             }
           ],
           "source_code": "BG022_GOPET_WAREHOUSING",
           "surface_name": "Official warehousing/logistics service seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG022_GOPET_WAREHOUSING_SURFACE_001",
+          "seed_surface_name": "Official warehousing/logistics service seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG022_GOPET_WAREHOUSING",
+          "surface_metadata": {
+            "source_family_code": "BG022_GOPET_WAREHOUSING",
+            "surface_code": "BG022_GOPET_WAREHOUSING_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2407,7 +3532,16 @@
       "source_family_code": "BG022_GOPET_WAREHOUSING",
       "source_family_index": 22,
       "source_family_name": "Bg022 Gopet Warehousing",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://gopettrans.com/warehousing-logistics/",
+      "source_host": "gopettrans.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2420,7 +3554,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg023_gopet_contact",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 23,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2475,13 +3621,34 @@
               ],
               "language_fit": "unknown",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "manual_review_required"
+              "locale_review_status": "manual_review_required",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG023_GOPET_CONTACT",
+                "source_host": "gopettrans.com",
+                "surface_code": "BG023_GOPET_CONTACT_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://gopettrans.com/contact/"
+              }
             }
           ],
           "source_code": "BG023_GOPET_CONTACT",
           "surface_name": "Official contact/address extraction seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG023_GOPET_CONTACT_SURFACE_001",
+          "seed_surface_name": "Official contact/address extraction seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG023_GOPET_CONTACT",
+          "surface_metadata": {
+            "source_family_code": "BG023_GOPET_CONTACT",
+            "surface_code": "BG023_GOPET_CONTACT_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2491,7 +3658,16 @@
       "source_family_code": "BG023_GOPET_CONTACT",
       "source_family_index": 23,
       "source_family_name": "Bg023 Gopet Contact",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://gopettrans.com/contact/",
+      "source_host": "gopettrans.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2504,7 +3680,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg024_unimasters_home",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 24,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2559,13 +3747,34 @@
               ],
               "language_fit": "unknown",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "manual_review_required"
+              "locale_review_status": "manual_review_required",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG024_UNIMASTERS_HOME",
+                "source_host": "www.unimasters.com",
+                "surface_code": "BG024_UNIMASTERS_HOME_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.unimasters.com/"
+              }
             }
           ],
           "source_code": "BG024_UNIMASTERS_HOME",
           "surface_name": "Official logistics company seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "BG024_UNIMASTERS_HOME_SURFACE_001",
+          "seed_surface_name": "Official logistics company seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG024_UNIMASTERS_HOME",
+          "surface_metadata": {
+            "source_family_code": "BG024_UNIMASTERS_HOME",
+            "surface_code": "BG024_UNIMASTERS_HOME_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2575,7 +3784,16 @@
       "source_family_code": "BG024_UNIMASTERS_HOME",
       "source_family_index": 24,
       "source_family_name": "Bg024 Unimasters Home",
-      "source_quality": "A"
+      "source_quality": "A",
+      "source_status": "candidate",
+      "source_root_url": "https://www.unimasters.com/",
+      "source_host": "www.unimasters.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2588,7 +3806,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg025_unimasters_contacts",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 25,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2643,13 +3873,34 @@
               ],
               "language_fit": "unknown",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "manual_review_required"
+              "locale_review_status": "manual_review_required",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG025_UNIMASTERS_CONTACTS",
+                "source_host": "www.unimasters.com",
+                "surface_code": "BG025_UNIMASTERS_CONTACTS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.unimasters.com/page/6/Contacts.html"
+              }
             }
           ],
           "source_code": "BG025_UNIMASTERS_CONTACTS",
           "surface_name": "Official multi-location contact extraction seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG025_UNIMASTERS_CONTACTS_SURFACE_001",
+          "seed_surface_name": "Official multi-location contact extraction seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG025_UNIMASTERS_CONTACTS",
+          "surface_metadata": {
+            "source_family_code": "BG025_UNIMASTERS_CONTACTS",
+            "surface_code": "BG025_UNIMASTERS_CONTACTS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2659,7 +3910,16 @@
       "source_family_code": "BG025_UNIMASTERS_CONTACTS",
       "source_family_index": 25,
       "source_family_name": "Bg025 Unimasters Contacts",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.unimasters.com/page/6/Contacts.html",
+      "source_host": "www.unimasters.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2672,7 +3932,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg026_eurosped_home",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 26,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2727,13 +3999,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG026_EUROSPED_HOME",
+                "source_host": "www.eurosped.bg",
+                "surface_code": "BG026_EUROSPED_HOME_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.eurosped.bg/en/"
+              }
             }
           ],
           "source_code": "BG026_EUROSPED_HOME",
           "surface_name": "Official Eurosped logistics service seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "BG026_EUROSPED_HOME_SURFACE_001",
+          "seed_surface_name": "Official Eurosped logistics service seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG026_EUROSPED_HOME",
+          "surface_metadata": {
+            "source_family_code": "BG026_EUROSPED_HOME",
+            "surface_code": "BG026_EUROSPED_HOME_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2743,7 +4036,16 @@
       "source_family_code": "BG026_EUROSPED_HOME",
       "source_family_index": 26,
       "source_family_name": "Bg026 Eurosped Home",
-      "source_quality": "A"
+      "source_quality": "A",
+      "source_status": "candidate",
+      "source_root_url": "https://www.eurosped.bg/en/",
+      "source_host": "www.eurosped.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2756,7 +4058,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg027_eurosped_bg_transport",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 27,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2811,13 +4125,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG027_EUROSPED_BG_TRANSPORT",
+                "source_host": "www.eurosped.bg",
+                "surface_code": "BG027_EUROSPED_BG_TRANSPORT_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.eurosped.bg/en/transport-in-bulgaria/"
+              }
             }
           ],
           "source_code": "BG027_EUROSPED_BG_TRANSPORT",
           "surface_name": "Domestic forwarding/transport/groupage seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG027_EUROSPED_BG_TRANSPORT_SURFACE_001",
+          "seed_surface_name": "Domestic forwarding/transport/groupage seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG027_EUROSPED_BG_TRANSPORT",
+          "surface_metadata": {
+            "source_family_code": "BG027_EUROSPED_BG_TRANSPORT",
+            "surface_code": "BG027_EUROSPED_BG_TRANSPORT_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2827,7 +4162,16 @@
       "source_family_code": "BG027_EUROSPED_BG_TRANSPORT",
       "source_family_index": 27,
       "source_family_name": "Bg027 Eurosped Bg Transport",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.eurosped.bg/en/transport-in-bulgaria/",
+      "source_host": "www.eurosped.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2840,7 +4184,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg028_eurosped_warehouse",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 28,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2895,13 +4251,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG028_EUROSPED_WAREHOUSE",
+                "source_host": "www.eurosped.bg",
+                "surface_code": "BG028_EUROSPED_WAREHOUSE_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.eurosped.bg/en/eurolog-warehouse-logistics-4pl/"
+              }
             }
           ],
           "source_code": "BG028_EUROSPED_WAREHOUSE",
           "surface_name": "Warehouse / 4PL / supply-chain seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG028_EUROSPED_WAREHOUSE_SURFACE_001",
+          "seed_surface_name": "Warehouse / 4PL / supply-chain seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG028_EUROSPED_WAREHOUSE",
+          "surface_metadata": {
+            "source_family_code": "BG028_EUROSPED_WAREHOUSE",
+            "surface_code": "BG028_EUROSPED_WAREHOUSE_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2911,7 +4288,16 @@
       "source_family_code": "BG028_EUROSPED_WAREHOUSE",
       "source_family_index": 28,
       "source_family_name": "Bg028 Eurosped Warehouse",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.eurosped.bg/en/eurolog-warehouse-logistics-4pl/",
+      "source_host": "www.eurosped.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -2924,7 +4310,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg029_ntz_home",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 29,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -2979,13 +4377,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG029_NTZ_HOME",
+                "source_host": "ntz.bg",
+                "surface_code": "BG029_NTZ_HOME_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ntz.bg/en/"
+              }
             }
           ],
           "source_code": "BG029_NTZ_HOME",
           "surface_name": "Official NTZ logistics/freight forwarding seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "BG029_NTZ_HOME_SURFACE_001",
+          "seed_surface_name": "Official NTZ logistics/freight forwarding seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG029_NTZ_HOME",
+          "surface_metadata": {
+            "source_family_code": "BG029_NTZ_HOME",
+            "surface_code": "BG029_NTZ_HOME_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -2995,7 +4414,16 @@
       "source_family_code": "BG029_NTZ_HOME",
       "source_family_index": 29,
       "source_family_name": "Bg029 Ntz Home",
-      "source_quality": "A"
+      "source_quality": "A",
+      "source_status": "candidate",
+      "source_root_url": "https://ntz.bg/en/",
+      "source_host": "ntz.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3008,7 +4436,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg030_ntz_about",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 30,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3063,13 +4503,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG030_NTZ_ABOUT",
+                "source_host": "ntz.bg",
+                "surface_code": "BG030_NTZ_ABOUT_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ntz.bg/en/about-us/"
+              }
             }
           ],
           "source_code": "BG030_NTZ_ABOUT",
           "surface_name": "Official company profile seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG030_NTZ_ABOUT_SURFACE_001",
+          "seed_surface_name": "Official company profile seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG030_NTZ_ABOUT",
+          "surface_metadata": {
+            "source_family_code": "BG030_NTZ_ABOUT",
+            "surface_code": "BG030_NTZ_ABOUT_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3079,7 +4540,16 @@
       "source_family_code": "BG030_NTZ_ABOUT",
       "source_family_index": 30,
       "source_family_name": "Bg030 Ntz About",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://ntz.bg/en/about-us/",
+      "source_host": "ntz.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3092,7 +4562,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg031_ntz_contacts",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 31,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3147,13 +4629,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG031_NTZ_CONTACTS",
+                "source_host": "ntz.bg",
+                "surface_code": "BG031_NTZ_CONTACTS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ntz.bg/en/contacts/"
+              }
             }
           ],
           "source_code": "BG031_NTZ_CONTACTS",
           "surface_name": "Official contact/address extraction seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG031_NTZ_CONTACTS_SURFACE_001",
+          "seed_surface_name": "Official contact/address extraction seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG031_NTZ_CONTACTS",
+          "surface_metadata": {
+            "source_family_code": "BG031_NTZ_CONTACTS",
+            "surface_code": "BG031_NTZ_CONTACTS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3163,7 +4666,16 @@
       "source_family_code": "BG031_NTZ_CONTACTS",
       "source_family_index": 31,
       "source_family_name": "Bg031 Ntz Contacts",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://ntz.bg/en/contacts/",
+      "source_host": "ntz.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3176,7 +4688,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg032_interlogistica_about",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 32,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3231,13 +4755,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG032_INTERLOGISTICA_ABOUT",
+                "source_host": "www.interlogistica.bg",
+                "surface_code": "BG032_INTERLOGISTICA_ABOUT_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.interlogistica.bg/en/info/about/"
+              }
             }
           ],
           "source_code": "BG032_INTERLOGISTICA_ABOUT",
           "surface_name": "Official Bulgarian transport/logistics company profile seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG032_INTERLOGISTICA_ABOUT_SURFACE_001",
+          "seed_surface_name": "Official Bulgarian transport/logistics company profile seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG032_INTERLOGISTICA_ABOUT",
+          "surface_metadata": {
+            "source_family_code": "BG032_INTERLOGISTICA_ABOUT",
+            "surface_code": "BG032_INTERLOGISTICA_ABOUT_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3247,7 +4792,16 @@
       "source_family_code": "BG032_INTERLOGISTICA_ABOUT",
       "source_family_index": 32,
       "source_family_name": "Bg032 Interlogistica About",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.interlogistica.bg/en/info/about/",
+      "source_host": "www.interlogistica.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3260,7 +4814,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg033_wto_bg_home",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 33,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3315,13 +4881,34 @@
               ],
               "language_fit": "unknown",
               "coverage_fit": "country_primary",
-              "locale_review_status": "manual_review_required"
+              "locale_review_status": "manual_review_required",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG033_WTO_BG_HOME",
+                "source_host": "www.wto.bg",
+                "surface_code": "BG033_WTO_BG_HOME_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.wto.bg/"
+              }
             }
           ],
           "source_code": "BG033_WTO_BG_HOME",
           "surface_name": "Official freight/logistics company seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG033_WTO_BG_HOME_SURFACE_001",
+          "seed_surface_name": "Official freight/logistics company seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG033_WTO_BG_HOME",
+          "surface_metadata": {
+            "source_family_code": "BG033_WTO_BG_HOME",
+            "surface_code": "BG033_WTO_BG_HOME_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3331,7 +4918,16 @@
       "source_family_code": "BG033_WTO_BG_HOME",
       "source_family_index": 33,
       "source_family_name": "Bg033 Wto Bg Home",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.wto.bg/",
+      "source_host": "www.wto.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3344,7 +4940,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg034_dachser_bg",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 34,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3399,13 +5007,34 @@
               ],
               "language_fit": "unknown",
               "coverage_fit": "country_primary",
-              "locale_review_status": "manual_review_required"
+              "locale_review_status": "manual_review_required",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG034_DACHSER_BG",
+                "source_host": "www.dachser.bg",
+                "surface_code": "BG034_DACHSER_BG_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.dachser.bg/"
+              }
             }
           ],
           "source_code": "BG034_DACHSER_BG",
           "surface_name": "Global logistics provider Bulgaria surface.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "BG034_DACHSER_BG_SURFACE_001",
+          "seed_surface_name": "Global logistics provider Bulgaria surface.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG034_DACHSER_BG",
+          "surface_metadata": {
+            "source_family_code": "BG034_DACHSER_BG",
+            "surface_code": "BG034_DACHSER_BG_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3415,7 +5044,16 @@
       "source_family_code": "BG034_DACHSER_BG",
       "source_family_index": 34,
       "source_family_name": "Bg034 Dachser Bg",
-      "source_quality": "B_PLUS"
+      "source_quality": "B_PLUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.dachser.bg/",
+      "source_host": "www.dachser.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3428,7 +5066,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg035_dsv_bg",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 35,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3483,13 +5133,34 @@
               ],
               "language_fit": "unknown",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "broken_or_blocked"
+              "locale_review_status": "broken_or_blocked",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG035_DSV_BG",
+                "source_host": "www.bg.dsv.com",
+                "surface_code": "BG035_DSV_BG_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.bg.dsv.com/"
+              }
             }
           ],
           "source_code": "BG035_DSV_BG",
           "surface_name": "Global logistics provider Bulgaria surface.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "BG035_DSV_BG_SURFACE_001",
+          "seed_surface_name": "Global logistics provider Bulgaria surface.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG035_DSV_BG",
+          "surface_metadata": {
+            "source_family_code": "BG035_DSV_BG",
+            "surface_code": "BG035_DSV_BG_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3499,7 +5170,16 @@
       "source_family_code": "BG035_DSV_BG",
       "source_family_index": 35,
       "source_family_name": "Bg035 Dsv Bg",
-      "source_quality": "B_PLUS"
+      "source_quality": "B_PLUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.bg.dsv.com/",
+      "source_host": "www.bg.dsv.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3512,7 +5192,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg036_flexytrans_home",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 36,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3567,13 +5259,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG036_FLEXYTRANS_HOME",
+                "source_host": "www.flexytrans.bg",
+                "surface_code": "BG036_FLEXYTRANS_HOME_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.flexytrans.bg/en/"
+              }
             }
           ],
           "source_code": "BG036_FLEXYTRANS_HOME",
           "surface_name": "Official transport/forwarding company seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG036_FLEXYTRANS_HOME_SURFACE_001",
+          "seed_surface_name": "Official transport/forwarding company seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG036_FLEXYTRANS_HOME",
+          "surface_metadata": {
+            "source_family_code": "BG036_FLEXYTRANS_HOME",
+            "surface_code": "BG036_FLEXYTRANS_HOME_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3583,7 +5296,16 @@
       "source_family_code": "BG036_FLEXYTRANS_HOME",
       "source_family_index": 36,
       "source_family_name": "Bg036 Flexytrans Home",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.flexytrans.bg/en/",
+      "source_host": "www.flexytrans.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3596,7 +5318,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg037_eurospeed_home",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 37,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3651,13 +5385,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG037_EUROSPEED_HOME",
+                "source_host": "eu-speed.com",
+                "surface_code": "BG037_EUROSPEED_HOME_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://eu-speed.com/en/"
+              }
             }
           ],
           "source_code": "BG037_EUROSPEED_HOME",
           "surface_name": "Official Bulgarian cargo transport company seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG037_EUROSPEED_HOME_SURFACE_001",
+          "seed_surface_name": "Official Bulgarian cargo transport company seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG037_EUROSPEED_HOME",
+          "surface_metadata": {
+            "source_family_code": "BG037_EUROSPEED_HOME",
+            "surface_code": "BG037_EUROSPEED_HOME_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3667,7 +5422,16 @@
       "source_family_code": "BG037_EUROSPEED_HOME",
       "source_family_index": 37,
       "source_family_name": "Bg037 Eurospeed Home",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://eu-speed.com/en/",
+      "source_host": "eu-speed.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3680,7 +5444,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg038_orbit_warehouse",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 38,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3735,13 +5511,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG038_ORBIT_WAREHOUSE",
+                "source_host": "www.orbit.bg",
+                "surface_code": "BG038_ORBIT_WAREHOUSE_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.orbit.bg/en/service/warehouse-logistics/"
+              }
             }
           ],
           "source_code": "BG038_ORBIT_WAREHOUSE",
           "surface_name": "Warehouse logistics service seed.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG038_ORBIT_WAREHOUSE_SURFACE_001",
+          "seed_surface_name": "Warehouse logistics service seed.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG038_ORBIT_WAREHOUSE",
+          "surface_metadata": {
+            "source_family_code": "BG038_ORBIT_WAREHOUSE",
+            "surface_code": "BG038_ORBIT_WAREHOUSE_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3751,7 +5548,16 @@
       "source_family_code": "BG038_ORBIT_WAREHOUSE",
       "source_family_index": 38,
       "source_family_name": "Bg038 Orbit Warehouse",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.orbit.bg/en/service/warehouse-logistics/",
+      "source_host": "www.orbit.bg",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3764,7 +5570,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg039_bon_marine_from_fiata_nsbs",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 39,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3819,13 +5637,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG039_BON_MARINE_FROM_FIATA_NSBS",
+                "source_host": "bonmarine.com",
+                "surface_code": "BG039_BON_MARINE_FROM_FIATA_NSBS_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://bonmarine.com/en/home/"
+              }
             }
           ],
           "source_code": "BG039_BON_MARINE_FROM_FIATA_NSBS",
           "surface_name": "FIATA/NSBS-listed company candidate; official domain to be extracted later.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG039_BON_MARINE_FROM_FIATA_NSBS_SURFACE_001",
+          "seed_surface_name": "FIATA/NSBS-listed company candidate; official domain to be extracted later.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG039_BON_MARINE_FROM_FIATA_NSBS",
+          "surface_metadata": {
+            "source_family_code": "BG039_BON_MARINE_FROM_FIATA_NSBS",
+            "surface_code": "BG039_BON_MARINE_FROM_FIATA_NSBS_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3835,7 +5674,16 @@
       "source_family_code": "BG039_BON_MARINE_FROM_FIATA_NSBS",
       "source_family_index": 39,
       "source_family_name": "Bg039 Bon Marine From Fiata Nsbs",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://bonmarine.com/en/home/",
+      "source_host": "bonmarine.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     },
     {
       "candidate_manifest": true,
@@ -3848,7 +5696,19 @@
         "crawl_depth_policy": "seed_only_until_live_probe",
         "crawl_priority": "candidate_review",
         "host_budget_group": "bg040_despred_from_fiata",
-        "source_origin": "R366 Bulgarian decision doc"
+        "source_origin": "R366 Bulgarian decision doc",
+        "lang_code": "bg",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 40,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "bg",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
       },
       "is_enabled": false,
       "is_live": false,
@@ -3903,13 +5763,34 @@
               ],
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
-              "locale_review_status": "needs_native_alternative_check"
+              "locale_review_status": "needs_native_alternative_check",
+              "seed_type": "directory_or_official_candidate",
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "BG040_DESPRED_FROM_FIATA",
+                "source_host": "despred.com",
+                "surface_code": "BG040_DESPRED_FROM_FIATA_SURFACE_001",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://despred.com/en/home/"
+              }
             }
           ],
           "source_code": "BG040_DESPRED_FROM_FIATA",
           "surface_name": "FIATA-listed Bulgarian freight/logistics candidate; official domain to be confirmed later.",
           "surface_type": "directory_or_official_candidate",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "BG040_DESPRED_FROM_FIATA_SURFACE_001",
+          "seed_surface_name": "FIATA-listed Bulgarian freight/logistics candidate; official domain to be confirmed later.",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "BG040_DESPRED_FROM_FIATA",
+          "surface_metadata": {
+            "source_family_code": "BG040_DESPRED_FROM_FIATA",
+            "surface_code": "BG040_DESPRED_FROM_FIATA_SURFACE_001",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
       ],
       "source_category": [
@@ -3919,7 +5800,34 @@
       "source_family_code": "BG040_DESPRED_FROM_FIATA",
       "source_family_index": 40,
       "source_family_name": "Bg040 Despred From Fiata",
-      "source_quality": "A_MINUS"
+      "source_quality": "A_MINUS",
+      "source_status": "candidate",
+      "source_root_url": "https://despred.com/en/home/",
+      "source_host": "despred.com",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1
     }
-  ]
+  ],
+  "catalog_status": "candidate_only_not_live",
+  "catalog_scope": {
+    "language_code": "bg",
+    "language_name": "Bulgarian",
+    "language_native_name": "Български",
+    "catalog_file": "bg/bulgarian_source_families_v2.json",
+    "catalog_family": "language_startpoint_catalog"
+  },
+  "seed_contract_basis": {
+    "schema": "source_families_v2",
+    "runtime_contract": "strict_loader_v1",
+    "contract_source": "canonical_json_migration",
+    "migrated_from_candidate_manifest": true,
+    "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+    "source_file": "bg/bulgarian_source_families_v2.json",
+    "loader_policy": "strict_load_startpoint_catalog_no_runtime_adapter"
+  },
+  "standardization_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
 }

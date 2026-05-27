@@ -111,11 +111,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://ameu.org.ua/en/search-forwarder",
+              "canonical_url": "https://ameu.org.ua/en/search-forwarder",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+                "source_host": "ameu.org.ua",
+                "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ameu.org.ua/en/search-forwarder"
+              }
             }
           ],
           "seed_surface_code": "uk001_aiffu_search_forwarder_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK001_AIFFU_SEARCH_FORWARDER seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+          "surface_metadata": {
+            "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+            "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S02",
@@ -150,11 +175,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://ameu.org.ua/en/search-forwarder?start=20",
+              "canonical_url": "https://ameu.org.ua/en/search-forwarder?start=20",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+                "source_host": "ameu.org.ua",
+                "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S02",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ameu.org.ua/en/search-forwarder?start=20"
+              }
             }
           ],
           "seed_surface_code": "uk001_aiffu_search_forwarder_surface_02",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK001_AIFFU_SEARCH_FORWARDER seed surface 02",
+          "surface_index": 2,
+          "seed_surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+          "surface_metadata": {
+            "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+            "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S02",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S03",
@@ -189,11 +239,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://ameu.org.ua/en/search-forwarder?start=40",
+              "canonical_url": "https://ameu.org.ua/en/search-forwarder?start=40",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+                "source_host": "ameu.org.ua",
+                "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S03",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ameu.org.ua/en/search-forwarder?start=40"
+              }
             }
           ],
           "seed_surface_code": "uk001_aiffu_search_forwarder_surface_03",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK001_AIFFU_SEARCH_FORWARDER seed surface 03",
+          "surface_index": 3,
+          "seed_surface_index": 3,
+          "family_seed_surface_index": 3,
+          "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+          "surface_metadata": {
+            "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+            "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S03",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S04",
@@ -228,13 +303,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://ameu.org.ua/en/search-forwarder?start=60",
+              "canonical_url": "https://ameu.org.ua/en/search-forwarder?start=60",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+                "source_host": "ameu.org.ua",
+                "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S04",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ameu.org.ua/en/search-forwarder?start=60"
+              }
             }
           ],
           "seed_surface_code": "uk001_aiffu_search_forwarder_surface_04",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK001_AIFFU_SEARCH_FORWARDER seed surface 04",
+          "surface_index": 4,
+          "seed_surface_index": 4,
+          "family_seed_surface_index": 4,
+          "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+          "surface_metadata": {
+            "source_family_code": "UK001_AIFFU_SEARCH_FORWARDER",
+            "surface_code": "UK001_AIFFU_SEARCH_FORWARDER_S04",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 1,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 1,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "ameu.org.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK002_AIFFU_FULL_MEMBERS",
@@ -291,11 +415,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://ameu.org.ua/en/members/active-members?dir=asc&order=f_vvvvvvvvvv&start=0",
+              "canonical_url": "https://ameu.org.ua/en/members/active-members?dir=asc&order=f_vvvvvvvvvv&start=0",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+                "source_host": "ameu.org.ua",
+                "surface_code": "UK002_AIFFU_FULL_MEMBERS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ameu.org.ua/en/members/active-members?dir=asc&order=f_vvvvvvvvvv&start=0"
+              }
             }
           ],
           "seed_surface_code": "uk002_aiffu_full_members_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK002_AIFFU_FULL_MEMBERS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+            "surface_code": "UK002_AIFFU_FULL_MEMBERS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK002_AIFFU_FULL_MEMBERS_S02",
@@ -330,11 +479,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://ameu.org.ua/en/members/active-members?start=20",
+              "canonical_url": "https://ameu.org.ua/en/members/active-members?start=20",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+                "source_host": "ameu.org.ua",
+                "surface_code": "UK002_AIFFU_FULL_MEMBERS_S02",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ameu.org.ua/en/members/active-members?start=20"
+              }
             }
           ],
           "seed_surface_code": "uk002_aiffu_full_members_surface_02",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK002_AIFFU_FULL_MEMBERS seed surface 02",
+          "surface_index": 2,
+          "seed_surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+            "surface_code": "UK002_AIFFU_FULL_MEMBERS_S02",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK002_AIFFU_FULL_MEMBERS_S03",
@@ -369,11 +543,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://ameu.org.ua/en/members/active-members?start=40",
+              "canonical_url": "https://ameu.org.ua/en/members/active-members?start=40",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+                "source_host": "ameu.org.ua",
+                "surface_code": "UK002_AIFFU_FULL_MEMBERS_S03",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ameu.org.ua/en/members/active-members?start=40"
+              }
             }
           ],
           "seed_surface_code": "uk002_aiffu_full_members_surface_03",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK002_AIFFU_FULL_MEMBERS seed surface 03",
+          "surface_index": 3,
+          "seed_surface_index": 3,
+          "family_seed_surface_index": 3,
+          "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+            "surface_code": "UK002_AIFFU_FULL_MEMBERS_S03",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK002_AIFFU_FULL_MEMBERS_S04",
@@ -408,13 +607,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://ameu.org.ua/en/members/active-members?start=60",
+              "canonical_url": "https://ameu.org.ua/en/members/active-members?start=60",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+                "source_host": "ameu.org.ua",
+                "surface_code": "UK002_AIFFU_FULL_MEMBERS_S04",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ameu.org.ua/en/members/active-members?start=60"
+              }
             }
           ],
           "seed_surface_code": "uk002_aiffu_full_members_surface_04",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK002_AIFFU_FULL_MEMBERS seed surface 04",
+          "surface_index": 4,
+          "seed_surface_index": 4,
+          "family_seed_surface_index": 4,
+          "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+          "surface_metadata": {
+            "source_family_code": "UK002_AIFFU_FULL_MEMBERS",
+            "surface_code": "UK002_AIFFU_FULL_MEMBERS_S04",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 2,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 2,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "ameu.org.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK003_FIATA_UKRAINE_DIRECTORY",
@@ -471,13 +719,62 @@
               "language_fit": "native",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://fiata.org/directory/ua/",
+              "canonical_url": "https://fiata.org/directory/ua/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK003_FIATA_UKRAINE_DIRECTORY",
+                "source_host": "fiata.org",
+                "surface_code": "UK003_FIATA_UKRAINE_DIRECTORY_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://fiata.org/directory/ua/"
+              }
             }
           ],
           "seed_surface_code": "uk003_fiata_ukraine_directory_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK003_FIATA_UKRAINE_DIRECTORY seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK003_FIATA_UKRAINE_DIRECTORY",
+          "surface_metadata": {
+            "source_family_code": "UK003_FIATA_UKRAINE_DIRECTORY",
+            "surface_code": "UK003_FIATA_UKRAINE_DIRECTORY_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 3,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 3,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "fiata.org",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
@@ -534,11 +831,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.atfl.org.ua/en",
+              "canonical_url": "https://www.atfl.org.ua/en",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+                "source_host": "atfl.org.ua",
+                "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.atfl.org.ua/en"
+              }
             }
           ],
           "seed_surface_code": "uk004_ukrzovnishtrans_official_association_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+          "surface_metadata": {
+            "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+            "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S02",
@@ -573,11 +895,36 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.atfl.org.ua/",
+              "canonical_url": "https://www.atfl.org.ua/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+                "source_host": "atfl.org.ua",
+                "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S02",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.atfl.org.ua/"
+              }
             }
           ],
           "seed_surface_code": "uk004_ukrzovnishtrans_official_association_surface_02",
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "seed_surface_name": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION seed surface 02",
+          "surface_index": 2,
+          "seed_surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+          "surface_metadata": {
+            "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+            "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S02",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S03",
@@ -612,11 +959,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.atfl.org.ua/en/pro-nas/istoriya",
+              "canonical_url": "https://www.atfl.org.ua/en/pro-nas/istoriya",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+                "source_host": "atfl.org.ua",
+                "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S03",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.atfl.org.ua/en/pro-nas/istoriya"
+              }
             }
           ],
           "seed_surface_code": "uk004_ukrzovnishtrans_official_association_surface_03",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION seed surface 03",
+          "surface_index": 3,
+          "seed_surface_index": 3,
+          "family_seed_surface_index": 3,
+          "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+          "surface_metadata": {
+            "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+            "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S03",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S04",
@@ -651,13 +1023,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.atfl.org.ua/en/pidvishennya-kvalifikaciyi",
+              "canonical_url": "https://www.atfl.org.ua/en/pidvishennya-kvalifikaciyi",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+                "source_host": "atfl.org.ua",
+                "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S04",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.atfl.org.ua/en/pidvishennya-kvalifikaciyi"
+              }
             }
           ],
           "seed_surface_code": "uk004_ukrzovnishtrans_official_association_surface_04",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION seed surface 04",
+          "surface_index": 4,
+          "seed_surface_index": 4,
+          "family_seed_surface_index": 4,
+          "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+          "surface_metadata": {
+            "source_family_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION",
+            "surface_code": "UK004_UKRZOVNISHTRANS_OFFICIAL_ASSOCIATION_S04",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 4,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 4,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "atfl.org.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE",
@@ -714,13 +1135,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.clecat.org/members/associate-members",
+              "canonical_url": "https://www.clecat.org/members/associate-members",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE",
+                "source_host": "clecat.org",
+                "surface_code": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.clecat.org/members/associate-members"
+              }
             }
           ],
           "seed_surface_code": "uk005_clecat_ukrzovnishtrans_reference_surface_01",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "seed_surface_name": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE",
+          "surface_metadata": {
+            "source_family_code": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE",
+            "surface_code": "UK005_CLECAT_UKRZOVNISHTRANS_REFERENCE_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 5,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 5,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "clecat.org",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION",
@@ -777,13 +1247,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.cargoagentnetwork.com/country/ukraine/",
+              "canonical_url": "https://www.cargoagentnetwork.com/country/ukraine/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION",
+                "source_host": "cargoagentnetwork.com",
+                "surface_code": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.cargoagentnetwork.com/country/ukraine/"
+              }
             }
           ],
           "seed_surface_code": "uk006_cargo_agent_network_ukraine_association_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION",
+          "surface_metadata": {
+            "source_family_code": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION",
+            "surface_code": "UK006_CARGO_AGENT_NETWORK_UKRAINE_ASSOCIATION_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 6,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 6,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "cargoagentnetwork.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION",
@@ -840,13 +1359,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://azfreight.com/association/ukrzovnishtrans-association-of-transport-forwarding-organisations/",
+              "canonical_url": "https://azfreight.com/association/ukrzovnishtrans-association-of-transport-forwarding-organisations/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION",
+                "source_host": "azfreight.com",
+                "surface_code": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://azfreight.com/association/ukrzovnishtrans-association-of-transport-forwarding-organisations/"
+              }
             }
           ],
           "seed_surface_code": "uk007_azfreight_ukrzovnishtrans_association_surface_01",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "seed_surface_name": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION",
+          "surface_metadata": {
+            "source_family_code": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION",
+            "surface_code": "UK007_AZFREIGHT_UKRZOVNISHTRANS_ASSOCIATION_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 7,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 7,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "azfreight.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS",
@@ -903,11 +1471,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.freightnet.com/directory/p1/cUA/s30.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p1/cUA/s30.htm",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS",
+                "source_host": "freightnet.com",
+                "surface_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.freightnet.com/directory/p1/cUA/s30.htm"
+              }
             }
           ],
           "seed_surface_code": "uk008_freightnet_ukraine_forwarders_surface_01",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "seed_surface_name": "UK008_FREIGHTNET_UKRAINE_FORWARDERS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS",
+          "surface_metadata": {
+            "source_family_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS",
+            "surface_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS_S02",
@@ -942,13 +1535,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.freightnet.com/directory/p2/cUA/s30.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p2/cUA/s30.htm",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS",
+                "source_host": "freightnet.com",
+                "surface_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS_S02",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.freightnet.com/directory/p2/cUA/s30.htm"
+              }
             }
           ],
           "seed_surface_code": "uk008_freightnet_ukraine_forwarders_surface_02",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "seed_surface_name": "UK008_FREIGHTNET_UKRAINE_FORWARDERS seed surface 02",
+          "surface_index": 2,
+          "seed_surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS",
+          "surface_metadata": {
+            "source_family_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS",
+            "surface_code": "UK008_FREIGHTNET_UKRAINE_FORWARDERS_S02",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 8,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 8,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "freightnet.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK009_FORWARDINGCOMPANIES_UKRAINE",
@@ -1005,13 +1647,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://forwardingcompanies.com/in/ukraine",
+              "canonical_url": "https://forwardingcompanies.com/in/ukraine",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK009_FORWARDINGCOMPANIES_UKRAINE",
+                "source_host": "forwardingcompanies.com",
+                "surface_code": "UK009_FORWARDINGCOMPANIES_UKRAINE_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://forwardingcompanies.com/in/ukraine"
+              }
             }
           ],
           "seed_surface_code": "uk009_forwardingcompanies_ukraine_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK009_FORWARDINGCOMPANIES_UKRAINE seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK009_FORWARDINGCOMPANIES_UKRAINE",
+          "surface_metadata": {
+            "source_family_code": "UK009_FORWARDINGCOMPANIES_UKRAINE",
+            "surface_code": "UK009_FORWARDINGCOMPANIES_UKRAINE_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 9,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 9,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "forwardingcompanies.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY",
@@ -1068,13 +1759,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://ruzave.com/ukraine",
+              "canonical_url": "https://ruzave.com/ukraine",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY",
+                "source_host": "ruzave.com",
+                "surface_code": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ruzave.com/ukraine"
+              }
             }
           ],
           "seed_surface_code": "uk010_ruzave_ukraine_shipping_directory_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY",
+          "surface_metadata": {
+            "source_family_code": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY",
+            "surface_code": "UK010_RUZAVE_UKRAINE_SHIPPING_DIRECTORY_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 10,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 10,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "ruzave.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES",
@@ -1131,13 +1871,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://railmarket.com/eu/ukraine/logistics-companies",
+              "canonical_url": "https://railmarket.com/eu/ukraine/logistics-companies",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES",
+                "source_host": "railmarket.com",
+                "surface_code": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://railmarket.com/eu/ukraine/logistics-companies"
+              }
             }
           ],
           "seed_surface_code": "uk011_railmarket_ukraine_logistics_companies_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES",
+          "surface_metadata": {
+            "source_family_code": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES",
+            "surface_code": "UK011_RAILMARKET_UKRAINE_LOGISTICS_COMPANIES_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 11,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 11,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "railmarket.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES",
@@ -1194,13 +1983,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://railmarket.com/eu/ukraine/companies",
+              "canonical_url": "https://railmarket.com/eu/ukraine/companies",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES",
+                "source_host": "railmarket.com",
+                "surface_code": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://railmarket.com/eu/ukraine/companies"
+              }
             }
           ],
           "seed_surface_code": "uk012_railmarket_ukraine_railway_companies_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES",
+          "surface_metadata": {
+            "source_family_code": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES",
+            "surface_code": "UK012_RAILMARKET_UKRAINE_RAILWAY_COMPANIES_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 12,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 12,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "railmarket.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK013_JCTRANS_UKRAINE_FORWARDERS",
@@ -1257,13 +2095,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://m.jctrans.com/en/company/listc/Ukraine/0-0",
+              "canonical_url": "https://m.jctrans.com/en/company/listc/Ukraine/0-0",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK013_JCTRANS_UKRAINE_FORWARDERS",
+                "source_host": "m.jctrans.com",
+                "surface_code": "UK013_JCTRANS_UKRAINE_FORWARDERS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://m.jctrans.com/en/company/listc/Ukraine/0-0"
+              }
             }
           ],
           "seed_surface_code": "uk013_jctrans_ukraine_forwarders_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK013_JCTRANS_UKRAINE_FORWARDERS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK013_JCTRANS_UKRAINE_FORWARDERS",
+          "surface_metadata": {
+            "source_family_code": "UK013_JCTRANS_UKRAINE_FORWARDERS",
+            "surface_code": "UK013_JCTRANS_UKRAINE_FORWARDERS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 13,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 13,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "m.jctrans.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK014_ROOLZ_UKRAINE_FORWARDERS",
@@ -1320,13 +2207,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://roolz.net/companies/forwarders/ukraine",
+              "canonical_url": "https://roolz.net/companies/forwarders/ukraine",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK014_ROOLZ_UKRAINE_FORWARDERS",
+                "source_host": "roolz.net",
+                "surface_code": "UK014_ROOLZ_UKRAINE_FORWARDERS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://roolz.net/companies/forwarders/ukraine"
+              }
             }
           ],
           "seed_surface_code": "uk014_roolz_ukraine_forwarders_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK014_ROOLZ_UKRAINE_FORWARDERS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK014_ROOLZ_UKRAINE_FORWARDERS",
+          "surface_metadata": {
+            "source_family_code": "UK014_ROOLZ_UKRAINE_FORWARDERS",
+            "surface_code": "UK014_ROOLZ_UKRAINE_FORWARDERS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 14,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 14,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "roolz.net",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK015_GOODFIRMS_UKRAINE_LOGISTICS",
@@ -1383,13 +2319,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.goodfirms.co/supply-chain-logistics-companies/ukraine",
+              "canonical_url": "https://www.goodfirms.co/supply-chain-logistics-companies/ukraine",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK015_GOODFIRMS_UKRAINE_LOGISTICS",
+                "source_host": "goodfirms.co",
+                "surface_code": "UK015_GOODFIRMS_UKRAINE_LOGISTICS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.goodfirms.co/supply-chain-logistics-companies/ukraine"
+              }
             }
           ],
           "seed_surface_code": "uk015_goodfirms_ukraine_logistics_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK015_GOODFIRMS_UKRAINE_LOGISTICS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK015_GOODFIRMS_UKRAINE_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "UK015_GOODFIRMS_UKRAINE_LOGISTICS",
+            "surface_code": "UK015_GOODFIRMS_UKRAINE_LOGISTICS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 15,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 15,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "goodfirms.co",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS",
@@ -1446,13 +2431,62 @@
               "language_fit": "native",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://clutch.co/ua/logistics/freight-forwarders",
+              "canonical_url": "https://clutch.co/ua/logistics/freight-forwarders",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS",
+                "source_host": "clutch.co",
+                "surface_code": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://clutch.co/ua/logistics/freight-forwarders"
+              }
             }
           ],
           "seed_surface_code": "uk016_clutch_ukraine_freight_forwarders_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS",
+          "surface_metadata": {
+            "source_family_code": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS",
+            "surface_code": "UK016_CLUTCH_UKRAINE_FREIGHT_FORWARDERS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 16,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 16,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "clutch.co",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT",
@@ -1509,13 +2543,62 @@
               "language_fit": "native",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://clutch.co/ua/logistics/rail-freight-companies",
+              "canonical_url": "https://clutch.co/ua/logistics/rail-freight-companies",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT",
+                "source_host": "clutch.co",
+                "surface_code": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://clutch.co/ua/logistics/rail-freight-companies"
+              }
             }
           ],
           "seed_surface_code": "uk017_clutch_ukraine_rail_freight_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT",
+          "surface_metadata": {
+            "source_family_code": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT",
+            "surface_code": "UK017_CLUTCH_UKRAINE_RAIL_FREIGHT_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 17,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 17,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "clutch.co",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE",
@@ -1572,13 +2655,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://logisticscompaniesdirectory.com/network-regions/ukraine/",
+              "canonical_url": "https://logisticscompaniesdirectory.com/network-regions/ukraine/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE",
+                "source_host": "logisticscompaniesdirectory.com",
+                "surface_code": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://logisticscompaniesdirectory.com/network-regions/ukraine/"
+              }
             }
           ],
           "seed_surface_code": "uk018_logistics_companies_directory_ukraine_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE",
+          "surface_metadata": {
+            "source_family_code": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE",
+            "surface_code": "UK018_LOGISTICS_COMPANIES_DIRECTORY_UKRAINE_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 18,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 18,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "logisticscompaniesdirectory.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING",
@@ -1635,13 +2767,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/ukraine-freight-forwarders/",
+              "canonical_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/ukraine-freight-forwarders/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING",
+                "source_host": "overseasprojectcargo.com",
+                "surface_code": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/ukraine-freight-forwarders/"
+              }
             }
           ],
           "seed_surface_code": "uk019_opca_ukraine_forwarders_trucking_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING",
+          "surface_metadata": {
+            "source_family_code": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING",
+            "surface_code": "UK019_OPCA_UKRAINE_FORWARDERS_TRUCKING_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 19,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 19,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "overseasprojectcargo.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK020_FORWARDERSPAGES_UKRAINE",
@@ -1698,13 +2879,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.forwarderspages.com/country/ukraine",
+              "canonical_url": "https://www.forwarderspages.com/country/ukraine",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK020_FORWARDERSPAGES_UKRAINE",
+                "source_host": "forwarderspages.com",
+                "surface_code": "UK020_FORWARDERSPAGES_UKRAINE_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.forwarderspages.com/country/ukraine"
+              }
             }
           ],
           "seed_surface_code": "uk020_forwarderspages_ukraine_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK020_FORWARDERSPAGES_UKRAINE seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK020_FORWARDERSPAGES_UKRAINE",
+          "surface_metadata": {
+            "source_family_code": "UK020_FORWARDERSPAGES_UKRAINE",
+            "surface_code": "UK020_FORWARDERSPAGES_UKRAINE_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 20,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 20,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "forwarderspages.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK021_SEARATES_UKRAINE_PORTS",
@@ -1761,13 +2991,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.searates.com/maritime/ukraine",
+              "canonical_url": "https://www.searates.com/maritime/ukraine",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK021_SEARATES_UKRAINE_PORTS",
+                "source_host": "searates.com",
+                "surface_code": "UK021_SEARATES_UKRAINE_PORTS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.searates.com/maritime/ukraine"
+              }
             }
           ],
           "seed_surface_code": "uk021_searates_ukraine_ports_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK021_SEARATES_UKRAINE_PORTS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK021_SEARATES_UKRAINE_PORTS",
+          "surface_metadata": {
+            "source_family_code": "UK021_SEARATES_UKRAINE_PORTS",
+            "surface_code": "UK021_SEARATES_UKRAINE_PORTS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 21,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 21,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "searates.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK022_CARGOROUTER_UKRAINE_PORTS",
@@ -1824,13 +3103,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.cargorouter.com/directory/ports/Ukraine/",
+              "canonical_url": "https://www.cargorouter.com/directory/ports/Ukraine/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK022_CARGOROUTER_UKRAINE_PORTS",
+                "source_host": "cargorouter.com",
+                "surface_code": "UK022_CARGOROUTER_UKRAINE_PORTS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.cargorouter.com/directory/ports/Ukraine/"
+              }
             }
           ],
           "seed_surface_code": "uk022_cargorouter_ukraine_ports_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK022_CARGOROUTER_UKRAINE_PORTS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK022_CARGOROUTER_UKRAINE_PORTS",
+          "surface_metadata": {
+            "source_family_code": "UK022_CARGOROUTER_UKRAINE_PORTS",
+            "surface_code": "UK022_CARGOROUTER_UKRAINE_PORTS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 22,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 22,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "cargorouter.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES",
@@ -1887,13 +3215,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.marinetraffic.com/en/maritime-companies/directory/port%3A124/per_page%3A20/sublocation%3AUKRAINE",
+              "canonical_url": "https://www.marinetraffic.com/en/maritime-companies/directory/port%3A124/per_page%3A20/sublocation%3AUKRAINE",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES",
+                "source_host": "marinetraffic.com",
+                "surface_code": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.marinetraffic.com/en/maritime-companies/directory/port%3A124/per_page%3A20/sublocation%3AUKRAINE"
+              }
             }
           ],
           "seed_surface_code": "uk023_marinetraffic_ukraine_maritime_companies_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES",
+          "surface_metadata": {
+            "source_family_code": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES",
+            "surface_code": "UK023_MARINETRAFFIC_UKRAINE_MARITIME_COMPANIES_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 23,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 23,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "marinetraffic.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS",
@@ -1950,13 +3327,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.marinetraffic.com/en/maritime-companies/directory/secind%3A59/industry%3Aport%20agents/tag%3APort%20Agency/sublocation%3AUKRAINE",
+              "canonical_url": "https://www.marinetraffic.com/en/maritime-companies/directory/secind%3A59/industry%3Aport%20agents/tag%3APort%20Agency/sublocation%3AUKRAINE",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS",
+                "source_host": "marinetraffic.com",
+                "surface_code": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.marinetraffic.com/en/maritime-companies/directory/secind%3A59/industry%3Aport%20agents/tag%3APort%20Agency/sublocation%3AUKRAINE"
+              }
             }
           ],
           "seed_surface_code": "uk024_marinetraffic_ukraine_port_agents_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS",
+          "surface_metadata": {
+            "source_family_code": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS",
+            "surface_code": "UK024_MARINETRAFFIC_UKRAINE_PORT_AGENTS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 24,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 24,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "marinetraffic.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK025_SHIPSGO_UKRAINE_PORTS",
@@ -2013,13 +3439,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://shipsgo.com/ocean/ports/countries/ukraine",
+              "canonical_url": "https://shipsgo.com/ocean/ports/countries/ukraine",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK025_SHIPSGO_UKRAINE_PORTS",
+                "source_host": "shipsgo.com",
+                "surface_code": "UK025_SHIPSGO_UKRAINE_PORTS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://shipsgo.com/ocean/ports/countries/ukraine"
+              }
             }
           ],
           "seed_surface_code": "uk025_shipsgo_ukraine_ports_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK025_SHIPSGO_UKRAINE_PORTS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK025_SHIPSGO_UKRAINE_PORTS",
+          "surface_metadata": {
+            "source_family_code": "UK025_SHIPSGO_UKRAINE_PORTS",
+            "surface_code": "UK025_SHIPSGO_UKRAINE_PORTS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 25,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 25,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "shipsgo.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK026_INCODOCS_UKRAINE_PORTS",
@@ -2076,13 +3551,62 @@
               "language_fit": "unknown",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://incodocs.com/ports/ua",
+              "canonical_url": "https://incodocs.com/ports/ua",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK026_INCODOCS_UKRAINE_PORTS",
+                "source_host": "incodocs.com",
+                "surface_code": "UK026_INCODOCS_UKRAINE_PORTS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://incodocs.com/ports/ua"
+              }
             }
           ],
           "seed_surface_code": "uk026_incodocs_ukraine_ports_surface_01",
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "seed_surface_name": "UK026_INCODOCS_UKRAINE_PORTS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK026_INCODOCS_UKRAINE_PORTS",
+          "surface_metadata": {
+            "source_family_code": "UK026_INCODOCS_UKRAINE_PORTS",
+            "surface_code": "UK026_INCODOCS_UKRAINE_PORTS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 26,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 26,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "incodocs.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY",
@@ -2139,13 +3663,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.tarangya.com/company/others/port-directory/country-wise/UA",
+              "canonical_url": "https://www.tarangya.com/company/others/port-directory/country-wise/UA",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY",
+                "source_host": "tarangya.com",
+                "surface_code": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.tarangya.com/company/others/port-directory/country-wise/UA"
+              }
             }
           ],
           "seed_surface_code": "uk027_tarangya_ukraine_port_directory_surface_01",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "seed_surface_name": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY",
+          "surface_metadata": {
+            "source_family_code": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY",
+            "surface_code": "UK027_TARANGYA_UKRAINE_PORT_DIRECTORY_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 27,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 27,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "tarangya.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS",
@@ -2202,13 +3775,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://business-in-ukraine.online/business/category/ports-and-maritime-terminals/",
+              "canonical_url": "https://business-in-ukraine.online/business/category/ports-and-maritime-terminals/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS",
+                "source_host": "business-in-ukraine.online",
+                "surface_code": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://business-in-ukraine.online/business/category/ports-and-maritime-terminals/"
+              }
             }
           ],
           "seed_surface_code": "uk028_business_in_ukraine_ports_terminals_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS",
+          "surface_metadata": {
+            "source_family_code": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS",
+            "surface_code": "UK028_BUSINESS_IN_UKRAINE_PORTS_TERMINALS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 28,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 28,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "business-in-ukraine.online",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK029_USPA_OFFICIAL_PORT_AUTHORITY",
@@ -2265,13 +3887,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.uspa.gov.ua/en/homepage-en",
+              "canonical_url": "https://www.uspa.gov.ua/en/homepage-en",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK029_USPA_OFFICIAL_PORT_AUTHORITY",
+                "source_host": "uspa.gov.ua",
+                "surface_code": "UK029_USPA_OFFICIAL_PORT_AUTHORITY_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.uspa.gov.ua/en/homepage-en"
+              }
             }
           ],
           "seed_surface_code": "uk029_uspa_official_port_authority_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK029_USPA_OFFICIAL_PORT_AUTHORITY seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK029_USPA_OFFICIAL_PORT_AUTHORITY",
+          "surface_metadata": {
+            "source_family_code": "UK029_USPA_OFFICIAL_PORT_AUTHORITY",
+            "surface_code": "UK029_USPA_OFFICIAL_PORT_AUTHORITY_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 29,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 29,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "uspa.gov.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL",
@@ -2328,11 +3999,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://uz.gov.ua/en/cargo_transportation/",
+              "canonical_url": "https://uz.gov.ua/en/cargo_transportation/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL",
+                "source_host": "uz.gov.ua",
+                "surface_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://uz.gov.ua/en/cargo_transportation/"
+              }
             }
           ],
           "seed_surface_code": "uk030_ukrzaliznytsia_cargo_rail_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK030_UKRZALIZNYTSIA_CARGO_RAIL seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL",
+          "surface_metadata": {
+            "source_family_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL",
+            "surface_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL_S02",
@@ -2367,13 +4063,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://uz.gov.ua/en/cargo_transportation/general_information/cargo_stations/",
+              "canonical_url": "https://uz.gov.ua/en/cargo_transportation/general_information/cargo_stations/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL",
+                "source_host": "uz.gov.ua",
+                "surface_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL_S02",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://uz.gov.ua/en/cargo_transportation/general_information/cargo_stations/"
+              }
             }
           ],
           "seed_surface_code": "uk030_ukrzaliznytsia_cargo_rail_surface_02",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK030_UKRZALIZNYTSIA_CARGO_RAIL seed surface 02",
+          "surface_index": 2,
+          "seed_surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL",
+          "surface_metadata": {
+            "source_family_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL",
+            "surface_code": "UK030_UKRZALIZNYTSIA_CARGO_RAIL_S02",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 30,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 30,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "uz.gov.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
@@ -2430,11 +4175,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.ukrposhta.ua/en",
+              "canonical_url": "https://www.ukrposhta.ua/en",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+                "source_host": "ukrposhta.ua",
+                "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.ukrposhta.ua/en"
+              }
             }
           ],
           "seed_surface_code": "uk031_ukrposhta_business_postal_logistics_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+            "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S02",
@@ -2469,11 +4239,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.ukrposhta.ua/en/ukrposhta-dlia-biznesu",
+              "canonical_url": "https://www.ukrposhta.ua/en/ukrposhta-dlia-biznesu",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+                "source_host": "ukrposhta.ua",
+                "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S02",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.ukrposhta.ua/en/ukrposhta-dlia-biznesu"
+              }
             }
           ],
           "seed_surface_code": "uk031_ukrposhta_business_postal_logistics_surface_02",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS seed surface 02",
+          "surface_index": 2,
+          "seed_surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+            "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S02",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S03",
@@ -2508,11 +4303,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.ukrposhta.ua/en/dostavka-po-svitu",
+              "canonical_url": "https://www.ukrposhta.ua/en/dostavka-po-svitu",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+                "source_host": "ukrposhta.ua",
+                "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S03",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.ukrposhta.ua/en/dostavka-po-svitu"
+              }
             }
           ],
           "seed_surface_code": "uk031_ukrposhta_business_postal_logistics_surface_03",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS seed surface 03",
+          "surface_index": 3,
+          "seed_surface_index": 3,
+          "family_seed_surface_index": 3,
+          "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+            "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S03",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S04",
@@ -2547,13 +4367,62 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://track.ukrposhta.ua/tracking_EN.html",
+              "canonical_url": "https://track.ukrposhta.ua/tracking_EN.html",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+                "source_host": "ukrposhta.ua",
+                "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S04",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://track.ukrposhta.ua/tracking_EN.html"
+              }
             }
           ],
           "seed_surface_code": "uk031_ukrposhta_business_postal_logistics_surface_04",
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "seed_surface_name": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS seed surface 04",
+          "surface_index": 4,
+          "seed_surface_index": 4,
+          "family_seed_surface_index": 4,
+          "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS",
+            "surface_code": "UK031_UKRPOSHTA_BUSINESS_POSTAL_LOGISTICS_S04",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 31,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 31,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "ukrposhta.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
@@ -2610,11 +4479,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://novaposhta.ua/en/",
+              "canonical_url": "https://novaposhta.ua/en/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+                "source_host": "novaposhta.ua",
+                "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://novaposhta.ua/en/"
+              }
             }
           ],
           "seed_surface_code": "uk032_nova_post_business_logistics_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK032_NOVA_POST_BUSINESS_LOGISTICS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+            "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S02",
@@ -2649,11 +4543,36 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://novaposhtaglobal.ua/en/for-business/",
+              "canonical_url": "https://novaposhtaglobal.ua/en/for-business/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+                "source_host": "novaposhta.ua",
+                "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S02",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://novaposhtaglobal.ua/en/for-business/"
+              }
             }
           ],
           "seed_surface_code": "uk032_nova_post_business_logistics_surface_02",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "seed_surface_name": "UK032_NOVA_POST_BUSINESS_LOGISTICS seed surface 02",
+          "surface_index": 2,
+          "seed_surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+            "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S02",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S03",
@@ -2688,13 +4607,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://nova.global/en-ua/",
+              "canonical_url": "https://nova.global/en-ua/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+                "source_host": "novaposhta.ua",
+                "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S03",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nova.global/en-ua/"
+              }
             }
           ],
           "seed_surface_code": "uk032_nova_post_business_logistics_surface_03",
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "seed_surface_name": "UK032_NOVA_POST_BUSINESS_LOGISTICS seed surface 03",
+          "surface_index": 3,
+          "seed_surface_index": 3,
+          "family_seed_surface_index": 3,
+          "source_family_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS",
+            "surface_code": "UK032_NOVA_POST_BUSINESS_LOGISTICS_S03",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 32,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 32,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "novaposhta.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES",
@@ -2751,13 +4719,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.mordorintelligence.com/industry-reports/ukraine-freight-and-logistics-market/companies",
+              "canonical_url": "https://www.mordorintelligence.com/industry-reports/ukraine-freight-and-logistics-market/companies",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES",
+                "source_host": "mordorintelligence.com",
+                "surface_code": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.mordorintelligence.com/industry-reports/ukraine-freight-and-logistics-market/companies"
+              }
             }
           ],
           "seed_surface_code": "uk033_mordor_ukraine_freight_companies_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES",
+          "surface_metadata": {
+            "source_family_code": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES",
+            "surface_code": "UK033_MORDOR_UKRAINE_FREIGHT_COMPANIES_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 33,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 33,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "mordorintelligence.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES",
@@ -2814,13 +4831,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://ensun.io/search/freight-forwarding/ukraine",
+              "canonical_url": "https://ensun.io/search/freight-forwarding/ukraine",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES",
+                "source_host": "ensun.io",
+                "surface_code": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ensun.io/search/freight-forwarding/ukraine"
+              }
             }
           ],
           "seed_surface_code": "uk034_ensun_ukraine_forwarding_companies_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES",
+          "surface_metadata": {
+            "source_family_code": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES",
+            "surface_code": "UK034_ENSUN_UKRAINE_FORWARDING_COMPANIES_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 34,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 34,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "ensun.io",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS",
@@ -2877,13 +4943,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.df-alliance.com/freight-forwarder/ukraine",
+              "canonical_url": "https://www.df-alliance.com/freight-forwarder/ukraine",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS",
+                "source_host": "df-alliance.com",
+                "surface_code": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.df-alliance.com/freight-forwarder/ukraine"
+              }
             }
           ],
           "seed_surface_code": "uk035_df_alliance_ukraine_forwarders_surface_01",
-          "quality_status": "A"
+          "quality_status": "A",
+          "seed_surface_name": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS",
+          "surface_metadata": {
+            "source_family_code": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS",
+            "surface_code": "UK035_DF_ALLIANCE_UKRAINE_FORWARDERS_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 35,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 35,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "df-alliance.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES",
@@ -2940,13 +5055,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://eba.com.ua/en/member/dsv-logistyka-tov/",
+              "canonical_url": "https://eba.com.ua/en/member/dsv-logistyka-tov/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES",
+                "source_host": "eba.com.ua",
+                "surface_code": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://eba.com.ua/en/member/dsv-logistyka-tov/"
+              }
             }
           ],
           "seed_surface_code": "uk036_eba_ukraine_logistics_member_references_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES",
+          "surface_metadata": {
+            "source_family_code": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES",
+            "surface_code": "UK036_EBA_UKRAINE_LOGISTICS_MEMBER_REFERENCES_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 36,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 36,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "eba.com.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR",
@@ -3003,13 +5167,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://ekol.com.ua/en/services/transport-solutions/",
+              "canonical_url": "https://ekol.com.ua/en/services/transport-solutions/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR",
+                "source_host": "ekol.com.ua",
+                "surface_code": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ekol.com.ua/en/services/transport-solutions/"
+              }
             }
           ],
           "seed_surface_code": "uk037_ekol_ukraine_direct_operator_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR",
+          "surface_metadata": {
+            "source_family_code": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR",
+            "surface_code": "UK037_EKOL_UKRAINE_DIRECT_OPERATOR_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 37,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 37,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "ekol.com.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR",
@@ -3066,13 +5279,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://stoles.com.ua/en/services/logistics/",
+              "canonical_url": "https://stoles.com.ua/en/services/logistics/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR",
+                "source_host": "stoles.com.ua",
+                "surface_code": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://stoles.com.ua/en/services/logistics/"
+              }
             }
           ],
           "seed_surface_code": "uk038_stoles_logistic_direct_operator_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR",
+          "surface_metadata": {
+            "source_family_code": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR",
+            "surface_code": "UK038_STOLES_LOGISTIC_DIRECT_OPERATOR_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 38,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 38,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "stoles.com.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR",
@@ -3129,13 +5391,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://corcel.com.ua/en/our-services/logistics-services/",
+              "canonical_url": "https://corcel.com.ua/en/our-services/logistics-services/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR",
+                "source_host": "corcel.com.ua",
+                "surface_code": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://corcel.com.ua/en/our-services/logistics-services/"
+              }
             }
           ],
           "seed_surface_code": "uk039_corcel_ukraine_direct_operator_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR",
+          "surface_metadata": {
+            "source_family_code": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR",
+            "surface_code": "UK039_CORCEL_UKRAINE_DIRECT_OPERATOR_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 39,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 39,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "corcel.com.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_code": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR",
@@ -3192,14 +5503,83 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://starlogistics.com.ua/en",
+              "canonical_url": "https://starlogistics.com.ua/en",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_url_index": 1,
+              "seed_metadata": {
+                "source_family_code": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR",
+                "source_host": "starlogistics.com.ua",
+                "surface_code": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR_S01",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://starlogistics.com.ua/en"
+              }
             }
           ],
           "seed_surface_code": "uk040_star_logistics_direct_operator_surface_01",
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "seed_surface_name": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR seed surface 01",
+          "surface_index": 1,
+          "seed_surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR",
+          "surface_metadata": {
+            "source_family_code": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR",
+            "surface_code": "UK040_STAR_LOGISTICS_DIRECT_OPERATOR_S01",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_status": "candidate",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "source_family_index": 40,
+      "family_metadata": {
+        "lang_code": "uk",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 40,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "starlogistics.com.ua",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "uk",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     }
   ],
-  "review_state": "needs_live_check"
+  "review_state": "needs_live_check",
+  "catalog_status": "candidate_only_not_live",
+  "catalog_scope": {
+    "language_code": "uk",
+    "language_name": "Ukrainian",
+    "language_native_name": "Українська",
+    "country_scope": "UA",
+    "region_scope": "Ukraine",
+    "catalog_file": "uk/ukrainian_source_families_v2.json",
+    "catalog_family": "language_startpoint_catalog"
+  },
+  "seed_contract_basis": {
+    "schema": "source_families_v2",
+    "runtime_contract": "strict_loader_v1",
+    "contract_source": "canonical_json_migration",
+    "migrated_from_candidate_manifest": true,
+    "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+    "source_file": "uk/ukrainian_source_families_v2.json",
+    "loader_policy": "strict_load_startpoint_catalog_no_runtime_adapter"
+  },
+  "standardization_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
 }

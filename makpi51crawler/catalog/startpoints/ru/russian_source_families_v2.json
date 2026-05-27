@@ -122,10 +122,34 @@
               "language_fit": "native",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://fiata.org/directory/ru/",
+              "canonical_url": "https://fiata.org/directory/ru/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU001_FIATA_ARE",
+                "source_host": "fiata.org",
+                "surface_code": "RU001_FIATA_ARE_SURFACE_01_https_fiata_org_directory_ru",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://fiata.org/directory/ru/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU001_FIATA_ARE_SURFACE_01_https_fiata_org_directory_ru",
+          "seed_surface_name": "FIATA Russia and FAR/ARE association directory surfaces seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU001_FIATA_ARE",
+          "surface_metadata": {
+            "source_family_code": "RU001_FIATA_ARE",
+            "surface_code": "RU001_FIATA_ARE_SURFACE_01_https_fiata_org_directory_ru",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 2,
@@ -165,10 +189,34 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://en.far-aerf.ru/overview",
+              "canonical_url": "https://en.far-aerf.ru/overview",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU001_FIATA_ARE",
+                "source_host": "fiata.org",
+                "surface_code": "RU001_FIATA_ARE_SURFACE_02_https_en_far_aerf_ru_overview",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://en.far-aerf.ru/overview"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU001_FIATA_ARE_SURFACE_02_https_en_far_aerf_ru_overview",
+          "seed_surface_name": "FIATA Russia and FAR/ARE association directory surfaces seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU001_FIATA_ARE",
+          "surface_metadata": {
+            "source_family_code": "RU001_FIATA_ARE",
+            "surface_code": "RU001_FIATA_ARE_SURFACE_02_https_en_far_aerf_ru_overview",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 3,
@@ -208,12 +256,62 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://far-aerf.ru/",
+              "canonical_url": "https://far-aerf.ru/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU001_FIATA_ARE",
+                "source_host": "fiata.org",
+                "surface_code": "RU001_FIATA_ARE_SURFACE_03_https_far_aerf_ru",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://far-aerf.ru/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU001_FIATA_ARE_SURFACE_03_https_far_aerf_ru",
+          "seed_surface_name": "FIATA Russia and FAR/ARE association directory surfaces seed surface 3",
+          "surface_index": 3,
+          "family_seed_surface_index": 3,
+          "source_family_code": "RU001_FIATA_ARE",
+          "surface_metadata": {
+            "source_family_code": "RU001_FIATA_ARE",
+            "surface_code": "RU001_FIATA_ARE_SURFACE_03_https_far_aerf_ru",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU001_FIATA_ARE",
+      "source_status": "candidate",
+      "source_root_url": "https://fiata.org/directory/ru/",
+      "source_host": "fiata.org",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 1,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "fiata.org",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 2,
@@ -270,10 +368,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.freightnet.com/directory/p1/cRU/s99.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p1/cRU/s99.htm",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU002_FREIGHTNET_RUSSIA",
+                "source_host": "www.freightnet.com",
+                "surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_01_https_www_freightnet_com_directory_p1_cr",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.freightnet.com/directory/p1/cRU/s99.htm"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_01_https_www_freightnet_com_directory_p1_cr",
+          "seed_surface_name": "Freightnet Russia logistics directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU002_FREIGHTNET_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU002_FREIGHTNET_RUSSIA",
+            "surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_01_https_www_freightnet_com_directory_p1_cr",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 5,
@@ -313,10 +435,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.freightnet.com/directory/p2/cRU/s99.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p2/cRU/s99.htm",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU002_FREIGHTNET_RUSSIA",
+                "source_host": "www.freightnet.com",
+                "surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_02_https_www_freightnet_com_directory_p2_cr",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.freightnet.com/directory/p2/cRU/s99.htm"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_02_https_www_freightnet_com_directory_p2_cr",
+          "seed_surface_name": "Freightnet Russia logistics directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU002_FREIGHTNET_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU002_FREIGHTNET_RUSSIA",
+            "surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_02_https_www_freightnet_com_directory_p2_cr",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 6,
@@ -356,12 +502,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.freightnet.com/directory/p1/cRU/s30.htm",
+              "canonical_url": "https://www.freightnet.com/directory/p1/cRU/s30.htm",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU002_FREIGHTNET_RUSSIA",
+                "source_host": "www.freightnet.com",
+                "surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_03_https_www_freightnet_com_directory_p1_cr",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.freightnet.com/directory/p1/cRU/s30.htm"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_03_https_www_freightnet_com_directory_p1_cr",
+          "seed_surface_name": "Freightnet Russia logistics directory seed surface 3",
+          "surface_index": 3,
+          "family_seed_surface_index": 3,
+          "source_family_code": "RU002_FREIGHTNET_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU002_FREIGHTNET_RUSSIA",
+            "surface_code": "RU002_FREIGHTNET_RUSSIA_SURFACE_03_https_www_freightnet_com_directory_p1_cr",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU002_FREIGHTNET_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://www.freightnet.com/directory/p1/cRU/s99.htm",
+      "source_host": "www.freightnet.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 2,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.freightnet.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 3,
@@ -418,10 +614,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://forwardingcompanies.com/in/russian-federation",
+              "canonical_url": "https://forwardingcompanies.com/in/russian-federation",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU003_FORWARDINGCOMPANIES_RU",
+                "source_host": "forwardingcompanies.com",
+                "surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_01_https_forwardingcompanies_com_in_russian",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://forwardingcompanies.com/in/russian-federation"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_01_https_forwardingcompanies_com_in_russian",
+          "seed_surface_name": "ForwardingCompanies Russian Federation directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU003_FORWARDINGCOMPANIES_RU",
+          "surface_metadata": {
+            "source_family_code": "RU003_FORWARDINGCOMPANIES_RU",
+            "surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_01_https_forwardingcompanies_com_in_russian",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 8,
@@ -461,10 +681,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://forwardingcompanies.com/association/the-russian-association-of-freight-forwarding-and-logistic-organizations-far-",
+              "canonical_url": "https://forwardingcompanies.com/association/the-russian-association-of-freight-forwarding-and-logistic-organizations-far-",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU003_FORWARDINGCOMPANIES_RU",
+                "source_host": "forwardingcompanies.com",
+                "surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_02_https_forwardingcompanies_com_associatio",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://forwardingcompanies.com/association/the-russian-association-of-freight-forwarding-and-logistic-organizations-far-"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_02_https_forwardingcompanies_com_associatio",
+          "seed_surface_name": "ForwardingCompanies Russian Federation directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU003_FORWARDINGCOMPANIES_RU",
+          "surface_metadata": {
+            "source_family_code": "RU003_FORWARDINGCOMPANIES_RU",
+            "surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_02_https_forwardingcompanies_com_associatio",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 9,
@@ -504,12 +748,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://forwardingcompanies.com/in/russian-federation/moscow",
+              "canonical_url": "https://forwardingcompanies.com/in/russian-federation/moscow",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU003_FORWARDINGCOMPANIES_RU",
+                "source_host": "forwardingcompanies.com",
+                "surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_03_https_forwardingcompanies_com_in_russian",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://forwardingcompanies.com/in/russian-federation/moscow"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_03_https_forwardingcompanies_com_in_russian",
+          "seed_surface_name": "ForwardingCompanies Russian Federation directory seed surface 3",
+          "surface_index": 3,
+          "family_seed_surface_index": 3,
+          "source_family_code": "RU003_FORWARDINGCOMPANIES_RU",
+          "surface_metadata": {
+            "source_family_code": "RU003_FORWARDINGCOMPANIES_RU",
+            "surface_code": "RU003_FORWARDINGCOMPANIES_RU_SURFACE_03_https_forwardingcompanies_com_in_russian",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU003_FORWARDINGCOMPANIES_RU",
+      "source_status": "candidate",
+      "source_root_url": "https://forwardingcompanies.com/in/russian-federation",
+      "source_host": "forwardingcompanies.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 3,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "forwardingcompanies.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 4,
@@ -566,10 +860,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.cargoyellowpages.com/russia_freight_forwarders_cargo_agents.html",
+              "canonical_url": "https://www.cargoyellowpages.com/russia_freight_forwarders_cargo_agents.html",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU004_CARGO_YELLOW_PAGES",
+                "source_host": "www.cargoyellowpages.com",
+                "surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_01_https_www_cargoyellowpages_com_russia_fr",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.cargoyellowpages.com/russia_freight_forwarders_cargo_agents.html"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_01_https_www_cargoyellowpages_com_russia_fr",
+          "seed_surface_name": "CargoYellowPages Russia freight and cargo directories seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU004_CARGO_YELLOW_PAGES",
+          "surface_metadata": {
+            "source_family_code": "RU004_CARGO_YELLOW_PAGES",
+            "surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_01_https_www_cargoyellowpages_com_russia_fr",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 11,
@@ -609,10 +927,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.cargoyellowpages.com/en/russia/",
+              "canonical_url": "https://www.cargoyellowpages.com/en/russia/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU004_CARGO_YELLOW_PAGES",
+                "source_host": "www.cargoyellowpages.com",
+                "surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_02_https_www_cargoyellowpages_com_en_russia",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.cargoyellowpages.com/en/russia/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_02_https_www_cargoyellowpages_com_en_russia",
+          "seed_surface_name": "CargoYellowPages Russia freight and cargo directories seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU004_CARGO_YELLOW_PAGES",
+          "surface_metadata": {
+            "source_family_code": "RU004_CARGO_YELLOW_PAGES",
+            "surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_02_https_www_cargoyellowpages_com_en_russia",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 12,
@@ -652,12 +994,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.cargoyellowpages.com/russia/",
+              "canonical_url": "https://www.cargoyellowpages.com/russia/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU004_CARGO_YELLOW_PAGES",
+                "source_host": "www.cargoyellowpages.com",
+                "surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_03_https_www_cargoyellowpages_com_russia",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.cargoyellowpages.com/russia/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_03_https_www_cargoyellowpages_com_russia",
+          "seed_surface_name": "CargoYellowPages Russia freight and cargo directories seed surface 3",
+          "surface_index": 3,
+          "family_seed_surface_index": 3,
+          "source_family_code": "RU004_CARGO_YELLOW_PAGES",
+          "surface_metadata": {
+            "source_family_code": "RU004_CARGO_YELLOW_PAGES",
+            "surface_code": "RU004_CARGO_YELLOW_PAGES_SURFACE_03_https_www_cargoyellowpages_com_russia",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU004_CARGO_YELLOW_PAGES",
+      "source_status": "candidate",
+      "source_root_url": "https://www.cargoyellowpages.com/russia_freight_forwarders_cargo_agents.html",
+      "source_host": "www.cargoyellowpages.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 4,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.cargoyellowpages.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 5,
@@ -714,10 +1106,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-russia/",
+              "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-russia/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU005_AZFREIGHT_RUSSIA",
+                "source_host": "azfreight.com",
+                "surface_code": "RU005_AZFREIGHT_RUSSIA_SURFACE_01_https_azfreight_com_country_facility_fre",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://azfreight.com/country-facility/freight-forwarders-in-russia/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU005_AZFREIGHT_RUSSIA_SURFACE_01_https_azfreight_com_country_facility_fre",
+          "seed_surface_name": "AZFreight Russia freight forwarder directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU005_AZFREIGHT_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU005_AZFREIGHT_RUSSIA",
+            "surface_code": "RU005_AZFREIGHT_RUSSIA_SURFACE_01_https_azfreight_com_country_facility_fre",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 14,
@@ -757,12 +1173,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://azfreight.com/countries/russia/",
+              "canonical_url": "https://azfreight.com/countries/russia/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU005_AZFREIGHT_RUSSIA",
+                "source_host": "azfreight.com",
+                "surface_code": "RU005_AZFREIGHT_RUSSIA_SURFACE_02_https_azfreight_com_countries_russia",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://azfreight.com/countries/russia/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU005_AZFREIGHT_RUSSIA_SURFACE_02_https_azfreight_com_countries_russia",
+          "seed_surface_name": "AZFreight Russia freight forwarder directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU005_AZFREIGHT_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU005_AZFREIGHT_RUSSIA",
+            "surface_code": "RU005_AZFREIGHT_RUSSIA_SURFACE_02_https_azfreight_com_countries_russia",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU005_AZFREIGHT_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://azfreight.com/country-facility/freight-forwarders-in-russia/",
+      "source_host": "azfreight.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 5,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "azfreight.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 6,
@@ -819,10 +1285,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://m.jctrans.com/en/company/listc/Russia/0-0",
+              "canonical_url": "https://m.jctrans.com/en/company/listc/Russia/0-0",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU006_JCTRANS_RUSSIA",
+                "source_host": "m.jctrans.com",
+                "surface_code": "RU006_JCTRANS_RUSSIA_SURFACE_01_https_m_jctrans_com_en_company_listc_rus",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://m.jctrans.com/en/company/listc/Russia/0-0"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU006_JCTRANS_RUSSIA_SURFACE_01_https_m_jctrans_com_en_company_listc_rus",
+          "seed_surface_name": "JCtrans Russia freight forwarder directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU006_JCTRANS_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU006_JCTRANS_RUSSIA",
+            "surface_code": "RU006_JCTRANS_RUSSIA_SURFACE_01_https_m_jctrans_com_en_company_listc_rus",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 16,
@@ -862,12 +1352,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.jctrans.com/en/company/listc/Russia/0-0",
+              "canonical_url": "https://www.jctrans.com/en/company/listc/Russia/0-0",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU006_JCTRANS_RUSSIA",
+                "source_host": "m.jctrans.com",
+                "surface_code": "RU006_JCTRANS_RUSSIA_SURFACE_02_https_www_jctrans_com_en_company_listc_r",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.jctrans.com/en/company/listc/Russia/0-0"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU006_JCTRANS_RUSSIA_SURFACE_02_https_www_jctrans_com_en_company_listc_r",
+          "seed_surface_name": "JCtrans Russia freight forwarder directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU006_JCTRANS_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU006_JCTRANS_RUSSIA",
+            "surface_code": "RU006_JCTRANS_RUSSIA_SURFACE_02_https_www_jctrans_com_en_company_listc_r",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU006_JCTRANS_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://m.jctrans.com/en/company/listc/Russia/0-0",
+      "source_host": "m.jctrans.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 6,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "m.jctrans.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 7,
@@ -924,10 +1464,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://railmarket.com/ap/russian-federation/forwarding-logistics",
+              "canonical_url": "https://railmarket.com/ap/russian-federation/forwarding-logistics",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU007_RAILMARKET_RUSSIA",
+                "source_host": "railmarket.com",
+                "surface_code": "RU007_RAILMARKET_RUSSIA_SURFACE_01_https_railmarket_com_ap_russian_federati",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://railmarket.com/ap/russian-federation/forwarding-logistics"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU007_RAILMARKET_RUSSIA_SURFACE_01_https_railmarket_com_ap_russian_federati",
+          "seed_surface_name": "RailMarket Russian Federation forwarding and logistics seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU007_RAILMARKET_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU007_RAILMARKET_RUSSIA",
+            "surface_code": "RU007_RAILMARKET_RUSSIA_SURFACE_01_https_railmarket_com_ap_russian_federati",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 18,
@@ -967,12 +1531,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://railmarket.com/ap/russian-federation/rail-forwarders",
+              "canonical_url": "https://railmarket.com/ap/russian-federation/rail-forwarders",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU007_RAILMARKET_RUSSIA",
+                "source_host": "railmarket.com",
+                "surface_code": "RU007_RAILMARKET_RUSSIA_SURFACE_02_https_railmarket_com_ap_russian_federati",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://railmarket.com/ap/russian-federation/rail-forwarders"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU007_RAILMARKET_RUSSIA_SURFACE_02_https_railmarket_com_ap_russian_federati",
+          "seed_surface_name": "RailMarket Russian Federation forwarding and logistics seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU007_RAILMARKET_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU007_RAILMARKET_RUSSIA",
+            "surface_code": "RU007_RAILMARKET_RUSSIA_SURFACE_02_https_railmarket_com_ap_russian_federati",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU007_RAILMARKET_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://railmarket.com/ap/russian-federation/forwarding-logistics",
+      "source_host": "railmarket.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 7,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "railmarket.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 8,
@@ -1029,10 +1643,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://ruzave.com/russia",
+              "canonical_url": "https://ruzave.com/russia",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU008_RUZAVE_RUSSIA",
+                "source_host": "ruzave.com",
+                "surface_code": "RU008_RUZAVE_RUSSIA_SURFACE_01_https_ruzave_com_russia",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ruzave.com/russia"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU008_RUZAVE_RUSSIA_SURFACE_01_https_ruzave_com_russia",
+          "seed_surface_name": "Ruzave Russia shipping and freight directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU008_RUZAVE_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU008_RUZAVE_RUSSIA",
+            "surface_code": "RU008_RUZAVE_RUSSIA_SURFACE_01_https_ruzave_com_russia",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 20,
@@ -1072,12 +1710,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://ruzave.com/russia/freight-forwarders/freight-forwardingservices/",
+              "canonical_url": "https://ruzave.com/russia/freight-forwarders/freight-forwardingservices/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU008_RUZAVE_RUSSIA",
+                "source_host": "ruzave.com",
+                "surface_code": "RU008_RUZAVE_RUSSIA_SURFACE_02_https_ruzave_com_russia_freight_forwarde",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ruzave.com/russia/freight-forwarders/freight-forwardingservices/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU008_RUZAVE_RUSSIA_SURFACE_02_https_ruzave_com_russia_freight_forwarde",
+          "seed_surface_name": "Ruzave Russia shipping and freight directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU008_RUZAVE_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU008_RUZAVE_RUSSIA",
+            "surface_code": "RU008_RUZAVE_RUSSIA_SURFACE_02_https_ruzave_com_russia_freight_forwarde",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU008_RUZAVE_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://ruzave.com/russia",
+      "source_host": "ruzave.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 8,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "ruzave.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 9,
@@ -1134,10 +1822,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://roolz.net/companies/forwarders/russia",
+              "canonical_url": "https://roolz.net/companies/forwarders/russia",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU009_ROOLZ_RUSSIA",
+                "source_host": "roolz.net",
+                "surface_code": "RU009_ROOLZ_RUSSIA_SURFACE_01_https_roolz_net_companies_forwarders_rus",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://roolz.net/companies/forwarders/russia"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU009_ROOLZ_RUSSIA_SURFACE_01_https_roolz_net_companies_forwarders_rus",
+          "seed_surface_name": "Roolz Russia forwarder and carrier directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU009_ROOLZ_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU009_ROOLZ_RUSSIA",
+            "surface_code": "RU009_ROOLZ_RUSSIA_SURFACE_01_https_roolz_net_companies_forwarders_rus",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 22,
@@ -1177,12 +1889,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://roolz.net/companies/carriers/russia",
+              "canonical_url": "https://roolz.net/companies/carriers/russia",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU009_ROOLZ_RUSSIA",
+                "source_host": "roolz.net",
+                "surface_code": "RU009_ROOLZ_RUSSIA_SURFACE_02_https_roolz_net_companies_carriers_russi",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://roolz.net/companies/carriers/russia"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU009_ROOLZ_RUSSIA_SURFACE_02_https_roolz_net_companies_carriers_russi",
+          "seed_surface_name": "Roolz Russia forwarder and carrier directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU009_ROOLZ_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU009_ROOLZ_RUSSIA",
+            "surface_code": "RU009_ROOLZ_RUSSIA_SURFACE_02_https_roolz_net_companies_carriers_russi",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU009_ROOLZ_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://roolz.net/companies/forwarders/russia",
+      "source_host": "roolz.net",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 9,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "roolz.net",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 10,
@@ -1239,10 +2001,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.shippingline.org/company/ru/Russia-Freight_Forwarders-2.html",
+              "canonical_url": "https://www.shippingline.org/company/ru/Russia-Freight_Forwarders-2.html",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU010_SHIPPINGLINE_RUSSIA",
+                "source_host": "www.shippingline.org",
+                "surface_code": "RU010_SHIPPINGLINE_RUSSIA_SURFACE_01_https_www_shippingline_org_company_ru_ru",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.shippingline.org/company/ru/Russia-Freight_Forwarders-2.html"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU010_SHIPPINGLINE_RUSSIA_SURFACE_01_https_www_shippingline_org_company_ru_ru",
+          "seed_surface_name": "ShippingLine Russia freight forwarders directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU010_SHIPPINGLINE_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU010_SHIPPINGLINE_RUSSIA",
+            "surface_code": "RU010_SHIPPINGLINE_RUSSIA_SURFACE_01_https_www_shippingline_org_company_ru_ru",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 24,
@@ -1282,12 +2068,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.shippingline.org/company/ru/Russia-Logistics-1.html",
+              "canonical_url": "https://www.shippingline.org/company/ru/Russia-Logistics-1.html",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU010_SHIPPINGLINE_RUSSIA",
+                "source_host": "www.shippingline.org",
+                "surface_code": "RU010_SHIPPINGLINE_RUSSIA_SURFACE_02_https_www_shippingline_org_company_ru_ru",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.shippingline.org/company/ru/Russia-Logistics-1.html"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU010_SHIPPINGLINE_RUSSIA_SURFACE_02_https_www_shippingline_org_company_ru_ru",
+          "seed_surface_name": "ShippingLine Russia freight forwarders directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU010_SHIPPINGLINE_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU010_SHIPPINGLINE_RUSSIA",
+            "surface_code": "RU010_SHIPPINGLINE_RUSSIA_SURFACE_02_https_www_shippingline_org_company_ru_ru",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU010_SHIPPINGLINE_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://www.shippingline.org/company/ru/Russia-Freight_Forwarders-2.html",
+      "source_host": "www.shippingline.org",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 10,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.shippingline.org",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 11,
@@ -1344,10 +2180,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.goodfirms.co/supply-chain-logistics-companies/russia",
+              "canonical_url": "https://www.goodfirms.co/supply-chain-logistics-companies/russia",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU011_GOODFIRMS_RUSSIA",
+                "source_host": "www.goodfirms.co",
+                "surface_code": "RU011_GOODFIRMS_RUSSIA_SURFACE_01_https_www_goodfirms_co_supply_chain_logi",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.goodfirms.co/supply-chain-logistics-companies/russia"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU011_GOODFIRMS_RUSSIA_SURFACE_01_https_www_goodfirms_co_supply_chain_logi",
+          "seed_surface_name": "GoodFirms Russia logistics company list seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU011_GOODFIRMS_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU011_GOODFIRMS_RUSSIA",
+            "surface_code": "RU011_GOODFIRMS_RUSSIA_SURFACE_01_https_www_goodfirms_co_supply_chain_logi",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 26,
@@ -1387,12 +2247,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.goodfirms.co/supply-chain-logistics-companies/warehousing/russia",
+              "canonical_url": "https://www.goodfirms.co/supply-chain-logistics-companies/warehousing/russia",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU011_GOODFIRMS_RUSSIA",
+                "source_host": "www.goodfirms.co",
+                "surface_code": "RU011_GOODFIRMS_RUSSIA_SURFACE_02_https_www_goodfirms_co_supply_chain_logi",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.goodfirms.co/supply-chain-logistics-companies/warehousing/russia"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU011_GOODFIRMS_RUSSIA_SURFACE_02_https_www_goodfirms_co_supply_chain_logi",
+          "seed_surface_name": "GoodFirms Russia logistics company list seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU011_GOODFIRMS_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU011_GOODFIRMS_RUSSIA",
+            "surface_code": "RU011_GOODFIRMS_RUSSIA_SURFACE_02_https_www_goodfirms_co_supply_chain_logi",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU011_GOODFIRMS_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://www.goodfirms.co/supply-chain-logistics-companies/russia",
+      "source_host": "www.goodfirms.co",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 11,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.goodfirms.co",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 12,
@@ -1449,10 +2359,34 @@
               "language_fit": "native",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://clutch.co/ru/logistics",
+              "canonical_url": "https://clutch.co/ru/logistics",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU012_CLUTCH_RUSSIA",
+                "source_host": "clutch.co",
+                "surface_code": "RU012_CLUTCH_RUSSIA_SURFACE_01_https_clutch_co_ru_logistics",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://clutch.co/ru/logistics"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU012_CLUTCH_RUSSIA_SURFACE_01_https_clutch_co_ru_logistics",
+          "seed_surface_name": "Clutch Russia logistics company discovery seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU012_CLUTCH_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU012_CLUTCH_RUSSIA",
+            "surface_code": "RU012_CLUTCH_RUSSIA_SURFACE_01_https_clutch_co_ru_logistics",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 28,
@@ -1492,12 +2426,62 @@
               "language_fit": "native",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://clutch.co/ru/supply-chain/logistics",
+              "canonical_url": "https://clutch.co/ru/supply-chain/logistics",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU012_CLUTCH_RUSSIA",
+                "source_host": "clutch.co",
+                "surface_code": "RU012_CLUTCH_RUSSIA_SURFACE_02_https_clutch_co_ru_supply_chain_logistic",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://clutch.co/ru/supply-chain/logistics"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU012_CLUTCH_RUSSIA_SURFACE_02_https_clutch_co_ru_supply_chain_logistic",
+          "seed_surface_name": "Clutch Russia logistics company discovery seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU012_CLUTCH_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU012_CLUTCH_RUSSIA",
+            "surface_code": "RU012_CLUTCH_RUSSIA_SURFACE_02_https_clutch_co_ru_supply_chain_logistic",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU012_CLUTCH_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://clutch.co/ru/logistics",
+      "source_host": "clutch.co",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 12,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "clutch.co",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 13,
@@ -1554,10 +2538,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://ru.kompass.com/a/logistics/90280/",
+              "canonical_url": "https://ru.kompass.com/a/logistics/90280/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU013_KOMPASS_RUSSIA",
+                "source_host": "ru.kompass.com",
+                "surface_code": "RU013_KOMPASS_RUSSIA_SURFACE_01_https_ru_kompass_com_a_logistics_90280",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ru.kompass.com/a/logistics/90280/"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU013_KOMPASS_RUSSIA_SURFACE_01_https_ru_kompass_com_a_logistics_90280",
+          "seed_surface_name": "Kompass Russia logistics and transport directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU013_KOMPASS_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU013_KOMPASS_RUSSIA",
+            "surface_code": "RU013_KOMPASS_RUSSIA_SURFACE_01_https_ru_kompass_com_a_logistics_90280",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 30,
@@ -1597,12 +2605,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.kompass.com/a/logistics-services/9028/c/russian-federation/ru/",
+              "canonical_url": "https://www.kompass.com/a/logistics-services/9028/c/russian-federation/ru/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU013_KOMPASS_RUSSIA",
+                "source_host": "ru.kompass.com",
+                "surface_code": "RU013_KOMPASS_RUSSIA_SURFACE_02_https_www_kompass_com_a_logistics_servic",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.kompass.com/a/logistics-services/9028/c/russian-federation/ru/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU013_KOMPASS_RUSSIA_SURFACE_02_https_www_kompass_com_a_logistics_servic",
+          "seed_surface_name": "Kompass Russia logistics and transport directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU013_KOMPASS_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU013_KOMPASS_RUSSIA",
+            "surface_code": "RU013_KOMPASS_RUSSIA_SURFACE_02_https_www_kompass_com_a_logistics_servic",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU013_KOMPASS_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://ru.kompass.com/a/logistics/90280/",
+      "source_host": "ru.kompass.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 13,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "ru.kompass.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 14,
@@ -1659,10 +2717,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.europages.co.uk/companies/russia/transport%20and%20logistics.html",
+              "canonical_url": "https://www.europages.co.uk/companies/russia/transport%20and%20logistics.html",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU014_EUROPAGES_RUSSIA",
+                "source_host": "www.europages.co.uk",
+                "surface_code": "RU014_EUROPAGES_RUSSIA_SURFACE_01_https_www_europages_co_uk_companies_russ",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.europages.co.uk/companies/russia/transport%20and%20logistics.html"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU014_EUROPAGES_RUSSIA_SURFACE_01_https_www_europages_co_uk_companies_russ",
+          "seed_surface_name": "Europages Russia transport and freight directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU014_EUROPAGES_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU014_EUROPAGES_RUSSIA",
+            "surface_code": "RU014_EUROPAGES_RUSSIA_SURFACE_01_https_www_europages_co_uk_companies_russ",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 32,
@@ -1702,12 +2784,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.europages.co.uk/companies/russia/freight%20forwarders.html",
+              "canonical_url": "https://www.europages.co.uk/companies/russia/freight%20forwarders.html",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU014_EUROPAGES_RUSSIA",
+                "source_host": "www.europages.co.uk",
+                "surface_code": "RU014_EUROPAGES_RUSSIA_SURFACE_02_https_www_europages_co_uk_companies_russ",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.europages.co.uk/companies/russia/freight%20forwarders.html"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU014_EUROPAGES_RUSSIA_SURFACE_02_https_www_europages_co_uk_companies_russ",
+          "seed_surface_name": "Europages Russia transport and freight directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU014_EUROPAGES_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU014_EUROPAGES_RUSSIA",
+            "surface_code": "RU014_EUROPAGES_RUSSIA_SURFACE_02_https_www_europages_co_uk_companies_russ",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU014_EUROPAGES_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://www.europages.co.uk/companies/russia/transport%20and%20logistics.html",
+      "source_host": "www.europages.co.uk",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 14,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.europages.co.uk",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 15,
@@ -1764,10 +2896,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.all-forward.com/MembersDirectory",
+              "canonical_url": "https://www.all-forward.com/MembersDirectory",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU015_ALL_FORWARD_RUSSIA",
+                "source_host": "www.all-forward.com",
+                "surface_code": "RU015_ALL_FORWARD_RUSSIA_SURFACE_01_https_www_all_forward_com_membersdirecto",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.all-forward.com/MembersDirectory"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU015_ALL_FORWARD_RUSSIA_SURFACE_01_https_www_all_forward_com_membersdirecto",
+          "seed_surface_name": "All Forward member directory Russia search seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU015_ALL_FORWARD_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU015_ALL_FORWARD_RUSSIA",
+            "surface_code": "RU015_ALL_FORWARD_RUSSIA_SURFACE_01_https_www_all_forward_com_membersdirecto",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 34,
@@ -1807,12 +2963,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.all-forward.com/MembersDirectory?country=Russia",
+              "canonical_url": "https://www.all-forward.com/MembersDirectory?country=Russia",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU015_ALL_FORWARD_RUSSIA",
+                "source_host": "www.all-forward.com",
+                "surface_code": "RU015_ALL_FORWARD_RUSSIA_SURFACE_02_https_www_all_forward_com_membersdirecto",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.all-forward.com/MembersDirectory?country=Russia"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU015_ALL_FORWARD_RUSSIA_SURFACE_02_https_www_all_forward_com_membersdirecto",
+          "seed_surface_name": "All Forward member directory Russia search seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU015_ALL_FORWARD_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU015_ALL_FORWARD_RUSSIA",
+            "surface_code": "RU015_ALL_FORWARD_RUSSIA_SURFACE_02_https_www_all_forward_com_membersdirecto",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU015_ALL_FORWARD_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://www.all-forward.com/MembersDirectory",
+      "source_host": "www.all-forward.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 15,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.all-forward.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 16,
@@ -1869,10 +3075,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.wcaworld.com/Directory",
+              "canonical_url": "https://www.wcaworld.com/Directory",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU016_WCAWORLD_RUSSIA",
+                "source_host": "www.wcaworld.com",
+                "surface_code": "RU016_WCAWORLD_RUSSIA_SURFACE_01_https_www_wcaworld_com_directory",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.wcaworld.com/Directory"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU016_WCAWORLD_RUSSIA_SURFACE_01_https_www_wcaworld_com_directory",
+          "seed_surface_name": "WCAworld directory Russia search seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU016_WCAWORLD_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU016_WCAWORLD_RUSSIA",
+            "surface_code": "RU016_WCAWORLD_RUSSIA_SURFACE_01_https_www_wcaworld_com_directory",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 36,
@@ -1912,12 +3142,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.wcaworld.com/Directory?search=Russia",
+              "canonical_url": "https://www.wcaworld.com/Directory?search=Russia",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU016_WCAWORLD_RUSSIA",
+                "source_host": "www.wcaworld.com",
+                "surface_code": "RU016_WCAWORLD_RUSSIA_SURFACE_02_https_www_wcaworld_com_directory_search",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.wcaworld.com/Directory?search=Russia"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU016_WCAWORLD_RUSSIA_SURFACE_02_https_www_wcaworld_com_directory_search",
+          "seed_surface_name": "WCAworld directory Russia search seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU016_WCAWORLD_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU016_WCAWORLD_RUSSIA",
+            "surface_code": "RU016_WCAWORLD_RUSSIA_SURFACE_02_https_www_wcaworld_com_directory_search",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU016_WCAWORLD_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://www.wcaworld.com/Directory",
+      "source_host": "www.wcaworld.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 16,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.wcaworld.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 17,
@@ -1974,10 +3254,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.searates.com/freight/russia/",
+              "canonical_url": "https://www.searates.com/freight/russia/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU017_SEARATES_RUSSIA",
+                "source_host": "www.searates.com",
+                "surface_code": "RU017_SEARATES_RUSSIA_SURFACE_01_https_www_searates_com_freight_russia",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.searates.com/freight/russia/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU017_SEARATES_RUSSIA_SURFACE_01_https_www_searates_com_freight_russia",
+          "seed_surface_name": "SeaRates Russia freight and maritime directory surfaces seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU017_SEARATES_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU017_SEARATES_RUSSIA",
+            "surface_code": "RU017_SEARATES_RUSSIA_SURFACE_01_https_www_searates_com_freight_russia",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 38,
@@ -2017,12 +3321,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.searates.com/maritime/russia/",
+              "canonical_url": "https://www.searates.com/maritime/russia/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU017_SEARATES_RUSSIA",
+                "source_host": "www.searates.com",
+                "surface_code": "RU017_SEARATES_RUSSIA_SURFACE_02_https_www_searates_com_maritime_russia",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.searates.com/maritime/russia/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU017_SEARATES_RUSSIA_SURFACE_02_https_www_searates_com_maritime_russia",
+          "seed_surface_name": "SeaRates Russia freight and maritime directory surfaces seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU017_SEARATES_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU017_SEARATES_RUSSIA",
+            "surface_code": "RU017_SEARATES_RUSSIA_SURFACE_02_https_www_searates_com_maritime_russia",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU017_SEARATES_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://www.searates.com/freight/russia/",
+      "source_host": "www.searates.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 17,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.searates.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 18,
@@ -2079,10 +3433,34 @@
               "language_fit": "unknown",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.worldportsource.com/ports/RUS.php",
+              "canonical_url": "https://www.worldportsource.com/ports/RUS.php",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+                "source_host": "www.worldportsource.com",
+                "surface_code": "RU018_WORLD_PORT_SOURCE_RUSSIA_SURFACE_01_https_www_worldportsource_com_ports_rus",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.worldportsource.com/ports/RUS.php"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU018_WORLD_PORT_SOURCE_RUSSIA_SURFACE_01_https_www_worldportsource_com_ports_rus",
+          "seed_surface_name": "World Port Source Russia port directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+            "surface_code": "RU018_WORLD_PORT_SOURCE_RUSSIA_SURFACE_01_https_www_worldportsource_com_ports_rus",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 40,
@@ -2122,12 +3500,62 @@
               "language_fit": "unknown",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.worldportsource.com/ports/index/RUS.php",
+              "canonical_url": "https://www.worldportsource.com/ports/index/RUS.php",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+                "source_host": "www.worldportsource.com",
+                "surface_code": "RU018_WORLD_PORT_SOURCE_RUSSIA_SURFACE_02_https_www_worldportsource_com_ports_inde",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.worldportsource.com/ports/index/RUS.php"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU018_WORLD_PORT_SOURCE_RUSSIA_SURFACE_02_https_www_worldportsource_com_ports_inde",
+          "seed_surface_name": "World Port Source Russia port directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+            "surface_code": "RU018_WORLD_PORT_SOURCE_RUSSIA_SURFACE_02_https_www_worldportsource_com_ports_inde",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU018_WORLD_PORT_SOURCE_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://www.worldportsource.com/ports/RUS.php",
+      "source_host": "www.worldportsource.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 18,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.worldportsource.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 19,
@@ -2184,10 +3612,34 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://ports.com/russia/",
+              "canonical_url": "https://ports.com/russia/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU019_PORTS_COM_RUSSIA",
+                "source_host": "ports.com",
+                "surface_code": "RU019_PORTS_COM_RUSSIA_SURFACE_01_https_ports_com_russia",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ports.com/russia/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU019_PORTS_COM_RUSSIA_SURFACE_01_https_ports_com_russia",
+          "seed_surface_name": "Ports.com Russia port directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU019_PORTS_COM_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU019_PORTS_COM_RUSSIA",
+            "surface_code": "RU019_PORTS_COM_RUSSIA_SURFACE_01_https_ports_com_russia",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 42,
@@ -2227,12 +3679,62 @@
               "language_fit": "unknown",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://ports.com/sea-route/",
+              "canonical_url": "https://ports.com/sea-route/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU019_PORTS_COM_RUSSIA",
+                "source_host": "ports.com",
+                "surface_code": "RU019_PORTS_COM_RUSSIA_SURFACE_02_https_ports_com_sea_route",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://ports.com/sea-route/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU019_PORTS_COM_RUSSIA_SURFACE_02_https_ports_com_sea_route",
+          "seed_surface_name": "Ports.com Russia port directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU019_PORTS_COM_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU019_PORTS_COM_RUSSIA",
+            "surface_code": "RU019_PORTS_COM_RUSSIA_SURFACE_02_https_ports_com_sea_route",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU019_PORTS_COM_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://ports.com/russia/",
+      "source_host": "ports.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 19,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "ports.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 20,
@@ -2289,10 +3791,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.marinetraffic.com/en/ais/index/ports/all/per_country:RU",
+              "canonical_url": "https://www.marinetraffic.com/en/ais/index/ports/all/per_country:RU",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+                "source_host": "www.marinetraffic.com",
+                "surface_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS_SURFACE_01_https_www_marinetraffic_com_en_ais_index",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.marinetraffic.com/en/ais/index/ports/all/per_country:RU"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS_SURFACE_01_https_www_marinetraffic_com_en_ais_index",
+          "seed_surface_name": "MarineTraffic Russia port discovery seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+          "surface_metadata": {
+            "source_family_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+            "surface_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS_SURFACE_01_https_www_marinetraffic_com_en_ais_index",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 44,
@@ -2332,12 +3858,62 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.marinetraffic.com/en/ais/index/search/all?keyword=Russia",
+              "canonical_url": "https://www.marinetraffic.com/en/ais/index/search/all?keyword=Russia",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+                "source_host": "www.marinetraffic.com",
+                "surface_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS_SURFACE_02_https_www_marinetraffic_com_en_ais_index",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.marinetraffic.com/en/ais/index/search/all?keyword=Russia"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS_SURFACE_02_https_www_marinetraffic_com_en_ais_index",
+          "seed_surface_name": "MarineTraffic Russia port discovery seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+          "surface_metadata": {
+            "source_family_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+            "surface_code": "RU020_MARINETRAFFIC_RUSSIA_PORTS_SURFACE_02_https_www_marinetraffic_com_en_ais_index",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU020_MARINETRAFFIC_RUSSIA_PORTS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.marinetraffic.com/en/ais/index/ports/all/per_country:RU",
+      "source_host": "www.marinetraffic.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 20,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.marinetraffic.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 21,
@@ -2394,10 +3970,34 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://en.portnews.ru/ports/",
+              "canonical_url": "https://en.portnews.ru/ports/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU021_PORTNEWS_RUSSIA",
+                "source_host": "en.portnews.ru",
+                "surface_code": "RU021_PORTNEWS_RUSSIA_SURFACE_01_https_en_portnews_ru_ports",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://en.portnews.ru/ports/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU021_PORTNEWS_RUSSIA_SURFACE_01_https_en_portnews_ru_ports",
+          "seed_surface_name": "PortNews ports and company directories seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU021_PORTNEWS_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU021_PORTNEWS_RUSSIA",
+            "surface_code": "RU021_PORTNEWS_RUSSIA_SURFACE_01_https_en_portnews_ru_ports",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 46,
@@ -2437,12 +4037,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://en.portnews.ru/companies/",
+              "canonical_url": "https://en.portnews.ru/companies/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU021_PORTNEWS_RUSSIA",
+                "source_host": "en.portnews.ru",
+                "surface_code": "RU021_PORTNEWS_RUSSIA_SURFACE_02_https_en_portnews_ru_companies",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://en.portnews.ru/companies/"
+              }
             }
           ],
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "RU021_PORTNEWS_RUSSIA_SURFACE_02_https_en_portnews_ru_companies",
+          "seed_surface_name": "PortNews ports and company directories seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU021_PORTNEWS_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU021_PORTNEWS_RUSSIA",
+            "surface_code": "RU021_PORTNEWS_RUSSIA_SURFACE_02_https_en_portnews_ru_companies",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU021_PORTNEWS_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://en.portnews.ru/ports/",
+      "source_host": "en.portnews.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 21,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "en.portnews.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 22,
@@ -2499,10 +4149,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://morport.com/en/",
+              "canonical_url": "https://morport.com/en/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU022_MORPORT_RUSSIA",
+                "source_host": "morport.com",
+                "surface_code": "RU022_MORPORT_RUSSIA_SURFACE_01_https_morport_com_en",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://morport.com/en/"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU022_MORPORT_RUSSIA_SURFACE_01_https_morport_com_en",
+          "seed_surface_name": "Association of Commercial Sea Ports Russia seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU022_MORPORT_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU022_MORPORT_RUSSIA",
+            "surface_code": "RU022_MORPORT_RUSSIA_SURFACE_01_https_morport_com_en",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 48,
@@ -2542,12 +4216,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://morport.com/en/members/",
+              "canonical_url": "https://morport.com/en/members/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU022_MORPORT_RUSSIA",
+                "source_host": "morport.com",
+                "surface_code": "RU022_MORPORT_RUSSIA_SURFACE_02_https_morport_com_en_members",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://morport.com/en/members/"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU022_MORPORT_RUSSIA_SURFACE_02_https_morport_com_en_members",
+          "seed_surface_name": "Association of Commercial Sea Ports Russia seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU022_MORPORT_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU022_MORPORT_RUSSIA",
+            "surface_code": "RU022_MORPORT_RUSSIA_SURFACE_02_https_morport_com_en_members",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU022_MORPORT_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://morport.com/en/",
+      "source_host": "morport.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 22,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "morport.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 23,
@@ -2604,10 +4328,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.psp.ru/en/",
+              "canonical_url": "https://www.psp.ru/en/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU023_PORT_SPB",
+                "source_host": "www.psp.ru",
+                "surface_code": "RU023_PORT_SPB_SURFACE_01_https_www_psp_ru_en",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.psp.ru/en/"
+              }
             }
           ],
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "RU023_PORT_SPB_SURFACE_01_https_www_psp_ru_en",
+          "seed_surface_name": "Port of Saint Petersburg official directory surfaces seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU023_PORT_SPB",
+          "surface_metadata": {
+            "source_family_code": "RU023_PORT_SPB",
+            "surface_code": "RU023_PORT_SPB_SURFACE_01_https_www_psp_ru_en",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 50,
@@ -2647,12 +4395,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.psp.ru/en/port-services",
+              "canonical_url": "https://www.psp.ru/en/port-services",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU023_PORT_SPB",
+                "source_host": "www.psp.ru",
+                "surface_code": "RU023_PORT_SPB_SURFACE_02_https_www_psp_ru_en_port_services",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.psp.ru/en/port-services"
+              }
             }
           ],
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "RU023_PORT_SPB_SURFACE_02_https_www_psp_ru_en_port_services",
+          "seed_surface_name": "Port of Saint Petersburg official directory surfaces seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU023_PORT_SPB",
+          "surface_metadata": {
+            "source_family_code": "RU023_PORT_SPB",
+            "surface_code": "RU023_PORT_SPB_SURFACE_02_https_www_psp_ru_en_port_services",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU023_PORT_SPB",
+      "source_status": "candidate",
+      "source_root_url": "https://www.psp.ru/en/",
+      "source_host": "www.psp.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 23,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.psp.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 24,
@@ -2709,10 +4507,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://nmtp.info/en/",
+              "canonical_url": "https://nmtp.info/en/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU024_NOVOROSSIYSK_PORT",
+                "source_host": "nmtp.info",
+                "surface_code": "RU024_NOVOROSSIYSK_PORT_SURFACE_01_https_nmtp_info_en",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nmtp.info/en/"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU024_NOVOROSSIYSK_PORT_SURFACE_01_https_nmtp_info_en",
+          "seed_surface_name": "Novorossiysk Commercial Sea Port official surfaces seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU024_NOVOROSSIYSK_PORT",
+          "surface_metadata": {
+            "source_family_code": "RU024_NOVOROSSIYSK_PORT",
+            "surface_code": "RU024_NOVOROSSIYSK_PORT_SURFACE_01_https_nmtp_info_en",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 52,
@@ -2752,12 +4574,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://nmtp.info/en/holding/stevedoring/",
+              "canonical_url": "https://nmtp.info/en/holding/stevedoring/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU024_NOVOROSSIYSK_PORT",
+                "source_host": "nmtp.info",
+                "surface_code": "RU024_NOVOROSSIYSK_PORT_SURFACE_02_https_nmtp_info_en_holding_stevedoring",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://nmtp.info/en/holding/stevedoring/"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU024_NOVOROSSIYSK_PORT_SURFACE_02_https_nmtp_info_en_holding_stevedoring",
+          "seed_surface_name": "Novorossiysk Commercial Sea Port official surfaces seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU024_NOVOROSSIYSK_PORT",
+          "surface_metadata": {
+            "source_family_code": "RU024_NOVOROSSIYSK_PORT",
+            "surface_code": "RU024_NOVOROSSIYSK_PORT_SURFACE_02_https_nmtp_info_en_holding_stevedoring",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU024_NOVOROSSIYSK_PORT",
+      "source_status": "candidate",
+      "source_root_url": "https://nmtp.info/en/",
+      "source_host": "nmtp.info",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 24,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "nmtp.info",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 25,
@@ -2814,10 +4686,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.vmtp.ru/en/",
+              "canonical_url": "https://www.vmtp.ru/en/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU025_VLADIVOSTOK_PORT",
+                "source_host": "www.vmtp.ru",
+                "surface_code": "RU025_VLADIVOSTOK_PORT_SURFACE_01_https_www_vmtp_ru_en",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.vmtp.ru/en/"
+              }
             }
           ],
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "RU025_VLADIVOSTOK_PORT_SURFACE_01_https_www_vmtp_ru_en",
+          "seed_surface_name": "Vladivostok Sea Commercial Port official surfaces seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU025_VLADIVOSTOK_PORT",
+          "surface_metadata": {
+            "source_family_code": "RU025_VLADIVOSTOK_PORT",
+            "surface_code": "RU025_VLADIVOSTOK_PORT_SURFACE_01_https_www_vmtp_ru_en",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 54,
@@ -2857,12 +4753,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.vmtp.ru/en/services/",
+              "canonical_url": "https://www.vmtp.ru/en/services/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU025_VLADIVOSTOK_PORT",
+                "source_host": "www.vmtp.ru",
+                "surface_code": "RU025_VLADIVOSTOK_PORT_SURFACE_02_https_www_vmtp_ru_en_services",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.vmtp.ru/en/services/"
+              }
             }
           ],
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "RU025_VLADIVOSTOK_PORT_SURFACE_02_https_www_vmtp_ru_en_services",
+          "seed_surface_name": "Vladivostok Sea Commercial Port official surfaces seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU025_VLADIVOSTOK_PORT",
+          "surface_metadata": {
+            "source_family_code": "RU025_VLADIVOSTOK_PORT",
+            "surface_code": "RU025_VLADIVOSTOK_PORT_SURFACE_02_https_www_vmtp_ru_en_services",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU025_VLADIVOSTOK_PORT",
+      "source_status": "candidate",
+      "source_root_url": "https://www.vmtp.ru/en/",
+      "source_host": "www.vmtp.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 25,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.vmtp.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 26,
@@ -2919,10 +4865,34 @@
               "language_fit": "unknown",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.globalports.com/terminals/",
+              "canonical_url": "https://www.globalports.com/terminals/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU026_GLOBAL_PORTS",
+                "source_host": "www.globalports.com",
+                "surface_code": "RU026_GLOBAL_PORTS_SURFACE_01_https_www_globalports_com_terminals",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.globalports.com/terminals/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU026_GLOBAL_PORTS_SURFACE_01_https_www_globalports_com_terminals",
+          "seed_surface_name": "Global Ports terminal network seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU026_GLOBAL_PORTS",
+          "surface_metadata": {
+            "source_family_code": "RU026_GLOBAL_PORTS",
+            "surface_code": "RU026_GLOBAL_PORTS_SURFACE_01_https_www_globalports_com_terminals",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 56,
@@ -2962,12 +4932,62 @@
               "language_fit": "unknown",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.globalports.com/about/terminals/",
+              "canonical_url": "https://www.globalports.com/about/terminals/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU026_GLOBAL_PORTS",
+                "source_host": "www.globalports.com",
+                "surface_code": "RU026_GLOBAL_PORTS_SURFACE_02_https_www_globalports_com_about_terminal",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.globalports.com/about/terminals/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU026_GLOBAL_PORTS_SURFACE_02_https_www_globalports_com_about_terminal",
+          "seed_surface_name": "Global Ports terminal network seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU026_GLOBAL_PORTS",
+          "surface_metadata": {
+            "source_family_code": "RU026_GLOBAL_PORTS",
+            "surface_code": "RU026_GLOBAL_PORTS_SURFACE_02_https_www_globalports_com_about_terminal",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU026_GLOBAL_PORTS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.globalports.com/terminals/",
+      "source_host": "www.globalports.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 26,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.globalports.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 27,
@@ -3024,10 +5044,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.fesco.ru/en/clients/locations/",
+              "canonical_url": "https://www.fesco.ru/en/clients/locations/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU027_FESCO",
+                "source_host": "www.fesco.ru",
+                "surface_code": "RU027_FESCO_SURFACE_01_https_www_fesco_ru_en_clients_locations",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.fesco.ru/en/clients/locations/"
+              }
             }
           ],
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "RU027_FESCO_SURFACE_01_https_www_fesco_ru_en_clients_locations",
+          "seed_surface_name": "FESCO locations and services seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU027_FESCO",
+          "surface_metadata": {
+            "source_family_code": "RU027_FESCO",
+            "surface_code": "RU027_FESCO_SURFACE_01_https_www_fesco_ru_en_clients_locations",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 58,
@@ -3067,12 +5111,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.fesco.ru/en/clients/services/",
+              "canonical_url": "https://www.fesco.ru/en/clients/services/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU027_FESCO",
+                "source_host": "www.fesco.ru",
+                "surface_code": "RU027_FESCO_SURFACE_02_https_www_fesco_ru_en_clients_services",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.fesco.ru/en/clients/services/"
+              }
             }
           ],
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "RU027_FESCO_SURFACE_02_https_www_fesco_ru_en_clients_services",
+          "seed_surface_name": "FESCO locations and services seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU027_FESCO",
+          "surface_metadata": {
+            "source_family_code": "RU027_FESCO",
+            "surface_code": "RU027_FESCO_SURFACE_02_https_www_fesco_ru_en_clients_services",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU027_FESCO",
+      "source_status": "candidate",
+      "source_root_url": "https://www.fesco.ru/en/clients/locations/",
+      "source_host": "www.fesco.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 27,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.fesco.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 28,
@@ -3129,10 +5223,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://trcont.com/en/terminals-and-services/terminal-network/",
+              "canonical_url": "https://trcont.com/en/terminals-and-services/terminal-network/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU028_TRANSCONTAINER",
+                "source_host": "trcont.com",
+                "surface_code": "RU028_TRANSCONTAINER_SURFACE_01_https_trcont_com_en_terminals_and_servic",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://trcont.com/en/terminals-and-services/terminal-network/"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU028_TRANSCONTAINER_SURFACE_01_https_trcont_com_en_terminals_and_servic",
+          "seed_surface_name": "TransContainer terminal network seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU028_TRANSCONTAINER",
+          "surface_metadata": {
+            "source_family_code": "RU028_TRANSCONTAINER",
+            "surface_code": "RU028_TRANSCONTAINER_SURFACE_01_https_trcont_com_en_terminals_and_servic",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 60,
@@ -3172,12 +5290,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://trcont.com/en/",
+              "canonical_url": "https://trcont.com/en/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU028_TRANSCONTAINER",
+                "source_host": "trcont.com",
+                "surface_code": "RU028_TRANSCONTAINER_SURFACE_02_https_trcont_com_en",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://trcont.com/en/"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU028_TRANSCONTAINER_SURFACE_02_https_trcont_com_en",
+          "seed_surface_name": "TransContainer terminal network seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU028_TRANSCONTAINER",
+          "surface_metadata": {
+            "source_family_code": "RU028_TRANSCONTAINER",
+            "surface_code": "RU028_TRANSCONTAINER_SURFACE_02_https_trcont_com_en",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU028_TRANSCONTAINER",
+      "source_status": "candidate",
+      "source_root_url": "https://trcont.com/en/terminals-and-services/terminal-network/",
+      "source_host": "trcont.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 28,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "trcont.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 29,
@@ -3234,10 +5402,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.rzdlog.com/en/services/",
+              "canonical_url": "https://www.rzdlog.com/en/services/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU029_RZD_LOGISTICS",
+                "source_host": "www.rzdlog.com",
+                "surface_code": "RU029_RZD_LOGISTICS_SURFACE_01_https_www_rzdlog_com_en_services",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.rzdlog.com/en/services/"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU029_RZD_LOGISTICS_SURFACE_01_https_www_rzdlog_com_en_services",
+          "seed_surface_name": "RZD Logistics services and contacts seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU029_RZD_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "RU029_RZD_LOGISTICS",
+            "surface_code": "RU029_RZD_LOGISTICS_SURFACE_01_https_www_rzdlog_com_en_services",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 62,
@@ -3277,12 +5469,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "B_PLUS"
+              "quality_status": "B_PLUS",
+              "submitted_url": "https://www.rzdlog.com/en/contacts/",
+              "canonical_url": "https://www.rzdlog.com/en/contacts/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU029_RZD_LOGISTICS",
+                "source_host": "www.rzdlog.com",
+                "surface_code": "RU029_RZD_LOGISTICS_SURFACE_02_https_www_rzdlog_com_en_contacts",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.rzdlog.com/en/contacts/"
+              }
             }
           ],
-          "quality_status": "B_PLUS"
+          "quality_status": "B_PLUS",
+          "surface_code": "RU029_RZD_LOGISTICS_SURFACE_02_https_www_rzdlog_com_en_contacts",
+          "seed_surface_name": "RZD Logistics services and contacts seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU029_RZD_LOGISTICS",
+          "surface_metadata": {
+            "source_family_code": "RU029_RZD_LOGISTICS",
+            "surface_code": "RU029_RZD_LOGISTICS_SURFACE_02_https_www_rzdlog_com_en_contacts",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU029_RZD_LOGISTICS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.rzdlog.com/en/services/",
+      "source_host": "www.rzdlog.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 29,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.rzdlog.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 30,
@@ -3339,10 +5581,34 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://cargo.rzd.ru/en/",
+              "canonical_url": "https://cargo.rzd.ru/en/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU030_RZD_CARGO",
+                "source_host": "cargo.rzd.ru",
+                "surface_code": "RU030_RZD_CARGO_SURFACE_01_https_cargo_rzd_ru_en",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://cargo.rzd.ru/en/"
+              }
             }
           ],
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "RU030_RZD_CARGO_SURFACE_01_https_cargo_rzd_ru_en",
+          "seed_surface_name": "Russian Railways cargo surfaces seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU030_RZD_CARGO",
+          "surface_metadata": {
+            "source_family_code": "RU030_RZD_CARGO",
+            "surface_code": "RU030_RZD_CARGO_SURFACE_01_https_cargo_rzd_ru_en",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 64,
@@ -3382,12 +5648,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://eng.rzd.ru/en/",
+              "canonical_url": "https://eng.rzd.ru/en/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU030_RZD_CARGO",
+                "source_host": "cargo.rzd.ru",
+                "surface_code": "RU030_RZD_CARGO_SURFACE_02_https_eng_rzd_ru_en",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://eng.rzd.ru/en/"
+              }
             }
           ],
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "RU030_RZD_CARGO_SURFACE_02_https_eng_rzd_ru_en",
+          "seed_surface_name": "Russian Railways cargo surfaces seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU030_RZD_CARGO",
+          "surface_metadata": {
+            "source_family_code": "RU030_RZD_CARGO",
+            "surface_code": "RU030_RZD_CARGO_SURFACE_02_https_eng_rzd_ru_en",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU030_RZD_CARGO",
+      "source_status": "candidate",
+      "source_root_url": "https://cargo.rzd.ru/en/",
+      "source_host": "cargo.rzd.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 30,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "cargo.rzd.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 31,
@@ -3444,10 +5760,34 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.dellin.ru/contacts/",
+              "canonical_url": "https://www.dellin.ru/contacts/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU031_DELOVYE_LINII",
+                "source_host": "www.dellin.ru",
+                "surface_code": "RU031_DELOVYE_LINII_SURFACE_01_https_www_dellin_ru_contacts",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.dellin.ru/contacts/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU031_DELOVYE_LINII_SURFACE_01_https_www_dellin_ru_contacts",
+          "seed_surface_name": "Delovye Linii terminal and city directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU031_DELOVYE_LINII",
+          "surface_metadata": {
+            "source_family_code": "RU031_DELOVYE_LINII",
+            "surface_code": "RU031_DELOVYE_LINII_SURFACE_01_https_www_dellin_ru_contacts",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 66,
@@ -3487,12 +5827,62 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.dellin.ru/cities/",
+              "canonical_url": "https://www.dellin.ru/cities/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU031_DELOVYE_LINII",
+                "source_host": "www.dellin.ru",
+                "surface_code": "RU031_DELOVYE_LINII_SURFACE_02_https_www_dellin_ru_cities",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.dellin.ru/cities/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU031_DELOVYE_LINII_SURFACE_02_https_www_dellin_ru_cities",
+          "seed_surface_name": "Delovye Linii terminal and city directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU031_DELOVYE_LINII",
+          "surface_metadata": {
+            "source_family_code": "RU031_DELOVYE_LINII",
+            "surface_code": "RU031_DELOVYE_LINII_SURFACE_02_https_www_dellin_ru_cities",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU031_DELOVYE_LINII",
+      "source_status": "candidate",
+      "source_root_url": "https://www.dellin.ru/contacts/",
+      "source_host": "www.dellin.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 31,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.dellin.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 32,
@@ -3549,10 +5939,34 @@
               "language_fit": "native",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://pecom.ru/ru/contacts/",
+              "canonical_url": "https://pecom.ru/ru/contacts/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU032_PEK",
+                "source_host": "pecom.ru",
+                "surface_code": "RU032_PEK_SURFACE_01_https_pecom_ru_ru_contacts",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://pecom.ru/ru/contacts/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU032_PEK_SURFACE_01_https_pecom_ru_ru_contacts",
+          "seed_surface_name": "PEK contacts and terminal directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU032_PEK",
+          "surface_metadata": {
+            "source_family_code": "RU032_PEK",
+            "surface_code": "RU032_PEK_SURFACE_01_https_pecom_ru_ru_contacts",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 68,
@@ -3592,12 +6006,62 @@
               "language_fit": "native",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://pecom.ru/ru/contacts/terminaly/",
+              "canonical_url": "https://pecom.ru/ru/contacts/terminaly/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU032_PEK",
+                "source_host": "pecom.ru",
+                "surface_code": "RU032_PEK_SURFACE_02_https_pecom_ru_ru_contacts_terminaly",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://pecom.ru/ru/contacts/terminaly/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU032_PEK_SURFACE_02_https_pecom_ru_ru_contacts_terminaly",
+          "seed_surface_name": "PEK contacts and terminal directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU032_PEK",
+          "surface_metadata": {
+            "source_family_code": "RU032_PEK",
+            "surface_code": "RU032_PEK_SURFACE_02_https_pecom_ru_ru_contacts_terminaly",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU032_PEK",
+      "source_status": "candidate",
+      "source_root_url": "https://pecom.ru/ru/contacts/",
+      "source_host": "pecom.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 32,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "pecom.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 33,
@@ -3654,10 +6118,34 @@
               "language_fit": "native",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.cdek.ru/ru/offices/",
+              "canonical_url": "https://www.cdek.ru/ru/offices/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU033_CDEK",
+                "source_host": "www.cdek.ru",
+                "surface_code": "RU033_CDEK_SURFACE_01_https_www_cdek_ru_ru_offices",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.cdek.ru/ru/offices/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU033_CDEK_SURFACE_01_https_www_cdek_ru_ru_offices",
+          "seed_surface_name": "CDEK office locator surfaces seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU033_CDEK",
+          "surface_metadata": {
+            "source_family_code": "RU033_CDEK",
+            "surface_code": "RU033_CDEK_SURFACE_01_https_www_cdek_ru_ru_offices",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 70,
@@ -3697,12 +6185,62 @@
               "language_fit": "native",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://www.cdek.ru/ru/contacts/",
+              "canonical_url": "https://www.cdek.ru/ru/contacts/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU033_CDEK",
+                "source_host": "www.cdek.ru",
+                "surface_code": "RU033_CDEK_SURFACE_02_https_www_cdek_ru_ru_contacts",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.cdek.ru/ru/contacts/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU033_CDEK_SURFACE_02_https_www_cdek_ru_ru_contacts",
+          "seed_surface_name": "CDEK office locator surfaces seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU033_CDEK",
+          "surface_metadata": {
+            "source_family_code": "RU033_CDEK",
+            "surface_code": "RU033_CDEK_SURFACE_02_https_www_cdek_ru_ru_contacts",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU033_CDEK",
+      "source_status": "candidate",
+      "source_root_url": "https://www.cdek.ru/ru/offices/",
+      "source_host": "www.cdek.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 33,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.cdek.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 34,
@@ -3759,10 +6297,34 @@
               "language_fit": "unknown",
               "coverage_fit": "country_primary",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://boxberry.ru/find_an_office/",
+              "canonical_url": "https://boxberry.ru/find_an_office/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU034_BOXBERRY",
+                "source_host": "boxberry.ru",
+                "surface_code": "RU034_BOXBERRY_SURFACE_01_https_boxberry_ru_find_an_office",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://boxberry.ru/find_an_office/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU034_BOXBERRY_SURFACE_01_https_boxberry_ru_find_an_office",
+          "seed_surface_name": "Boxberry office and courier directory surfaces seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU034_BOXBERRY",
+          "surface_metadata": {
+            "source_family_code": "RU034_BOXBERRY",
+            "surface_code": "RU034_BOXBERRY_SURFACE_01_https_boxberry_ru_find_an_office",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 72,
@@ -3802,12 +6364,62 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://boxberry.ru/courier-delivery/",
+              "canonical_url": "https://boxberry.ru/courier-delivery/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU034_BOXBERRY",
+                "source_host": "boxberry.ru",
+                "surface_code": "RU034_BOXBERRY_SURFACE_02_https_boxberry_ru_courier_delivery",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://boxberry.ru/courier-delivery/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU034_BOXBERRY_SURFACE_02_https_boxberry_ru_courier_delivery",
+          "seed_surface_name": "Boxberry office and courier directory surfaces seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU034_BOXBERRY",
+          "surface_metadata": {
+            "source_family_code": "RU034_BOXBERRY",
+            "surface_code": "RU034_BOXBERRY_SURFACE_02_https_boxberry_ru_courier_delivery",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU034_BOXBERRY",
+      "source_status": "candidate",
+      "source_root_url": "https://boxberry.ru/find_an_office/",
+      "source_host": "boxberry.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 34,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "boxberry.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 35,
@@ -3864,10 +6476,34 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.dpd.ru/dpd/contacts/index.do2",
+              "canonical_url": "https://www.dpd.ru/dpd/contacts/index.do2",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU035_DPD_RUSSIA",
+                "source_host": "www.dpd.ru",
+                "surface_code": "RU035_DPD_RUSSIA_SURFACE_01_https_www_dpd_ru_dpd_contacts_index_do2",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.dpd.ru/dpd/contacts/index.do2"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU035_DPD_RUSSIA_SURFACE_01_https_www_dpd_ru_dpd_contacts_index_do2",
+          "seed_surface_name": "DPD Russia contacts and home surfaces seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU035_DPD_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU035_DPD_RUSSIA",
+            "surface_code": "RU035_DPD_RUSSIA_SURFACE_01_https_www_dpd_ru_dpd_contacts_index_do2",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 74,
@@ -3907,12 +6543,62 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.dpd.ru/dpd/home.do2",
+              "canonical_url": "https://www.dpd.ru/dpd/home.do2",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU035_DPD_RUSSIA",
+                "source_host": "www.dpd.ru",
+                "surface_code": "RU035_DPD_RUSSIA_SURFACE_02_https_www_dpd_ru_dpd_home_do2",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.dpd.ru/dpd/home.do2"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU035_DPD_RUSSIA_SURFACE_02_https_www_dpd_ru_dpd_home_do2",
+          "seed_surface_name": "DPD Russia contacts and home surfaces seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU035_DPD_RUSSIA",
+          "surface_metadata": {
+            "source_family_code": "RU035_DPD_RUSSIA",
+            "surface_code": "RU035_DPD_RUSSIA_SURFACE_02_https_www_dpd_ru_dpd_home_do2",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU035_DPD_RUSSIA",
+      "source_status": "candidate",
+      "source_root_url": "https://www.dpd.ru/dpd/contacts/index.do2",
+      "source_host": "www.dpd.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 35,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.dpd.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 36,
@@ -3969,10 +6655,34 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.baikalsr.ru/contacts/terminaly/",
+              "canonical_url": "https://www.baikalsr.ru/contacts/terminaly/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU036_BAIKAL_SERVICE",
+                "source_host": "www.baikalsr.ru",
+                "surface_code": "RU036_BAIKAL_SERVICE_SURFACE_01_https_www_baikalsr_ru_contacts_terminaly",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.baikalsr.ru/contacts/terminaly/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU036_BAIKAL_SERVICE_SURFACE_01_https_www_baikalsr_ru_contacts_terminaly",
+          "seed_surface_name": "Baikal Service terminal directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU036_BAIKAL_SERVICE",
+          "surface_metadata": {
+            "source_family_code": "RU036_BAIKAL_SERVICE",
+            "surface_code": "RU036_BAIKAL_SERVICE_SURFACE_01_https_www_baikalsr_ru_contacts_terminaly",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 76,
@@ -4012,12 +6722,62 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.baikalsr.ru/contacts/",
+              "canonical_url": "https://www.baikalsr.ru/contacts/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU036_BAIKAL_SERVICE",
+                "source_host": "www.baikalsr.ru",
+                "surface_code": "RU036_BAIKAL_SERVICE_SURFACE_02_https_www_baikalsr_ru_contacts",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.baikalsr.ru/contacts/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU036_BAIKAL_SERVICE_SURFACE_02_https_www_baikalsr_ru_contacts",
+          "seed_surface_name": "Baikal Service terminal directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU036_BAIKAL_SERVICE",
+          "surface_metadata": {
+            "source_family_code": "RU036_BAIKAL_SERVICE",
+            "surface_code": "RU036_BAIKAL_SERVICE_SURFACE_02_https_www_baikalsr_ru_contacts",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU036_BAIKAL_SERVICE",
+      "source_status": "candidate",
+      "source_root_url": "https://www.baikalsr.ru/contacts/terminaly/",
+      "source_host": "www.baikalsr.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 36,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.baikalsr.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 37,
@@ -4074,10 +6834,34 @@
               "language_fit": "unknown",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://tk-kit.com/contacts/",
+              "canonical_url": "https://tk-kit.com/contacts/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU037_KIT_TRANSPORT",
+                "source_host": "tk-kit.com",
+                "surface_code": "RU037_KIT_TRANSPORT_SURFACE_01_https_tk_kit_com_contacts",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://tk-kit.com/contacts/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU037_KIT_TRANSPORT_SURFACE_01_https_tk_kit_com_contacts",
+          "seed_surface_name": "KIT transport terminal and contact surfaces seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU037_KIT_TRANSPORT",
+          "surface_metadata": {
+            "source_family_code": "RU037_KIT_TRANSPORT",
+            "surface_code": "RU037_KIT_TRANSPORT_SURFACE_01_https_tk_kit_com_contacts",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 78,
@@ -4117,12 +6901,62 @@
               "language_fit": "unknown",
               "coverage_fit": "regional_or_industry_context",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://tk-kit.com/terminal/",
+              "canonical_url": "https://tk-kit.com/terminal/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU037_KIT_TRANSPORT",
+                "source_host": "tk-kit.com",
+                "surface_code": "RU037_KIT_TRANSPORT_SURFACE_02_https_tk_kit_com_terminal",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://tk-kit.com/terminal/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU037_KIT_TRANSPORT_SURFACE_02_https_tk_kit_com_terminal",
+          "seed_surface_name": "KIT transport terminal and contact surfaces seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU037_KIT_TRANSPORT",
+          "surface_metadata": {
+            "source_family_code": "RU037_KIT_TRANSPORT",
+            "surface_code": "RU037_KIT_TRANSPORT_SURFACE_02_https_tk_kit_com_terminal",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU037_KIT_TRANSPORT",
+      "source_status": "candidate",
+      "source_root_url": "https://tk-kit.com/contacts/",
+      "source_host": "tk-kit.com",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 37,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "tk-kit.com",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 38,
@@ -4179,10 +7013,34 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.majorexpress.ru/branches/",
+              "canonical_url": "https://www.majorexpress.ru/branches/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU038_MAJOR_EXPRESS",
+                "source_host": "www.majorexpress.ru",
+                "surface_code": "RU038_MAJOR_EXPRESS_SURFACE_01_https_www_majorexpress_ru_branches",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.majorexpress.ru/branches/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU038_MAJOR_EXPRESS_SURFACE_01_https_www_majorexpress_ru_branches",
+          "seed_surface_name": "Major Express branch directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU038_MAJOR_EXPRESS",
+          "surface_metadata": {
+            "source_family_code": "RU038_MAJOR_EXPRESS",
+            "surface_code": "RU038_MAJOR_EXPRESS_SURFACE_01_https_www_majorexpress_ru_branches",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 80,
@@ -4222,12 +7080,62 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.majorexpress.ru/",
+              "canonical_url": "https://www.majorexpress.ru/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU038_MAJOR_EXPRESS",
+                "source_host": "www.majorexpress.ru",
+                "surface_code": "RU038_MAJOR_EXPRESS_SURFACE_02_https_www_majorexpress_ru",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.majorexpress.ru/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU038_MAJOR_EXPRESS_SURFACE_02_https_www_majorexpress_ru",
+          "seed_surface_name": "Major Express branch directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU038_MAJOR_EXPRESS",
+          "surface_metadata": {
+            "source_family_code": "RU038_MAJOR_EXPRESS",
+            "surface_code": "RU038_MAJOR_EXPRESS_SURFACE_02_https_www_majorexpress_ru",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU038_MAJOR_EXPRESS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.majorexpress.ru/branches/",
+      "source_host": "www.majorexpress.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 38,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.majorexpress.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 39,
@@ -4284,10 +7192,34 @@
               "language_fit": "unknown",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "manual_review_required",
-              "quality_status": "B_MINUS"
+              "quality_status": "B_MINUS",
+              "submitted_url": "https://www.ponyexpress.ru/offices/",
+              "canonical_url": "https://www.ponyexpress.ru/offices/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU039_PONY_EXPRESS",
+                "source_host": "www.ponyexpress.ru",
+                "surface_code": "RU039_PONY_EXPRESS_SURFACE_01_https_www_ponyexpress_ru_offices",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.ponyexpress.ru/offices/"
+              }
             }
           ],
-          "quality_status": "B_MINUS"
+          "quality_status": "B_MINUS",
+          "surface_code": "RU039_PONY_EXPRESS_SURFACE_01_https_www_ponyexpress_ru_offices",
+          "seed_surface_name": "Pony Express office directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU039_PONY_EXPRESS",
+          "surface_metadata": {
+            "source_family_code": "RU039_PONY_EXPRESS",
+            "surface_code": "RU039_PONY_EXPRESS_SURFACE_01_https_www_ponyexpress_ru_offices",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 82,
@@ -4327,12 +7259,62 @@
               "language_fit": "english_fallback",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "needs_native_alternative_check",
-              "quality_status": "A_MINUS"
+              "quality_status": "A_MINUS",
+              "submitted_url": "https://www.ponyexpress.ru/en/",
+              "canonical_url": "https://www.ponyexpress.ru/en/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU039_PONY_EXPRESS",
+                "source_host": "www.ponyexpress.ru",
+                "surface_code": "RU039_PONY_EXPRESS_SURFACE_02_https_www_ponyexpress_ru_en",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://www.ponyexpress.ru/en/"
+              }
             }
           ],
-          "quality_status": "A_MINUS"
+          "quality_status": "A_MINUS",
+          "surface_code": "RU039_PONY_EXPRESS_SURFACE_02_https_www_ponyexpress_ru_en",
+          "seed_surface_name": "Pony Express office directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU039_PONY_EXPRESS",
+          "surface_metadata": {
+            "source_family_code": "RU039_PONY_EXPRESS",
+            "surface_code": "RU039_PONY_EXPRESS_SURFACE_02_https_www_ponyexpress_ru_en",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU039_PONY_EXPRESS",
+      "source_status": "candidate",
+      "source_root_url": "https://www.ponyexpress.ru/offices/",
+      "source_host": "www.ponyexpress.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 39,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "www.ponyexpress.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     },
     {
       "source_family_index": 40,
@@ -4389,10 +7371,34 @@
               "language_fit": "native",
               "coverage_fit": "country_primary",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A_PLUS"
+              "quality_status": "A_PLUS",
+              "submitted_url": "https://transrussia.ru/en/exhibitor-list/",
+              "canonical_url": "https://transrussia.ru/en/exhibitor-list/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+                "source_host": "transrussia.ru",
+                "surface_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY_SURFACE_01_https_transrussia_ru_en_exhibitor_list",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://transrussia.ru/en/exhibitor-list/"
+              }
             }
           ],
-          "quality_status": "A_PLUS"
+          "quality_status": "A_PLUS",
+          "surface_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY_SURFACE_01_https_transrussia_ru_en_exhibitor_list",
+          "seed_surface_name": "TransRussia exhibitor directory seed surface 1",
+          "surface_index": 1,
+          "family_seed_surface_index": 1,
+          "source_family_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+          "surface_metadata": {
+            "source_family_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+            "surface_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY_SURFACE_01_https_transrussia_ru_en_exhibitor_list",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         },
         {
           "seed_surface_index": 84,
@@ -4432,13 +7438,80 @@
               "language_fit": "native",
               "coverage_fit": "official_company_local_entity",
               "locale_review_status": "native_locale_verified",
-              "quality_status": "A"
+              "quality_status": "A",
+              "submitted_url": "https://transrussia.ru/en/",
+              "canonical_url": "https://transrussia.ru/en/",
+              "seed_type": "entrypoint",
+              "is_enabled": true,
+              "priority": 100,
+              "max_depth": 1,
+              "recrawl_interval": "P7D",
+              "seed_metadata": {
+                "source_family_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+                "source_host": "transrussia.ru",
+                "surface_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY_SURFACE_02_https_transrussia_ru_en",
+                "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+                "original_url_field": "https://transrussia.ru/en/"
+              }
             }
           ],
-          "quality_status": "A"
+          "quality_status": "A",
+          "surface_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY_SURFACE_02_https_transrussia_ru_en",
+          "seed_surface_name": "TransRussia exhibitor directory seed surface 2",
+          "surface_index": 2,
+          "family_seed_surface_index": 2,
+          "source_family_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+          "surface_metadata": {
+            "source_family_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+            "surface_code": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY_SURFACE_02_https_transrussia_ru_en",
+            "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+          }
         }
-      ]
+      ],
+      "source_family_name": "RU040_TRANSRUSSIA_EXHIBITOR_DIRECTORY",
+      "source_status": "candidate",
+      "source_root_url": "https://transrussia.ru/en/exhibitor-list/",
+      "source_host": "transrussia.ru",
+      "source_category": "directory",
+      "allowed_schemes": [
+        "https"
+      ],
+      "default_priority": 100,
+      "default_recrawl_interval": "P7D",
+      "default_max_depth": 1,
+      "family_metadata": {
+        "lang_code": "ru",
+        "trust_tier": "B",
+        "discovery_value": "candidate_directory_source",
+        "noise_risk": "unknown",
+        "manual_review_priority": 40,
+        "live_check_required": true,
+        "family_review_state": "needs_live_check",
+        "host_budget_group": "transrussia.ru",
+        "cross_seed_traversal_allowed": false,
+        "cross_language_traversal_allowed": false,
+        "target_language_code": "ru",
+        "public_url_probe_status": "not_probed_in_catalog_migration",
+        "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1"
+      }
     }
   ],
-  "review_state": "needs_live_check"
+  "review_state": "needs_live_check",
+  "catalog_status": "candidate_only_not_live",
+  "catalog_scope": {
+    "language_code": "ru",
+    "language_name": "Russian",
+    "language_native_name": "Русский",
+    "catalog_file": "ru/russian_source_families_v2.json",
+    "catalog_family": "language_startpoint_catalog"
+  },
+  "seed_contract_basis": {
+    "schema": "source_families_v2",
+    "runtime_contract": "strict_loader_v1",
+    "contract_source": "canonical_json_migration",
+    "migrated_from_candidate_manifest": true,
+    "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
+    "source_file": "ru/russian_source_families_v2.json",
+    "loader_policy": "strict_load_startpoint_catalog_no_runtime_adapter"
+  }
 }
