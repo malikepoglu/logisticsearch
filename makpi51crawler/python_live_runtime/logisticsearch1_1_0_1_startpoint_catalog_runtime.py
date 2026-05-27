@@ -416,6 +416,76 @@ def validate_startpoint_catalog(catalog: dict[str, Any]) -> None:
 # EN: current seed.source and seed.seed_url reality.
 # TR: Bu yardımcı, source-family kataloğunu mevcut seed.source ve seed.seed_url
 # TR: gerçeğine yakın satırlara dönüştürür.
+
+
+# SOURCE_QUALITY_QUARANTINE_POLICY_R1_BEGIN
+# EN: R3 partial traversal proved that some source families are not crawler_core bugs.
+# EN: They are robots-blocked or hard-HTTP source-quality cases and must not be
+# EN: forced into the next full traversal. This helper reads an operator-supplied,
+# EN: comma/newline/semicolon separated environment list. With no environment value,
+# EN: projection behavior is intentionally unchanged.
+# TR: R3 kısmi traversal bazı source family sorunlarının crawler_core bug'ı
+# TR: olmadığını gösterdi. Bunlar robots-blocked veya hard-HTTP source-quality
+# TR: durumlarıdır ve bir sonraki full traversal içine zorla sokulmamalıdır.
+# TR: Bu yardımcı operatörün verdiği virgül/newline/noktalı virgül ayrılmış
+# TR: environment listesini okur. Environment yoksa davranış bilinçli olarak
+# TR: değişmez.
+def _source_quality_quarantine_family_codes_from_env() -> set[str]:
+    import os
+
+    raw_values = (
+        os.environ.get("LOGISTICSEARCH_SOURCE_QUALITY_QUARANTINE_FAMILIES", ""),
+        os.environ.get("LOGISTICSEARCH_CRAWLER_SOURCE_QUALITY_QUARANTINE_FAMILIES", ""),
+    )
+    family_codes: set[str] = set()
+    for raw_value in raw_values:
+        normalized = raw_value.replace("\n", ",").replace(";", ",")
+        for item in normalized.split(","):
+            code = item.strip()
+            if code:
+                family_codes.add(code)
+    return family_codes
+
+
+# EN: This helper marks projected source metadata with the policy receipt.
+# TR: Bu yardımcı projekte edilmiş source metadata içine policy kanıtı yazar.
+def _source_quality_policy_metadata(
+    family_code: str,
+    quarantine_family_codes: set[str],
+) -> dict[str, Any]:
+    if family_code not in quarantine_family_codes:
+        return {
+            "source_quality_policy_version": "source_quality_quarantine_projection_r1",
+            "source_quality_policy_state": "active",
+            "source_quality_quarantine_applied": False,
+        }
+    return {
+        "source_quality_policy_version": "source_quality_quarantine_projection_r1",
+        "source_quality_policy_state": "quarantined_from_full_traversal",
+        "source_quality_quarantine_applied": True,
+        "source_quality_quarantine_reason": "r3_family_level_robots_or_hard_http_source_quality",
+    }
+
+
+# EN: This helper applies source-quality policy to one projected seed row.
+# EN: It never enables a disabled catalog seed; it can only preserve enabled state
+# EN: or disable a quarantined source-family seed for the controlled R4 activation.
+# TR: Bu yardımcı source-quality policy'yi tek projected seed satırına uygular.
+# TR: Catalog içinde disabled olan seed'i asla enabled yapmaz; yalnızca enabled
+# TR: durumunu korur veya kontrollü R4 aktivasyonu için quarantined family seed'ini
+# TR: disabled yapar.
+def _source_quality_projected_seed_enabled(
+    catalog_seed_enabled: bool,
+    family_code: str,
+    quarantine_family_codes: set[str],
+) -> bool:
+    if family_code in quarantine_family_codes:
+        return False
+    return bool(catalog_seed_enabled)
+
+
+# SOURCE_QUALITY_QUARANTINE_POLICY_R1_END
+
 def project_catalog_to_seed_rows(catalog: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
     # EN: We validate first so projection works only on trusted structure.
     # TR: Dönüştürme yalnızca güvenilir yapı üzerinde çalışsın diye önce doğrularız.
@@ -426,14 +496,25 @@ def project_catalog_to_seed_rows(catalog: dict[str, Any]) -> dict[str, list[dict
     projected_sources: list[dict[str, Any]] = []
 
     # EN: projected_seed_urls collects one projected seed row per catalog seed URL.
-    # TR: projected_seed_urls her katalog seed URL'si için tek bir projeksiyon seed
-    # TR: satırı toplar.
+    # TR: projected_seed_urls her katalog seed URL'si için tek bir projeksiyon seed satırı toplar.
     projected_seed_urls: list[dict[str, Any]] = []
+
+    # EN: Quarantine is empty by default. It becomes active only when the operator
+    # EN: provides LOGISTICSEARCH_SOURCE_QUALITY_QUARANTINE_FAMILIES or
+    # EN: LOGISTICSEARCH_CRAWLER_SOURCE_QUALITY_QUARANTINE_FAMILIES during a
+    # EN: controlled reset/activation gate.
+    # TR: Quarantine varsayılan olarak boştur. Yalnızca kontrollü reset/activation
+    # TR: gate sırasında operator environment listesi verdiğinde aktif olur.
+    quarantine_family_codes = _source_quality_quarantine_family_codes_from_env()
 
     # EN: We now flatten family -> surface -> seed into the two row groups.
     # TR: Şimdi family -> surface -> seed yapısını iki satır grubuna düzleştiriyoruz.
     for family in catalog["source_families"]:
+        family_code = str(family["source_family_code"])
         family_metadata = dict(family["family_metadata"])
+        family_metadata.update(
+            _source_quality_policy_metadata(family_code, quarantine_family_codes)
+        )
 
         projected_sources.append(
             {
@@ -453,7 +534,6 @@ def project_catalog_to_seed_rows(catalog: dict[str, Any]) -> dict[str, list[dict
 
         for surface in family["seed_surfaces"]:
             surface_metadata = dict(surface.get("surface_metadata", {}))
-
             for seed in surface["seed_urls"]:
                 merged_seed_metadata = dict(seed["seed_metadata"])
 
@@ -475,13 +555,23 @@ def project_catalog_to_seed_rows(catalog: dict[str, Any]) -> dict[str, list[dict
                 merged_seed_metadata.setdefault("family_review_state", family_metadata["family_review_state"])
                 merged_seed_metadata.setdefault("surface_metadata", surface_metadata)
 
+                policy_metadata = _source_quality_policy_metadata(
+                    family_code,
+                    quarantine_family_codes,
+                )
+                merged_seed_metadata.update(policy_metadata)
+
                 projected_seed_urls.append(
                     {
                         "source_code": family["source_family_code"],
                         "seed_type": seed["seed_type"],
                         "submitted_url": seed["submitted_url"],
                         "canonical_url": seed["canonical_url"],
-                        "is_enabled": bool(seed["is_enabled"]),
+                        "is_enabled": _source_quality_projected_seed_enabled(
+                            bool(seed["is_enabled"]),
+                            family_code,
+                            quarantine_family_codes,
+                        ),
                         "priority": int(seed["priority"]),
                         "max_depth": int(seed["max_depth"]),
                         "recrawl_interval": str(seed["recrawl_interval"]),
@@ -494,6 +584,7 @@ def project_catalog_to_seed_rows(catalog: dict[str, Any]) -> dict[str, list[dict
         "projected_sources": projected_sources,
         "projected_seed_urls": projected_seed_urls,
     }
+
 
 
 # EN: This helper flattens all seed URLs into review candidates.
