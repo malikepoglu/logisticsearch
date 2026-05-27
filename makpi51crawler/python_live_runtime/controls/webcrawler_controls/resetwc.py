@@ -651,7 +651,43 @@ from ._runtime_control_common import apply_runtime_control
 # TR: main fonksiyonu reset kontrol akisinin bir parcasidir ve denetlenmesi kolay kalmalidir.
 # EN: Read this function by checking inputs, state access, mutation scope, and output behavior.
 # TR: Bu fonksiyonu girdiler, durum erisimi, degisim kapsami ve cikti davranisi uzerinden okuyun.
+
+
+
+# RESETWC_HELP_NO_SIDE_EFFECT_R1_BEGIN
+# EN: resetwc previously treated "--help" as a normal reset-control invocation.
+# EN: That violates read-only audit contracts because help can write
+# EN: ops.webcrawler_runtime_control. Keep the existing no-argument behavior, but
+# EN: make -h/--help a pure stdout-only path with no DB/control access.
+# TR: resetwc daha önce "--help" argümanını normal reset-control çağrısı gibi
+# TR: işliyordu. Bu read-only audit sözleşmesini bozar; çünkü help çağrısı
+# TR: ops.webcrawler_runtime_control yazabilir. Argümansız mevcut davranışı koru,
+# TR: fakat -h/--help yolunu DB/control erişimi olmadan yalnızca stdout yapan
+# TR: saf bir çıkış yoluna çevir.
+def _resetwc_print_help_no_side_effect() -> None:
+    print("usage: resetwc.py [-h|--help]")
+    print()
+    print("Prepare crawler_core for a later controlled reset phase.")
+    print()
+    print("options:")
+    print("  -h, --help   show this help message and exit without DB/control writes")
+    print()
+    print("safety:")
+    print("  --help is read-only and has no side effects.")
+    print("  no-argument invocation preserves the existing stop-preparation behavior.")
+
+
+def _resetwc_exit_zero_for_help_if_requested() -> None:
+    import sys as _sys
+
+    if any(arg in {"-h", "--help"} for arg in _sys.argv[1:]):
+        _resetwc_print_help_no_side_effect()
+        raise SystemExit(0)
+
+
+# RESETWC_HELP_NO_SIDE_EFFECT_R1_END
 def main() -> int:
+    _resetwc_exit_zero_for_help_if_requested()
     # EN: We first perform the durable internal stop request.
     # TR: Önce kalıcı iç stop isteğini yürütüyoruz.
     rc = apply_runtime_control(
