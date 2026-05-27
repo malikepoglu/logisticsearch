@@ -120,7 +120,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -129,7 +129,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBERS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/members"
+                "original_url_field": "https://nsbs.bg/en/members",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -192,7 +196,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -201,7 +205,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBER_TRANSLAND",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/transland-ltd"
+                "original_url_field": "https://nsbs.bg/en/transland-ltd",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -265,7 +273,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -274,7 +282,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBER_WORLD_TRANSPORT_OVERSEAS",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/world-transport-overseas-bulgaria-ltd"
+                "original_url_field": "https://nsbs.bg/en/world-transport-overseas-bulgaria-ltd",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -338,7 +350,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -347,7 +359,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBER_UNIMASTERS_LOGISTICS",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/unimasters-logistics-plc"
+                "original_url_field": "https://nsbs.bg/en/unimasters-logistics-plc",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -411,7 +427,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -420,7 +436,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBER_E_LOGISTICS",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/e-logistics-ltd"
+                "original_url_field": "https://nsbs.bg/en/e-logistics-ltd",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -484,7 +504,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -493,7 +513,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBER_PRO_LOGISTICS_SERVICES",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/pro-logistics-services-ltd"
+                "original_url_field": "https://nsbs.bg/en/pro-logistics-services-ltd",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -557,7 +581,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -566,7 +590,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBER_HOLLEMAN_BULGARIA",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/holleman-bulgaria-ltd"
+                "original_url_field": "https://nsbs.bg/en/holleman-bulgaria-ltd",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -630,7 +658,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -639,7 +667,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBER_BULGARIA_TRANS",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/bulgaria-trans-ltd"
+                "original_url_field": "https://nsbs.bg/en/bulgaria-trans-ltd",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -703,7 +735,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -712,7 +744,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBER_TRANSTERRA_LOGISTICS",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.nsbs.bg/en/transterra-logistics-bulgaria-ltd"
+                "original_url_field": "https://www.nsbs.bg/en/transterra-logistics-bulgaria-ltd",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -776,7 +812,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -785,7 +821,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBER_EUROTRANS",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/eurotrans-ltd"
+                "original_url_field": "https://nsbs.bg/en/eurotrans-ltd",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -849,7 +889,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -858,7 +898,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG001_NSBS_MEMBER_ETNA_CARGO_TRANSPORT",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/etna-cargo-transport-ltd"
+                "original_url_field": "https://nsbs.bg/en/etna-cargo-transport-ltd",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -976,7 +1020,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -985,7 +1029,11 @@
                 "source_host": "nsbs.bg",
                 "surface_code": "BG002_NSBS_HOME_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nsbs.bg/en/home"
+                "original_url_field": "https://nsbs.bg/en/home",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1102,7 +1150,7 @@
               "language_fit": "native",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "native_locale_verified",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -1111,7 +1159,11 @@
                 "source_host": "fiata.org",
                 "surface_code": "BG003_FIATA_BG_DIRECTORY_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://fiata.org/directory/bg/"
+                "original_url_field": "https://fiata.org/directory/bg/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1228,7 +1280,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -1237,7 +1289,11 @@
                 "source_host": "www.whoiswho.logistika.bg",
                 "surface_code": "BG004_LOGISTIKA_WHOISWHO_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.whoiswho.logistika.bg/en/index.php"
+                "original_url_field": "https://www.whoiswho.logistika.bg/en/index.php",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1354,7 +1410,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -1363,7 +1419,11 @@
                 "source_host": "www.freightnet.com",
                 "surface_code": "BG005_FREIGHTNET_LOGISTICS_BG_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.freightnet.com/directory/p1/cBG/s99.htm"
+                "original_url_field": "https://www.freightnet.com/directory/p1/cBG/s99.htm",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1480,7 +1540,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -1489,7 +1549,11 @@
                 "source_host": "www.freightnet.com",
                 "surface_code": "BG006_FREIGHTNET_FORWARDERS_BG_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.freightnet.com/directory/p2/cBG/s30.htm"
+                "original_url_field": "https://www.freightnet.com/directory/p2/cBG/s30.htm",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1606,7 +1670,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -1615,7 +1679,11 @@
                 "source_host": "www.investbulgaria.com",
                 "surface_code": "BG007_INVESTBULGARIA_TRANSPORT_LOGISTICS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.investbulgaria.com/Bulgarian-Transportation-and-Logistics-Companies/130"
+                "original_url_field": "https://www.investbulgaria.com/Bulgarian-Transportation-and-Logistics-Companies/130",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1732,7 +1800,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -1741,7 +1809,11 @@
                 "source_host": "railmarket.com",
                 "surface_code": "BG008_RAILMARKET_LOGISTICS_BG_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://railmarket.com/eu/bulgaria/logistics-companies"
+                "original_url_field": "https://railmarket.com/eu/bulgaria/logistics-companies",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1858,7 +1930,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -1867,7 +1939,11 @@
                 "source_host": "www.cargoyellowpages.com",
                 "surface_code": "BG009_CARGOYELLOWPAGES_BG_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cargoyellowpages.com/bulgaria_freight_forwarders_cargo_agents.html"
+                "original_url_field": "https://www.cargoyellowpages.com/bulgaria_freight_forwarders_cargo_agents.html",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1984,7 +2060,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -1993,7 +2069,11 @@
                 "source_host": "overseasprojectcargo.com",
                 "surface_code": "BG010_OPCA_BG_FORWARDERS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/bulgaria-freight-forwarders/"
+                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/bulgaria-freight-forwarders/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2110,7 +2190,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -2119,7 +2199,11 @@
                 "source_host": "ruzave.com",
                 "surface_code": "BG011_RUZAVE_BG_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ruzave.com/bulgaria"
+                "original_url_field": "https://ruzave.com/bulgaria",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2236,7 +2320,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -2245,7 +2329,11 @@
                 "source_host": "bg.kompass.com",
                 "surface_code": "BG012_KOMPASS_BG_TRANSPORT_LOGISTICS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://bg.kompass.com/s/transport-logistics/10/"
+                "original_url_field": "https://bg.kompass.com/s/transport-logistics/10/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2362,7 +2450,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -2371,7 +2459,11 @@
                 "source_host": "www.goodfirms.co",
                 "surface_code": "BG013_GOODFIRMS_BG_LOGISTICS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.goodfirms.co/supply-chain-logistics-companies/bulgaria"
+                "original_url_field": "https://www.goodfirms.co/supply-chain-logistics-companies/bulgaria",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2488,7 +2580,7 @@
               "language_fit": "native",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "native_locale_verified",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -2497,7 +2589,11 @@
                 "source_host": "clutch.co",
                 "surface_code": "BG014_CLUTCH_BG_FREIGHT_FORWARDERS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://clutch.co/bg/logistics/freight-forwarders"
+                "original_url_field": "https://clutch.co/bg/logistics/freight-forwarders",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2614,7 +2710,7 @@
               "language_fit": "native",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "native_locale_verified",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -2623,7 +2719,11 @@
                 "source_host": "clutch.co",
                 "surface_code": "BG015_CLUTCH_BG_SUPPLY_CHAIN_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://clutch.co/bg/logistics/supply-chain-management"
+                "original_url_field": "https://clutch.co/bg/logistics/supply-chain-management",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2740,7 +2840,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -2749,7 +2849,11 @@
                 "source_host": "ensun.io",
                 "surface_code": "BG016_ENSUN_BG_LOGISTICS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ensun.io/search/logistic/bulgaria"
+                "original_url_field": "https://ensun.io/search/logistic/bulgaria",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2866,7 +2970,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_slice_of_global_directory",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -2875,7 +2979,11 @@
                 "source_host": "www.lusha.com",
                 "surface_code": "BG017_LUSHA_BG_TRANSPORT_LOGISTICS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.lusha.com/company-search/transportation-logistics-and-storage/a64fd456c3/bulgaria/199/"
+                "original_url_field": "https://www.lusha.com/company-search/transportation-logistics-and-storage/a64fd456c3/bulgaria/199/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2992,7 +3100,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -3001,7 +3109,11 @@
                 "source_host": "www.clecat.org",
                 "surface_code": "BG018_CLECAT_NSBS_CONTEXT_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.clecat.org/members/full-members"
+                "original_url_field": "https://www.clecat.org/members/full-members",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3118,7 +3230,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -3127,7 +3239,11 @@
                 "source_host": "www.bblf.bg",
                 "surface_code": "BG019_BBLF_TRANSPORT_INDUSTRY_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bblf.bg/en/industries"
+                "original_url_field": "https://www.bblf.bg/en/industries",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3244,7 +3360,7 @@
               "language_fit": "unknown",
               "coverage_fit": "country_primary",
               "locale_review_status": "manual_review_required",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -3253,7 +3369,11 @@
                 "source_host": "www.bcci.bg",
                 "surface_code": "BG020_BCCI_GENERAL_CONTEXT_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bcci.bg/"
+                "original_url_field": "https://www.bcci.bg/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3370,7 +3490,7 @@
               "language_fit": "unknown",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "manual_review_required",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -3379,7 +3499,11 @@
                 "source_host": "gopettrans.com",
                 "surface_code": "BG021_GOPET_TRANS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://gopettrans.com/"
+                "original_url_field": "https://gopettrans.com/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3496,7 +3620,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -3505,7 +3629,11 @@
                 "source_host": "gopettrans.com",
                 "surface_code": "BG022_GOPET_WAREHOUSING_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://gopettrans.com/warehousing-logistics/"
+                "original_url_field": "https://gopettrans.com/warehousing-logistics/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3622,7 +3750,7 @@
               "language_fit": "unknown",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "manual_review_required",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -3631,7 +3759,11 @@
                 "source_host": "gopettrans.com",
                 "surface_code": "BG023_GOPET_CONTACT_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://gopettrans.com/contact/"
+                "original_url_field": "https://gopettrans.com/contact/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3748,7 +3880,7 @@
               "language_fit": "unknown",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "manual_review_required",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -3757,7 +3889,11 @@
                 "source_host": "www.unimasters.com",
                 "surface_code": "BG024_UNIMASTERS_HOME_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.unimasters.com/"
+                "original_url_field": "https://www.unimasters.com/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3874,7 +4010,7 @@
               "language_fit": "unknown",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "manual_review_required",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -3883,7 +4019,11 @@
                 "source_host": "www.unimasters.com",
                 "surface_code": "BG025_UNIMASTERS_CONTACTS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.unimasters.com/page/6/Contacts.html"
+                "original_url_field": "https://www.unimasters.com/page/6/Contacts.html",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4000,7 +4140,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -4009,7 +4149,11 @@
                 "source_host": "www.eurosped.bg",
                 "surface_code": "BG026_EUROSPED_HOME_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.eurosped.bg/en/"
+                "original_url_field": "https://www.eurosped.bg/en/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4126,7 +4270,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -4135,7 +4279,11 @@
                 "source_host": "www.eurosped.bg",
                 "surface_code": "BG027_EUROSPED_BG_TRANSPORT_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.eurosped.bg/en/transport-in-bulgaria/"
+                "original_url_field": "https://www.eurosped.bg/en/transport-in-bulgaria/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4252,7 +4400,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -4261,7 +4409,11 @@
                 "source_host": "www.eurosped.bg",
                 "surface_code": "BG028_EUROSPED_WAREHOUSE_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.eurosped.bg/en/eurolog-warehouse-logistics-4pl/"
+                "original_url_field": "https://www.eurosped.bg/en/eurolog-warehouse-logistics-4pl/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4378,7 +4530,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -4387,7 +4539,11 @@
                 "source_host": "ntz.bg",
                 "surface_code": "BG029_NTZ_HOME_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ntz.bg/en/"
+                "original_url_field": "https://ntz.bg/en/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4504,7 +4660,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -4513,7 +4669,11 @@
                 "source_host": "ntz.bg",
                 "surface_code": "BG030_NTZ_ABOUT_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ntz.bg/en/about-us/"
+                "original_url_field": "https://ntz.bg/en/about-us/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4630,7 +4790,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -4639,7 +4799,11 @@
                 "source_host": "ntz.bg",
                 "surface_code": "BG031_NTZ_CONTACTS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ntz.bg/en/contacts/"
+                "original_url_field": "https://ntz.bg/en/contacts/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4756,7 +4920,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -4765,7 +4929,11 @@
                 "source_host": "www.interlogistica.bg",
                 "surface_code": "BG032_INTERLOGISTICA_ABOUT_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.interlogistica.bg/en/info/about/"
+                "original_url_field": "https://www.interlogistica.bg/en/info/about/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4882,7 +5050,7 @@
               "language_fit": "unknown",
               "coverage_fit": "country_primary",
               "locale_review_status": "manual_review_required",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -4891,7 +5059,11 @@
                 "source_host": "www.wto.bg",
                 "surface_code": "BG033_WTO_BG_HOME_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.wto.bg/"
+                "original_url_field": "https://www.wto.bg/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5008,7 +5180,7 @@
               "language_fit": "unknown",
               "coverage_fit": "country_primary",
               "locale_review_status": "manual_review_required",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -5017,7 +5189,11 @@
                 "source_host": "www.dachser.bg",
                 "surface_code": "BG034_DACHSER_BG_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dachser.bg/"
+                "original_url_field": "https://www.dachser.bg/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5134,7 +5310,7 @@
               "language_fit": "unknown",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "broken_or_blocked",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -5143,7 +5319,11 @@
                 "source_host": "www.bg.dsv.com",
                 "surface_code": "BG035_DSV_BG_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bg.dsv.com/"
+                "original_url_field": "https://www.bg.dsv.com/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5260,7 +5440,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -5269,7 +5449,11 @@
                 "source_host": "www.flexytrans.bg",
                 "surface_code": "BG036_FLEXYTRANS_HOME_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.flexytrans.bg/en/"
+                "original_url_field": "https://www.flexytrans.bg/en/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5386,7 +5570,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -5395,7 +5579,11 @@
                 "source_host": "eu-speed.com",
                 "surface_code": "BG037_EUROSPEED_HOME_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://eu-speed.com/en/"
+                "original_url_field": "https://eu-speed.com/en/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5512,7 +5700,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "country_primary",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -5521,7 +5709,11 @@
                 "source_host": "www.orbit.bg",
                 "surface_code": "BG038_ORBIT_WAREHOUSE_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.orbit.bg/en/service/warehouse-logistics/"
+                "original_url_field": "https://www.orbit.bg/en/service/warehouse-logistics/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5638,7 +5830,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -5647,7 +5839,11 @@
                 "source_host": "bonmarine.com",
                 "surface_code": "BG039_BON_MARINE_FROM_FIATA_NSBS_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://bonmarine.com/en/home/"
+                "original_url_field": "https://bonmarine.com/en/home/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5764,7 +5960,7 @@
               "language_fit": "english_fallback",
               "coverage_fit": "weak_discovery",
               "locale_review_status": "needs_native_alternative_check",
-              "seed_type": "directory_or_official_candidate",
+              "seed_type": "listing_index",
               "priority": 100,
               "max_depth": 1,
               "recrawl_interval": "P7D",
@@ -5773,7 +5969,11 @@
                 "source_host": "despred.com",
                 "surface_code": "BG040_DESPRED_FROM_FIATA_SURFACE_001",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://despred.com/en/home/"
+                "original_url_field": "https://despred.com/en/home/",
+                "original_seed_type": "directory_or_official_candidate",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],

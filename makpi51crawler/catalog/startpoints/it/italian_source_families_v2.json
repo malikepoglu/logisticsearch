@@ -146,7 +146,7 @@
               "quality_status": "A",
               "submitted_url": "https://fiata.org/directory/it/",
               "canonical_url": "https://fiata.org/directory/it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -156,7 +156,11 @@
                 "source_host": "fiata.org",
                 "surface_code": "it_fiata_directory_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://fiata.org/directory/it/"
+                "original_url_field": "https://fiata.org/directory/it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -271,7 +275,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.fedespedi.it/",
               "canonical_url": "https://www.fedespedi.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -281,7 +285,11 @@
                 "source_host": "www.fedespedi.it",
                 "surface_code": "it_fedespedi_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.fedespedi.it/"
+                "original_url_field": "https://www.fedespedi.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -342,7 +350,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.fedespedi.it/fiata-2/",
               "canonical_url": "https://www.fedespedi.it/fiata-2/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -352,7 +360,11 @@
                 "source_host": "www.fedespedi.it",
                 "surface_code": "it_fedespedi_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.fedespedi.it/fiata-2/"
+                "original_url_field": "https://www.fedespedi.it/fiata-2/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -413,7 +425,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.fedespedi.it/category/news/",
               "canonical_url": "https://www.fedespedi.it/category/news/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -423,7 +435,11 @@
                 "source_host": "www.fedespedi.it",
                 "surface_code": "it_fedespedi_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.fedespedi.it/category/news/"
+                "original_url_field": "https://www.fedespedi.it/category/news/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -538,7 +554,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.confetra.com/",
               "canonical_url": "https://www.confetra.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -548,7 +564,11 @@
                 "source_host": "www.confetra.com",
                 "surface_code": "it_confetra_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.confetra.com/"
+                "original_url_field": "https://www.confetra.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -609,7 +629,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.confetra.com/abbreviazioni-comuni-i/",
               "canonical_url": "https://www.confetra.com/abbreviazioni-comuni-i/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -619,7 +639,11 @@
                 "source_host": "www.confetra.com",
                 "surface_code": "it_confetra_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.confetra.com/abbreviazioni-comuni-i/"
+                "original_url_field": "https://www.confetra.com/abbreviazioni-comuni-i/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -680,7 +704,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.confetra.com/category/news/",
               "canonical_url": "https://www.confetra.com/category/news/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -690,7 +714,11 @@
                 "source_host": "www.confetra.com",
                 "surface_code": "it_confetra_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.confetra.com/category/news/"
+                "original_url_field": "https://www.confetra.com/category/news/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -805,7 +833,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.anita.it/",
               "canonical_url": "https://www.anita.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -815,7 +843,11 @@
                 "source_host": "www.anita.it",
                 "surface_code": "it_anita_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.anita.it/"
+                "original_url_field": "https://www.anita.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -876,7 +908,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.anita.it/associazione/",
               "canonical_url": "https://www.anita.it/associazione/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -886,7 +918,11 @@
                 "source_host": "www.anita.it",
                 "surface_code": "it_anita_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.anita.it/associazione/"
+                "original_url_field": "https://www.anita.it/associazione/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1001,7 +1037,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.alboautotrasporto.it/",
               "canonical_url": "https://www.alboautotrasporto.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1011,7 +1047,11 @@
                 "source_host": "www.alboautotrasporto.it",
                 "surface_code": "it_albo_autotrasporto_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.alboautotrasporto.it/"
+                "original_url_field": "https://www.alboautotrasporto.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1072,7 +1112,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.alboautotrasporto.it/web/portale-albo/",
               "canonical_url": "https://www.alboautotrasporto.it/web/portale-albo/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1082,7 +1122,11 @@
                 "source_host": "www.alboautotrasporto.it",
                 "surface_code": "it_albo_autotrasporto_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.alboautotrasporto.it/web/portale-albo/"
+                "original_url_field": "https://www.alboautotrasporto.it/web/portale-albo/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1197,7 +1241,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.assologistica.it/",
               "canonical_url": "https://www.assologistica.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1207,7 +1251,11 @@
                 "source_host": "www.assologistica.it",
                 "surface_code": "it_assologistica_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.assologistica.it/"
+                "original_url_field": "https://www.assologistica.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1268,7 +1316,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.assologistica.it/chi-siamo/",
               "canonical_url": "https://www.assologistica.it/chi-siamo/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1278,7 +1326,11 @@
                 "source_host": "www.assologistica.it",
                 "surface_code": "it_assologistica_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.assologistica.it/chi-siamo/"
+                "original_url_field": "https://www.assologistica.it/chi-siamo/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1393,7 +1445,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.assoporti.it/",
               "canonical_url": "https://www.assoporti.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1403,7 +1455,11 @@
                 "source_host": "www.assoporti.it",
                 "surface_code": "it_assoporti_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.assoporti.it/"
+                "original_url_field": "https://www.assoporti.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1464,7 +1520,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.assoporti.it/it/autorita-di-sistema-portuale/",
               "canonical_url": "https://www.assoporti.it/it/autorita-di-sistema-portuale/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1474,7 +1530,11 @@
                 "source_host": "www.assoporti.it",
                 "surface_code": "it_assoporti_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.assoporti.it/it/autorita-di-sistema-portuale/"
+                "original_url_field": "https://www.assoporti.it/it/autorita-di-sistema-portuale/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1589,7 +1649,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.confitarma.it/",
               "canonical_url": "https://www.confitarma.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1599,7 +1659,11 @@
                 "source_host": "www.confitarma.it",
                 "surface_code": "it_confitarma_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.confitarma.it/"
+                "original_url_field": "https://www.confitarma.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1660,7 +1724,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.confitarma.it/chi-siamo/",
               "canonical_url": "https://www.confitarma.it/chi-siamo/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1670,7 +1734,11 @@
                 "source_host": "www.confitarma.it",
                 "surface_code": "it_confitarma_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.confitarma.it/chi-siamo/"
+                "original_url_field": "https://www.confitarma.it/chi-siamo/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1785,7 +1853,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.federagenti.it/",
               "canonical_url": "https://www.federagenti.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1795,7 +1863,11 @@
                 "source_host": "www.federagenti.it",
                 "surface_code": "it_federagenti_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.federagenti.it/"
+                "original_url_field": "https://www.federagenti.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1856,7 +1928,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.federagenti.it/associazione/",
               "canonical_url": "https://www.federagenti.it/associazione/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1866,7 +1938,11 @@
                 "source_host": "www.federagenti.it",
                 "surface_code": "it_federagenti_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.federagenti.it/associazione/"
+                "original_url_field": "https://www.federagenti.it/associazione/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1981,7 +2057,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.assarmatori.eu/",
               "canonical_url": "https://www.assarmatori.eu/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1991,7 +2067,11 @@
                 "source_host": "www.assarmatori.eu",
                 "surface_code": "it_assarmatori_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.assarmatori.eu/"
+                "original_url_field": "https://www.assarmatori.eu/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2052,7 +2132,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.assarmatori.eu/associazione/",
               "canonical_url": "https://www.assarmatori.eu/associazione/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2062,7 +2142,11 @@
                 "source_host": "www.assarmatori.eu",
                 "surface_code": "it_assarmatori_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.assarmatori.eu/associazione/"
+                "original_url_field": "https://www.assarmatori.eu/associazione/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2177,7 +2261,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.assiterminal.it/",
               "canonical_url": "https://www.assiterminal.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2187,7 +2271,11 @@
                 "source_host": "www.assiterminal.it",
                 "surface_code": "it_assiterminal_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.assiterminal.it/"
+                "original_url_field": "https://www.assiterminal.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2248,7 +2336,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.assiterminal.it/associazione/",
               "canonical_url": "https://www.assiterminal.it/associazione/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2258,7 +2346,11 @@
                 "source_host": "www.assiterminal.it",
                 "surface_code": "it_assiterminal_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.assiterminal.it/associazione/"
+                "original_url_field": "https://www.assiterminal.it/associazione/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2373,7 +2465,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.anama.it/",
               "canonical_url": "https://www.anama.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2383,7 +2475,11 @@
                 "source_host": "www.anama.it",
                 "surface_code": "it_anama_air_cargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.anama.it/"
+                "original_url_field": "https://www.anama.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2444,7 +2540,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.anama.it/chi-siamo/",
               "canonical_url": "https://www.anama.it/chi-siamo/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2454,7 +2550,11 @@
                 "source_host": "www.anama.it",
                 "surface_code": "it_anama_air_cargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.anama.it/chi-siamo/"
+                "original_url_field": "https://www.anama.it/chi-siamo/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2569,7 +2669,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.unioneinterportiriuniti.org/",
               "canonical_url": "https://www.unioneinterportiriuniti.org/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2579,7 +2679,11 @@
                 "source_host": "www.unioneinterportiriuniti.org",
                 "surface_code": "it_unione_interporti_riuniti_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.unioneinterportiriuniti.org/"
+                "original_url_field": "https://www.unioneinterportiriuniti.org/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2640,7 +2744,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.unioneinterportiriuniti.org/en/",
               "canonical_url": "https://www.unioneinterportiriuniti.org/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2650,7 +2754,11 @@
                 "source_host": "www.unioneinterportiriuniti.org",
                 "surface_code": "it_unione_interporti_riuniti_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.unioneinterportiriuniti.org/en/"
+                "original_url_field": "https://www.unioneinterportiriuniti.org/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2765,7 +2873,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.portsofgenoa.com/",
               "canonical_url": "https://www.portsofgenoa.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2775,7 +2883,11 @@
                 "source_host": "www.portsofgenoa.com",
                 "surface_code": "it_ports_genoa_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portsofgenoa.com/"
+                "original_url_field": "https://www.portsofgenoa.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2836,7 +2948,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.portsofgenoa.com/en/",
               "canonical_url": "https://www.portsofgenoa.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2846,7 +2958,11 @@
                 "source_host": "www.portsofgenoa.com",
                 "surface_code": "it_ports_genoa_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portsofgenoa.com/en/"
+                "original_url_field": "https://www.portsofgenoa.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2961,7 +3077,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.porto.trieste.it/",
               "canonical_url": "https://www.porto.trieste.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2971,7 +3087,11 @@
                 "source_host": "www.porto.trieste.it",
                 "surface_code": "it_port_trieste_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.porto.trieste.it/"
+                "original_url_field": "https://www.porto.trieste.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3032,7 +3152,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.porto.trieste.it/eng/",
               "canonical_url": "https://www.porto.trieste.it/eng/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3042,7 +3162,11 @@
                 "source_host": "www.porto.trieste.it",
                 "surface_code": "it_port_trieste_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.porto.trieste.it/eng/"
+                "original_url_field": "https://www.porto.trieste.it/eng/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3157,7 +3281,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.adspmarligureorientale.it/",
               "canonical_url": "https://www.adspmarligureorientale.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3167,7 +3291,11 @@
                 "source_host": "www.adspmarligureorientale.it",
                 "surface_code": "it_port_laspezia_carrara_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adspmarligureorientale.it/"
+                "original_url_field": "https://www.adspmarligureorientale.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3228,7 +3356,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.adspmarligureorientale.it/en/",
               "canonical_url": "https://www.adspmarligureorientale.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3238,7 +3366,11 @@
                 "source_host": "www.adspmarligureorientale.it",
                 "surface_code": "it_port_laspezia_carrara_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adspmarligureorientale.it/en/"
+                "original_url_field": "https://www.adspmarligureorientale.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3353,7 +3485,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.portialtotirreno.it/",
               "canonical_url": "https://www.portialtotirreno.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3363,7 +3495,11 @@
                 "source_host": "www.portialtotirreno.it",
                 "surface_code": "it_port_livorno_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portialtotirreno.it/"
+                "original_url_field": "https://www.portialtotirreno.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3424,7 +3560,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portialtotirreno.it/en/",
               "canonical_url": "https://www.portialtotirreno.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3434,7 +3570,11 @@
                 "source_host": "www.portialtotirreno.it",
                 "surface_code": "it_port_livorno_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portialtotirreno.it/en/"
+                "original_url_field": "https://www.portialtotirreno.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3549,7 +3689,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.port.venice.it/",
               "canonical_url": "https://www.port.venice.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3559,7 +3699,11 @@
                 "source_host": "www.port.venice.it",
                 "surface_code": "it_port_venice_chioggia_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.port.venice.it/"
+                "original_url_field": "https://www.port.venice.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3620,7 +3764,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.port.venice.it/en/",
               "canonical_url": "https://www.port.venice.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3630,7 +3774,11 @@
                 "source_host": "www.port.venice.it",
                 "surface_code": "it_port_venice_chioggia_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.port.venice.it/en/"
+                "original_url_field": "https://www.port.venice.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3745,7 +3893,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.port.ravenna.it/",
               "canonical_url": "https://www.port.ravenna.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3755,7 +3903,11 @@
                 "source_host": "www.port.ravenna.it",
                 "surface_code": "it_port_ravenna_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.port.ravenna.it/"
+                "original_url_field": "https://www.port.ravenna.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3816,7 +3968,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.port.ravenna.it/en/",
               "canonical_url": "https://www.port.ravenna.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3826,7 +3978,11 @@
                 "source_host": "www.port.ravenna.it",
                 "surface_code": "it_port_ravenna_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.port.ravenna.it/en/"
+                "original_url_field": "https://www.port.ravenna.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3941,7 +4097,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.portodigioiatauro.it/",
               "canonical_url": "https://www.portodigioiatauro.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3951,7 +4107,11 @@
                 "source_host": "www.portodigioiatauro.it",
                 "surface_code": "it_port_gioia_tauro_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portodigioiatauro.it/"
+                "original_url_field": "https://www.portodigioiatauro.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4012,7 +4172,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portodigioiatauro.it/en/",
               "canonical_url": "https://www.portodigioiatauro.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4022,7 +4182,11 @@
                 "source_host": "www.portodigioiatauro.it",
                 "surface_code": "it_port_gioia_tauro_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portodigioiatauro.it/en/"
+                "original_url_field": "https://www.portodigioiatauro.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4137,7 +4301,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.porto.napoli.it/",
               "canonical_url": "https://www.porto.napoli.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4147,7 +4311,11 @@
                 "source_host": "www.porto.napoli.it",
                 "surface_code": "it_port_naples_salerno_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.porto.napoli.it/"
+                "original_url_field": "https://www.porto.napoli.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4208,7 +4376,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.porto.napoli.it/en/",
               "canonical_url": "https://www.porto.napoli.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4218,7 +4386,11 @@
                 "source_host": "www.porto.napoli.it",
                 "surface_code": "it_port_naples_salerno_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.porto.napoli.it/en/"
+                "original_url_field": "https://www.porto.napoli.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4333,7 +4505,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.adspmam.it/",
               "canonical_url": "https://www.adspmam.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4343,7 +4515,11 @@
                 "source_host": "www.adspmam.it",
                 "surface_code": "it_port_bari_brindisi_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adspmam.it/"
+                "original_url_field": "https://www.adspmam.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4404,7 +4580,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.adspmam.it/en/",
               "canonical_url": "https://www.adspmam.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4414,7 +4590,11 @@
                 "source_host": "www.adspmam.it",
                 "surface_code": "it_port_bari_brindisi_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adspmam.it/en/"
+                "original_url_field": "https://www.adspmam.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4529,7 +4709,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.portidiroma.it/",
               "canonical_url": "https://www.portidiroma.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4539,7 +4719,11 @@
                 "source_host": "www.portidiroma.it",
                 "surface_code": "it_port_civitavecchia_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portidiroma.it/"
+                "original_url_field": "https://www.portidiroma.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4600,7 +4784,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portidiroma.it/en/",
               "canonical_url": "https://www.portidiroma.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4610,7 +4794,11 @@
                 "source_host": "www.portidiroma.it",
                 "surface_code": "it_port_civitavecchia_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portidiroma.it/en/"
+                "original_url_field": "https://www.portidiroma.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4725,7 +4913,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.port.taranto.it/",
               "canonical_url": "https://www.port.taranto.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4735,7 +4923,11 @@
                 "source_host": "www.port.taranto.it",
                 "surface_code": "it_port_taranto_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.port.taranto.it/"
+                "original_url_field": "https://www.port.taranto.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4796,7 +4988,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.port.taranto.it/en/",
               "canonical_url": "https://www.port.taranto.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4806,7 +4998,11 @@
                 "source_host": "www.port.taranto.it",
                 "surface_code": "it_port_taranto_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.port.taranto.it/en/"
+                "original_url_field": "https://www.port.taranto.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4921,7 +5117,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.porto.ancona.it/",
               "canonical_url": "https://www.porto.ancona.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4931,7 +5127,11 @@
                 "source_host": "www.porto.ancona.it",
                 "surface_code": "it_port_ancona_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.porto.ancona.it/"
+                "original_url_field": "https://www.porto.ancona.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4992,7 +5192,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.porto.ancona.it/en/",
               "canonical_url": "https://www.porto.ancona.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5002,7 +5202,11 @@
                 "source_host": "www.porto.ancona.it",
                 "surface_code": "it_port_ancona_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.porto.ancona.it/en/"
+                "original_url_field": "https://www.porto.ancona.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5117,7 +5321,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.adspmaredisardegna.it/",
               "canonical_url": "https://www.adspmaredisardegna.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5127,7 +5331,11 @@
                 "source_host": "www.adspmaredisardegna.it",
                 "surface_code": "it_port_sardinia_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adspmaredisardegna.it/"
+                "original_url_field": "https://www.adspmaredisardegna.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5188,7 +5396,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.adspmaredisardegna.it/en/",
               "canonical_url": "https://www.adspmaredisardegna.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5198,7 +5406,11 @@
                 "source_host": "www.adspmaredisardegna.it",
                 "surface_code": "it_port_sardinia_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adspmaredisardegna.it/en/"
+                "original_url_field": "https://www.adspmaredisardegna.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5313,7 +5525,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.adsppalermo.it/",
               "canonical_url": "https://www.adsppalermo.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5323,7 +5535,11 @@
                 "source_host": "www.adsppalermo.it",
                 "surface_code": "it_port_western_sicily_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adsppalermo.it/"
+                "original_url_field": "https://www.adsppalermo.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5384,7 +5600,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.adsppalermo.it/en/",
               "canonical_url": "https://www.adsppalermo.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5394,7 +5610,11 @@
                 "source_host": "www.adsppalermo.it",
                 "surface_code": "it_port_western_sicily_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adsppalermo.it/en/"
+                "original_url_field": "https://www.adsppalermo.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5509,7 +5729,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.adspmaresiciliaorientale.it/",
               "canonical_url": "https://www.adspmaresiciliaorientale.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5519,7 +5739,11 @@
                 "source_host": "www.adspmaresiciliaorientale.it",
                 "surface_code": "it_port_eastern_sicily_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adspmaresiciliaorientale.it/"
+                "original_url_field": "https://www.adspmaresiciliaorientale.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5580,7 +5804,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.adspmaresiciliaorientale.it/en/",
               "canonical_url": "https://www.adspmaresiciliaorientale.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5590,7 +5814,11 @@
                 "source_host": "www.adspmaresiciliaorientale.it",
                 "surface_code": "it_port_eastern_sicily_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adspmaresiciliaorientale.it/en/"
+                "original_url_field": "https://www.adspmaresiciliaorientale.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5705,7 +5933,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.milanomalpensacargo.com/en",
               "canonical_url": "https://www.milanomalpensacargo.com/en",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5715,7 +5943,11 @@
                 "source_host": "www.milanomalpensacargo.com",
                 "surface_code": "it_malpensa_cargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.milanomalpensacargo.com/en"
+                "original_url_field": "https://www.milanomalpensacargo.com/en",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5776,7 +6008,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.milanomalpensacargo.com/en/cargo-city",
               "canonical_url": "https://www.milanomalpensacargo.com/en/cargo-city",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5786,7 +6018,11 @@
                 "source_host": "www.milanomalpensacargo.com",
                 "surface_code": "it_malpensa_cargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.milanomalpensacargo.com/en/cargo-city"
+                "original_url_field": "https://www.milanomalpensacargo.com/en/cargo-city",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5847,7 +6083,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.milanomalpensacargo.com/en/flights",
               "canonical_url": "https://www.milanomalpensacargo.com/en/flights",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5857,7 +6093,11 @@
                 "source_host": "www.milanomalpensacargo.com",
                 "surface_code": "it_malpensa_cargo_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.milanomalpensacargo.com/en/flights"
+                "original_url_field": "https://www.milanomalpensacargo.com/en/flights",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5918,7 +6158,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.milanomalpensacargo.com/en/operators",
               "canonical_url": "https://www.milanomalpensacargo.com/en/operators",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5928,7 +6168,11 @@
                 "source_host": "www.milanomalpensacargo.com",
                 "surface_code": "it_malpensa_cargo_surface_04",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.milanomalpensacargo.com/en/operators"
+                "original_url_field": "https://www.milanomalpensacargo.com/en/operators",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6043,7 +6287,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.adr.it/web/aeroporti-di-roma-en/cargo",
               "canonical_url": "https://www.adr.it/web/aeroporti-di-roma-en/cargo",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6053,7 +6297,11 @@
                 "source_host": "www.adr.it",
                 "surface_code": "it_adr_cargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adr.it/web/aeroporti-di-roma-en/cargo"
+                "original_url_field": "https://www.adr.it/web/aeroporti-di-roma-en/cargo",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6114,7 +6362,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.adr.it/web/aeroporti-di-roma-en/business/cargo",
               "canonical_url": "https://www.adr.it/web/aeroporti-di-roma-en/business/cargo",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6124,7 +6372,11 @@
                 "source_host": "www.adr.it",
                 "surface_code": "it_adr_cargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.adr.it/web/aeroporti-di-roma-en/business/cargo"
+                "original_url_field": "https://www.adr.it/web/aeroporti-di-roma-en/business/cargo",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6239,7 +6491,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.bologna-airport.it/en/the-company/business/aviation/cargo/?idC=62405",
               "canonical_url": "https://www.bologna-airport.it/en/the-company/business/aviation/cargo/?idC=62405",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6249,7 +6501,11 @@
                 "source_host": "www.bologna-airport.it",
                 "surface_code": "it_bologna_airport_cargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bologna-airport.it/en/the-company/business/aviation/cargo/?idC=62405"
+                "original_url_field": "https://www.bologna-airport.it/en/the-company/business/aviation/cargo/?idC=62405",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6310,7 +6566,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.bologna-airport.it/it/la-societa/business/aviation/cargo/?idC=62405",
               "canonical_url": "https://www.bologna-airport.it/it/la-societa/business/aviation/cargo/?idC=62405",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6320,7 +6576,11 @@
                 "source_host": "www.bologna-airport.it",
                 "surface_code": "it_bologna_airport_cargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bologna-airport.it/it/la-societa/business/aviation/cargo/?idC=62405"
+                "original_url_field": "https://www.bologna-airport.it/it/la-societa/business/aviation/cargo/?idC=62405",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6381,7 +6641,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.bologna-airport.it/en/",
               "canonical_url": "https://www.bologna-airport.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6391,7 +6651,11 @@
                 "source_host": "www.bologna-airport.it",
                 "surface_code": "it_bologna_airport_cargo_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bologna-airport.it/en/"
+                "original_url_field": "https://www.bologna-airport.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6506,7 +6770,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.veneziaairport.it/en/transport/cargo.html",
               "canonical_url": "https://www.veneziaairport.it/en/transport/cargo.html",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6516,7 +6780,11 @@
                 "source_host": "www.veneziaairport.it",
                 "surface_code": "it_venice_airport_cargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.veneziaairport.it/en/transport/cargo.html"
+                "original_url_field": "https://www.veneziaairport.it/en/transport/cargo.html",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6577,7 +6845,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.veneziaairport.it/",
               "canonical_url": "https://www.veneziaairport.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6587,7 +6855,11 @@
                 "source_host": "www.veneziaairport.it",
                 "surface_code": "it_venice_airport_cargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.veneziaairport.it/"
+                "original_url_field": "https://www.veneziaairport.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6702,7 +6974,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://alhagroup.com/en/",
               "canonical_url": "https://alhagroup.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6712,7 +6984,11 @@
                 "source_host": "alhagroup.com",
                 "surface_code": "it_alha_group_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://alhagroup.com/en/"
+                "original_url_field": "https://alhagroup.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6773,7 +7049,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://alhagroup.com/en/services/",
               "canonical_url": "https://alhagroup.com/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6783,7 +7059,11 @@
                 "source_host": "alhagroup.com",
                 "surface_code": "it_alha_group_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://alhagroup.com/en/services/"
+                "original_url_field": "https://alhagroup.com/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6898,7 +7178,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.aircargoitalia.it/en/",
               "canonical_url": "https://www.aircargoitalia.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6908,7 +7188,11 @@
                 "source_host": "www.aircargoitalia.it",
                 "surface_code": "it_aircargo_italia_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.aircargoitalia.it/en/"
+                "original_url_field": "https://www.aircargoitalia.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6969,7 +7253,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.aircargoitalia.it/en/about-us/",
               "canonical_url": "https://www.aircargoitalia.it/en/about-us/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6979,7 +7263,11 @@
                 "source_host": "www.aircargoitalia.it",
                 "surface_code": "it_aircargo_italia_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.aircargoitalia.it/en/about-us/"
+                "original_url_field": "https://www.aircargoitalia.it/en/about-us/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7094,7 +7382,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.bo.interporto.it/",
               "canonical_url": "https://www.bo.interporto.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7104,7 +7392,11 @@
                 "source_host": "www.bo.interporto.it",
                 "surface_code": "it_interporto_bologna_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bo.interporto.it/"
+                "original_url_field": "https://www.bo.interporto.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7165,7 +7457,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.bo.interporto.it/en/",
               "canonical_url": "https://www.bo.interporto.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7175,7 +7467,11 @@
                 "source_host": "www.bo.interporto.it",
                 "surface_code": "it_interporto_bologna_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bo.interporto.it/en/"
+                "original_url_field": "https://www.bo.interporto.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7290,7 +7586,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.interportopd.it/",
               "canonical_url": "https://www.interportopd.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7300,7 +7596,11 @@
                 "source_host": "www.interportopd.it",
                 "surface_code": "it_interporto_padova_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.interportopd.it/"
+                "original_url_field": "https://www.interportopd.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7361,7 +7661,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.interportopd.it/en/",
               "canonical_url": "https://www.interportopd.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7371,7 +7671,11 @@
                 "source_host": "www.interportopd.it",
                 "surface_code": "it_interporto_padova_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.interportopd.it/en/"
+                "original_url_field": "https://www.interportopd.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7486,7 +7790,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.quadranteeuropa.it/",
               "canonical_url": "https://www.quadranteeuropa.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7496,7 +7800,11 @@
                 "source_host": "www.quadranteeuropa.it",
                 "surface_code": "it_quadrante_europa_verona_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.quadranteeuropa.it/"
+                "original_url_field": "https://www.quadranteeuropa.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7557,7 +7865,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.quadranteeuropa.it/en/",
               "canonical_url": "https://www.quadranteeuropa.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7567,7 +7875,11 @@
                 "source_host": "www.quadranteeuropa.it",
                 "surface_code": "it_quadrante_europa_verona_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.quadranteeuropa.it/en/"
+                "original_url_field": "https://www.quadranteeuropa.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7682,7 +7994,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.cimspa.it/",
               "canonical_url": "https://www.cimspa.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7692,7 +8004,11 @@
                 "source_host": "www.cimspa.it",
                 "surface_code": "it_cim_novara_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cimspa.it/"
+                "original_url_field": "https://www.cimspa.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7753,7 +8069,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.cimspa.it/en/",
               "canonical_url": "https://www.cimspa.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7763,7 +8079,11 @@
                 "source_host": "www.cimspa.it",
                 "surface_code": "it_cim_novara_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cimspa.it/en/"
+                "original_url_field": "https://www.cimspa.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7878,7 +8198,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.interportotoscano.com/",
               "canonical_url": "https://www.interportotoscano.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7888,7 +8208,11 @@
                 "source_host": "www.interportotoscano.com",
                 "surface_code": "it_interporto_toscano_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.interportotoscano.com/"
+                "original_url_field": "https://www.interportotoscano.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7949,7 +8273,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.interportotoscano.com/en/",
               "canonical_url": "https://www.interportotoscano.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7959,7 +8283,11 @@
                 "source_host": "www.interportotoscano.com",
                 "surface_code": "it_interporto_toscano_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.interportotoscano.com/en/"
+                "original_url_field": "https://www.interportotoscano.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -8074,7 +8402,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.interportocampano.it/",
               "canonical_url": "https://www.interportocampano.it/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8084,7 +8412,11 @@
                 "source_host": "www.interportocampano.it",
                 "surface_code": "it_interporto_campano_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.interportocampano.it/"
+                "original_url_field": "https://www.interportocampano.it/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -8145,7 +8477,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.interportocampano.it/en/",
               "canonical_url": "https://www.interportocampano.it/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8155,7 +8487,11 @@
                 "source_host": "www.interportocampano.it",
                 "surface_code": "it_interporto_campano_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.interportocampano.it/en/"
+                "original_url_field": "https://www.interportocampano.it/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],

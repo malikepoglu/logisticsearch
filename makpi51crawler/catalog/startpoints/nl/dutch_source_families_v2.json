@@ -152,7 +152,7 @@
               "quality_status": "A",
               "submitted_url": "https://fiata.org/directory/nl/",
               "canonical_url": "https://fiata.org/directory/nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -162,7 +162,11 @@
                 "source_host": "fiata.org",
                 "surface_code": "nl_fiata_directory_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://fiata.org/directory/nl/"
+                "original_url_field": "https://fiata.org/directory/nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -224,7 +228,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://fiata.org/directory/",
               "canonical_url": "https://fiata.org/directory/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -234,7 +238,11 @@
                 "source_host": "fiata.org",
                 "surface_code": "nl_fiata_directory_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://fiata.org/directory/"
+                "original_url_field": "https://fiata.org/directory/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -351,7 +359,7 @@
               "quality_status": "A",
               "submitted_url": "https://rotterdamtransport.com/membership/fenex-netherlands-association-for-forwarding-logistics/",
               "canonical_url": "https://rotterdamtransport.com/membership/fenex-netherlands-association-for-forwarding-logistics/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -361,7 +369,11 @@
                 "source_host": "rotterdamtransport.com",
                 "surface_code": "nl_fenex_rotterdamtransport_members_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://rotterdamtransport.com/membership/fenex-netherlands-association-for-forwarding-logistics/"
+                "original_url_field": "https://rotterdamtransport.com/membership/fenex-netherlands-association-for-forwarding-logistics/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -423,7 +435,7 @@
               "quality_status": "A",
               "submitted_url": "https://rotterdamtransport.com/companies/",
               "canonical_url": "https://rotterdamtransport.com/companies/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -433,7 +445,11 @@
                 "source_host": "rotterdamtransport.com",
                 "surface_code": "nl_fenex_rotterdamtransport_members_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://rotterdamtransport.com/companies/"
+                "original_url_field": "https://rotterdamtransport.com/companies/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -495,7 +511,7 @@
               "quality_status": "A",
               "submitted_url": "https://rotterdamtransport.com/",
               "canonical_url": "https://rotterdamtransport.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -505,7 +521,11 @@
                 "source_host": "rotterdamtransport.com",
                 "surface_code": "nl_fenex_rotterdamtransport_members_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://rotterdamtransport.com/"
+                "original_url_field": "https://rotterdamtransport.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -622,7 +642,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.portofrotterdam.com/en/logistics",
               "canonical_url": "https://www.portofrotterdam.com/en/logistics",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -632,7 +652,11 @@
                 "source_host": "www.portofrotterdam.com",
                 "surface_code": "nl_port_rotterdam_logistics_index_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portofrotterdam.com/en/logistics"
+                "original_url_field": "https://www.portofrotterdam.com/en/logistics",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -694,7 +718,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.portofrotterdam.com/en/logistics/connections",
               "canonical_url": "https://www.portofrotterdam.com/en/logistics/connections",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -704,7 +728,11 @@
                 "source_host": "www.portofrotterdam.com",
                 "surface_code": "nl_port_rotterdam_logistics_index_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portofrotterdam.com/en/logistics/connections"
+                "original_url_field": "https://www.portofrotterdam.com/en/logistics/connections",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -766,7 +794,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.portofrotterdam.com/en/logistics/storage-and-transhipment/warehousing/warehousing-options-in-the-rotterdam-port-area",
               "canonical_url": "https://www.portofrotterdam.com/en/logistics/storage-and-transhipment/warehousing/warehousing-options-in-the-rotterdam-port-area",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -776,7 +804,11 @@
                 "source_host": "www.portofrotterdam.com",
                 "surface_code": "nl_port_rotterdam_logistics_index_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portofrotterdam.com/en/logistics/storage-and-transhipment/warehousing/warehousing-options-in-the-rotterdam-port-area"
+                "original_url_field": "https://www.portofrotterdam.com/en/logistics/storage-and-transhipment/warehousing/warehousing-options-in-the-rotterdam-port-area",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -893,7 +925,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.transportguiderotterdam.com/companies",
               "canonical_url": "https://www.transportguiderotterdam.com/companies",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -903,7 +935,11 @@
                 "source_host": "www.transportguiderotterdam.com",
                 "surface_code": "nl_transport_guide_rotterdam_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.transportguiderotterdam.com/companies"
+                "original_url_field": "https://www.transportguiderotterdam.com/companies",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -965,7 +1001,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.transportguiderotterdam.com/",
               "canonical_url": "https://www.transportguiderotterdam.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -975,7 +1011,11 @@
                 "source_host": "www.transportguiderotterdam.com",
                 "surface_code": "nl_transport_guide_rotterdam_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.transportguiderotterdam.com/"
+                "original_url_field": "https://www.transportguiderotterdam.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1092,7 +1132,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.northseaport.com/en/business-directory",
               "canonical_url": "https://www.northseaport.com/en/business-directory",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1102,7 +1142,11 @@
                 "source_host": "www.northseaport.com",
                 "surface_code": "nl_north_sea_port_business_directory_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.northseaport.com/en/business-directory"
+                "original_url_field": "https://www.northseaport.com/en/business-directory",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1164,7 +1208,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.northseaport.com/en",
               "canonical_url": "https://www.northseaport.com/en",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1174,7 +1218,11 @@
                 "source_host": "www.northseaport.com",
                 "surface_code": "nl_north_sea_port_business_directory_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.northseaport.com/en"
+                "original_url_field": "https://www.northseaport.com/en",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1236,7 +1284,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.northseaport.com/en/doing-business",
               "canonical_url": "https://www.northseaport.com/en/doing-business",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1246,7 +1294,11 @@
                 "source_host": "www.northseaport.com",
                 "surface_code": "nl_north_sea_port_business_directory_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.northseaport.com/en/doing-business"
+                "original_url_field": "https://www.northseaport.com/en/doing-business",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1363,7 +1415,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.tln.nl/over-tln/about-tln",
               "canonical_url": "https://www.tln.nl/over-tln/about-tln",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1373,7 +1425,11 @@
                 "source_host": "www.tln.nl",
                 "surface_code": "nl_tln_association_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.tln.nl/over-tln/about-tln"
+                "original_url_field": "https://www.tln.nl/over-tln/about-tln",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1435,7 +1491,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.tln.nl/",
               "canonical_url": "https://www.tln.nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1445,7 +1501,11 @@
                 "source_host": "www.tln.nl",
                 "surface_code": "nl_tln_association_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.tln.nl/"
+                "original_url_field": "https://www.tln.nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1562,7 +1622,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.evofenedex.nl/",
               "canonical_url": "https://www.evofenedex.nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1572,7 +1632,11 @@
                 "source_host": "www.evofenedex.nl",
                 "surface_code": "nl_evofenedex_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.evofenedex.nl/"
+                "original_url_field": "https://www.evofenedex.nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1634,7 +1698,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.evofenedex.nl/kennis/logistiek",
               "canonical_url": "https://www.evofenedex.nl/kennis/logistiek",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1644,7 +1708,11 @@
                 "source_host": "www.evofenedex.nl",
                 "surface_code": "nl_evofenedex_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.evofenedex.nl/kennis/logistiek"
+                "original_url_field": "https://www.evofenedex.nl/kennis/logistiek",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1761,7 +1829,7 @@
               "quality_status": "A",
               "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-netherlands/",
               "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-netherlands/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1771,7 +1839,11 @@
                 "source_host": "azfreight.com",
                 "surface_code": "nl_azfreight_forwarders_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://azfreight.com/country-facility/freight-forwarders-in-netherlands/"
+                "original_url_field": "https://azfreight.com/country-facility/freight-forwarders-in-netherlands/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1833,7 +1905,7 @@
               "quality_status": "A",
               "submitted_url": "https://azfreight.com/association/fenex-netherlands-association-for-forwarding-and-logistics/",
               "canonical_url": "https://azfreight.com/association/fenex-netherlands-association-for-forwarding-and-logistics/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1843,7 +1915,11 @@
                 "source_host": "azfreight.com",
                 "surface_code": "nl_azfreight_forwarders_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://azfreight.com/association/fenex-netherlands-association-for-forwarding-and-logistics/"
+                "original_url_field": "https://azfreight.com/association/fenex-netherlands-association-for-forwarding-and-logistics/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1960,7 +2036,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.freightnet.com/directory/p1/cNL/s30.htm",
               "canonical_url": "https://www.freightnet.com/directory/p1/cNL/s30.htm",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1970,7 +2046,11 @@
                 "source_host": "www.freightnet.com",
                 "surface_code": "nl_freightnet_forwarders_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.freightnet.com/directory/p1/cNL/s30.htm"
+                "original_url_field": "https://www.freightnet.com/directory/p1/cNL/s30.htm",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2032,7 +2112,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.freightnet.com/directory/p1/cNL/s11.htm",
               "canonical_url": "https://www.freightnet.com/directory/p1/cNL/s11.htm",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2042,7 +2122,11 @@
                 "source_host": "www.freightnet.com",
                 "surface_code": "nl_freightnet_forwarders_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.freightnet.com/directory/p1/cNL/s11.htm"
+                "original_url_field": "https://www.freightnet.com/directory/p1/cNL/s11.htm",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2159,7 +2243,7 @@
               "quality_status": "A",
               "submitted_url": "https://lb.kompass.com/z/nl/a/shipping-and-forwarding-agents/75780/",
               "canonical_url": "https://lb.kompass.com/z/nl/a/shipping-and-forwarding-agents/75780/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2169,7 +2253,11 @@
                 "source_host": "lb.kompass.com",
                 "surface_code": "nl_kompass_shipping_forwarding_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://lb.kompass.com/z/nl/a/shipping-and-forwarding-agents/75780/"
+                "original_url_field": "https://lb.kompass.com/z/nl/a/shipping-and-forwarding-agents/75780/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2231,7 +2319,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://nl.kompass.com/",
               "canonical_url": "https://nl.kompass.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2241,7 +2329,11 @@
                 "source_host": "lb.kompass.com",
                 "surface_code": "nl_kompass_shipping_forwarding_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nl.kompass.com/"
+                "original_url_field": "https://nl.kompass.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2358,7 +2450,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.portofamsterdam.com/en",
               "canonical_url": "https://www.portofamsterdam.com/en",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2368,7 +2460,11 @@
                 "source_host": "www.portofamsterdam.com",
                 "surface_code": "nl_port_amsterdam_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portofamsterdam.com/en"
+                "original_url_field": "https://www.portofamsterdam.com/en",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2430,7 +2526,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.portofamsterdam.com/en/business",
               "canonical_url": "https://www.portofamsterdam.com/en/business",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2440,7 +2536,11 @@
                 "source_host": "www.portofamsterdam.com",
                 "surface_code": "nl_port_amsterdam_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portofamsterdam.com/en/business"
+                "original_url_field": "https://www.portofamsterdam.com/en/business",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2557,7 +2657,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.groningen-seaports.com/en/",
               "canonical_url": "https://www.groningen-seaports.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2567,7 +2667,11 @@
                 "source_host": "www.groningen-seaports.com",
                 "surface_code": "nl_groningen_seaports_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.groningen-seaports.com/en/"
+                "original_url_field": "https://www.groningen-seaports.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2629,7 +2733,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.groningen-seaports.com/en/ports/",
               "canonical_url": "https://www.groningen-seaports.com/en/ports/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2639,7 +2743,11 @@
                 "source_host": "www.groningen-seaports.com",
                 "surface_code": "nl_groningen_seaports_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.groningen-seaports.com/en/ports/"
+                "original_url_field": "https://www.groningen-seaports.com/en/ports/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2756,7 +2864,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portofmoerdijk.nl/en/",
               "canonical_url": "https://www.portofmoerdijk.nl/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2766,7 +2874,11 @@
                 "source_host": "www.portofmoerdijk.nl",
                 "surface_code": "nl_port_of_moerdijk_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portofmoerdijk.nl/en/"
+                "original_url_field": "https://www.portofmoerdijk.nl/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2828,7 +2940,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portofmoerdijk.nl/en/doing-business/",
               "canonical_url": "https://www.portofmoerdijk.nl/en/doing-business/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2838,7 +2950,11 @@
                 "source_host": "www.portofmoerdijk.nl",
                 "surface_code": "nl_port_of_moerdijk_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portofmoerdijk.nl/en/doing-business/"
+                "original_url_field": "https://www.portofmoerdijk.nl/en/doing-business/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2955,7 +3071,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.schiphol.nl/en/cargo/",
               "canonical_url": "https://www.schiphol.nl/en/cargo/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2965,7 +3081,11 @@
                 "source_host": "www.schiphol.nl",
                 "surface_code": "nl_schiphol_cargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.schiphol.nl/en/cargo/"
+                "original_url_field": "https://www.schiphol.nl/en/cargo/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3027,7 +3147,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.schiphol.nl/en/cargo/schiphols-facilities-and-partners-cargo",
               "canonical_url": "https://www.schiphol.nl/en/cargo/schiphols-facilities-and-partners-cargo",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3037,7 +3157,11 @@
                 "source_host": "www.schiphol.nl",
                 "surface_code": "nl_schiphol_cargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.schiphol.nl/en/cargo/schiphols-facilities-and-partners-cargo"
+                "original_url_field": "https://www.schiphol.nl/en/cargo/schiphols-facilities-and-partners-cargo",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3099,7 +3223,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.schiphol.nl/en/cargo/smart-cargo-mainport-program",
               "canonical_url": "https://www.schiphol.nl/en/cargo/smart-cargo-mainport-program",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3109,7 +3233,11 @@
                 "source_host": "www.schiphol.nl",
                 "surface_code": "nl_schiphol_cargo_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.schiphol.nl/en/cargo/smart-cargo-mainport-program"
+                "original_url_field": "https://www.schiphol.nl/en/cargo/smart-cargo-mainport-program",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3226,7 +3354,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.aircargonetherlands.nl/",
               "canonical_url": "https://www.aircargonetherlands.nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3236,7 +3364,11 @@
                 "source_host": "www.aircargonetherlands.nl",
                 "surface_code": "nl_air_cargo_netherlands_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.aircargonetherlands.nl/"
+                "original_url_field": "https://www.aircargonetherlands.nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3298,7 +3430,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.aircargonetherlands.nl/en/",
               "canonical_url": "https://www.aircargonetherlands.nl/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3308,7 +3440,11 @@
                 "source_host": "www.aircargonetherlands.nl",
                 "surface_code": "nl_air_cargo_netherlands_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.aircargonetherlands.nl/en/"
+                "original_url_field": "https://www.aircargonetherlands.nl/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3425,7 +3561,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.deltalinqs.nl/",
               "canonical_url": "https://www.deltalinqs.nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3435,7 +3571,11 @@
                 "source_host": "www.deltalinqs.nl",
                 "surface_code": "nl_deltalinqs_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.deltalinqs.nl/"
+                "original_url_field": "https://www.deltalinqs.nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3497,7 +3637,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.deltalinqs.nl/en/",
               "canonical_url": "https://www.deltalinqs.nl/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3507,7 +3647,11 @@
                 "source_host": "www.deltalinqs.nl",
                 "surface_code": "nl_deltalinqs_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.deltalinqs.nl/en/"
+                "original_url_field": "https://www.deltalinqs.nl/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3624,7 +3768,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.dutchfreshport.eu/",
               "canonical_url": "https://www.dutchfreshport.eu/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3634,7 +3778,11 @@
                 "source_host": "www.dutchfreshport.eu",
                 "surface_code": "nl_dutch_fresh_port_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dutchfreshport.eu/"
+                "original_url_field": "https://www.dutchfreshport.eu/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3696,7 +3844,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.dutchfreshport.eu/en/",
               "canonical_url": "https://www.dutchfreshport.eu/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3706,7 +3854,11 @@
                 "source_host": "www.dutchfreshport.eu",
                 "surface_code": "nl_dutch_fresh_port_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dutchfreshport.eu/en/"
+                "original_url_field": "https://www.dutchfreshport.eu/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3823,7 +3975,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.logisticsinsight.nl/",
               "canonical_url": "https://www.logisticsinsight.nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3833,7 +3985,11 @@
                 "source_host": "www.logisticsinsight.nl",
                 "surface_code": "nl_venlo_logistics_hotspot_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.logisticsinsight.nl/"
+                "original_url_field": "https://www.logisticsinsight.nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3895,7 +4051,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.logisticsinsight.nl/en/",
               "canonical_url": "https://www.logisticsinsight.nl/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3905,7 +4061,11 @@
                 "source_host": "www.logisticsinsight.nl",
                 "surface_code": "nl_venlo_logistics_hotspot_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.logisticsinsight.nl/en/"
+                "original_url_field": "https://www.logisticsinsight.nl/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4022,7 +4182,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.prorail.nl/",
               "canonical_url": "https://www.prorail.nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4032,7 +4192,11 @@
                 "source_host": "www.prorail.nl",
                 "surface_code": "nl_prorail_freight_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.prorail.nl/"
+                "original_url_field": "https://www.prorail.nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4094,7 +4258,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.prorail.nl/over-prorail/vervoer/goederenvervoer",
               "canonical_url": "https://www.prorail.nl/over-prorail/vervoer/goederenvervoer",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4104,7 +4268,11 @@
                 "source_host": "www.prorail.nl",
                 "surface_code": "nl_prorail_freight_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.prorail.nl/over-prorail/vervoer/goederenvervoer"
+                "original_url_field": "https://www.prorail.nl/over-prorail/vervoer/goederenvervoer",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4221,7 +4389,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.railcargo.nl/",
               "canonical_url": "https://www.railcargo.nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4231,7 +4399,11 @@
                 "source_host": "www.railcargo.nl",
                 "surface_code": "nl_railcargo_information_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.railcargo.nl/"
+                "original_url_field": "https://www.railcargo.nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4293,7 +4465,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.railcargo.nl/english/",
               "canonical_url": "https://www.railcargo.nl/english/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4303,7 +4475,11 @@
                 "source_host": "www.railcargo.nl",
                 "surface_code": "nl_railcargo_information_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.railcargo.nl/english/"
+                "original_url_field": "https://www.railcargo.nl/english/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4420,7 +4596,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://nl.kuehne-nagel.com/en/",
               "canonical_url": "https://nl.kuehne-nagel.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4430,7 +4606,11 @@
                 "source_host": "nl.kuehne-nagel.com",
                 "surface_code": "nl_kuehne_nagel_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nl.kuehne-nagel.com/en/"
+                "original_url_field": "https://nl.kuehne-nagel.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4492,7 +4672,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://nl.kuehne-nagel.com/en/-/services",
               "canonical_url": "https://nl.kuehne-nagel.com/en/-/services",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4502,7 +4682,11 @@
                 "source_host": "nl.kuehne-nagel.com",
                 "surface_code": "nl_kuehne_nagel_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://nl.kuehne-nagel.com/en/-/services"
+                "original_url_field": "https://nl.kuehne-nagel.com/en/-/services",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4619,7 +4803,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.dbschenker.com/nl-en",
               "canonical_url": "https://www.dbschenker.com/nl-en",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4629,7 +4813,11 @@
                 "source_host": "www.dbschenker.com",
                 "surface_code": "nl_dbschenker_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dbschenker.com/nl-en"
+                "original_url_field": "https://www.dbschenker.com/nl-en",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4691,7 +4879,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.dbschenker.com/nl-en/products",
               "canonical_url": "https://www.dbschenker.com/nl-en/products",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4701,7 +4889,11 @@
                 "source_host": "www.dbschenker.com",
                 "surface_code": "nl_dbschenker_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dbschenker.com/nl-en/products"
+                "original_url_field": "https://www.dbschenker.com/nl-en/products",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4818,7 +5010,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding.html",
               "canonical_url": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding.html",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4828,7 +5020,11 @@
                 "source_host": "www.dhl.com",
                 "surface_code": "nl_dhl_global_forwarding_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding.html"
+                "original_url_field": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding.html",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4890,7 +5086,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding/freight-forwarding.html",
               "canonical_url": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding/freight-forwarding.html",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4900,7 +5096,11 @@
                 "source_host": "www.dhl.com",
                 "surface_code": "nl_dhl_global_forwarding_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding/freight-forwarding.html"
+                "original_url_field": "https://www.dhl.com/nl-en/home/our-divisions/global-forwarding/freight-forwarding.html",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5017,7 +5217,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.dsv.com/en-nl",
               "canonical_url": "https://www.dsv.com/en-nl",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5027,7 +5227,11 @@
                 "source_host": "www.dsv.com",
                 "surface_code": "nl_dsv_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dsv.com/en-nl"
+                "original_url_field": "https://www.dsv.com/en-nl",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5089,7 +5293,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.dsv.com/en-nl/our-solutions",
               "canonical_url": "https://www.dsv.com/en-nl/our-solutions",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5099,7 +5303,11 @@
                 "source_host": "www.dsv.com",
                 "surface_code": "nl_dsv_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dsv.com/en-nl/our-solutions"
+                "original_url_field": "https://www.dsv.com/en-nl/our-solutions",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5216,7 +5424,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.cevalogistics.com/en/where-we-are/europe/netherlands",
               "canonical_url": "https://www.cevalogistics.com/en/where-we-are/europe/netherlands",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5226,7 +5434,11 @@
                 "source_host": "www.cevalogistics.com",
                 "surface_code": "nl_ceva_logistics_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cevalogistics.com/en/where-we-are/europe/netherlands"
+                "original_url_field": "https://www.cevalogistics.com/en/where-we-are/europe/netherlands",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5288,7 +5500,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.cevalogistics.com/en/our-services",
               "canonical_url": "https://www.cevalogistics.com/en/our-services",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5298,7 +5510,11 @@
                 "source_host": "www.cevalogistics.com",
                 "surface_code": "nl_ceva_logistics_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cevalogistics.com/en/our-services"
+                "original_url_field": "https://www.cevalogistics.com/en/our-services",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5415,7 +5631,7 @@
               "quality_status": "A",
               "submitted_url": "https://geodis.com/nl/en",
               "canonical_url": "https://geodis.com/nl/en",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5425,7 +5641,11 @@
                 "source_host": "geodis.com",
                 "surface_code": "nl_geodis_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://geodis.com/nl/en"
+                "original_url_field": "https://geodis.com/nl/en",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5487,7 +5707,7 @@
               "quality_status": "A",
               "submitted_url": "https://geodis.com/nl/en/services",
               "canonical_url": "https://geodis.com/nl/en/services",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5497,7 +5717,11 @@
                 "source_host": "geodis.com",
                 "surface_code": "nl_geodis_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://geodis.com/nl/en/services"
+                "original_url_field": "https://geodis.com/nl/en/services",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5614,7 +5838,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.mainfreight.com/netherlands/en-nz",
               "canonical_url": "https://www.mainfreight.com/netherlands/en-nz",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5624,7 +5848,11 @@
                 "source_host": "www.mainfreight.com",
                 "surface_code": "nl_mainfreight_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.mainfreight.com/netherlands/en-nz"
+                "original_url_field": "https://www.mainfreight.com/netherlands/en-nz",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5686,7 +5914,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.mainfreight.com/netherlands/en-nz/services",
               "canonical_url": "https://www.mainfreight.com/netherlands/en-nz/services",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5696,7 +5924,11 @@
                 "source_host": "www.mainfreight.com",
                 "surface_code": "nl_mainfreight_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.mainfreight.com/netherlands/en-nz/services"
+                "original_url_field": "https://www.mainfreight.com/netherlands/en-nz/services",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5813,7 +6045,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.rhenus.group/nl/en/",
               "canonical_url": "https://www.rhenus.group/nl/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5823,7 +6055,11 @@
                 "source_host": "www.rhenus.group",
                 "surface_code": "nl_rhenus_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.rhenus.group/nl/en/"
+                "original_url_field": "https://www.rhenus.group/nl/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5885,7 +6121,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.rhenus.group/nl/en/services/",
               "canonical_url": "https://www.rhenus.group/nl/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5895,7 +6131,11 @@
                 "source_host": "www.rhenus.group",
                 "surface_code": "nl_rhenus_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.rhenus.group/nl/en/services/"
+                "original_url_field": "https://www.rhenus.group/nl/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6012,7 +6252,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.nipponexpress.com/nl/",
               "canonical_url": "https://www.nipponexpress.com/nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6022,7 +6262,11 @@
                 "source_host": "www.nipponexpress.com",
                 "surface_code": "nl_nippon_express_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.nipponexpress.com/nl/"
+                "original_url_field": "https://www.nipponexpress.com/nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6084,7 +6328,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.nipponexpress.com/nl/services/",
               "canonical_url": "https://www.nipponexpress.com/nl/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6094,7 +6338,11 @@
                 "source_host": "www.nipponexpress.com",
                 "surface_code": "nl_nippon_express_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.nipponexpress.com/nl/services/"
+                "original_url_field": "https://www.nipponexpress.com/nl/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6211,7 +6459,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.bollore-logistics.com/en/country/netherlands/",
               "canonical_url": "https://www.bollore-logistics.com/en/country/netherlands/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6221,7 +6469,11 @@
                 "source_host": "www.bollore-logistics.com",
                 "surface_code": "nl_bollore_logistics_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bollore-logistics.com/en/country/netherlands/"
+                "original_url_field": "https://www.bollore-logistics.com/en/country/netherlands/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6283,7 +6535,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.bollore-logistics.com/en/services/",
               "canonical_url": "https://www.bollore-logistics.com/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6293,7 +6545,11 @@
                 "source_host": "www.bollore-logistics.com",
                 "surface_code": "nl_bollore_logistics_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bollore-logistics.com/en/services/"
+                "original_url_field": "https://www.bollore-logistics.com/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6410,7 +6666,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.bleckmann.com/",
               "canonical_url": "https://www.bleckmann.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6420,7 +6676,11 @@
                 "source_host": "www.bleckmann.com",
                 "surface_code": "nl_bleckmann_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bleckmann.com/"
+                "original_url_field": "https://www.bleckmann.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6482,7 +6742,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.bleckmann.com/solutions/",
               "canonical_url": "https://www.bleckmann.com/solutions/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6492,7 +6752,11 @@
                 "source_host": "www.bleckmann.com",
                 "surface_code": "nl_bleckmann_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.bleckmann.com/solutions/"
+                "original_url_field": "https://www.bleckmann.com/solutions/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6609,7 +6873,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.broekmanlogistics.com/",
               "canonical_url": "https://www.broekmanlogistics.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6619,7 +6883,11 @@
                 "source_host": "www.broekmanlogistics.com",
                 "surface_code": "nl_broekman_logistics_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.broekmanlogistics.com/"
+                "original_url_field": "https://www.broekmanlogistics.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6681,7 +6949,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.broekmanlogistics.com/services/",
               "canonical_url": "https://www.broekmanlogistics.com/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6691,7 +6959,11 @@
                 "source_host": "www.broekmanlogistics.com",
                 "surface_code": "nl_broekman_logistics_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.broekmanlogistics.com/services/"
+                "original_url_field": "https://www.broekmanlogistics.com/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6808,7 +7080,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.hartmanexpeditie.nl/",
               "canonical_url": "https://www.hartmanexpeditie.nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6818,7 +7090,11 @@
                 "source_host": "www.hartmanexpeditie.nl",
                 "surface_code": "nl_hartman_expedition_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.hartmanexpeditie.nl/"
+                "original_url_field": "https://www.hartmanexpeditie.nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6880,7 +7156,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.hartmanexpeditie.nl/en/",
               "canonical_url": "https://www.hartmanexpeditie.nl/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6890,7 +7166,11 @@
                 "source_host": "www.hartmanexpeditie.nl",
                 "surface_code": "nl_hartman_expedition_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.hartmanexpeditie.nl/en/"
+                "original_url_field": "https://www.hartmanexpeditie.nl/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7007,7 +7287,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.rotra.eu/",
               "canonical_url": "https://www.rotra.eu/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7017,7 +7297,11 @@
                 "source_host": "www.rotra.eu",
                 "surface_code": "nl_rotra_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.rotra.eu/"
+                "original_url_field": "https://www.rotra.eu/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7079,7 +7363,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.rotra.eu/en/",
               "canonical_url": "https://www.rotra.eu/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7089,7 +7373,11 @@
                 "source_host": "www.rotra.eu",
                 "surface_code": "nl_rotra_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.rotra.eu/en/"
+                "original_url_field": "https://www.rotra.eu/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7206,7 +7494,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.neelevat.com/",
               "canonical_url": "https://www.neelevat.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7216,7 +7504,11 @@
                 "source_host": "www.neelevat.com",
                 "surface_code": "nl_neele_vat_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.neelevat.com/"
+                "original_url_field": "https://www.neelevat.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7278,7 +7570,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.neelevat.com/en/",
               "canonical_url": "https://www.neelevat.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7288,7 +7580,11 @@
                 "source_host": "www.neelevat.com",
                 "surface_code": "nl_neele_vat_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.neelevat.com/en/"
+                "original_url_field": "https://www.neelevat.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7405,7 +7701,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.djmiddelkoop.nl/",
               "canonical_url": "https://www.djmiddelkoop.nl/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7415,7 +7711,11 @@
                 "source_host": "www.djmiddelkoop.nl",
                 "surface_code": "nl_dj_middelkoop_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.djmiddelkoop.nl/"
+                "original_url_field": "https://www.djmiddelkoop.nl/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7477,7 +7777,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.djmiddelkoop.nl/en/",
               "canonical_url": "https://www.djmiddelkoop.nl/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7487,7 +7787,11 @@
                 "source_host": "www.djmiddelkoop.nl",
                 "surface_code": "nl_dj_middelkoop_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.djmiddelkoop.nl/en/"
+                "original_url_field": "https://www.djmiddelkoop.nl/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7604,7 +7908,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.vanderhelm.com/",
               "canonical_url": "https://www.vanderhelm.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7614,7 +7918,11 @@
                 "source_host": "www.vanderhelm.com",
                 "surface_code": "nl_van_der_helm_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.vanderhelm.com/"
+                "original_url_field": "https://www.vanderhelm.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7676,7 +7984,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.vanderhelm.com/en/",
               "canonical_url": "https://www.vanderhelm.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7686,7 +7994,11 @@
                 "source_host": "www.vanderhelm.com",
                 "surface_code": "nl_van_der_helm_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.vanderhelm.com/en/"
+                "original_url_field": "https://www.vanderhelm.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7803,7 +8115,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.jordex.com/",
               "canonical_url": "https://www.jordex.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7813,7 +8125,11 @@
                 "source_host": "www.jordex.com",
                 "surface_code": "nl_jordex_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.jordex.com/"
+                "original_url_field": "https://www.jordex.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7875,7 +8191,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.jordex.com/en/",
               "canonical_url": "https://www.jordex.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7885,7 +8201,11 @@
                 "source_host": "www.jordex.com",
                 "surface_code": "nl_jordex_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.jordex.com/en/"
+                "original_url_field": "https://www.jordex.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -8002,7 +8322,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.hoyer-group.com/en/",
               "canonical_url": "https://www.hoyer-group.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8012,7 +8332,11 @@
                 "source_host": "www.hoyer-group.com",
                 "surface_code": "nl_hoyer_netherlands_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.hoyer-group.com/en/"
+                "original_url_field": "https://www.hoyer-group.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -8074,7 +8398,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.hoyer-group.com/en/services/",
               "canonical_url": "https://www.hoyer-group.com/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8084,7 +8408,11 @@
                 "source_host": "www.hoyer-group.com",
                 "surface_code": "nl_hoyer_netherlands_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.hoyer-group.com/en/services/"
+                "original_url_field": "https://www.hoyer-group.com/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -8201,7 +8529,7 @@
               "quality_status": "A",
               "submitted_url": "https://clutch.co/nl/logistics/freight-forwarders",
               "canonical_url": "https://clutch.co/nl/logistics/freight-forwarders",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8211,7 +8539,11 @@
                 "source_host": "clutch.co",
                 "surface_code": "nl_clutch_forwarders_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://clutch.co/nl/logistics/freight-forwarders"
+                "original_url_field": "https://clutch.co/nl/logistics/freight-forwarders",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -8273,7 +8605,7 @@
               "quality_status": "A",
               "submitted_url": "https://clutch.co/nl/logistics",
               "canonical_url": "https://clutch.co/nl/logistics",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8283,7 +8615,11 @@
                 "source_host": "clutch.co",
                 "surface_code": "nl_clutch_forwarders_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://clutch.co/nl/logistics"
+                "original_url_field": "https://clutch.co/nl/logistics",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],

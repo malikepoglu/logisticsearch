@@ -156,7 +156,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.synddel.gr/en/synddel/history-of-synddel",
               "canonical_url": "https://www.synddel.gr/en/synddel/history-of-synddel",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -166,7 +166,11 @@
                 "source_host": "www.synddel.gr",
                 "surface_code": "el_iffagl_association_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.synddel.gr/en/synddel/history-of-synddel"
+                "original_url_field": "https://www.synddel.gr/en/synddel/history-of-synddel",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -231,7 +235,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.synddel.gr/en/contact",
               "canonical_url": "https://www.synddel.gr/en/contact",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -241,7 +245,11 @@
                 "source_host": "www.synddel.gr",
                 "surface_code": "el_iffagl_association_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.synddel.gr/en/contact"
+                "original_url_field": "https://www.synddel.gr/en/contact",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -372,7 +380,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://fiata.org/directory/gr/",
               "canonical_url": "https://fiata.org/directory/gr/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -382,7 +390,11 @@
                 "source_host": "fiata.org",
                 "surface_code": "el_fiata_greece_member_directory_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://fiata.org/directory/gr/"
+                "original_url_field": "https://fiata.org/directory/gr/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -447,7 +459,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://fiata.org/directory/",
               "canonical_url": "https://fiata.org/directory/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -457,7 +469,11 @@
                 "source_host": "fiata.org",
                 "surface_code": "el_fiata_greece_member_directory_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://fiata.org/directory/"
+                "original_url_field": "https://fiata.org/directory/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -589,7 +605,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/L/Logistics-Freight-Forwarding-and-Storage/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/L/Logistics-Freight-Forwarding-and-Storage/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -599,7 +615,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_logistics_directory_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/L/Logistics-Freight-Forwarding-and-Storage/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/L/Logistics-Freight-Forwarding-and-Storage/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -664,7 +684,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/L/Logistics-Freight-Forwarding-and-Storage/Attica/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/L/Logistics-Freight-Forwarding-and-Storage/Attica/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -674,7 +694,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_logistics_directory_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/L/Logistics-Freight-Forwarding-and-Storage/Attica/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/L/Logistics-Freight-Forwarding-and-Storage/Attica/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -805,7 +829,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/I/International-Transport/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/I/International-Transport/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -815,7 +839,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_international_transport_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/I/International-Transport/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/I/International-Transport/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -880,7 +908,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/I/International-Transport/Attica/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/I/International-Transport/Attica/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -890,7 +918,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_international_transport_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/I/International-Transport/Attica/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/I/International-Transport/Attica/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1021,7 +1053,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.freightnet.com/directory/p1/cGR/s30.htm",
               "canonical_url": "https://www.freightnet.com/directory/p1/cGR/s30.htm",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1031,7 +1063,11 @@
                 "source_host": "www.freightnet.com",
                 "surface_code": "el_freightnet_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.freightnet.com/directory/p1/cGR/s30.htm"
+                "original_url_field": "https://www.freightnet.com/directory/p1/cGR/s30.htm",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1096,7 +1132,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.freightnet.com/directory/p1/cGR/s99.htm",
               "canonical_url": "https://www.freightnet.com/directory/p1/cGR/s99.htm",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1106,7 +1142,11 @@
                 "source_host": "www.freightnet.com",
                 "surface_code": "el_freightnet_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.freightnet.com/directory/p1/cGR/s99.htm"
+                "original_url_field": "https://www.freightnet.com/directory/p1/cGR/s99.htm",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1237,7 +1277,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.cargoyellowpages.com/greece_freight_forwarders_cargo_agents.html",
               "canonical_url": "https://www.cargoyellowpages.com/greece_freight_forwarders_cargo_agents.html",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1247,7 +1287,11 @@
                 "source_host": "www.cargoyellowpages.com",
                 "surface_code": "el_cargoyellowpages_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cargoyellowpages.com/greece_freight_forwarders_cargo_agents.html"
+                "original_url_field": "https://www.cargoyellowpages.com/greece_freight_forwarders_cargo_agents.html",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1312,7 +1356,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.cargoyellowpages.com/en/greece/athens/",
               "canonical_url": "https://www.cargoyellowpages.com/en/greece/athens/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1322,7 +1366,11 @@
                 "source_host": "www.cargoyellowpages.com",
                 "surface_code": "el_cargoyellowpages_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cargoyellowpages.com/en/greece/athens/"
+                "original_url_field": "https://www.cargoyellowpages.com/en/greece/athens/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1453,7 +1501,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-greece/",
               "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-greece/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1463,7 +1511,11 @@
                 "source_host": "azfreight.com",
                 "surface_code": "el_azfreight_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://azfreight.com/country-facility/freight-forwarders-in-greece/"
+                "original_url_field": "https://azfreight.com/country-facility/freight-forwarders-in-greece/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1528,7 +1580,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://azfreight.com/countries/",
               "canonical_url": "https://azfreight.com/countries/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1538,7 +1590,11 @@
                 "source_host": "azfreight.com",
                 "surface_code": "el_azfreight_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://azfreight.com/countries/"
+                "original_url_field": "https://azfreight.com/countries/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1669,7 +1725,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://gr.kompass.com/z/gr/s/transport-logistics/10/",
               "canonical_url": "https://gr.kompass.com/z/gr/s/transport-logistics/10/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1679,7 +1735,11 @@
                 "source_host": "gr.kompass.com",
                 "surface_code": "el_kompass_transport_logistics_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://gr.kompass.com/z/gr/s/transport-logistics/10/"
+                "original_url_field": "https://gr.kompass.com/z/gr/s/transport-logistics/10/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1744,7 +1804,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://gr.kompass.com/a/shipping-and-forwarding-agents/75780/",
               "canonical_url": "https://gr.kompass.com/a/shipping-and-forwarding-agents/75780/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1754,7 +1814,11 @@
                 "source_host": "gr.kompass.com",
                 "surface_code": "el_kompass_transport_logistics_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://gr.kompass.com/a/shipping-and-forwarding-agents/75780/"
+                "original_url_field": "https://gr.kompass.com/a/shipping-and-forwarding-agents/75780/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1885,7 +1949,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://gr.kompass.com/a/warehouses-and-storage-sites/75880/",
               "canonical_url": "https://gr.kompass.com/a/warehouses-and-storage-sites/75880/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1895,7 +1959,11 @@
                 "source_host": "gr.kompass.com",
                 "surface_code": "el_kompass_warehousing_customs_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://gr.kompass.com/a/warehouses-and-storage-sites/75880/"
+                "original_url_field": "https://gr.kompass.com/a/warehouses-and-storage-sites/75880/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1960,7 +2028,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://gr.kompass.com/a/logistics-and-procurement-services/75940/",
               "canonical_url": "https://gr.kompass.com/a/logistics-and-procurement-services/75940/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1970,7 +2038,11 @@
                 "source_host": "gr.kompass.com",
                 "surface_code": "el_kompass_warehousing_customs_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://gr.kompass.com/a/logistics-and-procurement-services/75940/"
+                "original_url_field": "https://gr.kompass.com/a/logistics-and-procurement-services/75940/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2101,7 +2173,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://ruzave.com/greece/",
               "canonical_url": "https://ruzave.com/greece/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2111,7 +2183,11 @@
                 "source_host": "ruzave.com",
                 "surface_code": "el_ruzave_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ruzave.com/greece/"
+                "original_url_field": "https://ruzave.com/greece/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2176,7 +2252,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://ruzave.com/greece/top-warehouse-companies/",
               "canonical_url": "https://ruzave.com/greece/top-warehouse-companies/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2186,7 +2262,11 @@
                 "source_host": "ruzave.com",
                 "surface_code": "el_ruzave_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ruzave.com/greece/top-warehouse-companies/"
+                "original_url_field": "https://ruzave.com/greece/top-warehouse-companies/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2317,7 +2397,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/greece-freight-forwarders/",
               "canonical_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/greece-freight-forwarders/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2327,7 +2407,11 @@
                 "source_host": "overseasprojectcargo.com",
                 "surface_code": "el_opca_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/greece-freight-forwarders/"
+                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/greece-freight-forwarders/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2392,7 +2476,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/",
               "canonical_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2402,7 +2486,11 @@
                 "source_host": "overseasprojectcargo.com",
                 "surface_code": "el_opca_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/"
+                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2533,7 +2621,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/greece",
               "canonical_url": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/greece",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2543,7 +2631,11 @@
                 "source_host": "www.goodfirms.co",
                 "surface_code": "el_goodfirms_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/greece"
+                "original_url_field": "https://www.goodfirms.co/supply-chain-logistics-companies/freight-forwarding/greece",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2608,7 +2700,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.goodfirms.co/supply-chain-logistics-companies/greece",
               "canonical_url": "https://www.goodfirms.co/supply-chain-logistics-companies/greece",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2618,7 +2710,11 @@
                 "source_host": "www.goodfirms.co",
                 "surface_code": "el_goodfirms_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.goodfirms.co/supply-chain-logistics-companies/greece"
+                "original_url_field": "https://www.goodfirms.co/supply-chain-logistics-companies/greece",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2749,7 +2845,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://forwardingcompanies.com/in/greece",
               "canonical_url": "https://forwardingcompanies.com/in/greece",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2759,7 +2855,11 @@
                 "source_host": "forwardingcompanies.com",
                 "surface_code": "el_forwardingcompanies_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://forwardingcompanies.com/in/greece"
+                "original_url_field": "https://forwardingcompanies.com/in/greece",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2824,7 +2924,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://forwardingcompanies.com/",
               "canonical_url": "https://forwardingcompanies.com/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2834,7 +2934,11 @@
                 "source_host": "forwardingcompanies.com",
                 "surface_code": "el_forwardingcompanies_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://forwardingcompanies.com/"
+                "original_url_field": "https://forwardingcompanies.com/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2965,7 +3069,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://ffcdirectory.com/region/greece/",
               "canonical_url": "https://ffcdirectory.com/region/greece/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2975,7 +3079,11 @@
                 "source_host": "ffcdirectory.com",
                 "surface_code": "el_ffc_directory_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ffcdirectory.com/region/greece/"
+                "original_url_field": "https://ffcdirectory.com/region/greece/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3040,7 +3148,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://ffcdirectory.com/region/greece/page/2/",
               "canonical_url": "https://ffcdirectory.com/region/greece/page/2/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3050,7 +3158,11 @@
                 "source_host": "ffcdirectory.com",
                 "surface_code": "el_ffc_directory_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ffcdirectory.com/region/greece/page/2/"
+                "original_url_field": "https://ffcdirectory.com/region/greece/page/2/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3181,7 +3293,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.df-alliance.com/freight-forwarder/greece",
               "canonical_url": "https://www.df-alliance.com/freight-forwarder/greece",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3191,7 +3303,11 @@
                 "source_host": "www.df-alliance.com",
                 "surface_code": "el_df_alliance_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.df-alliance.com/freight-forwarder/greece"
+                "original_url_field": "https://www.df-alliance.com/freight-forwarder/greece",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3256,7 +3372,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.df-alliance.com/freight-forwarder",
               "canonical_url": "https://www.df-alliance.com/freight-forwarder",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3266,7 +3382,11 @@
                 "source_host": "www.df-alliance.com",
                 "surface_code": "el_df_alliance_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.df-alliance.com/freight-forwarder"
+                "original_url_field": "https://www.df-alliance.com/freight-forwarder",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3397,7 +3517,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://m.jctrans.com/en/company/listc/Greece/0-0",
               "canonical_url": "https://m.jctrans.com/en/company/listc/Greece/0-0",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3407,7 +3527,11 @@
                 "source_host": "www.jctrans.com",
                 "surface_code": "el_jctrans_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://m.jctrans.com/en/company/listc/Greece/0-0"
+                "original_url_field": "https://m.jctrans.com/en/company/listc/Greece/0-0",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3472,7 +3596,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.jctrans.com/en/company/",
               "canonical_url": "https://www.jctrans.com/en/company/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3482,7 +3606,11 @@
                 "source_host": "www.jctrans.com",
                 "surface_code": "el_jctrans_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.jctrans.com/en/company/"
+                "original_url_field": "https://www.jctrans.com/en/company/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3613,7 +3741,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.wcaworld.com/directory",
               "canonical_url": "https://www.wcaworld.com/directory",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3623,7 +3751,11 @@
                 "source_host": "www.wcaworld.com",
                 "surface_code": "el_wcaworld_directory_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.wcaworld.com/directory"
+                "original_url_field": "https://www.wcaworld.com/directory",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3688,7 +3820,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.wcaworld.com/",
               "canonical_url": "https://www.wcaworld.com/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3698,7 +3830,11 @@
                 "source_host": "www.wcaworld.com",
                 "surface_code": "el_wcaworld_directory_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.wcaworld.com/"
+                "original_url_field": "https://www.wcaworld.com/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3829,7 +3965,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://aeroceanetwork.net/directory/",
               "canonical_url": "https://aeroceanetwork.net/directory/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3839,7 +3975,11 @@
                 "source_host": "aeroceanetwork.net",
                 "surface_code": "el_aerocean_network_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://aeroceanetwork.net/directory/"
+                "original_url_field": "https://aeroceanetwork.net/directory/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3904,7 +4044,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://aeroceanetwork.net/",
               "canonical_url": "https://aeroceanetwork.net/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3914,7 +4054,11 @@
                 "source_host": "aeroceanetwork.net",
                 "surface_code": "el_aerocean_network_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://aeroceanetwork.net/"
+                "original_url_field": "https://aeroceanetwork.net/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4045,7 +4189,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://pangea-network.com/freight-forwarders/greece/",
               "canonical_url": "https://pangea-network.com/freight-forwarders/greece/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4055,7 +4199,11 @@
                 "source_host": "pangea-network.com",
                 "surface_code": "el_pangea_network_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://pangea-network.com/freight-forwarders/greece/"
+                "original_url_field": "https://pangea-network.com/freight-forwarders/greece/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4120,7 +4268,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://pangea-network.com/",
               "canonical_url": "https://pangea-network.com/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4130,7 +4278,11 @@
                 "source_host": "pangea-network.com",
                 "surface_code": "el_pangea_network_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://pangea-network.com/"
+                "original_url_field": "https://pangea-network.com/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4262,7 +4414,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://ensun.io/search/freight-broker/greece",
               "canonical_url": "https://ensun.io/search/freight-broker/greece",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4272,7 +4424,11 @@
                 "source_host": "ensun.io",
                 "surface_code": "el_ensun_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ensun.io/search/freight-broker/greece"
+                "original_url_field": "https://ensun.io/search/freight-broker/greece",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4337,7 +4493,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://ensun.io/search/logistics/greece",
               "canonical_url": "https://ensun.io/search/logistics/greece",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4347,7 +4503,11 @@
                 "source_host": "ensun.io",
                 "surface_code": "el_ensun_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ensun.io/search/logistics/greece"
+                "original_url_field": "https://ensun.io/search/logistics/greece",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4478,7 +4638,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.vrisko.gr/en/dir/customs-brokers/",
               "canonical_url": "https://www.vrisko.gr/en/dir/customs-brokers/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4488,7 +4648,11 @@
                 "source_host": "www.vrisko.gr",
                 "surface_code": "el_vrisko_customs_brokers_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.vrisko.gr/en/dir/customs-brokers/"
+                "original_url_field": "https://www.vrisko.gr/en/dir/customs-brokers/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4553,7 +4717,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.vrisko.gr/en/dir/customs-brokers/athens/",
               "canonical_url": "https://www.vrisko.gr/en/dir/customs-brokers/athens/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4563,7 +4727,11 @@
                 "source_host": "www.vrisko.gr",
                 "surface_code": "el_vrisko_customs_brokers_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.vrisko.gr/en/dir/customs-brokers/athens/"
+                "original_url_field": "https://www.vrisko.gr/en/dir/customs-brokers/athens/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4694,7 +4862,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/C/Customs-Brokers/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/C/Customs-Brokers/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4704,7 +4872,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_customs_brokers_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/C/Customs-Brokers/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/C/Customs-Brokers/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4769,7 +4941,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/C/Customs-Brokers/Municipality%20Athens/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/C/Customs-Brokers/Municipality%20Athens/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4779,7 +4951,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_customs_brokers_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/C/Customs-Brokers/Municipality%20Athens/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/C/Customs-Brokers/Municipality%20Athens/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4910,7 +5086,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.europages.co.uk/companies/greece/brokers-customs.html",
               "canonical_url": "https://www.europages.co.uk/companies/greece/brokers-customs.html",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4920,7 +5096,11 @@
                 "source_host": "www.europages.co.uk",
                 "surface_code": "el_europages_customs_logistics_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.europages.co.uk/companies/greece/brokers-customs.html"
+                "original_url_field": "https://www.europages.co.uk/companies/greece/brokers-customs.html",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4985,7 +5165,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.europages.co.uk/companies/greece/logistics.html",
               "canonical_url": "https://www.europages.co.uk/companies/greece/logistics.html",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4995,7 +5175,11 @@
                 "source_host": "www.europages.co.uk",
                 "surface_code": "el_europages_customs_logistics_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.europages.co.uk/companies/greece/logistics.html"
+                "original_url_field": "https://www.europages.co.uk/companies/greece/logistics.html",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5127,7 +5311,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://gr.kompass.com/a/customs-clearance-agents-road-freight/7578030/",
               "canonical_url": "https://gr.kompass.com/a/customs-clearance-agents-road-freight/7578030/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5137,7 +5321,11 @@
                 "source_host": "gr.kompass.com",
                 "surface_code": "el_kompass_customs_sea_road_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://gr.kompass.com/a/customs-clearance-agents-road-freight/7578030/"
+                "original_url_field": "https://gr.kompass.com/a/customs-clearance-agents-road-freight/7578030/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5202,7 +5390,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://gr.kompass.com/a/customs-clearance-agents-sea-freight/7578010/",
               "canonical_url": "https://gr.kompass.com/a/customs-clearance-agents-sea-freight/7578010/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5212,7 +5400,11 @@
                 "source_host": "gr.kompass.com",
                 "surface_code": "el_kompass_customs_sea_road_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://gr.kompass.com/a/customs-clearance-agents-sea-freight/7578010/"
+                "original_url_field": "https://gr.kompass.com/a/customs-clearance-agents-sea-freight/7578010/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5343,7 +5535,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-sectors/logistics/",
               "canonical_url": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-sectors/logistics/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5353,7 +5545,11 @@
                 "source_host": "www.enterprisegreece.gov.gr",
                 "surface_code": "el_enterprise_greece_logistics_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-sectors/logistics/"
+                "original_url_field": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-sectors/logistics/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5418,7 +5614,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-sectors/",
               "canonical_url": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-sectors/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5428,7 +5624,11 @@
                 "source_host": "www.enterprisegreece.gov.gr",
                 "surface_code": "el_enterprise_greece_logistics_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-sectors/"
+                "original_url_field": "https://www.enterprisegreece.gov.gr/en/invest-in-greece/investment-sectors/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5559,7 +5759,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.aia.gr/en/business/cargo-development",
               "canonical_url": "https://www.aia.gr/en/business/cargo-development",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5569,7 +5769,11 @@
                 "source_host": "www.aia.gr",
                 "surface_code": "el_aia_cargo_development_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.aia.gr/en/business/cargo-development"
+                "original_url_field": "https://www.aia.gr/en/business/cargo-development",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5634,7 +5838,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.aia.gr/en/business/",
               "canonical_url": "https://www.aia.gr/en/business/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5644,7 +5848,11 @@
                 "source_host": "www.aia.gr",
                 "surface_code": "el_aia_cargo_development_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.aia.gr/en/business/"
+                "original_url_field": "https://www.aia.gr/en/business/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5775,7 +5983,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.iata.org/en/publications/directories/cargolink/directory/",
               "canonical_url": "https://www.iata.org/en/publications/directories/cargolink/directory/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5785,7 +5993,11 @@
                 "source_host": "www.iata.org",
                 "surface_code": "el_iata_cargolink_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.iata.org/en/publications/directories/cargolink/directory/"
+                "original_url_field": "https://www.iata.org/en/publications/directories/cargolink/directory/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5850,7 +6062,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.iata.org/en/publications/directories/cargolink/directory/greek-air-cargo-sa/9527/",
               "canonical_url": "https://www.iata.org/en/publications/directories/cargolink/directory/greek-air-cargo-sa/9527/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5860,7 +6072,11 @@
                 "source_host": "www.iata.org",
                 "surface_code": "el_iata_cargolink_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.iata.org/en/publications/directories/cargolink/directory/greek-air-cargo-sa/9527/"
+                "original_url_field": "https://www.iata.org/en/publications/directories/cargolink/directory/greek-air-cargo-sa/9527/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5992,7 +6208,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.thpa.gr/",
               "canonical_url": "https://www.thpa.gr/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6002,7 +6218,11 @@
                 "source_host": "www.thpa.gr",
                 "surface_code": "el_thessaloniki_port_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.thpa.gr/"
+                "original_url_field": "https://www.thpa.gr/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6067,7 +6287,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.thpa.gr/index.php/en/services",
               "canonical_url": "https://www.thpa.gr/index.php/en/services",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6077,7 +6297,11 @@
                 "source_host": "www.thpa.gr",
                 "surface_code": "el_thessaloniki_port_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.thpa.gr/index.php/en/services"
+                "original_url_field": "https://www.thpa.gr/index.php/en/services",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6209,7 +6433,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.olp.gr/en/",
               "canonical_url": "https://www.olp.gr/en/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6219,7 +6443,11 @@
                 "source_host": "www.olp.gr",
                 "surface_code": "el_piraeus_port_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.olp.gr/en/"
+                "original_url_field": "https://www.olp.gr/en/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6284,7 +6512,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.olp.gr/en/services/container-terminal",
               "canonical_url": "https://www.olp.gr/en/services/container-terminal",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6294,7 +6522,11 @@
                 "source_host": "www.olp.gr",
                 "surface_code": "el_piraeus_port_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.olp.gr/en/services/container-terminal"
+                "original_url_field": "https://www.olp.gr/en/services/container-terminal",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6425,7 +6657,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.icontainers.com/ports/piraeus/",
               "canonical_url": "https://www.icontainers.com/ports/piraeus/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6435,7 +6667,11 @@
                 "source_host": "www.icontainers.com",
                 "surface_code": "el_icontainers_piraeus_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.icontainers.com/ports/piraeus/"
+                "original_url_field": "https://www.icontainers.com/ports/piraeus/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6500,7 +6736,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.icontainers.com/ports/greece/",
               "canonical_url": "https://www.icontainers.com/ports/greece/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6510,7 +6746,11 @@
                 "source_host": "www.icontainers.com",
                 "surface_code": "el_icontainers_piraeus_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.icontainers.com/ports/greece/"
+                "original_url_field": "https://www.icontainers.com/ports/greece/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6641,7 +6881,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.cargorouter.com/directory/ports/Greece/Thessaloniki/",
               "canonical_url": "https://www.cargorouter.com/directory/ports/Greece/Thessaloniki/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6651,7 +6891,11 @@
                 "source_host": "www.cargorouter.com",
                 "surface_code": "el_cargorouter_ports_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cargorouter.com/directory/ports/Greece/Thessaloniki/"
+                "original_url_field": "https://www.cargorouter.com/directory/ports/Greece/Thessaloniki/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6716,7 +6960,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.cargorouter.com/directory/ports/Greece/",
               "canonical_url": "https://www.cargorouter.com/directory/ports/Greece/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6726,7 +6970,11 @@
                 "source_host": "www.cargorouter.com",
                 "surface_code": "el_cargorouter_ports_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cargorouter.com/directory/ports/Greece/"
+                "original_url_field": "https://www.cargorouter.com/directory/ports/Greece/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6857,7 +7105,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.searates.com/maritime/greece",
               "canonical_url": "https://www.searates.com/maritime/greece",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6867,7 +7115,11 @@
                 "source_host": "www.searates.com",
                 "surface_code": "el_searates_ports_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.searates.com/maritime/greece"
+                "original_url_field": "https://www.searates.com/maritime/greece",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6932,7 +7184,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.searates.com/reference/",
               "canonical_url": "https://www.searates.com/reference/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6942,7 +7194,11 @@
                 "source_host": "www.searates.com",
                 "surface_code": "el_searates_ports_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.searates.com/reference/"
+                "original_url_field": "https://www.searates.com/reference/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7073,7 +7329,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://railmarket.com/eu/greece/companies",
               "canonical_url": "https://railmarket.com/eu/greece/companies",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7083,7 +7339,11 @@
                 "source_host": "railmarket.com",
                 "surface_code": "el_railmarket_greece_companies_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://railmarket.com/eu/greece/companies"
+                "original_url_field": "https://railmarket.com/eu/greece/companies",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7148,7 +7408,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://railmarket.com/eu/greece/logistics-companies",
               "canonical_url": "https://railmarket.com/eu/greece/logistics-companies",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7158,7 +7418,11 @@
                 "source_host": "railmarket.com",
                 "surface_code": "el_railmarket_greece_companies_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://railmarket.com/eu/greece/logistics-companies"
+                "original_url_field": "https://railmarket.com/eu/greece/logistics-companies",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7289,7 +7553,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://railmarket.com/eu/greece/rail-forwarders",
               "canonical_url": "https://railmarket.com/eu/greece/rail-forwarders",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7299,7 +7563,11 @@
                 "source_host": "railmarket.com",
                 "surface_code": "el_railmarket_greece_forwarders_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://railmarket.com/eu/greece/rail-forwarders"
+                "original_url_field": "https://railmarket.com/eu/greece/rail-forwarders",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7364,7 +7632,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://railmarket.com/eu/greece/logistics-consulting",
               "canonical_url": "https://railmarket.com/eu/greece/logistics-consulting",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7374,7 +7642,11 @@
                 "source_host": "railmarket.com",
                 "surface_code": "el_railmarket_greece_forwarders_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://railmarket.com/eu/greece/logistics-consulting"
+                "original_url_field": "https://railmarket.com/eu/greece/logistics-consulting",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7505,7 +7777,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/T/Transport-Companies/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/T/Transport-Companies/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7515,7 +7787,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_transport_companies_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/T/Transport-Companies/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/T/Transport-Companies/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7580,7 +7856,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/T/Transport-Companies/Attica/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/T/Transport-Companies/Attica/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7590,7 +7866,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_transport_companies_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/T/Transport-Companies/Attica/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/T/Transport-Companies/Attica/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7721,7 +8001,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/R/Road-Transport/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/R/Road-Transport/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7731,7 +8011,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_road_transport_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/R/Road-Transport/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/R/Road-Transport/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7796,7 +8080,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/R/Road-Transport/Thessaloniki/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/R/Road-Transport/Thessaloniki/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7806,7 +8090,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_road_transport_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/R/Road-Transport/Thessaloniki/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/R/Road-Transport/Thessaloniki/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7937,7 +8225,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/W/Warehouses/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/W/Warehouses/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7947,7 +8235,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_warehouses_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/W/Warehouses/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/W/Warehouses/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8012,7 +8304,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/W/Warehouses/Attica/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/W/Warehouses/Attica/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8022,7 +8314,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_warehouses_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/W/Warehouses/Attica/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/W/Warehouses/Attica/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8153,7 +8449,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/R/Refrigerators-Industrial/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/R/Refrigerators-Industrial/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8163,7 +8459,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_cold_storage_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/R/Refrigerators-Industrial/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/R/Refrigerators-Industrial/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8228,7 +8528,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.xo.gr/dir-az/R/Refrigerators-Industrial/Attica/?lang=en",
               "canonical_url": "https://www.xo.gr/dir-az/R/Refrigerators-Industrial/Attica/?lang=en",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8238,7 +8538,11 @@
                 "source_host": "www.xo.gr",
                 "surface_code": "el_xo_cold_storage_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.xo.gr/dir-az/R/Refrigerators-Industrial/Attica/?lang=en"
+                "original_url_field": "https://www.xo.gr/dir-az/R/Refrigerators-Industrial/Attica/?lang=en",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8369,7 +8673,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.vrisko.gr/en/dir/transport-companies/",
               "canonical_url": "https://www.vrisko.gr/en/dir/transport-companies/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8379,7 +8683,11 @@
                 "source_host": "www.vrisko.gr",
                 "surface_code": "el_vrisko_transport_companies_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.vrisko.gr/en/dir/transport-companies/"
+                "original_url_field": "https://www.vrisko.gr/en/dir/transport-companies/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8444,7 +8752,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.vrisko.gr/en/dir/transport-companies/athens/",
               "canonical_url": "https://www.vrisko.gr/en/dir/transport-companies/athens/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8454,7 +8762,11 @@
                 "source_host": "www.vrisko.gr",
                 "surface_code": "el_vrisko_transport_companies_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.vrisko.gr/en/dir/transport-companies/athens/"
+                "original_url_field": "https://www.vrisko.gr/en/dir/transport-companies/athens/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8585,7 +8897,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.vrisko.gr/en/dir/warehouses/",
               "canonical_url": "https://www.vrisko.gr/en/dir/warehouses/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8595,7 +8907,11 @@
                 "source_host": "www.vrisko.gr",
                 "surface_code": "el_vrisko_warehouses_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.vrisko.gr/en/dir/warehouses/"
+                "original_url_field": "https://www.vrisko.gr/en/dir/warehouses/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8660,7 +8976,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.vrisko.gr/en/dir/warehouses/athens/",
               "canonical_url": "https://www.vrisko.gr/en/dir/warehouses/athens/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8670,7 +8986,11 @@
                 "source_host": "www.vrisko.gr",
                 "surface_code": "el_vrisko_warehouses_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.vrisko.gr/en/dir/warehouses/athens/"
+                "original_url_field": "https://www.vrisko.gr/en/dir/warehouses/athens/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8801,7 +9121,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.vrisko.gr/en/search/logistics/greece/",
               "canonical_url": "https://www.vrisko.gr/en/search/logistics/greece/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8811,7 +9131,11 @@
                 "source_host": "www.vrisko.gr",
                 "surface_code": "el_vrisko_logistics_search_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.vrisko.gr/en/search/logistics/greece/"
+                "original_url_field": "https://www.vrisko.gr/en/search/logistics/greece/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8876,7 +9200,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.vrisko.gr/en/search/logistics/athens/",
               "canonical_url": "https://www.vrisko.gr/en/search/logistics/athens/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8886,7 +9210,11 @@
                 "source_host": "www.vrisko.gr",
                 "surface_code": "el_vrisko_logistics_search_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.vrisko.gr/en/search/logistics/athens/"
+                "original_url_field": "https://www.vrisko.gr/en/search/logistics/athens/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9017,7 +9345,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://clutch.co/gr/logistics/supply-chain-management",
               "canonical_url": "https://clutch.co/gr/logistics/supply-chain-management",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9027,7 +9355,11 @@
                 "source_host": "clutch.co",
                 "surface_code": "el_clutch_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://clutch.co/gr/logistics/supply-chain-management"
+                "original_url_field": "https://clutch.co/gr/logistics/supply-chain-management",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9092,7 +9424,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://clutch.co/gr/logistics/freight-forwarders",
               "canonical_url": "https://clutch.co/gr/logistics/freight-forwarders",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9102,7 +9434,11 @@
                 "source_host": "clutch.co",
                 "surface_code": "el_clutch_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://clutch.co/gr/logistics/freight-forwarders"
+                "original_url_field": "https://clutch.co/gr/logistics/freight-forwarders",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9233,7 +9569,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.fretador.com/search/q/Freight-Forwarding/in-Greece",
               "canonical_url": "https://www.fretador.com/search/q/Freight-Forwarding/in-Greece",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9243,7 +9579,11 @@
                 "source_host": "www.fretador.com",
                 "surface_code": "el_fretador_greece_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.fretador.com/search/q/Freight-Forwarding/in-Greece"
+                "original_url_field": "https://www.fretador.com/search/q/Freight-Forwarding/in-Greece",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9308,7 +9648,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.fretador.com/",
               "canonical_url": "https://www.fretador.com/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9318,7 +9658,11 @@
                 "source_host": "www.fretador.com",
                 "surface_code": "el_fretador_greece_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.fretador.com/"
+                "original_url_field": "https://www.fretador.com/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9449,7 +9793,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://agentsone.net/directory.php",
               "canonical_url": "https://agentsone.net/directory.php",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9459,7 +9803,11 @@
                 "source_host": "agentsone.net",
                 "surface_code": "el_agentsone_directory_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://agentsone.net/directory.php"
+                "original_url_field": "https://agentsone.net/directory.php",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9524,7 +9872,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://agentsone.net/",
               "canonical_url": "https://agentsone.net/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9534,7 +9882,11 @@
                 "source_host": "agentsone.net",
                 "surface_code": "el_agentsone_directory_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://agentsone.net/"
+                "original_url_field": "https://agentsone.net/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9665,7 +10017,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.searates.com/reference/logistics-service/greece/",
               "canonical_url": "https://www.searates.com/reference/logistics-service/greece/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9675,7 +10027,11 @@
                 "source_host": "www.searates.com",
                 "surface_code": "el_searates_logistics_services_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.searates.com/reference/logistics-service/greece/"
+                "original_url_field": "https://www.searates.com/reference/logistics-service/greece/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9740,7 +10096,7 @@
               "notes": "Candidate-only Greek source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.searates.com/reference/port-agent/greece/",
               "canonical_url": "https://www.searates.com/reference/port-agent/greece/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9750,7 +10106,11 @@
                 "source_host": "www.searates.com",
                 "surface_code": "el_searates_logistics_services_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.searates.com/reference/port-agent/greece/"
+                "original_url_field": "https://www.searates.com/reference/port-agent/greece/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],

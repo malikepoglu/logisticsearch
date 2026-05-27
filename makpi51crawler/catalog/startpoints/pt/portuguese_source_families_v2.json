@@ -147,7 +147,7 @@
               "quality_status": "A",
               "submitted_url": "https://fiata.org/directory/pt/",
               "canonical_url": "https://fiata.org/directory/pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -157,7 +157,11 @@
                 "source_host": "fiata.org",
                 "surface_code": "pt_fiata_directory_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://fiata.org/directory/pt/"
+                "original_url_field": "https://fiata.org/directory/pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -272,7 +276,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.apat.pt/en/home",
               "canonical_url": "https://www.apat.pt/en/home",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -282,7 +286,11 @@
                 "source_host": "www.apat.pt",
                 "surface_code": "pt_apat_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.apat.pt/en/home"
+                "original_url_field": "https://www.apat.pt/en/home",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -343,7 +351,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.apat.pt/en/a_associacao",
               "canonical_url": "https://www.apat.pt/en/a_associacao",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -353,7 +361,11 @@
                 "source_host": "www.apat.pt",
                 "surface_code": "pt_apat_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.apat.pt/en/a_associacao"
+                "original_url_field": "https://www.apat.pt/en/a_associacao",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -414,7 +426,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.apat.pt/en/vantagens_associados",
               "canonical_url": "https://www.apat.pt/en/vantagens_associados",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -424,7 +436,11 @@
                 "source_host": "www.apat.pt",
                 "surface_code": "pt_apat_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.apat.pt/en/vantagens_associados"
+                "original_url_field": "https://www.apat.pt/en/vantagens_associados",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -539,7 +555,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.antram.pt/",
               "canonical_url": "https://www.antram.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -549,7 +565,11 @@
                 "source_host": "www.antram.pt",
                 "surface_code": "pt_antram_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.antram.pt/"
+                "original_url_field": "https://www.antram.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -610,7 +630,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.antram.pt/associacao/",
               "canonical_url": "https://www.antram.pt/associacao/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -620,7 +640,11 @@
                 "source_host": "www.antram.pt",
                 "surface_code": "pt_antram_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.antram.pt/associacao/"
+                "original_url_field": "https://www.antram.pt/associacao/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -735,7 +759,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://aplog.pt/",
               "canonical_url": "https://aplog.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -745,7 +769,11 @@
                 "source_host": "aplog.pt",
                 "surface_code": "pt_aplog_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://aplog.pt/"
+                "original_url_field": "https://aplog.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -806,7 +834,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://aplog.pt/a-aplog/",
               "canonical_url": "https://aplog.pt/a-aplog/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -816,7 +844,11 @@
                 "source_host": "aplog.pt",
                 "surface_code": "pt_aplog_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://aplog.pt/a-aplog/"
+                "original_url_field": "https://aplog.pt/a-aplog/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -931,7 +963,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.portosdeportugal.pt/",
               "canonical_url": "https://www.portosdeportugal.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -941,7 +973,11 @@
                 "source_host": "www.portosdeportugal.pt",
                 "surface_code": "pt_associacao_portos_portugal_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portosdeportugal.pt/"
+                "original_url_field": "https://www.portosdeportugal.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1002,7 +1038,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.portosdeportugal.pt/en/",
               "canonical_url": "https://www.portosdeportugal.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1012,7 +1048,11 @@
                 "source_host": "www.portosdeportugal.pt",
                 "surface_code": "pt_associacao_portos_portugal_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portosdeportugal.pt/en/"
+                "original_url_field": "https://www.portosdeportugal.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1127,7 +1167,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.projeto-jul.pt/en",
               "canonical_url": "https://www.projeto-jul.pt/en",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1137,7 +1177,11 @@
                 "source_host": "www.projeto-jul.pt",
                 "surface_code": "pt_janela_unica_logistica_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.projeto-jul.pt/en"
+                "original_url_field": "https://www.projeto-jul.pt/en",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1198,7 +1242,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.projeto-jul.pt/en/entities-involved",
               "canonical_url": "https://www.projeto-jul.pt/en/entities-involved",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1208,7 +1252,11 @@
                 "source_host": "www.projeto-jul.pt",
                 "surface_code": "pt_janela_unica_logistica_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.projeto-jul.pt/en/entities-involved"
+                "original_url_field": "https://www.projeto-jul.pt/en/entities-involved",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1323,7 +1371,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.imt-ip.pt/",
               "canonical_url": "https://www.imt-ip.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1333,7 +1381,11 @@
                 "source_host": "www.imt-ip.pt",
                 "surface_code": "pt_imt_transportes_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.imt-ip.pt/"
+                "original_url_field": "https://www.imt-ip.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1394,7 +1446,7 @@
               "quality_status": "A_PLUS",
               "submitted_url": "https://www.imt-ip.pt/sites/IMTT/Portugues/TransportesRodoviarios/TransporteMercadorias/Paginas/TransporteMercadorias.aspx",
               "canonical_url": "https://www.imt-ip.pt/sites/IMTT/Portugues/TransportesRodoviarios/TransporteMercadorias/Paginas/TransporteMercadorias.aspx",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1404,7 +1456,11 @@
                 "source_host": "www.imt-ip.pt",
                 "surface_code": "pt_imt_transportes_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.imt-ip.pt/sites/IMTT/Portugues/TransportesRodoviarios/TransporteMercadorias/Paginas/TransporteMercadorias.aspx"
+                "original_url_field": "https://www.imt-ip.pt/sites/IMTT/Portugues/TransportesRodoviarios/TransporteMercadorias/Paginas/TransporteMercadorias.aspx",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1519,7 +1575,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portodelisboa.pt/en/home",
               "canonical_url": "https://www.portodelisboa.pt/en/home",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1529,7 +1585,11 @@
                 "source_host": "www.portodelisboa.pt",
                 "surface_code": "pt_port_lisbon_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portodelisboa.pt/en/home"
+                "original_url_field": "https://www.portodelisboa.pt/en/home",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1590,7 +1650,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portodelisboa.pt/en/business",
               "canonical_url": "https://www.portodelisboa.pt/en/business",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1600,7 +1660,11 @@
                 "source_host": "www.portodelisboa.pt",
                 "surface_code": "pt_port_lisbon_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portodelisboa.pt/en/business"
+                "original_url_field": "https://www.portodelisboa.pt/en/business",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1715,7 +1779,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.apsinesalgarve.pt/en/",
               "canonical_url": "https://www.apsinesalgarve.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1725,7 +1789,11 @@
                 "source_host": "www.apsinesalgarve.pt",
                 "surface_code": "pt_port_sines_algarve_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.apsinesalgarve.pt/en/"
+                "original_url_field": "https://www.apsinesalgarve.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1786,7 +1854,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.apsinesalgarve.pt/en/ports/port-of-sines/",
               "canonical_url": "https://www.apsinesalgarve.pt/en/ports/port-of-sines/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1796,7 +1864,11 @@
                 "source_host": "www.apsinesalgarve.pt",
                 "surface_code": "pt_port_sines_algarve_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.apsinesalgarve.pt/en/ports/port-of-sines/"
+                "original_url_field": "https://www.apsinesalgarve.pt/en/ports/port-of-sines/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1857,7 +1929,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.apsinesalgarve.pt/en/ports/port-of-portimao/",
               "canonical_url": "https://www.apsinesalgarve.pt/en/ports/port-of-portimao/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1867,7 +1939,11 @@
                 "source_host": "www.apsinesalgarve.pt",
                 "surface_code": "pt_port_sines_algarve_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.apsinesalgarve.pt/en/ports/port-of-portimao/"
+                "original_url_field": "https://www.apsinesalgarve.pt/en/ports/port-of-portimao/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -1982,7 +2058,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.apdl.pt/en/",
               "canonical_url": "https://www.apdl.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1992,7 +2068,11 @@
                 "source_host": "www.apdl.pt",
                 "surface_code": "pt_port_leixoes_apdl_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.apdl.pt/en/"
+                "original_url_field": "https://www.apdl.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2053,7 +2133,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://leixoes.apdl.pt/en/the-port/",
               "canonical_url": "https://leixoes.apdl.pt/en/the-port/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2063,7 +2143,11 @@
                 "source_host": "www.apdl.pt",
                 "surface_code": "pt_port_leixoes_apdl_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://leixoes.apdl.pt/en/the-port/"
+                "original_url_field": "https://leixoes.apdl.pt/en/the-port/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2124,7 +2208,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.apdl.pt/en/ports/",
               "canonical_url": "https://www.apdl.pt/en/ports/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2134,7 +2218,11 @@
                 "source_host": "www.apdl.pt",
                 "surface_code": "pt_port_leixoes_apdl_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.apdl.pt/en/ports/"
+                "original_url_field": "https://www.apdl.pt/en/ports/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2249,7 +2337,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://portodeaveiro.pt/",
               "canonical_url": "https://portodeaveiro.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2259,7 +2347,11 @@
                 "source_host": "portodeaveiro.pt",
                 "surface_code": "pt_port_aveiro_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://portodeaveiro.pt/"
+                "original_url_field": "https://portodeaveiro.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2320,7 +2412,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://portodeaveiro.pt/en/",
               "canonical_url": "https://portodeaveiro.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2330,7 +2422,11 @@
                 "source_host": "portodeaveiro.pt",
                 "surface_code": "pt_port_aveiro_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://portodeaveiro.pt/en/"
+                "original_url_field": "https://portodeaveiro.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2445,7 +2541,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.portodesetubal.pt/",
               "canonical_url": "https://www.portodesetubal.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2455,7 +2551,11 @@
                 "source_host": "www.portodesetubal.pt",
                 "surface_code": "pt_port_setubal_sesimbra_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portodesetubal.pt/"
+                "original_url_field": "https://www.portodesetubal.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2516,7 +2616,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portodesetubal.pt/en/",
               "canonical_url": "https://www.portodesetubal.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2526,7 +2626,11 @@
                 "source_host": "www.portodesetubal.pt",
                 "surface_code": "pt_port_setubal_sesimbra_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portodesetubal.pt/en/"
+                "original_url_field": "https://www.portodesetubal.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2641,7 +2745,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.portodeviana.pt/",
               "canonical_url": "https://www.portodeviana.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2651,7 +2755,11 @@
                 "source_host": "www.portodeviana.pt",
                 "surface_code": "pt_port_viana_castelo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portodeviana.pt/"
+                "original_url_field": "https://www.portodeviana.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2712,7 +2820,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portodeviana.pt/en/",
               "canonical_url": "https://www.portodeviana.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2722,7 +2830,11 @@
                 "source_host": "www.portodeviana.pt",
                 "surface_code": "pt_port_viana_castelo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portodeviana.pt/en/"
+                "original_url_field": "https://www.portodeviana.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2837,7 +2949,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.apram.pt/",
               "canonical_url": "https://www.apram.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2847,7 +2959,11 @@
                 "source_host": "www.apram.pt",
                 "surface_code": "pt_ports_madeira_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.apram.pt/"
+                "original_url_field": "https://www.apram.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -2908,7 +3024,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.apram.pt/site/index.php/en/",
               "canonical_url": "https://www.apram.pt/site/index.php/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2918,7 +3034,11 @@
                 "source_host": "www.apram.pt",
                 "surface_code": "pt_ports_madeira_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.apram.pt/site/index.php/en/"
+                "original_url_field": "https://www.apram.pt/site/index.php/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3033,7 +3153,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.portosdosacores.pt/",
               "canonical_url": "https://www.portosdosacores.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3043,7 +3163,11 @@
                 "source_host": "www.portosdosacores.pt",
                 "surface_code": "pt_ports_azores_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portosdosacores.pt/"
+                "original_url_field": "https://www.portosdosacores.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3104,7 +3228,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portosdosacores.pt/index.php/en/",
               "canonical_url": "https://www.portosdosacores.pt/index.php/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3114,7 +3238,11 @@
                 "source_host": "www.portosdosacores.pt",
                 "surface_code": "pt_ports_azores_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portosdosacores.pt/index.php/en/"
+                "original_url_field": "https://www.portosdosacores.pt/index.php/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3229,7 +3357,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.tapcargo.com/en",
               "canonical_url": "https://www.tapcargo.com/en",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3239,7 +3367,11 @@
                 "source_host": "www.tapcargo.com",
                 "surface_code": "pt_tap_air_cargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.tapcargo.com/en"
+                "original_url_field": "https://www.tapcargo.com/en",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3300,7 +3432,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.tapcargo.com/en/products",
               "canonical_url": "https://www.tapcargo.com/en/products",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3310,7 +3442,11 @@
                 "source_host": "www.tapcargo.com",
                 "surface_code": "pt_tap_air_cargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.tapcargo.com/en/products"
+                "original_url_field": "https://www.tapcargo.com/en/products",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3371,7 +3507,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.tapcargo.com/en/network",
               "canonical_url": "https://www.tapcargo.com/en/network",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3381,7 +3517,11 @@
                 "source_host": "www.tapcargo.com",
                 "surface_code": "pt_tap_air_cargo_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.tapcargo.com/en/network"
+                "original_url_field": "https://www.tapcargo.com/en/network",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3496,7 +3636,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portway.pt/en/",
               "canonical_url": "https://www.portway.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3506,7 +3646,11 @@
                 "source_host": "www.portway.pt",
                 "surface_code": "pt_portway_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portway.pt/en/"
+                "original_url_field": "https://www.portway.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3567,7 +3711,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portway.pt/en/our-business",
               "canonical_url": "https://www.portway.pt/en/our-business",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3577,7 +3721,11 @@
                 "source_host": "www.portway.pt",
                 "surface_code": "pt_portway_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portway.pt/en/our-business"
+                "original_url_field": "https://www.portway.pt/en/our-business",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3638,7 +3786,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.portway.pt/en/contacts",
               "canonical_url": "https://www.portway.pt/en/contacts",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3648,7 +3796,11 @@
                 "source_host": "www.portway.pt",
                 "surface_code": "pt_portway_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.portway.pt/en/contacts"
+                "original_url_field": "https://www.portway.pt/en/contacts",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3763,7 +3915,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.ana.pt/en/lis/home",
               "canonical_url": "https://www.ana.pt/en/lis/home",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3773,7 +3925,11 @@
                 "source_host": "www.ana.pt",
                 "surface_code": "pt_ana_airports_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.ana.pt/en/lis/home"
+                "original_url_field": "https://www.ana.pt/en/lis/home",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3834,7 +3990,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.ana.pt/en/opo/home",
               "canonical_url": "https://www.ana.pt/en/opo/home",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3844,7 +4000,11 @@
                 "source_host": "www.ana.pt",
                 "surface_code": "pt_ana_airports_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.ana.pt/en/opo/home"
+                "original_url_field": "https://www.ana.pt/en/opo/home",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -3959,7 +4119,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.groundforce.pt/en",
               "canonical_url": "https://www.groundforce.pt/en",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3969,7 +4129,11 @@
                 "source_host": "www.groundforce.pt",
                 "surface_code": "pt_groundforce_portugal_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.groundforce.pt/en"
+                "original_url_field": "https://www.groundforce.pt/en",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4030,7 +4194,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.groundforce.pt/en/services",
               "canonical_url": "https://www.groundforce.pt/en/services",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4040,7 +4204,11 @@
                 "source_host": "www.groundforce.pt",
                 "surface_code": "pt_groundforce_portugal_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.groundforce.pt/en/services"
+                "original_url_field": "https://www.groundforce.pt/en/services",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4155,7 +4323,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://portocargo.pt/en/home/",
               "canonical_url": "https://portocargo.pt/en/home/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4165,7 +4333,11 @@
                 "source_host": "portocargo.pt",
                 "surface_code": "pt_portocargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://portocargo.pt/en/home/"
+                "original_url_field": "https://portocargo.pt/en/home/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4226,7 +4398,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://portocargo.pt/en/sea-freight/",
               "canonical_url": "https://portocargo.pt/en/sea-freight/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4236,7 +4408,11 @@
                 "source_host": "portocargo.pt",
                 "surface_code": "pt_portocargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://portocargo.pt/en/sea-freight/"
+                "original_url_field": "https://portocargo.pt/en/sea-freight/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4297,7 +4473,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://portocargo.pt/en/air-freight/",
               "canonical_url": "https://portocargo.pt/en/air-freight/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4307,7 +4483,11 @@
                 "source_host": "portocargo.pt",
                 "surface_code": "pt_portocargo_surface_03",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://portocargo.pt/en/air-freight/"
+                "original_url_field": "https://portocargo.pt/en/air-freight/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4422,7 +4602,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.igacargo.pt/en/",
               "canonical_url": "https://www.igacargo.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4432,7 +4612,11 @@
                 "source_host": "www.igacargo.pt",
                 "surface_code": "pt_igacargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.igacargo.pt/en/"
+                "original_url_field": "https://www.igacargo.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4493,7 +4677,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.igacargo.pt/en/history/",
               "canonical_url": "https://www.igacargo.pt/en/history/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4503,7 +4687,11 @@
                 "source_host": "www.igacargo.pt",
                 "surface_code": "pt_igacargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.igacargo.pt/en/history/"
+                "original_url_field": "https://www.igacargo.pt/en/history/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4618,7 +4806,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.navigomes.pt/en",
               "canonical_url": "https://www.navigomes.pt/en",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4628,7 +4816,11 @@
                 "source_host": "www.navigomes.pt",
                 "surface_code": "pt_navigomes_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.navigomes.pt/en"
+                "original_url_field": "https://www.navigomes.pt/en",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4689,7 +4881,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.navigomes.pt/en/node/57",
               "canonical_url": "https://www.navigomes.pt/en/node/57",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4699,7 +4891,11 @@
                 "source_host": "www.navigomes.pt",
                 "surface_code": "pt_navigomes_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.navigomes.pt/en/node/57"
+                "original_url_field": "https://www.navigomes.pt/en/node/57",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4814,7 +5010,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.luis-simoes.com/en/",
               "canonical_url": "https://www.luis-simoes.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4824,7 +5020,11 @@
                 "source_host": "www.luis-simoes.com",
                 "surface_code": "pt_luis_simoes_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.luis-simoes.com/en/"
+                "original_url_field": "https://www.luis-simoes.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -4885,7 +5085,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.luis-simoes.com/en/services/",
               "canonical_url": "https://www.luis-simoes.com/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4895,7 +5095,11 @@
                 "source_host": "www.luis-simoes.com",
                 "surface_code": "pt_luis_simoes_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.luis-simoes.com/en/services/"
+                "original_url_field": "https://www.luis-simoes.com/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5010,7 +5214,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.torrestir.com/en/",
               "canonical_url": "https://www.torrestir.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5020,7 +5224,11 @@
                 "source_host": "www.torrestir.com",
                 "surface_code": "pt_torrestir_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.torrestir.com/en/"
+                "original_url_field": "https://www.torrestir.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5081,7 +5289,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.torrestir.com/en/services/",
               "canonical_url": "https://www.torrestir.com/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5091,7 +5299,11 @@
                 "source_host": "www.torrestir.com",
                 "surface_code": "pt_torrestir_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.torrestir.com/en/services/"
+                "original_url_field": "https://www.torrestir.com/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5206,7 +5418,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.garland.pt/en/",
               "canonical_url": "https://www.garland.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5216,7 +5428,11 @@
                 "source_host": "www.garland.pt",
                 "surface_code": "pt_garland_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.garland.pt/en/"
+                "original_url_field": "https://www.garland.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5277,7 +5493,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.garland.pt/en/services/",
               "canonical_url": "https://www.garland.pt/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5287,7 +5503,11 @@
                 "source_host": "www.garland.pt",
                 "surface_code": "pt_garland_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.garland.pt/en/services/"
+                "original_url_field": "https://www.garland.pt/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5402,7 +5622,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.rangel.com/en/",
               "canonical_url": "https://www.rangel.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5412,7 +5632,11 @@
                 "source_host": "www.rangel.com",
                 "surface_code": "pt_rangel_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.rangel.com/en/"
+                "original_url_field": "https://www.rangel.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5473,7 +5697,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.rangel.com/en/services/",
               "canonical_url": "https://www.rangel.com/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5483,7 +5707,11 @@
                 "source_host": "www.rangel.com",
                 "surface_code": "pt_rangel_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.rangel.com/en/services/"
+                "original_url_field": "https://www.rangel.com/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5598,7 +5826,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.olicargo.com/en/",
               "canonical_url": "https://www.olicargo.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5608,7 +5836,11 @@
                 "source_host": "www.olicargo.com",
                 "surface_code": "pt_olicargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.olicargo.com/en/"
+                "original_url_field": "https://www.olicargo.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5669,7 +5901,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.olicargo.com/en/services/",
               "canonical_url": "https://www.olicargo.com/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5679,7 +5911,11 @@
                 "source_host": "www.olicargo.com",
                 "surface_code": "pt_olicargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.olicargo.com/en/services/"
+                "original_url_field": "https://www.olicargo.com/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5794,7 +6030,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.transitex.com/en/",
               "canonical_url": "https://www.transitex.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5804,7 +6040,11 @@
                 "source_host": "www.transitex.com",
                 "surface_code": "pt_transitex_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.transitex.com/en/"
+                "original_url_field": "https://www.transitex.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5865,7 +6105,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.transitex.com/en/services/",
               "canonical_url": "https://www.transitex.com/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5875,7 +6115,11 @@
                 "source_host": "www.transitex.com",
                 "surface_code": "pt_transitex_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.transitex.com/en/services/"
+                "original_url_field": "https://www.transitex.com/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -5990,7 +6234,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.jomatir.pt/en/",
               "canonical_url": "https://www.jomatir.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6000,7 +6244,11 @@
                 "source_host": "www.jomatir.pt",
                 "surface_code": "pt_jomatir_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.jomatir.pt/en/"
+                "original_url_field": "https://www.jomatir.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6061,7 +6309,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.jomatir.pt/en/services/",
               "canonical_url": "https://www.jomatir.pt/en/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6071,7 +6319,11 @@
                 "source_host": "www.jomatir.pt",
                 "surface_code": "pt_jomatir_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.jomatir.pt/en/services/"
+                "original_url_field": "https://www.jomatir.pt/en/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6186,7 +6438,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.medway-iberia.com/",
               "canonical_url": "https://www.medway-iberia.com/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6196,7 +6448,11 @@
                 "source_host": "www.medway-iberia.com",
                 "surface_code": "pt_medway_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.medway-iberia.com/"
+                "original_url_field": "https://www.medway-iberia.com/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6257,7 +6513,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.medway-iberia.com/en/",
               "canonical_url": "https://www.medway-iberia.com/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6267,7 +6523,11 @@
                 "source_host": "www.medway-iberia.com",
                 "surface_code": "pt_medway_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.medway-iberia.com/en/"
+                "original_url_field": "https://www.medway-iberia.com/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6382,7 +6642,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.takargo.pt/",
               "canonical_url": "https://www.takargo.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6392,7 +6652,11 @@
                 "source_host": "www.takargo.pt",
                 "surface_code": "pt_takargo_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.takargo.pt/"
+                "original_url_field": "https://www.takargo.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6453,7 +6717,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.takargo.pt/en/",
               "canonical_url": "https://www.takargo.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6463,7 +6727,11 @@
                 "source_host": "www.takargo.pt",
                 "surface_code": "pt_takargo_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.takargo.pt/en/"
+                "original_url_field": "https://www.takargo.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6578,7 +6846,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.psasines.pt/",
               "canonical_url": "https://www.psasines.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6588,7 +6856,11 @@
                 "source_host": "www.psasines.pt",
                 "surface_code": "pt_psa_sines_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.psasines.pt/"
+                "original_url_field": "https://www.psasines.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6649,7 +6921,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.psasines.pt/en/",
               "canonical_url": "https://www.psasines.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6659,7 +6931,11 @@
                 "source_host": "www.psasines.pt",
                 "surface_code": "pt_psa_sines_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.psasines.pt/en/"
+                "original_url_field": "https://www.psasines.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6774,7 +7050,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.yilport.com/en/port-terminals/yilport-iberia/yilport-leixoes",
               "canonical_url": "https://www.yilport.com/en/port-terminals/yilport-iberia/yilport-leixoes",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6784,7 +7060,11 @@
                 "source_host": "www.yilport.com",
                 "surface_code": "pt_yilport_leixoes_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.yilport.com/en/port-terminals/yilport-iberia/yilport-leixoes"
+                "original_url_field": "https://www.yilport.com/en/port-terminals/yilport-iberia/yilport-leixoes",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6845,7 +7125,7 @@
               "quality_status": "B_PLUS",
               "submitted_url": "https://www.yilport.com/en/port-terminals/yilport-iberia",
               "canonical_url": "https://www.yilport.com/en/port-terminals/yilport-iberia",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6855,7 +7135,11 @@
                 "source_host": "www.yilport.com",
                 "surface_code": "pt_yilport_leixoes_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.yilport.com/en/port-terminals/yilport-iberia"
+                "original_url_field": "https://www.yilport.com/en/port-terminals/yilport-iberia",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -6970,7 +7254,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.liscont.pt/",
               "canonical_url": "https://www.liscont.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6980,7 +7264,11 @@
                 "source_host": "www.liscont.pt",
                 "surface_code": "pt_liscont_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.liscont.pt/"
+                "original_url_field": "https://www.liscont.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7041,7 +7329,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.liscont.pt/en/",
               "canonical_url": "https://www.liscont.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7051,7 +7339,11 @@
                 "source_host": "www.liscont.pt",
                 "surface_code": "pt_liscont_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.liscont.pt/en/"
+                "original_url_field": "https://www.liscont.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7166,7 +7458,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.tcl-leixoes.pt/",
               "canonical_url": "https://www.tcl-leixoes.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7176,7 +7468,11 @@
                 "source_host": "www.tcl-leixoes.pt",
                 "surface_code": "pt_tcl_leixoes_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.tcl-leixoes.pt/"
+                "original_url_field": "https://www.tcl-leixoes.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7237,7 +7533,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.tcl-leixoes.pt/en/",
               "canonical_url": "https://www.tcl-leixoes.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7247,7 +7543,11 @@
                 "source_host": "www.tcl-leixoes.pt",
                 "surface_code": "pt_tcl_leixoes_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.tcl-leixoes.pt/en/"
+                "original_url_field": "https://www.tcl-leixoes.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7362,7 +7662,7 @@
               "quality_status": "B_MINUS",
               "submitted_url": "https://www.sotagus.pt/",
               "canonical_url": "https://www.sotagus.pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7372,7 +7672,11 @@
                 "source_host": "www.sotagus.pt",
                 "surface_code": "pt_sotagus_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.sotagus.pt/"
+                "original_url_field": "https://www.sotagus.pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7433,7 +7737,7 @@
               "quality_status": "A_MINUS",
               "submitted_url": "https://www.sotagus.pt/en/",
               "canonical_url": "https://www.sotagus.pt/en/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7443,7 +7747,11 @@
                 "source_host": "www.sotagus.pt",
                 "surface_code": "pt_sotagus_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.sotagus.pt/en/"
+                "original_url_field": "https://www.sotagus.pt/en/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7558,7 +7866,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.noatumlogistics.com/pt/",
               "canonical_url": "https://www.noatumlogistics.com/pt/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7568,7 +7876,11 @@
                 "source_host": "www.noatumlogistics.com",
                 "surface_code": "pt_noatum_logistics_portugal_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.noatumlogistics.com/pt/"
+                "original_url_field": "https://www.noatumlogistics.com/pt/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7629,7 +7941,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.noatumlogistics.com/pt/services/",
               "canonical_url": "https://www.noatumlogistics.com/pt/services/",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7639,7 +7951,11 @@
                 "source_host": "www.noatumlogistics.com",
                 "surface_code": "pt_noatum_logistics_portugal_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.noatumlogistics.com/pt/services/"
+                "original_url_field": "https://www.noatumlogistics.com/pt/services/",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7754,7 +8070,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.dbschenker.com/pt-en",
               "canonical_url": "https://www.dbschenker.com/pt-en",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7764,7 +8080,11 @@
                 "source_host": "www.dbschenker.com",
                 "surface_code": "pt_dbschenker_portugal_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dbschenker.com/pt-en"
+                "original_url_field": "https://www.dbschenker.com/pt-en",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7825,7 +8145,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.dbschenker.com/pt-en/products",
               "canonical_url": "https://www.dbschenker.com/pt-en/products",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7835,7 +8155,11 @@
                 "source_host": "www.dbschenker.com",
                 "surface_code": "pt_dbschenker_portugal_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dbschenker.com/pt-en/products"
+                "original_url_field": "https://www.dbschenker.com/pt-en/products",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -7950,7 +8274,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding.html",
               "canonical_url": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding.html",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7960,7 +8284,11 @@
                 "source_host": "www.dhl.com",
                 "surface_code": "pt_dhl_global_forwarding_portugal_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding.html"
+                "original_url_field": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding.html",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -8021,7 +8349,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding/freight-forwarding.html",
               "canonical_url": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding/freight-forwarding.html",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8031,7 +8359,11 @@
                 "source_host": "www.dhl.com",
                 "surface_code": "pt_dhl_global_forwarding_portugal_surface_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding/freight-forwarding.html"
+                "original_url_field": "https://www.dhl.com/pt-en/home/our-divisions/global-forwarding/freight-forwarding.html",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],
@@ -8146,7 +8478,7 @@
               "quality_status": "A",
               "submitted_url": "https://www.cargoyellowpages.com/portugal_freight_forwarders_cargo_agents.html",
               "canonical_url": "https://www.cargoyellowpages.com/portugal_freight_forwarders_cargo_agents.html",
-              "seed_type": "candidate_startpoint",
+              "seed_type": "entrypoint",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8156,7 +8488,11 @@
                 "source_host": "www.cargoyellowpages.com",
                 "surface_code": "pt_cargoyellowpages_directory_surface_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cargoyellowpages.com/portugal_freight_forwarders_cargo_agents.html"
+                "original_url_field": "https://www.cargoyellowpages.com/portugal_freight_forwarders_cargo_agents.html",
+                "original_seed_type": "candidate_startpoint",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "entrypoint"
               }
             }
           ],

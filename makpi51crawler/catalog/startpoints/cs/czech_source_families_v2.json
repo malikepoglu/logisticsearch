@@ -135,7 +135,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.svazspedice.cz/index.php/seznam-clenu-2/",
               "canonical_url": "https://www.svazspedice.cz/index.php/seznam-clenu-2/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -145,7 +145,11 @@
                 "source_host": "www.svazspedice.cz",
                 "surface_code": "cs_ssl_association_members_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.svazspedice.cz/index.php/seznam-clenu-2/"
+                "original_url_field": "https://www.svazspedice.cz/index.php/seznam-clenu-2/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -210,7 +214,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.svazspedice.cz/index.php/kontakty/",
               "canonical_url": "https://www.svazspedice.cz/index.php/kontakty/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -220,7 +224,11 @@
                 "source_host": "www.svazspedice.cz",
                 "surface_code": "cs_ssl_association_members_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.svazspedice.cz/index.php/kontakty/"
+                "original_url_field": "https://www.svazspedice.cz/index.php/kontakty/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -350,7 +358,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.svazspedice.cz/index.php/prihlaska-za-clena/",
               "canonical_url": "https://www.svazspedice.cz/index.php/prihlaska-za-clena/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -360,7 +368,11 @@
                 "source_host": "www.svazspedice.cz",
                 "surface_code": "cs_ssl_policy_documents_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.svazspedice.cz/index.php/prihlaska-za-clena/"
+                "original_url_field": "https://www.svazspedice.cz/index.php/prihlaska-za-clena/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -425,7 +437,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.svazspedice.cz/index.php/stanovy-ssl/",
               "canonical_url": "https://www.svazspedice.cz/index.php/stanovy-ssl/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -435,7 +447,11 @@
                 "source_host": "www.svazspedice.cz",
                 "surface_code": "cs_ssl_policy_documents_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.svazspedice.cz/index.php/stanovy-ssl/"
+                "original_url_field": "https://www.svazspedice.cz/index.php/stanovy-ssl/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -565,7 +581,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://fiata.org/directory/cz/",
               "canonical_url": "https://fiata.org/directory/cz/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -575,7 +591,11 @@
                 "source_host": "fiata.org",
                 "surface_code": "cs_fiata_czech_members_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://fiata.org/directory/cz/"
+                "original_url_field": "https://fiata.org/directory/cz/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -640,7 +660,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://fiata.org/directory/",
               "canonical_url": "https://fiata.org/directory/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -650,7 +670,11 @@
                 "source_host": "fiata.org",
                 "surface_code": "cs_fiata_czech_members_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://fiata.org/directory/"
+                "original_url_field": "https://fiata.org/directory/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -780,7 +804,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.iru.org/news-resources/members-directory/cesmad-bohemia",
               "canonical_url": "https://www.iru.org/news-resources/members-directory/cesmad-bohemia",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -790,7 +814,11 @@
                 "source_host": "www.iru.org",
                 "surface_code": "cs_iru_cesmad_reference_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.iru.org/news-resources/members-directory/cesmad-bohemia"
+                "original_url_field": "https://www.iru.org/news-resources/members-directory/cesmad-bohemia",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -855,7 +883,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.iru.org/news-resources/members-directory",
               "canonical_url": "https://www.iru.org/news-resources/members-directory",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -865,7 +893,11 @@
                 "source_host": "www.iru.org",
                 "surface_code": "cs_iru_cesmad_reference_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.iru.org/news-resources/members-directory"
+                "original_url_field": "https://www.iru.org/news-resources/members-directory",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -995,7 +1027,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://rpsd.mdcr.cz/undertaker/search",
               "canonical_url": "https://rpsd.mdcr.cz/undertaker/search",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1005,7 +1037,11 @@
                 "source_host": "rpsd.mdcr.cz",
                 "surface_code": "cs_rpsd_road_operator_registry_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://rpsd.mdcr.cz/undertaker/search"
+                "original_url_field": "https://rpsd.mdcr.cz/undertaker/search",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1070,7 +1106,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://md.gov.cz/?lang=en-gb",
               "canonical_url": "https://md.gov.cz/?lang=en-gb",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1080,7 +1116,11 @@
                 "source_host": "rpsd.mdcr.cz",
                 "surface_code": "cs_rpsd_road_operator_registry_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://md.gov.cz/?lang=en-gb"
+                "original_url_field": "https://md.gov.cz/?lang=en-gb",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1210,7 +1250,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://czech-logistics.eu/en/about-us/",
               "canonical_url": "https://czech-logistics.eu/en/about-us/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1220,7 +1260,11 @@
                 "source_host": "czech-logistics.eu",
                 "surface_code": "cs_czech_logistics_association_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://czech-logistics.eu/en/about-us/"
+                "original_url_field": "https://czech-logistics.eu/en/about-us/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1285,7 +1329,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://czech-logistics.eu/",
               "canonical_url": "https://czech-logistics.eu/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1295,7 +1339,11 @@
                 "source_host": "czech-logistics.eu",
                 "surface_code": "cs_czech_logistics_association_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://czech-logistics.eu/"
+                "original_url_field": "https://czech-logistics.eu/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1425,7 +1473,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1435,7 +1483,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_logistic_services_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1500,7 +1552,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services?page=2",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services?page=2",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1510,7 +1562,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_logistic_services_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services?page=2"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services?page=2",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1640,7 +1696,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Forwarding",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Forwarding",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1650,7 +1706,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_forwarding_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Forwarding"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Forwarding",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1715,7 +1775,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Forwarding?page=2",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Forwarding?page=2",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1725,7 +1785,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_forwarding_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Forwarding?page=2"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Forwarding?page=2",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1855,7 +1919,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1865,7 +1929,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_transport_root_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -1930,7 +1998,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services",
               "canonical_url": "https://en.firmy.cz/Travel-services",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -1940,7 +2008,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_transport_root_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services"
+                "original_url_field": "https://en.firmy.cz/Travel-services",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2070,7 +2142,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-praha",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-praha",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2080,7 +2152,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_prague_central_logistics_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-praha"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-praha",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2145,7 +2221,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-stredocesky?page=3",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-stredocesky?page=3",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2155,7 +2231,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_prague_central_logistics_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-stredocesky?page=3"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-stredocesky?page=3",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2285,7 +2365,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-jihocesky/ceske-budejovice?page=2",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-jihocesky/ceske-budejovice?page=2",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2295,7 +2375,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_south_hk_logistics_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-jihocesky/ceske-budejovice?page=2"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-jihocesky/ceske-budejovice?page=2",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2360,7 +2444,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-kralovehradecky/hradec-kralove",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-kralovehradecky/hradec-kralove",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2370,7 +2454,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_south_hk_logistics_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-kralovehradecky/hradec-kralove"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-kralovehradecky/hradec-kralove",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2500,7 +2588,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-liberecky/liberec",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-liberecky/liberec",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2510,7 +2598,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_liberec_rikov_logistics_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-liberecky/liberec"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-liberecky/liberec",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2575,7 +2667,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-kralovehradecky/nachod/221-rikov",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-kralovehradecky/nachod/221-rikov",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2585,7 +2677,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_liberec_rikov_logistics_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-kralovehradecky/nachod/221-rikov"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/kraj-kralovehradecky/nachod/221-rikov",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2715,7 +2811,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2725,7 +2821,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_road_freight_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2790,7 +2890,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2800,7 +2900,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_road_freight_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -2930,7 +3034,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Road-haulage",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Road-haulage",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -2940,7 +3044,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_road_haulage_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Road-haulage"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Road-haulage",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3005,7 +3113,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Road-haulage/kraj-stredocesky/praha-vychod/4152-brandys-nad-labem-stara-boleslav",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Road-haulage/kraj-stredocesky/praha-vychod/4152-brandys-nad-labem-stara-boleslav",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3015,7 +3123,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_road_haulage_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Road-haulage/kraj-stredocesky/praha-vychod/4152-brandys-nad-labem-stara-boleslav"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Road-haulage/kraj-stredocesky/praha-vychod/4152-brandys-nad-labem-stara-boleslav",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3145,7 +3257,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers/International-road-haulage-carriers",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers/International-road-haulage-carriers",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3155,7 +3267,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_international_haulage_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers/International-road-haulage-carriers"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers/International-road-haulage-carriers",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3220,7 +3336,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers/International-road-haulage-carriers/kraj-stredocesky/melnik",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers/International-road-haulage-carriers/kraj-stredocesky/melnik",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3230,7 +3346,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_international_haulage_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers/International-road-haulage-carriers/kraj-stredocesky/melnik"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Other-freight-carriers/International-road-haulage-carriers/kraj-stredocesky/melnik",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3360,7 +3480,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Temperature-controlled-transport",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Temperature-controlled-transport",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3370,7 +3490,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_temperature_controlled_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Temperature-controlled-transport"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Temperature-controlled-transport",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3435,7 +3559,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Temperature-controlled-transport?page=2",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Temperature-controlled-transport?page=2",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3445,7 +3569,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_temperature_controlled_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Temperature-controlled-transport?page=2"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Temperature-controlled-transport?page=2",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3575,7 +3703,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Transport-of-oversized-loads",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Transport-of-oversized-loads",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3585,7 +3713,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_oversized_loads_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Transport-of-oversized-loads"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Transport-of-oversized-loads",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3650,7 +3782,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Transport-of-oversized-loads/kraj-olomoucky",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Transport-of-oversized-loads/kraj-olomoucky",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3660,7 +3792,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_oversized_loads_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Transport-of-oversized-loads/kraj-olomoucky"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Transport-of-oversized-loads/kraj-olomoucky",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3790,7 +3926,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Container-transport",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Container-transport",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3800,7 +3936,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_container_transport_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Container-transport"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Container-transport",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -3865,7 +4005,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Container-transport/kraj-plzensky/plzen-mesto",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Container-transport/kraj-plzensky/plzen-mesto",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -3875,7 +4015,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_container_transport_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Container-transport/kraj-plzensky/plzen-mesto"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Container-transport/kraj-plzensky/plzen-mesto",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4005,7 +4149,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Van-transport",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Van-transport",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4015,7 +4159,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_van_transport_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Van-transport"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Van-transport",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4080,7 +4228,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Van-transport/kraj-plzensky/plzen-mesto?page=2",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Van-transport/kraj-plzensky/plzen-mesto?page=2",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4090,7 +4238,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_van_transport_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Van-transport/kraj-plzensky/plzen-mesto?page=2"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Road-freight-transport/Van-transport/kraj-plzensky/plzen-mesto?page=2",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4220,7 +4372,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Air-carriers/Air-freight-transport",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Air-carriers/Air-freight-transport",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4230,7 +4382,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_air_freight_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Air-carriers/Air-freight-transport"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Air-carriers/Air-freight-transport",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4295,7 +4451,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Air-carriers",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Air-carriers",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4305,7 +4461,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_air_freight_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Air-carriers"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Air-carriers",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4435,7 +4595,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4445,7 +4605,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_courier_service_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4510,7 +4674,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service?page=6",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service?page=6",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4520,7 +4684,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_courier_service_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service?page=6"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service?page=6",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4650,7 +4818,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service/National-courier-service",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service/National-courier-service",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4660,7 +4828,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_national_courier_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service/National-courier-service"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service/National-courier-service",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4725,7 +4897,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service/National-courier-service/kraj-praha",
               "canonical_url": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service/National-courier-service/kraj-praha",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4735,7 +4907,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_national_courier_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service/National-courier-service/kraj-praha"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Transport-and-transportation/Logistic-services/Courier-service/National-courier-service/kraj-praha",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4865,7 +5041,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services",
               "canonical_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4875,7 +5051,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_customs_services_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -4940,7 +5120,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-praha",
               "canonical_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-praha",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -4950,7 +5130,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_customs_services_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-praha"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-praha",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5080,7 +5264,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-clearance",
               "canonical_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-clearance",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5090,7 +5274,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_customs_clearance_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-clearance"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-clearance",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5155,7 +5343,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-clearance?page=2",
               "canonical_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-clearance?page=2",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5165,7 +5353,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_customs_clearance_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-clearance?page=2"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-clearance?page=2",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5295,7 +5487,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses",
               "canonical_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5305,7 +5497,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_bonded_warehouses_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5370,7 +5566,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses/kraj-jihomoravsky/brno-mesto",
               "canonical_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses/kraj-jihomoravsky/brno-mesto",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5380,7 +5576,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_bonded_warehouses_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses/kraj-jihomoravsky/brno-mesto"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses/kraj-jihomoravsky/brno-mesto",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5510,7 +5710,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-jihomoravsky/brno-mesto",
               "canonical_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-jihomoravsky/brno-mesto",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5520,7 +5720,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_customs_brno_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-jihomoravsky/brno-mesto"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-jihomoravsky/brno-mesto",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5585,7 +5789,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses/kraj-praha",
               "canonical_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses/kraj-praha",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5595,7 +5799,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_customs_brno_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses/kraj-praha"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/Customs-bonded-warehouses/kraj-praha",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5725,7 +5933,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-stredocesky/praha-zapad/4294-tuchomerice",
               "canonical_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-stredocesky/praha-zapad/4294-tuchomerice",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5735,7 +5943,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_customs_airport_area_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-stredocesky/praha-zapad/4294-tuchomerice"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-stredocesky/praha-zapad/4294-tuchomerice",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5800,7 +6012,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-stredocesky/rakovnik/4360-srbec",
               "canonical_url": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-stredocesky/rakovnik/4360-srbec",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5810,7 +6022,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_customs_airport_area_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-stredocesky/rakovnik/4360-srbec"
+                "original_url_field": "https://en.firmy.cz/Travel-services/Customs-clearance-services/kraj-stredocesky/rakovnik/4360-srbec",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -5940,7 +6156,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/top/All-for-business/Business-services/Warehousing-services",
               "canonical_url": "https://en.firmy.cz/top/All-for-business/Business-services/Warehousing-services",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -5950,7 +6166,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_warehousing_services_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/top/All-for-business/Business-services/Warehousing-services"
+                "original_url_field": "https://en.firmy.cz/top/All-for-business/Business-services/Warehousing-services",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6015,7 +6235,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://en.firmy.cz/All-for-business/Business-services",
               "canonical_url": "https://en.firmy.cz/All-for-business/Business-services",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6025,7 +6245,11 @@
                 "source_host": "en.firmy.cz",
                 "surface_code": "cs_firmy_warehousing_services_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://en.firmy.cz/All-for-business/Business-services"
+                "original_url_field": "https://en.firmy.cz/All-for-business/Business-services",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6155,7 +6379,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.kompass.com/businessplace/z/cz/",
               "canonical_url": "https://www.kompass.com/businessplace/z/cz/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6165,7 +6389,11 @@
                 "source_host": "www.kompass.com",
                 "surface_code": "cs_kompass_czech_forwarding_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.kompass.com/businessplace/z/cz/"
+                "original_url_field": "https://www.kompass.com/businessplace/z/cz/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6230,7 +6458,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.kompass.com/z/cz/a/shipping-and-forwarding-agents/75780/",
               "canonical_url": "https://www.kompass.com/z/cz/a/shipping-and-forwarding-agents/75780/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6240,7 +6468,11 @@
                 "source_host": "www.kompass.com",
                 "surface_code": "cs_kompass_czech_forwarding_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.kompass.com/z/cz/a/shipping-and-forwarding-agents/75780/"
+                "original_url_field": "https://www.kompass.com/z/cz/a/shipping-and-forwarding-agents/75780/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6370,7 +6602,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.freightnet.com/directory/p1/cCZ/s30.htm",
               "canonical_url": "https://www.freightnet.com/directory/p1/cCZ/s30.htm",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6380,7 +6612,11 @@
                 "source_host": "www.freightnet.com",
                 "surface_code": "cs_freightnet_czech_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.freightnet.com/directory/p1/cCZ/s30.htm"
+                "original_url_field": "https://www.freightnet.com/directory/p1/cCZ/s30.htm",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6445,7 +6681,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.freightnet.com/directory/p1/cCZ/s99.htm",
               "canonical_url": "https://www.freightnet.com/directory/p1/cCZ/s99.htm",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6455,7 +6691,11 @@
                 "source_host": "www.freightnet.com",
                 "surface_code": "cs_freightnet_czech_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.freightnet.com/directory/p1/cCZ/s99.htm"
+                "original_url_field": "https://www.freightnet.com/directory/p1/cCZ/s99.htm",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6585,7 +6825,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.cargoyellowpages.com/en/czech-republic/",
               "canonical_url": "https://www.cargoyellowpages.com/en/czech-republic/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6595,7 +6835,11 @@
                 "source_host": "www.cargoyellowpages.com",
                 "surface_code": "cs_cargo_yellow_pages_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cargoyellowpages.com/en/czech-republic/"
+                "original_url_field": "https://www.cargoyellowpages.com/en/czech-republic/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6660,7 +6904,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.cargoyellowpages.com/",
               "canonical_url": "https://www.cargoyellowpages.com/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6670,7 +6914,11 @@
                 "source_host": "www.cargoyellowpages.com",
                 "surface_code": "cs_cargo_yellow_pages_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.cargoyellowpages.com/"
+                "original_url_field": "https://www.cargoyellowpages.com/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6800,7 +7048,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://azfreight.com/country-facility/freight-forwarders-in-czech-republic/",
               "canonical_url": "https://azfreight.com/country-facility/freight-forwarders-in-czech-republic/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6810,7 +7058,11 @@
                 "source_host": "azfreight.com",
                 "surface_code": "cs_azfreight_czech_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://azfreight.com/country-facility/freight-forwarders-in-czech-republic/"
+                "original_url_field": "https://azfreight.com/country-facility/freight-forwarders-in-czech-republic/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -6875,7 +7127,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://azfreight.com/countries/",
               "canonical_url": "https://azfreight.com/countries/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -6885,7 +7137,11 @@
                 "source_host": "azfreight.com",
                 "surface_code": "cs_azfreight_czech_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://azfreight.com/countries/"
+                "original_url_field": "https://azfreight.com/countries/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7015,7 +7271,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://m.jctrans.com/en/company/listc/Czech%20Republic/0-0",
               "canonical_url": "https://m.jctrans.com/en/company/listc/Czech%20Republic/0-0",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7025,7 +7281,11 @@
                 "source_host": "www.jctrans.com",
                 "surface_code": "cs_jctrans_czech_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://m.jctrans.com/en/company/listc/Czech%20Republic/0-0"
+                "original_url_field": "https://m.jctrans.com/en/company/listc/Czech%20Republic/0-0",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7090,7 +7350,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.jctrans.com/en/company/",
               "canonical_url": "https://www.jctrans.com/en/company/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7100,7 +7360,11 @@
                 "source_host": "www.jctrans.com",
                 "surface_code": "cs_jctrans_czech_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.jctrans.com/en/company/"
+                "original_url_field": "https://www.jctrans.com/en/company/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7230,7 +7494,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://ruzave.com/czech-republic",
               "canonical_url": "https://ruzave.com/czech-republic",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7240,7 +7504,11 @@
                 "source_host": "ruzave.com",
                 "surface_code": "cs_ruzave_czech_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ruzave.com/czech-republic"
+                "original_url_field": "https://ruzave.com/czech-republic",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7305,7 +7573,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://ruzave.com/czech-republic/top-warehouse-companies/",
               "canonical_url": "https://ruzave.com/czech-republic/top-warehouse-companies/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7315,7 +7583,11 @@
                 "source_host": "ruzave.com",
                 "surface_code": "cs_ruzave_czech_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ruzave.com/czech-republic/top-warehouse-companies/"
+                "original_url_field": "https://ruzave.com/czech-republic/top-warehouse-companies/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7445,7 +7717,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://railmarket.com/eu/czech-republic/logistics-companies",
               "canonical_url": "https://railmarket.com/eu/czech-republic/logistics-companies",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7455,7 +7727,11 @@
                 "source_host": "railmarket.com",
                 "surface_code": "cs_railmarket_logistics_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://railmarket.com/eu/czech-republic/logistics-companies"
+                "original_url_field": "https://railmarket.com/eu/czech-republic/logistics-companies",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7520,7 +7796,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://railmarket.com/eu/czech-republic/rail-forwarders",
               "canonical_url": "https://railmarket.com/eu/czech-republic/rail-forwarders",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7530,7 +7806,11 @@
                 "source_host": "railmarket.com",
                 "surface_code": "cs_railmarket_logistics_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://railmarket.com/eu/czech-republic/rail-forwarders"
+                "original_url_field": "https://railmarket.com/eu/czech-republic/rail-forwarders",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7660,7 +7940,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://railmarket.com/eu/czech-republic/companies",
               "canonical_url": "https://railmarket.com/eu/czech-republic/companies",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7670,7 +7950,11 @@
                 "source_host": "railmarket.com",
                 "surface_code": "cs_railmarket_railway_companies_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://railmarket.com/eu/czech-republic/companies"
+                "original_url_field": "https://railmarket.com/eu/czech-republic/companies",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7735,7 +8019,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://railmarket.com/eu/czech-republic/logistics-consulting",
               "canonical_url": "https://railmarket.com/eu/czech-republic/logistics-consulting",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7745,7 +8029,11 @@
                 "source_host": "railmarket.com",
                 "surface_code": "cs_railmarket_railway_companies_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://railmarket.com/eu/czech-republic/logistics-consulting"
+                "original_url_field": "https://railmarket.com/eu/czech-republic/logistics-consulting",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7875,7 +8163,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/czech-republic-freight-forwarders/",
               "canonical_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/czech-republic-freight-forwarders/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7885,7 +8173,11 @@
                 "source_host": "overseasprojectcargo.com",
                 "surface_code": "cs_overseas_project_cargo_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/czech-republic-freight-forwarders/"
+                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/czech-republic-freight-forwarders/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -7950,7 +8242,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/",
               "canonical_url": "https://overseasprojectcargo.com/InternationalFreightForwarders/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -7960,7 +8252,11 @@
                 "source_host": "overseasprojectcargo.com",
                 "surface_code": "cs_overseas_project_cargo_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/"
+                "original_url_field": "https://overseasprojectcargo.com/InternationalFreightForwarders/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8090,7 +8386,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://pangea-network.com/freight-forwarders/czech-republic/",
               "canonical_url": "https://pangea-network.com/freight-forwarders/czech-republic/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8100,7 +8396,11 @@
                 "source_host": "pangea-network.com",
                 "surface_code": "cs_pangea_network_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://pangea-network.com/freight-forwarders/czech-republic/"
+                "original_url_field": "https://pangea-network.com/freight-forwarders/czech-republic/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8165,7 +8465,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://pangea-network.com/",
               "canonical_url": "https://pangea-network.com/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8175,7 +8475,11 @@
                 "source_host": "pangea-network.com",
                 "surface_code": "cs_pangea_network_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://pangea-network.com/"
+                "original_url_field": "https://pangea-network.com/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8305,7 +8609,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.wcaworld.com/directory",
               "canonical_url": "https://www.wcaworld.com/directory",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8315,7 +8619,11 @@
                 "source_host": "www.wcaworld.com",
                 "surface_code": "cs_wcaworld_directory_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.wcaworld.com/directory"
+                "original_url_field": "https://www.wcaworld.com/directory",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8380,7 +8688,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.wcaworld.com/",
               "canonical_url": "https://www.wcaworld.com/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8390,7 +8698,11 @@
                 "source_host": "www.wcaworld.com",
                 "surface_code": "cs_wcaworld_directory_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.wcaworld.com/"
+                "original_url_field": "https://www.wcaworld.com/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8520,7 +8832,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://forwardingcompanies.com/association/association-of-forwarding-and-logistics-of-the-czech-republic-ssl-",
               "canonical_url": "https://forwardingcompanies.com/association/association-of-forwarding-and-logistics-of-the-czech-republic-ssl-",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8530,7 +8842,11 @@
                 "source_host": "forwardingcompanies.com",
                 "surface_code": "cs_forwardingcompanies_ssl_mirror_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://forwardingcompanies.com/association/association-of-forwarding-and-logistics-of-the-czech-republic-ssl-"
+                "original_url_field": "https://forwardingcompanies.com/association/association-of-forwarding-and-logistics-of-the-czech-republic-ssl-",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8595,7 +8911,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://forwardingcompanies.com/",
               "canonical_url": "https://forwardingcompanies.com/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8605,7 +8921,11 @@
                 "source_host": "forwardingcompanies.com",
                 "surface_code": "cs_forwardingcompanies_ssl_mirror_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://forwardingcompanies.com/"
+                "original_url_field": "https://forwardingcompanies.com/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8735,7 +9055,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://clutch.co/cz/logistics/supply-chain-management",
               "canonical_url": "https://clutch.co/cz/logistics/supply-chain-management",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8745,7 +9065,11 @@
                 "source_host": "clutch.co",
                 "surface_code": "cs_clutch_logistics_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://clutch.co/cz/logistics/supply-chain-management"
+                "original_url_field": "https://clutch.co/cz/logistics/supply-chain-management",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8810,7 +9134,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://clutch.co/cz/logistics/freight-forwarders",
               "canonical_url": "https://clutch.co/cz/logistics/freight-forwarders",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8820,7 +9144,11 @@
                 "source_host": "clutch.co",
                 "surface_code": "cs_clutch_logistics_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://clutch.co/cz/logistics/freight-forwarders"
+                "original_url_field": "https://clutch.co/cz/logistics/freight-forwarders",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -8950,7 +9278,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://ensun.io/search/freight-trucking/czechia",
               "canonical_url": "https://ensun.io/search/freight-trucking/czechia",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -8960,7 +9288,11 @@
                 "source_host": "ensun.io",
                 "surface_code": "cs_ensun_freight_trucking_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ensun.io/search/freight-trucking/czechia"
+                "original_url_field": "https://ensun.io/search/freight-trucking/czechia",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9025,7 +9357,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://ensun.io/search/logistics/czechia",
               "canonical_url": "https://ensun.io/search/logistics/czechia",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9035,7 +9367,11 @@
                 "source_host": "ensun.io",
                 "surface_code": "cs_ensun_freight_trucking_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://ensun.io/search/logistics/czechia"
+                "original_url_field": "https://ensun.io/search/logistics/czechia",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9165,7 +9501,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.searates.com/de/reference/logistics-service/czech_republic/",
               "canonical_url": "https://www.searates.com/de/reference/logistics-service/czech_republic/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9175,7 +9511,11 @@
                 "source_host": "www.searates.com",
                 "surface_code": "cs_searates_logistics_reference_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.searates.com/de/reference/logistics-service/czech_republic/"
+                "original_url_field": "https://www.searates.com/de/reference/logistics-service/czech_republic/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9240,7 +9580,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.searates.com/reference/",
               "canonical_url": "https://www.searates.com/reference/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9250,7 +9590,11 @@
                 "source_host": "www.searates.com",
                 "surface_code": "cs_searates_logistics_reference_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.searates.com/reference/"
+                "original_url_field": "https://www.searates.com/reference/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9380,7 +9724,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://aeroceanetwork.net/directory/",
               "canonical_url": "https://aeroceanetwork.net/directory/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9390,7 +9734,11 @@
                 "source_host": "aeroceanetwork.net",
                 "surface_code": "cs_aerocean_network_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://aeroceanetwork.net/directory/"
+                "original_url_field": "https://aeroceanetwork.net/directory/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9455,7 +9803,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://aeroceanetwork.net/",
               "canonical_url": "https://aeroceanetwork.net/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9465,7 +9813,11 @@
                 "source_host": "aeroceanetwork.net",
                 "surface_code": "cs_aerocean_network_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://aeroceanetwork.net/"
+                "original_url_field": "https://aeroceanetwork.net/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9595,7 +9947,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.fretador.com/search/q/Freight-Forwarding/to-Germany/in-Czech-Republic?member=262-International-Chamber-of-Commerce-Czech-Republic-ICC",
               "canonical_url": "https://www.fretador.com/search/q/Freight-Forwarding/to-Germany/in-Czech-Republic?member=262-International-Chamber-of-Commerce-Czech-Republic-ICC",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9605,7 +9957,11 @@
                 "source_host": "www.fretador.com",
                 "surface_code": "cs_fretador_marketplace_seed_01",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.fretador.com/search/q/Freight-Forwarding/to-Germany/in-Czech-Republic?member=262-International-Chamber-of-Commerce-Czech-Republic-ICC"
+                "original_url_field": "https://www.fretador.com/search/q/Freight-Forwarding/to-Germany/in-Czech-Republic?member=262-International-Chamber-of-Commerce-Czech-Republic-ICC",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
@@ -9670,7 +10026,7 @@
               "notes": "Candidate-only source-seed URL. No DB/frontier insertion and no live activation before controlled pi51c live probe gate.",
               "submitted_url": "https://www.fretador.com/",
               "canonical_url": "https://www.fretador.com/",
-              "seed_type": "directory_or_category_seed",
+              "seed_type": "listing_index",
               "is_enabled": true,
               "priority": 100,
               "max_depth": 1,
@@ -9680,7 +10036,11 @@
                 "source_host": "www.fretador.com",
                 "surface_code": "cs_fretador_marketplace_seed_02",
                 "migration_gate": "FULL_R4_CANONICAL_CATALOG_SCHEMA_MIGRATION_LOCAL_ONLY_R1",
-                "original_url_field": "https://www.fretador.com/"
+                "original_url_field": "https://www.fretador.com/",
+                "original_seed_type": "directory_or_category_seed",
+                "seed_type_enum_canonicalization_gate": "FULL_R4_SEED_TYPE_ENUM_CANONICAL_PATCH_LOCAL_ONLY_R1",
+                "seed_type_enum_canonicalization_policy": "permanent_json_contract_fix_no_import_adapter",
+                "seed_type_enum_canonical_value": "listing_index"
               }
             }
           ],
