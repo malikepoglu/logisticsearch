@@ -288,6 +288,7 @@ from .logisticsearch1_1_2_2_worker_lease_runtime import (
 from .logisticsearch1_1_2_4_1_acquisition_support import (
     validate_fetched_page_result_contract,
 )
+import time
 
 
 # EN: This dataclass stores runtime configuration for the public worker surface.
@@ -768,7 +769,7 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
 
 
 
-def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
+def _logisticsearch_run_claim_probe_impl_p1a(config: WorkerConfig) -> ClaimProbeResult:
     # EN: We create a unique run id first so the whole execution can be traced.
     # TR: Tüm çalıştırma izlenebilir olsun diye önce benzersiz bir run id üretiyoruz.
     # EN: LOCAL VALUE EXPLANATION / run_claim_probe / run_id
@@ -2166,6 +2167,46 @@ def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
         # EN: We always close the connection even if an error occurs.
         # TR: Hata oluşsa bile bağlantıyı her durumda kapatıyoruz.
         close_db(conn)
+
+
+# P1A_TIMEOUT_OBSERVABILITY_R2_BEGIN
+# EN: This wrapper is behavior-neutral: it measures run_claim_probe wall-clock time
+# EN: and attaches timing metadata only when the returned payload is a mutable dict.
+# TR: Bu sarmalayıcı davranış değiştirmez: run_claim_probe wall-clock süresini ölçer
+# TR: ve yalnızca dönen payload mutable dict ise timing metadata ekler.
+def _logisticsearch_p1a_timeout_observability_payload(payload, timing_payload):
+    if not isinstance(payload, dict):
+        return payload
+
+    next_payload = dict(payload)
+    existing_metadata = next_payload.get("worker_runtime_metadata")
+    if isinstance(existing_metadata, dict):
+        worker_runtime_metadata = dict(existing_metadata)
+    else:
+        worker_runtime_metadata = {}
+
+    worker_runtime_metadata["p1a_timeout_observability_v1"] = timing_payload
+    next_payload["worker_runtime_metadata"] = worker_runtime_metadata
+    return next_payload
+
+
+def run_claim_probe(config: WorkerConfig) -> ClaimProbeResult:
+    p1a_started_monotonic_ns = time.monotonic_ns()
+    p1a_result = _logisticsearch_run_claim_probe_impl_p1a(config)
+    p1a_finished_monotonic_ns = time.monotonic_ns()
+    p1a_elapsed_ms = round((p1a_finished_monotonic_ns - p1a_started_monotonic_ns) / 1_000_000, 3)
+
+    p1a_timing_payload = {
+        "schema": "p1a_timeout_observability_v1",
+        "source_file": "makpi51crawler/python_live_runtime/logisticsearch1_1_2_worker_runtime.py",
+        "scope": "run_claim_probe_wall_clock",
+        "started_monotonic_ns": p1a_started_monotonic_ns,
+        "finished_monotonic_ns": p1a_finished_monotonic_ns,
+        "elapsed_ms": p1a_elapsed_ms,
+        "behavior_change": False,
+    }
+    return _logisticsearch_p1a_timeout_observability_payload(p1a_result, p1a_timing_payload)
+# P1A_TIMEOUT_OBSERVABILITY_R2_END
 
 
 # EN: This explicit export list keeps the parent public surface honest.
