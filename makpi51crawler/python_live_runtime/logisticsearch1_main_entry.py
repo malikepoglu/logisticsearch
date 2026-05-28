@@ -364,6 +364,10 @@ TR:
 Çünkü kök giriş katmanı kötü alt sözleşmeleri gizlememeli, görünür kılmalıdır.
 """
 
+import os
+import signal
+import threading
+import time
 # EN:
 # This import is the entire operational point of this file.
 # EN:
@@ -569,9 +573,51 @@ def main() -> int:
 # TR: STAGE21-AUTO-COMMENT :: Bu koruma yeniden kullanılabilir import davranışı ile doğrudan komut satırı tarzı başlatma davranışını temiz biçimde ayırır.
 # TR: STAGE21-AUTO-COMMENT :: Operasyonel denetimlerde bu blok doğrudan çalıştırmanın nerede başladığını ve sadece import davranışının nerede bittiğini söyler.
 # TR: STAGE21-AUTO-COMMENT :: Bu korumayı açık tutmak önemlidir çünkü giriş modülleri başlatma olaylarında insanların ilk baktığı yerdir.
+# P1M_GRACEFUL_STOP_LATENCY_SIGNAL_HANDLER_R1_BEGIN
+_LOGISTICSEARCH_CONTROLLED_SHUTDOWN_REQUESTED = threading.Event()
+_LOGISTICSEARCH_CONTROLLED_SHUTDOWN_FORCE_EXIT_GRACE_SECONDS = 20.0
+_LOGISTICSEARCH_CONTROLLED_SHUTDOWN_SIGNAL_HANDLERS_INSTALLED = False
+
+
+def _logisticsearch_force_exit_after_grace(signum: int) -> None:
+    """Exit before external kill-after if controlled shutdown cannot unwind in time."""
+    time.sleep(_LOGISTICSEARCH_CONTROLLED_SHUTDOWN_FORCE_EXIT_GRACE_SECONDS)
+    if _LOGISTICSEARCH_CONTROLLED_SHUTDOWN_REQUESTED.is_set():
+        os._exit(0)
+
+
+def _logisticsearch_controlled_shutdown_signal_handler(signum: int, frame: object) -> None:
+    """Convert SIGINT/SIGTERM into bounded clean shutdown without traceback."""
+    _LOGISTICSEARCH_CONTROLLED_SHUTDOWN_REQUESTED.set()
+    watchdog = threading.Thread(
+        target=_logisticsearch_force_exit_after_grace,
+        args=(signum,),
+        name="logisticsearch-controlled-shutdown-watchdog",
+        daemon=True,
+    )
+    watchdog.start()
+    raise KeyboardInterrupt()
+
+
+def _logisticsearch_install_controlled_shutdown_signal_handlers() -> None:
+    """Install idempotent SIGINT/SIGTERM handlers for 24/7 crawler stop latency."""
+    global _LOGISTICSEARCH_CONTROLLED_SHUTDOWN_SIGNAL_HANDLERS_INSTALLED
+
+    if _LOGISTICSEARCH_CONTROLLED_SHUTDOWN_SIGNAL_HANDLERS_INSTALLED:
+        return
+
+    for signal_name in ("SIGINT", "SIGTERM"):
+        signum = getattr(signal, signal_name, None)
+        if signum is not None:
+            signal.signal(signum, _logisticsearch_controlled_shutdown_signal_handler)
+
+    _LOGISTICSEARCH_CONTROLLED_SHUTDOWN_SIGNAL_HANDLERS_INSTALLED = True
+# P1M_GRACEFUL_STOP_LATENCY_SIGNAL_HANDLER_R1_END
+
 # P1L_TOP_LEVEL_KEYBOARD_INTERRUPT_CLEAN_EXIT_R1B_BEGIN
 def _logisticsearch_main_entry_controlled_shutdown() -> int:
     """Return cleanly on controlled KeyboardInterrupt without traceback."""
+    _logisticsearch_install_controlled_shutdown_signal_handlers()
     try:
         result = main()
     except KeyboardInterrupt:
