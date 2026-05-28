@@ -150,6 +150,9 @@ TR:
 
 from __future__ import annotations
 
+import hashlib
+from urllib.parse import urldefrag, urljoin, urlparse, urlunparse
+
 # EN: We import the stable acquisition-family public surface because finalize
 # EN: helpers need claimed-url field access plus the fetched-page contract shape.
 # TR: Finalize yardımcıları claimed-url alan erişimine ve fetched-page sözleşme
@@ -267,6 +270,310 @@ def _logisticsearch_build_p1f_timeout_policy_fetch_metadata_patch(
         },
     }
 # P1F_TIMEOUT_POLICY_FETCH_METADATA_PERSISTENCE_R1_END
+
+
+# P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_R1_BEGIN
+def _logisticsearch_p1k_normalize_absolute_url(url_value: str) -> str:
+    """Normalize one absolute URL for P1K equality and frontier identity checks."""
+    raw_url = str(url_value or "").strip()
+    if not raw_url:
+        return ""
+    try:
+        without_fragment, _fragment = urldefrag(raw_url)
+        parsed = urlparse(without_fragment)
+        scheme = str(parsed.scheme or "").lower()
+        host = str(parsed.hostname or "").lower()
+        if scheme not in {"http", "https"} or not host:
+            return raw_url
+        try:
+            parsed_port = parsed.port
+        except ValueError:
+            return raw_url
+        if parsed_port is None:
+            netloc = host
+        elif (scheme == "https" and parsed_port == 443) or (scheme == "http" and parsed_port == 80):
+            netloc = host
+        else:
+            netloc = f"{host}:{int(parsed_port)}"
+        path = parsed.path or "/"
+        return urlunparse((scheme, netloc, path, "", parsed.query or "", ""))
+    except Exception:
+        return raw_url
+
+
+def _logisticsearch_p1k_normalize_http_3xx_redirect_target(
+    *,
+    request_url: str,
+    redirect_target_url: str,
+) -> dict[str, object]:
+    """Normalize one HTTP 3xx redirect target without network I/O."""
+    raw_request_url = str(request_url or "").strip()
+    raw_redirect_target_url = str(redirect_target_url or "").strip()
+
+    if not raw_request_url or not raw_redirect_target_url:
+        return {
+            "redirect_target_available": False,
+            "redirect_target_skip_reason": "missing_request_or_redirect_target",
+        }
+
+    try:
+        absolute_url = urljoin(raw_request_url, raw_redirect_target_url)
+        absolute_url, _fragment = urldefrag(absolute_url)
+        parsed = urlparse(absolute_url)
+    except Exception as exc:
+        return {
+            "redirect_target_available": False,
+            "redirect_target_skip_reason": "url_parse_error",
+            "redirect_target_error": f"{type(exc).__name__}: {exc}",
+        }
+
+    scheme = str(parsed.scheme or "").lower()
+    host = str(parsed.hostname or "").lower()
+
+    if scheme not in {"http", "https"} or not host:
+        return {
+            "redirect_target_available": False,
+            "redirect_target_skip_reason": "unsupported_scheme_or_missing_host",
+            "redirect_target_scheme": scheme,
+            "redirect_target_host": host,
+        }
+
+    try:
+        parsed_port = parsed.port
+    except ValueError:
+        return {
+            "redirect_target_available": False,
+            "redirect_target_skip_reason": "invalid_port",
+            "redirect_target_raw": raw_redirect_target_url,
+        }
+
+    if parsed_port is None:
+        port = 443 if scheme == "https" else 80
+        netloc = host
+    else:
+        port = int(parsed_port)
+        if (scheme == "https" and port == 443) or (scheme == "http" and port == 80):
+            netloc = host
+        else:
+            netloc = f"{host}:{port}"
+
+    path = parsed.path or "/"
+    query = parsed.query or ""
+    normalized_url = urlunparse((scheme, netloc, path, "", query, ""))
+    request_normalized = _logisticsearch_p1k_normalize_absolute_url(raw_request_url)
+
+    if normalized_url == request_normalized:
+        return {
+            "redirect_target_available": False,
+            "redirect_target_skip_reason": "target_equals_request_after_normalization",
+            "redirect_target_url": normalized_url,
+            "request_url_normalized": request_normalized,
+        }
+
+    target_has_404_hint = any(
+        token in normalized_url.lower()
+        for token in ["/404", "404.aspx", "customerrorpages/404", "not-found", "notfound"]
+    )
+
+    return {
+        "redirect_target_available": True,
+        "redirect_target_url": normalized_url,
+        "request_url_normalized": request_normalized,
+        "redirect_target_scheme": scheme,
+        "redirect_target_host": host,
+        "redirect_target_port": port,
+        "redirect_target_authority_key": f"{host}:{port}",
+        "redirect_target_path": path,
+        "redirect_target_query": query,
+        "redirect_target_has_404_hint": target_has_404_hint,
+        "redirect_target_policy_schema": "p1k_http_3xx_redirect_target_policy_v1",
+    }
+
+
+def _logisticsearch_p1k_build_http_3xx_redirect_target_policy(
+    *,
+    request_url: str,
+    http_status: int | None,
+    fetched_page: FetchedPageResult | None,
+) -> dict[str, object]:
+    """Build P1K metadata when a 3xx final_url points to a different target."""
+    if http_status is None or not (300 <= int(http_status) <= 399):
+        return {}
+
+    if fetched_page is None:
+        return {
+            "schema": "p1k_http_3xx_redirect_target_policy_v1",
+            "source": "fetch_finalize_runtime.finalize_http_error",
+            "destination": "http_fetch.fetch_attempt.fetch_metadata",
+            "behavior_change": True,
+            "redirect_target_available": False,
+            "redirect_target_skip_reason": "fetched_page_missing",
+            "http_status": int(http_status),
+        }
+
+    final_url = str(getattr(fetched_page, "final_url", "") or "").strip()
+    normalized = _logisticsearch_p1k_normalize_http_3xx_redirect_target(
+        request_url=str(request_url or ""),
+        redirect_target_url=final_url,
+    )
+
+    return {
+        "schema": "p1k_http_3xx_redirect_target_policy_v1",
+        "source": "fetch_finalize_runtime.finalize_http_error",
+        "destination": "http_fetch.fetch_attempt.fetch_metadata_and_frontier.enqueue_discovered_url",
+        "behavior_change": True,
+        "http_status": int(http_status),
+        "request_url": str(request_url or ""),
+        "fetched_page_final_url": final_url,
+        **normalized,
+    }
+
+
+def _logisticsearch_p1k_build_http_3xx_redirect_target_policy_fetch_metadata_patch(
+    *,
+    request_url: str,
+    http_status: int | None,
+    fetched_page: FetchedPageResult | None,
+) -> dict[str, object]:
+    """Return fetch_metadata patch for P1K redirect target evidence."""
+    policy = _logisticsearch_p1k_build_http_3xx_redirect_target_policy(
+        request_url=request_url,
+        http_status=http_status,
+        fetched_page=fetched_page,
+    )
+    if not policy:
+        return {}
+    return {
+        "p1k_http_3xx_redirect_target_policy": policy,
+    }
+
+
+def _logisticsearch_p1k_policy_has_redirect_target(policy: dict[str, object]) -> bool:
+    return bool(policy.get("redirect_target_available")) and bool(
+        str(policy.get("redirect_target_url") or "").strip()
+    )
+
+
+def _logisticsearch_p1k_int_claimed_url_value(
+    claimed_url: object,
+    key: str,
+    default: int,
+) -> int:
+    try:
+        return int(get_claimed_url_value(claimed_url, key))
+    except Exception:
+        return int(default)
+
+
+def _logisticsearch_p1k_enqueue_http_3xx_redirect_target(
+    conn,
+    *,
+    claimed_url: object,
+    redirect_policy: dict[str, object],
+) -> dict[str, object]:
+    """Enqueue or reuse normalized redirect target through the existing frontier function."""
+    if not _logisticsearch_p1k_policy_has_redirect_target(redirect_policy):
+        return {
+            "schema": "p1k_http_3xx_redirect_target_policy_v1",
+            "redirect_target_enqueue_attempted": False,
+            "redirect_target_enqueue_reason": "no_redirect_target",
+        }
+
+    target_url = str(redirect_policy.get("redirect_target_url") or "").strip()
+    target_scheme = str(redirect_policy.get("redirect_target_scheme") or "").strip()
+    target_host = str(redirect_policy.get("redirect_target_host") or "").strip()
+    target_path = str(redirect_policy.get("redirect_target_path") or "/").strip() or "/"
+    target_query = str(redirect_policy.get("redirect_target_query") or "").strip()
+    target_port = int(redirect_policy.get("redirect_target_port") or (443 if target_scheme == "https" else 80))
+    target_authority_key = str(redirect_policy.get("redirect_target_authority_key") or f"{target_host}:{target_port}").strip()
+
+    parent_url_id = _logisticsearch_p1k_int_claimed_url_value(claimed_url, "url_id", 0)
+    parent_depth = _logisticsearch_p1k_int_claimed_url_value(claimed_url, "depth", 0)
+    parent_priority = _logisticsearch_p1k_int_claimed_url_value(claimed_url, "priority", 100)
+    canonical_url_sha256 = hashlib.sha256(target_url.encode("utf-8")).hexdigest()
+
+    try:
+        with conn.cursor() as cursor:
+            cursor.execute(
+                """
+                SELECT
+                  url_id,
+                  host_id,
+                  canonical_url,
+                  state::text,
+                  discovery_type::text,
+                  depth,
+                  priority
+                FROM frontier.enqueue_discovered_url(
+                  p_parent_url_id := %s,
+                  p_canonical_url := %s,
+                  p_canonical_url_sha256 := %s,
+                  p_port := %s,
+                  p_scheme := %s,
+                  p_host := %s,
+                  p_authority_key := %s,
+                  p_registrable_domain := %s,
+                  p_url_path := %s,
+                  p_url_query := %s,
+                  p_discovery_type := 'redirect'::frontier.discovery_type_enum,
+                  p_depth := %s,
+                  p_priority := %s,
+                  p_enqueue_reason := %s
+                )
+                """,
+                (
+                    parent_url_id,
+                    target_url,
+                    canonical_url_sha256,
+                    target_port,
+                    target_scheme,
+                    target_host,
+                    target_authority_key,
+                    target_host,
+                    target_path,
+                    target_query,
+                    parent_depth + 1,
+                    parent_priority,
+                    "p1k_http_3xx_redirect_target_policy_v1: normalized HTTP 3xx final_url target",
+                ),
+            )
+            row = cursor.fetchone()
+    except Exception as exc:
+        return {
+            "schema": "p1k_http_3xx_redirect_target_policy_v1",
+            "redirect_target_enqueue_attempted": True,
+            "redirect_target_enqueue_persisted": False,
+            "redirect_target_enqueue_error": f"{type(exc).__name__}: {exc}",
+            "redirect_target_url": target_url,
+        }
+
+    if row is None:
+        return {
+            "schema": "p1k_http_3xx_redirect_target_policy_v1",
+            "redirect_target_enqueue_attempted": True,
+            "redirect_target_enqueue_persisted": False,
+            "redirect_target_enqueue_error": "frontier.enqueue_discovered_url_returned_no_row",
+            "redirect_target_url": target_url,
+        }
+
+    def row_value(index: int, key: str) -> object:
+        if hasattr(row, "keys") and key in row:
+            return row[key]
+        return row[index]
+
+    return {
+        "schema": "p1k_http_3xx_redirect_target_policy_v1",
+        "redirect_target_enqueue_attempted": True,
+        "redirect_target_enqueue_persisted": True,
+        "redirect_target_url_id": row_value(0, "url_id"),
+        "redirect_target_host_id": row_value(1, "host_id"),
+        "redirect_target_url": row_value(2, "canonical_url"),
+        "redirect_target_state": row_value(3, "state"),
+        "redirect_target_discovery_type": row_value(4, "discovery_type"),
+        "redirect_target_depth": row_value(5, "depth"),
+        "redirect_target_priority": row_value(6, "priority"),
+    }
+# P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_R1_END
 
 
 def log_fetch_attempt_terminal_from_worker(
@@ -415,6 +722,20 @@ def log_fetch_attempt_terminal_from_worker(
             payload["fetch_metadata"] = {
                 **fetch_metadata_value,
                 **timeout_policy_metadata,
+            }
+
+
+    p1k_redirect_policy_metadata = _logisticsearch_p1k_build_http_3xx_redirect_target_policy_fetch_metadata_patch(
+        request_url=request_url,
+        http_status=payload.get("http_status"),
+        fetched_page=fetched_page,
+    )
+    if p1k_redirect_policy_metadata:
+        fetch_metadata_value = payload.get("fetch_metadata")
+        if isinstance(fetch_metadata_value, dict):
+            payload["fetch_metadata"] = {
+                **fetch_metadata_value,
+                **p1k_redirect_policy_metadata,
             }
 
 
@@ -1173,13 +1494,49 @@ def finalize_http_error(
         error_message=error_message,
     )
 
+    request_url = str(get_claimed_url_value(claimed_url, "canonical_url"))
+    p1k_redirect_policy = _logisticsearch_p1k_build_http_3xx_redirect_target_policy(
+        request_url=request_url,
+        http_status=http_status,
+        fetched_page=fetched_page,
+    )
+    p1k_redirect_enqueue_result: dict[str, object] | None = None
+    p1k_finish_mode = "retryable" if is_retryable else "permanent"
+
     # EN: The retryable/permanent frontier finalize call may still return no row on
     # EN: some drift paths. That must degrade cleanly instead of crashing the worker.
     # TR: Retryable/permanent frontier finalize çağrısı bazı drift yollarında hâlâ
     # TR: satır döndürmeyebilir. Bu durum worker’ı çökertmek yerine temizce
     # TR: degrade edilmelidir.
     try:
-        if is_retryable:
+        if _logisticsearch_p1k_policy_has_redirect_target(p1k_redirect_policy):
+            p1k_redirect_enqueue_result = _logisticsearch_p1k_enqueue_http_3xx_redirect_target(
+                conn,
+                claimed_url=claimed_url,
+                redirect_policy=p1k_redirect_policy,
+            )
+            if bool(p1k_redirect_enqueue_result.get("redirect_target_enqueue_persisted")):
+                p1k_finish_mode = "permanent"
+                finalize_result = finish_fetch_permanent_error(
+                    conn,
+                    url_id=url_id,
+                    lease_token=lease_token,
+                    http_status=http_status,
+                    error_class="http_3xx_redirect_target_enqueued",
+                    error_message=f"{error_message} | {p1k_schema}: redirect target queued/reused",
+                )
+            else:
+                p1k_finish_mode = "retryable"
+                finalize_result = finish_fetch_retryable_error(
+                    conn,
+                    url_id=url_id,
+                    lease_token=lease_token,
+                    http_status=http_status,
+                    error_class=error_class,
+                    error_message=f"{error_message} | {p1k_schema}: redirect target enqueue failed",
+                    retry_delay=None,
+                )
+        elif is_retryable:
             # EN: LOCAL VALUE EXPLANATION / finalize_http_error / finalize_result
             # EN: This local exists because the current finalize-phase branch needs a named
             # EN: and reviewable intermediate value instead of hiding `finish_fetch_retryable_error( conn, url_id=url_id, lease_token=lease_token, http_status=http_status, error_class=error_class, error_message=` inline.
@@ -1261,7 +1618,7 @@ def finalize_http_error(
         # TR: - aşağıdaki dal mantığı tamamlanmadan bu yerelin başarıyı garanti ettiğini düşünmek
         finalize_result_payload = dict(finalize_result)
     except RuntimeError as exc:
-        if is_retryable:
+        if p1k_finish_mode == "retryable":
             # EN: LOCAL VALUE EXPLANATION / finalize_http_error / expected_message
             # EN: This local exists because the current finalize-phase branch needs a named
             # EN: and reviewable intermediate value instead of hiding `"frontier.finish_fetch_retryable_error(...) returned no row"` inline.
@@ -1385,6 +1742,8 @@ def finalize_http_error(
     return {
         **finalize_result_payload,
         "fetch_attempt_log": dict(fetch_attempt_log),
+        "p1k_redirect_target_policy": dict(p1k_redirect_policy) if p1k_redirect_policy else None,
+        "p1k_redirect_enqueue_result": dict(p1k_redirect_enqueue_result) if p1k_redirect_enqueue_result else None,
     }
 
 
