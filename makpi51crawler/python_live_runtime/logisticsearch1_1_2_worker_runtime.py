@@ -737,7 +737,13 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
               'runtime_retry_wait_fetch_attempt_row_reason', 'runtime_exception_before_terminal_fetch_attempt_log',
               'runtime_retry_wait_frontier_fetch_attempt_count_incremented', false,
               'runtime_retry_wait_counter_policy', 'claim_increment_only_no_second_increment',
-              'runtime_retry_wait_backoff_policy', 'class_based_runtime_exception_backoff_v3'
+              'runtime_retry_wait_backoff_policy', 'class_based_runtime_exception_backoff_v3',
+              'runtime_exception_timeout_policy_schema', 'p1h_runtime_exception_timeout_policy_v1',
+              'runtime_exception_timeout_policy_source', 'worker_runtime.runtime_exception_retry_wait',
+              'runtime_exception_timeout_policy_destination', 'frontier.url.url_metadata',
+              'runtime_exception_timeout_policy_error_class', %s::text,
+              'runtime_exception_timeout_policy_retry_after_seconds', %s::integer,
+              'runtime_exception_timeout_policy_behavior_change', false
             )
         WHERE url_id = %s
           AND lease_token = %s
@@ -749,6 +755,8 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
             bounded_message,
             error_class,
             worker_id,
+            retry_after_seconds,
+            error_class,
             retry_after_seconds,
             url_id,
             lease_token,
