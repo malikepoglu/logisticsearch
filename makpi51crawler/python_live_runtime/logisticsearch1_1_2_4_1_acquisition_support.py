@@ -303,6 +303,11 @@ class FetchedPageResult:
     # TR: fetched_at fetch sonucunun ne zaman üretildiğini kaydeder.
     fetched_at: str
 
+    # P1B_FETCHED_PAGE_RESULT_TIMEOUT_POLICY_SCHEMA_R1_BEGIN
+    # EN: timeout_policy is optional behavior-neutral acquisition timeout policy evidence.
+    # TR: timeout_policy opsiyonel davranışsız acquisition timeout policy kanıtıdır.
+    timeout_policy: dict[str, object] | None = None
+
 @dataclass
 # EN: ACQUISITION SUPPORT CLASS PURPOSE MEMORY BLOCK V6 / FetchedRobotsTxtResult
 # EN:
