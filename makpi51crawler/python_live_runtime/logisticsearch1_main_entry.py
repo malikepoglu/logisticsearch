@@ -569,13 +569,17 @@ def main() -> int:
 # TR: STAGE21-AUTO-COMMENT :: Bu koruma yeniden kullanılabilir import davranışı ile doğrudan komut satırı tarzı başlatma davranışını temiz biçimde ayırır.
 # TR: STAGE21-AUTO-COMMENT :: Operasyonel denetimlerde bu blok doğrudan çalıştırmanın nerede başladığını ve sadece import davranışının nerede bittiğini söyler.
 # TR: STAGE21-AUTO-COMMENT :: Bu korumayı açık tutmak önemlidir çünkü giriş modülleri başlatma olaylarında insanların ilk baktığı yerdir.
+# P1L_TOP_LEVEL_KEYBOARD_INTERRUPT_CLEAN_EXIT_R1B_BEGIN
+def _logisticsearch_main_entry_controlled_shutdown() -> int:
+    """Return cleanly on controlled KeyboardInterrupt without traceback."""
+    try:
+        result = main()
+    except KeyboardInterrupt:
+        return 0
+    if result is None:
+        return 0
+    return int(result)
+# P1L_TOP_LEVEL_KEYBOARD_INTERRUPT_CLEAN_EXIT_R1B_END
+
 if __name__ == "__main__":
-    # EN: STAGE21-AUTO-COMMENT :: This statement is part of the visible main-entry control path and is being annotated to keep the file beginner-friendly.
-    # EN: STAGE21-AUTO-COMMENT :: Even when the syntax is familiar, the purpose of the statement should remain explicit because entry code anchors the reading path.
-    # EN: STAGE21-AUTO-COMMENT :: Review this line together with nearby comments so the local intention and the larger orchestration intention stay aligned.
-    # EN: STAGE21-AUTO-COMMENT :: This marker exists to prevent silent meaning from hiding inside compact startup code.
-    # TR: STAGE21-AUTO-COMMENT :: Bu ifade görünür ana giriş kontrol yolunun parçasıdır ve dosyayı yeni başlayanlar için anlaşılır tutmak adına açıklanmaktadır.
-    # TR: STAGE21-AUTO-COMMENT :: Sözdizimi tanıdık olsa bile ifadenin amacı açık kalmalıdır çünkü giriş kodu okuma yolunu sabitler.
-    # TR: STAGE21-AUTO-COMMENT :: Bu satırı yakın yorumlarla birlikte gözden geçir ki yerel niyet ile büyük orkestrasyon niyeti uyumlu kalsın.
-    # TR: STAGE21-AUTO-COMMENT :: Bu işaret sıkışık başlatma kodu içine sessiz anlam gizlenmesini önlemek için vardır.
-    raise SystemExit(main())
+    raise SystemExit(_logisticsearch_main_entry_controlled_shutdown())
