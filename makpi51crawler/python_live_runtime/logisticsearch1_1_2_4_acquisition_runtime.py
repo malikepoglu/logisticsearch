@@ -158,7 +158,7 @@ from __future__ import annotations
 # EN: explicit, named, and beginner-readable instead of being loose dicts.
 # TR: Seçim ve yürütme sonuçları gevşek dict yapıları yerine açık, isimli ve
 # TR: beginner-okunur kalsın diye dataclass içe aktarıyoruz.
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 
 # EN: We import Path because the public orchestration function keeps raw_root
 # EN: configurable and explicit in its signature.
@@ -924,6 +924,20 @@ def _logisticsearch_build_p1b_acquisition_timeout_policy() -> dict[str, object]:
     }
 
 
+# P1B_CHILD_TIMEOUT_POLICY_PROPAGATION_R1_BEGIN
+# EN: Attach timeout policy evidence to the fetch result by creating a dataclass copy.
+# EN: This does not change bytes fetched, URL selection, retry/dead policy, or raw artefacts.
+# TR: Timeout policy kanıtını fetch sonucuna dataclass kopyası oluşturarak ekler.
+# TR: Fetch edilen byte'ları, URL seçimini, retry/dead politikasını veya raw artefact'ları değiştirmez.
+def _logisticsearch_attach_p1b_timeout_policy_to_fetch_result(
+    fetch_result: FetchedPageResult,
+) -> FetchedPageResult:
+    return replace(
+        fetch_result,
+        timeout_policy=_logisticsearch_build_p1b_acquisition_timeout_policy(),
+    )
+
+
 def fetch_page_via_selection_to_raw_storage(
     claimed_url: object,
     *,
@@ -961,7 +975,7 @@ def fetch_page_via_selection_to_raw_storage(
             selection_plan=selection_plan,
             method_used="browser",
             fallback_used=False,
-            fetch_result=browser_fetch_result,
+            fetch_result=_logisticsearch_attach_p1b_timeout_policy_to_fetch_result(browser_fetch_result),
             http_error_class=None,
             http_error_message=None,
             timeout_policy=_logisticsearch_build_p1b_acquisition_timeout_policy(),
@@ -983,7 +997,7 @@ def fetch_page_via_selection_to_raw_storage(
             selection_plan=selection_plan,
             method_used="http",
             fallback_used=False,
-            fetch_result=http_fetch_result,
+            fetch_result=_logisticsearch_attach_p1b_timeout_policy_to_fetch_result(http_fetch_result),
             http_error_class=None,
             http_error_message=None,
             timeout_policy=_logisticsearch_build_p1b_acquisition_timeout_policy(),
@@ -1009,7 +1023,7 @@ def fetch_page_via_selection_to_raw_storage(
             selection_plan=selection_plan,
             method_used="browser",
             fallback_used=True,
-            fetch_result=browser_fetch_result,
+            fetch_result=_logisticsearch_attach_p1b_timeout_policy_to_fetch_result(browser_fetch_result),
             http_error_class=type(http_error).__name__,
             http_error_message=str(http_error),
             timeout_policy=_logisticsearch_build_p1b_acquisition_timeout_policy(),
