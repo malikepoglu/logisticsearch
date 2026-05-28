@@ -26,7 +26,22 @@ DEFAULT_LIVE_ROOT: Final[Path] = Path("/logisticsearch/makpi51crawler")
 DEFAULT_ENV_FILE: Final[Path] = Path("/home/makpi51/.config/logisticsearch/secrets/webcrawler.env")
 DEFAULT_DURABLE_RUN_ROOT: Final[Path] = Path("/srv/webcrawler/test_runs")
 DEFAULT_LABEL: Final[str] = "full_26_json_r4"
+# P0 note: DEFAULT_HARD_TIMEOUT_SECONDS is a test-harness safety belt,
+# not a production/7x24 crawler lifecycle limit. Passing
+# --hard-timeout-seconds 0 disables only this global test limit.
 DEFAULT_HARD_TIMEOUT_SECONDS: Final[int] = 14400
+
+
+def _non_negative_int(raw: str) -> int:
+    try:
+        value = int(raw)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError("must be an integer") from exc
+    if value < 0:
+        raise argparse.ArgumentTypeError(
+            "must be >= 0; use 0 to disable only the test-harness global timeout"
+        )
+    return value
 DEFAULT_MONITOR_EVERY_SECONDS: Final[int] = 30
 DEFAULT_TERM_GRACE_SECONDS: Final[int] = 30
 
@@ -209,8 +224,22 @@ __LS_MONITOR_SQL__
   raw_bytes="$(find /srv/webcrawler/raw_fetch -type f -printf '%s\\n' 2>/dev/null | awk '{{s+=$1}} END {{print s+0}}')"
 
   echo "FULL_TRAVERSAL_MONITOR T+${{elapsed}}s metrics=${{metrics}} raw=${{raw_files}}/${{raw_bytes}}" >> "${{MONITOR_LOG}}"
+  # P0_PROD_SEPARATION_R3_BEGIN
+  # Named metrics are emitted for operators and future automation.
+  # The legacy pipe-form metrics line above is intentionally preserved for backward compatibility.
+  IFS='|' read -r m_total m_queued m_due m_retry_wait m_dead m_touched m_attempts_sum m_http_2xx m_http_errors m_browser_runtime m_unexpected m_old_label m_new_label <<'__LS_MONITOR_METRICS_SPLIT__'
+${{metrics}}
+__LS_MONITOR_METRICS_SPLIT__
+  if [ "${{HARD_TIMEOUT_SECONDS}}" -gt 0 ]; then
+    global_timeout_enabled=true
+  else
+    global_timeout_enabled=false
+  fi
+  printf 'FULL_TRAVERSAL_MONITOR_NAMED {{"elapsed_seconds":%s,"total":%s,"queued":%s,"due":%s,"retry_wait":%s,"dead":%s,"touched":%s,"attempts_sum":%s,"http_2xx":%s,"http_errors":%s,"browser_runtime":%s,"unexpected":%s,"old_label":%s,"new_label":%s,"raw_files":%s,"raw_bytes":%s,"hard_timeout_seconds":%s,"global_timeout_enabled":%s}}\n' \
+    "${{elapsed}}" "${{m_total:-0}}" "${{m_queued:-0}}" "${{m_due:-0}}" "${{m_retry_wait:-0}}" "${{m_dead:-0}}" "${{m_touched:-0}}" "${{m_attempts_sum:-0}}" "${{m_http_2xx:-0}}" "${{m_http_errors:-0}}" "${{m_browser_runtime:-0}}" "${{m_unexpected:-0}}" "${{m_old_label:-0}}" "${{m_new_label:-0}}" "${{raw_files:-0}}" "${{raw_bytes:-0}}" "${{HARD_TIMEOUT_SECONDS}}" "${{global_timeout_enabled}}" >> "${{MONITOR_LOG}}"
+  # P0_PROD_SEPARATION_R3_END
 
-  if [ "${{elapsed}}" -ge "${{HARD_TIMEOUT_SECONDS}}" ]; then
+  if [ "${{HARD_TIMEOUT_SECONDS}}" -gt 0 ] && [ "${{elapsed}}" -ge "${{HARD_TIMEOUT_SECONDS}}" ]; then
     echo "HARD_TIMEOUT_REACHED=${{elapsed}}" >> "${{MONITOR_LOG}}"
     kill -TERM "${{CRAWLER_PID}}" 2>/dev/null || true
     sleep "${{TERM_GRACE_SECONDS}}"
@@ -409,7 +438,17 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--durable-root", default=str(DEFAULT_DURABLE_RUN_ROOT))
     parser.add_argument("--live-root", default=str(DEFAULT_LIVE_ROOT))
     parser.add_argument("--env-file", default=str(DEFAULT_ENV_FILE))
-    parser.add_argument("--hard-timeout-seconds", type=int, default=DEFAULT_HARD_TIMEOUT_SECONDS)
+    parser.add_argument(
+        "--hard-timeout-seconds",
+        type=_non_negative_int,
+        default=DEFAULT_HARD_TIMEOUT_SECONDS,
+        help=(
+            "Test-harness global timeout in seconds. "
+            "Use 0 to disable the global harness timeout. "
+            "7/24 production crawler lifecycle must be controlled by runtime_control, "
+            "request-level timeouts, watchdogs, and service supervision, not by this test limit."
+        ),
+    )
     parser.add_argument("--monitor-every-seconds", type=int, default=DEFAULT_MONITOR_EVERY_SECONDS)
     parser.add_argument("--term-grace-seconds", type=int, default=DEFAULT_TERM_GRACE_SECONDS)
     parser.add_argument("--tmux-session", default="")
