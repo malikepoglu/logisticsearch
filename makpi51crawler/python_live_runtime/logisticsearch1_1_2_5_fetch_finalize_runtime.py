@@ -240,6 +240,35 @@ from .logisticsearch1_1_1_state_db_gateway import (
 # TR: REAL-RULE AST REPAIR / FONKSIYON log_fetch_attempt_terminal_from_worker
 # TR: log_fetch_attempt_terminal_from_worker acik bir fetch-finalize runtime/helper sozlesmesidir.
 # TR: Burada acik tutulan parametreler: conn, claimed_url, worker_id, outcome, note, acquisition_method, fetched_page, error_class, error_message.
+# P1F_TIMEOUT_POLICY_FETCH_METADATA_PERSISTENCE_R1_BEGIN
+def _logisticsearch_build_p1f_timeout_policy_fetch_metadata_patch(
+    fetched_page: FetchedPageResult | None,
+) -> dict[str, object]:
+    """Return behavior-neutral timeout-policy metadata for terminal fetch-attempt logging.
+
+    EN: This does not change acquisition, timeout, retry/dead, raw storage, or DB schema behavior.
+    TR: Bu; acquisition, timeout, retry/dead, raw storage veya DB schema davranışını değiştirmez.
+    """
+
+    if fetched_page is None:
+        return {}
+
+    timeout_policy = getattr(fetched_page, "timeout_policy", None)
+    if not isinstance(timeout_policy, dict) or not timeout_policy:
+        return {}
+
+    return {
+        "timeout_policy": dict(timeout_policy),
+        "timeout_policy_persistence": {
+            "schema": "p1f_timeout_policy_fetch_metadata_persistence_v1",
+            "source": "FetchedPageResult.timeout_policy",
+            "destination": "http_fetch.fetch_attempt.fetch_metadata.timeout_policy",
+            "behavior_change": False,
+        },
+    }
+# P1F_TIMEOUT_POLICY_FETCH_METADATA_PERSISTENCE_R1_END
+
+
 def log_fetch_attempt_terminal_from_worker(
     conn,
     *,
@@ -376,6 +405,18 @@ def log_fetch_attempt_terminal_from_worker(
                 "last_modified": fetched_page.last_modified,
             }
         )
+
+    timeout_policy_metadata = _logisticsearch_build_p1f_timeout_policy_fetch_metadata_patch(
+        fetched_page
+    )
+    if timeout_policy_metadata:
+        fetch_metadata_value = payload.get("fetch_metadata")
+        if isinstance(fetch_metadata_value, dict):
+            payload["fetch_metadata"] = {
+                **fetch_metadata_value,
+                **timeout_policy_metadata,
+            }
+
 
     # EN: The canonical fetch-attempt logging surface may still return no row on
     # EN: some drift paths. That must degrade cleanly instead of crashing the worker.
