@@ -273,6 +273,8 @@ def _logisticsearch_build_p1f_timeout_policy_fetch_metadata_patch(
 
 
 # P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_R1_BEGIN
+P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA = "p1k_http_3xx_redirect_target_policy_v1"
+
 def _logisticsearch_p1k_normalize_absolute_url(url_value: str) -> str:
     """Normalize one absolute URL for P1K equality and frontier identity checks."""
     raw_url = str(url_value or "").strip()
@@ -386,7 +388,7 @@ def _logisticsearch_p1k_normalize_http_3xx_redirect_target(
         "redirect_target_path": path,
         "redirect_target_query": query,
         "redirect_target_has_404_hint": target_has_404_hint,
-        "redirect_target_policy_schema": "p1k_http_3xx_redirect_target_policy_v1",
+        "redirect_target_policy_schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
     }
 
 
@@ -402,7 +404,7 @@ def _logisticsearch_p1k_build_http_3xx_redirect_target_policy(
 
     if fetched_page is None:
         return {
-            "schema": "p1k_http_3xx_redirect_target_policy_v1",
+            "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
             "source": "fetch_finalize_runtime.finalize_http_error",
             "destination": "http_fetch.fetch_attempt.fetch_metadata",
             "behavior_change": True,
@@ -418,7 +420,7 @@ def _logisticsearch_p1k_build_http_3xx_redirect_target_policy(
     )
 
     return {
-        "schema": "p1k_http_3xx_redirect_target_policy_v1",
+        "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
         "source": "fetch_finalize_runtime.finalize_http_error",
         "destination": "http_fetch.fetch_attempt.fetch_metadata_and_frontier.enqueue_discovered_url",
         "behavior_change": True,
@@ -474,7 +476,7 @@ def _logisticsearch_p1k_enqueue_http_3xx_redirect_target(
     """Enqueue or reuse normalized redirect target through the existing frontier function."""
     if not _logisticsearch_p1k_policy_has_redirect_target(redirect_policy):
         return {
-            "schema": "p1k_http_3xx_redirect_target_policy_v1",
+            "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
             "redirect_target_enqueue_attempted": False,
             "redirect_target_enqueue_reason": "no_redirect_target",
         }
@@ -534,13 +536,13 @@ def _logisticsearch_p1k_enqueue_http_3xx_redirect_target(
                     target_query,
                     parent_depth + 1,
                     parent_priority,
-                    "p1k_http_3xx_redirect_target_policy_v1: normalized HTTP 3xx final_url target",
+                    f"{P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA}: normalized HTTP 3xx final_url target",
                 ),
             )
             row = cursor.fetchone()
     except Exception as exc:
         return {
-            "schema": "p1k_http_3xx_redirect_target_policy_v1",
+            "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
             "redirect_target_enqueue_attempted": True,
             "redirect_target_enqueue_persisted": False,
             "redirect_target_enqueue_error": f"{type(exc).__name__}: {exc}",
@@ -549,7 +551,7 @@ def _logisticsearch_p1k_enqueue_http_3xx_redirect_target(
 
     if row is None:
         return {
-            "schema": "p1k_http_3xx_redirect_target_policy_v1",
+            "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
             "redirect_target_enqueue_attempted": True,
             "redirect_target_enqueue_persisted": False,
             "redirect_target_enqueue_error": "frontier.enqueue_discovered_url_returned_no_row",
@@ -562,7 +564,7 @@ def _logisticsearch_p1k_enqueue_http_3xx_redirect_target(
         return row[index]
 
     return {
-        "schema": "p1k_http_3xx_redirect_target_policy_v1",
+        "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
         "redirect_target_enqueue_attempted": True,
         "redirect_target_enqueue_persisted": True,
         "redirect_target_url_id": row_value(0, "url_id"),
@@ -1523,7 +1525,7 @@ def finalize_http_error(
                     lease_token=lease_token,
                     http_status=http_status,
                     error_class="http_3xx_redirect_target_enqueued",
-                    error_message=f"{error_message} | {p1k_schema}: redirect target queued/reused",
+                    error_message=f"{error_message} | {P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA}: redirect target queued/reused",
                 )
             else:
                 p1k_finish_mode = "retryable"
@@ -1533,7 +1535,7 @@ def finalize_http_error(
                     lease_token=lease_token,
                     http_status=http_status,
                     error_class=error_class,
-                    error_message=f"{error_message} | {p1k_schema}: redirect target enqueue failed",
+                    error_message=f"{error_message} | {P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA}: redirect target enqueue failed",
                     retry_delay=None,
                 )
         elif is_retryable:
