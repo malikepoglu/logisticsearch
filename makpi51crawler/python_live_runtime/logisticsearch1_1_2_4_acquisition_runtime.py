@@ -891,12 +891,25 @@ def select_page_acquisition_plan(claimed_url: object) -> AcquisitionSelectionPla
 # TR: raw_root acquisition çıktısını kalıcılaştırmak için kullanılan ham artefact kök yoludur.
 # EN: headless controls whether browser acquisition runs without a visible window.
 # TR: headless browser acquisitionın görünür pencere olmadan çalışıp çalışmayacağını kontrol eder.
+# P1B_TIMEOUT_POLICY_CONSTANTS_R1_BEGIN
+# EN: These constants name the existing acquisition timeout policy without changing
+# EN: durations or behavior. Later P1B patches may propagate policy metadata and
+# EN: stricter watchdogs after this stable naming layer is sealed.
+# TR: Bu sabitler mevcut acquisition timeout politikasını davranışı veya süreleri
+# TR: değiştirmeden isimlendirir. Sonraki P1B yamaları bu isimlendirme katmanı
+# TR: mühürlendikten sonra policy metadata ve daha sıkı watchdog ekleyebilir.
+LOGISTICSEARCH_HTTP_ACQUISITION_TIMEOUT_SECONDS = 30
+LOGISTICSEARCH_BROWSER_ACQUISITION_TIMEOUT_MS = 30000
+LOGISTICSEARCH_BROWSER_ACQUISITION_WAIT_UNTIL = "networkidle"
+# P1B_TIMEOUT_POLICY_CONSTANTS_R1_END
+
+
 def fetch_page_via_selection_to_raw_storage(
     claimed_url: object,
     *,
-    http_timeout_seconds: int = 30,
-    browser_timeout_ms: int = 30000,
-    browser_wait_until: str = "networkidle",
+    http_timeout_seconds: int = LOGISTICSEARCH_HTTP_ACQUISITION_TIMEOUT_SECONDS,
+    browser_timeout_ms: int = LOGISTICSEARCH_BROWSER_ACQUISITION_TIMEOUT_MS,
+    browser_wait_until: str = LOGISTICSEARCH_BROWSER_ACQUISITION_WAIT_UNTIL,
     raw_root: Path | str = RAW_FETCH_ROOT,
     headless: bool = True,
 ) -> AcquisitionExecutionResult:
