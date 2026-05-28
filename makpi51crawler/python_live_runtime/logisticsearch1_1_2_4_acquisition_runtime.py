@@ -388,6 +388,10 @@ class AcquisitionExecutionResult:
     # TR: http_error_message fallback olduysa ilk HTTP-tarafı istisna mesajını tutar.
     http_error_message: str | None
 
+    # EN: timeout_policy stores the behavior-neutral timeout policy evidence used by acquisition orchestration.
+    # TR: timeout_policy acquisition orchestration tarafından kullanılan davranışsız timeout policy kanıtını tutar.
+    timeout_policy: dict[str, object] | None = None
+
 
 # EN: This helper reads the first available claimed_url field from a list of names.
 # EN: It lets us keep the first selector tolerant while the broader worker contract
@@ -904,6 +908,22 @@ LOGISTICSEARCH_BROWSER_ACQUISITION_WAIT_UNTIL = "networkidle"
 # P1B_TIMEOUT_POLICY_CONSTANTS_R1_END
 
 
+# P1B_ACQUISITION_EXECUTION_TIMEOUT_POLICY_R1_BEGIN
+# EN: This helper returns evidence metadata for the already-sealed timeout policy.
+# EN: It does not change timeout durations, wait_until, retry/dead policy, or raw artifact policy.
+# TR: Bu helper mühürlenmiş timeout policy için kanıt metadata üretir.
+# TR: Timeout sürelerini, wait_until değerini, retry/dead politikasını veya raw artefact politikasını değiştirmez.
+def _logisticsearch_build_p1b_acquisition_timeout_policy() -> dict[str, object]:
+    return {
+        "schema": "p1b_acquisition_timeout_policy_v1",
+        "source_file": "makpi51crawler/python_live_runtime/logisticsearch1_1_2_4_acquisition_runtime.py",
+        "http_timeout_seconds": LOGISTICSEARCH_HTTP_ACQUISITION_TIMEOUT_SECONDS,
+        "browser_timeout_ms": LOGISTICSEARCH_BROWSER_ACQUISITION_TIMEOUT_MS,
+        "browser_wait_until": LOGISTICSEARCH_BROWSER_ACQUISITION_WAIT_UNTIL,
+        "behavior_change": False,
+    }
+
+
 def fetch_page_via_selection_to_raw_storage(
     claimed_url: object,
     *,
@@ -944,6 +964,7 @@ def fetch_page_via_selection_to_raw_storage(
             fetch_result=browser_fetch_result,
             http_error_class=None,
             http_error_message=None,
+            timeout_policy=_logisticsearch_build_p1b_acquisition_timeout_policy(),
         )
 
     # EN: We first attempt the direct HTTP child because the remaining strategies
@@ -965,6 +986,7 @@ def fetch_page_via_selection_to_raw_storage(
             fetch_result=http_fetch_result,
             http_error_class=None,
             http_error_message=None,
+            timeout_policy=_logisticsearch_build_p1b_acquisition_timeout_policy(),
         )
     except Exception as http_error:
         # EN: If fallback is not allowed, we re-raise the original HTTP exception so
@@ -990,6 +1012,7 @@ def fetch_page_via_selection_to_raw_storage(
             fetch_result=browser_fetch_result,
             http_error_class=type(http_error).__name__,
             http_error_message=str(http_error),
+            timeout_policy=_logisticsearch_build_p1b_acquisition_timeout_policy(),
         )
 
 
