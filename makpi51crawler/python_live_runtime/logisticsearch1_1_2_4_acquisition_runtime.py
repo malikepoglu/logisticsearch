@@ -154,6 +154,7 @@ TR:
 
 from __future__ import annotations
 
+import time
 # EN: We import dataclass because selection and execution results should stay
 # EN: explicit, named, and beginner-readable instead of being loose dicts.
 # TR: Seçim ve yürütme sonuçları gevşek dict yapıları yerine açık, isimli ve
@@ -938,6 +939,103 @@ def _logisticsearch_attach_p1b_timeout_policy_to_fetch_result(
     )
 
 
+# P1C_TIMEOUT_ENFORCEMENT_WATCHDOG_R1_BEGIN
+# EN: Convert browser timeout milliseconds into seconds for outer acquisition deadline accounting.
+# TR: Browser timeout milisaniyesini dış acquisition deadline hesabı için saniyeye çevirir.
+def _logisticsearch_p1c_timeout_seconds_from_ms(timeout_ms: int | float) -> float:
+    return max(0.0, float(timeout_ms) / 1000.0)
+
+
+# EN: Return elapsed monotonic seconds without exposing wall-clock or timezone semantics.
+# TR: Duvar saati veya timezone semantiği açığa çıkarmadan geçen monotonic saniyeyi döndürür.
+def _logisticsearch_p1c_monotonic_elapsed_seconds(started_at_monotonic: float) -> float:
+    return max(0.0, time.monotonic() - float(started_at_monotonic))
+
+
+# EN: Return remaining outer acquisition budget for pre-fallback guard decisions.
+# TR: Fallback öncesi guard kararları için kalan dış acquisition bütçesini döndürür.
+def _logisticsearch_p1c_remaining_budget_seconds(
+    started_at_monotonic: float,
+    outer_budget_seconds: int | float,
+) -> float:
+    return max(
+        0.0,
+        float(outer_budget_seconds)
+        - _logisticsearch_p1c_monotonic_elapsed_seconds(started_at_monotonic),
+    )
+
+
+# EN: Build P1C watchdog evidence without changing child timeout constants or raw artefact policy.
+# EN: The only enforcement in this patch is the pre-browser-fallback outer budget guard.
+# TR: Çocuk timeout sabitlerini veya raw artefact politikasını değiştirmeden P1C watchdog kanıtı üretir.
+# TR: Bu patch içindeki tek enforcement browser fallback öncesi dış bütçe guard'ıdır.
+def _logisticsearch_build_p1c_acquisition_watchdog_policy(
+    *,
+    acquisition_started_at_monotonic: float,
+    branch_started_at_monotonic: float,
+    branch_name: str,
+    fallback_allowed: bool,
+    fallback_used: bool,
+    http_timeout_seconds: int,
+    browser_timeout_ms: int,
+    browser_wait_until: str,
+    outer_budget_seconds: int | float,
+    pre_fallback_guard_applied: bool = False,
+    pre_fallback_remaining_budget_seconds: float | None = None,
+    http_error_class: str | None = None,
+    http_error_message: str | None = None,
+) -> dict[str, object]:
+    acquisition_elapsed_seconds = _logisticsearch_p1c_monotonic_elapsed_seconds(
+        acquisition_started_at_monotonic
+    )
+    branch_elapsed_seconds = _logisticsearch_p1c_monotonic_elapsed_seconds(
+        branch_started_at_monotonic
+    )
+    remaining_budget_seconds = max(0.0, float(outer_budget_seconds) - acquisition_elapsed_seconds)
+
+    return {
+        "schema": "p1c_acquisition_watchdog_policy_v1",
+        "source_file": "makpi51crawler/python_live_runtime/logisticsearch1_1_2_4_acquisition_runtime.py",
+        "p1b_timeout_policy": _logisticsearch_build_p1b_acquisition_timeout_policy(),
+        "http_timeout_seconds": int(http_timeout_seconds),
+        "browser_timeout_ms": int(browser_timeout_ms),
+        "browser_timeout_seconds": _logisticsearch_p1c_timeout_seconds_from_ms(browser_timeout_ms),
+        "browser_wait_until": str(browser_wait_until),
+        "outer_acquisition_budget_seconds": float(outer_budget_seconds),
+        "acquisition_elapsed_seconds": round(acquisition_elapsed_seconds, 6),
+        "branch_elapsed_seconds": round(branch_elapsed_seconds, 6),
+        "remaining_budget_seconds": round(remaining_budget_seconds, 6),
+        "branch_name": str(branch_name),
+        "fallback_allowed": bool(fallback_allowed),
+        "fallback_used": bool(fallback_used),
+        "pre_fallback_guard_applied": bool(pre_fallback_guard_applied),
+        "pre_fallback_remaining_budget_seconds": (
+            None
+            if pre_fallback_remaining_budget_seconds is None
+            else round(float(pre_fallback_remaining_budget_seconds), 6)
+        ),
+        "http_error_class": http_error_class,
+        "http_error_message": http_error_message,
+        "behavior_change": True,
+        "behavior_change_scope": "pre_browser_fallback_outer_budget_guard_only",
+    }
+
+
+# EN: Attach P1C watchdog evidence to a fetched-page dataclass copy.
+# TR: P1C watchdog kanıtını fetched-page dataclass kopyasına ekler.
+def _logisticsearch_attach_p1c_watchdog_policy_to_fetch_result(
+    fetch_result: FetchedPageResult,
+    *,
+    watchdog_policy: dict[str, object],
+) -> FetchedPageResult:
+    return replace(
+        fetch_result,
+        timeout_policy=watchdog_policy,
+    )
+
+
+# P1C_TIMEOUT_ENFORCEMENT_WATCHDOG_R1_END
+
 def fetch_page_via_selection_to_raw_storage(
     claimed_url: object,
     *,
@@ -959,11 +1057,24 @@ def fetch_page_via_selection_to_raw_storage(
     # TR: selection_plan açık pre-fetch strateji kararını tutar.
     selection_plan = select_page_acquisition_plan(claimed_url)
 
+    # EN: P1C uses monotonic time only for local deadline accounting and evidence.
+    # TR: P1C yerel deadline hesabı ve kanıt için yalnızca monotonic time kullanır.
+    acquisition_started_at_monotonic = time.monotonic()
+    browser_timeout_seconds = _logisticsearch_p1c_timeout_seconds_from_ms(browser_timeout_ms)
+
+    if selection_plan.strategy == "browser":
+        acquisition_outer_budget_seconds = browser_timeout_seconds
+    else:
+        acquisition_outer_budget_seconds = float(http_timeout_seconds)
+        if selection_plan.browser_fallback_allowed:
+            acquisition_outer_budget_seconds += browser_timeout_seconds
+
     # EN: Browser-first plans execute immediately through the browser-backed child.
     # TR: Browser-first planlar doğrudan browser-backed alt yüzey üzerinden yürütülür.
     if selection_plan.strategy == "browser":
         # EN: browser_fetch_result stores the normalized browser-backed fetch contract.
         # TR: browser_fetch_result normalize edilmiş browser-backed fetch sözleşmesini tutar.
+        browser_branch_started_at_monotonic = time.monotonic()
         browser_fetch_result = fetch_page_with_browser_to_raw_storage(
             claimed_url,
             timeout_ms=browser_timeout_ms,
@@ -971,14 +1082,28 @@ def fetch_page_via_selection_to_raw_storage(
             raw_root=normalized_raw_root,
             headless=headless,
         )
+        browser_watchdog_policy = _logisticsearch_build_p1c_acquisition_watchdog_policy(
+            acquisition_started_at_monotonic=acquisition_started_at_monotonic,
+            branch_started_at_monotonic=browser_branch_started_at_monotonic,
+            branch_name="browser_first",
+            fallback_allowed=bool(selection_plan.browser_fallback_allowed),
+            fallback_used=False,
+            http_timeout_seconds=http_timeout_seconds,
+            browser_timeout_ms=browser_timeout_ms,
+            browser_wait_until=browser_wait_until,
+            outer_budget_seconds=acquisition_outer_budget_seconds,
+        )
         return AcquisitionExecutionResult(
             selection_plan=selection_plan,
             method_used="browser",
             fallback_used=False,
-            fetch_result=_logisticsearch_attach_p1b_timeout_policy_to_fetch_result(browser_fetch_result),
+            fetch_result=_logisticsearch_attach_p1c_watchdog_policy_to_fetch_result(
+                browser_fetch_result,
+                watchdog_policy=browser_watchdog_policy,
+            ),
             http_error_class=None,
             http_error_message=None,
-            timeout_policy=_logisticsearch_build_p1b_acquisition_timeout_policy(),
+            timeout_policy=browser_watchdog_policy,
         )
 
     # EN: We first attempt the direct HTTP child because the remaining strategies
@@ -988,19 +1113,34 @@ def fetch_page_via_selection_to_raw_storage(
     try:
         # EN: http_fetch_result stores the successful direct HTTP fetch outcome.
         # TR: http_fetch_result başarılı doğrudan HTTP fetch sonucunu tutar.
+        http_branch_started_at_monotonic = time.monotonic()
         http_fetch_result = fetch_page_to_raw_storage(
             claimed_url,
             timeout_seconds=http_timeout_seconds,
             raw_root=normalized_raw_root,
         )
+        http_watchdog_policy = _logisticsearch_build_p1c_acquisition_watchdog_policy(
+            acquisition_started_at_monotonic=acquisition_started_at_monotonic,
+            branch_started_at_monotonic=http_branch_started_at_monotonic,
+            branch_name="http",
+            fallback_allowed=bool(selection_plan.browser_fallback_allowed),
+            fallback_used=False,
+            http_timeout_seconds=http_timeout_seconds,
+            browser_timeout_ms=browser_timeout_ms,
+            browser_wait_until=browser_wait_until,
+            outer_budget_seconds=acquisition_outer_budget_seconds,
+        )
         return AcquisitionExecutionResult(
             selection_plan=selection_plan,
             method_used="http",
             fallback_used=False,
-            fetch_result=_logisticsearch_attach_p1b_timeout_policy_to_fetch_result(http_fetch_result),
+            fetch_result=_logisticsearch_attach_p1c_watchdog_policy_to_fetch_result(
+                http_fetch_result,
+                watchdog_policy=http_watchdog_policy,
+            ),
             http_error_class=None,
             http_error_message=None,
-            timeout_policy=_logisticsearch_build_p1b_acquisition_timeout_policy(),
+            timeout_policy=http_watchdog_policy,
         )
     except Exception as http_error:
         # EN: If fallback is not allowed, we re-raise the original HTTP exception so
@@ -1010,8 +1150,20 @@ def fetch_page_via_selection_to_raw_storage(
         if not selection_plan.browser_fallback_allowed:
             raise
 
+        # EN: P1C enforcement is deliberately narrow: do not start browser fallback
+        # EN: when the outer acquisition budget is already exhausted.
+        # TR: P1C enforcement bilerek dardır: dış acquisition bütçesi zaten tükendiyse
+        # TR: browser fallback başlatılmaz.
+        remaining_before_browser_fallback_seconds = _logisticsearch_p1c_remaining_budget_seconds(
+            acquisition_started_at_monotonic,
+            acquisition_outer_budget_seconds,
+        )
+        if remaining_before_browser_fallback_seconds <= 0.0:
+            raise
+
         # EN: browser_fetch_result stores the browser-backed recovery fetch outcome.
         # TR: browser_fetch_result browser-backed toparlama fetch sonucunu tutar.
+        browser_fallback_branch_started_at_monotonic = time.monotonic()
         browser_fetch_result = fetch_page_with_browser_to_raw_storage(
             claimed_url,
             timeout_ms=browser_timeout_ms,
@@ -1019,14 +1171,32 @@ def fetch_page_via_selection_to_raw_storage(
             raw_root=normalized_raw_root,
             headless=headless,
         )
+        browser_fallback_watchdog_policy = _logisticsearch_build_p1c_acquisition_watchdog_policy(
+            acquisition_started_at_monotonic=acquisition_started_at_monotonic,
+            branch_started_at_monotonic=browser_fallback_branch_started_at_monotonic,
+            branch_name="browser_fallback",
+            fallback_allowed=True,
+            fallback_used=True,
+            http_timeout_seconds=http_timeout_seconds,
+            browser_timeout_ms=browser_timeout_ms,
+            browser_wait_until=browser_wait_until,
+            outer_budget_seconds=acquisition_outer_budget_seconds,
+            pre_fallback_guard_applied=True,
+            pre_fallback_remaining_budget_seconds=remaining_before_browser_fallback_seconds,
+            http_error_class=type(http_error).__name__,
+            http_error_message=str(http_error),
+        )
         return AcquisitionExecutionResult(
             selection_plan=selection_plan,
             method_used="browser",
             fallback_used=True,
-            fetch_result=_logisticsearch_attach_p1b_timeout_policy_to_fetch_result(browser_fetch_result),
+            fetch_result=_logisticsearch_attach_p1c_watchdog_policy_to_fetch_result(
+                browser_fetch_result,
+                watchdog_policy=browser_fallback_watchdog_policy,
+            ),
             http_error_class=type(http_error).__name__,
             http_error_message=str(http_error),
-            timeout_policy=_logisticsearch_build_p1b_acquisition_timeout_policy(),
+            timeout_policy=browser_fallback_watchdog_policy,
         )
 
 
