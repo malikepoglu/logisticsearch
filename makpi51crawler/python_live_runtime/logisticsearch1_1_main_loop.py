@@ -1656,13 +1656,18 @@ def main() -> int:
         if args.max_iterations > 0 and iteration >= args.max_iterations:
             return 0
 
-        time.sleep(
-            sleep_between_loop_iterations(
-                payload=payload,
-                sleep_seconds=args.sleep_seconds,
-                pause_sleep_seconds=args.pause_sleep_seconds,
+        # P1L_CONTROLLED_SHUTDOWN_TRACEBACK_ELIMINATION_R1_BEGIN
+        try:
+            time.sleep(
+                sleep_between_loop_iterations(
+                    payload=payload,
+                    sleep_seconds=args.sleep_seconds,
+                    pause_sleep_seconds=args.pause_sleep_seconds,
+                )
             )
-        )
+        except KeyboardInterrupt:
+            return 0
+        # P1L_CONTROLLED_SHUTDOWN_TRACEBACK_ELIMINATION_R1_END
 
 
 # EN:
