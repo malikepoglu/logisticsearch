@@ -1505,6 +1505,30 @@ def finalize_http_error(
     p1k_redirect_enqueue_result: dict[str, object] | None = None
     p1k_finish_mode = "retryable" if is_retryable else "permanent"
 
+    # P2C34_HTTP_3XX_NO_RESOLVABLE_REDIRECT_TARGET_R1_BEGIN
+    # EN: If a final HTTP 3xx reaches finalize without a normalized redirect
+    # EN: target, retrying the same URL only churns retry_wait. Keep the good
+    # EN: path above/below for changed final_url targets, but make no-target
+    # EN: redirects terminal and explicit.
+    # TR: Finalize katmanına normalize edilebilir redirect hedefi olmadan gelen
+    # TR: HTTP 3xx aynı URL'yi tekrar retry_wait'e sokar. final_url değişmişse
+    # TR: hedef enqueue davranışı korunur; hedef yoksa açık terminal sınıfa alınır.
+    if (
+        error_class == "http_3xx_unresolved_redirect"
+        and not _logisticsearch_p1k_policy_has_redirect_target(p1k_redirect_policy)
+    ):
+        is_retryable = False
+        p1k_finish_mode = "permanent"
+        error_class = "http_3xx_no_resolvable_redirect_target"
+        base_error_message = str(error_message or "").strip()
+        p2c34_note = (
+            "p2c34_http_3xx_redirect_policy: "
+            "3xx response has no actionable redirect target; "
+            "redirect_location empty or unavailable and final_url did not change"
+        )
+        error_message = f"{base_error_message} | {p2c34_note}" if base_error_message else p2c34_note
+    # P2C34_HTTP_3XX_NO_RESOLVABLE_REDIRECT_TARGET_R1_END
+
     # EN: The retryable/permanent frontier finalize call may still return no row on
     # EN: some drift paths. That must degrade cleanly instead of crashing the worker.
     # TR: Retryable/permanent frontier finalize çağrısı bazı drift yollarında hâlâ
