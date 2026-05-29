@@ -724,7 +724,16 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
           last_error_message = %s::text,
           retryable_error_count = retryable_error_count + 1,
           consecutive_error_count = consecutive_error_count + 1,
+          -- P2C23_EXPIRED_LEASE_RESIDUE_RUNTIME_RETRY_WAIT_R1_BEGIN
+          -- EN: runtime retry_wait is a terminal transition out of an active claim,
+          -- EN: so all lease identity fields must be cleared, not only lease_token.
+          -- TR: runtime retry_wait aktif claim'den terminal cikistir; bu yuzden
+          -- TR: sadece lease_token degil tum lease kimlik alanlari temizlenmelidir.
           lease_token = NULL,
+          lease_owner = NULL,
+          lease_acquired_at = NULL,
+          lease_expires_at = NULL,
+          -- P2C23_EXPIRED_LEASE_RESIDUE_RUNTIME_RETRY_WAIT_R1_END
           updated_at = now(),
           url_metadata = COALESCE(url_metadata, '{}'::jsonb)
             || jsonb_build_object(
