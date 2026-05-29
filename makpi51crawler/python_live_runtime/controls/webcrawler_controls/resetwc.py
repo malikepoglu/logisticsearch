@@ -718,5 +718,263 @@ def main() -> int:
 # TR: Bu standart guard modülün python -m ile çalıştırılmasını sağlar.
 # EN: The main guard keeps import-time behavior inert and limits real execution to direct operator invocation.
 # TR: Ana koruyucu import anındaki davranışı etkisiz tutar ve gerçek çalıştırmayı doğrudan operatör çağrısına sınırlar.
+
+# P1R_RESETWC_DB_COUNTER_RAW_RESET_CONTRACT_R1_BEGIN
+# This wrapper preserves the existing resetwc control behavior and adds the
+# required crawler_core DB/counter/lease/raw reset contract for pi51c long tests.
+# It intentionally avoids printing DSN/secrets.
+
+def _logisticsearch_resetwc_load_dsn_p1r() -> str:
+    import os
+    import subprocess
+
+    dsn = os.environ.get("LOGISTICSEARCH_CRAWLER_DSN", "").strip()
+    if dsn:
+        return dsn
+
+    env_file = "/home/makpi51/.config/logisticsearch/secrets/webcrawler.env"
+    if not os.path.exists(env_file):
+        raise RuntimeError("LOGISTICSEARCH_CRAWLER_DSN is not loaded and secure env file is missing")
+
+    command = (
+        "set -a; "
+        ". /home/makpi51/.config/logisticsearch/secrets/webcrawler.env; "
+        "set +a; "
+        "printf '%s' \"${LOGISTICSEARCH_CRAWLER_DSN:-}\""
+    )
+    completed = subprocess.run(
+        ["/usr/bin/env", "bash", "-lc", command],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if completed.returncode != 0:
+        raise RuntimeError("secure env file could not be sourced for resetwc")
+    dsn = completed.stdout.strip()
+    if not dsn:
+        raise RuntimeError("LOGISTICSEARCH_CRAWLER_DSN is empty after sourcing secure env file")
+    return dsn
+
+
+def _logisticsearch_resetwc_run_psql_p1r(sql: str) -> None:
+    import subprocess
+
+    dsn = _logisticsearch_resetwc_load_dsn_p1r()
+    completed = subprocess.run(
+        [
+            "psql",
+            dsn,
+            "-X",
+            "-v",
+            "ON_ERROR_STOP=1",
+            "-q",
+        ],
+        input=sql,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if completed.returncode != 0:
+        stderr = completed.stderr.strip().splitlines()[-8:]
+        raise RuntimeError("resetwc DB reset SQL failed: " + " | ".join(stderr))
+
+
+def _logisticsearch_resetwc_db_counter_reset_p1r() -> None:
+    sql = r"""
+BEGIN;
+
+UPDATE ops.webcrawler_runtime_control
+SET
+  desired_state = 'pause',
+  state_reason = 'resetwc requested full crawler_core DB/counter/lease/raw reset',
+  requested_by = 'resetwc',
+  state_version = state_version + 1,
+  updated_at = now()
+WHERE control_id = (
+  SELECT control_id
+  FROM ops.webcrawler_runtime_control
+  ORDER BY control_id
+  LIMIT 1
+);
+
+DELETE FROM http_fetch.fetch_attempt;
+
+SELECT setval(
+  pg_get_serial_sequence('http_fetch.fetch_attempt', 'fetch_attempt_id'),
+  1,
+  false
+)
+WHERE pg_get_serial_sequence('http_fetch.fetch_attempt', 'fetch_attempt_id') IS NOT NULL;
+
+UPDATE frontier.url
+SET
+  state = 'queued',
+  lease_token = NULL,
+  lease_owner = NULL,
+  lease_acquired_at = NULL,
+  lease_expires_at = NULL,
+  fetch_attempt_count = 0,
+  success_count = 0,
+  retryable_error_count = 0,
+  permanent_error_count = 0,
+  redirect_count = 0,
+  consecutive_error_count = 0,
+  last_fetch_started_at = NULL,
+  last_fetch_finished_at = NULL,
+  last_success_at = NULL,
+  last_http_status = NULL,
+  last_content_type = NULL,
+  last_body_bytes = NULL,
+  last_etag = NULL,
+  last_last_modified = NULL,
+  last_outcome = NULL,
+  last_error_class = NULL,
+  last_error_message = NULL,
+  next_fetch_at = now(),
+  revisit_not_before = NULL,
+  updated_at = now();
+
+UPDATE ops.webcrawler_runtime_control
+SET
+  desired_state = 'pause',
+  state_reason = 'resetwc completed full crawler_core DB/counter/lease/raw reset; ready for controlled play',
+  requested_by = 'resetwc',
+  state_version = state_version + 1,
+  updated_at = now()
+WHERE control_id = (
+  SELECT control_id
+  FROM ops.webcrawler_runtime_control
+  ORDER BY control_id
+  LIMIT 1
+);
+
+COMMIT;
+"""
+    _logisticsearch_resetwc_run_psql_p1r(sql)
+
+
+def _logisticsearch_resetwc_clear_raw_fetch_p1r() -> tuple[int, int]:
+    from pathlib import Path
+
+    raw_root = Path("/srv/webcrawler/raw_fetch")
+    expected_root = Path("/srv/webcrawler/raw_fetch")
+
+    if raw_root != expected_root:
+        raise RuntimeError("raw_fetch root mismatch; refusing reset")
+    if not raw_root.exists():
+        raw_root.mkdir(parents=True, exist_ok=True)
+        return (0, 0)
+    if not raw_root.is_dir():
+        raise RuntimeError("raw_fetch root is not a directory")
+
+    deleted_files = 0
+    deleted_bytes = 0
+
+    for path in sorted(raw_root.rglob("*"), reverse=True):
+        if path == raw_root:
+            continue
+        try:
+            resolved = path.resolve()
+            root_resolved = raw_root.resolve()
+            if root_resolved not in resolved.parents and resolved != root_resolved:
+                raise RuntimeError("raw_fetch path escaped root; refusing reset")
+            if path.is_file() or path.is_symlink():
+                try:
+                    deleted_bytes += path.stat().st_size
+                except OSError:
+                    pass
+                path.unlink()
+                deleted_files += 1
+            elif path.is_dir():
+                try:
+                    path.rmdir()
+                except OSError:
+                    pass
+        except FileNotFoundError:
+            continue
+
+    return (deleted_files, deleted_bytes)
+
+
+def _logisticsearch_resetwc_full_reset_contract_p1r() -> int:
+    import os
+    import sys
+
+    if os.environ.get("LOGISTICSEARCH_RESETWC_SKIP_DB_COUNTER_RAW_RESET", "").strip() == "1":
+        print("RESETWC_P1R_DB_COUNTER_RAW_RESET_SKIPPED_BY_ENV=TRUE", file=sys.stderr)
+        return 0
+
+    _logisticsearch_resetwc_db_counter_reset_p1r()
+    deleted_files, deleted_bytes = _logisticsearch_resetwc_clear_raw_fetch_p1r()
+
+    print("RESETWC_P1R_DB_COUNTER_RAW_RESET=PASS", file=sys.stderr)
+    print(f"RESETWC_P1R_RAW_DELETED_FILES={deleted_files}", file=sys.stderr)
+    print(f"RESETWC_P1R_RAW_DELETED_BYTES={deleted_bytes}", file=sys.stderr)
+    print("RESETWC_P1R_FINAL_RUNTIME_CONTROL=pause", file=sys.stderr)
+    return 0
+
+
+_LOGISTICSEARCH_RESETWC_ORIGINAL_MAIN_P1R = globals().get("main")
+
+
+def _logisticsearch_resetwc_help_requested_p1r(argv=None) -> bool:
+    import sys
+
+    if argv is None:
+        argv = sys.argv[1:]
+
+    try:
+        args = list(argv)
+    except TypeError:
+        args = []
+
+    return any(str(arg).strip() in {"-h", "--help", "help"} for arg in args)
+
+
+def main(*args, **kwargs):  # type: ignore[no-redef]
+    original_main = _LOGISTICSEARCH_RESETWC_ORIGINAL_MAIN_P1R
+    help_requested = _logisticsearch_resetwc_help_requested_p1r()
+
+    if callable(original_main):
+        try:
+            original_result = original_main(*args, **kwargs)
+        except SystemExit as exc:
+            code = exc.code
+            if code in (None, 0):
+                original_rc = 0
+            else:
+                try:
+                    original_rc = int(code)
+                except Exception:
+                    original_rc = 1
+
+            if help_requested:
+                return original_rc
+            if original_rc != 0:
+                return original_rc
+        else:
+            if original_result is None:
+                original_rc = 0
+            else:
+                try:
+                    original_rc = int(original_result)
+                except Exception:
+                    original_rc = 1
+
+            if help_requested:
+                return original_rc
+            if original_rc != 0:
+                return original_rc
+
+    if help_requested:
+        return 0
+
+    return _logisticsearch_resetwc_full_reset_contract_p1r()
+
+# P1R_RESETWC_DB_COUNTER_RAW_RESET_CONTRACT_R1_END
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
