@@ -171,6 +171,73 @@ from typing import Any
 # TR: ve senkron ilk implementasyon denetlemek, smoke-test etmek ve audit etmek
 # TR: açısından daha kolaydır.
 from playwright.sync_api import Page, Response, sync_playwright
+import gc
+
+
+# P2C13_EVENT_LOOP_CLOSED_CLEAN_SHUTDOWN_R1_BEGIN
+# EN: During systemd stop, Playwright's subprocess transport may otherwise be
+# EN: finalized after Python's event loop has already closed. We close page,
+# EN: context, browser, and the sync_playwright manager explicitly and suppress
+# EN: only the known shutdown-close noise while preserving real fetch errors.
+# TR: systemd stop sırasında Playwright subprocess transport, Python event loop
+# TR: kapandıktan sonra finalize edilirse journal'da temiz olmayan traceback
+# TR: üretebilir. Bu yüzden page, context, browser ve sync_playwright manager
+# TR: açık sırayla kapatılır; yalnızca bilinen shutdown-close gürültüsü
+# TR: bastırılır, gerçek fetch hataları korunur.
+def _logisticsearch_is_known_playwright_shutdown_close_noise(exc: BaseException) -> bool:
+    if isinstance(exc, (KeyboardInterrupt, SystemExit)):
+        return False
+
+    evidence = f"{type(exc).__name__}: {exc}".lower()
+    shutdown_needles = (
+        "event loop is closed",
+        "target closed",
+        "browser has been closed",
+        "browser closed",
+        "context has been closed",
+        "page has been closed",
+        "connection closed",
+        "transport closed",
+        "playwright connection closed",
+    )
+    return any(needle in evidence for needle in shutdown_needles)
+
+
+def _logisticsearch_close_playwright_resource_quietly(resource: object, label: str) -> None:
+    if resource is None:
+        return
+
+    close_method = getattr(resource, "close", None)
+    if close_method is None:
+        return
+
+    try:
+        close_method()
+    except (KeyboardInterrupt, SystemExit):
+        raise
+    except BaseException as exc:
+        if _logisticsearch_is_known_playwright_shutdown_close_noise(exc):
+            return
+        raise
+
+
+def _logisticsearch_stop_sync_playwright_manager_quietly(manager: object) -> None:
+    if manager is None:
+        return
+
+    stop_method = getattr(manager, "stop", None)
+    if stop_method is None:
+        return
+
+    try:
+        stop_method()
+    except (KeyboardInterrupt, SystemExit):
+        raise
+    except BaseException as exc:
+        if _logisticsearch_is_known_playwright_shutdown_close_noise(exc):
+            return
+        raise
+# P2C13_EVENT_LOOP_CLOSED_CLEAN_SHUTDOWN_R1_END
 
 
 # EN: This dataclass stores one observed public browser-network response in a
@@ -836,9 +903,19 @@ def acquire_public_page_with_browser(
             )
         )
 
-    # EN: sync_playwright manages browser-driver lifecycle cleanly.
-    # TR: sync_playwright browser-driver yaşam döngüsünü temiz biçimde yönetir.
-    with sync_playwright() as playwright:
+    # P2C13_EVENT_LOOP_CLOSED_CLEAN_SHUTDOWN_R1_LIFECYCLE_BEGIN
+    # EN: We manage sync_playwright explicitly so shutdown can close subprocess
+    # EN: transports before the interpreter/event loop finalizers run.
+    # TR: sync_playwright yaşam döngüsünü açıkça yönetiyoruz; böylece shutdown
+    # TR: sırasında subprocess transport finalizer'ları event loop kapandıktan
+    # TR: sonra traceback üretmeden önce kapanış yapılabilir.
+    playwright_manager = sync_playwright()
+    playwright = None
+    browser = None
+    context = None
+    page = None
+    try:
+        playwright = playwright_manager.start()
         # EN: We intentionally use Playwright's Chromium runtime because that is
         # EN: the browser runtime we installed and verified on Pi51c.
         # TR: Bilinçli olarak Playwright Chromium runtime'ını kullanıyoruz; çünkü
@@ -900,10 +977,21 @@ def acquire_public_page_with_browser(
             write_text_file(html_output_path, rendered_html)
             write_screenshot(page, screenshot_output_path)
         finally:
-            # EN: Even on failure we close context and browser explicitly.
-            # TR: Hata olsa bile context ve browser'ı açıkça kapatıyoruz.
-            context.close()
-            browser.close()
+            # EN: Even on failure or controlled stop, close browser resources in
+            # EN: child-to-parent order. Known shutdown-close noise is not a
+            # EN: fetch result and must not pollute journal as a traceback.
+            # TR: Hata veya kontrollü stop durumunda browser kaynaklarını
+            # TR: çocuktan ebeveyne doğru kapatıyoruz. Bilinen shutdown-close
+            # TR: gürültüsü fetch sonucu değildir ve journal'ı traceback ile
+            # TR: kirletmemelidir.
+            _logisticsearch_close_playwright_resource_quietly(page, "page")
+            _logisticsearch_close_playwright_resource_quietly(context, "context")
+            _logisticsearch_close_playwright_resource_quietly(browser, "browser")
+
+    finally:
+        _logisticsearch_stop_sync_playwright_manager_quietly(playwright_manager)
+        gc.collect()
+    # P2C13_EVENT_LOOP_CLOSED_CLEAN_SHUTDOWN_R1_LIFECYCLE_END
 
     # EN: We return a structured result package that later caller layers can
     # EN: serialize, store, or compare.
