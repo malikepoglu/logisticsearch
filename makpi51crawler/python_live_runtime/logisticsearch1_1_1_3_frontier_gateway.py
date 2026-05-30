@@ -492,7 +492,7 @@ def claim_next_url(
                              || jsonb_build_object(
                                   'p2c69_targeted_claim_scope_enabled', true,
                                   'p2c69_targeted_claim_allowed_url_ids', to_jsonb(%(target_url_ids)s::bigint[]),
-                                  'p2c69_targeted_claim_worker_id', %(worker_id)s,
+                                  'p2c69_targeted_claim_worker_id', %(worker_id)s::text,
                                   'p2c69_targeted_claim_policy', 'exclusive_url_id_scope_for_controlled_smoke_tests',
                                   'p2c69_targeted_claim_normal_crawler_behavior_changed', false,
                                   'p2c70e_canonical_parity_repaired', true,
