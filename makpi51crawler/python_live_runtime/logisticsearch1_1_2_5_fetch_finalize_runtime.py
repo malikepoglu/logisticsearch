@@ -1477,6 +1477,42 @@ def finalize_http_error(
     # TR: - aşağıdaki dal mantığı tamamlanmadan bu yerelin başarıyı garanti ettiğini düşünmek
     lease_token = str(get_claimed_url_value(claimed_url, "lease_token"))
 
+    request_url = str(get_claimed_url_value(claimed_url, "canonical_url"))
+    p1k_redirect_policy = _logisticsearch_p1k_build_http_3xx_redirect_target_policy(
+        request_url=request_url,
+        http_status=http_status,
+        fetched_page=fetched_page,
+    )
+    p1k_finish_mode = "retryable" if is_retryable else "permanent"
+
+    # P2C44_FETCH_ATTEMPT_3XX_CLASS_ALIGNMENT_R3_BEGIN
+    # EN: Durable fetch_attempt logging happens before frontier finalization in this
+    # EN: function. Therefore no-target 3xx classification must be aligned before
+    # EN: log_fetch_attempt_terminal_from_worker(...) is called. Raw acquisition
+    # EN: facts stay unchanged: http_status, request_url, final_url,
+    # EN: redirect_location, body path, hashes and bytes remain the actual HTTP
+    # EN: evidence from acquisition.
+    # TR: Bu fonksiyonda durable fetch_attempt loglamasi frontier finalization'dan
+    # TR: once olur. Bu nedenle no-target 3xx siniflandirmasi
+    # TR: log_fetch_attempt_terminal_from_worker(...) cagrilmadan once
+    # TR: hizalanmalidir. Ham acquisition gercekleri degismez: http_status,
+    # TR: request_url, final_url, redirect_location, body path, hash ve byte
+    # TR: degerleri acquisition'dan gelen gercek HTTP kaniti olarak kalir.
+    if (
+        error_class == "http_3xx_unresolved_redirect"
+        and not _logisticsearch_p1k_policy_has_redirect_target(p1k_redirect_policy)
+    ):
+        is_retryable = False
+        p1k_finish_mode = "permanent"
+        error_class = "http_3xx_no_resolvable_redirect_target"
+        base_error_message = str(error_message or "").strip()
+        p2c44_note = (
+            "p2c44_fetch_attempt_3xx_class_alignment: "
+            "redirect_location empty or unavailable and final_url did not change"
+        )
+        error_message = f"{base_error_message} | {p2c44_note}" if base_error_message else p2c44_note
+    # P2C44_FETCH_ATTEMPT_3XX_CLASS_ALIGNMENT_R3_END
+
     # EN: We persist one terminal fetch-attempt row before frontier finalization.
     # TR: Frontier finalization’dan önce tek bir terminal fetch-attempt satırı
     # TR: yazıyoruz.
@@ -1496,14 +1532,7 @@ def finalize_http_error(
         error_message=error_message,
     )
 
-    request_url = str(get_claimed_url_value(claimed_url, "canonical_url"))
-    p1k_redirect_policy = _logisticsearch_p1k_build_http_3xx_redirect_target_policy(
-        request_url=request_url,
-        http_status=http_status,
-        fetched_page=fetched_page,
-    )
     p1k_redirect_enqueue_result: dict[str, object] | None = None
-    p1k_finish_mode = "retryable" if is_retryable else "permanent"
 
     # P2C34_HTTP_3XX_NO_RESOLVABLE_REDIRECT_TARGET_R1_BEGIN
     # EN: If a final HTTP 3xx reaches finalize without a normalized redirect
