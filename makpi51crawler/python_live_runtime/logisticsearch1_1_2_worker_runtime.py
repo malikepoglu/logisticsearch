@@ -154,6 +154,8 @@ TR:
 
 from __future__ import annotations
 
+import os
+
 # EN: We import dataclass because the parent still owns the public structured
 # EN: configuration and result contracts expected by main_loop.
 # TR: Parent yüzeyi main_loop’un beklediği public yapılı konfigürasyon ve sonuç
@@ -533,6 +535,50 @@ def _logisticsearch_extract_claimed_url_value(claimed_url: object, key: str) -> 
     return getattr(claimed_url, key, None)
 
 
+
+# P2C69_TARGETED_CLAIM_SCOPE_WORKER_R1_BEGIN
+def _logisticsearch_p2c69_target_url_ids_from_env() -> tuple[int, ...] | None:
+    """Return optional controlled target url_id scope from process environment.
+
+    EN: LOGISTICSEARCH_CRAWLER_TARGET_URL_IDS is process-local. It lets a
+    controlled smoke test restrict claims without changing systemd unit files,
+    catalog JSON, frontier scheduling truth, or normal crawler behavior when
+    unset.
+
+    TR: LOGISTICSEARCH_CRAWLER_TARGET_URL_IDS process-local tasarlanmıştır.
+    Değişken boşken systemd unit, catalog JSON, frontier scheduling doğrusu
+    veya normal crawler davranışı değişmez.
+    """
+
+    raw = os.environ.get("LOGISTICSEARCH_CRAWLER_TARGET_URL_IDS", "").strip()
+    if not raw:
+        return None
+
+    values: list[int] = []
+    seen: set[int] = set()
+
+    for item in raw.replace(";", ",").replace(" ", ",").split(","):
+        item = item.strip()
+        if not item:
+            continue
+
+        value = int(item)
+        if value <= 0:
+            raise ValueError(
+                "LOGISTICSEARCH_CRAWLER_TARGET_URL_IDS contains "
+                f"non-positive url_id: {value}"
+            )
+
+        if value not in seen:
+            values.append(value)
+            seen.add(value)
+
+    if not values:
+        return None
+
+    return tuple(values)
+# P2C69_TARGETED_CLAIM_SCOPE_WORKER_R1_END
+
 # PLAYWRIGHT_BROWSER_ERROR_CLASSIFICATION_R2_BEGIN
 def _logisticsearch_classify_browser_runtime_error(
     *,
@@ -712,6 +758,46 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
     # TR: PostgreSQL jsonb_build_object içindeki psycopg placeholder tiplerini
     # TR: her zaman güvenilir çıkaramaz. Bu yüzden runtime retry_wait finalization
     # TR: receipt parametrelerini implicit inference'a bırakmadan açık cast eder.
+    # P2C69_RUNTIME_EXCEPTION_ATTEMPT_LEDGER_R1_BEGIN
+    # EN: Runtime/browser acquisition exceptions must create durable
+    # EN: http_fetch.fetch_attempt evidence before frontier.retry_wait is
+    # EN: finalized. P2C67D proved that frontier.fetch_attempt_count can
+    # EN: otherwise get ahead of http_fetch.fetch_attempt rows.
+    # TR: Runtime/browser acquisition exception durumları frontier.retry_wait
+    # TR: finalize edilmeden önce kalıcı http_fetch.fetch_attempt kanıtı
+    # TR: oluşturmalıdır. P2C67D aksi halde frontier.fetch_attempt_count ile
+    # TR: http_fetch.fetch_attempt satırlarının ayrışabildiğini kanıtladı.
+    runtime_retry_wait_fetch_attempt_log = log_fetch_attempt_terminal_from_worker(
+        conn,
+        claimed_url=claimed_url,
+        worker_id=worker_id,
+        outcome="retryable_error",
+        note="p2c69_runtime_exception_retry_wait_before_frontier_finalize",
+        acquisition_method="runtime_exception_retry_wait",
+        fetched_page=None,
+        error_class=error_class,
+        error_message=bounded_message,
+    )
+
+    if not isinstance(runtime_retry_wait_fetch_attempt_log, dict):
+        raise RuntimeError(
+            "P2C69 runtime exception attempt ledger returned non-dict result"
+        )
+
+    runtime_retry_wait_fetch_attempt_id = runtime_retry_wait_fetch_attempt_log.get(
+        "fetch_attempt_id"
+    )
+    runtime_retry_wait_fetch_attempt_degraded = bool(
+        runtime_retry_wait_fetch_attempt_log.get("fetch_attempt_degraded")
+        or runtime_retry_wait_fetch_attempt_log.get("fetch_attempt_no_row")
+    )
+
+    if runtime_retry_wait_fetch_attempt_id is None or runtime_retry_wait_fetch_attempt_degraded:
+        raise RuntimeError(
+            "P2C69 runtime exception attempt ledger parity failed before retry_wait finalize"
+        )
+    # P2C69_RUNTIME_EXCEPTION_ATTEMPT_LEDGER_R1_END
+
     cursor = conn.execute(
         """
         UPDATE frontier.url
@@ -742,8 +828,9 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
               'runtime_retry_wait_worker_id', %s::text,
               'runtime_retry_wait_after_seconds', %s::integer,
               'runtime_retry_wait_reason', 'non_db_runtime_acquisition_exception_not_permanent_on_first_attempt',
-              'runtime_retry_wait_fetch_attempt_row_created', false,
-              'runtime_retry_wait_fetch_attempt_row_reason', 'runtime_exception_before_terminal_fetch_attempt_log',
+              'runtime_retry_wait_fetch_attempt_row_created', true,
+              'runtime_retry_wait_fetch_attempt_row_reason', 'p2c69_runtime_exception_terminal_fetch_attempt_log_created_before_retry_wait',
+              'runtime_retry_wait_fetch_attempt_id', %s::text,
               'runtime_retry_wait_frontier_fetch_attempt_count_incremented', false,
               'runtime_retry_wait_counter_policy', 'claim_increment_only_no_second_increment',
               'runtime_retry_wait_backoff_policy', 'class_based_runtime_exception_backoff_v3',
@@ -765,6 +852,7 @@ def _logisticsearch_finish_runtime_exception_retry_wait(
             error_class,
             worker_id,
             retry_after_seconds,
+            runtime_retry_wait_fetch_attempt_id,
             error_class,
             retry_after_seconds,
             url_id,
@@ -1001,11 +1089,18 @@ def _logisticsearch_run_claim_probe_impl_p1a(config: WorkerConfig) -> ClaimProbe
         # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / claimed_url
         # TR: claimed_url bu ara worker-runtime doğrusunu satır içine gizlemek yerine isimli, görünür ve denetlenebilir tutar.
         # TR: Beklenen değerler aşağıdaki aktif dala göre değişir; claimed_url değerini isimsiz ifadeye ezmek denetimi zayıflatır.
+        # P2C69_TARGETED_CLAIM_SCOPE_WORKER_CALL_R1_BEGIN
+        # EN: Optional process-local target scope is used only for controlled smoke tests.
+        # TR: Opsiyonel process-local hedef kapsamı yalnızca kontrollü smoke testlerinde kullanılır.
+        target_url_ids = _logisticsearch_p2c69_target_url_ids_from_env()
+
         claimed_url = claim_next_url(
             conn=conn,
             worker_id=config.worker_id,
             lease_seconds=config.lease_seconds,
+            target_url_ids=target_url_ids,
         )
+        # P2C69_TARGETED_CLAIM_SCOPE_WORKER_CALL_R1_END
 
         # EN: If nothing is currently claimable, we rollback and return a structured
         # EN: no-work result.

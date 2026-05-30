@@ -329,59 +329,234 @@ def _frontier_enrich_claimed_row_with_provenance(
 # TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_END
 
 
+
+# P2C69_TARGETED_CLAIM_SCOPE_R1_BEGIN
+def _logisticsearch_p2c69_normalize_target_url_ids(
+    target_url_ids: object | None,
+) -> list[int] | None:
+    """Normalize optional controlled target claim scope.
+
+    EN: This helper is only for controlled crawler-core smoke tests where a
+    small set of url_id values must be isolated. Normal crawling leaves
+    target_url_ids unset so frontier.claim_next_url(...) remains the canonical
+    database scheduling authority.
+
+    TR: Bu yardımcı yalnızca küçük bir url_id kümesinin izole edilmesi gereken
+    kontrollü crawler-core smoke testleri içindir. Normal crawl akışı
+    target_url_ids değerini boş bırakır; frontier.claim_next_url(...) kanonik
+    database scheduling otoritesi olarak kalır.
+    """
+
+    if target_url_ids is None:
+        return None
+
+    normalized: list[int] = []
+    seen: set[int] = set()
+
+    if isinstance(target_url_ids, str):
+        raw_values = target_url_ids.replace(";", ",").replace(" ", ",").split(",")
+    else:
+        try:
+            raw_values = list(target_url_ids)  # type: ignore[arg-type]
+        except TypeError as exc:
+            raise ValueError("target_url_ids must be None, string, or iterable") from exc
+
+    for raw_value in raw_values:
+        value_text = str(raw_value).strip()
+        if not value_text:
+            continue
+
+        value = int(value_text)
+        if value <= 0:
+            raise ValueError(f"target_url_ids contains non-positive url_id: {value}")
+
+        if value not in seen:
+            normalized.append(value)
+            seen.add(value)
+
+    if not normalized:
+        return None
+
+    return normalized
+# P2C69_TARGETED_CLAIM_SCOPE_R1_END
+
+
 def claim_next_url(
     conn: psycopg.Connection,
     worker_id: str,
     lease_seconds: int,
+    target_url_ids: object | None = None,
 ) -> ClaimedUrl | None:
-    # EN: We open a cursor from the existing connection so we can execute SQL
-    # EN: statements inside the caller-controlled transaction scope.
-    # TR: SQL ifadelerini çağıran tarafın kontrol ettiği transaction kapsamı
-    # TR: içinde çalıştırabilmek için mevcut bağlantıdan bir cursor açıyoruz.
-    with conn.cursor() as cur:
-        # EN: We execute the canonical function instead of re-implementing
-        # EN: scheduling rules in Python because the repository docs say the DB
-        # EN: is the durable truth of claimability.
-        # TR: Repository dokümanları claim edilebilirlik doğrusunun veritabanında
-        # TR: olduğunu söylediği için zamanlama kurallarını Python'da yeniden yazmak
-        # TR: yerine kanonik fonksiyonu çalıştırıyoruz.
-        cur.execute(
-            """
-            SELECT *
-            FROM frontier.claim_next_url(
-                p_worker_id => %(worker_id)s,
-                p_lease_duration => make_interval(secs => %(lease_seconds)s)
-            )
-            """,
-            {
-                "worker_id": worker_id,
-                "lease_seconds": lease_seconds,
-            },
-        )
+    # EN: P2C69 adds an optional explicit url_id scope for controlled tests.
+    # EN: When target_url_ids is unset, the original DB function path is used.
+    # TR: P2C69 kontrollü testler için opsiyonel açık url_id kapsamı ekler.
+    # TR: target_url_ids boşsa özgün DB function yolu kullanılır.
+    normalized_target_url_ids = _logisticsearch_p2c69_normalize_target_url_ids(
+        target_url_ids
+    )
 
-        # EN: We fetch at most one row because crawler-core claim_next_url(...)
-        # EN: is already designed to claim exactly one eligible URL.
-        # TR: En fazla bir satır çekiyoruz; çünkü crawler-core claim_next_url(...)
-        # TR: zaten tam olarak bir uygun URL claim edecek şekilde tasarlanmıştır.
+    with conn.cursor() as cur:
+        if normalized_target_url_ids is None:
+            # EN: Normal/default path: keep the canonical database function as
+            # EN: the scheduling authority.
+            # TR: Normal/default yol: kanonik database function scheduling
+            # TR: otoritesi olarak kalır.
+            cur.execute(
+                """
+                SELECT *
+                FROM frontier.claim_next_url(
+                    p_worker_id => %(worker_id)s,
+                    p_lease_duration => make_interval(secs => %(lease_seconds)s)
+                )
+                """,
+                {
+                    "worker_id": worker_id,
+                    "lease_seconds": lease_seconds,
+                },
+            )
+        else:
+
+            cur.execute(
+                """
+                WITH runtime_params AS (
+                    SELECT
+                        now() AS p_now,
+                        (%(lease_seconds)s::integer * interval '1 second') AS p_lease_duration
+                ),
+                active_leases AS (
+                    SELECT
+                        u.host_id,
+                        count(*)::integer AS active_lease_count
+                    FROM frontier.url u
+                    CROSS JOIN runtime_params rp
+                    WHERE u.state = 'leased'
+                      AND (
+                            u.lease_expires_at IS NULL
+                         OR u.lease_expires_at >= rp.p_now
+                      )
+                    GROUP BY u.host_id
+                ),
+                candidate AS (
+                    SELECT
+                        u.url_id,
+                        u.host_id,
+                        u.canonical_url,
+                        u.url_path,
+                        u.url_query,
+                        u.depth,
+                        u.priority,
+                        u.score,
+                        h.scheme,
+                        h.host,
+                        h.port,
+                        h.authority_key,
+                        h.user_agent_token,
+                        h.robots_mode,
+                        h.min_delay_ms,
+                        rp.p_now,
+                        rp.p_lease_duration
+                    FROM frontier.url u
+                    JOIN frontier.host h
+                      ON h.host_id = u.host_id
+                    CROSS JOIN runtime_params rp
+                    LEFT JOIN active_leases al
+                      ON al.host_id = h.host_id
+                    WHERE u.url_id = ANY(%(target_url_ids)s::bigint[])
+                      AND u.state IN ('queued', 'retry_wait')
+                      AND u.next_fetch_at <= rp.p_now
+                      AND (u.revisit_not_before IS NULL OR u.revisit_not_before <= rp.p_now)
+                      AND h.host_status = 'active'
+                      AND (h.pause_until IS NULL OR h.pause_until <= rp.p_now)
+                      AND (h.backoff_until IS NULL OR h.backoff_until <= rp.p_now)
+                      AND h.next_eligible_at <= rp.p_now
+                      AND COALESCE(al.active_lease_count, 0) < h.max_concurrency
+                    ORDER BY
+                        u.priority DESC,
+                        u.score DESC,
+                        u.next_fetch_at ASC,
+                        u.url_id ASC
+                    LIMIT 1
+                    FOR UPDATE OF u, h SKIP LOCKED
+                ),
+                updated_url AS (
+                    UPDATE frontier.url AS u
+                       SET state = 'leased'::frontier.url_state_enum,
+                           lease_token = gen_random_uuid(),
+                           lease_owner = %(worker_id)s,
+                           lease_acquired_at = c.p_now,
+                           lease_expires_at = c.p_now + c.p_lease_duration,
+                           fetch_attempt_count = COALESCE(u.fetch_attempt_count, 0) + 1,
+                           last_fetch_started_at = c.p_now,
+                           updated_at = c.p_now,
+                           url_metadata = COALESCE(u.url_metadata, '{}'::jsonb)
+                             || jsonb_build_object(
+                                  'p2c69_targeted_claim_scope_enabled', true,
+                                  'p2c69_targeted_claim_allowed_url_ids', to_jsonb(%(target_url_ids)s::bigint[]),
+                                  'p2c69_targeted_claim_worker_id', %(worker_id)s,
+                                  'p2c69_targeted_claim_policy', 'exclusive_url_id_scope_for_controlled_smoke_tests',
+                                  'p2c69_targeted_claim_normal_crawler_behavior_changed', false,
+                                  'p2c70e_canonical_parity_repaired', true,
+                                  'p2c70e_host_eligibility_preserved', true
+                                )
+                    FROM candidate AS c
+                    WHERE u.url_id = c.url_id
+                    RETURNING
+                        u.url_id,
+                        u.host_id,
+                        u.canonical_url,
+                        u.url_path,
+                        u.url_query,
+                        u.depth,
+                        u.priority,
+                        u.score,
+                        u.lease_token,
+                        u.lease_expires_at
+                ),
+                updated_host AS (
+                    UPDATE frontier.host AS h
+                       SET last_fetch_started_at = c.p_now,
+                           next_eligible_at = c.p_now + make_interval(secs => c.min_delay_ms / 1000.0),
+                           updated_at = c.p_now
+                    FROM candidate AS c
+                    WHERE h.host_id = c.host_id
+                    RETURNING h.host_id
+                )
+                SELECT
+                    uu.url_id,
+                    uu.host_id,
+                    uu.canonical_url,
+                    uu.url_path,
+                    uu.url_query,
+                    uu.depth,
+                    uu.priority,
+                    uu.score,
+                    uu.lease_token,
+                    uu.lease_expires_at,
+                    c.scheme,
+                    c.host,
+                    c.port,
+                    c.authority_key,
+                    c.user_agent_token,
+                    c.robots_mode
+                FROM updated_url uu
+                JOIN candidate c
+                  ON c.url_id = uu.url_id
+                JOIN updated_host uh
+                  ON uh.host_id = uu.host_id
+                """,
+                {
+                    "worker_id": worker_id,
+                    "lease_seconds": lease_seconds,
+                    "target_url_ids": normalized_target_url_ids,
+                },
+            )
+
         row = cur.fetchone()
 
-    # EN: If no row exists, the worker currently has no claimable work.
-    # TR: Hiç satır yoksa worker'ın şu anda claim edebileceği iş yok demektir.
     if row is None:
-        # EN: We return None to make the no-work state explicit in Python.
-        # TR: Python tarafında iş-yok durumunu açık hale getirmek için None döndürüyoruz.
         return None
 
-    # EN: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_BEGIN
-    # EN: Enrich the transient claimed_url payload with provenance from frontier.url
-    # EN: before the worker/acquisition path writes raw evidence.
-    # TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_BEGIN
-    # TR: Worker/acquisition yolu raw kanıt yazmadan önce geçici claimed_url
-    # TR: payload'ını frontier.url provenance bilgisiyle zenginleştir.
     enriched_row = _frontier_enrich_claimed_row_with_provenance(conn, row)
-
-    # EN: If a row exists, we convert it into our strongly-shaped Python object.
-    # TR: Satır varsa onu şekli net Python nesnemize dönüştürüyoruz.
     return _row_to_claimed_url(enriched_row)
     # EN: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_END
     # TR: FRONTIER_CLAIM_PAYLOAD_PROVENANCE_GATEWAY_R3_END
