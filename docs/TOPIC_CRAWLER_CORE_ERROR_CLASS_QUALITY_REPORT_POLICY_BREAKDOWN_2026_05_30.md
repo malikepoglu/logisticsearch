@@ -50,12 +50,11 @@
 
 | policy_bucket | row_count | retry_wait_rows | dead_rows | due_now_rows | future_rows | min_fetch_attempt_count | max_fetch_attempt_count |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| BROWSER_RUNTIME_BACKOFF_REVIEW | 227 | 227 | 0 | 159 | 68 | 1 | 3 |
+| BROWSER_RUNTIME_BACKOFF_REVIEW | 227 | 227 | 0 | 163 | 64 | 1 | 3 |
 | SOURCE_QUALITY_404_REVIEW | 151 | 0 | 151 | 151 | 0 | 1 | 2 |
+| SOURCE_ACCESS_OR_METHOD_REVIEW | 54 | 0 | 54 | 54 | 0 | 1 | 1 |
 | REDIRECT_POLICY_REVIEW | 48 | 4 | 44 | 48 | 0 | 1 | 3 |
 | ROBOTS_POLICY_REVIEW | 32 | 0 | 32 | 32 | 0 | 1 | 1 |
-| SOURCE_ACCESS_OR_METHOD_REVIEW | 30 | 0 | 30 | 30 | 0 | 1 | 1 |
-| OTHER_ERROR_POLICY_REVIEW | 24 | 0 | 24 | 24 | 0 | 1 | 1 |
 | SERVER_5XX_BACKOFF_REVIEW | 8 | 8 | 0 | 8 | 0 | 2 | 3 |
 | TRANSPORT_RETRYABLE_BACKOFF_REVIEW | 2 | 2 | 0 | 2 | 0 | 3 | 3 |
 
@@ -65,10 +64,10 @@
 - `SOURCE_QUALITY_404_REVIEW`: `151` rows. Kaynak/seed kalite borcu; katalog kaynakları tek tek doğrulanmadan toplu silme yok.
 - `REDIRECT_POLICY_REVIEW`: `48` rows. 4/5 aşamasında öncelikli hedef; unresolved 3xx ve no-target 3xx ayrımı korunmalı.
 - `ROBOTS_POLICY_REVIEW`: `32` rows. Robots kararına saygı; crawl zorlaması yok, sadece kaynak kalite/alternatif kaynak kararı.
-- `SOURCE_ACCESS_OR_METHOD_REVIEW`: `30` rows. 403/405/401/418 erişim veya metod uyumsuzluğu; otomatik retry değil kaynak/policy kararı.
+- `SOURCE_ACCESS_OR_METHOD_REVIEW`: `54` rows. 403/405/401/418 access or method class rows are grouped here; automatic deletion is not allowed.
 - `SERVER_5XX_BACKOFF_REVIEW`: `8` rows. Sunucu kaynaklı geçici hata; backoff korunmalı, kısa aralıkta agresif retry yok.
 - `TRANSPORT_RETRYABLE_BACKOFF_REVIEW`: `2` rows. Transport timeout/retryable; kontrollü backoff ve küçük örneklem testi.
-- `OTHER_ERROR_POLICY_REVIEW`: `24` rows. Sınıf eşlemesi genişletilecek; önce statik sınıflandırma raporu.
+- `OTHER_ERROR_POLICY_REVIEW`: `0` rows. Strict policy mapping currently leaves no observed class in OTHER; if this becomes non-zero, item 3 must reopen before item 4.
 
 ## HTTP Fetch Attempt Error Breakdown
 
