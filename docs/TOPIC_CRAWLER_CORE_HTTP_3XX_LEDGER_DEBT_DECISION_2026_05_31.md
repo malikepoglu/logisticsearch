@@ -122,3 +122,99 @@ for exactly:
 `748,749,775,776,1002,1733,1775,2078`
 
 No fetch attempt history rewrite is allowed in that counter reconciliation gate.
+
+## 8. Post-reconciliation and URL1003 exception update
+
+Gate: `FULL_R4_P2C76AE3_HTTP_3XX_HISTORICAL_ALIGNMENT_DECISION_DOC_UPDATE_LOCAL_ONLY_R1`
+
+This section updates the earlier decision after the following gates:
+
+- `P2C76AB` counter mismatch reconciliation plan
+- `FULL_R4_P2C76AC_HTTP_3XX_COUNTER_MISMATCH_RECONCILIATION_GATE_R1`
+- `FULL_R4_P2C76AD_HTTP_3XX_COUNTER_MISMATCH_RECONCILIATION_POST_SEAL_READONLY_R1`
+- `FULL_R4_P2C76AE_HTTP_3XX_HISTORICAL_ALIGNMENT_DECISION_READONLY_R1`
+- `FULL_R4_P2C76AE2_HTTP_3XX_URL1003_HISTORICAL_EXCEPTION_ROOT_CAUSE_READONLY_R1`
+
+### 8.1 Counter reconciliation result
+
+The exact eight counter mismatch rows were reconciled.
+
+| Metric | Value |
+|---|---:|
+| Reconciled URL ids | `748,749,775,776,1002,1733,1775,2078` |
+| Reconciliation update count | `8` |
+| HTTP 3xx mismatch rows after reconciliation | `0` |
+| Global attempt mismatch rows after reconciliation | `223` |
+| Retry-wait HTTP 3xx rows after reconciliation | `0` |
+| Dead high-priority HTTP 3xx rows after reconciliation | `0` |
+
+The reconciliation changed only `frontier.url.fetch_attempt_count` for the exact eight URL ids above so that the counter matched the real number of `http_fetch.fetch_attempt` rows.
+
+### 8.2 Historical alignment result
+
+Historical alignment count remains `13`.
+
+For five URL ids, historical retryable rows are superseded by at least one terminal no-target attempt row:
+
+| url_id | Historical retryable rows | Terminal no-target attempt rows |
+|---:|---:|---:|
+| `1732` | `2` | `1` |
+| `1733` | `2` | `1` |
+| `1734` | `2` | `1` |
+| `1774` | `2` | `1` |
+| `1775` | `2` | `1` |
+
+For `url_id=1003`, the evidence chain is different and must be handled as an explicit exception.
+
+### 8.3 URL1003 exception
+
+`url_id=1003` is classified as:
+
+`PRE_PATCH_FRONTIER_TERMINAL_STATE_WITHOUT_TERMINAL_FETCH_ATTEMPT_ROW`
+
+Sealed URL1003 facts:
+
+| Field | Value |
+|---|---:|
+| url_id | `1003` |
+| canonical_url | `https://www.chamber.org.il/en/` |
+| frontier state | `dead` |
+| frontier last_error_class | `http_3xx_no_resolvable_redirect_target` |
+| frontier last_http_status | `307` |
+| frontier fetch_attempt_count | `3` |
+| actual fetch_attempt rows | `3` |
+| historical retryable attempts | `3` |
+| terminal no-target attempts | `0` |
+| mismatch_delta | `0` |
+
+URL1003 attempt ids:
+
+| fetch_attempt_id | outcome | error_class | http_status |
+|---:|---|---|---:|
+| `853` | `retryable_error` | `http_3xx_unresolved_redirect` | `307` |
+| `1879` | `retryable_error` | `http_3xx_unresolved_redirect` | `307` |
+| `1915` | `retryable_error` | `http_3xx_unresolved_redirect` | `307` |
+
+Policy for URL1003:
+
+`DOCUMENT_URL1003_EXCEPTION_AND_PRESERVE_FETCH_ATTEMPT_HISTORY_NO_REWRITE`
+
+No synthetic `http_fetch.fetch_attempt` row is allowed for URL1003. No existing `http_fetch.fetch_attempt` row may be rewritten for URL1003. The frontier terminal state is preserved as the current canonical operational state, and the historical attempt rows remain audit evidence.
+
+### 8.4 Final image item 4/5 close condition
+
+Image item 4/5 can proceed to final seal only if the next read-only gate proves:
+
+1. `retry_wait` HTTP 3xx rows remain `0`
+2. dead high-priority HTTP 3xx rows remain `0`
+3. HTTP 3xx mismatch rows remain `0`
+4. URL1003 is documented as the single pre-patch frontier-terminal exception
+5. no fetch-attempt history rewrite occurred
+6. service remains inactive and disabled
+7. crawler and browser process counts remain `0`
+8. raw evidence count and byte total remain stable
+
+Required next gate:
+
+`FULL_R4_P2C76AE4_HTTP_3XX_HISTORICAL_ALIGNMENT_DECISION_DOC_AUDIT_READONLY_R1`
+
