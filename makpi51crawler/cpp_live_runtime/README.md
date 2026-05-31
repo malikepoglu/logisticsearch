@@ -31,3 +31,20 @@ The first role of this surface is to provide a clean, testable C++ runtime found
 - benchmarked worker binaries
 
 This skeleton is not live-activated.
+
+## Current modules
+
+### `byte_metrics`
+
+Small deterministic byte statistics helper for raw/evidence-oriented pipelines.
+
+Initial fields:
+
+- `byte_count`
+- `zero_byte_count`
+- `newline_count`
+- `ascii_printable_count`
+- `high_bit_byte_count`
+- `fnv1a64_non_crypto`
+
+Security note: `fnv1a64_non_crypto` is intentionally non-cryptographic and must not be used as a deduplication identity or trust boundary.
