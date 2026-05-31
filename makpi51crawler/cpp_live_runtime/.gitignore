@@ -1,0 +1,22 @@
+# Build outputs
+/build/
+/.build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+
+# Binaries / libraries
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+*.o
+*.obj
+
+# Local runtime artifacts
+*.log
+*.tmp
