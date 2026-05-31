@@ -48,3 +48,22 @@ Initial fields:
 - `fnv1a64_non_crypto`
 
 Security note: `fnv1a64_non_crypto` is intentionally non-cryptographic and must not be used as a deduplication identity or trust boundary.
+
+### `file_byte_metrics`
+
+Regular-file byte metrics helper that reads a file in bounded chunks and applies the existing `byte_metrics` model.
+
+Initial result fields:
+
+- `ok`
+- `error_code`
+- `metrics`
+- `bytes_read`
+- `chunks_read`
+
+Safety notes:
+
+- Only regular files are accepted.
+- Chunk size must be between 1 byte and 16 MiB.
+- The helper does not mutate files.
+- `fnv1a64_non_crypto` remains non-cryptographic and must not be used as a deduplication identity or trust boundary.

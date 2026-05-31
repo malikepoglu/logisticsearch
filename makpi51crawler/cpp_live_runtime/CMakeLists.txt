@@ -13,6 +13,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_library(logisticsearch_cpp_runtime STATIC
     src/version.cpp
     src/byte_metrics.cpp
+    src/file_byte_metrics.cpp
 )
 
 target_include_directories(logisticsearch_cpp_runtime
@@ -64,4 +65,18 @@ target_link_libraries(logisticsearch_cpp_runtime_byte_metrics_test
 add_test(
     NAME logisticsearch_cpp_runtime_byte_metrics
     COMMAND logisticsearch_cpp_runtime_byte_metrics_test
+)
+
+add_executable(logisticsearch_cpp_runtime_file_byte_metrics_test
+    tests/test_file_byte_metrics.cpp
+)
+
+target_link_libraries(logisticsearch_cpp_runtime_file_byte_metrics_test
+    PRIVATE
+        logisticsearch_cpp_runtime
+)
+
+add_test(
+    NAME logisticsearch_cpp_runtime_file_byte_metrics
+    COMMAND logisticsearch_cpp_runtime_file_byte_metrics_test
 )
