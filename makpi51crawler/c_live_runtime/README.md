@@ -30,3 +30,20 @@ The first role of this surface is to provide a small, stable, low-level C runtim
 - future C ABI boundary experiments
 
 This skeleton is not live-activated.
+
+### `byte_histogram`
+
+Deterministic 256-bucket byte distribution helper for future raw/evidence profile analysis.
+
+Initial result fields:
+
+- `buckets`
+- `total_count`
+- `distinct_byte_count`
+
+Safety notes:
+
+- This module does not compress data.
+- This module does not mutate files.
+- This module is not a parser.
+- This module must not be used as a deduplication identity or trust boundary.

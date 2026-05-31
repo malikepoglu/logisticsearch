@@ -67,3 +67,20 @@ Safety notes:
 - Chunk size must be between 1 byte and 16 MiB.
 - The helper does not mutate files.
 - `fnv1a64_non_crypto` remains non-cryptographic and must not be used as a deduplication identity or trust boundary.
+
+### `byte_histogram`
+
+Deterministic 256-bucket byte distribution helper for future raw/evidence profile analysis.
+
+Initial result fields:
+
+- `buckets`
+- `total_count`
+- `distinct_byte_count`
+
+Safety notes:
+
+- This module does not compress data.
+- This module does not mutate files.
+- This module is not a parser.
+- This module must not be used as a deduplication identity or trust boundary.

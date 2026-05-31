@@ -12,6 +12,7 @@ set(CMAKE_C_EXTENSIONS OFF)
 
 add_library(logisticsearch_c_runtime STATIC
     src/version.c
+    src/byte_histogram.c
 )
 
 target_include_directories(logisticsearch_c_runtime
@@ -49,4 +50,18 @@ target_link_libraries(logisticsearch_c_runtime_version_test
 add_test(
     NAME logisticsearch_c_runtime_version_smoke
     COMMAND logisticsearch_c_runtime_version_test
+)
+
+add_executable(logisticsearch_c_runtime_byte_histogram_test
+    tests/test_byte_histogram.c
+)
+
+target_link_libraries(logisticsearch_c_runtime_byte_histogram_test
+    PRIVATE
+        logisticsearch_c_runtime
+)
+
+add_test(
+    NAME logisticsearch_c_runtime_byte_histogram
+    COMMAND logisticsearch_c_runtime_byte_histogram_test
 )
