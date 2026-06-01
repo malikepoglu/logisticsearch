@@ -30,7 +30,7 @@ The goal is not to blindly install every possible package. The goal is to create
 2. Python dependencies must be installed only into an explicit venv.
 3. The venv must not live inside `/logisticsearch/repo`.
 4. The venv must not live inside `/logisticsearch/makpi51crawler`.
-5. Preferred pi51c venv path: `/logisticsearch/venvs/ai_ranking_py312`.
+5. Preferred pi51c Python venv path: `/logisticsearch/makpi51crawler/.venv`.
 6. No Hailo driver/runtime/package before physical Hailo device is visible.
 7. No crawler service start during dependency installation.
 8. No DB mutation during dependency installation.
@@ -68,8 +68,8 @@ Purpose:
 - no system Python pollution
 - reproducible pip package scope
 
-Venv path:
-- `/logisticsearch/venvs/ai_ranking_py312`
+Python venv path:
+- `/logisticsearch/makpi51crawler/.venv`
 
 Forbidden venv paths:
 - `/logisticsearch/repo/.venv`
@@ -351,7 +351,7 @@ Gate:
 - KOD_BLOGU_073
 
 Purpose:
-- create `/logisticsearch/venvs/ai_ranking_py312`
+rejected context: - create `/logisticsearch/makpi51crawler/venvs/ai_ranking_py312`
 - no package install yet, unless explicitly approved by a later gate
 
 ### Stage 8 — dependency install in canonical venv
@@ -686,9 +686,9 @@ Old live venv path:
 
 - `/logisticsearch/makpi51crawler/.venv`
 
-Canonical AI/ranking venv candidate path:
+Python AI/ranking source-code surface:
 
-- `/logisticsearch/venvs/ai_ranking_py312`
+- `/logisticsearch/makpi51crawler/python_live_runtime/ai_ranking`
 
 Classification:
 
@@ -702,7 +702,7 @@ Decision:
 - It must not be renamed.
 - It must not be moved.
 - It must not be chowned/chmodded during AI/ranking work.
-- The new AI/ranking venv must be separate and outside both repo and live runtime.
+- The AI/ranking Python packages must use the existing live Python venv, while AI/ranking source code must live under `python_live_runtime/`.
 
 ### 7.2 Observed old live venv facts
 
@@ -735,9 +735,9 @@ Therefore the old live venv is part of the current crawler/runtime surface and m
 
 ### 7.4 New AI/ranking venv policy
 
-The canonical AI/ranking venv path remains:
+The single Python venv path remains:
 
-- `/logisticsearch/venvs/ai_ranking_py312`
+- `/logisticsearch/makpi51crawler/.venv`
 
 Hard policy:
 
@@ -754,11 +754,123 @@ Hard policy:
 
 The next safe gate must be a canonical venv creation plan or audit for:
 
-- `/logisticsearch/venvs/ai_ranking_py312`
+rejected context: - `/logisticsearch/makpi51crawler/venvs/ai_ranking_py312`
 
 The gate must treat `/logisticsearch/makpi51crawler/.venv` as preserved live runtime infrastructure.
 
-## 8. Current recommendation
+
+
+## 8. KOD_BLOGU_082B runtime topology repair
+
+Marker: `KOD_BLOGU_082B_ACTIVE_REJECTED_PATH_REPAIR_TRUTH`
+
+KOD_BLOGU_082B repairs the wording after KOD_BLOGU_082. The topology decision was correct, but the rejected paths were still listed in a form that the active-topology audit could count as active. This section makes every rejected path explicit.
+
+### 8.1 Final Python decision
+
+There will be one Python virtual environment:
+
+- `/logisticsearch/makpi51crawler/.venv`
+
+This path is a Python runtime environment, not a source-code directory.
+
+It contains Python interpreter/runtime files such as:
+
+- `bin/`
+- `include/`
+- `lib/`
+- `lib64/`
+- `pyvenv.cfg`
+
+It must not be used as an application source-code tree.
+
+### 8.2 Python source-code surface
+
+Python source code belongs here:
+
+- `/logisticsearch/makpi51crawler/python_live_runtime`
+
+AI/ranking Python source code may be added here later:
+
+- `/logisticsearch/makpi51crawler/python_live_runtime/ai_ranking`
+
+This is a source-code/runtime surface. It is not a virtualenv.
+
+### 8.3 C working environment
+
+C does not need a Python-style `.venv`.
+
+The C project working surface is:
+
+- `/logisticsearch/makpi51crawler/c_live_runtime`
+
+C source/build/runtime substructure may later be standardized inside that existing surface:
+
+- `/logisticsearch/makpi51crawler/c_live_runtime/src/`
+- `/logisticsearch/makpi51crawler/c_live_runtime/include/`
+- `/logisticsearch/makpi51crawler/c_live_runtime/build/`
+- `/logisticsearch/makpi51crawler/c_live_runtime/bin/`
+- `/logisticsearch/makpi51crawler/c_live_runtime/lib/`
+
+System C toolchain and headers remain OS-managed under paths such as `/usr/bin`, `/usr/include`, and `/usr/lib/aarch64-linux-gnu`.
+
+### 8.4 C++ working environment
+
+C++ does not need a Python-style `.venv`.
+
+The C++ project working surface is:
+
+- `/logisticsearch/makpi51crawler/cpp_live_runtime`
+
+C++ source/build/runtime substructure may later be standardized inside that existing surface:
+
+- `/logisticsearch/makpi51crawler/cpp_live_runtime/src/`
+- `/logisticsearch/makpi51crawler/cpp_live_runtime/include/`
+- `/logisticsearch/makpi51crawler/cpp_live_runtime/build/`
+- `/logisticsearch/makpi51crawler/cpp_live_runtime/bin/`
+- `/logisticsearch/makpi51crawler/cpp_live_runtime/lib/`
+
+System C++ toolchain and headers remain OS-managed under paths such as `/usr/bin`, `/usr/include`, and `/usr/lib/aarch64-linux-gnu`.
+
+### 8.5 Rejected environment paths
+
+The following paths are rejected and must not become canonical:
+
+- rejected path: `/logisticsearch/venvs/ai_ranking_py312`
+- rejected path: `/logisticsearch/makpi51crawler/venvs/ai_ranking_py312`
+- rejected path: `/logisticsearch/makpi51crawler/.venv_ai_ranking_py312`
+- rejected path: `/logisticsearch/makpi51crawler/.venvs`
+- rejected path: `/logisticsearch/makpi51crawler/venvs`
+- rejected path: `/logisticsearch/makpi51crawler/.cenv`
+- rejected path: `/logisticsearch/makpi51crawler/.cppenv`
+- rejected path: `/logisticsearch/makpi51crawler/c_env`
+- rejected path: `/logisticsearch/makpi51crawler/cpp_env`
+- rejected path: `/logisticsearch/makpi51crawler/native_live_runtime`
+- rejected path: `/logisticsearch/makpi51crawler/c_cpp_live_runtime`
+
+### 8.6 Cleanup consequence
+
+KOD_BLOGU_080 created one rejected temporary venv.
+
+- rejected cleanup target: `/logisticsearch/venvs/ai_ranking_py312`
+- rejected cleanup parent root: `/logisticsearch/venvs`
+
+The rejected temporary venv was sealed as a baseline venv containing only `pip==24.0`, with no AI/ranking packages and no Hailo packages.
+
+The next safe sequence is:
+
+1. audit this document repair
+2. commit/push this document repair
+3. sync pi51c repo
+4. verify the rejected temporary venv still contains only baseline pip and no AI/Hailo packages
+5. delete only the rejected temporary venv path `/logisticsearch/venvs/ai_ranking_py312`
+6. delete only the rejected temporary root `/logisticsearch/venvs` if it is empty after removing the rejected venv
+7. preserve `/logisticsearch/makpi51crawler/.venv`
+8. plan any package installation into `/logisticsearch/makpi51crawler/.venv` separately
+
+No apt install, pip install, Hailo runtime, crawler start, DB mutation, systemd mutation, raw mutation, or live runtime copy is allowed during the topology repair and cleanup sequence.
+
+## 9. Current recommendation
 
 Do not install everything immediately.
 
