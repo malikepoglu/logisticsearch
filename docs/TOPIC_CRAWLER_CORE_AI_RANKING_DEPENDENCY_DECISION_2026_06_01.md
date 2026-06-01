@@ -674,7 +674,91 @@ The project will proceed with the Pi 5 + NVMe + Hailo-8 path, but with strict bo
 
 This keeps LogisticSearch realistic, stable, and extensible without turning the crawler node into an uncontrolled AI lab.
 
-## 7. Current recommendation
+## 7. KOD_BLOGU_072 old live venv classification
+
+Marker: `KOD_BLOGU_072_OLD_LIVE_VENV_CLASSIFICATION_TRUTH`
+
+KOD_BLOGU_072 classified the existing live runtime virtual environment.
+
+### 7.1 Classification result
+
+Old live venv path:
+
+- `/logisticsearch/makpi51crawler/.venv`
+
+Canonical AI/ranking venv candidate path:
+
+- `/logisticsearch/venvs/ai_ranking_py312`
+
+Classification:
+
+- `EXISTING_LIVE_RUNTIME_VENV_REFERENCED_DO_NOT_REUSE_FOR_AI_RANKING_DO_NOT_DELETE`
+
+Decision:
+
+- The old live `.venv` is an existing referenced live runtime venv.
+- It must not be reused for AI/ranking dependency installation.
+- It must not be deleted.
+- It must not be renamed.
+- It must not be moved.
+- It must not be chowned/chmodded during AI/ranking work.
+- The new AI/ranking venv must be separate and outside both repo and live runtime.
+
+### 7.2 Observed old live venv facts
+
+KOD_BLOGU_072 observed:
+
+- old live venv exists: yes
+- old live venv is directory: yes
+- old live venv is symlink: no
+- canonical AI venv exists: no
+- Python version: 3.12.3
+- SOABI: `cpython-312-aarch64-linux-gnu`
+- venv path in `pyvenv.cfg`: `/logisticsearch/makpi51crawler/.venv`
+- package distribution count: 10
+- old venv has `playwright`
+- old venv has `psycopg`
+- old venv does not have the new AI/ranking stack packages such as numpy, scipy, pandas, sklearn, torch, onnxruntime, transformers, or sentence-transformers
+- old venv does not have Hailo packages
+
+### 7.3 Old live venv reference facts
+
+KOD_BLOGU_072 found:
+
+- old venv reference file count: 18
+- live root reference file count: 2
+- active user systemd service references `/logisticsearch/makpi51crawler/.venv/bin/python`
+- sync runbooks reference `/logisticsearch/makpi51crawler/.venv/bin/python`
+- existing docs intentionally describe `/logisticsearch/makpi51crawler/.venv`
+
+Therefore the old live venv is part of the current crawler/runtime surface and must be preserved.
+
+### 7.4 New AI/ranking venv policy
+
+The canonical AI/ranking venv path remains:
+
+- `/logisticsearch/venvs/ai_ranking_py312`
+
+Hard policy:
+
+- no install into `/usr`
+- no install into `/logisticsearch/repo/.venv`
+- no install into `/logisticsearch/makpi51crawler/.venv`
+- no reuse of old live venv
+- no deletion or cleanup of old live venv
+- no Hailo package before physical Hailo hardware is visible
+- no browser binary install in the AI/ranking dependency gate
+- no crawler start during venv creation or dependency installation
+
+### 7.5 Next gate consequence
+
+The next safe gate must be a canonical venv creation plan or audit for:
+
+- `/logisticsearch/venvs/ai_ranking_py312`
+
+The gate must treat `/logisticsearch/makpi51crawler/.venv` as preserved live runtime infrastructure.
+
+## 8. Current recommendation
 
 Do not install everything immediately.
 
