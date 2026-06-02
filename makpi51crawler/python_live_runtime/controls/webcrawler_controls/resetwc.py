@@ -811,6 +811,7 @@ def _logisticsearch_resetwc_db_counter_reset_p1v() -> None:
 BEGIN;
 
 DELETE FROM http_fetch.fetch_attempt;
+DELETE FROM http_fetch.robots_txt_cache;
 
 SELECT setval(
   pg_get_serial_sequence('http_fetch.fetch_attempt', 'fetch_attempt_id'),
@@ -895,6 +896,207 @@ def _logisticsearch_resetwc_clear_raw_fetch_p1v() -> tuple[int, int]:
     return (deleted_files, deleted_bytes)
 
 
+
+# P1W_RESETWC_DEFAULT_CACHE_GARBAGE_CLEANUP_R1_BEGIN
+def _logisticsearch_resetwc_clear_python_runtime_cache_p1w() -> tuple[int, int, int]:
+    """Clear generated Python cache artefacts from the live runtime only.
+
+    EN: This is intentionally narrow. It removes only generated Python cache
+    EN: garbage under /logisticsearch/makpi51crawler/python_live_runtime.
+    EN: It never removes source .py files, .venv files, repo files, raw data,
+    EN: DB data, or any C/C++ runtime surface.
+
+    TR: Bu bilinçli olarak dar kapsamlıdır. Sadece
+    TR: /logisticsearch/makpi51crawler/python_live_runtime altındaki generated
+    TR: Python cache çöplerini temizler. Source .py dosyalarını, .venv içeriğini,
+    TR: repo dosyalarını, raw veriyi, DB verisini veya C/C++ runtime yüzeylerini
+    TR: silmez.
+    """
+    import shutil
+    from pathlib import Path
+
+    python_root = Path("/logisticsearch/makpi51crawler/python_live_runtime")
+    expected_root = Path("/logisticsearch/makpi51crawler/python_live_runtime")
+
+    if python_root != expected_root:
+        raise RuntimeError("python runtime cache root mismatch; refusing cleanup")
+
+    if not python_root.exists():
+        return (0, 0, 0)
+
+    if not python_root.is_dir():
+        raise RuntimeError("python runtime cache root is not a directory")
+
+    root_resolved = python_root.resolve()
+
+    def _assert_inside_root(candidate: Path) -> None:
+        resolved = candidate.resolve()
+        if resolved != root_resolved and root_resolved not in resolved.parents:
+            raise RuntimeError("python cache cleanup path escaped root; refusing cleanup")
+
+    deleted_dirs = 0
+    deleted_files = 0
+    deleted_bytes = 0
+
+    pycache_dirs = sorted(
+        [p for p in python_root.rglob("__pycache__") if p.exists()],
+        key=lambda p: len(p.parts),
+        reverse=True,
+    )
+
+    for cache_dir in pycache_dirs:
+        try:
+            _assert_inside_root(cache_dir)
+
+            if cache_dir.is_symlink():
+                try:
+                    deleted_bytes += cache_dir.lstat().st_size
+                except OSError:
+                    pass
+                cache_dir.unlink()
+                deleted_files += 1
+                continue
+
+            if not cache_dir.is_dir():
+                continue
+
+            for child in cache_dir.rglob("*"):
+                try:
+                    _assert_inside_root(child)
+                    if child.is_file() or child.is_symlink():
+                        try:
+                            deleted_bytes += child.stat().st_size
+                        except OSError:
+                            pass
+                        deleted_files += 1
+                except FileNotFoundError:
+                    continue
+
+            shutil.rmtree(cache_dir)
+            deleted_dirs += 1
+        except FileNotFoundError:
+            continue
+
+    for suffix in (".pyc", ".pyo"):
+        for cache_file in sorted(python_root.rglob(f"*{suffix}")):
+            try:
+                _assert_inside_root(cache_file)
+                if cache_file.is_file() or cache_file.is_symlink():
+                    try:
+                        deleted_bytes += cache_file.stat().st_size
+                    except OSError:
+                        pass
+                    cache_file.unlink()
+                    deleted_files += 1
+            except FileNotFoundError:
+                continue
+
+    return (deleted_dirs, deleted_files, deleted_bytes)
+# P1W_RESETWC_DEFAULT_CACHE_GARBAGE_CLEANUP_R1_END
+
+
+# P1X_RESETWC_STOP_AND_QUIESCE_BEFORE_MUTATION_R1_BEGIN
+def _logisticsearch_resetwc_request_stop_before_reset_p1x() -> None:
+    """Request durable crawler stop before destructive reset mutation.
+
+    EN: resetwc must not mutate DB counters, raw files, robots cache, or cache
+    EN: garbage while crawler_core may still be writing. This helper requests
+    EN: durable stop through the shared runtime-control surface before any
+    EN: destructive reset step starts.
+
+    TR: resetwc, crawler_core hâlâ yazıyor olabilirken DB sayaçlarını, raw
+    TR: dosyaları, robots cache'i veya cache çöplerini değiştirmemelidir.
+    TR: Bu helper, destructive reset adımı başlamadan önce ortak runtime-control
+    TR: yüzeyi üzerinden durable stop ister.
+    """
+    rc = apply_runtime_control(
+        desired_state="stop",
+        state_reason="resetwc destructive reset requires stop before DB/raw mutation",
+        requested_by="resetwc",
+    )
+    if rc != 0:
+        raise RuntimeError("resetwc stop-before-reset request failed")
+
+
+def _logisticsearch_resetwc_process_counts_p1x() -> tuple[int, int]:
+    import subprocess
+
+    completed = subprocess.run(
+        ["ps", "-eo", "comm=,args="],
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
+    if completed.returncode != 0:
+        stderr = completed.stderr.strip().splitlines()[-8:]
+        raise RuntimeError("resetwc process inventory failed: " + " | ".join(stderr))
+
+    crawler_count = 0
+    browser_count = 0
+
+    for line in completed.stdout.splitlines():
+        lower = line.lower().strip()
+        if not lower:
+            continue
+
+        parts = lower.split(None, 1)
+        command_name = parts[0] if parts else ""
+        args = parts[1] if len(parts) > 1 else ""
+
+        if (
+            command_name.startswith("python")
+            and (
+                "makpi51crawler" in lower
+                or "webcrawler" in lower
+                or "crawler_core" in lower
+                or "acquisition_runtime" in lower
+            )
+        ):
+            crawler_count += 1
+
+        if (
+            "playwright" in lower
+            or "chromium" in lower
+            or "chrome" in lower
+        ):
+            browser_count += 1
+
+    return (crawler_count, browser_count)
+
+
+def _logisticsearch_resetwc_wait_for_process_quiescence_p1x(
+    timeout_seconds: int = 90,
+    sleep_seconds: float = 2.0,
+) -> tuple[int, int]:
+    import time
+
+    deadline = time.monotonic() + float(timeout_seconds)
+    last_crawler_count = -1
+    last_browser_count = -1
+
+    while True:
+        crawler_count, browser_count = _logisticsearch_resetwc_process_counts_p1x()
+        last_crawler_count = crawler_count
+        last_browser_count = browser_count
+
+        if crawler_count == 0 and browser_count == 0:
+            return (crawler_count, browser_count)
+
+        if time.monotonic() >= deadline:
+            # P1Y_RESETWC_QUIESCE_AUDIT_NEEDLE_R1
+            # Keep this exact standalone string for deterministic AST audit.
+            _quiescence_failure_audit_needle = "did not quiesce after stop request"
+            raise RuntimeError(
+                "resetwc refused destructive reset because crawler/browser processes "
+                "did not quiesce after stop request: "
+                f"crawler_process_count={last_crawler_count}, "
+                f"browser_process_count={last_browser_count}"
+            )
+
+        time.sleep(float(sleep_seconds))
+# P1X_RESETWC_STOP_AND_QUIESCE_BEFORE_MUTATION_R1_END
+
 def _logisticsearch_resetwc_full_reset_contract_p1v() -> int:
     import os
     import sys
@@ -903,14 +1105,26 @@ def _logisticsearch_resetwc_full_reset_contract_p1v() -> int:
         print("RESETWC_P1V_DB_COUNTER_RAW_RESET_SKIPPED_BY_ENV=TRUE", file=sys.stderr)
         return 0
 
-    _logisticsearch_resetwc_call_pausewc_p1v("before_reset")
+    _logisticsearch_resetwc_request_stop_before_reset_p1x()
+    crawler_process_count, browser_process_count = _logisticsearch_resetwc_wait_for_process_quiescence_p1x()
+    _logisticsearch_resetwc_call_pausewc_p1v("before_reset_after_stop_quiesced")
     _logisticsearch_resetwc_db_counter_reset_p1v()
     deleted_files, deleted_bytes = _logisticsearch_resetwc_clear_raw_fetch_p1v()
+    cache_deleted_dirs, cache_deleted_files, cache_deleted_bytes = _logisticsearch_resetwc_clear_python_runtime_cache_p1w()
     _logisticsearch_resetwc_call_pausewc_p1v("after_reset")
 
+    print("RESETWC_P1X_STOP_BEFORE_RESET_REQUEST=PASS", file=sys.stderr)
+    print("RESETWC_P1X_PROCESS_QUIESCENCE=PASS", file=sys.stderr)
+    print(f"RESETWC_P1X_PRE_RESET_CRAWLER_PROCESS_COUNT={crawler_process_count}", file=sys.stderr)
+    print(f"RESETWC_P1X_PRE_RESET_BROWSER_PROCESS_COUNT={browser_process_count}", file=sys.stderr)
     print("RESETWC_P1V_DB_COUNTER_RAW_RESET=PASS", file=sys.stderr)
     print(f"RESETWC_P1V_RAW_DELETED_FILES={deleted_files}", file=sys.stderr)
     print(f"RESETWC_P1V_RAW_DELETED_BYTES={deleted_bytes}", file=sys.stderr)
+    print("RESETWC_P1W_ROBOTS_CACHE_CLEAR=PASS", file=sys.stderr)
+    print("RESETWC_P1W_PYTHON_CACHE_CLEANUP=PASS", file=sys.stderr)
+    print(f"RESETWC_P1W_PYTHON_CACHE_DELETED_DIRS={cache_deleted_dirs}", file=sys.stderr)
+    print(f"RESETWC_P1W_PYTHON_CACHE_DELETED_FILES={cache_deleted_files}", file=sys.stderr)
+    print(f"RESETWC_P1W_PYTHON_CACHE_DELETED_BYTES={cache_deleted_bytes}", file=sys.stderr)
     print("RESETWC_P1V_FINAL_RUNTIME_CONTROL=pause", file=sys.stderr)
     return 0
 
