@@ -201,7 +201,10 @@ from __future__ import annotations
 # TR: Bu alt yüzey açık fonksiyon imzasında yapılandırılabilir raw_root yolu
 # TR: sunduğu için Path içe aktarıyoruz.
 from pathlib import Path
-from .logisticsearch1_1_2_4_1_acquisition_support import write_raw_fetch_json_zstd_envelope
+from .logisticsearch1_1_2_4_1_acquisition_support import (
+    is_raw_fetch_json_zstd_crawler_core_enabled,
+    write_raw_fetch_json_zstd_envelope,
+)
 
 # EN: We import the shared acquisition support surface so this child reuses the
 # EN: same stable artefact/result contract as the rest of the acquisition family.
@@ -551,21 +554,28 @@ def fetch_page_with_browser_to_raw_storage(
     # EN: artefact while preserving the canonical raw evidence path.
     # TR: Kanonik ham kanıt yolunu korurken mevcut rendered HTML artefact'ının
     # TR: yanına sıkıştırılmış JSON sidecar yazıyoruz.
-    write_raw_fetch_json_zstd_envelope(
-        url_id=url_id,
-        host_id=int(get_claimed_url_value(claimed_url, "host_id")),
-        requested_url=requested_url,
-        final_url=final_url,
-        http_status=inferred_http_status,
-        content_type="text/html; charset=utf-8",
-        content_encoding=None,
-        raw_body_path=html_output_path,
-        raw_body_bytes=rendered_html_bytes,
-        raw_sha256=rendered_html_sha256,
-        fetched_at=fetched_at.isoformat(),
-        acquisition_method="browser",
-        claimed_url=claimed_url,
-    )
+    # EN: CRAWLER_CORE_ZSTD_DISABLE_KEEP_INFRA_R1_BEGIN
+    # EN: Crawler_core hot path is body-bin-only; keep the ZSTD writer infrastructure
+    # EN: available, but do not emit .fetch.json or .fetch.json.zst here.
+    # TR: Crawler_core sıcak hat body-bin-only çalışır; ZSTD writer altyapısı
+    # TR: hazır kalır fakat burada .fetch.json veya .fetch.json.zst üretilmez.
+    if is_raw_fetch_json_zstd_crawler_core_enabled():
+        write_raw_fetch_json_zstd_envelope(
+            url_id=url_id,
+            host_id=int(get_claimed_url_value(claimed_url, "host_id")),
+            requested_url=requested_url,
+            final_url=final_url,
+            http_status=inferred_http_status,
+            content_type="text/html; charset=utf-8",
+            content_encoding=None,
+            raw_body_path=html_output_path,
+            raw_body_bytes=rendered_html_bytes,
+            raw_sha256=rendered_html_sha256,
+            fetched_at=fetched_at.isoformat(),
+            acquisition_method="browser",
+            claimed_url=claimed_url,
+        )
+    # EN: CRAWLER_CORE_ZSTD_DISABLE_KEEP_INFRA_R1_END
 
     # EN: We return the same FetchedPageResult contract shape already used by the
     # EN: direct HTTP path so later layers can stay narrow.

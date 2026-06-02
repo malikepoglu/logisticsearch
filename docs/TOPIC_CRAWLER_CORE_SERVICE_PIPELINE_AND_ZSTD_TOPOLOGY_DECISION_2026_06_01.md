@@ -588,3 +588,149 @@ Acil implementasyon önceliği:
 - eski crawl çıktıları, eski JSON/ZSTD evidence, DB satırları, sayaçlar ve raw artefact dosyaları cleanup öncesinde audit edilmelidir.
 - eski crawl verisi cleanup işlemi yalnızca ayrı reset/cleanup gate sonrası yapılmalıdır.
 
+---
+
+## 15. Crawler core body-bin-only hot path clarification / Crawler core body-bin-only sıcak hat netleştirmesi
+
+Marker: `KOD_BLOGU_096_BODY_BIN_ONLY_CRAWLER_CORE_PATCH_TRUTH`
+
+### English
+
+This section clarifies the exact file artefacts expected from crawler_core after the crawler-core ZSTD hot-path disable patch.
+
+Crawler_core hot path output:
+
+- HTTP URL fetch writes only the raw body artefact:
+  - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/url_<url_id>_<timestamp>.body.bin`
+- robots fetch writes only the raw robots body artefact:
+  - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/host_<host_id>_robots_<timestamp>.body.bin`
+- browser-rendered fetch, when used, may write the rendered HTML artefact:
+  - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/url_<url_id>_<timestamp>.rendered.html`
+
+Crawler_core hot path must not create:
+
+- `.fetch.json`
+- `.fetch.json.zst`
+- `.body.bin.zst`
+- `.raw_response_body.bin.zst`
+
+The existing Python ZSTD helper infrastructure is retained but disabled from crawler_core hot-path callers.
+
+Desktop import / compression handoff:
+
+- desktop_import_worker will later prepare a FIFO handoff toward compression_worker.
+- compression_worker will later create `.body.bin.zst`.
+- compression_worker will later create `.fetch.json.zst`.
+- those compressed artefacts are cold/archive/packaging artefacts, not crawler_core hot-path artefacts.
+
+### Türkçe
+
+Bu bölüm, crawler-core ZSTD hot-path disable patch sonrasında crawler_core katmanından beklenen exact dosya artefact davranışını netleştirir.
+
+Crawler_core sıcak hat output:
+
+- HTTP URL fetch yalnızca ham body artefact dosyasını yazar:
+  - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/url_<url_id>_<timestamp>.body.bin`
+- robots fetch yalnızca ham robots body artefact dosyasını yazar:
+  - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/host_<host_id>_robots_<timestamp>.body.bin`
+- browser-rendered fetch kullanılırsa rendered HTML artefact yazabilir:
+  - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/url_<url_id>_<timestamp>.rendered.html`
+
+Crawler_core sıcak hat şunları oluşturmayacaktır:
+
+- `.fetch.json`
+- `.fetch.json.zst`
+- `.body.bin.zst`
+- `.raw_response_body.bin.zst`
+
+Mevcut Python ZSTD helper altyapısı korunur fakat crawler_core hot-path caller'larından deaktif edilir.
+
+Desktop import / compression handoff:
+
+- desktop_import_worker daha sonra compression_worker için FIFO handoff hazırlar.
+- compression_worker daha sonra `.body.bin.zst` üretir.
+- compression_worker daha sonra `.fetch.json.zst` üretir.
+- bu compressed artefact dosyaları cold/archive/packaging artefact dosyalarıdır; crawler_core sıcak hat artefact dosyaları değildir.
+
+---
+
+## 16. Crawler core raw-body-family output clarification / Crawler core raw-body-family output netleştirmesi
+
+Marker: `KOD_BLOGU_096B_RAW_BODY_FAMILY_AND_ZSTD_INFRA_DEACTIVATED_TRUTH`
+
+### English
+
+The phrase `BODY_BIN_ONLY` must not be interpreted as “crawler_core creates only one single file”.
+
+Correct interpretation:
+
+- crawler_core creates only raw body family artefacts on the hot path.
+- crawler_core does not create JSON or ZSTD sidecar artefacts on the hot path.
+- crawler_core does not create compressed raw body artefacts on the hot path.
+
+Current crawler_core hot-path raw body family outputs:
+
+1. URL raw body artefact:
+   - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/url_<url_id>_<timestamp>.body.bin`
+
+2. Robots raw body artefact:
+   - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/host_<host_id>_robots_<timestamp>.body.bin`
+
+3. Browser rendered artefact, only when browser-rendered acquisition is used:
+   - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/url_<url_id>_<timestamp>.rendered.html`
+
+Forbidden crawler_core hot-path outputs:
+
+- `.fetch.json`
+- `.fetch.json.zst`
+- `.body.bin.zst`
+- `.raw_response_body.bin.zst`
+
+ZSTD infrastructure status:
+
+- The Python ZSTD envelope constants are preserved.
+- The Python ZSTD envelope builder is preserved.
+- The Python ZSTD compressed writer is preserved.
+- The Python ZSTD compare/decompress helpers are preserved.
+- The HTTP and browser page caller argument mappings are preserved inside a disabled flag gate.
+- The feature is deactivated because crawler_core hot path does not use it now.
+- The feature is not deleted because future desktop_import → compression_worker handoff may reuse the preserved infrastructure.
+
+### Türkçe
+
+`BODY_BIN_ONLY` ifadesi “crawler_core yalnızca tek bir dosya oluşturur” şeklinde yorumlanmamalıdır.
+
+Doğru yorum:
+
+- crawler_core sıcak hatta yalnızca raw body ailesi artefact dosyaları oluşturur.
+- crawler_core sıcak hatta JSON veya ZSTD sidecar artefact oluşturmaz.
+- crawler_core sıcak hatta sıkıştırılmış raw body artefact oluşturmaz.
+
+Güncel crawler_core hot-path raw body ailesi output dosyaları:
+
+1. URL raw body artefact:
+   - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/url_<url_id>_<timestamp>.body.bin`
+
+2. Robots raw body artefact:
+   - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/host_<host_id>_robots_<timestamp>.body.bin`
+
+3. Browser-rendered acquisition kullanılırsa browser rendered artefact:
+   - `/srv/webcrawler/raw_fetch/YYYY/MM/DD/url_<url_id>_<timestamp>.rendered.html`
+
+Crawler_core sıcak hatta yasak output dosyaları:
+
+- `.fetch.json`
+- `.fetch.json.zst`
+- `.body.bin.zst`
+- `.raw_response_body.bin.zst`
+
+ZSTD altyapı durumu:
+
+- Python ZSTD envelope constant değerleri korunmuştur.
+- Python ZSTD envelope builder korunmuştur.
+- Python ZSTD compressed writer korunmuştur.
+- Python ZSTD compare/decompress helper fonksiyonları korunmuştur.
+- HTTP ve browser page caller argument mapping yapısı disabled flag gate içinde korunmuştur.
+- Bu özellik şu anda crawler_core sıcak hatta kullanılmadığı için deaktif edilmiştir.
+- Bu özellik silinmemiştir; çünkü ileride desktop_import → compression_worker handoff bu korunmuş altyapıyı yeniden kullanabilir.
+

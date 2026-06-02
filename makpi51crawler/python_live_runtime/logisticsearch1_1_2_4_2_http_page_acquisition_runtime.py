@@ -236,7 +236,10 @@ from __future__ import annotations
 # TR: STAGE21-AUTO-COMMENT :: Importlar değişirse istek anlamının, zaman aşımı yönetiminin veya yük şekillendirmenin de değişip değişmediği incelenmelidir.
 # TR: STAGE21-AUTO-COMMENT :: Bu işaret importları sessiz şablon değil mimari ipucu olarak ele alır.
 from pathlib import Path
-from .logisticsearch1_1_2_4_1_acquisition_support import write_raw_fetch_json_zstd_envelope
+from .logisticsearch1_1_2_4_1_acquisition_support import (
+    is_raw_fetch_json_zstd_crawler_core_enabled,
+    write_raw_fetch_json_zstd_envelope,
+)
 
 # EN: We import Request and urlopen from the standard library so this direct HTTP
 # EN: child stays dependency-light and fully explicit.
@@ -597,21 +600,28 @@ def fetch_page_to_raw_storage(
     # TR: Süre testlerinde ham body kanıtını veya kanonik JSONL runtime log'unu
     # TR: değiştirmeden decode edilmiş HTML incelenebilsin diye mevcut ham body
     # TR: artefact'ının yanına sıkıştırılmış JSON sidecar yazıyoruz.
-    write_raw_fetch_json_zstd_envelope(
-        url_id=url_id,
-        host_id=int(get_claimed_url_value(claimed_url, "host_id")),
-        requested_url=requested_url,
-        final_url=final_url,
-        http_status=http_status,
-        content_type=content_type,
-        content_encoding=None,
-        raw_body_path=raw_storage_path,
-        raw_body_bytes=body,
-        raw_sha256=raw_sha256,
-        fetched_at=fetched_at.isoformat(),
-        acquisition_method="http",
-        claimed_url=claimed_url,
-    )
+    # EN: CRAWLER_CORE_ZSTD_DISABLE_KEEP_INFRA_R1_BEGIN
+    # EN: Crawler_core hot path is body-bin-only; keep the ZSTD writer infrastructure
+    # EN: available, but do not emit .fetch.json or .fetch.json.zst here.
+    # TR: Crawler_core sıcak hat body-bin-only çalışır; ZSTD writer altyapısı
+    # TR: hazır kalır fakat burada .fetch.json veya .fetch.json.zst üretilmez.
+    if is_raw_fetch_json_zstd_crawler_core_enabled():
+        write_raw_fetch_json_zstd_envelope(
+            url_id=url_id,
+            host_id=int(get_claimed_url_value(claimed_url, "host_id")),
+            requested_url=requested_url,
+            final_url=final_url,
+            http_status=http_status,
+            content_type=content_type,
+            content_encoding=None,
+            raw_body_path=raw_storage_path,
+            raw_body_bytes=body,
+            raw_sha256=raw_sha256,
+            fetched_at=fetched_at.isoformat(),
+            acquisition_method="http",
+            claimed_url=claimed_url,
+        )
+    # EN: CRAWLER_CORE_ZSTD_DISABLE_KEEP_INFRA_R1_END
 
     # EN: We return one explicit structured fetch result.
     # TR: Tek bir açık yapılı fetch sonucu döndürüyoruz.

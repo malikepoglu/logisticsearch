@@ -1994,6 +1994,22 @@ RAW_FETCH_JSON_ZSTD_SCHEMA_VERSION = "logisticsearch.raw_fetch.envelope.v1"
 RAW_FETCH_JSON_ZSTD_EXTENSION = ".fetch.json.zst"
 RAW_FETCH_JSON_ZSTD_CLI = Path("/usr/bin/zstd")
 
+# EN: CRAWLER_CORE_ZSTD_DISABLE_KEEP_INFRA_R1
+# EN: Keep the existing Python ZSTD envelope infrastructure available, but disable
+# EN: crawler_core hot-path sidecar production. Future compression_worker /
+# EN: desktop_import handoff work may reuse the preserved helper functions.
+# TR: Mevcut Python ZSTD envelope altyapısını hazır tutuyoruz; fakat crawler_core
+# TR: sıcak hatta sidecar üretimini kapatıyoruz. Gelecekte compression_worker /
+# TR: desktop_import handoff işi bu korunmuş helper fonksiyonlarını yeniden kullanabilir.
+RAW_FETCH_JSON_ZSTD_CRAWLER_CORE_ENABLED = False
+
+
+def is_raw_fetch_json_zstd_crawler_core_enabled() -> bool:
+    # EN: Explicit switch for crawler_core hot-path .fetch.json.zst production.
+    # TR: crawler_core sıcak hatta .fetch.json.zst üretimi için açık anahtar.
+    return bool(RAW_FETCH_JSON_ZSTD_CRAWLER_CORE_ENABLED)
+
+
 
 def build_raw_fetch_json_zstd_sidecar_path(raw_body_path: Path | str) -> Path:
     # EN: This helper derives the compressed JSON sidecar path from the existing
