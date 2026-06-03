@@ -1405,3 +1405,60 @@ Key modeling decisions:
 ## Crawler_Core Raw-Only Boundary / Queue Contract
 
 - [Crawler_Core Raw-Only Boundary and Future Queue Contract](TOPIC_CRAWLER_CORE_RAW_ONLY_AND_QUEUE_BOUNDARY_2026_05_25.md) — defines the responsibility boundary: crawler_core fetches raw evidence from startpoints/future queue; parse_core evaluates/promotes new queue links; desktop_import applies final ranking.
+
+<!-- KOD_BLOGU_145_PIPELINE_LAYER_NAMING_STANDARD_INDEX_BEGIN -->
+## Runtime service pipeline layer naming standard / Runtime service pipeline katman isim standardı
+
+Decision doc / Karar dokümanı:
+
+- `docs/TOPIC_RUNTIME_SERVICE_PIPELINE_LAYER_NAMING_STANDARD_2026_06_03.md`
+
+Canonical layer names / Kanonik katman adları:
+
+1. `preparation_core`
+2. `crawler_core`
+3. `process_core`
+4. `ai_rank_core`
+5. `port_core`
+6. `compression_core`
+
+Canonical worker/service names / Kanonik worker/service adları:
+
+1. `preparation_worker`
+2. `crawler_worker`
+3. `process_worker`
+4. `ai_rank_worker`
+5. `port_worker`
+6. `compression_worker`
+
+Important boundary / Önemli sınır:
+
+- This is a worker/service pipeline model, not a multi-thread model.
+- `parse_core` is deprecated in favor of `process_core`.
+- `desktop_import` is deprecated in favor of `port_core` / `port_worker`.
+- `ai_ranking_worker` and `ranking_neural_worker` are deprecated in favor of `ai_rank_worker`.
+- Current `crawler_core_worker` is an active transitional directory; future canonical worker name is `crawler_worker`.
+- `port_core` means controlled data porting/handoff, not network port.
+- `ai_rank_worker` serves `process_worker`.
+- `compression_worker` serves `port_worker`.
+<!-- KOD_BLOGU_145_PIPELINE_LAYER_NAMING_STANDARD_INDEX_END -->
+
+<!-- KOD_BLOGU_149_DOCS_FOUR_SURFACE_NAMING_BEGIN -->
+## Four-surface runtime naming enforcement / Dört yüzey runtime isim standardı
+
+The canonical naming standard applies to all operational surfaces:
+
+- Ubuntu Desktop local repo: `/home/mak/dev/logisticsearch`
+- GitHub main: `https://github.com/malikepoglu/logisticsearch`
+- pi51c repo mirror: `/logisticsearch/repo`
+- pi51c live runtime: `/logisticsearch/makpi51crawler`
+- pi51c service unit surface: `logisticsearch-webcrawler.service` now, `logisticsearch-crawler-worker.service` later
+
+Canonical naming doc:
+
+- `docs/TOPIC_RUNTIME_SERVICE_PIPELINE_LAYER_NAMING_STANDARD_2026_06_03.md`
+
+Rule:
+
+- No naming migration is complete until Ubuntu Desktop, GitHub main, pi51c repo, pi51c live, and service units are sealed.
+<!-- KOD_BLOGU_149_DOCS_FOUR_SURFACE_NAMING_END -->

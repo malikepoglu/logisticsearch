@@ -20,13 +20,11 @@ It is meant to explain the host clearly.
 
 It is **not** a full filesystem dump.
 
-
 Bu dizin, gerçek crawler host'u `makpi51crawler` için kanonik repository-tracked operasyon doğrusu yüzeyidir.
 
 Amacı host'u açık biçimde anlatmaktır.
 
 Bu dizin **tam filesystem dump'ı** değildir.
-
 
 ## Current host reading model
 ## Güncel host okuma modeli
@@ -88,10 +86,49 @@ Host-dokümantasyon niyetini, açık ve ayrıca doğrulanmış bir tasarım kara
 
 This host surface is open and active.
 
-
 The next correct growth direction is careful internal reference cleanup, runbook alignment, and host-operational documentation growth — not another blind path move.
 
 Bu host yüzeyi açık ve aktiftir.
 
-
 Bir sonraki doğru büyüme yönü başka bir kör path taşıması değil; dikkatli iç referans temizliği, runbook hizalama ve host-operasyon dokümantasyonunun büyütülmesidir.
+
+<!-- KOD_BLOGU_145_MAKPI_RUNTIME_PIPELINE_NAMING_STANDARD_BEGIN -->
+## Runtime worker/service pipeline naming standard
+
+The runtime service-pipeline naming standard is now documented in:
+
+- `docs/TOPIC_RUNTIME_SERVICE_PIPELINE_LAYER_NAMING_STANDARD_2026_06_03.md`
+
+Future worker/service names:
+
+- `preparation_worker`
+- `crawler_worker`
+- `process_worker`
+- `ai_rank_worker`
+- `port_worker`
+- `compression_worker`
+
+Current active exception:
+
+- `python_live_runtime/crawler_core_worker/` remains active until an explicit gated rename to `crawler_worker/`.
+- `python_live_runtime/controls/` remains immovable.
+- `c_live_runtime/` and `cpp_live_runtime/` remain separate.
+<!-- KOD_BLOGU_145_MAKPI_RUNTIME_PIPELINE_NAMING_STANDARD_END -->
+
+<!-- KOD_BLOGU_149_MAKPI_FOUR_SURFACE_NAMING_BEGIN -->
+## Four-surface naming rule for makpi51crawler
+
+`makpi51crawler/` documentation and runtime changes must be treated as a four-surface migration:
+
+1. Ubuntu Desktop repo: `/home/mak/dev/logisticsearch`
+2. GitHub main
+3. pi51c repo mirror: `/logisticsearch/repo`
+4. pi51c live runtime: `/logisticsearch/makpi51crawler`
+
+Service surface:
+
+- Current active transitional unit: `logisticsearch-webcrawler.service`
+- Future canonical unit: `logisticsearch-crawler-worker.service`
+
+No naming migration is complete until repo, GitHub, pi51c repo, pi51c live, and service unit surfaces are sealed.
+<!-- KOD_BLOGU_149_MAKPI_FOUR_SURFACE_NAMING_END -->

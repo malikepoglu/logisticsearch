@@ -217,3 +217,35 @@ Gelecekte düşünülmesi planlanan yön:
   * bu model daha sonra ayrıca ayrıntılı rehber ve runbook olarak yazılacaktır
 
 Mevcut öncelik önce webcrawler ve crawler_core'u ayağa kaldırmaktır.
+
+<!-- KOD_BLOGU_145_ROOT_PIPELINE_NAMING_STANDARD_BEGIN -->
+## Runtime service pipeline naming standard
+
+The canonical layer vocabulary is:
+
+`preparation_core` → `crawler_core` → `process_core` → `ai_rank_core` → `port_core` → `compression_core`
+
+The canonical worker/service vocabulary is:
+
+`preparation_worker` → `crawler_worker` → `process_worker` → `ai_rank_worker` → `port_worker` → `compression_worker`
+
+This is a worker/service pipeline model, not a multi-thread model. `port_core` means controlled data porting/handoff, not a network port.
+
+See: `docs/TOPIC_RUNTIME_SERVICE_PIPELINE_LAYER_NAMING_STANDARD_2026_06_03.md`.
+<!-- KOD_BLOGU_145_ROOT_PIPELINE_NAMING_STANDARD_END -->
+
+<!-- KOD_BLOGU_149_ROOT_FOUR_SURFACE_NAMING_BEGIN -->
+## Four-surface runtime naming rule
+
+Runtime service-pipeline naming changes must be sealed across all surfaces, not only GitHub:
+
+1. Ubuntu Desktop local repo: `/home/mak/dev/logisticsearch`
+2. GitHub main: `https://github.com/malikepoglu/logisticsearch`
+3. pi51c repo mirror: `/logisticsearch/repo`
+4. pi51c live runtime: `/logisticsearch/makpi51crawler`
+5. pi51c service unit surface: `logisticsearch-webcrawler.service` now, `logisticsearch-crawler-worker.service` later
+
+No naming migration is complete until Ubuntu Desktop, GitHub main, pi51c repo, pi51c live, and service units are sealed.
+
+See: `docs/TOPIC_RUNTIME_SERVICE_PIPELINE_LAYER_NAMING_STANDARD_2026_06_03.md`.
+<!-- KOD_BLOGU_149_ROOT_FOUR_SURFACE_NAMING_END -->

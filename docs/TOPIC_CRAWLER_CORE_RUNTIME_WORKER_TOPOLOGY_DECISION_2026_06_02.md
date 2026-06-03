@@ -156,3 +156,41 @@ TR: Daha sonra parse_core tamamlandıktan ve desktop_import talimat verdikten so
 EN: This document is a planning/decision artifact only. It intentionally performs no code movement.
 
 TR: Bu doküman yalnızca plan/karar artifact’idir. Bilinçli olarak hiçbir kod taşıma işlemi yapmaz.
+
+<!-- KOD_BLOGU_145_TOPOLOGY_NAMING_SUPERSESSION_BEGIN -->
+## Naming supersession note / İsim standardı güncelleme notu
+
+This topology document used the transitional name `crawler_core_worker` and listed older planned names such as `parse_core_worker`, `ai_ranking_worker`, and `desktop_import_worker`.
+
+The canonical naming standard after KOD_BLOGU_145 is:
+
+| Old / transitional name | Canonical future name |
+|---|---|
+| `crawler_core_worker` | `crawler_worker` |
+| `parse_core_worker` | `process_worker` |
+| `ai_ranking_worker` | `ai_rank_worker` |
+| `desktop_import_worker` | `port_worker` |
+| `compression_worker` | `compression_worker` |
+
+This note does not move files. `crawler_core_worker` remains the current active directory until a separate gated rename patch.
+
+Canonical naming doc:
+
+- `docs/TOPIC_RUNTIME_SERVICE_PIPELINE_LAYER_NAMING_STANDARD_2026_06_03.md`
+<!-- KOD_BLOGU_145_TOPOLOGY_NAMING_SUPERSESSION_END -->
+
+<!-- KOD_BLOGU_149_TOPOLOGY_FOUR_SURFACE_NAMING_BEGIN -->
+## Four-surface topology enforcement / Dört yüzey topoloji zorunluluğu
+
+This topology is valid only when checked across:
+
+- Ubuntu Desktop local repo: `/home/mak/dev/logisticsearch`
+- GitHub main
+- pi51c repo mirror: `/logisticsearch/repo`
+- pi51c live runtime: `/logisticsearch/makpi51crawler`
+- pi51c service unit surface
+
+`crawler_core_worker` remains an active transitional directory until a later explicit `crawler_worker` rename gate. The service surface remains `logisticsearch-webcrawler.service` until a later explicit service rename gate.
+
+No naming migration is complete until Ubuntu Desktop, GitHub main, pi51c repo, pi51c live, and service units are sealed.
+<!-- KOD_BLOGU_149_TOPOLOGY_FOUR_SURFACE_NAMING_END -->

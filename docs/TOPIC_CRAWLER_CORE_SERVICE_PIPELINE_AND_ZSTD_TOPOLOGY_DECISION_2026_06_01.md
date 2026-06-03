@@ -2,7 +2,7 @@
 
 Marker: `KOD_BLOGU_091B_SERVICE_PIPELINE_ZSTD_TOPOLOGY_REPAIRED_TRUTH`
 
-Date: 2026-06-02  
+Date: 2026-06-02
 Scope: LogisticSearch crawler runtime topology, raw evidence path truth, `.body.bin`, `.fetch.json.zst`, robots raw body, ZSTD separation, and future C++ compression helper naming.
 
 ---
@@ -734,3 +734,47 @@ ZSTD altyapı durumu:
 - Bu özellik şu anda crawler_core sıcak hatta kullanılmadığı için deaktif edilmiştir.
 - Bu özellik silinmemiştir; çünkü ileride desktop_import → compression_worker handoff bu korunmuş altyapıyı yeniden kullanabilir.
 
+<!-- KOD_BLOGU_145_ZSTD_PIPELINE_NAMING_SUPERSESSION_BEGIN -->
+## Service pipeline naming supersession / Service pipeline isim güncellemesi
+
+This document previously used `desktop_import_worker` and `parse_core` wording. The canonical names after KOD_BLOGU_145 are:
+
+- `process_core` instead of `parse_core`
+- `process_worker` instead of `parse_core_worker`
+- `port_core` instead of `desktop_import`
+- `port_worker` instead of `desktop_import_worker`
+- `ai_rank_worker` instead of `ai_ranking_worker` or `ranking_neural_worker`
+- `compression_worker` remains canonical
+
+Updated dependency rule:
+
+- `ai_rank_worker` serves `process_worker`.
+- `compression_worker` serves `port_worker`.
+- `compression_worker` does not run in the crawler hot path.
+- `crawler_worker` must not produce `.fetch.json.zst`, `.fetch.json`, or `.body.bin.zst` in the hot path.
+
+Canonical naming doc:
+
+- `docs/TOPIC_RUNTIME_SERVICE_PIPELINE_LAYER_NAMING_STANDARD_2026_06_03.md`
+<!-- KOD_BLOGU_145_ZSTD_PIPELINE_NAMING_SUPERSESSION_END -->
+
+<!-- KOD_BLOGU_149_ZSTD_FOUR_SURFACE_NAMING_BEGIN -->
+## Four-surface zstd/pipeline naming enforcement
+
+The zstd and pipeline topology must be interpreted through the current canonical naming standard:
+
+- `process_core` / `process_worker`, not future `parse_core` wording.
+- `port_core` / `port_worker`, not future `desktop_import` wording.
+- `ai_rank_core` / `ai_rank_worker`, not future `ai_ranking_worker` or `ranking_neural_worker` wording.
+- `compression_core` / `compression_worker` remains canonical.
+
+This standard applies across:
+
+- Ubuntu Desktop local repo: `/home/mak/dev/logisticsearch`
+- GitHub main
+- pi51c repo mirror: `/logisticsearch/repo`
+- pi51c live runtime: `/logisticsearch/makpi51crawler`
+- pi51c service unit surface
+
+No naming migration is complete until Ubuntu Desktop, GitHub main, pi51c repo, pi51c live, and service units are sealed.
+<!-- KOD_BLOGU_149_ZSTD_FOUR_SURFACE_NAMING_END -->
