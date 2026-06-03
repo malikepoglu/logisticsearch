@@ -1,0 +1,71 @@
+# LogisticSearch AI/ranking Python dependency candidate manifest
+# Gate: KOD_BLOGU_067
+# Scope: candidate requirements only; do not install directly without a mutation gate.
+# Python target: 3.12
+# Preferred venv: /logisticsearch/venvs/ai_ranking_py312
+# Forbidden here: hailo_platform, hailort
+
+# Foundation / numeric / schema
+numpy
+scipy
+pandas
+pydantic
+scikit-learn
+
+# Classical ranking
+rank-bm25
+rapidfuzz
+lightgbm
+xgboost
+
+# HTTP / crawling / extraction
+requests
+urllib3
+httpx
+aiohttp
+tenacity
+beautifulsoup4
+lxml
+html5lib
+selectolax
+trafilatura
+readability-lxml
+courlan
+tldextract
+
+# Serialization / compression / DB client
+orjson
+zstandard
+brotli
+lz4
+psycopg[binary]
+SQLAlchemy
+
+# Neural / reranking / embeddings
+onnx
+onnxruntime
+tokenizers
+safetensors
+huggingface-hub
+transformers
+sentence-transformers
+torch
+
+# Vector index
+hnswlib
+
+# Optional / platform-sensitive; must be allowed to fail separately on ARM64
+# faiss-cpu
+
+# Python/C/C++ integration
+pybind11
+nanobind
+cffi
+Cython
+
+# Dynamic crawling boundary; browser binaries must be separate gate
+# playwright
+
+# Hailo forbidden until hardware-visible audit
+# hailo_platform
+# hailort

@@ -173,7 +173,7 @@ trap cleanup INT TERM
 START_EPOCH="$(date +%s)"
 echo "RUNNER_START=$(date -Is)" > "${{MONITOR_LOG}}"
 
-"${{PYTHON_BIN}}" -u -m python_live_runtime.logisticsearch1_main_entry \\
+"${{PYTHON_BIN}}" -u -m python_live_runtime.crawler_core_worker.logisticsearch1_main_entry \\
   --durable-claim \\
   --loop \\
   --sleep-seconds 5 \\
