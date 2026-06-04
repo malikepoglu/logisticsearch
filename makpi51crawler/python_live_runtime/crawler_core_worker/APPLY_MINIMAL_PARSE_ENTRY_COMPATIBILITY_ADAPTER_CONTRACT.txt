@@ -1,0 +1,98 @@
+# LogisticSearch apply_minimal_parse_entry Compatibility Adapter Contract
+# Date: 2026-06-04
+# Source Python file:
+#   makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py
+# Worker call-site file:
+#   makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_worker_runtime.py
+# Target function:
+#   apply_minimal_parse_entry
+# Status: planning / migration memory
+# Behavior: documentation only
+
+This TXT contract records the compatibility-adapter rule for apply_minimal_parse_entry.
+
+Do not move, delete or rewrite apply_minimal_parse_entry directly.
+
+Current source of truth:
+- makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py
+- function: apply_minimal_parse_entry
+- lines at KOD_BLOGU_180B2 baseline: 2967-3335
+- line count: 369
+- current parse runtime sha256:
+  78621e8c28c0a1cfad556278f402dac1ca4f4a61b012cefe6315572a0230f179
+
+Current worker call corridor:
+- makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_worker_runtime.py
+- apply_minimal_parse_entry call line at KOD_BLOGU_180B2 baseline: 1781
+- first finish_fetch_success after apply: 1839
+- first release_parse_pending_to_queued after apply: 1863
+- first commit(conn) after apply: 2008
+
+Required transaction order:
+1. apply_minimal_parse_entry
+2. finish_fetch_success
+3. release_parse_pending_to_queued
+4. commit(conn)
+
+Compatibility rule:
+- The old public call signature must remain stable until a new transaction-aware adapter contract exists.
+- The crawler_core compatibility adapter may call future process_worker, ai_rank_worker and crawler frontier gateway adapters.
+- The adapter must preserve one durable transaction corridor until replacement tests prove otherwise.
+- Direct move is blocked until interface, adapter, test gate and rollback plan are sealed.
+
+Responsibility split target:
+- process_worker:
+  - raw input/body reading contract
+  - HTML/title/text/language extraction
+  - taxonomy candidate build
+  - workflow payload shape
+  - process-side discovery candidate payload construction
+
+- ai_rank_worker:
+  - preranking candidate summary
+  - ranking / scoring / neural scoring preparation
+  - future AI-rank bridge
+
+- crawler frontier gateway:
+  - durable discovered-link enqueue
+  - frontier release interaction
+  - crawler state effects
+
+- crawler_core compatibility adapter:
+  - keep old call signature
+  - preserve current transaction ordering
+  - route to future narrow adapters only after contracts and tests are sealed
+  - return the same caller-facing result contract until worker_runtime is updated safely
+
+KOD_BLOGU_180 / 180B / 180B2 notes:
+- KOD_BLOGU_180 token scan reported .replace( once.
+- KOD_BLOGU_180B had a harness IndentationError and did not classify the token.
+- KOD_BLOGU_180B2 proved the .replace call is string normalization only:
+  str(exc).replace(chr(10), ' ')
+- Filesystem replace count: 0
+- Direct filesystem mutation found: NO
+- Runtime behavior change: NO
+- Direct move risk remains HIGH until compatibility adapter and transaction contract exist.
+
+Forbidden before a later approved runtime split:
+- Do not move this function to process_worker directly.
+- Do not move this function to ai_rank_worker directly.
+- Do not move this function to C++ directly.
+- Do not delete the old Python compatibility surface.
+- Do not change the transaction order without a dedicated transaction-order test gate.
+- Do not add DB writes, raw mutation, systemd calls, subprocess calls or filesystem mutation to this TXT-contract step.
+
+Related required architecture notes:
+- IMPORTANT_RUNTIME_MIGRATION_CONTRACTS_READ_FIRST.txt
+- makpi51crawler/python_live_runtime/process_worker/APPLY_MINIMAL_PARSE_ENTRY_PROCESS_AI_RANK_MIGRATION_CONTRACT.txt
+- makpi51crawler/python_live_runtime/ai_rank_worker/APPLY_MINIMAL_PARSE_ENTRY_PROCESS_AI_RANK_MIGRATION_CONTRACT.txt
+- makpi51crawler/cpp_live_runtime/process_worker/APPLY_MINIMAL_PARSE_ENTRY_PROCESS_AI_RANK_MIGRATION_CONTRACT.txt
+- makpi51crawler/cpp_live_runtime/ai_rank_worker/APPLY_MINIMAL_PARSE_ENTRY_PROCESS_AI_RANK_MIGRATION_CONTRACT.txt
+- makpi51crawler/cpp_live_runtime/storage_management_core/STORAGE_ROUTING_STORAGE_MANAGEMENT_MIGRATION_CONTRACT.txt
+- makpi51crawler/cpp_live_runtime/storage_management_worker/STORAGE_ROUTING_STORAGE_MANAGEMENT_MIGRATION_CONTRACT.txt
+
+Next safe work:
+- Audit this TXT contract read-only.
+- Commit/push this TXT contract only.
+- Sync the TXT contract to pi51c repo/live.
+- Only after that, design a no-behavior-change compatibility adapter patch.
