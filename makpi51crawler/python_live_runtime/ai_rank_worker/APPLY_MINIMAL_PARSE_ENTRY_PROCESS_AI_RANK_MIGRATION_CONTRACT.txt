@@ -1,0 +1,61 @@
+# LogisticSearch Process / AI Rank Migration Contract
+# Date: 2026-06-04
+# Scope: apply_minimal_parse_entry and equivalent future C++ function contract
+# Status: planning / migration memory
+# Behavior: documentation only
+
+apply_minimal_parse_entry fonksiyonunu hemen taşımıyoruz;
+
+Bu karar bilinçli ve güvenlik odaklıdır.
+
+Neden hemen taşımıyoruz?
+- Mevcut worker runtime, apply_minimal_parse_entry fonksiyonunu aynı transaction corridor içinde çağırıyor.
+- Bu fonksiyon şu anda raw parse, discovery, taxonomy lookup, taxonomy/preranking persistence, workflow decision ve workflow status persistence işlerini birlikte orkestre ediyor.
+- Doğrudan taşıma durable success / finalize / release akışını kırabilir.
+- Bu yüzden önce process_worker ve ai_rank_worker contract netleşecek, sonra thin compatibility adapter ile güvenli migration yapılacak.
+
+Ana kural:
+- crawler_core hot path sade kalacak.
+- crawler_core sadece robots / fetch / frontier state / raw evidence sorumluluğunu taşımalı.
+- HTML parse, text extraction, taxonomy candidate, discovery payload ve workflow decision process_core himayesine geçmeli.
+- Preranking / ranking / neural scoring ai_rank_core himayesinde büyümeli.
+- apply_minimal_parse_entry şimdilik crawler_core içinde thin compatibility adapter gibi kalacak.
+- Gelecekte Python process_worker tarafında benzer bir fonksiyon geliştirilecek.
+- Gelecekte C++ cpp_live_runtime tarafında performans odaklı benzer bir fonksiyon veya helper geliştirilebilir.
+
+Python hedefleri:
+- makpi51crawler/python_live_runtime/process_worker/
+  - process_core_input_parse_layer
+  - process_core_taxonomy_layer
+  - process_core_discovery_producer
+  - process_core_apply_orchestrator
+  - process_core_workflow_gateway
+
+- makpi51crawler/python_live_runtime/ai_rank_worker/
+  - preranking bridge
+  - ranking / scoring / neural scoring preparation
+  - process_core tarafından çağrılabilecek ai_rank worker yüzeyi
+
+C++ hedefleri:
+- makpi51crawler/cpp_live_runtime/process_worker/
+  - HTML/text extraction, normalization, feature extraction, candidate packaging gibi CPU-heavy process işleri için future C++ yüzeyi
+
+- makpi51crawler/cpp_live_runtime/ai_rank_worker/
+  - preranking / scoring / ranking acceleration için future C++ yüzeyi
+
+Kesin yasaklar:
+- Bu contract dosyaları runtime source of truth değildir.
+- Bu TXT dosyaları çalışan worker graph'a import edilmeyecek.
+- Bu TXT dosyaları DB, crawler, systemd, raw veya queue mutation yapmaz.
+- Bu contract var diye apply_minimal_parse_entry hemen taşınmayacak.
+- Direct move yapılmadan önce process_worker / ai_rank_worker interface, compatibility adapter, test gate ve rollback planı mühürlenecek.
+
+KOD_BLOGU_174 karar özeti:
+- DIRECT_MOVE_NOW=NO
+- DIRECT_DELETE_NOW=NO
+- DIRECT_PATCH_NOW=NO
+- COMPATIBILITY_RISK=HIGH_IF_MOVED_DIRECTLY
+- COMPATIBILITY_DECISION=KEEP_THIN_ADAPTER_UNTIL_PROCESS_WORKER_CONTRACT_EXISTS
+- DIRECT_MOVE_BLOCKED_BY_WORKER_TRANSACTION_CORRIDOR=True
+- PROCESS_CORE_RULE=html_parse_text_extraction_taxonomy_candidate_discovery_payload_workflow_decision
+- AI_RANK_CORE_RULE=preranking_snapshot_scoring_neural_ranking
