@@ -97,6 +97,40 @@ TR:
 - gizli operatör CLI yüzeyi
 - gizli persistence yan-etki labirenti
 """
+# EN: STORAGE MANAGEMENT MIGRATION NOTE 2026-06-04
+# EN:
+# EN: This Python file is a temporary crawler_core storage-routing compatibility
+# EN: surface. The functions and classes here are migration candidates for a
+# EN: future high-performance storage_management_core and storage_management_worker,
+# EN: preferably under cpp_live_runtime after the C++ storage layer is designed.
+# EN:
+# EN: The future storage_management layer should coordinate /srv/data, /srv/buffer,
+# EN: raw/storage lifecycle, backlog detection, safe move/verify behavior,
+# EN: mount/writable checks, storage pressure, and coordination with crawler_worker,
+# EN: process_worker, port_worker, compression_worker, and ai_rank_worker.
+# EN:
+# EN: Until that layer is designed, tested, synced, and sealed, do not delete or
+# EN: move this file. Keep this Python surface narrow, read-only/plan-oriented,
+# EN: and free of file moving, draining, copying, DB writes, or crawler hot-path
+# EN: storage mutation.
+# TR: STORAGE MANAGEMENT MIGRATION NOTU 2026-06-04
+# TR:
+# TR: Bu Python dosyası geçici crawler_core storage-routing uyumluluk yüzeyidir.
+# TR: Buradaki fonksiyonlar ve sınıflar, C++ storage katmanı tasarlandıktan sonra,
+# TR: tercihen cpp_live_runtime altında geliştirilecek yüksek performanslı
+# TR: storage_management_core ve storage_management_worker katmanına taşınacak
+# TR: veya orada yeniden geliştirilecek migration adaylarıdır.
+# TR:
+# TR: Gelecek storage_management katmanı /srv/data, /srv/buffer, raw/storage yaşam
+# TR: döngüsü, backlog tespiti, güvenli taşıma/doğrulama davranışı, mount/writable
+# TR: kontrolleri, storage pressure ve crawler_worker, process_worker, port_worker,
+# TR: compression_worker, ai_rank_worker koordinasyonunu yönetmelidir.
+# TR:
+# TR: O katman tasarlanıp test edilip sync edilip mühürlenene kadar bu dosya
+# TR: silinmeyecek veya taşınmayacaktır. Bu Python yüzeyi dar, read-only/plan
+# TR: odaklı kalacak; buraya file move, drain, copy, DB write veya crawler hot-path
+# TR: storage mutation eklenmeyecektir.
+
 
 # EN: We enable postponed evaluation of annotations so type hints can stay
 # EN: readable even when they refer to classes declared later in this file.
