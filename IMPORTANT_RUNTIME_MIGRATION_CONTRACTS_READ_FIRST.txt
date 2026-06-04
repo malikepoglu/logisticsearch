@@ -1,0 +1,30 @@
+# IMPORTANT: Runtime Migration Contracts Must Be Read First
+
+Before changing crawler_core, process_worker, ai_rank_worker, cpp_live_runtime, storage management, parse, taxonomy, preranking or workflow boundaries, read these contract files first.
+
+Do not skip these files. They are architecture safety notes and migration memory. They are not runtime import surfaces.
+
+Required contract files:
+
+1. makpi51crawler/python_live_runtime/process_worker/APPLY_MINIMAL_PARSE_ENTRY_PROCESS_AI_RANK_MIGRATION_CONTRACT.txt
+
+2. makpi51crawler/python_live_runtime/ai_rank_worker/APPLY_MINIMAL_PARSE_ENTRY_PROCESS_AI_RANK_MIGRATION_CONTRACT.txt
+
+3. makpi51crawler/cpp_live_runtime/process_worker/APPLY_MINIMAL_PARSE_ENTRY_PROCESS_AI_RANK_MIGRATION_CONTRACT.txt
+
+4. makpi51crawler/cpp_live_runtime/ai_rank_worker/APPLY_MINIMAL_PARSE_ENTRY_PROCESS_AI_RANK_MIGRATION_CONTRACT.txt
+
+5. makpi51crawler/cpp_live_runtime/storage_management_core/STORAGE_ROUTING_STORAGE_MANAGEMENT_MIGRATION_CONTRACT.txt
+
+6. makpi51crawler/cpp_live_runtime/storage_management_worker/STORAGE_ROUTING_STORAGE_MANAGEMENT_MIGRATION_CONTRACT.txt
+
+Source files that motivated these contracts:
+
+- makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py
+
+- makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_7_storage_routing.py
+
+Short rule:
+- apply_minimal_parse_entry must not be moved directly before process_worker / ai_rank_worker interface, compatibility adapter, test gate and rollback plan are sealed.
+- storage_routing.py must not be deleted or directly replaced before storage_management_core / storage_management_worker interface, adapter, test gate and rollback plan are sealed.
+- These TXT files must be kept visible and read before future migration work.

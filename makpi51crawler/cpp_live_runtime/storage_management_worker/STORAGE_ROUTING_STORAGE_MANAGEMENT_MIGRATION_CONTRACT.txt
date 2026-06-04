@@ -1,0 +1,60 @@
+# LogisticSearch Storage Routing / Storage Management Migration Contract
+# Date: 2026-06-04
+# Source Python file:
+#   makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_7_storage_routing.py
+# Target C++ storage-management areas:
+#   makpi51crawler/cpp_live_runtime/storage_management_core/
+#   makpi51crawler/cpp_live_runtime/storage_management_worker/
+# Status: planning / migration memory
+# Behavior: documentation only
+
+This contract records the migration path for the current Python storage routing file.
+
+The Python source file is:
+makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_7_storage_routing.py
+
+The current Python functions/classes are migration candidates, not direct-copy targets:
+- StoragePathStatus
+- ProcessedOutputPlan
+- probe_storage_path
+- path_is_usable
+- detect_buffer_backlog
+- choose_processed_output_plan
+
+Future C++ target concept:
+- makpi51crawler/cpp_live_runtime/storage_management_core/
+- makpi51crawler/cpp_live_runtime/storage_management_worker/
+
+Future storage_management_core / storage_management_worker responsibilities:
+- /srv/data mount and writable checks
+- /srv/buffer mount and writable checks
+- raw/storage lifecycle policy
+- processed output placement decision
+- buffer backlog detection
+- safe buffer-to-data movement design
+- fsync / verify / checksum policy
+- storage pressure policy
+- worker coordination with crawler_worker, process_worker, port_worker, compression_worker and ai_rank_worker
+
+Important rule:
+The existing Python file must not be deleted or moved directly.
+
+Why:
+- The current crawler_worker graph may still depend on the Python compatibility surface.
+- The Python file is currently narrow and plan-oriented; it must stay free of direct file moving, draining, copying, DB writes or crawler hot-path storage mutation.
+- The C++ storage_management implementation must be designed, tested and sealed before replacing the Python compatibility surface.
+- Direct replacement is blocked until interface, adapter, test gate and rollback plan are sealed.
+
+Migration rule:
+- Keep the Python file as a temporary compatibility/routing surface.
+- Build the future high-performance C++ storage-management implementation separately.
+- Use this TXT file as a required architecture note before editing storage routing or adding C++ storage code.
+- Do not treat this TXT file as runtime source of truth.
+- Do not import this TXT file from Python or C++.
+- Do not use this TXT file to trigger DB, crawler, systemd, raw, queue or filesystem mutation.
+
+KOD_BLOGU_168F / KOD_BLOGU_169 decision summary:
+- STORAGE_ROUTING_CLASSIFICATION=GRAY_AREA_MIGRATION_SURFACE
+- NEW_ARCHITECTURE_DECISION=storage_management_core_and_storage_management_worker
+- COMMENT_ONLY_BEHAVIOR_CHANGE=NO
+- storage_routing.py remains a narrow read-only/plan-oriented compatibility helper until storage_management exists.
