@@ -2982,6 +2982,36 @@ def apply_minimal_parse_entry(
     # EN: Expected values are MinimalParseResult instances ready for taxonomy and persistence work.
     # TR: parse_result, fetch edilmiş HTML artefact'ından türetilen yapılı minimal parse payload'ını taşır.
     # TR: Beklenen değerler taxonomy ve persistence işine hazır MinimalParseResult örnekleridir.
+    # EN: Thin compatibility adapter. Behavior must remain identical.
+    # TR: Ince uyumluluk adapter'i. Davranış aynı kalmalıdır.
+    return _apply_minimal_parse_entry_legacy_impl(
+        conn=conn,
+        url_id=url_id,
+        raw_storage_path=raw_storage_path,
+        source_run_id=source_run_id,
+        source_note=source_note,
+        workflow_state=workflow_state,
+        workflow_state_reason=workflow_state_reason,
+    )
+
+def _apply_minimal_parse_entry_legacy_impl(
+    *,
+    conn,
+    url_id: int,
+    raw_storage_path: str,
+    source_run_id: str,
+    source_note: str | None = None,
+    workflow_state: str = "pre_ranked",
+    workflow_state_reason: str = "minimal_parse_entry_flow_committed_via_repo_helper",
+) -> MinimalParseApplyResult:
+    # EN: We first build the structured minimal parse payload from the raw HTML
+    # EN: artefact because payload construction and DB persistence must stay aligned.
+    # TR: Önce ham HTML artefact'ından yapılı minimal parse payload'ını kuruyoruz;
+    # TR: çünkü payload üretimi ile DB persistence aynı hizada kalmalıdır.
+    # EN: parse_result stores the structured minimal parse payload derived from the fetched HTML artefact.
+    # EN: Expected values are MinimalParseResult instances ready for taxonomy and persistence work.
+    # TR: parse_result, fetch edilmiş HTML artefact'ından türetilen yapılı minimal parse payload'ını taşır.
+    # TR: Beklenen değerler taxonomy ve persistence işine hazır MinimalParseResult örnekleridir.
     parse_result = build_minimal_parse_payload(
         url_id=url_id,
         raw_storage_path=raw_storage_path,
