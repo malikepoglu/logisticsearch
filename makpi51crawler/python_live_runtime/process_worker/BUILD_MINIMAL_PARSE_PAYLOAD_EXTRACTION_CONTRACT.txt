@@ -1,0 +1,186 @@
+LogisticSearch build_minimal_parse_payload Extraction Contract
+================================================================
+
+CONTRACT_STATUS=PROCESS_CORE_CONTRACT_BEFORE_RUNTIME_EXTRACTION
+CREATED_BY_GATE=KOD_BLOGU_190
+SOURCE_DECISION_GATE=KOD_BLOGU_189
+TARGET_FUNCTION=build_minimal_parse_payload
+
+Source runtime file:
+- makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py
+
+Current source function:
+- build_minimal_parse_payload
+- line range observed in KOD_BLOGU_189: 1041-1144
+- line count observed in KOD_BLOGU_189: 104
+- keyword-only args:
+  - url_id
+  - raw_storage_path
+  - source_run_id
+  - source_note
+
+Target contract surfaces:
+- makpi51crawler/python_live_runtime/process_worker/BUILD_MINIMAL_PARSE_PAYLOAD_EXTRACTION_CONTRACT.txt
+- makpi51crawler/cpp_live_runtime/process_worker/BUILD_MINIMAL_PARSE_PAYLOAD_EXTRACTION_CONTRACT.txt
+
+Decision
+--------
+
+FIRST_EXTRACTION_CANDIDATE=build_minimal_parse_payload
+FIRST_EXTRACTION_MODE=CONTRACT_FIRST_NO_RUNTIME_PATCH
+FIRST_CONTRACT_DESTINATION=process_worker_and_cpp_process_worker_contract_surfaces
+
+This contract does not move runtime code.
+This contract does not create a Python process_worker implementation.
+This contract does not create a C++ process_worker implementation.
+This contract does not change crawler_core_worker runtime imports.
+This contract does not change worker transaction order.
+
+Why this is first
+-----------------
+
+build_minimal_parse_payload is the safest first extraction candidate because it is a
+payload/html/text construction boundary.
+
+It currently builds a MinimalParseResult from:
+- url_id
+- raw_storage_path
+- source_run_id
+- source_note
+- raw body text
+- extracted title
+- extracted visible body text
+- inferred input language
+- title/body query items
+
+It must remain separate from:
+- public compatibility wrapper
+- transaction corridor
+- taxonomy persistence
+- preranking persistence
+- frontier enqueue
+- workflow persistence
+- crawler service control
+- systemd
+- raw file movement or deletion
+
+Current allowed helper calls
+----------------------------
+
+The current function may call or depend on these parse/payload helpers:
+
+- read_raw_body_text
+- extract_title_from_html
+- extract_visible_text_from_html
+- infer_input_lang_code
+- build_query_item
+- MinimalParseResult
+
+These helpers are part of the future process_core input parse boundary and must be
+audited as a group before any runtime extraction.
+
+Forbidden behavior for this contract
+------------------------------------
+
+The extraction contract must not introduce:
+
+- DB connection
+- SQL execute
+- INSERT
+- UPDATE
+- DELETE
+- TRUNCATE
+- commit(conn)
+- frontier enqueue
+- workflow persistence
+- crawler start
+- systemd mutation
+- subprocess execution
+- os.system
+- file movement
+- file deletion
+- raw cleanup
+- git mutation
+
+Forbidden literal tokens for future contract tests:
+
+- psycopg
+- .execute(
+- INSERT
+- UPDATE
+- DELETE
+- TRUNCATE
+- enqueue_discovered_url
+- finish_fetch_success
+- release_parse_pending_to_queued
+- commit(conn)
+- dot_write_text_call
+- dot_write_bytes_call
+- shutil.move
+- shutil.copy
+- os.replace
+- subprocess
+- systemctl
+
+Important non-goals
+-------------------
+
+Do not move apply_minimal_parse_entry.
+Do not delete apply_minimal_parse_entry.
+Do not move _apply_minimal_parse_entry_legacy_impl.
+Do not delete _apply_minimal_parse_entry_legacy_impl.
+Do not alter worker_runtime transaction order.
+Do not add process_worker import into crawler_core_worker parse runtime.
+Do not add ai_rank_worker import into crawler_core_worker parse runtime.
+Do not add cpp_live_runtime bridge into Python runtime.
+
+Required preserved corridor
+---------------------------
+
+The worker transaction order must remain:
+
+1. apply_minimal_parse_entry
+2. finish_fetch_success
+3. release_parse_pending_to_queued
+4. commit(conn)
+
+This contract must not change the transaction corridor.
+
+Future safe migration sequence
+------------------------------
+
+1. Keep runtime unchanged.
+2. Seal this TXT contract.
+3. Audit this TXT contract read-only.
+4. Commit/push only TXT contract files.
+5. Sync TXT contracts to pi51c repo/live.
+6. Run post-sync seal.
+7. Build isolated behavior fixture for build_minimal_parse_payload.
+8. Only then design a no-behavior adapter/import strategy.
+9. Only after behavior equivalence is proven, consider runtime extraction.
+
+Suggested future owner
+----------------------
+
+Python target:
+- makpi51crawler/python_live_runtime/process_worker/
+
+C++ target:
+- makpi51crawler/cpp_live_runtime/process_worker/
+
+But no implementation file is created by this contract.
+
+Current hard decision
+---------------------
+
+RUNTIME_PATCH_NOW=NO
+CODE_EXTRACTION_NOW=NO
+PUBLIC_WRAPPER_MOVE=NO
+LEGACY_IMPL_DIRECT_MOVE=NO
+DB_FRONTIER_WORKFLOW_EXTRACTION_NOW=NO
+CPP_REWRITE_NOW=NO
+
+Next expected gate after this local-only contract:
+- BUILD_MINIMAL_PARSE_PAYLOAD_EXTRACTION_CONTRACT_TXT_AUDIT_READONLY_R1
+
+End of contract.
