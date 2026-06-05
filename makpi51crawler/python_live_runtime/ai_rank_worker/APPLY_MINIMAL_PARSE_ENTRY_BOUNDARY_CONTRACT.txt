@@ -1,0 +1,212 @@
+LogisticSearch apply_minimal_parse_entry Boundary Contract
+Generated decision gate: KOD_BLOGU_186
+Source boundary map gate: KOD_BLOGU_185 / APPLY_MINIMAL_PARSE_ENTRY_FUNCTION_BOUNDARY_MAP_READONLY_R1
+
+STATUS
+- CONTRACT_STATUS=BOUNDARY_CONTRACT_BEFORE_ANY_CODE_EXTRACTION
+- PATCH_NOW=NO
+- MOVE_NOW=NO
+- DELETE_NOW=NO
+- CPP_REWRITE_NOW=NO
+- FIRST_CODE_EXTRACTION_NOW=NO
+
+SEALED CURRENT RUNTIME
+- Current sealed commit:
+  b160a5fd5236994c7fd69a3dbea24e33bd4db12f
+- Commit subject:
+  fix(parse-runtime): add no-behavior apply adapter
+- Runtime file:
+  makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py
+- Runtime SHA:
+  90424bfacd92531a3f5baa2aa79edbcdfb2458c5d0ccaf8a13dcd217b06fb635
+- Runtime lines/bytes:
+  3365 / 197404
+
+PUBLIC COMPATIBILITY SURFACE
+- Public function:
+  apply_minimal_parse_entry
+- Public function line range in sealed runtime:
+  2967-2995
+- Decision:
+  KEEP
+- Reason:
+  This is the stable worker_runtime call surface and must not be moved, deleted,
+  renamed, or converted to C++ directly.
+- Required call style:
+  keyword-only arguments only.
+- Required keyword-only arguments:
+  conn
+  url_id
+  raw_storage_path
+  source_run_id
+  source_note
+  workflow_state
+  workflow_state_reason
+
+LEGACY IMPLEMENTATION SURFACE
+- Legacy implementation:
+  _apply_minimal_parse_entry_legacy_impl
+- Legacy implementation line range in sealed runtime:
+  2997-3365
+- Legacy implementation line count:
+  369
+- Decision:
+  KEEP_TEMPORARILY_SPLIT_LATER
+- Reason:
+  This function currently holds the transaction corridor and mixes multiple
+  responsibilities. It may be split only after explicit boundary contracts,
+  behavior-smoke tests, and rollback gates are sealed.
+
+TRANSACTION CORRIDOR
+- Required order in worker runtime:
+  1. apply_minimal_parse_entry
+  2. finish_fetch_success
+  3. release_parse_pending_to_queued
+  4. commit(conn)
+- Sealed observed line order:
+  apply line 1781
+  finish_fetch_success line 1839
+  release_parse_pending_to_queued line 1863
+  commit(conn) line 2008
+- Decision:
+  No boundary extraction may change this transaction order without a dedicated
+  transaction-order test gate.
+
+BOUNDARY MAP FROM KOD_BLOGU_185
+- Direct call total:
+  47
+- Direct call unique:
+  27
+- Boundary hit summary:
+  html_parse_boundary=1
+  taxonomy_boundary=5
+  ai_rank_prerank_boundary=8
+  frontier_discovery_boundary=3
+  workflow_persistence_boundary=1
+  error_degraded_boundary=1
+  support_or_builtin=29
+
+BOUNDARY SURFACES AND DECISIONS
+1. public compatibility wrapper
+   Target:
+     apply_minimal_parse_entry
+   Decision:
+     KEEP
+   Rule:
+     Do not move, delete, rename, or rewrite directly.
+
+2. legacy orchestration body
+   Target:
+     _apply_minimal_parse_entry_legacy_impl
+   Decision:
+     KEEP_TEMPORARILY_SPLIT_LATER
+   Rule:
+     Split only after boundary-specific contracts and tests.
+
+3. HTML/text payload construction
+   Target:
+     build_minimal_parse_payload and helpers
+   Decision:
+     PROCESS_CORE_CANDIDATE
+   Required future home:
+     process_core / process_worker
+   Rule:
+     Input/output contract must be frozen first.
+   One-hop helper evidence:
+     build_minimal_parse_payload lines 1041-1144
+     read_raw_body_text
+     extract_title_from_html
+     extract_visible_text_from_html
+     infer_input_lang_code
+     build_query_item
+     MinimalParseResult
+
+4. taxonomy candidate construction
+   Target:
+     build_minimal_taxonomy_candidates / taxonomy runtime
+   Decision:
+     PROCESS_CORE_TAXONOMY_CANDIDATE
+   Required future home:
+     process_core with taxonomy runtime boundary
+   Rule:
+     Taxonomy DB contract and degraded-mode behavior must be sealed first.
+   One-hop helper evidence:
+     build_minimal_taxonomy_candidates lines 1803-2023
+     connect_taxonomy_db
+     search_runtime_taxonomy
+     taxonomy_conn.close
+     taxonomy_default_dsn
+     minimal_taxonomy_package_version
+
+5. preranking payload construction and persistence
+   Target:
+     build_preranking_candidate_summary
+     persist_taxonomy_preranking_payload
+     persist_page_preranking_snapshot
+   Decision:
+     AI_RANK_OR_PROCESS_GATEWAY_CANDIDATE
+   Required future home:
+     ai_rank_core / ai_rank_worker, coordinated by process_core
+   Rule:
+     crawler_core must not become ranking engine.
+   One-hop helper evidence:
+     build_preranking_candidate_summary lines 2103-2118
+     persist_taxonomy_preranking_payload
+     persist_page_preranking_snapshot
+
+6. frontier discovery enqueue
+   Target:
+     enqueue_minimal_discovered_links
+   Decision:
+     CRAWLER_FRONTIER_GATEWAY_KEEP_GUARDED
+   Required future home:
+     crawler frontier gateway until process_worker queue contract exists
+   Rule:
+     Do not move before frontier effect contract is sealed.
+   One-hop helper evidence:
+     enqueue_minimal_discovered_links lines 2587-2819
+     build_minimal_discovery_targets
+     extract_candidate_hrefs_from_html
+     enqueue_discovered_url
+     update_url_crawl_map_metadata
+     fetch_url_discovery_context
+
+7. workflow persistence
+   Target:
+     upsert_page_workflow_status
+   Decision:
+     WORKFLOW_GATEWAY_KEEP_GUARDED
+   Required future home:
+     workflow gateway, transaction-aware
+   Rule:
+     Transaction-order sensitive; no split before corridor tests.
+
+FORBIDDEN ACTIONS
+- Do not move apply_minimal_parse_entry directly to process_worker.
+- Do not move apply_minimal_parse_entry directly to ai_rank_worker.
+- Do not move apply_minimal_parse_entry directly to C++.
+- Do not delete the Python compatibility wrapper.
+- Do not delete _apply_minimal_parse_entry_legacy_impl yet.
+- Do not introduce process_worker imports inside crawler_core parse runtime.
+- Do not introduce ai_rank_worker imports inside crawler_core parse runtime.
+- Do not introduce cpp_live_runtime imports inside crawler_core parse runtime.
+- Do not change finish_fetch_success / release_parse_pending_to_queued / commit(conn) order.
+- Do not add file move/copy/delete behavior here.
+- Do not add systemd mutation, DB reset, crawler start, SQL table-wide removal, or SQL row-deletion logic here.
+
+ALLOWED NEXT WORK ONLY
+- Read-only audits.
+- TXT or comment contracts.
+- Behavior-smoke design.
+- Boundary-specific input/output contract design.
+- Dedicated test gates before any code extraction.
+
+RECOMMENDED NEXT SAFE GATES
+1. APPLY_MINIMAL_PARSE_ENTRY_BOUNDARY_CONTRACT_TXT_AUDIT_READONLY_R1
+2. APPLY_MINIMAL_PARSE_ENTRY_BOUNDARY_CONTRACT_TXT_COMMIT_PUSH_GATE_R1
+3. APPLY_MINIMAL_PARSE_ENTRY_BOUNDARY_CONTRACT_TXT_POST_PUSH_SEAL_READONLY_R1
+4. PI51C repo/live sync and post-sync seal for these TXT contracts only.
+5. After that, design the first behavior-smoke test for the public wrapper and legacy impl.
+6. Only then decide whether HTML/text payload construction can be extracted first.
+
+END_OF_CONTRACT
