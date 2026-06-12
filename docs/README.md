@@ -1462,3 +1462,10 @@ Rule:
 
 - No naming migration is complete until Ubuntu Desktop, GitHub main, pi51c repo, pi51c live, and service units are sealed.
 <!-- KOD_BLOGU_149_DOCS_FOUR_SURFACE_NAMING_END -->
+
+## Runtime queue layer placeholder — 2026-06-13
+
+- `docs/TOPIC_RUNTIME_QUEUE_CORE_QUEUE_WORKER_CANONICAL_CPP_PLACEHOLDER_2026_06_13.md`
+  - Records the canonical future C++ `queue_core` / `queue_worker` placeholder.
+  - Adds `queue_core` and `queue_worker` to the canonical runtime naming set.
+  - Keeps the layer inactive until a later controlled schema/runtime gate.
