@@ -358,23 +358,6 @@ from .logisticsearch1_1_1_5_fetch_attempt_gateway import (
     log_fetch_attempt_terminal,
 )
 
-# EN: These names come from the preranking child.
-# EN: They persist ranking-related snapshots after parsing/taxonomy work.
-# TR: Bu isimler preranking child dosyasından gelir.
-# TR: Parse/taxonomy işi sonrası ranking ile ilgili snapshot'ları kaydederler.
-# EN: STAGE21-AUTO-COMMENT :: This import line declares gateway dependencies by bringing in .logisticsearch1_1_1_6_preranking_gateway -> persist_page_preranking_snapshot, persist_taxonomy_preranking_payload, upsert_page_workflow_status.
-# EN: STAGE21-AUTO-COMMENT :: Imports are important in a gateway because they reveal which lower-level helpers or contract types shape database interaction.
-# EN: STAGE21-AUTO-COMMENT :: If imports change here, check whether the effective state contract or the helper boundary also changed.
-# EN: STAGE21-AUTO-COMMENT :: This marker helps beginners read imports as architecture clues rather than as meaningless boilerplate.
-# TR: STAGE21-AUTO-COMMENT :: Bu import satırı .logisticsearch1_1_1_6_preranking_gateway -> persist_page_preranking_snapshot, persist_taxonomy_preranking_payload, upsert_page_workflow_status ögelerini içeri alarak gateway bağımlılıklarını bildirir.
-# TR: STAGE21-AUTO-COMMENT :: Gateway içinde importlar önemlidir çünkü hangi alt yardımcıların veya sözleşme tiplerinin veritabanı etkileşimini şekillendirdiğini gösterirler.
-# TR: STAGE21-AUTO-COMMENT :: Buradaki importlar değişirse etkin durum sözleşmesinin veya yardımcı sınırının da değişip değişmediğini kontrol et.
-# TR: STAGE21-AUTO-COMMENT :: Bu işaret yeni başlayanların importları anlamsız şablon değil mimari ipucu olarak görmesine yardım eder.
-from .logisticsearch1_1_1_6_preranking_gateway import (
-    persist_page_preranking_snapshot,
-    persist_taxonomy_preranking_payload,
-    upsert_page_workflow_status,
-)
 
 # EN: These names come from the discovery child.
 # EN: They read discovery context and enqueue discovered URLs.
@@ -454,9 +437,6 @@ __all__ = [
     "rollback",
     "commit",
     "close_db",
-    "persist_taxonomy_preranking_payload",
-    "persist_page_preranking_snapshot",
-    "upsert_page_workflow_status",
     "fetch_url_discovery_context",
     "enqueue_discovered_url",
     "_row_to_claimed_url",

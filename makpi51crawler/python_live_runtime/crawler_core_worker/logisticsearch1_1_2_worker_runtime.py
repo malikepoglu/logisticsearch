@@ -240,10 +240,6 @@ from .logisticsearch1_1_2_4_acquisition_runtime import (
 from .logisticsearch1_1_2_6_worker_frontier_policy_adapter import (
     build_worker_frontier_policy_receipt,
 )
-from .logisticsearch1_1_2_6_parse_runtime import (
-    MinimalParseApplyResult,
-    apply_minimal_parse_entry,
-)
 
 # EN: We import the tiny runtime support child for generic parent-neutral helpers.
 # TR: Parent-nötr küçük yardımcılar için küçük runtime support alt yüzeyini içe
@@ -437,7 +433,7 @@ class ClaimProbeResult:
     # EN: when the current runtime reaches that stage.
     # TR: parse_apply_result mevcut runtime bu aşamaya ulaştığında kanonik minimal
     # TR: parse-apply DB sonuçlarını tutar.
-    parse_apply_result: MinimalParseApplyResult | None
+    parse_apply_result: dict | None
 
     # EN: observed_at records when this result object was produced.
     # TR: observed_at bu sonuç nesnesinin ne zaman üretildiğini kaydeder.
@@ -1621,171 +1617,63 @@ def _logisticsearch_run_claim_probe_impl_p1a(config: WorkerConfig) -> ClaimProbe
                     runtime_control=runtime_control,
                 )
 
-            # EN: The current narrow parse layer is HTML-first, so we only consider
-            # EN: parse continuation for HTML-like successful fetches.
-            # TR: Mevcut dar parse katmanı HTML-öncelikli olduğu için parse
-            # TR: continuation’ı yalnızca HTML-benzeri başarılı fetch’lerde düşünürüz.
-            # EN: LOCAL VALUE EXPLANATION / run_claim_probe / should_run_minimal_parse
-            # EN: should_run_minimal_parse keeps this intermediate worker-runtime truth named, visible, and reviewable instead of hiding it inline.
-            # EN: Expected values depend on the active branch below; collapsing should_run_minimal_parse into an unnamed expression would weaken audits.
-            # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / should_run_minimal_parse
-            # TR: should_run_minimal_parse bu ara worker-runtime doğrusunu satır içine gizlemek yerine isimli, görünür ve denetlenebilir tutar.
-            # TR: Beklenen değerler aşağıdaki aktif dala göre değişir; should_run_minimal_parse değerini isimsiz ifadeye ezmek denetimi zayıflatır.
-            should_run_minimal_parse = (
-                fetched_page.content_type is None
-                or "html" in fetched_page.content_type.lower()
+            # EN: CRAWLER_CORE_RAW_ONLY_PARSE_REMOVAL_R1_BEGIN
+            # EN: crawler_core no longer performs inline parse, taxonomy lookup,
+            # EN: preranking snapshot, discovery enqueue, or workflow-status work.
+            # EN: Its duty here is to keep the fetched raw artefact durable and make
+            # EN: the skipped process handoff visible to the operator.
+            # TR: crawler_core artik satir-ici parse, taxonomy lookup, preranking
+            # TR: snapshot, discovery enqueue veya workflow-status isi yapmaz.
+            # TR: Buradaki gorevi fetch edilmis ham artefact'i kalici tutmak ve
+            # TR: atlanan process handoff bilgisini operator icin gorunur kilmaktir.
+            http_status_value = (
+                None
+                if fetched_page.http_status is None
+                else int(fetched_page.http_status)
             )
-
-            # EN: Before optional parse persistence, we ask PostgreSQL whether the
-            # EN: connected database currently exposes the parse schema.
-            # TR: Opsiyonel parse persistence’tan önce bağlı veritabanının parse
-            # TR: şemasını gerçekten sağlayıp sağlamadığını PostgreSQL’e soruyoruz.
-            with conn.cursor() as cur:
-                cur.execute("select to_regnamespace('parse') is not null as parse_schema_exists")
-                # EN: LOCAL VALUE EXPLANATION / run_claim_probe / parse_schema_exists
-                # EN: This local exists because the worker-runtime corridor should keep
-                # EN: intermediate phase truth named, visible, and reviewable instead of hiding `bool(cur.fetchone()["parse_schema_exists"])` inline.
-                # EN: Expected meaning:
-                # EN: - current local name(s): parse_schema_exists
-                # EN: - this value helps keep claim / robots / fetch / parse / finalize / release branch meaning readable
-                # EN: - None, empty, fallback, or branch-sensitive values may still be valid depending on the checks below
-                # EN: Undesired reading:
-                # EN: - treating this local as durable global crawler truth
-                # EN: - assuming this local alone proves the whole worker corridor succeeded
-                # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / parse_schema_exists
-                # TR: Bu yerel değer vardır; çünkü worker-runtime koridoru ara faz
-                # TR: doğrusunu satır içine gizlemek yerine isimli, görünür ve denetlenebilir tutmalıdır.
-                # TR: Beklenen anlam:
-                # TR: - mevcut yerel ad(lar): parse_schema_exists
-                # TR: - bu değer claim / robots / fetch / parse / finalize / release dal anlamını okunabilir tutmaya yardım eder
-                # TR: - None, boş, fallback veya dala duyarlı değerler aşağıdaki kontrollere göre yine geçerli olabilir
-                # TR: İstenmeyen okuma:
-                # TR: - bu yereli kalıcı global crawler doğrusu sanmak
-                # TR: - yalnızca bu yerelin tüm worker koridorunun başarılı olduğunu kanıtladığını düşünmek
-                parse_schema_exists = bool(cur.fetchone()["parse_schema_exists"])
-
-            # EN: We attempt optional parse-apply only when the content is parse-
-            # EN: suitable and the connected DB actually has the parse schema.
-            # TR: Opsiyonel parse-apply’ı yalnızca içerik parse için uygunsa ve
-            # TR: bağlı DB gerçekten parse şemasını içeriyorsa deneriz.
-            if should_run_minimal_parse and parse_schema_exists:
-                # EN: LOCAL VALUE EXPLANATION / run_claim_probe / lease_renewal_result
-                # EN: This local exists because the worker-runtime corridor should keep
-                # EN: intermediate phase truth named, visible, and reviewable instead of hiding `renew_claimed_lease_before_durable_phase( conn, claimed_url=claimed_url, config=config, phase_label="parse_apply", )` inline.
-                # EN: Expected meaning:
-                # EN: - current local name(s): lease_renewal_result
-                # EN: - this value helps keep claim / robots / fetch / parse / finalize / release branch meaning readable
-                # EN: - None, empty, fallback, or branch-sensitive values may still be valid depending on the checks below
-                # EN: Undesired reading:
-                # EN: - treating this local as durable global crawler truth
-                # EN: - assuming this local alone proves the whole worker corridor succeeded
-                # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / lease_renewal_result
-                # TR: Bu yerel değer vardır; çünkü worker-runtime koridoru ara faz
-                # TR: doğrusunu satır içine gizlemek yerine isimli, görünür ve denetlenebilir tutmalıdır.
-                # TR: Beklenen anlam:
-                # TR: - mevcut yerel ad(lar): lease_renewal_result
-                # TR: - bu değer claim / robots / fetch / parse / finalize / release dal anlamını okunabilir tutmaya yardım eder
-                # TR: - None, boş, fallback veya dala duyarlı değerler aşağıdaki kontrollere göre yine geçerli olabilir
-                # TR: İstenmeyen okuma:
-                # TR: - bu yereli kalıcı global crawler doğrusu sanmak
-                # TR: - yalnızca bu yerelin tüm worker koridorunun başarılı olduğunu kanıtladığını düşünmek
-                lease_renewal_result = renew_claimed_lease_before_durable_phase(
+            if http_status_value is None or not (200 <= http_status_value <= 299):
+                http_status_for_finalize = 0 if http_status_value is None else http_status_value
+                http_status_finalize_result = finalize_http_error(
                     conn,
                     claimed_url=claimed_url,
-                    config=config,
-                    phase_label="parse_apply",
+                    http_status=http_status_for_finalize,
+                    error_message=(
+                        "HTTP status missing; fetched page is not a crawler-core raw success"
+                        if http_status_value is None
+                        else f"HTTP status {http_status_value} is not a crawler-core raw success"
+                    ),
+                    worker_id=config.worker_id,
+                    fetched_page=fetched_page,
+                )
+                commit(conn)
+                return ClaimProbeResult(
+                    run_id=run_id,
+                    claimed=True,
+                    claimed_url=claimed_url,
+                    robots_allow_decision=robots_allow_decision,
+                    storage_plan=storage_plan,
+                    fetched_page=fetched_page,
+                    finalize_result=http_status_finalize_result,
+                    parse_apply_result=parse_apply_result,
+                    observed_at=utc_now_iso(),
+                    runtime_control=runtime_control,
                 )
 
-                # EN: A degraded lease renewal before parse-apply means we must not
-                # EN: continue durable parse writes under uncertain lease ownership.
-                # EN: We surface the already-fetched artefact honestly and stop here.
-                # TR: Parse-apply öncesi degrade olmuş lease renewal, belirsiz lease
-                # TR: sahipliği altında kalıcı parse yazılarına devam etmememiz
-                # TR: gerektiği anlamına gelir. Zaten fetch edilmiş artefact'ı
-                # TR: dürüstçe görünür kılıyor ve burada duruyoruz.
-                if bool(lease_renewal_result.get("lease_degraded")):
-                    rollback(conn)
-                    return ClaimProbeResult(
-                        run_id=run_id,
-                        claimed=True,
-                        claimed_url=claimed_url,
-                        robots_allow_decision=robots_allow_decision,
-                        storage_plan=storage_plan,
-                        fetched_page=fetched_page,
-                        finalize_result=dict(lease_renewal_result),
-                        parse_apply_result=parse_apply_result,
-                        observed_at=utc_now_iso(),
-                        runtime_control=runtime_control,
-                    )
-
-                # EN: HTTP_STATUS_POLICY_GATE / run_claim_probe / non_2xx_fetched_page
-                # EN: Only a fetched HTTP 2xx page may enter parse/discovery and the
-                # EN: durable success corridor. Non-2xx responses may keep raw-body
-                # EN: evidence, but they must be finalized as HTTP errors before parse.
-                # TR: Yalnızca HTTP 2xx ile alınmış sayfa parse/discovery ve kalıcı
-                # TR: success koridoruna girebilir. 2xx dışı yanıtlar raw-body kanıtını
-                # TR: tutabilir; fakat parse öncesi HTTP hata olarak finalize edilmelidir.
-                http_status_value = (
-                    None
-                    if fetched_page.http_status is None
-                    else int(fetched_page.http_status)
-                )
-                if http_status_value is None or not (200 <= http_status_value <= 299):
-                    http_status_for_finalize = 0 if http_status_value is None else http_status_value
-                    http_status_finalize_result = finalize_http_error(
-                        conn,
-                        claimed_url=claimed_url,
-                        http_status=http_status_for_finalize,
-                        error_message=(
-                            "HTTP status missing; fetched page is not a parseable success"
-                            if http_status_value is None
-                            else f"HTTP status {http_status_value} is not a parseable success"
-                        ),
-                        worker_id=config.worker_id,
-                        fetched_page=fetched_page,
-                    )
-                    commit(conn)
-                    return ClaimProbeResult(
-                        run_id=run_id,
-                        claimed=True,
-                        claimed_url=claimed_url,
-                        robots_allow_decision=robots_allow_decision,
-                        storage_plan=storage_plan,
-                        fetched_page=fetched_page,
-                        finalize_result=http_status_finalize_result,
-                        parse_apply_result=parse_apply_result,
-                        observed_at=utc_now_iso(),
-                        runtime_control=runtime_control,
-                    )
-
-                # EN: LOCAL VALUE EXPLANATION / run_claim_probe / parse_apply_result
-                # EN: This local exists because the worker-runtime corridor should keep
-                # EN: intermediate phase truth named, visible, and reviewable instead of hiding `apply_minimal_parse_entry( conn=conn, url_id=int(get_claimed_url_value(claimed_url, "url_id")), raw_storage_path=fetched_page.raw_storage_pa` inline.
-                # EN: Expected meaning:
-                # EN: - current local name(s): parse_apply_result
-                # EN: - this value helps keep claim / robots / fetch / parse / finalize / release branch meaning readable
-                # EN: - None, empty, fallback, or branch-sensitive values may still be valid depending on the checks below
-                # EN: Undesired reading:
-                # EN: - treating this local as durable global crawler truth
-                # EN: - assuming this local alone proves the whole worker corridor succeeded
-                # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / parse_apply_result
-                # TR: Bu yerel değer vardır; çünkü worker-runtime koridoru ara faz
-                # TR: doğrusunu satır içine gizlemek yerine isimli, görünür ve denetlenebilir tutmalıdır.
-                # TR: Beklenen anlam:
-                # TR: - mevcut yerel ad(lar): parse_apply_result
-                # TR: - bu değer claim / robots / fetch / parse / finalize / release dal anlamını okunabilir tutmaya yardım eder
-                # TR: - None, boş, fallback veya dala duyarlı değerler aşağıdaki kontrollere göre yine geçerli olabilir
-                # TR: İstenmeyen okuma:
-                # TR: - bu yereli kalıcı global crawler doğrusu sanmak
-                # TR: - yalnızca bu yerelin tüm worker koridorunun başarılı olduğunu kanıtladığını düşünmek
-                parse_apply_result = apply_minimal_parse_entry(
-                    conn=conn,
-                    url_id=int(get_claimed_url_value(claimed_url, "url_id")),
-                    raw_storage_path=fetched_page.raw_storage_path,
-                    source_run_id=run_id,
-                    source_note="minimal parse continuation from worker runtime success path",
-                )
-
+            parse_apply_result = {
+                "action": "crawler_core_raw_only_parse_skipped",
+                "parse_skipped": True,
+                "parse_skip_reason": "crawler_core_raw_only_fetch_finalize_contract",
+                "crawler_core_role": "crawl_fetch_raw_save_finalize_only",
+                "behavior_change": True,
+                "old_parse_runtime_path": "makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py",
+                "tmp_old_parse_runtime_path": "makpi51crawler/python_live_runtime/tmp_old_python_files/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py",
+                "future_process_worker_required": True,
+                "url_id": int(get_claimed_url_value(claimed_url, "url_id")),
+                "raw_storage_path": fetched_page.raw_storage_path,
+                "source_run_id": run_id,
+                "source_note": "crawler_core saved raw fetch evidence; parse/process moved out of crawler_core",
+            }
+            # EN: CRAWLER_CORE_RAW_ONLY_PARSE_REMOVAL_R1_END
             # EN: Only after all same-lease durable success-side work is complete do
             # EN: we write terminal per-attempt evidence and finalize success exactly once.
             # TR: Aynı lease altında yapılacak tüm kalıcı başarı-tarafı iş
