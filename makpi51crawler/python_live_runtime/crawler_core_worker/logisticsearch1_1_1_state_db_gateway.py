@@ -359,22 +359,12 @@ from .logisticsearch1_1_1_5_fetch_attempt_gateway import (
 )
 
 
-# EN: These names come from the discovery child.
-# EN: They read discovery context and enqueue discovered URLs.
-# TR: Bu isimler discovery child dosyasından gelir.
-# TR: Discovery context okur ve bulunan URL'leri kuyruğa ekler.
-# EN: STAGE21-AUTO-COMMENT :: This import line declares gateway dependencies by bringing in .logisticsearch1_1_1_7_discovery_gateway -> enqueue_discovered_url, fetch_url_discovery_context.
 # EN: STAGE21-AUTO-COMMENT :: Imports are important in a gateway because they reveal which lower-level helpers or contract types shape database interaction.
 # EN: STAGE21-AUTO-COMMENT :: If imports change here, check whether the effective state contract or the helper boundary also changed.
 # EN: STAGE21-AUTO-COMMENT :: This marker helps beginners read imports as architecture clues rather than as meaningless boilerplate.
-# TR: STAGE21-AUTO-COMMENT :: Bu import satırı .logisticsearch1_1_1_7_discovery_gateway -> enqueue_discovered_url, fetch_url_discovery_context ögelerini içeri alarak gateway bağımlılıklarını bildirir.
 # TR: STAGE21-AUTO-COMMENT :: Gateway içinde importlar önemlidir çünkü hangi alt yardımcıların veya sözleşme tiplerinin veritabanı etkileşimini şekillendirdiğini gösterirler.
 # TR: STAGE21-AUTO-COMMENT :: Buradaki importlar değişirse etkin durum sözleşmesinin veya yardımcı sınırının da değişip değişmediğini kontrol et.
 # TR: STAGE21-AUTO-COMMENT :: Bu işaret yeni başlayanların importları anlamsız şablon değil mimari ipucu olarak görmesine yardım eder.
-from .logisticsearch1_1_1_7_discovery_gateway import (
-    enqueue_discovered_url,
-    fetch_url_discovery_context,
-)
 
 # EN: __all__ is the explicit "public menu" of this parent hub.
 # EN: A beginner can read this list and answer:
@@ -437,7 +427,5 @@ __all__ = [
     "rollback",
     "commit",
     "close_db",
-    "fetch_url_discovery_context",
-    "enqueue_discovered_url",
     "_row_to_claimed_url",
 ]
