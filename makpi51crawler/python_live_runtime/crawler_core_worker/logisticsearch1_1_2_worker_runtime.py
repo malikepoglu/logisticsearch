@@ -206,14 +206,44 @@ from .logisticsearch1_1_1_state_db_gateway import (
     webcrawler_runtime_may_claim,
 )
 
-# EN: We import the storage-routing child because the parent must still ask the
-# EN: storage policy whether normal crawler flow may continue.
-# TR: Parent normal crawler akışının devam edip edemeyeceğini storage politikasına
-# TR: sormak zorunda olduğu için storage-routing alt yüzeyini içe aktarıyoruz.
-from .logisticsearch1_1_2_7_storage_routing import (
-    ProcessedOutputPlan,
-    choose_processed_output_plan,
-)
+# EN: Storage routing is no longer imported into active crawler_core.
+# EN: Processed-output storage management is being externalized toward the
+# EN: future storage_management_core/storage_management_worker surface.
+# TR: Storage routing artık aktif crawler_core içine import edilmiyor.
+# TR: İşlenmiş çıktı storage yönetimi ileride storage_management_core /
+# TR: storage_management_worker yüzeyine dışsallaştırılacak.
+@dataclass(frozen=True)
+class CrawlerCoreStorageCompatibilityPlan:
+    """Local no-pause compatibility shape for crawler_core claim results.
+
+    EN: This keeps the visible ClaimProbeResult.storage_plan field stable while
+    removing the active dependency on the storage-routing child module.
+    TR: Bu sınıf, storage-routing child modülüne aktif bağımlılığı kaldırırken
+    ClaimProbeResult.storage_plan alanının görünür şeklini korur.
+    """
+
+    raw_collection_root: str = "/srv/webcrawler/raw_fetch"
+    processed_output_root: str = "/srv/data"
+    using_fallback: bool = False
+    buffer_backlog_present: bool = False
+    drain_buffer_to_data_first: bool = False
+    pause_crawler: bool = False
+    primary_status: object | None = None
+    fallback_status: object | None = None
+    explanation: str = "crawler_core_processed_output_storage_routing_externalized"
+
+
+def build_crawler_core_storage_compatibility_plan() -> CrawlerCoreStorageCompatibilityPlan:
+    """Return the local crawler_core storage compatibility plan.
+
+    EN: crawler_core now stays focused on claim/fetch/raw/finalize. It does not
+    own processed-output storage routing decisions.
+    TR: crawler_core artık claim/fetch/raw/finalize odağında kalır. İşlenmiş
+    çıktı storage routing kararlarının sahibi değildir.
+    """
+
+    return CrawlerCoreStorageCompatibilityPlan()
+
 
 # EN: We import the stable acquisition-family public surface. The parent no longer
 # EN: chooses HTTP/browser child fetch paths inline. Instead it asks the canonical
@@ -417,7 +447,7 @@ class ClaimProbeResult:
 
     # EN: storage_plan stores the current processed-output storage decision.
     # TR: storage_plan mevcut işlenmiş-çıktı storage kararını tutar.
-    storage_plan: ProcessedOutputPlan
+    storage_plan: CrawlerCoreStorageCompatibilityPlan
 
     # EN: fetched_page stores the structured raw fetch result when a real fetch ran.
     # TR: fetched_page gerçek bir fetch çalıştıysa yapılı ham fetch sonucunu tutar.
@@ -893,17 +923,18 @@ def _logisticsearch_run_claim_probe_impl_p1a(config: WorkerConfig) -> ClaimProbe
     # TR: Beklenen değerler aşağıdaki aktif dala göre değişir; runtime_control değerini isimsiz ifadeye ezmek denetimi zayıflatır.
     runtime_control = None
 
-    # EN: We compute the current storage plan before touching the DB because the
-    # EN: crawler must not claim new work when storage policy says pause.
-    # TR: Crawler storage politikası pause diyorsa yeni iş claim etmemeli; bu yüzden
-    # TR: DB’ye dokunmadan önce mevcut storage planı hesaplıyoruz.
+    # EN: We build the crawler_core-local storage compatibility plan before touching
+    # EN: the DB so the visible result shape remains stable without importing the
+    # EN: storage-routing child.
+    # TR: Storage-routing child import edilmeden görünür sonuç şekli korunsun diye
+    # TR: DB’ye dokunmadan önce crawler_core-local storage compatibility plan kuruyoruz.
     # EN: LOCAL VALUE EXPLANATION / run_claim_probe / storage_plan
     # EN: storage_plan keeps this intermediate worker-runtime truth named, visible, and reviewable instead of hiding it inline.
     # EN: Expected values depend on the active branch below; collapsing storage_plan into an unnamed expression would weaken audits.
     # TR: YEREL DEĞER AÇIKLAMASI / run_claim_probe / storage_plan
     # TR: storage_plan bu ara worker-runtime doğrusunu satır içine gizlemek yerine isimli, görünür ve denetlenebilir tutar.
     # TR: Beklenen değerler aşağıdaki aktif dala göre değişir; storage_plan değerini isimsiz ifadeye ezmek denetimi zayıflatır.
-    storage_plan = choose_processed_output_plan()
+    storage_plan = build_crawler_core_storage_compatibility_plan()
 
     # EN: We start with no parse-apply result because parse continuation should
     # EN: appear only after a successful fetch path reaches that stage.
@@ -917,10 +948,10 @@ def _logisticsearch_run_claim_probe_impl_p1a(config: WorkerConfig) -> ClaimProbe
     # TR: Beklenen değerler aşağıdaki aktif dala göre değişir; parse_apply_result değerini isimsiz ifadeye ezmek denetimi zayıflatır.
     parse_apply_result = None
 
-    # EN: If storage says pause, we stop here deliberately and return a structured
-    # EN: non-claim result.
-    # TR: Storage pause diyorsa bilinçli olarak burada duruyor ve yapılı non-claim
-    # TR: sonucu döndürüyoruz.
+    # EN: The compatibility guard remains visible, but this local crawler_core plan
+    # EN: does not pause for processed-output storage routing.
+    # TR: Compatibility guard görünür kalır; fakat bu lokal crawler_core planı
+    # TR: processed-output storage routing için pause üretmez.
     if storage_plan.pause_crawler:
         return ClaimProbeResult(
             run_id=run_id,
