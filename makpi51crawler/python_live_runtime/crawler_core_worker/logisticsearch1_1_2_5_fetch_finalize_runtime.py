@@ -422,7 +422,7 @@ def _logisticsearch_p1k_build_http_3xx_redirect_target_policy(
     return {
         "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
         "source": "fetch_finalize_runtime.finalize_http_error",
-        "destination": "http_fetch.fetch_attempt.fetch_metadata_and_frontier.enqueue_discovered_url",
+        "destination": "http_fetch.fetch_attempt.fetch_metadata.p1k_http_3xx_redirect_target_policy",
         "behavior_change": True,
         "http_status": int(http_status),
         "request_url": str(request_url or ""),
@@ -467,17 +467,29 @@ def _logisticsearch_p1k_int_claimed_url_value(
         return int(default)
 
 
-def _logisticsearch_p1k_enqueue_http_3xx_redirect_target(
+def _logisticsearch_p1k_record_http_3xx_redirect_target_without_enqueue(
     conn,
     *,
     claimed_url: object,
     redirect_policy: dict[str, object],
 ) -> dict[str, object]:
-    """Enqueue or reuse normalized redirect target through the existing frontier function."""
+    """Record normalized redirect target evidence without crawler-core promotion side effects.
+
+    EN: crawler_core keeps redirect evidence in fetch_metadata, but controlled
+    new-link promotion belongs to parse_core / control-plane follow-up logic.
+    TR: crawler_core redirect kanitini fetch_metadata icinde korur; kontrollu
+    yeni link promotion parse_core / control-plane takip mantigina aittir.
+    """
+    _ = conn
+    _ = claimed_url
+
     if not _logisticsearch_p1k_policy_has_redirect_target(redirect_policy):
         return {
             "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
+            "redirect_target_recorded": False,
             "redirect_target_enqueue_attempted": False,
+            "redirect_target_enqueue_persisted": False,
+            "redirect_target_enqueue_disabled": True,
             "redirect_target_enqueue_reason": "no_redirect_target",
         }
 
@@ -489,92 +501,23 @@ def _logisticsearch_p1k_enqueue_http_3xx_redirect_target(
     target_port = int(redirect_policy.get("redirect_target_port") or (443 if target_scheme == "https" else 80))
     target_authority_key = str(redirect_policy.get("redirect_target_authority_key") or f"{target_host}:{target_port}").strip()
 
-    parent_url_id = _logisticsearch_p1k_int_claimed_url_value(claimed_url, "url_id", 0)
-    parent_depth = _logisticsearch_p1k_int_claimed_url_value(claimed_url, "depth", 0)
-    parent_priority = _logisticsearch_p1k_int_claimed_url_value(claimed_url, "priority", 100)
-    canonical_url_sha256 = hashlib.sha256(target_url.encode("utf-8")).hexdigest()
-
-    try:
-        with conn.cursor() as cursor:
-            cursor.execute(
-                """
-                SELECT
-                  url_id,
-                  host_id,
-                  canonical_url,
-                  state::text,
-                  discovery_type::text,
-                  depth,
-                  priority
-                FROM frontier.enqueue_discovered_url(
-                  p_parent_url_id := %s,
-                  p_canonical_url := %s,
-                  p_canonical_url_sha256 := %s,
-                  p_port := %s,
-                  p_scheme := %s,
-                  p_host := %s,
-                  p_authority_key := %s,
-                  p_registrable_domain := %s,
-                  p_url_path := %s,
-                  p_url_query := %s,
-                  p_discovery_type := 'redirect'::frontier.discovery_type_enum,
-                  p_depth := %s,
-                  p_priority := %s,
-                  p_enqueue_reason := %s
-                )
-                """,
-                (
-                    parent_url_id,
-                    target_url,
-                    canonical_url_sha256,
-                    target_port,
-                    target_scheme,
-                    target_host,
-                    target_authority_key,
-                    target_host,
-                    target_path,
-                    target_query,
-                    parent_depth + 1,
-                    parent_priority,
-                    f"{P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA}: normalized HTTP 3xx final_url target",
-                ),
-            )
-            row = cursor.fetchone()
-    except Exception as exc:
-        return {
-            "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
-            "redirect_target_enqueue_attempted": True,
-            "redirect_target_enqueue_persisted": False,
-            "redirect_target_enqueue_error": f"{type(exc).__name__}: {exc}",
-            "redirect_target_url": target_url,
-        }
-
-    if row is None:
-        return {
-            "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
-            "redirect_target_enqueue_attempted": True,
-            "redirect_target_enqueue_persisted": False,
-            "redirect_target_enqueue_error": "frontier.enqueue_discovered_url_returned_no_row",
-            "redirect_target_url": target_url,
-        }
-
-    def row_value(index: int, key: str) -> object:
-        if hasattr(row, "keys") and key in row:
-            return row[key]
-        return row[index]
-
     return {
         "schema": P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA,
-        "redirect_target_enqueue_attempted": True,
-        "redirect_target_enqueue_persisted": True,
-        "redirect_target_url_id": row_value(0, "url_id"),
-        "redirect_target_host_id": row_value(1, "host_id"),
-        "redirect_target_url": row_value(2, "canonical_url"),
-        "redirect_target_state": row_value(3, "state"),
-        "redirect_target_discovery_type": row_value(4, "discovery_type"),
-        "redirect_target_depth": row_value(5, "depth"),
-        "redirect_target_priority": row_value(6, "priority"),
+        "redirect_target_recorded": True,
+        "redirect_target_url": target_url,
+        "redirect_target_scheme": target_scheme,
+        "redirect_target_host": target_host,
+        "redirect_target_port": target_port,
+        "redirect_target_authority_key": target_authority_key,
+        "redirect_target_path": target_path,
+        "redirect_target_query": target_query,
+        "redirect_target_enqueue_attempted": False,
+        "redirect_target_enqueue_persisted": False,
+        "redirect_target_enqueue_disabled": True,
+        "redirect_target_enqueue_reason": "crawler_core_link_promotion_disabled_parse_core_controls_promotion",
     }
+
+
 # P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_R1_END
 
 
@@ -1565,32 +1508,24 @@ def finalize_http_error(
     # TR: degrade edilmelidir.
     try:
         if _logisticsearch_p1k_policy_has_redirect_target(p1k_redirect_policy):
-            p1k_redirect_enqueue_result = _logisticsearch_p1k_enqueue_http_3xx_redirect_target(
+            p1k_redirect_enqueue_result = _logisticsearch_p1k_record_http_3xx_redirect_target_without_enqueue(
                 conn,
                 claimed_url=claimed_url,
                 redirect_policy=p1k_redirect_policy,
             )
-            if bool(p1k_redirect_enqueue_result.get("redirect_target_enqueue_persisted")):
-                p1k_finish_mode = "permanent"
-                finalize_result = finish_fetch_permanent_error(
-                    conn,
-                    url_id=url_id,
-                    lease_token=lease_token,
-                    http_status=http_status,
-                    error_class="http_3xx_redirect_target_enqueued",
-                    error_message=f"{error_message} | {P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA}: redirect target queued/reused",
-                )
-            else:
-                p1k_finish_mode = "retryable"
-                finalize_result = finish_fetch_retryable_error(
-                    conn,
-                    url_id=url_id,
-                    lease_token=lease_token,
-                    http_status=http_status,
-                    error_class=error_class,
-                    error_message=f"{error_message} | {P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA}: redirect target enqueue failed",
-                    retry_delay=None,
-                )
+            p1k_finish_mode = "permanent"
+            finalize_result = finish_fetch_permanent_error(
+                conn,
+                url_id=url_id,
+                lease_token=lease_token,
+                http_status=http_status,
+                error_class="http_3xx_redirect_target_recorded_not_enqueued",
+                error_message=(
+                    f"{error_message} | {P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA}: "
+                    "redirect target recorded in fetch_metadata; crawler_core did not enqueue; "
+                    "parse_core/control-plane owns controlled promotion"
+                ),
+            )
         elif is_retryable:
             # EN: LOCAL VALUE EXPLANATION / finalize_http_error / finalize_result
             # EN: This local exists because the current finalize-phase branch needs a named
