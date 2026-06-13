@@ -118,7 +118,7 @@ def _process_count() -> int:
         if "sync_data/sync" in args or "sync_runtime.py" in args or "sync_makpi51crawler.py" in args:
             continue
         if (
-            "python_live_runtime.crawler_core_worker.logisticsearch1_main_entry" in args
+            "python_live_runtime.crawler_worker.logisticsearch1_main_entry" in args
             or " -m logisticsearch1_main_entry" in f" {args}"
             or "logisticsearch1_1_main_loop" in args
             or "--durable-claim" in args

@@ -1,7 +1,7 @@
 # LogisticSearch Storage Routing / Storage Management Migration Contract
 # Date: 2026-06-04
 # Source Python file:
-#   makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_7_storage_routing.py
+#   makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_7_storage_routing.py
 # Target C++ storage-management areas:
 #   makpi51crawler/cpp_live_runtime/storage_management_core/
 #   makpi51crawler/cpp_live_runtime/storage_management_worker/
@@ -11,7 +11,7 @@
 This contract records the migration path for the current Python storage routing file.
 
 The Python source file is:
-makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_7_storage_routing.py
+makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_7_storage_routing.py
 
 The current Python functions/classes are migration candidates, not direct-copy targets:
 - StoragePathStatus

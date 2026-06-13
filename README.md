@@ -247,7 +247,7 @@ Current sealed runtime status / Güncel mühürlü runtime durumu:
 - Runtime sealed head: `c2e6582a1c2400d60a08c5290a2f401c853797e0` (`fix(runtime): update stale process naming strings`).
 - Rehome head: `c62981397181f866298ec62f46ae8566a7d66155` (`refactor(runtime): rehome process worker runtime assets`).
 - Documentation status head: `6a155ae2e053301123021deacb7b60e6705d86c5` (`docs(runtime): record process worker rehome status`).
-- Active Python crawler runtime is still `makpi51crawler/python_live_runtime/crawler_core_worker/`; it is transitional and has not been renamed yet.
+- Active Python crawler runtime is still `makpi51crawler/python_live_runtime/crawler_worker/`; it is transitional and has not been renamed yet.
 - Active crawler Python file count is `22`.
 - `tmp_old_python_files/` is flat: root direct `10`, nested `0`, total `10`.
 - `queue_worker/` directories exist across Python, C++, and C runtime surfaces.

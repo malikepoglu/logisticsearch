@@ -1437,7 +1437,7 @@ Important boundary / Önemli sınır:
 - `parse_core` is deprecated in favor of `process_core`.
 - `desktop_import` is deprecated in favor of `port_core` / `port_worker`.
 - `ai_ranking_worker` and `ranking_neural_worker` are deprecated in favor of `ai_rank_worker`.
-- Current `crawler_core_worker` is an active transitional directory; future canonical worker name is `crawler_worker`.
+- Current `crawler_worker` is an active transitional directory; future canonical worker name is `crawler_worker`.
 - `port_core` means controlled data porting/handoff, not network port.
 - `ai_rank_worker` serves `process_worker`.
 
@@ -1445,13 +1445,13 @@ Important boundary / Önemli sınır:
 
 - Current sealed head: `c2e6582a1c2400d60a08c5290a2f401c853797e0` (`fix(runtime): update stale process naming strings`).
 - Parent/rehome head: `c62981397181f866298ec62f46ae8566a7d66155` (`refactor(runtime): rehome process worker runtime assets`).
-- Active Python crawler runtime remains `makpi51crawler/python_live_runtime/crawler_core_worker/`; it is transitional and was not renamed.
+- Active Python crawler runtime remains `makpi51crawler/python_live_runtime/crawler_worker/`; it is transitional and was not renamed.
 - Active crawler Python file count remains `22`.
 - `tmp_old_python_files/` remains flat: root direct `10`, nested `0`, total `10`.
 - Deprecated `parse_core_worker` directories are absent across `python_live_runtime`, `cpp_live_runtime`, and `c_live_runtime` in repo and live.
 - `ai_ranking_py312.apt-packages.txt` and `ai_ranking_py312.requirements.in` were rehomed into `process_worker/requirements/` across Python, C++, and C runtime surfaces.
 - Selected worker shells now exist across runtime surfaces where planned: `process_worker`, `ai_rank_worker`, `port_worker`, `compression_worker`, and `queue_worker`.
-- Stale active-runtime naming strings were patched: old nested `tmp_old_python_files/crawler_core_worker/...` path count is `0`; process naming now uses `process_core` and `port_core` / `port_worker` where appropriate.
+- Stale active-runtime naming strings were patched: old nested `tmp_old_python_files/crawler_worker/...` path count is `0`; process naming now uses `process_core` and `port_core` / `port_worker` where appropriate.
 - Runtime metadata keys `parse_core_primary` and `parse_core_fallback` are intentionally preserved for now; any key migration requires a separate explicit decision.
 - `__pycache__` / `.pyc` files are ignored and untracked report-only artifacts in this phase; they were not cleaned, moved, or committed.
 - No DB, crawler, systemd, raw fetch, service, or active directory rename mutation occurred in this documentation update.

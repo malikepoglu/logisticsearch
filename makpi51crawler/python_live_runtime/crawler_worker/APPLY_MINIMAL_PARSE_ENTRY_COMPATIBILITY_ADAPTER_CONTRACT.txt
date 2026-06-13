@@ -1,9 +1,9 @@
 # LogisticSearch apply_minimal_parse_entry Compatibility Adapter Contract
 # Date: 2026-06-04
 # Source Python file:
-#   makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py
+#   makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_6_parse_runtime.py
 # Worker call-site file:
-#   makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_worker_runtime.py
+#   makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_worker_runtime.py
 # Target function:
 #   apply_minimal_parse_entry
 # Status: planning / migration memory
@@ -14,7 +14,7 @@ This TXT contract records the compatibility-adapter rule for apply_minimal_parse
 Do not move, delete or rewrite apply_minimal_parse_entry directly.
 
 Current source of truth:
-- makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py
+- makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_6_parse_runtime.py
 - function: apply_minimal_parse_entry
 - lines at KOD_BLOGU_180B2 baseline: 2967-3335
 - line count: 369
@@ -22,7 +22,7 @@ Current source of truth:
   78621e8c28c0a1cfad556278f402dac1ca4f4a61b012cefe6315572a0230f179
 
 Current worker call corridor:
-- makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_worker_runtime.py
+- makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_worker_runtime.py
 - apply_minimal_parse_entry call line at KOD_BLOGU_180B2 baseline: 1781
 - first finish_fetch_success after apply: 1839
 - first release_parse_pending_to_queued after apply: 1863

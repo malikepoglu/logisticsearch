@@ -110,7 +110,7 @@ Future worker/service names:
 
 Current active exception:
 
-- `python_live_runtime/crawler_core_worker/` remains active until an explicit gated rename to `crawler_worker/`.
+- `python_live_runtime/crawler_worker/` remains active until an explicit gated rename to `crawler_worker/`.
 - `python_live_runtime/controls/` remains immovable.
 - `c_live_runtime/` and `cpp_live_runtime/` remain separate.
 <!-- KOD_BLOGU_145_MAKPI_RUNTIME_PIPELINE_NAMING_STANDARD_END -->

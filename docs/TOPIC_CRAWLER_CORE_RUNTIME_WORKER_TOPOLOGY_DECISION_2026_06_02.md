@@ -39,7 +39,7 @@ TR: Bu doküman, pi51c üzerinde 26 JSON cascade crawler testi devam ederken bir
 
 | Worker | Python surface | C surface | C++ surface | Current action |
 |---|---|---|---|---|
-| `crawler_core_worker` | planned under `python_live_runtime/` | no directory now | no directory now | document first, move later with explicit allowlist |
+| `crawler_worker` | planned under `python_live_runtime/` | no directory now | no directory now | document first, move later with explicit allowlist |
 | `compression_worker` | no Python directory now | no directory now | planned later if C++ zstd work starts | do not create empty directory yet |
 | `parse_core_worker` | planned later | no directory now | no directory now | document first |
 | `ai_ranking_worker` | planned later | no directory now | no directory now | document first |
@@ -56,7 +56,7 @@ TR: Yukarıdaki tabloda `planned` ifadesi hemen dizin oluşturulacağı anlamın
 - Forbidden mixed surfaces absent in KOD_BLOGU_119: `makpi51crawler/native_live_runtime`, `makpi51crawler/c_cpp_live_runtime`.
 - Import graph parse failures in KOD_BLOGU_119: `0`.
 
-## 5. First relocation target: crawler_core_worker / İlk taşıma hedefi
+## 5. First relocation target: crawler_worker / İlk taşıma hedefi
 
 EN: The first real movement gate should focus only on crawler_core-related top-level Python files. It must use an explicit allowlist, not blind pattern matching.
 
@@ -160,19 +160,19 @@ TR: Bu doküman yalnızca plan/karar artifact’idir. Bilinçli olarak hiçbir k
 <!-- KOD_BLOGU_145_TOPOLOGY_NAMING_SUPERSESSION_BEGIN -->
 ## Naming supersession note / İsim standardı güncelleme notu
 
-This topology document used the transitional name `crawler_core_worker` and listed older planned names such as `parse_core_worker`, `ai_ranking_worker`, and `desktop_import_worker`.
+This topology document used the transitional name `crawler_worker` and listed older planned names such as `parse_core_worker`, `ai_ranking_worker`, and `desktop_import_worker`.
 
 The canonical naming standard after KOD_BLOGU_145 is:
 
 | Old / transitional name | Canonical future name |
 |---|---|
-| `crawler_core_worker` | `crawler_worker` |
+| `crawler_worker` | `crawler_worker` |
 | `parse_core_worker` | `process_worker` |
 | `ai_ranking_worker` | `ai_rank_worker` |
 | `desktop_import_worker` | `port_worker` |
 | `compression_worker` | `compression_worker` |
 
-This note does not move files. `crawler_core_worker` remains the current active directory until a separate gated rename patch.
+This note does not move files. `crawler_worker` remains the current active directory until a separate gated rename patch.
 
 Canonical naming doc:
 
@@ -190,7 +190,7 @@ This topology is valid only when checked across:
 - pi51c live runtime: `/logisticsearch/makpi51crawler`
 - pi51c service unit surface
 
-`crawler_core_worker` remains an active transitional directory until a later explicit `crawler_worker` rename gate. The service surface remains `logisticsearch-webcrawler.service` until a later explicit service rename gate.
+`crawler_worker` remains an active transitional directory until a later explicit `crawler_worker` rename gate. The service surface remains `logisticsearch-webcrawler.service` until a later explicit service rename gate.
 
 No naming migration is complete until Ubuntu Desktop, GitHub main, pi51c repo, pi51c live, and service units are sealed.
 <!-- KOD_BLOGU_149_TOPOLOGY_FOUR_SURFACE_NAMING_END -->

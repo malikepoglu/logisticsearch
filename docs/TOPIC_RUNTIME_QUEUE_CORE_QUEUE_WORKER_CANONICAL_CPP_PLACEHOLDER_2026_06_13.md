@@ -68,7 +68,7 @@ The canonical naming direction is:
 - `parse_core` -> `process_core`
 - `desktop_import` -> `port_core`
 - `ai_ranking` / `ranking_neural` -> `ai_rank_core`
-- `crawler_core_worker` -> `crawler_worker`
+- `crawler_worker` -> `crawler_worker`
 
 Existing physical paths may still contain older names during migration audits. Future documentation and comments should use the canonical names unless explicitly referring to legacy/current file paths.
 

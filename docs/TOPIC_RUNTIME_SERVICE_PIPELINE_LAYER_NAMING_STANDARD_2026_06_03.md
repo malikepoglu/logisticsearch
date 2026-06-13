@@ -71,7 +71,7 @@ TR: Gelecekteki worker/service dizinleri kanonik `*_worker` adlarını kullanmal
 
 | Concept | Current / legacy name | Canonical future name | Rule |
 |---|---|---|---|
-| crawler runtime worker directory | `crawler_core_worker` | `crawler_worker` | rename later only after explicit import/service gate |
+| crawler runtime worker directory | `crawler_worker` | `crawler_worker` | rename later only after explicit import/service gate |
 | parse worker directory | `parse_core_worker` | `process_worker` | `parse_core` name is deprecated in docs and future directory naming |
 | AI ranking worker directory | `ai_ranking_worker` / `ranking_neural_worker` | `ai_rank_worker` | old names are deprecated |
 | desktop import worker directory | `desktop_import_worker` | `port_worker` | old name is deprecated |
@@ -107,7 +107,7 @@ TR: Mevcut `logisticsearch-webcrawler.service`, açık bir service rename gate u
 | `ranking_neural_worker` | `ai_rank_worker` |
 | `desktop_import` | `port_core` or `port_worker` depending on context |
 | `desktop_import_worker` | `port_worker` |
-| `crawler_core_worker` | `crawler_worker` later, after explicit migration gate |
+| `crawler_worker` | `crawler_worker` later, after explicit migration gate |
 
 EN: `port_core` means controlled data porting/handoff. It does not mean a network port, harbor, TCP port, UDP port, or socket listener.
 
@@ -115,23 +115,23 @@ TR: `port_core` kontrollü veri taşıma/handoff anlamındadır. Network port, l
 
 ## 9. Current active exception / Güncel aktif istisna
 
-EN: The current live runtime still uses `python_live_runtime/crawler_core_worker/` because the last safe refactor isolated active crawler implementation there. This is a temporary active directory name, not the final canonical worker/service pipeline name.
+EN: The current live runtime still uses `python_live_runtime/crawler_worker/` because the last safe refactor isolated active crawler implementation there. This is a temporary active directory name, not the final canonical worker/service pipeline name.
 
-TR: Güncel live runtime hâlâ `python_live_runtime/crawler_core_worker/` kullanır; çünkü son güvenli refactor aktif crawler implementation’ı oraya izole etti. Bu geçici aktif dizin adıdır; nihai kanonik worker/service pipeline adı değildir.
+TR: Güncel live runtime hâlâ `python_live_runtime/crawler_worker/` kullanır; çünkü son güvenli refactor aktif crawler implementation’ı oraya izole etti. Bu geçici aktif dizin adıdır; nihai kanonik worker/service pipeline adı değildir.
 
 ## 10. Current reachable boundary files / Güncel reachable sınır dosyaları
 
 EN: The following files are conceptually outside pure crawler ownership but currently reachable from the active runtime graph, so they must not be moved blindly:
 
-- `makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py`
-- `makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_1_taxonomy_runtime.py`
-- `makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_1_6_preranking_gateway.py`
+- `makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_6_parse_runtime.py`
+- `makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_6_1_taxonomy_runtime.py`
+- `makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_1_6_preranking_gateway.py`
 
 TR: Aşağıdaki dosyalar kavramsal olarak saf crawler sahipliğinin dışında dursa da şu anda aktif runtime grafiğinden reachable durumdadır; bu yüzden körlemesine taşınmamalıdır:
 
-- `makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py`
-- `makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_1_taxonomy_runtime.py`
-- `makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_1_6_preranking_gateway.py`
+- `makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_6_parse_runtime.py`
+- `makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_6_1_taxonomy_runtime.py`
+- `makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_1_6_preranking_gateway.py`
 
 ## 11. Runtime language surface rule / Runtime dil yüzeyi kuralı
 
@@ -187,7 +187,7 @@ The following sentences are intentionally exact audit needles for future gates:
 - compression_worker serves port_worker.
 - parse_core is deprecated.
 - desktop_import is deprecated.
-- crawler_core_worker is an active transitional directory.
+- crawler_worker is an active transitional directory.
 
 TR:
 
@@ -198,7 +198,7 @@ Aşağıdaki cümleler gelecek gate’ler için kasıtlı exact audit iğnelerid
 - compression_worker port_worker hizmetindedir.
 - parse_core kullanımdan kaldırılmıştır.
 - desktop_import kullanımdan kaldırılmıştır.
-- crawler_core_worker aktif geçiş dizinidir.
+- crawler_worker aktif geçiş dizinidir.
 <!-- KOD_BLOGU_146_EXACT_AUDIT_NEEDLES_END -->
 
 <!-- KOD_BLOGU_149_FOUR_SURFACE_NAMING_ENFORCEMENT_BEGIN -->
@@ -242,7 +242,7 @@ TR: Ubuntu Desktop, GitHub main, pi51c repo, pi51c live ve service unit yüzeyi 
 
 ### Current active exception / Güncel aktif istisna
 
-`python_live_runtime/crawler_core_worker/` and `logisticsearch-webcrawler.service` are active transitional surfaces. They must not be renamed by blind `mv`, blind `rsync`, blind `sed`, or hidden service edit. They require explicit import, service, live, DB-readonly, process-stillness, and short-health gates.
+`python_live_runtime/crawler_worker/` and `logisticsearch-webcrawler.service` are active transitional surfaces. They must not be renamed by blind `mv`, blind `rsync`, blind `sed`, or hidden service edit. They require explicit import, service, live, DB-readonly, process-stillness, and short-health gates.
 
-TR: `python_live_runtime/crawler_core_worker/` ve `logisticsearch-webcrawler.service` aktif geçiş yüzeyleridir. Kör `mv`, kör `rsync`, kör `sed` veya gizli service edit ile değiştirilmeyeceklerdir. Ayrı import, service, live, DB-readonly, process-stillness ve short-health gate isterler.
+TR: `python_live_runtime/crawler_worker/` ve `logisticsearch-webcrawler.service` aktif geçiş yüzeyleridir. Kör `mv`, kör `rsync`, kör `sed` veya gizli service edit ile değiştirilmeyeceklerdir. Ayrı import, service, live, DB-readonly, process-stillness ve short-health gate isterler.
 <!-- KOD_BLOGU_149_FOUR_SURFACE_NAMING_ENFORCEMENT_END -->

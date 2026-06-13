@@ -20,9 +20,9 @@ Required contract files:
 
 Source files that motivated these contracts:
 
-- makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py
+- makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_6_parse_runtime.py
 
-- makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_7_storage_routing.py
+- makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_7_storage_routing.py
 
 Short rule:
 - apply_minimal_parse_entry must not be moved directly before process_worker / ai_rank_worker interface, compatibility adapter, test gate and rollback plan are sealed.

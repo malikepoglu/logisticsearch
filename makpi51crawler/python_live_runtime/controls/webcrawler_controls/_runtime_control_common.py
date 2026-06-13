@@ -306,7 +306,7 @@ from pathlib import Path
 # TR: Yorumlanan controls yüzeyi stale CLI metnine shell ile gitmek yerine
 # TR: mühürlü DB gateway ile doğrudan konuşmalıdır; bu yüzden kanonik
 # TR: runtime-control DB yardımcılarını içe aktarıyoruz.
-from ...crawler_core_worker.logisticsearch1_1_1_state_db_gateway import (
+from ...crawler_worker.logisticsearch1_1_1_state_db_gateway import (
     connect_db,
     get_webcrawler_runtime_control,
     set_webcrawler_runtime_control,

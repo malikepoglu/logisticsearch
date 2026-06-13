@@ -7,7 +7,7 @@ SOURCE_DECISION_GATE=KOD_BLOGU_189
 TARGET_FUNCTION=build_minimal_parse_payload
 
 Source runtime file:
-- makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py
+- makpi51crawler/python_live_runtime/crawler_worker/logisticsearch1_1_2_6_parse_runtime.py
 
 Current source function:
 - build_minimal_parse_payload
@@ -33,7 +33,7 @@ FIRST_CONTRACT_DESTINATION=process_worker_and_cpp_process_worker_contract_surfac
 This contract does not move runtime code.
 This contract does not create a Python process_worker implementation.
 This contract does not create a C++ process_worker implementation.
-This contract does not change crawler_core_worker runtime imports.
+This contract does not change crawler_worker runtime imports.
 This contract does not change worker transaction order.
 
 Why this is first
@@ -130,8 +130,8 @@ Do not delete apply_minimal_parse_entry.
 Do not move _apply_minimal_parse_entry_legacy_impl.
 Do not delete _apply_minimal_parse_entry_legacy_impl.
 Do not alter worker_runtime transaction order.
-Do not add process_worker import into crawler_core_worker parse runtime.
-Do not add ai_rank_worker import into crawler_core_worker parse runtime.
+Do not add process_worker import into crawler_worker parse runtime.
+Do not add ai_rank_worker import into crawler_worker parse runtime.
 Do not add cpp_live_runtime bridge into Python runtime.
 
 Required preserved corridor
