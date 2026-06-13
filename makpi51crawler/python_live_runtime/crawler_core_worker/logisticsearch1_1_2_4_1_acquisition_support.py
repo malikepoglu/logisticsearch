@@ -1997,10 +1997,10 @@ RAW_FETCH_JSON_ZSTD_CLI = Path("/usr/bin/zstd")
 # EN: CRAWLER_CORE_ZSTD_DISABLE_KEEP_INFRA_R1
 # EN: Keep the existing Python ZSTD envelope infrastructure available, but disable
 # EN: crawler_core hot-path sidecar production. Future compression_worker /
-# EN: desktop_import handoff work may reuse the preserved helper functions.
+# EN: port_core/port_worker handoff work may reuse the preserved helper functions.
 # TR: Mevcut Python ZSTD envelope altyapısını hazır tutuyoruz; fakat crawler_core
 # TR: sıcak hatta sidecar üretimini kapatıyoruz. Gelecekte compression_worker /
-# TR: desktop_import handoff işi bu korunmuş helper fonksiyonlarını yeniden kullanabilir.
+# TR: port_core/port_worker handoff işi bu korunmuş helper fonksiyonlarını yeniden kullanabilir.
 RAW_FETCH_JSON_ZSTD_CRAWLER_CORE_ENABLED = False
 
 
@@ -2050,12 +2050,12 @@ def decode_raw_fetch_body_as_html_text(
 # EN: RAW_FETCH_JSON_PROVENANCE_PRESERVATION_R2_BEGIN
 # EN: crawler_core preserves queue-provided provenance inside raw fetch JSON
 # EN: evidence. This is evidence preservation only: no link promotion, no source
-# EN: scoring, no parse_core pre-ranking, no catalog mutation, and no DB schema
+# EN: scoring, no process_core pre-ranking, no catalog mutation, and no DB schema
 # EN: mutation.
 # TR: RAW_FETCH_JSON_PROVENANCE_PRESERVATION_R2_BEGIN
 # TR: crawler_core queue tarafindan verilen provenance bilgisini raw fetch JSON
 # TR: kaniti icinde korur. Bu yalnizca kanit korumadir: link promote etmez,
-# TR: source scoring yapmaz, parse_core pre-ranking yapmaz, catalog veya DB schema
+# TR: source scoring yapmaz, process_core pre-ranking yapmaz, catalog veya DB schema
 # TR: mutate etmez.
 def _raw_fetch_json_provenance_scalar(value: object) -> object:
     if value is None:

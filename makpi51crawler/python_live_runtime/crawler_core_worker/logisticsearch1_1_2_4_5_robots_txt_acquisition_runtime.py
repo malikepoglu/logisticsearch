@@ -328,10 +328,10 @@ import socket
 # ROBOTS_TXT_REMOTE_DISCONNECTED_TRANSPORT_R1_BEGIN
 # EN: robots.txt fetch uses urllib/http.client underneath; upstream close/reset
 # EN: events must return structured robots transport evidence, not crash the
-# EN: crawler loop. This keeps crawler_core deterministic for parse_core.
+# EN: crawler loop. This keeps crawler_core deterministic for process_core.
 # TR: robots.txt fetch altta urllib/http.client kullanır; upstream kapanma/reset
 # TR: olayları crawler loop'u düşürmemeli, yapılı robots transport kanıtı
-# TR: döndürmelidir. Bu parse_core için crawler_core'u deterministik tutar.
+# TR: döndürmelidir. Bu process_core için crawler_core'u deterministik tutar.
 from http.client import (
     BadStatusLine,
     CannotSendRequest,

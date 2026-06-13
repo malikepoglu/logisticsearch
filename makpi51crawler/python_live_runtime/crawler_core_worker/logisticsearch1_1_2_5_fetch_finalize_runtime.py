@@ -476,9 +476,9 @@ def _logisticsearch_p1k_record_http_3xx_redirect_target_without_enqueue(
     """Record normalized redirect target evidence without crawler-core promotion side effects.
 
     EN: crawler_core keeps redirect evidence in fetch_metadata, but controlled
-    new-link promotion belongs to parse_core / control-plane follow-up logic.
+    new-link promotion belongs to process_core / control-plane follow-up logic.
     TR: crawler_core redirect kanitini fetch_metadata icinde korur; kontrollu
-    yeni link promotion parse_core / control-plane takip mantigina aittir.
+    yeni link promotion process_core / control-plane takip mantigina aittir.
     """
     _ = conn
     _ = claimed_url
@@ -514,7 +514,7 @@ def _logisticsearch_p1k_record_http_3xx_redirect_target_without_enqueue(
         "redirect_target_enqueue_attempted": False,
         "redirect_target_enqueue_persisted": False,
         "redirect_target_enqueue_disabled": True,
-        "redirect_target_enqueue_reason": "crawler_core_link_promotion_disabled_parse_core_controls_promotion",
+        "redirect_target_enqueue_reason": "crawler_core_link_promotion_disabled_process_core_controls_promotion",
     }
 
 
@@ -1523,7 +1523,7 @@ def finalize_http_error(
                 error_message=(
                     f"{error_message} | {P1K_HTTP_3XX_REDIRECT_TARGET_POLICY_SCHEMA}: "
                     "redirect target recorded in fetch_metadata; crawler_core did not enqueue; "
-                    "parse_core/control-plane owns controlled promotion"
+                    "process_core/control-plane owns controlled promotion"
                 ),
             )
         elif is_retryable:

@@ -1697,7 +1697,7 @@ def _logisticsearch_run_claim_probe_impl_p1a(config: WorkerConfig) -> ClaimProbe
                 "crawler_core_role": "crawl_fetch_raw_save_finalize_only",
                 "behavior_change": True,
                 "old_parse_runtime_path": "makpi51crawler/python_live_runtime/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py",
-                "tmp_old_parse_runtime_path": "makpi51crawler/python_live_runtime/tmp_old_python_files/crawler_core_worker/logisticsearch1_1_2_6_parse_runtime.py",
+                "tmp_old_parse_runtime_path": "makpi51crawler/python_live_runtime/tmp_old_python_files/logisticsearch1_1_2_6_parse_runtime.py",
                 "future_process_worker_required": True,
                 "url_id": int(get_claimed_url_value(claimed_url, "url_id")),
                 "raw_storage_path": fetched_page.raw_storage_path,
