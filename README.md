@@ -219,24 +219,50 @@ Gelecekte düşünülmesi planlanan yön:
 Mevcut öncelik önce webcrawler ve crawler_core'u ayağa kaldırmaktır.
 
 <!-- KOD_BLOGU_145_ROOT_PIPELINE_NAMING_STANDARD_BEGIN -->
-## Runtime service pipeline naming standard
+## Runtime service pipeline naming standard / Runtime service-pipeline isimlendirme standardı
 
+English:
 The canonical layer vocabulary is:
 
-`preparation_core` → `crawler_core` → `process_core` → `ai_rank_core` → `port_core` → `compression_core`
+`preparation_core` → `queue_core` → `crawler_core` → `process_core` → `ai_rank_core` → `port_core` → `compression_core`
 
 The canonical worker/service vocabulary is:
 
-`preparation_worker` → `crawler_worker` → `process_worker` → `ai_rank_worker` → `port_worker` → `compression_worker`
+`preparation_worker` → `queue_worker` → `crawler_worker` → `process_worker` → `ai_rank_worker` → `port_worker` → `compression_worker`
 
-This is a worker/service pipeline model, not a multi-thread model. `port_core` means controlled data porting/handoff, not a network port.
+This is a worker/service pipeline model, not a multi-thread model. `queue_core` is the controlled queue authority for eligible crawl work; `queue_worker` is the worker surface for that queue layer. `port_core` means controlled data porting/handoff, not a network port.
+
+Türkçe:
+Kanonik katman sözlüğü şudur:
+
+`preparation_core` → `queue_core` → `crawler_core` → `process_core` → `ai_rank_core` → `port_core` → `compression_core`
+
+Kanonik worker/service sözlüğü şudur:
+
+`preparation_worker` → `queue_worker` → `crawler_worker` → `process_worker` → `ai_rank_worker` → `port_worker` → `compression_worker`
+
+Bu yapı bir worker/service pipeline modelidir; multi-thread modeli değildir. `queue_core`, crawl edilebilir uygun işler için kontrollü kuyruk otoritesidir; `queue_worker` bu kuyruk katmanının worker yüzeyidir. `port_core`, network portu değil kontrollü veri portlama/handoff anlamına gelir.
+
+Current sealed runtime status / Güncel mühürlü runtime durumu:
+- Runtime sealed head: `c2e6582a1c2400d60a08c5290a2f401c853797e0` (`fix(runtime): update stale process naming strings`).
+- Rehome head: `c62981397181f866298ec62f46ae8566a7d66155` (`refactor(runtime): rehome process worker runtime assets`).
+- Documentation status head: `6a155ae2e053301123021deacb7b60e6705d86c5` (`docs(runtime): record process worker rehome status`).
+- Active Python crawler runtime is still `makpi51crawler/python_live_runtime/crawler_core_worker/`; it is transitional and has not been renamed yet.
+- Active crawler Python file count is `22`.
+- `tmp_old_python_files/` is flat: root direct `10`, nested `0`, total `10`.
+- `queue_worker/` directories exist across Python, C++, and C runtime surfaces.
+- `process_worker/requirements/` rehome is complete across Python, C++, and C runtime surfaces.
+- `parse_core_primary` and `parse_core_fallback` are intentionally deferred metadata keys.
+- `__pycache__` / `.pyc` files are ignored and untracked report-only artifacts in this phase.
+- This README update must not imply DB, crawler, systemd, raw fetch, service, live runtime, or pycache mutation.
 
 See: `docs/TOPIC_RUNTIME_SERVICE_PIPELINE_LAYER_NAMING_STANDARD_2026_06_03.md`.
 <!-- KOD_BLOGU_145_ROOT_PIPELINE_NAMING_STANDARD_END -->
 
 <!-- KOD_BLOGU_149_ROOT_FOUR_SURFACE_NAMING_BEGIN -->
-## Four-surface runtime naming rule
+## Four-surface runtime naming rule / Dört yüzey runtime isimlendirme kuralı
 
+English:
 Runtime service-pipeline naming changes must be sealed across all surfaces, not only GitHub:
 
 1. Ubuntu Desktop local repo: `/home/mak/dev/logisticsearch`
@@ -245,7 +271,22 @@ Runtime service-pipeline naming changes must be sealed across all surfaces, not 
 4. pi51c live runtime: `/logisticsearch/makpi51crawler`
 5. pi51c service unit surface: `logisticsearch-webcrawler.service` now, `logisticsearch-crawler-worker.service` later
 
+The current queue worker directory surfaces are `makpi51crawler/python_live_runtime/queue_worker/`, `makpi51crawler/cpp_live_runtime/queue_worker/`, and `makpi51crawler/c_live_runtime/queue_worker/`.
+
 No naming migration is complete until Ubuntu Desktop, GitHub main, pi51c repo, pi51c live, and service units are sealed.
+
+Türkçe:
+Runtime service-pipeline isimlendirme değişiklikleri yalnızca GitHub üzerinde değil, tüm yüzeylerde mühürlenmelidir:
+
+1. Ubuntu Desktop local repo: `/home/mak/dev/logisticsearch`
+2. GitHub main: `https://github.com/malikepoglu/logisticsearch`
+3. pi51c repo mirror: `/logisticsearch/repo`
+4. pi51c live runtime: `/logisticsearch/makpi51crawler`
+5. pi51c service unit yüzeyi: şimdilik `logisticsearch-webcrawler.service`, daha sonra `logisticsearch-crawler-worker.service`
+
+Mevcut queue worker dizin yüzeyleri `makpi51crawler/python_live_runtime/queue_worker/`, `makpi51crawler/cpp_live_runtime/queue_worker/` ve `makpi51crawler/c_live_runtime/queue_worker/` dizinleridir.
+
+Ubuntu Desktop, GitHub main, pi51c repo, pi51c live ve service unit yüzeyleri mühürlenmeden hiçbir isimlendirme migrasyonu tamamlanmış sayılmaz.
 
 See: `docs/TOPIC_RUNTIME_SERVICE_PIPELINE_LAYER_NAMING_STANDARD_2026_06_03.md`.
 <!-- KOD_BLOGU_149_ROOT_FOUR_SURFACE_NAMING_END -->
